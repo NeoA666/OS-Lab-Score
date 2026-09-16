@@ -1,2 +1,23 @@
 # macOS Finder metadata
 .DS_Store
+
+# Python bytecode and test caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local virtual environments and tooling state
+.venv/
+venv/
+env/
+.coverage
+.coverage.*
+htmlcov/
+
+# OS/editor metadata
+Thumbs.db
+.idea/
+.vscode/
