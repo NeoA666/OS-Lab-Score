@@ -1,0 +1,130 @@
+{
+  "执行时间": "2026-09-12 09:24:16.832611",
+  "结束时间": "2026-09-12 09:24:40.591808",
+  "统计": {
+    "SKIPPED": 12
+  },
+  "致命错误": "",
+  "结果": [
+    {
+      "student_id": "2306010113",
+      "student_name": "刘梓宸",
+      "status": "SKIPPED",
+      "local_submission_time": "2026-09-11 20:46:00",
+      "server_submission_time": "2026-09-11 20:46:00",
+      "archive_name": "2306010113-刘梓宸-实验提交-20260911-2046.tar.gz",
+      "new_directory": "2306010113-刘梓宸-20260911-2046",
+      "note": ""
+    },
+    {
+      "student_id": "2406080118",
+      "student_name": "yanghanqing",
+      "status": "SKIPPED",
+      "local_submission_time": "2026-09-11 09:26:00",
+      "server_submission_time": "2026-09-11 09:26:00",
+      "archive_name": "2406080118-yanghanqing-实验提交-20260911-0926.tar.gz",
+      "new_directory": "2406080118-yanghanqing-20260911-0926",
+      "note": ""
+    },
+    {
+      "student_id": "2406080205",
+      "student_name": "周卓江",
+      "status": "SKIPPED",
+      "local_submission_time": "2026-09-10 23:22:00",
+      "server_submission_time": "2026-09-10 23:22:00",
+      "archive_name": "2406080205-周卓江-实验提交-20260910-2322.tar.gz",
+      "new_directory": "2406080205-周卓江-20260910-2322",
+      "note": ""
+    },
+    {
+      "student_id": "2306030105",
+      "student_name": "何俊林",
+      "status": "SKIPPED",
+      "local_submission_time": "2026-09-09 12:18:00",
+      "server_submission_time": "2026-09-09 12:18:00",
+      "archive_name": "2306030105-何俊林-实验提交-20260909-1218.tar.gz",
+      "new_directory": "2306030105-何俊林-20260909-1218",
+      "note": ""
+    },
+    {
+      "student_id": "2406080104",
+      "student_name": "方如轩",
+      "status": "SKIPPED",
+      "local_submission_time": "2026-09-09 12:37:00",
+      "server_submission_time": "2026-09-09 12:37:00",
+      "archive_name": "2406080104-方如轩-实验提交-20260909-1237.tar.gz",
+      "new_directory": "2406080104-方如轩-20260909-1237",
+      "note": ""
+    },
+    {
+      "student_id": "2406080106",
+      "student_name": "高龙徽",
+      "status": "SKIPPED",
+      "local_submission_time": "2026-09-09 12:15:00",
+      "server_submission_time": "2026-09-09 12:15:00",
+      "archive_name": "2406080106-高龙徽-实验提交-20260909-1215.tar.gz",
+      "new_directory": "2406080106-高龙徽-20260909-1215",
+      "note": ""
+    },
+    {
+      "student_id": "2406080111",
+      "student_name": "lizhaozhuo",
+      "status": "SKIPPED",
+      "local_submission_time": "2026-09-09 12:15:00",
+      "server_submission_time": "2026-09-09 12:15:00",
+      "archive_name": "2406080111-lizhaozhuo-实验提交-20260909-1215.tar.gz",
+      "new_directory": "2406080111-lizhaozhuo-20260909-1215",
+      "note": ""
+    },
+    {
+      "student_id": "2406080102",
+      "student_name": "daiwei",
+      "status": "SKIPPED",
+      "local_submission_time": "2026-09-09 11:31:00",
+      "server_submission_time": "2026-09-09 11:31:00",
+      "archive_name": "2406080102-daiwei-实验提交-20260909-1131.tar.gz",
+      "new_directory": "2406080102-daiwei-20260909-1131",
+      "note": ""
+    },
+    {
+      "student_id": "123456",
+      "student_name": "114",
+      "status": "SKIPPED",
+      "local_submission_time": "2026-09-05 09:50:00",
+      "server_submission_time": "2026-09-05 09:50:00",
+      "archive_name": "123456-114-实验提交-20260905-0950.tar.gz",
+      "new_directory": "123456-114-20260905-0950",
+      "note": ""
+    },
+    {
+      "student_id": "565786786",
+      "student_name": "法规和个",
+      "status": "SKIPPED",
+      "local_submission_time": "2026-09-05 09:39:00",
+      "server_submission_time": "2026-09-05 09:39:00",
+      "archive_name": "565786786-法规和个-实验提交-20260905-0939.tar.gz",
+      "new_directory": "565786786-法规和个-20260905-0939",
+      "note": ""
+    },
+    {
+      "student_id": "20101200",
+      "student_name": "zhaoxia",
+      "status": "SKIPPED",
+      "local_submission_time": "2026-09-03 17:59:00",
+      "server_submission_time": "2026-09-03 17:59:00",
+      "archive_name": "20101200-zhaoxia-实验提交-20260903-1759.tar.gz",
+      "new_directory": "20101200-zhaoxia-20260903-1759",
+      "note": ""
+    },
+    {
+      "student_id": "20260001",
+      "student_name": "张三",
+      "status": "SKIPPED",
+      "local_submission_time": "2026-09-03 10:32:00",
+      "server_submission_time": "2026-09-03 10:32:00",
+      "archive_name": "20260001-张三-实验提交-20260903-1032-1.tar.gz",
+      "new_directory": "20260001-张三-20260903-1032",
+      "note": ""
+    }
+  ]
+}

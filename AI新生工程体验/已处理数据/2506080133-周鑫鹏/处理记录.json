@@ -1,0 +1,14 @@
+{
+  "owner": "ai-experience-batch-v1",
+  "archive_sha256": "06408a369bb5f73321eb8ef2e525deb0614dff59ef41b0a1347d10e5e7a77fe0",
+  "summary": {
+    "student": "2506080133-周鑫鹏",
+    "status": "通过",
+    "action": "已处理",
+    "py_files": 0,
+    "sessions": 1,
+    "messages": 20,
+    "recordings": 8,
+    "issues": []
+  }
+}

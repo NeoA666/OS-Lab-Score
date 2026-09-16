@@ -1,0 +1,1186 @@
+{
+  "schema_version": 1,
+  "student": {
+    "student_id": "2406080102",
+    "name": "daiwei",
+    "source": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131"
+  },
+  "lab": "lab1",
+  "status": "complete",
+  "summary": {
+    "events": 5,
+    "absolute_time_events": 5,
+    "relative_time_only_events": 0,
+    "missing_time_events": 0,
+    "uncertain_events": 0,
+    "errors": 1,
+    "by_type": {
+      "shell_command_observed": 5
+    },
+    "recording_failures": 0,
+    "processing_failures": 0
+  },
+  "statistics": {
+    "events": 5,
+    "absolute_time_events": 5,
+    "relative_time_only_events": 0,
+    "missing_time_events": 0,
+    "uncertain_events": 0,
+    "errors": 1,
+    "by_type": {
+      "shell_command_observed": 5
+    },
+    "recording_failures": 0,
+    "processing_failures": 0
+  },
+  "student_recordings": 18,
+  "recording_details": [
+    {
+      "recording_id": "20260903T173049-4240",
+      "out": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260903T173049-4240.out.gz",
+      "status": "ok",
+      "events": 0,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "no_recognizable_role_markers",
+      "format": "header",
+      "header_bytes": 124,
+      "body_bytes": 520,
+      "timing_bytes": 520,
+      "administrative_tail": false,
+      "header_start": "2026-09-03T17:30:49+08:00",
+      "chosen_start": "2026-09-03T17:30:49+08:00",
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "4252"
+        ]
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260903T173143-4453",
+      "out": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260903T173143-4453.out.gz",
+      "status": "ok",
+      "events": 3,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "no_recognizable_role_markers",
+      "format": "header",
+      "header_bytes": 124,
+      "body_bytes": 4485,
+      "timing_bytes": 4485,
+      "administrative_tail": false,
+      "header_start": "2026-09-03T17:31:44+08:00",
+      "chosen_start": "2026-09-03T17:31:44+08:00",
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/2",
+        "session_start_tty": [
+          "/dev/pts/3"
+        ],
+        "shell_pid": [
+          "4462"
+        ]
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260903T173318-4937",
+      "out": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260903T173318-4937.out.gz",
+      "status": "ok",
+      "events": 5,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "no_recognizable_role_markers",
+      "format": "header",
+      "header_bytes": 124,
+      "body_bytes": 25521,
+      "timing_bytes": 25521,
+      "administrative_tail": false,
+      "header_start": "2026-09-03T17:33:18+08:00",
+      "chosen_start": "2026-09-03T17:33:18+08:00",
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "4945"
+        ]
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260903T173517-6160",
+      "out": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260903T173517-6160.out.gz",
+      "status": "ok",
+      "events": 13,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "no_recognizable_role_markers",
+      "format": "header",
+      "header_bytes": 124,
+      "body_bytes": 47571,
+      "timing_bytes": 47571,
+      "administrative_tail": false,
+      "header_start": "2026-09-03T17:35:17+08:00",
+      "chosen_start": "2026-09-03T17:35:17+08:00",
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "6168"
+        ]
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260903T174239-8600",
+      "out": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260903T174239-8600.out.gz",
+      "status": "ok",
+      "events": 1,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "screen_replayed_no_retained_pairs",
+      "format": "header",
+      "header_bytes": 124,
+      "body_bytes": 14618,
+      "timing_bytes": 14618,
+      "administrative_tail": false,
+      "header_start": "2026-09-03T17:42:39+08:00",
+      "chosen_start": "2026-09-03T17:42:39+08:00",
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/4",
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": [
+          "8609"
+        ]
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260903T174725-9416",
+      "out": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260903T174725-9416.out.gz",
+      "status": "ok",
+      "events": 0,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "no_recognizable_role_markers",
+      "format": "header",
+      "header_bytes": 124,
+      "body_bytes": 199,
+      "timing_bytes": 199,
+      "administrative_tail": false,
+      "header_start": "2026-09-03T17:47:25+08:00",
+      "chosen_start": "2026-09-03T17:47:25+08:00",
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/6",
+        "session_start_tty": [
+          "/dev/pts/7"
+        ],
+        "shell_pid": [
+          "9425"
+        ]
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260903T174725-9473",
+      "out": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260903T174725-9473.out.gz",
+      "status": "ok",
+      "events": 2,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "no_recognizable_role_markers",
+      "format": "header",
+      "header_bytes": 124,
+      "body_bytes": 12622,
+      "timing_bytes": 12622,
+      "administrative_tail": false,
+      "header_start": "2026-09-03T17:47:25+08:00",
+      "chosen_start": "2026-09-03T17:47:25+08:00",
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/8",
+        "session_start_tty": [
+          "/dev/pts/9"
+        ],
+        "shell_pid": [
+          "9481"
+        ]
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260903T175141-11248",
+      "out": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260903T175141-11248.out.gz",
+      "status": "ok",
+      "events": 7,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "no_recognizable_role_markers",
+      "format": "header",
+      "header_bytes": 124,
+      "body_bytes": 14615,
+      "timing_bytes": 14615,
+      "administrative_tail": false,
+      "header_start": "2026-09-03T17:51:41+08:00",
+      "chosen_start": "2026-09-03T17:51:41+08:00",
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/6",
+        "session_start_tty": [
+          "/dev/pts/7"
+        ],
+        "shell_pid": [
+          "11257"
+        ]
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260903T175414-12209",
+      "out": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260903T175414-12209.out.gz",
+      "status": "ok",
+      "events": 6,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "no_recognizable_role_markers",
+      "format": "header",
+      "header_bytes": 125,
+      "body_bytes": 35724,
+      "timing_bytes": 35724,
+      "administrative_tail": false,
+      "header_start": "2026-09-03T17:54:14+08:00",
+      "chosen_start": "2026-09-03T17:54:14+08:00",
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/10",
+        "session_start_tty": [
+          "/dev/pts/11"
+        ],
+        "shell_pid": [
+          "12218"
+        ]
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260903T175628-13424",
+      "out": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260903T175628-13424.out.gz",
+      "status": "ok",
+      "events": 1,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "no_recognizable_role_markers",
+      "format": "header",
+      "header_bytes": 125,
+      "body_bytes": 2407,
+      "timing_bytes": 2407,
+      "administrative_tail": false,
+      "header_start": "2026-09-03T17:56:28+08:00",
+      "chosen_start": "2026-09-03T17:56:28+08:00",
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/12",
+        "session_start_tty": [
+          "/dev/pts/13"
+        ],
+        "shell_pid": [
+          "13433"
+        ]
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260903T175756-13613",
+      "out": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260903T175756-13613.out.gz",
+      "status": "ok",
+      "events": 5,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "no_recognizable_role_markers",
+      "format": "header",
+      "header_bytes": 125,
+      "body_bytes": 24410,
+      "timing_bytes": 24410,
+      "administrative_tail": false,
+      "header_start": "2026-09-03T17:57:56+08:00",
+      "chosen_start": "2026-09-03T17:57:56+08:00",
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/14",
+        "session_start_tty": [
+          "/dev/pts/15"
+        ],
+        "shell_pid": [
+          "13622"
+        ]
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260904T010738-2629",
+      "out": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260904T010738-2629.out.gz",
+      "status": "ok",
+      "events": 1,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "no_recognizable_role_markers",
+      "format": "header",
+      "header_bytes": 124,
+      "body_bytes": 625,
+      "timing_bytes": 625,
+      "administrative_tail": false,
+      "header_start": "2026-09-04T01:07:38+08:00",
+      "chosen_start": "2026-09-04T01:07:38+08:00",
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "2637"
+        ]
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260909T104706-4232",
+      "out": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260909T104706-4232.out.gz",
+      "status": "ok",
+      "events": 1,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "screen_replayed_no_retained_pairs",
+      "format": "header",
+      "header_bytes": 124,
+      "body_bytes": 23496,
+      "timing_bytes": 23496,
+      "administrative_tail": false,
+      "header_start": "2026-09-09T10:47:06+08:00",
+      "chosen_start": "2026-09-09T10:47:06+08:00",
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "4240"
+        ]
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260909T104902-4501",
+      "out": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260909T104902-4501.out.gz",
+      "status": "ok",
+      "events": 1,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "screen_replayed_no_retained_pairs",
+      "format": "header",
+      "header_bytes": 124,
+      "body_bytes": 23023,
+      "timing_bytes": 23023,
+      "administrative_tail": false,
+      "header_start": "2026-09-09T10:49:02+08:00",
+      "chosen_start": "2026-09-09T10:49:02+08:00",
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/2",
+        "session_start_tty": [
+          "/dev/pts/3"
+        ],
+        "shell_pid": [
+          "4509"
+        ]
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260909T105533-5190",
+      "out": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260909T105533-5190.out.gz",
+      "status": "ok",
+      "events": 3,
+      "claude_retained_pairs": 1,
+      "claude_record_count": 1,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "retained_pairs",
+      "format": "header",
+      "header_bytes": 124,
+      "body_bytes": 13032,
+      "timing_bytes": 13032,
+      "administrative_tail": false,
+      "header_start": "2026-09-09T10:55:33+08:00",
+      "chosen_start": "2026-09-09T10:55:33+08:00",
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/4",
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": [
+          "5200"
+        ]
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260909T105713-5418",
+      "out": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260909T105713-5418.out.gz",
+      "status": "ok",
+      "events": 21,
+      "claude_retained_pairs": 10,
+      "claude_record_count": 10,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "retained_pairs",
+      "format": "header",
+      "header_bytes": 124,
+      "body_bytes": 402310,
+      "timing_bytes": 402310,
+      "administrative_tail": false,
+      "header_start": "2026-09-09T10:57:13+08:00",
+      "chosen_start": "2026-09-09T10:57:13+08:00",
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/6",
+        "session_start_tty": [
+          "/dev/pts/7"
+        ],
+        "shell_pid": [
+          "5426"
+        ]
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260909T111332-6648",
+      "out": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260909T111332-6648.out.gz",
+      "status": "ok",
+      "events": 2,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "no_recognizable_role_markers",
+      "format": "header",
+      "header_bytes": 124,
+      "body_bytes": 1220,
+      "timing_bytes": 1220,
+      "administrative_tail": false,
+      "header_start": "2026-09-09T11:13:32+08:00",
+      "chosen_start": "2026-09-09T11:13:32+08:00",
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/8",
+        "session_start_tty": [
+          "/dev/pts/9"
+        ],
+        "shell_pid": [
+          "6663"
+        ]
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260909T112942-7891",
+      "out": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260909T112942-7891.out.gz",
+      "status": "ok",
+      "events": 4,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "no_recognizable_role_markers",
+      "format": "header",
+      "header_bytes": 124,
+      "body_bytes": 5876,
+      "timing_bytes": 5876,
+      "administrative_tail": false,
+      "header_start": "2026-09-09T11:29:42+08:00",
+      "chosen_start": "2026-09-09T11:29:42+08:00",
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/8",
+        "session_start_tty": [
+          "/dev/pts/9"
+        ],
+        "shell_pid": [
+          "7900"
+        ]
+      },
+      "issues": []
+    }
+  ],
+  "events": [
+    {
+      "event_id": "0027af0e83f8:20260903T175756-13613:shell:1",
+      "student": {
+        "student_id": "2406080102",
+        "name": "daiwei"
+      },
+      "lab": "lab1",
+      "cwd": "~/桌面/xv6-ai-labs-km/lab1",
+      "recording_id": "20260903T175756-13613",
+      "terminal": {
+        "header_tty": "/dev/pts/14",
+        "session_start_tty": [
+          "/dev/pts/15"
+        ],
+        "shell_pid": [
+          "13622"
+        ]
+      },
+      "type": "shell_command_observed",
+      "content": "make build",
+      "observed_at": "2026-09-03T17:58:07.865364+08:00",
+      "elapsed_seconds": 11.865363999999998,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260903T175756-13613.out.gz",
+        "tim": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260903T175756-13613.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "header_bytes": 125,
+        "observation": {
+          "elapsed_seconds": 11.865363999999998,
+          "timing_line": 11,
+          "body_byte_range": [
+            191,
+            194
+          ],
+          "decompressed_byte_range": [
+            316,
+            319
+          ]
+        },
+        "session_start": [
+          {
+            "file": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\logs\\events.jsonl",
+            "line": 114,
+            "ts": "2026-09-03T17:57:56+08:00",
+            "epoch": 1788429476
+          }
+        ],
+        "shell_ranges": {
+          "prompt_begin": 84,
+          "echo_begin": 182,
+          "echo_end": 193,
+          "output_begin": 193,
+          "output_end": 21588
+        },
+        "shell_decompressed_ranges": {
+          "prompt_begin": 209,
+          "echo_begin": 307,
+          "echo_end": 318,
+          "output_begin": 318,
+          "output_end": 21713
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "riscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/printf.o kernel/printf.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/kalloc.o kernel/kalloc.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/intr.o kernel/intr.criscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit",
+        "-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/spinlock.o kernel/sp",
+        "inlock.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/string.o kernel/string.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/main.o kernel/main.criscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit",
+        "-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/vm.o kernel/vm.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/proc.o kernel/proc.criscv64-unknown-elf-gcc    -c -o kernel/swtch.o kernel/swtch.S",
+        "riscv64-unknown-elf-gcc    -c -o kernel/trampoline.o kernel/trampoline.S",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/trap.o kernel/trap.criscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit",
+        "-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/syscall.o kernel/sys",
+        "call.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/sysproc.o kernel/sysproc.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/bio.o kernel/bio.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/sleeplock.o kernel/sleeplock.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/file.o kernel/file.criscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit",
+        "-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/pipe.o kernel/pipe.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/exec.o kernel/exec.criscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit",
+        "-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/sysfile.o kernel/sys",
+        "file.c",
+        "riscv64-unknown-elf-gcc    -c -o kernel/kernelvec.o kernel/kernelvec.S",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/timer.o kernel/timer.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/disk.o kernel/disk.criscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit",
+        "-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/fat32.o kernel/fat32",
+        ".c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/plic.o kernel/plic.criscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit",
+        "-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/console.o kernel/con",
+        "sole.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/virtio_disk.o kernel/virtio_disk.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU -march=rv64g -nostdinc -I. -Ikernel -c xv6-user/initcode.S -o xv6-user/initcode.o",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e start -Ttext 0 -o xv6-user/initcode.out xv6-user/initcode.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/initcode.out has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objcopy -S -O binary xv6-user/initcode.out xv6-user/initcoderiscv64-unknown-elf-objdump -S xv6-user/initcode.o > xv6-user/initcode.asm",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/ulib.o xv6-user/ulib.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU -c -o xv6-user/usys.o xv6-user/usys.S",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/printf.o xv6-user/printf.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/umalloc.o xv6-user/umalloc.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/init.o xv6-user/init.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_init xv6-user/init.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/um",
+        "alloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_init has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_init > xv6-user/init.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_init | sed '1,/SYMBOL TABLE/d; s/ .* /",
+        "/; /^$/d' > xv6-user/init.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/sh.o xv6-user/sh.cxv6-user/sh.c: In function 'runcmd':",
+        "xv6-user/sh.c:157:1: warning: infinite recursion detected [-Winfinite-recursion]  157 | runcmd(struct cmd *cmd)",
+        "      | ^~~~~~",
+        "xv6-user/sh.c:205:5: note: recursive call",
+        "  205 |     runcmd(rcmd->cmd);",
+        "      |     ^~~~~~~~~~~~~~~~~",
+        "xv6-user/sh.c:225:7: note: recursive call",
+        "  225 |       runcmd(pcmd->left);",
+        "      |       ^~~~~~~~~~~~~~~~~~",
+        "xv6-user/sh.c:232:7: note: recursive call",
+        "  232 |       runcmd(pcmd->right);",
+        "      |       ^~~~~~~~~~~~~~~~~~~",
+        "xv6-user/sh.c:211:7: note: recursive call",
+        "  211 |       runcmd(lcmd->left);",
+        "      |       ^~~~~~~~~~~~~~~~~~",
+        "xv6-user/sh.c:213:5: note: recursive call",
+        "  213 |     runcmd(lcmd->right);",
+        "      |     ^~~~~~~~~~~~~~~~~~~",
+        "xv6-user/sh.c:243:7: note: recursive call",
+        "  243 |       runcmd(bcmd->cmd);",
+        "      |       ^~~~~~~~~~~~~~~~~",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_sh xv6-user/sh.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umallo",
+        "c.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_sh has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_sh > xv6-user/sh.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_sh | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/sh.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/cat.o xv6-user/cat.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_cat xv6-user/cat.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umal",
+        "loc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_cat has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_cat > xv6-user/cat.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_cat | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/cat.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/echo.o xv6-user/echo.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_echo xv6-user/echo.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/um",
+        "alloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_echo has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_echo > xv6-user/echo.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_echo | sed '1,/SYMBOL TABLE/d; s/ .* /",
+        "/; /^$/d' > xv6-user/echo.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/grep.o xv6-user/grep.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_grep xv6-user/grep.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/um",
+        "alloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_grep has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_grep > xv6-user/grep.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_grep | sed '1,/SYMBOL TABLE/d; s/ .* /",
+        "/; /^$/d' > xv6-user/grep.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/ls.o xv6-user/ls.criscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_ls",
+        " xv6-user/ls.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_ls has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_ls > xv6-user/ls.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_ls | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/ls.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/kill.o xv6-user/kill.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_kill xv6-user/kill.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/um",
+        "alloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_kill has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_kill > xv6-user/kill.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_kill | sed '1,/SYMBOL TABLE/d; s/ .* /",
+        "/; /^$/d' > xv6-user/kill.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/mkdir.o xv6-user/mkdir.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_mkdir xv6-user/mkdir.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/",
+        "umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_mkdir has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_mkdir > xv6-user/mkdir.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_mkdir | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/mkdir.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/xargs.o xv6-user/xargs.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_xargs xv6-user/xargs.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/",
+        "umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_xargs has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_xargs > xv6-user/xargs.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_xargs | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/xargs.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/sleep.o xv6-user/sleep.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_sleep xv6-user/sleep.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/",
+        "umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_sleep has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_sleep > xv6-user/sleep.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_sleep | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/sleep.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/find.o xv6-user/find.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_find xv6-user/find.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/um",
+        "alloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_find has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_find > xv6-user/find.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_find | sed '1,/SYMBOL TABLE/d; s/ .* /",
+        "/; /^$/d' > xv6-user/find.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/rm.o xv6-user/rm.criscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_rm",
+        " xv6-user/rm.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_rm has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_rm > xv6-user/rm.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_rm | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/rm.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/wc.o xv6-user/wc.criscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_wc",
+        " xv6-user/wc.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_wc has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_wc > xv6-user/wc.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_wc | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/wc.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/test.o xv6-user/test.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_test xv6-user/test.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/um",
+        "alloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_test has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_test > xv6-user/test.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_test | sed '1,/SYMBOL TABLE/d; s/ .* /",
+        "/; /^$/d' > xv6-user/test.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/usertests.o xv6-user/usertests.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_usertests xv6-user/usertests.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o x",
+        "v6-user/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_usertests has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_usertests > xv6-user/usertests.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_usertests | sed '1,/SYMBOL TABLE/d; s/",
+        ".* / /; /^$/d' > xv6-user/usertests.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/strace.o xv6-user/strace.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_strace xv6-user/strace.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-use",
+        "r/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_strace has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_strace > xv6-user/strace.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_strace | sed '1,/SYMBOL TABLE/d; s/ .*",
+        "/ /; /^$/d' > xv6-user/strace.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/mv.o xv6-user/mv.criscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_mv",
+        " xv6-user/mv.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_mv has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_mv > xv6-user/mv.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_mv | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/mv.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/halt.o xv6-user/halt.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_halt xv6-user/halt.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/um",
+        "alloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_halt has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-ld: xv6-user/halt.o: in function `main':",
+        "/home/ailab-os/桌面/xv6-ai-labs-km/lab1/xv6-user/halt.c:10:(.text+0x8): undefine",
+        "d reference to `halt'",
+        "make: *** [Makefile:173：xv6-user/_halt] 错误 1"
+      ],
+      "output_note": "关联原提取器的命令输出；未推定执行结束或输出时间",
+      "output_truncated": false
+    },
+    {
+      "event_id": "0027af0e83f8:20260903T175756-13613:shell:2",
+      "student": {
+        "student_id": "2406080102",
+        "name": "daiwei"
+      },
+      "lab": "lab1",
+      "cwd": "~/桌面/xv6-ai-labs-km/lab1",
+      "recording_id": "20260903T175756-13613",
+      "terminal": {
+        "header_tty": "/dev/pts/14",
+        "session_start_tty": [
+          "/dev/pts/15"
+        ],
+        "shell_pid": [
+          "13622"
+        ]
+      },
+      "type": "shell_command_observed",
+      "content": "make fs",
+      "observed_at": "2026-09-03T17:58:14.140167+08:00",
+      "elapsed_seconds": 18.14016699999999,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260903T175756-13613.out.gz",
+        "tim": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260903T175756-13613.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "header_bytes": 125,
+        "observation": {
+          "elapsed_seconds": 18.14016699999999,
+          "timing_line": 182,
+          "body_byte_range": [
+            21692,
+            21693
+          ],
+          "decompressed_byte_range": [
+            21817,
+            21818
+          ]
+        },
+        "session_start": [
+          {
+            "file": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\logs\\events.jsonl",
+            "line": 114,
+            "ts": "2026-09-03T17:57:56+08:00",
+            "epoch": 1788429476
+          }
+        ],
+        "shell_ranges": {
+          "prompt_begin": 21588,
+          "echo_begin": 21686,
+          "echo_end": 21693,
+          "output_begin": 21693,
+          "output_end": 22265
+        },
+        "shell_decompressed_ranges": {
+          "prompt_begin": 21713,
+          "echo_begin": 21811,
+          "echo_end": 21818,
+          "output_begin": 21818,
+          "output_end": 22390
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_halt xv6-user/halt.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/um",
+        "alloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_halt has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-ld: xv6-user/halt.o: in function `main':",
+        "/home/ailab-os/桌面/xv6-ai-labs-km/lab1/xv6-user/halt.c:10:(.text+0x8): undefine",
+        "d reference to `halt'",
+        "make: *** [Makefile:173：xv6-user/_halt] 错误 1"
+      ],
+      "output_note": "关联原提取器的命令输出；未推定执行结束或输出时间",
+      "output_truncated": false
+    },
+    {
+      "event_id": "0027af0e83f8:20260903T175756-13613:shell:3",
+      "student": {
+        "student_id": "2406080102",
+        "name": "daiwei"
+      },
+      "lab": "lab1",
+      "cwd": "~/桌面/xv6-ai-labs-km/lab1",
+      "recording_id": "20260903T175756-13613",
+      "terminal": {
+        "header_tty": "/dev/pts/14",
+        "session_start_tty": [
+          "/dev/pts/15"
+        ],
+        "shell_pid": [
+          "13622"
+        ]
+      },
+      "type": "shell_command_observed",
+      "content": "make fs",
+      "observed_at": "2026-09-03T17:58:25.849890+08:00",
+      "elapsed_seconds": 29.849890000000002,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260903T175756-13613.out.gz",
+        "tim": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260903T175756-13613.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "header_bytes": 125,
+        "observation": {
+          "elapsed_seconds": 29.849890000000002,
+          "timing_line": 202,
+          "body_byte_range": [
+            22374,
+            22375
+          ],
+          "decompressed_byte_range": [
+            22499,
+            22500
+          ]
+        },
+        "session_start": [
+          {
+            "file": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\logs\\events.jsonl",
+            "line": 114,
+            "ts": "2026-09-03T17:57:56+08:00",
+            "epoch": 1788429476
+          }
+        ],
+        "shell_ranges": {
+          "prompt_begin": 22265,
+          "echo_begin": 22363,
+          "echo_end": 22375,
+          "output_begin": 22375,
+          "output_end": 22947
+        },
+        "shell_decompressed_ranges": {
+          "prompt_begin": 22390,
+          "echo_begin": 22488,
+          "echo_end": 22500,
+          "output_begin": 22500,
+          "output_end": 23072
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_halt xv6-user/halt.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/um",
+        "alloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_halt has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-ld: xv6-user/halt.o: in function `main':",
+        "/home/ailab-os/桌面/xv6-ai-labs-km/lab1/xv6-user/halt.c:10:(.text+0x8): undefine",
+        "d reference to `halt'",
+        "make: *** [Makefile:173：xv6-user/_halt] 错误 1"
+      ],
+      "output_note": "关联原提取器的命令输出；未推定执行结束或输出时间",
+      "output_truncated": false
+    },
+    {
+      "event_id": "0027af0e83f8:20260903T175756-13613:shell:4",
+      "student": {
+        "student_id": "2406080102",
+        "name": "daiwei"
+      },
+      "lab": "lab1",
+      "cwd": "~/桌面/xv6-ai-labs-km/lab1",
+      "recording_id": "20260903T175756-13613",
+      "terminal": {
+        "header_tty": "/dev/pts/14",
+        "session_start_tty": [
+          "/dev/pts/15"
+        ],
+        "shell_pid": [
+          "13622"
+        ]
+      },
+      "type": "shell_command_observed",
+      "content": "make gdb",
+      "observed_at": "2026-09-03T17:58:34.863501+08:00",
+      "elapsed_seconds": 38.86350100000001,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260903T175756-13613.out.gz",
+        "tim": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260903T175756-13613.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "header_bytes": 125,
+        "observation": {
+          "elapsed_seconds": 38.86350100000001,
+          "timing_line": 217,
+          "body_byte_range": [
+            23052,
+            23053
+          ],
+          "decompressed_byte_range": [
+            23177,
+            23178
+          ]
+        },
+        "session_start": [
+          {
+            "file": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\logs\\events.jsonl",
+            "line": 114,
+            "ts": "2026-09-03T17:57:56+08:00",
+            "epoch": 1788429476
+          }
+        ],
+        "shell_ranges": {
+          "prompt_begin": 22947,
+          "echo_begin": 23045,
+          "echo_end": 23053,
+          "output_begin": 23053,
+          "output_end": 23625
+        },
+        "shell_decompressed_ranges": {
+          "prompt_begin": 23072,
+          "echo_begin": 23170,
+          "echo_end": 23178,
+          "output_begin": 23178,
+          "output_end": 23750
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_halt xv6-user/halt.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/um",
+        "alloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_halt has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-ld: xv6-user/halt.o: in function `main':",
+        "/home/ailab-os/桌面/xv6-ai-labs-km/lab1/xv6-user/halt.c:10:(.text+0x8): undefine",
+        "d reference to `halt'",
+        "make: *** [Makefile:173：xv6-user/_halt] 错误 1"
+      ],
+      "output_note": "关联原提取器的命令输出；未推定执行结束或输出时间",
+      "output_truncated": false
+    },
+    {
+      "event_id": "0027af0e83f8:20260903T175756-13613:shell:5",
+      "student": {
+        "student_id": "2406080102",
+        "name": "daiwei"
+      },
+      "lab": "lab1",
+      "cwd": "~/桌面/xv6-ai-labs-km/lab1",
+      "recording_id": "20260903T175756-13613",
+      "terminal": {
+        "header_tty": "/dev/pts/14",
+        "session_start_tty": [
+          "/dev/pts/15"
+        ],
+        "shell_pid": [
+          "13622"
+        ]
+      },
+      "type": "shell_command_observed",
+      "content": "make clean",
+      "observed_at": "2026-09-03T17:58:43.722276+08:00",
+      "elapsed_seconds": 47.722275999999994,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260903T175756-13613.out.gz",
+        "tim": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\term\\20260903T175756-13613.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "header_bytes": 125,
+        "observation": {
+          "elapsed_seconds": 47.722275999999994,
+          "timing_line": 242,
+          "body_byte_range": [
+            23732,
+            23735
+          ],
+          "decompressed_byte_range": [
+            23857,
+            23860
+          ]
+        },
+        "session_start": [
+          {
+            "file": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080102-daiwei-20260909-1131\\logs\\events.jsonl",
+            "line": 114,
+            "ts": "2026-09-03T17:57:56+08:00",
+            "epoch": 1788429476
+          }
+        ],
+        "shell_ranges": {
+          "prompt_begin": 23625,
+          "echo_begin": 23723,
+          "echo_end": 23734,
+          "output_begin": 23734,
+          "output_end": 24295
+        },
+        "shell_decompressed_ranges": {
+          "prompt_begin": 23750,
+          "echo_begin": 23848,
+          "echo_end": 23859,
+          "output_begin": 23859,
+          "output_end": 24420
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "rm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg fs.img\\",
+        "*/*.o */*.d */*.asm */*.sym \\",
+        "target/* \\",
+        "xv6-user/initcode xv6-user/initcode.out \\",
+        "kernel/kernel \\",
+        ".gdbinit \\",
+        "xv6-user/usys.S \\",
+        "xv6-user/_init xv6-user/_sh xv6-user/_cat xv6-user/_echo xv6-user/_grep xv6-user/_ls xv6-user/_kill xv6-user/_mkdir xv6-user/_xargs xv6-user/_sleep xv6-user/_fi",
+        "nd xv6-user/_rm xv6-user/_wc xv6-user/_test xv6-user/_usertests xv6-user/_strace xv6-user/_mv xv6-user/_halt"
+      ],
+      "output_note": "关联原提取器的命令输出；未推定执行结束或输出时间",
+      "output_truncated": false
+    }
+  ],
+  "errors": [
+    "日志第 36 行时间倒退；未据此校正录像时钟"
+  ]
+}

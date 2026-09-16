@@ -1,0 +1,396 @@
+{
+  "schema_version": 1,
+  "student": {
+    "student_id": "20260001",
+    "name": "张三",
+    "source": "D:\\操作系统实验评分机制\\学生操作系统实验数据爬取\\操作系统实验数据记录\\20260001-张三-20260903-1032"
+  },
+  "lab": "other",
+  "status": "complete",
+  "summary": {
+    "events": 4,
+    "absolute_time_events": 4,
+    "relative_time_only_events": 0,
+    "missing_time_events": 0,
+    "uncertain_events": 0,
+    "errors": 0,
+    "by_type": {
+      "shell_command_observed": 4
+    },
+    "recording_failures": 0,
+    "processing_failures": 0
+  },
+  "statistics": {
+    "events": 4,
+    "absolute_time_events": 4,
+    "relative_time_only_events": 0,
+    "missing_time_events": 0,
+    "uncertain_events": 0,
+    "errors": 0,
+    "by_type": {
+      "shell_command_observed": 4
+    },
+    "recording_failures": 0,
+    "processing_failures": 0
+  },
+  "student_recordings": 2,
+  "recording_details": [
+    {
+      "recording_id": "20260903T100224-14237",
+      "out": "D:\\操作系统实验评分机制\\学生操作系统实验数据爬取\\操作系统实验数据记录\\20260001-张三-20260903-1032\\term\\20260903T100224-14237.out.gz",
+      "status": "ok",
+      "events": 2,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "no_recognizable_role_markers",
+      "format": "header",
+      "header_bytes": 124,
+      "body_bytes": 437,
+      "timing_bytes": 371,
+      "administrative_tail": true,
+      "header_start": "2026-09-03T10:02:24+08:00",
+      "chosen_start": "2026-09-03T10:02:24+08:00",
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/1",
+        "session_start_tty": [
+          "/dev/pts/2"
+        ],
+        "shell_pid": [
+          "14247"
+        ]
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260903T100227-14337",
+      "out": "D:\\操作系统实验评分机制\\学生操作系统实验数据爬取\\操作系统实验数据记录\\20260001-张三-20260903-1032\\term\\20260903T100227-14337.out.gz",
+      "status": "ok",
+      "events": 2,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "no_recognizable_role_markers",
+      "format": "header",
+      "header_bytes": 124,
+      "body_bytes": 403,
+      "timing_bytes": 337,
+      "administrative_tail": true,
+      "header_start": "2026-09-03T10:02:27+08:00",
+      "chosen_start": "2026-09-03T10:02:27+08:00",
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/1",
+        "session_start_tty": [
+          "/dev/pts/2"
+        ],
+        "shell_pid": [
+          "14345"
+        ]
+      },
+      "issues": []
+    }
+  ],
+  "events": [
+    {
+      "event_id": "75cb2a9a78ba:20260903T100224-14237:shell:1",
+      "student": {
+        "student_id": "20260001",
+        "name": "张三"
+      },
+      "lab": "other",
+      "cwd": "~/桌面",
+      "recording_id": "20260903T100224-14237",
+      "terminal": {
+        "header_tty": "/dev/pts/1",
+        "session_start_tty": [
+          "/dev/pts/2"
+        ],
+        "shell_pid": [
+          "14247"
+        ]
+      },
+      "type": "shell_command_observed",
+      "content": "echo 学生开机第一件事",
+      "observed_at": "2026-09-03T10:02:24.957777+08:00",
+      "elapsed_seconds": 0.957777,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "D:\\操作系统实验评分机制\\学生操作系统实验数据爬取\\操作系统实验数据记录\\20260001-张三-20260903-1032\\term\\20260903T100224-14237.out.gz",
+        "tim": "D:\\操作系统实验评分机制\\学生操作系统实验数据爬取\\操作系统实验数据记录\\20260001-张三-20260903-1032\\term\\20260903T100224-14237.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "header_bytes": 124,
+        "observation": {
+          "elapsed_seconds": 0.957777,
+          "timing_line": 2,
+          "body_byte_range": [
+            142,
+            208
+          ],
+          "decompressed_byte_range": [
+            266,
+            332
+          ]
+        },
+        "session_start": [
+          {
+            "file": "D:\\操作系统实验评分机制\\学生操作系统实验数据爬取\\操作系统实验数据记录\\20260001-张三-20260903-1032\\logs\\events.jsonl",
+            "line": 3,
+            "ts": "2026-09-03T10:02:24+08:00",
+            "epoch": 1788400944
+          }
+        ],
+        "shell_ranges": {
+          "prompt_begin": 64,
+          "echo_begin": 142,
+          "echo_end": 171,
+          "output_begin": 171,
+          "output_end": 272
+        },
+        "shell_decompressed_ranges": {
+          "prompt_begin": 188,
+          "echo_begin": 266,
+          "echo_end": 295,
+          "output_begin": 295,
+          "output_end": 396
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "学生开机第一件事"
+      ],
+      "output_note": "关联原提取器的命令输出；未推定执行结束或输出时间",
+      "output_truncated": false
+    },
+    {
+      "event_id": "75cb2a9a78ba:20260903T100224-14237:shell:2",
+      "student": {
+        "student_id": "20260001",
+        "name": "张三"
+      },
+      "lab": "other",
+      "cwd": "~/桌面",
+      "recording_id": "20260903T100224-14237",
+      "terminal": {
+        "header_tty": "/dev/pts/1",
+        "session_start_tty": [
+          "/dev/pts/2"
+        ],
+        "shell_pid": [
+          "14247"
+        ]
+      },
+      "type": "shell_command_observed",
+      "content": "exit",
+      "observed_at": "2026-09-03T10:02:25.958656+08:00",
+      "elapsed_seconds": 1.958656,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "D:\\操作系统实验评分机制\\学生操作系统实验数据爬取\\操作系统实验数据记录\\20260001-张三-20260903-1032\\term\\20260903T100224-14237.out.gz",
+        "tim": "D:\\操作系统实验评分机制\\学生操作系统实验数据爬取\\操作系统实验数据记录\\20260001-张三-20260903-1032\\term\\20260903T100224-14237.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "header_bytes": 124,
+        "observation": {
+          "elapsed_seconds": 1.958656,
+          "timing_line": 4,
+          "body_byte_range": [
+            350,
+            356
+          ],
+          "decompressed_byte_range": [
+            474,
+            480
+          ]
+        },
+        "session_start": [
+          {
+            "file": "D:\\操作系统实验评分机制\\学生操作系统实验数据爬取\\操作系统实验数据记录\\20260001-张三-20260903-1032\\logs\\events.jsonl",
+            "line": 3,
+            "ts": "2026-09-03T10:02:24+08:00",
+            "epoch": 1788400944
+          }
+        ],
+        "shell_ranges": {
+          "prompt_begin": 272,
+          "echo_begin": 350,
+          "echo_end": 354,
+          "output_begin": 354,
+          "output_end": 437
+        },
+        "shell_decompressed_ranges": {
+          "prompt_begin": 396,
+          "echo_begin": 474,
+          "echo_end": 478,
+          "output_begin": 478,
+          "output_end": 561
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "exit",
+        "Script done on 2026-09-03 10:02:26+08:00 [COMMAND_EXIT_CODE=\"0\"]"
+      ],
+      "output_note": "关联原提取器的命令输出；未推定执行结束或输出时间",
+      "output_truncated": false
+    },
+    {
+      "event_id": "75cb2a9a78ba:20260903T100227-14337:shell:1",
+      "student": {
+        "student_id": "20260001",
+        "name": "张三"
+      },
+      "lab": "other",
+      "cwd": "~/桌面",
+      "recording_id": "20260903T100227-14337",
+      "terminal": {
+        "header_tty": "/dev/pts/1",
+        "session_start_tty": [
+          "/dev/pts/2"
+        ],
+        "shell_pid": [
+          "14345"
+        ]
+      },
+      "type": "shell_command_observed",
+      "content": "echo $LABT_WRAPPED",
+      "observed_at": "2026-09-03T10:02:27.483070+08:00",
+      "elapsed_seconds": 0.48307,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "D:\\操作系统实验评分机制\\学生操作系统实验数据爬取\\操作系统实验数据记录\\20260001-张三-20260903-1032\\term\\20260903T100227-14337.out.gz",
+        "tim": "D:\\操作系统实验评分机制\\学生操作系统实验数据爬取\\操作系统实验数据记录\\20260001-张三-20260903-1032\\term\\20260903T100227-14337.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "header_bytes": 124,
+        "observation": {
+          "elapsed_seconds": 0.48307,
+          "timing_line": 2,
+          "body_byte_range": [
+            142,
+            174
+          ],
+          "decompressed_byte_range": [
+            266,
+            298
+          ]
+        },
+        "session_start": [
+          {
+            "file": "D:\\操作系统实验评分机制\\学生操作系统实验数据爬取\\操作系统实验数据记录\\20260001-张三-20260903-1032\\logs\\events.jsonl",
+            "line": 6,
+            "ts": "2026-09-03T10:02:27+08:00",
+            "epoch": 1788400947
+          }
+        ],
+        "shell_ranges": {
+          "prompt_begin": 64,
+          "echo_begin": 142,
+          "echo_end": 160,
+          "output_begin": 160,
+          "output_end": 238
+        },
+        "shell_decompressed_ranges": {
+          "prompt_begin": 188,
+          "echo_begin": 266,
+          "echo_end": 284,
+          "output_begin": 284,
+          "output_end": 362
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "1"
+      ],
+      "output_note": "关联原提取器的命令输出；未推定执行结束或输出时间",
+      "output_truncated": false
+    },
+    {
+      "event_id": "75cb2a9a78ba:20260903T100227-14337:shell:2",
+      "student": {
+        "student_id": "20260001",
+        "name": "张三"
+      },
+      "lab": "other",
+      "cwd": "~/桌面",
+      "recording_id": "20260903T100227-14337",
+      "terminal": {
+        "header_tty": "/dev/pts/1",
+        "session_start_tty": [
+          "/dev/pts/2"
+        ],
+        "shell_pid": [
+          "14345"
+        ]
+      },
+      "type": "shell_command_observed",
+      "content": "exit",
+      "observed_at": "2026-09-03T10:02:28.484683+08:00",
+      "elapsed_seconds": 1.484683,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "D:\\操作系统实验评分机制\\学生操作系统实验数据爬取\\操作系统实验数据记录\\20260001-张三-20260903-1032\\term\\20260903T100227-14337.out.gz",
+        "tim": "D:\\操作系统实验评分机制\\学生操作系统实验数据爬取\\操作系统实验数据记录\\20260001-张三-20260903-1032\\term\\20260903T100227-14337.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "header_bytes": 124,
+        "observation": {
+          "elapsed_seconds": 1.484683,
+          "timing_line": 5,
+          "body_byte_range": [
+            316,
+            337
+          ],
+          "decompressed_byte_range": [
+            440,
+            461
+          ]
+        },
+        "session_start": [
+          {
+            "file": "D:\\操作系统实验评分机制\\学生操作系统实验数据爬取\\操作系统实验数据记录\\20260001-张三-20260903-1032\\logs\\events.jsonl",
+            "line": 6,
+            "ts": "2026-09-03T10:02:27+08:00",
+            "epoch": 1788400947
+          }
+        ],
+        "shell_ranges": {
+          "prompt_begin": 238,
+          "echo_begin": 316,
+          "echo_end": 320,
+          "output_begin": 320,
+          "output_end": 403
+        },
+        "shell_decompressed_ranges": {
+          "prompt_begin": 362,
+          "echo_begin": 440,
+          "echo_end": 444,
+          "output_begin": 444,
+          "output_end": 527
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "exit",
+        "Script done on 2026-09-03 10:02:29+08:00 [COMMAND_EXIT_CODE=\"0\"]"
+      ],
+      "output_note": "关联原提取器的命令输出；未推定执行结束或输出时间",
+      "output_truncated": false
+    }
+  ],
+  "errors": []
+}

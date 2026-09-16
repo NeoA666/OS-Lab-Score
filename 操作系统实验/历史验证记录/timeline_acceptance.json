@@ -1,0 +1,27 @@
+{
+  "files_json": 19,
+  "students": 12,
+  "recordings": 134,
+  "events": 332,
+  "types": {
+    "shell_command_observed": 262,
+    "claude_user_observed": 35,
+    "claude_reply_observed": 35
+  },
+  "time_status": {
+    "absolute": 321,
+    "relative_only": 11
+  },
+  "legacy_qa_messages_preserved": 70,
+  "shell_deltas": [],
+  "example_offsets": [
+    125.961003,
+    130.86392800000002
+  ],
+  "uncertainty": {
+    "header_session_start_difference_seconds=1.0": 18,
+    "conflicting_session_start_records": 11,
+    "global_order_uncertain": 11,
+    "absolute_observation_unavailable": 11
+  }
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "path": "摘要-过程报告.md",
+    "size": 799,
+    "sha256": "627668e0078ca24b59c00ae44a04ec8f30d91fab71dd1cea7d4af9ba74ebeb40"
+  },
+  {
+    "path": "logs/run.conf",
+    "size": 86,
+    "sha256": "525b97c458ab4723bccdd65fb7d3eb659669a18e3d4639a1c6dc3f56c3cf49b4"
+  },
+  {
+    "path": "logs/identity",
+    "size": 59,
+    "sha256": "e6ea0487cd04510de7dfe1f9ea6fcbe44bf5af09aada5abf92384d2da870323f"
+  },
+  {
+    "path": "logs/events.jsonl",
+    "size": 6535,
+    "sha256": "392098dd50bd2f0ba5a687399f04c4ad4ea1c4fe4d06684fce28134d1ff11daf"
+  },
+  {
+    "path": "logs/capture/proxies/by-tty/dev_pts_1",
+    "size": 6,
+    "sha256": "bdc295d2e988b0dcc779d1ef2d597e44640f18325c19b3da98603768a962085c"
+  },
+  {
+    "path": "logs/capture/proxies/63059.json",
+    "size": 259,
+    "sha256": "05ba6a1c1a147bce380b43a541f337e40d3a9e1ccce2df9a4f986f416585bde8"
+  },
+  {
+    "path": "logs/events.mirror.jsonl",
+    "size": 5186,
+    "sha256": "016831cb047d2e299a5891d78cda878bd7f970a74e2d8788fe87b4551e12ff26"
+  },
+  {
+    "path": "logs/.chainstate",
+    "size": 64,
+    "sha256": "f930c9d86d3df3b95ee1dc361b3fe5980d4d70ca23a41edcff403a1b8422b50a"
+  },
+  {
+    "path": "MANIFEST.sha256",
+    "size": 1035,
+    "sha256": "5338d5082d6bc210b37d61bd1d7645daf0ba054ae7d88f1d24aab7d136f65b06"
+  },
+  {
+    "path": "transcripts/20260911T204037-63059.txt",
+    "size": 63595,
+    "sha256": "b0a3d2fdf7f1cca0c6f0aae1a04aa6562b2cb7b1fc5a720d74be8c79cbaf4cd3"
+  },
+  {
+    "path": "term/20260911T204037-63059.tim.gz",
+    "size": 8204,
+    "sha256": "e2c04a4520dfa938ce342346e85b69807f2489105554a9ad5981630d965ac389"
+  },
+  {
+    "path": "term/20260911T204037-63059.out.gz",
+    "size": 6215,
+    "sha256": "c3c436bf11db72bb1b4e5139fb07d66c92e08def601e8fcc900b91b564643a5d"
+  }
+]

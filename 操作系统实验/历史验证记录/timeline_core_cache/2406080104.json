@@ -1,0 +1,231 @@
+{
+  "events": [],
+  "recordings": 8,
+  "errors": [],
+  "recording_details": [
+    {
+      "recording_id": "20260909T120838-19233",
+      "out": "D:\\操作系统实验评分机制\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080104-方如轩-20260909-1237\\term\\20260909T120838-19233.out.gz",
+      "status": "ok",
+      "events": 0,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "no_recognizable_role_markers",
+      "format": "headerless",
+      "header_bytes": 0,
+      "body_bytes": 140,
+      "timing_bytes": 140,
+      "administrative_tail": false,
+      "header_start": null,
+      "chosen_start": "2026-09-09T12:08:38+08:00",
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/4"
+        ],
+        "shell_pid": []
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260909T120853-19758",
+      "out": "D:\\操作系统实验评分机制\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080104-方如轩-20260909-1237\\term\\20260909T120853-19758.out.gz",
+      "status": "ok",
+      "events": 0,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "no_recognizable_role_markers",
+      "format": "headerless",
+      "header_bytes": 0,
+      "body_bytes": 3469,
+      "timing_bytes": 3469,
+      "administrative_tail": false,
+      "header_start": null,
+      "chosen_start": "2026-09-09T12:08:53+08:00",
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/4"
+        ],
+        "shell_pid": []
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260909T121201-20589",
+      "out": "D:\\操作系统实验评分机制\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080104-方如轩-20260909-1237\\term\\20260909T121201-20589.out.gz",
+      "status": "ok",
+      "events": 0,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "no_recognizable_role_markers",
+      "format": "headerless",
+      "header_bytes": 0,
+      "body_bytes": 4140,
+      "timing_bytes": 4140,
+      "administrative_tail": false,
+      "header_start": null,
+      "chosen_start": "2026-09-09T12:12:01+08:00",
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/4"
+        ],
+        "shell_pid": []
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260909T121528-21382",
+      "out": "D:\\操作系统实验评分机制\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080104-方如轩-20260909-1237\\term\\20260909T121528-21382.out.gz",
+      "status": "ok",
+      "events": 0,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "no_recognizable_role_markers",
+      "format": "headerless",
+      "header_bytes": 0,
+      "body_bytes": 6626,
+      "timing_bytes": 6626,
+      "administrative_tail": false,
+      "header_start": null,
+      "chosen_start": "2026-09-09T12:15:28+08:00",
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/4"
+        ],
+        "shell_pid": []
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260909T122932-23272",
+      "out": "D:\\操作系统实验评分机制\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080104-方如轩-20260909-1237\\term\\20260909T122932-23272.out.gz",
+      "status": "ok",
+      "events": 0,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "no_recognizable_role_markers",
+      "format": "headerless",
+      "header_bytes": 0,
+      "body_bytes": 5653,
+      "timing_bytes": 5653,
+      "administrative_tail": false,
+      "header_start": null,
+      "chosen_start": "2026-09-09T12:29:32+08:00",
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/4"
+        ],
+        "shell_pid": []
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260909T122950-23863",
+      "out": "D:\\操作系统实验评分机制\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080104-方如轩-20260909-1237\\term\\20260909T122950-23863.out.gz",
+      "status": "ok",
+      "events": 0,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "no_recognizable_role_markers",
+      "format": "headerless",
+      "header_bytes": 0,
+      "body_bytes": 4321,
+      "timing_bytes": 4321,
+      "administrative_tail": false,
+      "header_start": null,
+      "chosen_start": "2026-09-09T12:29:51+08:00",
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/6"
+        ],
+        "shell_pid": []
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260909T123448-25012",
+      "out": "D:\\操作系统实验评分机制\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080104-方如轩-20260909-1237\\term\\20260909T123448-25012.out.gz",
+      "status": "ok",
+      "events": 0,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "no_recognizable_role_markers",
+      "format": "headerless",
+      "header_bytes": 0,
+      "body_bytes": 3462,
+      "timing_bytes": 3462,
+      "administrative_tail": false,
+      "header_start": null,
+      "chosen_start": "2026-09-09T12:34:48+08:00",
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/4"
+        ],
+        "shell_pid": []
+      },
+      "issues": []
+    },
+    {
+      "recording_id": "20260909T123634-25637",
+      "out": "D:\\操作系统实验评分机制\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080104-方如轩-20260909-1237\\term\\20260909T123634-25637.out.gz",
+      "status": "ok",
+      "events": 0,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "no_recognizable_role_markers",
+      "format": "headerless",
+      "header_bytes": 0,
+      "body_bytes": 7966,
+      "timing_bytes": 7966,
+      "administrative_tail": false,
+      "header_start": null,
+      "chosen_start": "2026-09-09T12:36:34+08:00",
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/3"
+        ],
+        "shell_pid": []
+      },
+      "issues": []
+    }
+  ]
+}

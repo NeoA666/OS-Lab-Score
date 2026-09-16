@@ -1,0 +1,29 @@
+{
+  "totals": {
+    "students": 12,
+    "recordings": 134,
+    "commands": 262,
+    "claude_sessions": 8,
+    "turns": 35
+  },
+  "labs": {
+    "lab0": {
+      "commands": 199,
+      "turns": 32,
+      "recordings": 63,
+      "claude_sessions": 5
+    },
+    "lab1": {
+      "commands": 20,
+      "turns": 0,
+      "recordings": 4,
+      "claude_sessions": 0
+    },
+    "other": {
+      "commands": 43,
+      "turns": 3,
+      "recordings": 72,
+      "claude_sessions": 3
+    }
+  }
+}

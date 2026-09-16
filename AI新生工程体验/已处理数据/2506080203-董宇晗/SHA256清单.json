@@ -1,0 +1,55 @@
+{
+  "note": "提取一致性记录，不是源头真实性证明",
+  "files": [
+    {
+      "path": "ai/s_ba10064df843418387de9bf0bd5e70f4.jsonl",
+      "bytes": 50789,
+      "sha256": "dfdd1c879fb2c021abab2ce3f89b169f1176ca985c596250ca5e06005bdfd563"
+    },
+    {
+      "path": "ai/sessions.json",
+      "bytes": 238,
+      "sha256": "804c6e474a57ac58acc006f225e76b7d161c3114511329633f928c9045363079"
+    },
+    {
+      "path": "casts/pty_1-实验一-AI协作解题_a6db90f5.cast",
+      "bytes": 321,
+      "sha256": "0e37786a1bbccc34c0ab89dcf3ce71989cb49fb3f4c3eb5b34606d6bc7a90bf8"
+    },
+    {
+      "path": "casts/pty_1-实验一-AI协作解题_b2ed1fac.cast",
+      "bytes": 3604,
+      "sha256": "be18257f9ada2d7ab4554ed6bfdbea8e22c38391b879ad37b23e25a7a6e290c6"
+    },
+    {
+      "path": "casts/pty_1-实验一-AI协作解题_b9a88205.cast",
+      "bytes": 4620,
+      "sha256": "fbddbdcdcfbab265c7827cd75cf9ee799b3263957cabda3a3a91135f36b5aaf9"
+    },
+    {
+      "path": "casts/pty_1-实验一-AI协作解题_dab22415.cast",
+      "bytes": 302,
+      "sha256": "3e812e36031e7759506b27d0c868a76e2e0ceb2a9f9cf241a64ca9cb027e5784"
+    },
+    {
+      "path": "casts/pty_1-实验一-AI协作解题_f95d9bae.cast",
+      "bytes": 722,
+      "sha256": "09ca5e1dfc20c9d1a0277cc2f6c8ae15e4afc4e76ceaa0f8a5cfdaaacbce725d"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 1048,
+      "sha256": "58ba71981e531fa7937df3232e2abbd544eb108a743dbfe4b5c6f47e9a5120de"
+    },
+    {
+      "path": "workspace/.labtracker/commands.jsonl",
+      "bytes": 1718,
+      "sha256": "0e79aff70d0efca12cba08be07b082be584eabfcd4f598c98488c030eb6e9c25"
+    },
+    {
+      "path": "workspace/1-实验一-AI协作解题/1.py",
+      "bytes": 3905,
+      "sha256": "5c8a93d2aa2d712e88b056dd574c1b12fe41ca3e84389801e8b36fb48b9f3ef3"
+    }
+  ]
+}

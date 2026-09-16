@@ -1,0 +1,53 @@
+import hashlib
+import json
+from pathlib import Path
+import tempfile
+import unittest
+
+import generate_readable_timeline as app
+
+
+class ReadableTimelineTests(unittest.TestCase):
+    def setUp(self):
+        self.temporary = tempfile.TemporaryDirectory(dir=Path(__file__).parent)
+        self.root = Path(self.temporary.name)
+        self.student = self.root / "学生"
+        self.source = self.student / app.SOURCE_DIRECTORY
+        self.source.mkdir(parents=True)
+        document = {
+            "student": {"student_id": "123", "name": "学生"},
+            "lab": "lab0",
+            "events": [{
+                "event_id": "hidden-id",
+                "recording_id": "hidden-recording",
+                "terminal": {"header_tty": "/dev/pts/0"},
+                "type": "shell_command_observed",
+                "content": "echo hello",
+                "output": ["hello"],
+                "observed_at": "2026-09-10T14:00:00+00:00",
+                "elapsed_seconds": 1.25,
+            }],
+        }
+        self.timeline = self.source / "timeline_lab0.json"
+        self.timeline.write_text(json.dumps(document, ensure_ascii=False), encoding="utf-8")
+
+    def tearDown(self):
+        self.temporary.cleanup()
+
+    def test_writes_simple_view_without_changing_source_json(self):
+        source_hash = hashlib.sha256(self.timeline.read_bytes()).hexdigest()
+        output = app.write_student(self.student)
+        self.assertEqual([path.name for path in output], ["timeline_lab0.md"])
+        text = output[0].read_text(encoding="utf-8")
+        self.assertIn("录像时间：2026-09-10T22:00:00.000+08:00（北京时间）", text)
+        self.assertIn("录像类型：Shell 命令", text)
+        self.assertIn("echo hello", text)
+        self.assertIn("[终端输出]\nhello", text)
+        self.assertNotIn("hidden-id", text)
+        self.assertNotIn("hidden-recording", text)
+        self.assertNotIn("/dev/pts/0", text)
+        self.assertEqual(source_hash, hashlib.sha256(self.timeline.read_bytes()).hexdigest())
+
+
+if __name__ == "__main__":
+    unittest.main()

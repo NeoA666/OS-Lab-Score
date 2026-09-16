@@ -1,0 +1,40 @@
+{
+  "note": "提取一致性记录，不是源头真实性证明",
+  "files": [
+    {
+      "path": "ai/s_6421eba89914467ba317e2977d20f186.jsonl",
+      "bytes": 665,
+      "sha256": "7f0f608337fd1037848343954f429c584d5c0a0fbd7992b8d3e649249be9f7ee"
+    },
+    {
+      "path": "ai/s_e2e_view2.jsonl",
+      "bytes": 225,
+      "sha256": "024b87f160d3ac5090db3d25f01e5b01328e25e9e16ffc2c8cec4c6ef2c541a8"
+    },
+    {
+      "path": "ai/sessions.json",
+      "bytes": 449,
+      "sha256": "35508aca285bf4240f33c613de1009125f74d609d1587790cf2fa6f4321921d4"
+    },
+    {
+      "path": "casts/pty_1-实验一-AI协作解题_825b98ab.cast",
+      "bytes": 555,
+      "sha256": "d571e06ca78586a347baec7589b5646060ad2b2889013b28ee4d465fbb44c25c"
+    },
+    {
+      "path": "casts/pty_1-实验一-AI协作解题_93b64fbd.cast",
+      "bytes": 302,
+      "sha256": "e9cda1633bbc4749f61f9ba0cfd43cd80cc3a298cc98f575afde041142f05c73"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 724,
+      "sha256": "c872be48a81000598fe9f222d00397e37ca541a7c8e868069b5d75fe7ccb94fd"
+    },
+    {
+      "path": "workspace/.labtracker/commands.jsonl",
+      "bytes": 529,
+      "sha256": "3dca0cb5c0f8438e427cc36c8d78dcd7bf73112978bf18abac11f60d40ebbf6b"
+    }
+  ]
+}

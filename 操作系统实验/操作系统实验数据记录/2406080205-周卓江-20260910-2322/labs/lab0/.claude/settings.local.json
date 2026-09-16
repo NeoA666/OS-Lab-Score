@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//home/ailab-os/桌面/xv6-ai-labs-km/**)"
+    ]
+  }
+}
