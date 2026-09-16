@@ -1,0 +1,9 @@
+[project]
+name = "integrity-audit-agent"
+version = "0.1.0"
+description = "Read-only, evidence-bound integrity audit agent loop for Lab0"
+requires-python = ">=3.11"
+
+[project.scripts]
+integrity-audit = "audit_agent.cli:main"
+
