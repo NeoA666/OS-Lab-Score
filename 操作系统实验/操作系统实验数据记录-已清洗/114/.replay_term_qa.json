@@ -1,0 +1,11 @@
+{
+  "tool": "replay_term_qa",
+  "source": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\123456-114-20260905-0950",
+  "layout": "by-lab-v1",
+  "reports": [
+    "claude对话/claude_qa_clean_lab0.md",
+    "完整终端转写记录/full_terminal_transcript_lab0.md",
+    "终端命令统计/command_statistics_lab0.md",
+    "终端对话记录/terminal_qa_report_lab0.md"
+  ]
+}

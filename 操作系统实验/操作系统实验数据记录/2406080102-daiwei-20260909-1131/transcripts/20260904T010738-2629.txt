@@ -1,0 +1,36 @@
+==== labtracker 终端转录 ====
+录像: 20260904T010738-2629.out.gz   时长: 2分31秒   原始大小: 749B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMwa
+re-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ maleke run
+
+qemu-system-riscv64: -drive file=fs
+.img,if=none,format=raw,id=x0: Could not open 'fs.img': No such file or directory
+make: *** [Makefile:152：run] 错误 1
+
+-- [0分13秒] --
+ai
+lab-
+o
+s
+@
+a
+i
+l
+a
+b
+-
+o
+s
+-
+V
+M
+w
+a
+-- [2分31秒] --
+re-Virtual-Platfo
+rm:~/桌面/xv6-ai-labs-km/lab0$ naje ===
+exit
+

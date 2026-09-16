@@ -1,0 +1,29 @@
+==== labtracker 终端转录 ====
+录像: 20260909T111332-6648.out.gz   时长: 8分23秒   原始大小: 1344B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ quemu-system-riscbv64 --version
+QEMU emula
+tor vers
+ion 8.2.2 (Debian 1:8.2.2+ds-0ubuntu1.17)
+Copyright (c) 2003-2023 Fabrice Bellard and the QEMU Project developers
+
+-- [0分38秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ^C
+
+-- [1分07秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ^C
+
+-- [2分31秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ riscb\vv64-unknown-elf-gcc --version
+riscv64-unknown-elf-gcc (13.2.0-11ubuntu1+12) 13.2.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+This is free software; see the 
+source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+-- [8分23秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

@@ -1,0 +1,14 @@
+{
+  "owner": "ai-experience-batch-v1",
+  "archive_sha256": "2d593f542296e572f105dbf440afd6e38e713ca3b6e90126a5774439100d151d",
+  "summary": {
+    "student": "2506080204-杜金熙",
+    "status": "通过",
+    "action": "已处理",
+    "py_files": 1,
+    "sessions": 2,
+    "messages": 9,
+    "recordings": 3,
+    "issues": []
+  }
+}

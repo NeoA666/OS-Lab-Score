@@ -1,0 +1,5 @@
+{"version": 2, "width": 80, "height": 24, "timestamp": 1788773097, "env": {"SHELL": "/bin/bash", "TERM": "xterm-256color"}, "lab_id": "1-实验一-AI协作解题", "owner": "2506080130", "title": "终端 2"}
+[6.8e-05, "o", "\u001b[?2004h[root@admin 1-\u5b9e\u9a8c\u4e00-AI\u534f\u4f5c\u89e3\u9898]# "]
+[0.582615, "r", "25x39"]
+[0.582658, "r", "25x39"]
+[0.584242, "o", "\r\u001b[K\r[root@admin 1-\u5b9e\u9a8c\u4e00-AI\u534f\u4f5c\u89e3\u9898]# "]

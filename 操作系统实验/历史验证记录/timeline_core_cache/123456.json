@@ -1,0 +1,37 @@
+{
+  "events": [],
+  "recordings": 1,
+  "errors": [],
+  "recording_details": [
+    {
+      "recording_id": "20260905T094918-5341",
+      "out": "D:\\操作系统实验评分机制\\学生操作系统实验数据爬取\\操作系统实验数据记录\\123456-114-20260905-0950\\term\\20260905T094918-5341.out.gz",
+      "status": "ok",
+      "events": 0,
+      "claude_retained_pairs": 0,
+      "claude_record_count": 0,
+      "claude_unretained_record_count": 0,
+      "claude_incomplete_record_count": 0,
+      "claude_extraction_status": "no_recognizable_role_markers",
+      "format": "header",
+      "header_bytes": 122,
+      "body_bytes": 4048,
+      "timing_bytes": 4048,
+      "administrative_tail": false,
+      "header_start": "2026-09-05T09:49:18+00:00",
+      "chosen_start": "2026-09-05T09:49:18+00:00",
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/1",
+        "session_start_tty": [
+          "/dev/pts/2"
+        ],
+        "shell_pid": [
+          "5570"
+        ]
+      },
+      "issues": []
+    }
+  ]
+}

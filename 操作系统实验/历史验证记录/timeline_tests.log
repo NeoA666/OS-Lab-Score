@@ -1,0 +1,51 @@
+test_atomic_failure_preserves_previous_file (test_replay_term_qa.BatchTests.test_atomic_failure_preserves_previous_file) ... ok
+test_batch_isolation_errors_and_atomic_rerun (test_replay_term_qa.BatchTests.test_batch_isolation_errors_and_atomic_rerun) ... ok
+test_duplicate_capture_and_portable_names (test_replay_term_qa.BatchTests.test_duplicate_capture_and_portable_names) ... ok
+test_full_collapses_character_frames_and_keeps_clear_history (test_replay_term_qa.BatchTests.test_full_collapses_character_frames_and_keeps_clear_history) ... ok
+test_full_exports_final_text_and_preserves_history (test_replay_term_qa.BatchTests.test_full_exports_final_text_and_preserves_history) ... ok
+test_lab_path_segments (test_replay_term_qa.BatchTests.test_lab_path_segments) ... ok
+test_login_error_not_final_answer (test_replay_term_qa.BatchTests.test_login_error_not_final_answer) ... ok
+test_markdown_bullets_are_message_content (test_replay_term_qa.BatchTests.test_markdown_bullets_are_message_content) ... ok
+test_metadata (test_replay_term_qa.BatchTests.test_metadata) ... ok
+test_multiple_labs_in_one_recording (test_replay_term_qa.BatchTests.test_multiple_labs_in_one_recording) ... ok
+test_other_and_failed_cd_are_not_guessed (test_replay_term_qa.BatchTests.test_other_and_failed_cd_are_not_guessed) ... ok
+test_regions_preserve_bytes_and_absolute_timing (test_replay_term_qa.BatchTests.test_regions_preserve_bytes_and_absolute_timing) ... ok
+test_shell_and_screen_qa (test_replay_term_qa.BatchTests.test_shell_and_screen_qa) ... ok
+test_single_unknown_and_existing_collision (test_replay_term_qa.BatchTests.test_single_unknown_and_existing_collision) ... ok
+test_split_without_timing_and_old_layout_migration (test_replay_term_qa.BatchTests.test_split_without_timing_and_old_layout_migration) ... ok
+test_streaming_redraw_and_multiple_turns (test_replay_term_qa.BatchTests.test_streaming_redraw_and_multiple_turns) ... ok
+test_student_failure_continues (test_replay_term_qa.BatchTests.test_student_failure_continues) ... ok
+test_table_and_sort (test_replay_term_qa.BatchTests.test_table_and_sort) ... ok
+test_unfinished_and_tool_permission (test_replay_term_qa.BatchTests.test_unfinished_and_tool_permission) ... ok
+test_byte_boundary_and_paste_mapping (test_timeline_alignment.AlignmentTests.test_byte_boundary_and_paste_mapping) ... ok
+test_chinese_header_and_invalid_dimensions (test_timeline_alignment.AlignmentTests.test_chinese_header_and_invalid_dimensions) ... ok
+test_conflicting_session_starts_preserve_relative_time (test_timeline_alignment.AlignmentTests.test_conflicting_session_starts_preserve_relative_time) ... ok
+test_echo_claude_is_not_launch (test_timeline_alignment.AlignmentTests.test_echo_claude_is_not_launch) ... ok
+test_headerless_does_not_drop_first_command (test_timeline_alignment.AlignmentTests.test_headerless_does_not_drop_first_command) ... ok
+test_invalid_or_excess_timing_cannot_supply_event_time (test_timeline_alignment.AlignmentTests.test_invalid_or_excess_timing_cannot_supply_event_time) ... ok
+test_missing_term_is_reported (test_timeline_alignment.AlignmentTests.test_missing_term_is_reported) ... ok
+test_repeated_question_gets_distinct_identity (test_timeline_alignment.AlignmentTests.test_repeated_question_gets_distinct_identity) ... ok
+test_unfinished_reply_is_recorded_as_unretained (test_timeline_alignment.AlignmentTests.test_unfinished_reply_is_recorded_as_unretained) ... ok
+test_user_reply_and_final_display_are_independent (test_timeline_alignment.AlignmentTests.test_user_reply_and_final_display_are_independent) ... ok
+test_different_source_gets_distinct_timeline_owner (test_timeline.TimelineCliTests.test_different_source_gets_distinct_timeline_owner) ... ok
+test_missing_term_is_nonzero (test_timeline.TimelineCliTests.test_missing_term_is_nonzero) ... ok
+test_no_timeline_preserves_timeline_and_rerun_is_idempotent (test_timeline.TimelineCliTests.test_no_timeline_preserves_timeline_and_rerun_is_idempotent) ... ok
+test_symlink_term_is_rejected_when_supported (test_timeline.TimelineCliTests.test_symlink_term_is_rejected_when_supported) ... skipped '��ǰ Windows ��������������Ŀ¼��������'
+test_timeline_only_does_not_rebuild_existing_reports (test_timeline.TimelineCliTests.test_timeline_only_does_not_rebuild_existing_reports) ... ok
+test_chinese_header_and_conflicting_timing_are_safe (test_timeline.TimelineFixtureTests.test_chinese_header_and_conflicting_timing_are_safe) ... ok
+test_contract_and_independent_user_reply_times (test_timeline.TimelineFixtureTests.test_contract_and_independent_user_reply_times) ... ok
+test_cross_lab_and_original_order_are_retained (test_timeline.TimelineFixtureTests.test_cross_lab_and_original_order_are_retained) ... ok
+test_header_and_duplicate_session_start_are_reported (test_timeline.TimelineFixtureTests.test_header_and_duplicate_session_start_are_reported) ... ok
+test_headerless_recording_preserves_first_bytes (test_timeline.TimelineFixtureTests.test_headerless_recording_preserves_first_bytes) ... ok
+test_missing_timing_is_reported_without_losing_recording (test_timeline.TimelineFixtureTests.test_missing_timing_is_reported_without_losing_recording) ... ok
+test_paste_streaming_duplicates_are_not_duplicate_events (test_timeline.TimelineFixtureTests.test_paste_streaming_duplicates_are_not_duplicate_events) ... ok
+test_same_timestamp_recordings_have_stable_distinct_order (test_timeline.TimelineFixtureTests.test_same_timestamp_recordings_have_stable_distinct_order) ... ok
+test_foreign_manifest_is_rejected_before_writing (test_timeline_reports.TimelineReportTests.test_foreign_manifest_is_rejected_before_writing) ... ok
+test_json_markdown_manifest_and_safe_stale_cleanup (test_timeline_reports.TimelineReportTests.test_json_markdown_manifest_and_safe_stale_cleanup) ... ok
+test_readme_block_is_idempotent_and_preserves_existing_text (test_timeline_reports.TimelineReportTests.test_readme_block_is_idempotent_and_preserves_existing_text) ... ok
+test_timeline_only_creates_readme_and_reuses_timeline_owned_directory (test_timeline_reports.TimelineReportTests.test_timeline_only_creates_readme_and_reuses_timeline_owned_directory) ... ok
+
+----------------------------------------------------------------------
+Ran 46 tests in 1.632s
+
+OK (skipped=1)

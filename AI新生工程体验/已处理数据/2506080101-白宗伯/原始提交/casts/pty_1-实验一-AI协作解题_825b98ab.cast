@@ -1,0 +1,6 @@
+{"version": 2, "width": 80, "height": 24, "timestamp": 1788610034, "env": {"SHELL": "/bin/bash", "TERM": "xterm-256color"}, "lab_id": "1-实验一-AI协作解题", "owner": "2506080101", "title": "终端 2"}
+[5.7e-05, "o", "\u001b[?2004h[root@admin 1-\u5b9e\u9a8c\u4e00-AI\u534f\u4f5c\u89e3\u9898]# "]
+[1.419167, "o", "echo E2E-DONE-42 && ls\r\n\u001b[?2004l\r"]
+[1.419268, "o", "E2E-DONE-42\r\n"]
+[1.422098, "o", "\u5b9e\u9a8c\u6307\u5bfc\u624b\u518c.md\r\n"]
+[1.44488, "o", "\u001b[?2004h[root@admin 1-\u5b9e\u9a8c\u4e00-AI\u534f\u4f5c\u89e3\u9898]# "]

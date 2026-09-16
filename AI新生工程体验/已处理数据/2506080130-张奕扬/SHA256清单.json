@@ -1,0 +1,95 @@
+{
+  "note": "提取一致性记录，不是源头真实性证明",
+  "files": [
+    {
+      "path": "ai/s_5e70a3dd61794ef1bc5ac4dd624c990a.jsonl",
+      "bytes": 40797,
+      "sha256": "38a4428a5621d9d0f3f5cebf13958ebf58e4e8caa294b0c60a7482d772e33491"
+    },
+    {
+      "path": "ai/sessions.json",
+      "bytes": 238,
+      "sha256": "5ad7b78e667952c921394781250b0b701879f853a0afb324f34252f160ef4cee"
+    },
+    {
+      "path": "casts/pty_1-实验一-AI协作解题_7779193b.cast",
+      "bytes": 322,
+      "sha256": "28fd65b036040c8ad132dcbe308b809d311c6f60894bf4e5f07c68cd3268ad3c"
+    },
+    {
+      "path": "casts/pty_1-实验一-AI协作解题_7c55337c.cast",
+      "bytes": 302,
+      "sha256": "48efea22cb81282e087b6cf3c114714a763c5c3e92e0bf43a22eca33e8b584ea"
+    },
+    {
+      "path": "casts/pty_1-实验一-AI协作解题_7e915ec1.cast",
+      "bytes": 302,
+      "sha256": "19f189ea52480d2e81d4683fa46c7e7b951d7d0da3f2004e855bc5456b98752f"
+    },
+    {
+      "path": "casts/pty_1-实验一-AI协作解题_961c4195.cast",
+      "bytes": 446,
+      "sha256": "cf8f5cb2c6b623782f847784d6eb445d256e3bec9441d270a3fa316c3dfd6bdb"
+    },
+    {
+      "path": "casts/pty_1-实验一-AI协作解题_cc84e302.cast",
+      "bytes": 302,
+      "sha256": "55a7d3bfea92d3b4f1a268cac2b92f769d4b58a1a269bd37162a3d4661143c2e"
+    },
+    {
+      "path": "casts/pty_1-实验一-AI协作解题_e2e8718a.cast",
+      "bytes": 1974,
+      "sha256": "562e6db7c159566ed7e54dc4a220b44fa91ac6fcb700fbfe4ceca5b7609ce895"
+    },
+    {
+      "path": "casts/pty_1-实验一-AI协作解题_eccc1b2e.cast",
+      "bytes": 452,
+      "sha256": "61ee5a3ee33f82e8db7503c2bf84cece12754c439e02719face862813746ae67"
+    },
+    {
+      "path": "casts/pty_2-实验二-秘密信使_8164476d.cast",
+      "bytes": 298,
+      "sha256": "9556be3a361f760c466c8ca5d9ab2ebbd0c7fbc8185597255b24b5701a6803c4"
+    },
+    {
+      "path": "casts/pty_2-实验二-秘密信使_8240a312.cast",
+      "bytes": 298,
+      "sha256": "db37f8ae1bf6d18265ceb91659bceb4e751441a4154770d722b6588a45fc89c5"
+    },
+    {
+      "path": "casts/pty_2-实验二-秘密信使_a6b880d0.cast",
+      "bytes": 296,
+      "sha256": "aeb21e39ebc26c49f7d36edd03574dc8daa53109811874ead8cc3ad20f70656c"
+    },
+    {
+      "path": "casts/pty_2-实验二-秘密信使_bb9ccb90.cast",
+      "bytes": 298,
+      "sha256": "46a8d0525f8fba740ca36399f2e747f7b8947c21f8ee8d8bfe5b1424e0e11a77"
+    },
+    {
+      "path": "casts/pty_3-实验三-拆开大脑_19dafdbf.cast",
+      "bytes": 298,
+      "sha256": "becbba849896801cd58bfdedc74fae763b0162f52794e7a70ff977924527041f"
+    },
+    {
+      "path": "casts/pty_3-实验三-拆开大脑_d3a1f22e.cast",
+      "bytes": 298,
+      "sha256": "3d157c1ca3b4c050d64674e2b74cfc49bc85e1cb3ced169b0f03aead9c9bc5d7"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 1787,
+      "sha256": "d82587f17a6a9bd261fef59b42ef7b2cb007cdcccf18296a8ecc448468fa9933"
+    },
+    {
+      "path": "workspace/.labtracker/commands.jsonl",
+      "bytes": 2353,
+      "sha256": "16509eba5d2077afe8bdad69d7c5e42c8fdc7626097f4d7931e6cb8bc52dbf40"
+    },
+    {
+      "path": "workspace/1-实验一-AI协作解题/2.py",
+      "bytes": 4149,
+      "sha256": "249c9bfcf3d0cd8a2c82564ee9b743b010e160d8007620b8c296028d5b058205"
+    }
+  ]
+}

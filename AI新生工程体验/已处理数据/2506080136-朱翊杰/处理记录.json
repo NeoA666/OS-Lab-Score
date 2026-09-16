@@ -1,0 +1,14 @@
+{
+  "owner": "ai-experience-batch-v1",
+  "archive_sha256": "9c61b2ffe6c87ecfd87d543a900ec1f04bb70c2ddfc400c80880c6264c6f7f81",
+  "summary": {
+    "student": "2506080136-朱翊杰",
+    "status": "通过",
+    "action": "已处理",
+    "py_files": 1,
+    "sessions": 3,
+    "messages": 13,
+    "recordings": 12,
+    "issues": []
+  }
+}

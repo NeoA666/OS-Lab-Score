@@ -1,0 +1,3003 @@
+==== labtracker 终端转录 ====
+录像: 20260911T085435-4493.out.gz   时长: 30分23秒   原始大小: 35898B
+==================================================
+
+-- [开始] --
+ailab-os
+@ailab-os-VMware-Virtual-Platform:~/lab0
+ion
+riscv64-unknown-elf-gcc (13.2.0-11ubuntu1+12) 13.2.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+This is free software; see the 
+source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+-- [0分48秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/lab0$ ^C
+
+-- [1分54秒] --
+ailab-os@ailab-os-VMwa
+re-Virtual-Platform:~/lab0$ ^[[200~ ! qemu-system-riscv64 --version
+
+：未找到命令
+
+aila
+b-os@ailab-os-VMware-Virtual-Platform:~/lab0$ ~
+bash: /home/ailab-os: 是一个目录
+
+-- [2分06秒] --
+ailab-os@ailab-os-VM
+ware-Virtual-Platform:~/lab0$ ^[[200~! qemu-system-riscv64 --version
+!：未找到命令
+
+-- [2分29秒] --
+ailab-os@
+ailab-os-VMware-Virtual-Pla
+tform:~/lab0$ ~^?^[[200~! qemu-system-riscv64 --version~
+!：未找到命令
+
+-- [3分26秒] --
+ailab-os@ailab-os-VMware-Virtual-Platf
+orm:~/lab0$ ^[[200~qemu-system-riscv64 --version~
+qemu-system-riscv64：未找到命令
+
+-- [4分01秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform
+:~/lab0$ qemu-system-riscv64 --version
+QEMU emula
+tor version 8.2.2 (Debian 1:8.2.2+ds-0ubuntu1.17)
+Copyright (c) 2003-2023 Fabrice Bellard and the QEMU Project developers
+
+-- [5分00秒] --
+ailab-os
+@ailab-os-VMware-Virtual-Platform:~/lab0$ make build
+make: 对“build”无需做任何事。
+
+-- [8分13秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/lab0$ make clean
+rm -f fs.img
+rm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \
+*/*.o */*.d */*.asm */*.sym \
+target/* \
+xv6-user/initcode xv6-user/initcode.out \
+kernel/kernel \
+.gdbinit \
+xv6-user/usys.S \
+xv6-user/_init xv6-user/_sh xv6-user/_cat xv6-user/_echo xv6-user/_grep xv6-user/_ls xv6-user/_kill xv6-user/_mkdir xv6-user/_xargs 
+xv6-user/_sleep xv6-user/_find xv6-user/_rm xv6-user/_wc xv6-user/_test xv6-user/_usertests xv6-user/_strace xv6-user/_mv 
+
+-- [9分00秒] --
+ailab-os@ailab-os-VMware-Virtual-Platfo
+rm:~/lab0$ make build
+riscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffrees
+tanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/printf.o kernel/printf.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffrees
+tanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/kalloc.o kernel/kalloc.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/intr.o kernel/intr.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestand
+ing -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/spinlock.o kernel/spinlock.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffrees
+tanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/string.o kernel/string.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/main.o kernel/main.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany
+ -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/vm.o kernel/vm.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-prot
+ector -DDEBUG  -D QEMU   -c -o kernel/proc.o kernel/proc.c
+riscv64-unknow
+n-elf-gcc    -c -o kernel/swtch.o kernel/swtch.S
+riscv64-unknown-elf-gcc    -c -o kernel/trampoline.o kernel/trampoline.S
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/trap.o kernel/trap.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreesta
+nding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/syscall.o kernel/syscall.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreesta
+nding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/sysproc.o kernel/sysproc.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -
+ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/bio.o kernel/bio.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestandin
+g -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/sleeplock.o kernel/sleeplock.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/file.o kernel/file.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/pipe.o kernel/pipe.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/exec.o kernel/exec.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreesta
+-- [9分03秒] --
+nding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG 
+ -D QEMU   -c -o kernel/sysfile.o kernel/sysfile.c
+riscv64-unknown-elf-gcc    -c -o kernel/kernelvec.o kernel/kernelvec.S
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffre
+estanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/timer.o kernel/timer.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/disk.o kernel/disk.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffre
+estanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/fat32.o kernel/fat32.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/plic.o kernel/plic.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreesta
+nding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/console.o kernel/console.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -f
+no-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/virtio_disk.o kernel/virtio_disk.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -
+I. -fno-stack-protector -DDEBUG  -D QEMU -march=rv64g -nostdinc -I. -Ikernel -c xv6-user/initcode.S -o xv6-user/
+initcode.o
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e start -Ttext 0 -o xv6-user/initco
+de.out xv6-user/initcode.o
+riscv64-unknown-elf-ld: warning: xv6-user/initcode.out
+ has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objcopy -S -O 
+binary xv6-user/initcode.out xv6-user/initcode
+riscv64-unknown-elf-objdump -S xv6-user/initcode.o > xv6-user/initcode.asm
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffrees
+tanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/ulib.o xv6-user/ulib.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffre
+estanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU -c -o xv6-user/usys.o xv6-user/usys.S
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestand
+ing -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/printf.o xv6-user/printf.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestandin
+g -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/umalloc.o xv6-user/umalloc.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffrees
+tanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/init.o xv6-user/init.c
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o x
+v6-user/_
+init xv6-user/
+init.o xv6-user/ulib.o xv6-user/usys.o x
+v6
+-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning:
+ xv6-user/_init has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_init > xv6-us
+er/init.asm
+riscv64-unknown-elf-objdump -t xv6-user/_init | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/init.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/sh.o xv6-user/sh.c
+xv6-user/sh.c: In function 'runcmd':
+xv6-user/sh.c:157:1: warning: infinite recursion detected [
+-Winfinite-recursion]
+  157 | runcmd(struct cmd *cmd)
+      | ^~~~~~
+xv6-user/sh.c:205:5: n
+ote: recursive call
+  205 |     runcmd(rcmd->cmd);
+      |     ^~~~~~~~~~~~~~~~~
+xv6-user/sh.c:225:7: note: recursive call
+  225 |       runcmd(pcmd->left);
+      |       ^~~~~~~~~~~~~~~~~~
+xv6-user/sh.c:232:7: note: 
+recursive call
+  232 |       runcmd(pcmd->right);
+      |       ^~~~~~~~~~~~~~~~~~~
+xv6-user/sh.c:211:7: note: 
+recursive call
+  211 |       runcmd(lcmd->left);
+      |       ^~~~~~~~~~~~~~~~~~
+xv6-user/sh.c:213:5: note:
+ recursive call
+  213 |     runcmd(lcmd->right);
+      |     ^~~~~~~~~~~~~~~~~~~
+xv6-user/sh.c:243:7: note:
+ recursive call
+  243 |       runcmd(bcmd->cmd);
+      |       ^~~~~~~~~~~~~~~~~
+riscv64-unknown-elf-ld -z max-page-size=4
+096 -N -e main -Ttext 0 
+-o xv6-us
+er/_sh xv6-u
+ser/sh.o xv6-user/ulib.o xv6-user/usys.o
+ x
+v6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: wa
+rning: xv6-user/_sh has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_sh > 
+xv6-user/sh.asm
+riscv64-unknown-elf-objdump -t xv6-user/_sh | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/sh.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffre
+estanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/cat.o xv6-user/cat.c
+riscv64-unknown-elf-ld -z max-page-size=409
+6 -N -e main -Ttext 0 -o
+ xv6-user
+/_cat xv6-use
+r/cat.o xv6-user/ulib.o xv6-user/usys.o 
+xv
+6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warni
+ng: xv6-user/_cat has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_cat > xv6
+-user/cat.asm
+riscv64-unknown-elf-objdump -t xv6-user/_cat | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/cat.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffrees
+tanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/echo.o xv6-user/echo.c
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o x
+v6-user/_
+echo xv6-user/
+echo.o xv6-user/ulib.o xv6-user/usys.o x
+v6
+-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning:
+ xv6-user/_echo has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_echo > xv6-us
+er/echo.asm
+riscv64-unknown-elf-objdump -t xv6-user/_echo | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/echo.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffrees
+tanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/grep.o xv6-user/grep.c
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o x
+v6-user/_
+grep xv6-user/
+grep.o xv6-user/ulib.o xv6-user/usys.o x
+v6
+-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning:
+ xv6-user/_grep has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_grep > xv6-us
+-- [9分06秒] --
+er/grep.asm
+riscv64-unknown-elf-objdump -t xv6-user/_grep | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/grep.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/ls.o xv6-user/ls.c
+riscv64-unknown-elf-ld -z max-page-size=4
+096 -N -e main -Ttext 0 -o xv6-us
+er/_ls xv6-u
+ser/ls.o xv6-user/ulib.o xv6-user/usys.o x
+v6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: wa
+rning: xv6-user/_ls has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_ls > 
+xv6-user/ls.asm
+riscv64-unknown-elf-objdump -t xv6-user/_ls | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/ls.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffrees
+tanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/kill.o xv6-user/kill.c
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o x
+v6-user/_
+kill xv6-user/
+kill.o xv6-user/ulib.o xv6-user/usys.o x
+v6
+-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning:
+ xv6-user/_kill has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_kill > xv6-us
+er/kill.asm
+riscv64-unknown-elf-objdump -t xv6-user/_kill | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/kill.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreesta
+nding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/mkdir.o xv6-user/mkdir.c
+riscv64-unknown-elf-ld -z max-page-size=4096 -N
+ -e main -Ttext 0 -o xv6
+-user/_mk
+dir xv6-user/mk
+dir.o xv6-user/ulib.o xv6-user/usys.o xv
+6-
+user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv
+6-user/_mkdir has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_mkdir > xv6-user/
+mkdir.asm
+riscv64-unknown-elf-objdump -t xv6-user/_mkdir | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/mkdir.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreesta
+nding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/xargs.o xv6-user/xargs.c
+riscv64-unknown-elf-ld -z max-page-size=4096 -N
+ -e main -Ttext 0 -o xv6
+-user/_xa
+rgs xv6-user/xa
+rgs.o xv6-user/ulib.o xv6-user/usys.o xv
+6-
+user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv
+6-user/_xargs has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_xargs > xv6-user/
+xargs.asm
+riscv64-unknown-elf-objdump -t xv6-user/_xargs | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/xargs.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreesta
+nding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/sleep.o xv6-user/sleep.c
+riscv64-unknown-elf-ld -z max-page-size=4096 -N
+ -e main -Ttext 0 -o xv6-user/_sleep xv6-user/sleep.o xv6-user/ulib.o xv6-user/usys.o xv6-
+user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv
+6-user/_sleep has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_sleep > xv6-user/
+sleep.asm
+riscv64-unknown-elf-objdump -t xv6-user/_sleep | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/sleep.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffrees
+tanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/find.o xv6-user/find.c
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o x
+v6-user/_find xv6-user/find.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning:
+ xv6-user/_find has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_find > xv6-us
+er/find.asm
+riscv64-unknown-elf-objdump -t xv6-user/_find | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/find.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/rm.o xv6-user/rm.c
+riscv64-unknown-elf-ld -z max-page-size=4
+096 -N -e main -Ttext 0 
+-o xv6-user/_rm xv6-user/rm.o xv6-user/ulib.o xv6-user/usys.o
+ x
+v6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: wa
+rning: xv6-user/_rm has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_rm > 
+xv6-user/rm.asm
+riscv64-unknown-elf-objdump -t xv6-user/_rm | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/rm.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/wc.o xv6-user/wc.c
+riscv64-unknown-elf-ld -z max-page-size=4
+096 -N -e main -Ttext 0 -o xv6-us
+er/_wc xv6-user/wc.o xv6-user/ulib.o xv6-user/usys.o x
+v6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: wa
+rning: xv6-user/_wc has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_wc > 
+xv6-user/wc.asm
+riscv64-unknown-elf-objdump -t xv6-user/_wc | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/wc.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffrees
+tanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/test.o xv6-user/test.c
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o x
+v6-user/_
+test xv6-user/test.o xv6-user/ulib.o xv6-user/usys.o x
+v6
+-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warnin
+g:
+ xv6-user/_test has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_test > xv6-
+us
+er/test.asm
+riscv64-unknown-elf-objdump -t xv6-user/_test | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/test.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -f
+no-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/usertests.o xv6-user/usertests.c
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main
+ -Ttext 0 -o xv6-user/_u
+sertests 
+xv6-user/usertests.
+o xv6-user/ulib.o xv6-user/usys.o xv6-us
+er
+/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv6-user/_user
+tests has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_usertests > xv6-user/usertests.as
+m
+riscv64-unknown-elf-objdump -t xv6-user/_usertests | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/usertests.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestand
+ing -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/strace.o xv6-user/strace.c
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -
+e main -Ttext 0 -o xv6-u
+ser/_stra
+ce xv6-user/stra
+ce.o xv6-user/ulib.o xv6-user/usys.o xv6
+-u
+ser/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv6-u
+ser/_strace has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_strace > xv6-user/str
+ace.asm
+riscv64-unknown-elf-objdump -t xv6-user/_strace | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/strace.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/mv.o xv6-user/mv.c
+riscv64-unknown-elf-ld -z max-page-size=4
+096 -N -e main -Ttext 0 
+-o xv6-us
+er/_mv xv6-u
+ser/mv.o xv6-user/ulib.o xv6-user/usys.o
+ x
+v6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: wa
+rning: xv6-user/_mv has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_mv > 
+xv6-user
+/mv.asm
+riscv64-unknown-elf-objdump -t xv6-user/_mv | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/mv.sym
+
+-- [12分01秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/
+lab0$ ls -lh target/
+总计 912K
+-rwxrwxr-x 1 a
+ilab-os ailab-os 250K  9月 11 09:03 kernel
+-r
+w-rw-r-- 1 ailab-os ailab-os 652K  9月 11 09:03 kernel.asm
+-rw-rw-r-- 1 ailab-os ailab-os 7.6K  9月 11 09:03 kernel.sym
+
+-- [12分21秒] --
+ail
+ab-os@ailab-os-VMware-Virtual-Platform:~/lab0$ mkfs.vfat =--help
+mkfs.fat 4.2 (2021-01-31)
+Usage: mkfs.vfat [OPTIONS] TARGET [BLOCKS]
+Create FAT filesystem in TARGET, which can be a block device or file. Use only
+up to BLOCKS 1024 byte blocks if specified. With the -C option, file TARGET will be
+created with a siz
+e of 1024 bytes times BLOCKS, which must be specified.
+
+Options:
+  -a              Disable alignment of data structures
+  -A       
+       Toggle Atari variant of the filesystem
+  -b SECTOR       Select SECTOR as location of the FAT32 backup boot sector
+  -c              Che
+ck device for bad blocks before creating the filesystem
+  -C    
+          Create file TARGET then create filesystem in it
+  -D NUMBER       Write BIOS drive number NUMBER to
+ boot sector
+  -f COUNT        Create COUNT file allocation tabl
+es
+  -F SIZE         Select FAT size SIZE (12, 16 or 32)
+  -g GEOM         Select disk geometry: heads/sectors_per_track
+  -h NUMBE
+R       Write hidden sectors NUMBER to boot sector
+  -i VOLID        Set volume ID to VOLID (a 32 bit hexadecimal number)
+  -I              Ignore and disable safety checks
+  -l FILENAME     R
+ead bad blocks list from FILENAME
+  -m FILENAME     Replace default error message in boot block with contents of FILENAME
+  -M TYPE         Set media type in boot sector to TYPE
+  --mbr[=y|n|a]   Fill (fake) 
+MBR table with one partition which spans whole disk
+  -n LABEL        Set volume name to LABEL (up to 11 characters long)
+  --codepage=N    use D
+OS codepage N to encode label (default: 850)
+  -r COUNT        Make room for at least COUNT entries in the root directory
+  -R COUNT        Set minimal number of reserved sectors to COUNT
+  -s COUNT       
+ Set number of sectors per cluster to COUNT
+  -S SIZE         Select a sector size of SIZE (a power of two, at least 512)
+  -v              Verbose execution
+  --variant=TYPE  Select var
+iant TYPE of filesystem (standard or Atari)
+
+  --invariant     Use constants for randomly generated or time based values
+  --offset
+=SECTOR Write the filesystem at a specific sector into the device file.
+  --help          Show this help message and exit
+
+-- [16分05秒] --
+ailab-os@ailab-os-
+VMware-Virtual-Platform:~/lab0$ sudo make fs
+[sudo] ailab-os 的密码： 
+making fs image...
+
+输入了 512+0 块记录
+
+输出了 512+0 块记录
+268435456 字节 (268 MB, 256 MiB) 已复制，0.736005 s，365 MB/s
+mkfs.fat 4.2 (2021-01-31)
+
+-- [17分18秒] --
+ailab-os@ailab-os-V
+Mware-Virtual-Platform:~/lab0$ ls -lh fs.img
+-rw-r--r-- 1 root root 256M  9月 11 09:10 fs.img
+
+-- [18分30秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/lab0$ make run
+
+qemu-system-riscv64: -device virtio-blk-
+device,drive=x0,bus=virtio-mmio-bus.0: Could not open 'fs.img': Permission denied
+make: *** [Makefile:152：run] 错误 1
+
+-- [20分50秒] --
+ailab
+s.img
+
+-- [21分02秒] --
+ailab-os@ailab-os-VMware-Vi
+rtual-Platform:~/lab0$ ls -lh fs.img
+-rw-r--r-- 1 ailab-os ailab-os 256M  9月 11 09:10 fs.img
+
+-- [21分21秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform
+
+:
+
+~/lab0$ make run
+
+OpenSBI v1.3
+   ____                    ____
+_
+ ___
+_
+ _
+__
+__
+
+/ 
+__
+
+\
+
+ / ____|  _ \_   _|
+
+| 
+|
+
+| 
+|_
+ __
+
+_
+__ _ __
+
+|
+
+(
+_
+_
+_
+
+|
+
+|_
+)
+
+||
+ |
+
+|
+
+|
+
+| 
+|
+
+'
+_ \
+
+/
+
+_ 
+\ 
+'
+_ 
+\ 
+\__
+_
+
+\
+|
+
+ _
+
+<
+
+|
+ |
+
+ | |__| | |_) |  __/ | | |____) | |_) || |_
+  \____/| .__/ \___|_| |_|
+_
+_
+_
+_
+_/|___
+/
+___
+_
+_
+|
+
+| |
+
+    |_|
+
+Platform Name             : riscv-vi
+r
+t
+i
+o
+,
+q
+e
+m
+u
+
+P
+l
+a
+t
+f
+orm Features         : medeleg
+Platform HART Count  
+
+  : 2
+
+P
+l
+a
+tf
+o
+r
+m 
+IP
+I
+ D
+e
+v
+i
+c
+e
+
+: 
+a
+c
+l
+i
+n
+t
+-m
+s
+w
+i
+
+P
+l
+at
+fo
+r
+m 
+T
+i
+me
+r
+
+D
+e
+v
+ic
+e
+
+: 
+a
+c
+l
+i
+n
+t
+-m
+t
+ime
+r
+
+@ 
+1
+0
+0
+00
+00
+0H
+z
+
+P
+l
+at
+f
+o
+r
+m
+ C
+on
+s
+o
+l
+e 
+D
+e
+v
+i
+ce
+
+: 
+u
+a
+r
+t8
+2
+5
+0
+
+P
+l
+at
+fo
+rm
+
+H
+SM
+
+D
+e
+v
+i
+ce
+
+ : 
+-
+--
+
+P
+l
+a
+t
+f
+or
+m
+
+P
+MU
+ D
+ev
+i
+c
+e 
+
+: 
+-
+-
+-
+
+P
+l
+a
+t
+f
+o
+r
+m 
+R
+e
+b
+o
+ot
+ D
+ev
+i
+c
+e 
+
+  : 
+s
+i
+fi
+v
+e
+_
+t
+es
+t
+
+Pl
+a
+tfo
+r
+m
+ S
+hu
+td
+o
+w
+n 
+D
+e
+v
+i
+ce
+  :
+
+s
+i
+f
+ive_
+t
+e
+s
+t
+
+Pl
+at
+f
+o
+r
+m
+
+Su
+sp
+e
+n
+d 
+D
+e
+vic
+e   : ---
+Platform CPPC Device      : ---
+Firmware Base             : 0x800
+0
+0
+0
+0
+0
+
+F
+i
+r
+mw
+a
+r
+e 
+Si
+ze
+
+:
+
+3
+3
+2
+
+K
+B
+
+F
+i
+r
+mw
+a
+r
+e 
+R
+W
+ O
+f
+f
+s
+et
+
+  :
+
+0
+x4
+00
+00
+
+F
+i
+r
+mw
+ar
+e
+
+RW
+ S
+iz
+e 
+
+ : 76 KB
+Firmware Heap Offset      : 0x4a000
+Firmware Heap Size        : 36 KB (tota
+l
+)
+,
+
+2
+ K
+B 
+(res
+er
+v
+e
+d
+)
+,
+
+9
+
+K
+B
+
+(
+u
+s
+e
+d
+),
+
+24 
+K
+B
+
+(
+f
+r
+e
+e
+)
+
+F
+ir
+m
+w
+a
+re
+
+Sc
+r
+a
+tc
+h
+
+S
+i
+z
+e 
+
+: 
+4
+0
+9
+6
+
+B
+
+(
+t
+o
+t
+a
+l
+)
+,
+
+7
+6
+0
+
+B
+
+(
+u
+se
+d
+)
+,
+
+3
+3
+3
+6 B (free)
+Runtime SBI Version    
+   : 1.0
+
+Domain0 Name
+
+       : root
+Domain0 Boot HART         : 0
+Domain0 HARTs             : 0*,1*
+Domain0 Region00          : 0x00
+0000
+0002000000-0
+x
+000000000200ffff M
+:
+
+(
+I
+,R,W) S/U: ()
+
+Domain0 Region01 
+
+ : 0x00
+000000
+80040000-0x0000000080
+05ffff M:
+ (R,W) S/U:
+ ()
+Dom
+a
+in0
+ Region
+02          : 0x00
+00000080000
+000-
+0x0000
+00008003
+ffff M: (
+R,X) S/U: ()
+
+Domain0
+ Region03  
+
+   : 0x00000000
+00000000
+-0xfffff
+fffffffffff M: (R,W,X) S
+/U: (R,W,
+X)
+Doma
+in0 Nex
+t Ad
+dress     
+ : 0x000000008020000
+0
+
+Domain0 Next 
+Arg1     
+    : 0x
+000
+0
+000087e0
+0000
+Do
+main0 Ne
+xt Mode         : S
+-mode
+
+Domain0 Sy
+s
+Res
+et  
+        : 
+yes
+
+Domain0 S
+ysSuspe
+n
+d      
+
+: yes
+
+Boot HA
+RT ID       
+
+   : 0
+
+Boot HART Do
+mai
+n 
+         : r
+oo
+t
+Boot HA
+RT Priv
+ Versio
+n
+
+  :
+ v1.12
+
+Boot HART Base ISA     
+   :
+ rv64
+imafdch
+Boot HART I
+SA 
+Extensions  : ti
+m
+e,ss
+tc
+Boot HA
+R
+T PM
+P Count  
+     : 16
+Boot HA
+RT PMP Gr
+a
+n
+ulari
+ty : 4
+
+Boot HART PMP Address
+ Bi
+ts: 54
+Boot
+ HA
+R
+T
+ MH
+PM Coun
+t   
+   : 16
+B
+oo
+t HA
+RT MID
+ELEG      
+   :
+ 0x000000
+000
+0001666
+
+Boo
+t 
+H
+ART M
+EDELEG     
+    : 0
+x
+000000000
+0f0b509
+
+  (
+`-.        
+    (
+`-.      
+
+  .-')   
+    (
+'-.
+
+  _ 
+  .-')
+ ( OO )
+.   
+     _(
+OO  )_
+
+  .
+(  OO)
+    _
+(  OO)  (
+ '.( 
+OO )_ 
+
+(_/.  \_
+)-.
+ ,--(
+_/   ,
+.
+
+\  ,-
+-.       
+         (
+_)---\_)
+  (,-
+-----
+.  ,-
+-.   ,--.
+) ,
+--. ,--.  
+
+ \
+
+ `.'  / 
+ \ 
+  \   /(
+__/ /
+
+.'  
+     .-')
+
+ '  .-
+. 
+ '  
+ |  .-
+--'  
+|  
+ `.'   |
+  |  | |
+  |   
+  \
+
+/\   \   \ / 
+  / .
+  / -.
+    _(  
+OO)   ,|
+
+ | | 
+ | 
+  |  |   
+   | 
+
+ |  |  |
+ | .-')
+
+ \   \ 
+|    \ 
+  '   
+/, | .
+-
+.
+
+ '  (,-
+-----
+. (_
+| 
+ | |  
+|  (|  '-
+-.   |
+  |'.
+'|  |  |  
+|_|( OO )
+
+  .'    
+\_)   
+ \     /
+__)' \  |  |
+  '
+-----
+-'   |
+  | |
+  |   | 
+ .--'   
+|  
+|   |  |  
+|  | |
+ `-' /
+ /  
+.'.  \  
+
+\   /    \  `
+'  / 
+
+'  '-' 
+ '-. |  `
+--
+-.  
+|
+
+|   
+|  | ('  
+'-'(_
+.-'
+
+'--'
+
+ '-
+-'   
+   `-' 
+     `----'
+
+     `----
+-'--'
+ `----
+-
+-'  
+`--' 
+
+ `-
+-'   `----
+-
+'
+h
+ar
+t 0 
+e
+nter main()
+...
+
+ker
+ne
+l
+_e
+nd
+: 0x00
+0
+00
+0
+0
+0802
+2
+6000,
+ ph
+y
+sto
+p: 0x00000
+00080
+6
+000
+00
+
+ki
+nit
+
+kv
+m
+in
+it
+k
+vm
+inithart
+
+ti
+meri
+ni
+t
+
+tr
+apinithart
+
+pro
+c
+i
+nit
+plic
+init
+
+plicin
+i
+th
+art
+
+vir
+tio_di
+s
+k
+_in
+it
+bini
+t
+f
+ileinit
+us
+erin
+it
+hart
+ 0 in
+it done
+
+[fat32_init]
+ en
+ter!
+[F
+AT32 i
+nit]byts_
+per
+_sec: 512
+
+[FAT3
+2 in
+it]root
+_clu
+s: 2
+
+[
+FAT3
+2 init]s
+e
+c_per_
+-- [22分21秒] --
+c
+l
+us:
+
+1
+
+[
+FA
+T
+3
+2 
+i
+n
+it
+]
+fa
+t
+_
+c
+nt
+:
+
+2
+
+[FAT32 init]
+f
+a
+t
+_
+s
+z
+: 
+4
+0
+3
+3
+
+[
+F
+A
+T
+3
+2
+
+i
+n
+i
+t
+]
+f
+i
+r
+s
+t
+_d
+a
+t
+a
+_
+s
+e
+c
+: 80
+9
+8
+init: star
+t
+i
+n
+g
+
+s
+h
+
+-
+>
+
+/
+
+$
+
+l
+s
+
+b
+i
+n
+
+D
+I
+R
+
+0
+
+R
+EA
+D
+M
+E
+
+      FILE
+
+2
+0
+59
+
+c
+at
+
+F
+I
+L
+E
+
+22
+1
+1
+2
+
+e
+c
+h
+o
+
+F
+IL
+E
+
+2
+1
+0
+4
+0
+
+f
+i
+n
+d
+
+F
+IL
+E	
+2
+3
+2
+4
+0
+
+g
+r
+e
+p 
+
+F
+IL
+E
+
+2
+4
+6
+3
+2
+
+i
+n
+i
+t
+
+F
+I
+L
+E
+
+21
+7
+1
+2
+
+ki
+l
+l
+
+F
+I
+L
+E
+
+2
+0
+9
+36
+
+ls
+
+F
+I
+L
+E
+
+23
+2
+6
+4
+
+m
+k
+d
+i
+r 
+
+F
+I
+L
+E
+
+2
+1
+0
+2
+4
+
+m
+v
+
+F
+IL
+E
+
+2
+2
+8
+2
+4
+
+r
+m
+
+FI
+L
+E
+
+2
+1
+0
+2
+4
+
+s
+h
+
+F
+I
+L
+E	
+4
+3
+6
+4
+8
+
+sl
+ee
+p
+
+FI
+L
+E
+
+2
+1
+0
+0
+8
+
+s
+t
+r
+ac
+e
+
+F
+I
+L
+E
+
+2
+1
+3
+7
+6
+
+t
+e
+s
+t 
+
+F
+I
+L
+E
+	2
+0
+87
+2
+
+u
+s
+e
+r
+t
+e
+s
+t
+s
+
+-- [22分28秒] --
+F
+I
+L
+E
+
+1
+1
+7
+4
+4
+8
+
+w
+c
+
+F
+I
+L
+E
+
+2
+2
+8
+9
+6
+
+x
+a
+r
+g
+s
+
+                     FILE	22704
+-> / $ ls/bin
+
+-- [22分32秒] --
+[
+e
+x
+e
+c
+]
+
+-- [22分35秒] --
+l
+s
+/bi
+n
+
+n
+o
+t
+
+f
+o
+u
+n
+d
+
+[exec] reach bad
+[exec] /bin/ls/bin not found
+[exec] reach bad
+exec ls/bin failed
+-> / $ cat README
+xv6 is a re-implementation of Dennis Ritchie's and Ken Thompson's Unix
+Version 6 (v6).  xv6 loosely follows the structur
+e and style of v6,
+but is implemented for a modern RISC-V multiprocessor using ANSI C.
+
+ACKNOWLEDGMENTS
+
+xv6 is inspired by John Lions's Commentary on UNIX
+
+6
+t
+h
+
+E
+d
+i
+t
+i
+o
+n
+
+(
+P
+e
+e
+r
+
+t
+o
+
+Pe
+e
+r
+
+C
+o
+m
+m
+u
+n
+i
+c
+at
+ions; ISB
+N
+:
+
+1
+-
+5
+7
+3
+9
+8
+-
+0
+1
+3
+-
+7
+;
+
+1
+s
+t
+
+e
+d
+i
+ti
+o
+n 
+(
+J
+u
+n
+e
+
+1
+4
+,
+
+2
+0
+0
+0
+)
+)
+.
+
+S
+e
+e
+
+a
+l
+s
+o
+
+h
+t
+t
+p
+s
+:
+//
+p
+d
+o
+s
+.
+c
+s
+a
+i
+l
+.
+m
+i
+t
+.
+edu/6.828
+/
+,
+
+w
+h
+i
+c
+h
+
+pro
+vi
+d
+e
+s
+
+p
+o
+i
+n
+t
+e
+r
+s
+
+t
+o
+
+o
+n
+-line resources for v6.
+
+The following people have made contribu
+t
+io
+n
+s
+:
+
+R
+u
+s
+s
+
+C
+o
+x
+ (context switching,
+lockin
+g
+)
+,
+
+Cl
+i
+ff
+
+Frey (MP), X
+i
+ao
+
+Yu 
+(
+M
+P), Nickola
+i 
+Ze
+ld
+o
+vi
+ch, and Austin
+Clements.
+
+We are
+ a
+ls
+o
+
+g
+ra
+t
+efu
+l
+ f
+o
+r 
+t
+h
+e
+ b
+u
+g 
+re
+por
+t
+s
+ a
+n
+d
+
+p
+at
+c
+he
+s
+ c
+o
+n
+t
+ri
+bu
+t
+ed
+
+by
+
+Si
+l
+as
+
+B
+o
+yd
+-W
+ickizer, Anton Burtsev, Dan Cross, Cody Cutler, Mike CAT
+,
+
+T
+ej
+
+C
+h
+aj
+e
+d
+,
+
+As
+a
+mi 
+D
+oi
+,
+ e
+y
+al
+z
+80
+0
+, 
+,
+
+N
+el
+so
+n
+ E
+l
+h
+a
+ge
+,
+ S
+a
+ar 
+Et
+t
+in
+g
+er, Alice
+Ferrazzi, Nathaniel Filardo, 
+P
+et
+er
+
+F
+r
+oe
+h
+l
+i
+c
+h
+,
+ Y
+ak
+ir
+ G
+oa
+ro
+n
+,S
+h
+iv
+a
+m
+
+H
+a
+nda
+, B
+ryan Henry, jaichenhengjie, Jim Huang, Alexander Kapshuk,
+Anders Kaseorg, kehao95, Wolfgang Keller, Jonath
+a
+n
+
+K
+i
+m
+m
+i
+t
+t
+, 
+E
+d
+d
+i
+e
+
+K
+o
+h
+l
+e
+r,
+
+A
+u
+s
+t
+i
+n 
+L
+i
+e
+w
+,
+
+I
+m
+ba
+r
+
+M
+a
+r
+i
+n
+e
+s
+c
+u
+,
+
+Y
+a
+n
+d
+o
+n
+g
+
+M
+a
+o
+, Matan Shabtay,
+Hitoshi Mitake, Carmi Meri
+m
+o
+v
+ic
+h
+, Mark Morrissey, mtasm, Joel Nider,
+Greg Price, Ayan Shafqat, Eldar Sehayek, 
+Y
+o
+n
+g
+m
+i
+n
+g
+
+S
+h
+e
+n
+,
+
+F
+umiya
+Shigemitsu, Takahiro, Cam Tenny, tyfkda, Rafael Ubal, Warren Toome
+y
+,
+
+S
+t
+e
+p
+h
+e
+n
+
+T
+u
+,
+ P
+a
+b
+l
+o
+
+Ve
+n
+tu
+r
+a
+,
+
+X
+i
+
+W
+a
+n
+g
+,
+
+K
+e
+i
+i
+c
+h
+i
+
+W
+a
+t
+a
+n
+a
+b
+e
+,
+
+N
+i
+c
+o
+l
+a
+s
+
+W
+o
+l
+o
+vi
+c
+k
+,
+
+w
+x
+d
+a
+o
+,
+
+G
+r
+a
+n
+t
+
+W
+u
+,
+
+J
+i
+n
+d
+o
+n
+g
+
+Z
+h
+a
+n
+g
+,
+
+I
+c
+e
+n
+o
+w
+y
+
+Z
+h
+e
+n
+g
+,
+
+a
+n
+d
+
+Z
+o
+u
+
+C
+h
+a
+n
+g
+
+W
+ei
+.
+
+Th
+e
+
+c
+o
+d
+e 
+i
+n 
+t
+h
+e
+
+f
+i
+l
+e
+s
+
+t
+h
+a
+t
+
+c
+o
+n
+s
+t
+i
+t
+u
+t
+e
+
+x
+v
+6
+
+i
+s
+
+C
+o
+p
+y
+r
+i
+g
+h
+t
+
+2
+0
+0
+6
+-
+2
+0
+2
+0
+
+F
+ra
+ns 
+K
+a
+a
+s
+h
+oe
+k
+,
+
+Ro
+b
+e
+r
+t 
+M
+o
+r
+r
+i
+s
+,
+
+a
+n
+d
+
+R
+u
+s
+s
+
+C
+o
+x
+.
+
+E
+R
+R
+O
+R
+
+R
+E
+P
+OR
+T
+S
+
+P
+l
+e
+a
+s
+e
+
+s
+e
+n
+d
+
+e
+r
+ro
+r
+s
+
+a
+n
+d
+
+s
+u
+g
+g
+e
+s
+t
+i
+o
+n
+s
+
+t
+o
+
+F
+r
+a
+ns Kaashoek
+
+a
+n
+d
+
+R
+o
+b
+e
+r
+t
+
+M
+o
+r
+r
+i
+s
+
+(
+k
+a
+a
+s
+h
+o
+ek,
+r
+t
+m
+@
+m
+i
+t
+.
+e
+d
+u
+)
+.
+
+T
+h
+e
+
+m
+a
+i
+n
+
+p
+u
+r
+p
+o
+s
+e
+
+o
+f
+
+x
+v
+6
+
+i
+s
+
+a
+s
+
+a
+
+t
+e
+a
+c
+h
+i
+n
+g
+
+o
+p
+e
+r
+a
+t
+i
+n
+g
+
+s
+y
+s
+t
+e
+m
+
+f
+o
+r
+
+M
+I
+T
+'s 6.S08
+1
+,
+
+s
+o
+ we
+ are
+
+m
+o
+r
+e
+
+i
+n
+t
+er
+e
+s
+t
+e
+d
+
+i
+n
+
+s
+imp
+l
+i
+f
+i
+c
+at
+i
+o
+ns
+
+a
+n
+d
+
+c
+l
+a
+rific
+ations than new features.
+
+B
+UILDING AND RUNNING XV6
+
+You will need a RISC-V "newlib" tool chain from
+https://github.co
+m
+/
+r
+i
+s
+cv/
+r
+i
+s
+c
+v
+-
+g
+n
+u
+-
+t
+o
+ol
+c
+h
+a
+i
+n
+,
+ an
+d
+
+q
+e
+m
+u
+
+-- [24分01秒] --
+c
+o
+m
+-- [24分04秒] --
+p
+il
+e
+d f
+o
+r
+
+r
+i
+s
+c
+v
+6
+4
+-
+s
+o
+f
+t
+m
+m
+u
+.
+
+O
+n
+c
+e
+
+t
+h
+e
+y
+
+a
+r
+e
+
+i
+n
+s
+t
+al
+l
+e
+d
+,
+
+a
+n
+d
+
+i
+n
+
+y
+o
+u
+r
+
+s
+h
+ell
+s
+e
+a
+r
+c
+h
+
+p
+a
+t
+h
+,
+
+y
+o
+u 
+c
+a
+n
+
+r
+u
+n
+
+"
+m
+a
+k
+e
+
+q
+e
+m
+u
+"
+.
+
+-
+>
+
+/
+
+$
+
+l
+s
+
+/
+b
+i
+n
+
+.
+
+D
+I
+R
+
+0
+
+.
+.
+
+D
+I
+R
+
+0
+
+c
+a
+t
+
+F
+I
+LE	22112
+echo      
+
+F
+I
+L
+E
+
+2
+1
+0
+4
+0
+
+f
+i
+n
+d
+
+F
+I
+L
+E
+
+2
+3
+2
+4
+0
+
+g
+r
+e
+p
+
+F
+I
+L
+E
+
+2
+4
+6
+3
+2
+
+i
+n
+i
+t
+
+F
+I
+L
+E
+
+2
+1
+7
+1
+2
+
+k
+i
+l
+l
+
+F
+I
+L
+E
+
+2
+0
+9
+3
+6
+
+l
+s
+
+F
+I
+LE	23264
+mkdir                
+
+F
+I
+L
+E
+
+2
+1
+0
+2
+4
+
+m
+v
+
+F
+I
+L
+E
+
+2
+2
+8
+2
+4
+
+r
+m
+
+F
+I
+L
+E
+
+2
+1
+0
+2
+4
+
+s
+h
+
+F
+I
+L
+E
+
+4
+3
+6
+4
+8
+
+s
+l
+e
+e
+p
+
+F
+I
+L
+E
+
+2
+1
+0
+0
+8
+
+s
+t
+r
+a
+c
+e
+
+F
+I
+L
+E
+
+2
+1
+3
+7
+6
+
+t
+e
+s
+t
+
+F
+I
+L
+E
+
+2
+0
+8
+7
+2
+
+u
+s
+e
+r
+t
+e
+s
+t
+s
+
+-- [30分23秒] --
+F
+I
+L
+E
+
+1
+1
+7
+44
+8
+
+w
+c
+
+                              FILE	22896
+xargs                            FILE	22704
+-> / $ init: starting sh
+-> / $ 

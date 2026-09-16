@@ -1,0 +1,410 @@
+==== labtracker 终端转录 ====
+录像: 20260910T155636-14821.out.gz   时长: 6分10秒   原始大小: 23412B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ^V^Vlsb_release -a
+
+echo "SESSION=$XDG_SESSION_TYPE"
+echo "DESKTOP=$XDG_CURRENT_DESKTOP"
+echo "GTK_IM_MODULE=$GTK_IM_MODULE"
+echo "QT_IM_MODULE=$QT_IM_MODULE"
+
+echo "XMODIFIERS=$XMODIFIERS"
+
+ps aux | grep -E "ibus|fcitx" | grep -v grep
+
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ lsb_release -a
+
+echo "SESSION=$XDG_SESSION_TYPE"
+echo "DESKTOP=$XDG_CURRENT_DESKTOP"
+echo "GTK_IM_MODULE=$GTK_IM_MODULE"
+echo "QT_IM_MODULE
+=$QT_IM_MODULE"
+echo "XMODIFIERS=$XMODIFIERS"
+
+ps aux | grep -E "ibus|fcitx" | grep -v grep
+
+im-
+config -m
+
+No LSB modules
+ are available.
+Distr
+ibutor ID:	Ubunt
+u
+Description:	Ubu
+ntu 24.04.3 LTS
+Rele
+ase:	24.04
+Codename:	noble
+SESSION=wayland
+DESKTOP=ubuntu:GNOME
+GTK_IM_MODULE=
+QT_IM_MODULE=ibus
+XMODIFIERS=@im=ibus
+ailab-os    2385  0.5  0.2 393260 19072 ?        Ssl  15:39   0:05 /usr/bin/ibus-daemon --panel disable
+ailab-os    2488  0.0  0.0 237080  7688 ?        Sl   15:39   0:00 /usr/libexec/ibus-memconf
+ailab-os    2515  0.6  0.4 422496 32948 ?        Sl   15:39   0:06 /usr/libexec/ibus-extension-gtk3
+ailab-os    2550  0.0  0.0 310732  7676 ?        Sl   15:39   0:00 /usr/libexec/ibus-portal
+ailab-os    2788  0.1  0.3 344380 28732 ?        Sl   15:39   0:01 /usr/libexec/ibus-engine-libpinyin --ibus
+ailab-os    2963  0.0  0.3 267908 25916 ?        Sl   15:39   0:00
+ /usr/libexec/ibus-x11
+ailab-os    33
+39  0.0  0.0 237204  7776 ?        Sl   15:39   0:00 /usr/libexec/ibus-engine-simple
+default
+missing
+ibus
+fcitx5
+ibus
+
+-- [1分45秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+
+-- [1分55秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ^[[200~GTK_IM_MODULE=ibus gnome-terminal~
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ^[[200~GTK_IM_MODULE=ibus gnome-terminal~
+
+-- [1分58秒] --
+aila
+b-os
+@ail
+ab-o
+s-VM
+ware
+-Vir
+tual
+-Pla
+tfor
+m
+:
+
+~
+
+$ ^
+[[20
+0~GT
+K_IM
+_MOD
+ULE=
+ibus
+ gno
+me-t
+ermi
+nal~
+
+-- [2分15秒] --
+
+
+
+
+
+
+
+
+^
+[
+[
+2
+0
+0~GTK_IM_MO
+-- [2分18秒] --
+DULE=ibus gnome-terminal~
+找不到命令 “gnome-terminal~”，您的意思是：
+
+  “gnome-terminal” 命令来自 Debian 软件包 gnome-terminal (3.49.92-2ubuntu1)
+尝试 sudo apt install <deb name>
+
+-- [2分30秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ c^C
+
+-- [2分57秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ GTK_IM_MODULE=ibus gnome-terminal~
+
+-- [3分45秒] --
+ailab-os
+@ailab-os-VMware-Vir
+-- [3分50秒] --
+tual-Platform:
+
+~$ GT
+K_IM_MODULE
+=ibus gnome-terminalibus engineibus engine
+libpinyin
+
+-- [4分03秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ibus list-en
+gine | grep -A 3 -B 3 pinyinibus list-engine | grep -A 3 -B 3 pinyin
+  xkb:cm:qwerty:l
+em - Cameroon Multilingual (QWERTY, intl.)
+语言：中文
+  table:wubi-jidian86 - 极点五笔 86（极爽词库 6.0）
+  m17n:zh:pinyin-vi - zh-pinyin-vi (m17n)
+  table:cangjie-big - �
+�颉大字集
+  m17n:zh:pinyin - hanyu pinyin
+ (m17n)
+  m17n:zh:quick - zh-quick (m17n)
+  table:wubi-haifeng86 - 海峰五笔86
+  m17n:zh:cangjie - zh-cangjie (m17n)
+
+--
+  xkb:kz:ruskaz:kaz - Russian (Kazakhstan, with Kazakh)
+  xkb:kz:ext:kaz - Kazakh (extended)
+语言：中文
+  lib
+pinyin - Intelligent Pinyin
+语言：Gaelic, Scottish
+  xkb:gb:gla:gla - Scottish Gaelic
+语言：Ikposo
+
+-- [4分14秒] --
+a
+ilab-os@ailab-os-VMware-Virtual-Platform:~$ gsettings get org.gnome.desktop.input-sources sources
+
+gsettings get org.gnome.desktop.input-sources sources
+[('xkb', 'us'), ('ibus', 'libpinyin')]
+
+-- [4分29秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ^C
+
+-- [5分16秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:
+~$ ^Vsudo apt update
+sudo apt install --reinstall ibus ibus-gtk ibus-gtk3 ibus-libpinyin
+s
+-- [5分20秒] --
+ud
+o apt update
+sudo apt 
+install --reinstall ibus ibus-gtk ibus-gtk3 ibus-libpinyin
+[sudo] ailab-os 的密码： 
+命中:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+命中:2 https://packages.microsoft.com/repos/code stable InRelease
+
+0% [已连接到 deb.nodesource.com (1
+0% [已连接到 deb.nodesource.com (172.66.150.169)] [正在等待报头]
+0%
+0% [正在等待报头]
+命中:4
+ https://deb.nodesource.com/node_24.x nodistro InRelease
+0% [正在等待报头]
+命中:3 http://mirrors.tuna.tsingh
+ua.edu.cn/ubuntu noble InRelease
+
+0% [�
+20% [执行中]
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软�
+-- [5分23秒] --
+正在读取软件
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件包列
+正在读�
+��软件包列表... 完成
+正在分析软�
+正在分析软件
+正在分�
+�软件包的依赖关系树... 完成
+
+正在读取状态信息... 
+正在读取
+正在读取状态信息... 完成
+所有软件包均为
+最新。
+正在读�
+��软件包列表... 完成
+正在分析软件
+正在分�
+�软件包的依赖关系树... 完成
+
+正在读取状态信息... 完成
+下列软件包是自动安装的并且现在不需要了：
+  gy
+p handlebars javascript-common libjs-async libjs-events libjs-inherits libjs-is-typedarray libjs-prettify libjs-regenerate
+  libjs-source-map libjs-sprintf-js libjs-typedarray-to-buffer libssl-dev libuv1-dev linux-headers-6.17.0-35-generic
+  lin
+ux-hwe-6.17-headers-6.17.0-35 linux-hwe-6.17-tools-6.17.0-35 linux-image-6.17.0-35-generic linux-modules-6.17.0-35-generic
+  linux-modules-extra-6.17.0-35-generic linux-tools-6.17.0-35-generic node-abbrev node-ampproject-remapping node-ansi-escapes
+  node-ansi-regex node-ansi-styles node-aproba node-are-we-there-yet node-argparse node-arrify node-async node-async-each
+  node-auto-bind node-babel-plugin-add-module-exports node-babel7-runtime node-balanced-match node-base64-js
+  node-binary-extensions node-brace-expansion node-busboy node-camelcase node-caniuse-lite node-chownr node-chrome-trace-event
+  node-ci-info node-cjs-module-lexer node-cli-boxes node-cli-cursor node-clone node-clone-deep node-collection-visit
+  node-color-convert node-color-name node-colors node-commander node-commondir node-concat-stream node-console-control-strings
+  node-convert-source-map node-core-js node-core-js-pure node-core-util-is node-data-uri-to-buffer node-decompress-response
+  node-deep-is node-defaults node-define-property node-delegates node-depd node-diff node-electron-to-chromium node-encoding
+  node-end-of-stream node-err-code node-error-ex node-es-module-lexer node-escape-string-regexp node-eslint-utils
+  node-eslint-visitor-keys node-esquery node-estraverse node-esutils node-events node-fancy-log node-fast-deep-equal
+  node-fast-levenshtein node-fetch node-find-up node-flatted node-for-in node-for-own node-foreground-child
+  node-fs-readdir-recursive node-fs-write-stream-atomic node-fs.realpath node-function-bind node-functional-red-black-tree
+  node-get-caller-file node-get-stream node-get-value node-glob node-globals node-got node-graceful-fs node-growl node-has-flag
+  nod
+e-has-unicode node-has-value node-has-values node-hosted-git-info node-iconv-lite node-ieee754 node-iferr node-imurmurhash
+  node-indent-string node-inflight node-inherits node-ini node-interpret node-ip node-ip-regex node-is-arrayish
+  node-is-binary-path node-is-buffer node-is-descriptor node-is-extendable node-is-extglob node-is-path-cwd node-is-plain-obj
+  node-is-plain-object node-is-stream node-is-typedarray node-is-windows node-isarray node-isexe node-isobject node-js-tokens
+  node-jsesc node-json-buffer node-json-parse-better-errors node-json-schema node-json-schema-traverse
+  node-json-stable-stringify node-jsonify node-jsonparse node-kind-of node-levn node-loader-runner node-locate-path
+  node-lodash-packages node-log-driver node-lowercase-keys node-lru-cache node-map-visit node-memfs node-merge-stream
+  node-mimic-response node-minimatch node-minimist node-minipass node-mixin-deep node-mute-stream node-n3 node-negotiator
+  node-neo-async node-npm-run-path node-object-inspect node-object-visit node-once node-optimist node-optionator node-osenv
+  node-p-cancelable node-p-limit node-p-locate node-p-map node-pascalcase node-path-dirname node-path-exists
+  node-path-is-absolute node-path-is-inside node-path-type node-pify node-pkg-dir node-postcss-value-parser node-prelude-ls
+  node-process-nextick-args node-promise-inflight node-promise-retry node-promzard node-prr node-pump node-punycode
+  node-quick-lru node-randombytes node-read node-readable-stream node-rechoir node-regenerate
+  node-regenerate-unicode-properties node-regenerator-runtime node-regenerator-transform node-regexpp node-regjsgen
+  node-repeat-string node-require-directory node-require-from-string node-resolve node-resolve-cwd node-resolve-from
+  node-restore-cursor node-resumer node-retry node-run-queue node-safe-buffer node-sellside-emitter node-serialize-javascript
+  node-set-blocking node-set-immediate-shim node-shebang-command node-shebang-regex node-shell-quote node-signal-exit
+  node-slash node-slice-ansi node-source-list-map node-source-map node-source-map-support node-spdx-correct
+  node-spdx-exceptions node-spdx-expression-parse node-spdx-license-ids node-sprintf-js node-ssri node-stack-utils
+  node-string-decoder node-strip-bom node-strip-json-comments node-supports-color node-tapable node-terser node-text-table
+  node-through node-time-stamp node-to-fast-properties node-tslib node-type-check node-typedarray node-typedarray-to-buffer
+  node-undici node-unicode-canonical-property-names-ecmascript node-unicode-match-property-value-ecmascript
+  node-unicode-property-aliases-ecmascript node-unique-filename node-unset-value node-uri-js node-util-deprecate 
+node-uuid
+  node-v8flags node-validate-npm-package-license node-wcwidth.js node-webpack-sources node-wordwrap node-wrappy
+
+  node-write-file-atomic node-xtend node-y18n node-yallist node-yaml
+使用'sudo apt autoremove'来卸载它(它们)。
+升级了 0 个软件包，�
+��安装了 0 个软件包，重新安装了 4 个软件包，要卸载 0 个软�
+�包，有 0 个软件�
+-- [5分27秒] --
+�未被升级。
+需要下载 1,
+149 kB 的归档。
+解压缩后会消耗 0 B �
+��额外空间。
+0% [正在等待报头]
+0% [正在连接 mirrors
+获取:1 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble/main amd64 ibus amd64 1.
+5.29-2 [320 kB]
+
+获取:2 http://mirrors.tu
+na.tsinghua.edu.cn/ubuntu noble/main amd64 ibus-gtk amd64 1.5.29-2 [17.2 kB]
+获取:3 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble/main amd64 ibus-gtk3 amd64 1.5.29-2 [17.6 kB]
+获取:4 http://mirrors.tuna.tsinghua.edu
+.cn/ubuntu noble/main amd64 ibus-libpinyin amd64 1.15.7-1build2 [794 kB]
+41% [4 ibus-libpinyin 24.9 kB/794 kB 3%]
+
+-- [5分31秒] --
+100
+已下载 1,149 kB，耗时 3秒 (372 kB/s)
+
+(正在读取数据库 ... 20%
+(正在读取数据库 ... 35%
+(正在读取数据库 ... 40%
+(正在读取数据库 ... 45%
+(正在读取数据库 ... 50%
+(正在读取数据库 ... 
+55%
+(正在读取数据库 ... 60%
+(正在读取数据库 ... 65%
+(正在读取数据库 ... 70%
+(正在读取数据库 ... 75%
+(正在读取数据库
+(正�
+�读取数据库 ... 系统当前共安装有 267926 个文件和目录。)
+准备解压 .../ibus_1.5.29-2_amd64.deb  ...
+7进度：[  0%]
+ [...............................................................................................................] 87进度：[  6%]
+ [######........................................
+.................................................................] 8正在解压 ibus (1.5.29-2) 并覆盖 (1.5.29-2) ...
+7进度：[ 12%]
+ [#############.............................
+.....................................................................] 8准备解压 .../ibus-gtk_1.5.29-2_amd64.deb  ...
+7进度：[ 18%]
+ [###################.....................................
+.......................................................] 8正在解压 ibus-gtk:amd64 (1.5.29-2) 并覆盖 (1.5.29-2) ...
+7进度：[ 21%]
+ [#######################....................
+....................................................................] 8准备解压 .../ibus-gtk3_1.5.29-2_amd64.deb  ...
+7进度：[ 26%]
+ [#############################............................
+......................................................] 8正在解压 ibus-gtk3:amd64 (1.5.29-2) 并覆盖 (1.5.29-2) ...
+7进度：[ 29%]
+ [###############################.......................
+.........................................................] 8准备解压 .../ibus-libpinyin_1.15.7-1build2_amd64.deb  ...
+7进度：[ 33%]
+ [####################################................................
+...........................................] 8正在解压 ibus-libpinyin (1.15.7-1build2) 并覆盖 (1.15.7-1build2) ...
+7进度：[ 35%]
+ [###################################
+###.........................................................................] 8正在设置 ibus-gtk:amd64 (1.5.29-2) ...
+7进度：[ 39%]
+ [###########################################....................................................................] 87进度：[ 43%]
+ [#########################
+#######################...............................................................] 8正在设置 ibus (1.5.29-2) ...
+7进度：[ 48%]
+ [#####################################################..........................................................] 87进度：[ 52%]
+ [#########################################
+################......................................................] 8正在设置 ibus-libpinyin (1.15.7-1build2) ...
+7进度：[ 57%]
+ [####################################
+##########################.................................................] 8正在设置 ibus-gtk3:amd64 (1.5.29-2) ...
+7进度：[ 61%]
+ [###################################################################............................................] 87进度：[ 65%]
+ [############################################################
+############.......................................] 
+-- [5分35秒] --
+8正在处理用于 gnome-menus (3.36.0-1.1ubuntu3) 的触发器 ...
+正在处理用于 man-db (2.12.0-4build2) 的触发器 ...
+正在处理用于 libglib2.0-0t64:amd64 (2.80.0-6ubuntu3.8) 的触发器 ...
+7进度：[ 70%]
+ [#############################################################################..................................] 87进度：[ 74%]
+ [##################################################################################.............................] 87进度：[ 78%]
+ [######################################################################################.........................] 
+8正在处理用于 libgtk-3-0t64:amd64 (3.24.41-4ubuntu1.3) 的触发器 ...
+7进度：[ 83%]
+ [###########################################################################################....................] 87进度：[ 87%]
+ [######################################################################
+##########################...............] 8正在处理用于 libgtk2.0-0t64:amd64 (2.24.33-4ubuntu1.1) 的触发器 ...
+7进度：[ 91%]
+
+ [#####################################################################################################..........] 87进度：[ 96%]
+ [##############################################################
+####################
+########
+################.....] 8正在处理用于 desktop-file-utils (0.27-2build1) 的触发器 ...
+
+78
+
+-- [5分56秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ibus restartibus restart
+
+-- [6分10秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

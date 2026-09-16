@@ -1,0 +1,14 @@
+{
+  "owner": "ai-experience-batch-v1",
+  "archive_sha256": "3deedfbd84a80422bb6c82f5bceeffb2b4b030cf6d699caf6b4d435024e51243",
+  "summary": {
+    "student": "2506080101-白宗伯",
+    "status": "通过",
+    "action": "已处理",
+    "py_files": 0,
+    "sessions": 2,
+    "messages": 4,
+    "recordings": 2,
+    "issues": []
+  }
+}

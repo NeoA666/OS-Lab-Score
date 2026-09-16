@@ -1,0 +1,14 @@
+{
+  "owner": "ai-experience-batch-v1",
+  "archive_sha256": "8d717f59a12e44ebe96a696f838a44ca9d057f8668bad6dda8c656bb5d77163d",
+  "summary": {
+    "student": "2506080130-张奕扬",
+    "status": "通过",
+    "action": "已处理",
+    "py_files": 1,
+    "sessions": 1,
+    "messages": 16,
+    "recordings": 13,
+    "issues": []
+  }
+}

@@ -1,0 +1,1531 @@
+==== labtracker 终端转录 ====
+录像: 20260903T175141-11248.out.gz   时长: 2分41秒   原始大小: 14739B
+==================================================
+
+-- [开始] --
+ailab-os@ailab
+-- [0分08秒] --
+-o
+s-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ make run
+[sudo] ailab-os 的密码： 
+qemu-system-riscv64: -device 
+virtio-blk-device,drive=x0,bus=virtio-mmi
+o-bus.0: Failed to get "write" lock
+Is another process using the image [fs.img]?
+make: *** [Makefile:152：run] 错误 1
+
+-- [0分16秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ ^C
+
+-- [1分27秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ ma
+ke clean 
+rm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg fs.img\
+*/*.o */*.
+d */*.asm */*.sym \
+target/* \
+xv6-user/initcode xv6-user/initcode.out \
+kernel/kernel \
+.gdbinit \
+xv6-user/usys.S \
+xv6-user/_init xv6-user/_sh xv6-user/_cat xv6-user/_echo xv6-user/_grep xv6-user/_ls xv6-user/_kill xv6-user/_mkdir xv6-user/_xargs 
+xv6-user/_sleep xv6-user/_find xv6-user/_rm xv6-user/_wc xv6-user/_test xv6-user/_usertests xv6-user/_strace xv6-user/_mv 
+
+-- [1分41秒] --
+ailab-o
+s@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ mAKEake build 
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -
+I. -fno-stack-protector -DDEBUG  -D QEMU -march=rv64g -nostdinc -I. -Ikernel -c xv6-user/initcode.S -o xv6-user/
+initcode.o
+riscv64-unknown-elf-l
+d -z max-page-size=4096 -N -e start -Ttext 0 -o xv6-user/initco
+de.out xv6-user/initcode.o
+riscv64-unknown-elf-ld: warning: xv6-user/initcode.out
+ has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objcopy -S -O 
+binary xv6-user/initcode.out xv6-user/initcode
+riscv64-unknown-elf-objdump -S xv6-user/initcode.o > xv6-user/initcode.asm
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffre
+estanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU -c -o xv6-user/usys.o xv6-user/usys.S
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o xv6-user/_init xv6-user/init.o xv6-user/ulib.o xv6-user/usys.o xv6
+-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning:
+ xv6-user/_init has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_init > xv6-us
+er/init.asm
+riscv64-unknown-elf-objdump -t xv6-user/_init | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/init.sym
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 
+-o xv6-us
+er/_sh xv6-u
+ser/sh.o xv6-user/ulib.o xv6-user/usys.o
+ x
+v6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: wa
+rning: xv6-user/_sh has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_sh > 
+xv6-user/sh.asm
+riscv64-unknown-elf-objdump -t xv6-user/_sh | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/sh.sym
+riscv64-unknown-elf-ld -z max-page-size=409
+6 -N -e main -Ttext 0 -o
+ xv6-user
+/_cat xv6-use
+r/cat.o xv6-user/ulib.o xv6-user/usys.o 
+xv
+6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warni
+ng: xv6-user/_cat has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_cat > xv6
+-user/cat.asm
+riscv64-unknown-elf-objdump -t xv6-user/_cat | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/cat.sym
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o x
+v6-user/_echo xv6-user/echo.o xv6-user/ulib.o xv6-user/usys.o xv6
+-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning:
+ xv6-user/_echo has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_echo > xv6-us
+er/echo.asm
+riscv64-unknown-elf-objdump -t xv6-user/_echo | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/echo.sym
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o x
+v6-user/_
+grep xv6-user/
+grep.o xv6-user/ulib.o xv6-user/usys.o x
+v6
+-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning:
+ xv6-user/_grep has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_grep > xv6-us
+er/grep.asm
+riscv64-unknown-elf-objdump -t xv6-user/_grep | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/grep.sym
+riscv64-unknown-elf-ld -z max-page-size=4
+096 -N -e main -Ttext 0 
+-o xv6-us
+er/_ls xv6-u
+ser/ls.o xv6-user/ulib.o xv6-user/usys.o
+ x
+v6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: wa
+rning: xv6-user/_ls has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_ls > 
+xv6-user/ls.asm
+riscv64-unknown-elf-objdump -t xv6-user/_ls | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/ls.sym
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o xv6-user/_
+kill xv6-user/kill.o xv6-user/ulib.o xv6-user/usys.o xv6
+-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning:
+ xv6-user/_kill has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_kill > xv6-us
+er/kill.asm
+riscv64-unknown-elf-objdump -t xv6-user/_kill | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/kill.sym
+riscv64-unknown-elf-ld -z max-page-size=4096 -N
+ -e main -Ttext 0 -o xv6
+-user/_mkdir xv6-user/mk
+dir.o xv6-user/ulib.o xv6-user/usys.o xv6-
+user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv
+6-user/_mkdir has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_mkdir > xv6-user/
+mkdir.asm
+riscv64-unknown-elf-objdump -t xv6-user/_mkdir | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/mkdir.sym
+riscv64-unknown-elf-ld -z max-page-size=4096 -N
+ -e main -Ttext 0 -o xv6
+-user/_xargs xv6-user/xargs.o xv6-user/ulib.o xv6-user/usys.o xv
+6-
+user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv
+6-user/_xargs has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_xargs > xv6-user/
+xargs.asm
+riscv64-unknown-elf-objdump -t xv6-user/_xargs | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/xargs.sym
+riscv64-unknown-elf-ld -z max-page-size=4096 -N
+ -e main -Ttext 0 -o xv6-user/_sleep xv6-user/sl
+eep.o xv6-user/ulib.o xv6-user/usys.o xv6-
+user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv
+6-user/_sleep has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_sleep > xv6-user/
+sleep.asm
+riscv64-unknown-elf-objdump -t xv6-user/_sleep | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/sleep.sym
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o x
+v6-user/_find xv6-user/find.o xv6-user/ulib.o xv6-user/usys.o xv6
+-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning:
+ xv6-user/_find has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_find > xv6-us
+er/find.asm
+riscv64-unknown-elf-objdump -t xv6-user/_find | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/find.sym
+riscv64-unknown-elf-ld -z max-page-size=4
+096 -N -e main -Ttext 0 
+-o xv6-user/_rm xv6-u
+ser/rm.o xv6-user/ulib.o xv6-user/usys.o x
+v6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: wa
+rning: xv6-user/_rm has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_rm > 
+xv6-user/rm.asm
+riscv64-unknown-elf-objdump -t xv6-user/_rm | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/rm.sym
+riscv64-unknown-elf-ld -z max-page-size=4
+096 -N -e main -Ttext 0 
+-o xv6-us
+er/_wc xv6-u
+ser/wc.o xv6-user/ulib.o xv6-user/usys.o
+ x
+v6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: wa
+rning: xv6-user/_wc has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_wc > 
+xv6-user/wc.asm
+riscv64-unknown-elf-objdump -t xv6-user/_wc | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/wc.sym
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o xv6-user/_test xv6-user/test.o xv6-user/ulib.o xv6-user/usys.o xv6
+-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning:
+ xv6-user/_test has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_test > xv6-us
+er/test.asm
+riscv64-unknown-elf-objdump -t xv6-user/_test | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/test.sym
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main
+ -Ttext 0 -o xv6-user/_u
+sertests 
+xv6-user/usertests.
+o xv6-user/ulib.o xv6-user/usys.o xv6-us
+er
+/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv6-user/_user
+tests has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_usertests > xv6-user/usertests.as
+m
+riscv64-unknown-elf-objdump -t xv6-user/_usertests | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/usertests.sym
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -
+e main -Ttext 0 -o xv6-u
+ser/_stra
+ce xv6-user/stra
+ce.o xv6-user/ulib.o xv6-user/usys.o xv6
+-u
+ser/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv6-u
+ser/_strace has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_strace > xv6-user/str
+ace.asm
+riscv64-unknown-elf-objdump -t xv6-user/_strace | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/strace.sym
+riscv64-unknown-elf-ld -z max-page-size=4
+096 -N -e main -Ttext 0 
+-o xv6-us
+er/_mv xv6-u
+ser/mv.o xv6-user/ulib.o xv6-user/usys.o
+ x
+v6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: wa
+rning: xv6-user/_mv has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_mv > 
+xv6-user
+/mv.asm
+riscv64-unknown-elf-objdump -t xv6-user/_mv | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/mv.sym
+
+-- [1分44秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ make fs
+
+-- [1分55秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ make run
+qemu-system-riscv64: -device 
+virtio-blk-device,drive=x0,bus=virtio-mmi
+o-bus.0: Failed to get "write" lock
+Is another process using the image [fs.img]?
+make: *** [Makefile:152：run] 错误 1
+
+-- [2分23秒] --
+aila
+b-os@ailab-os-VMware-Virtual-Platform:~/�
+��面/xv6-ai-labs-km/lab0$ make fs
+making fs image...
+
+输入了 512+0 块记录
+
+输出了 512+0 块记录
+268435456 字节 (268 MB, 256 MiB) 已复制，0.112941 s，2.4 GB/s
+mkfs.fat 4.2 (2021-01-31)
+
+-- [2分29秒] --
+ailab-os@ailab-os-
+V
+Mw
+a
+r
+e
+-
+V
+i
+r
+t
+u
+a
+l
+-
+P
+l
+a
+t
+f
+o
+r
+m
+
+:
+
+~
+/
+�
+�
+�
+�
+�
+/
+x
+v
+6
+-
+a
+i
+-
+l
+a
+b
+s
+-
+k
+m
+/
+l
+a
+b
+0
+
+$
+
+m
+a
+e
+
+ke run
+
+O
+p
+e
+n
+S
+B
+I
+
+v
+1
+.
+3
+
+_
+_
+_
+_              
+
+_
+_
+_
+_
+_
+
+_
+_
+_
+_
+
+_
+_
+_
+_
+_
+
+/
+
+_
+_
+
+\
+
+/
+
+_
+_
+_
+_
+|
+
+_
+
+\
+_
+
+_
+|
+
+|
+
+|
+
+|
+
+|
+_
+ _
+_
+
+_
+_
+_
+
+_
+
+_
+_
+ | (___ | |_) || |
+ | |  | | '_ \ / _ \ '_ \ \___ \|  _ < | |
+
+| 
+|__
+|
+ |
+
+|_
+) 
+| 
+ _
+_/
+ |
+ |
+ |
+__
+_
+_
+)
+
+|
+
+|
+_
+)
+
+|
+|
+
+|
+_
+
+\
+_
+_
+_
+_
+/|
+ .
+_
+_/
+
+\
+_
+_
+_|
+_
+| 
+|_
+|_
+__
+__
+/|
+__
+_
+/
+__
+_
+__
+|
+
+|
+ |
+
+|_|
+
+Pl
+at
+f
+or
+m 
+Na
+me
+
+ :
+
+r
+is
+cv
+-vi
+r
+ti
+o,q
+e
+m
+u
+
+P
+la
+t
+fo
+rm
+ F
+e
+at
+u
+re
+s 
+
+  : me
+de
+leg
+
+P
+lat
+f
+or
+m
+
+H
+AR
+T C
+ou
+nt
+
+:
+
+2
+
+P
+l
+a
+t
+fo
+rm
+
+IP
+I
+ D
+e
+v
+i
+c
+e
+
+:
+
+a
+cl
+in
+t-
+ms
+wi
+
+P
+la
+tfo
+rm
+ T
+im
+er
+ D
+ev
+ic
+e 
+
+: 
+ac
+li
+nt
+-
+mti
+me
+r 
+@ 1
+0
+000
+0
+00
+Hz
+
+P
+la
+tfo
+rm
+
+Co
+n
+sole Device   : uart8250
+Platform HSM Device       : ---
+Platform PMU Device       : ---
+Platform Reboot Device    : sifive_test
+Platform Shutdown Device  : sifive_test
+Platform Suspend Device   : ---
+Platform CPPC Device      : ---
+Firmware Base             : 0x80000000
+
+F
+i
+r
+m
+w
+a
+r
+e
+
+S
+i
+z
+e
+
+ :
+ 3
+32
+ K
+B
+
+F
+ir
+mw
+ar
+e
+ R
+W 
+O
+ff
+s
+et
+
+ :
+ 0
+x4
+0
+000
+Firmware RW Size          : 76 KB
+Firmware Heap Offset      : 0x4a000
+Firmware Heap Size        : 36 KB (total), 2 KB (reserved), 9 KB (used), 24 KB (free)
+Firmware Scratch Size     : 4096 B (total), 760 B (used), 3336 B (free)
+Runtime SBI Version       : 1.0
+
+Domain0 Name              : root
+Domain0 Boot HART         : 0
+Domain0 HARTs             : 0*,1*
+Domain0 Region00          : 0x00000000020000
+0
+0-0
+x
+00
+00
+000
+00
+2
+00
+f
+ff
+f 
+M
+: 
+(I
+,R
+,
+W)
+ S
+/U
+: 
+()
+
+D
+om
+ai
+n0
+ R
+eg
+io
+n0
+1 
+
+ :
+ 0
+x0
+0
+0
+0
+0
+00
+080
+0
+40
+000
+-0
+x
+00
+00
+0
+0
+0
+0
+8
+0
+0
+5
+f
+f
+f
+f
+
+M
+:
+ (R,
+W)
+ S
+/U
+:
+ (
+)
+
+D
+o
+m
+ai
+n0
+
+Re
+gi
+o
+n0
+2
+
+: 
+0
+x0
+00
+00
+00
+0
+80
+00
+0
+00
+0-
+0x
+0
+000
+00
+00
+80
+03
+f
+ff
+f 
+M
+: 
+(
+R,
+X
+) 
+S
+/U
+: 
+()
+
+D
+om
+ai
+n0
+ R
+eg
+io
+n0
+3 
+
+:
+ 0
+x0
+00
+00
+00
+0
+00
+00
+00
+00
+-0
+x
+ff
+f
+ff
+ff
+ff
+ff
+fff
+f
+f 
+M
+:
+
+(R
+,W
+,X
+) 
+S/
+U:
+
+(R
+,W
+,
+X
+)
+
+D
+o
+m
+a
+i
+n
+0
+
+N
+ex
+t Address      : 0x0000000080200000
+Domain0 Next Arg1         : 0x0000000087e0
+0000
+Domain0 Next Mode         : S-mode
+Domain0 SysReset          : yes
+Domain0 SysSuspend        : yes
+
+Boot HART ID          
+    : 0
+Boot HART Domain          : root
+Boot HART Priv Version    : v1.12
+Boot HART Base ISA        : rv64imafdch
+
+Bo
+ot
+ H
+ART
+
+IS
+A 
+E
+xt
+e
+ns
+io
+n
+s
+
+:
+
+ti
+m
+e,
+sst
+c
+
+Bo
+o
+t
+
+HA
+R
+T
+
+P
+MP
+ C
+o
+u
+n
+t 
+
+:
+
+1
+6
+
+Bo
+o
+t 
+HA
+RT
+ PMP
+
+Gr
+a
+nu
+la
+ri
+t
+y :
+
+4
+
+B
+oo
+t H
+ART
+
+PMP
+
+Ad
+d
+re
+s
+s
+
+B
+i
+ts
+: 
+5
+4
+
+B
+o
+o
+t 
+HA
+R
+T
+
+M
+H
+P
+M
+
+C
+o
+unt
+
+    : 16
+Boot HART MIDELEG         : 0x0000000000001666
+Boot HART MEDELEG         : 0x0000000000f0b509
+  (`-.            (`-.                    
+        .-')       ('-.    _   .-')
+ ( OO ).        _(OO  )_                        .(  OO)    _(  OO)  ( '.( OO )
+_ 
+
+(
+_
+/
+.
+
+ \
+_
+)-
+. 
+,
+-
+-
+(_
+/ 
+
+ ,
+.
+
+\ 
+
+,
+-
+-
+.
+
+(
+_
+)-
+-
+-
+\
+_)
+
+(
+,-
+-
+-
+-
+--
+.  
+,
+--
+.
+
+ ,
+-
+-
+.
+)
+
+,
+-
+-
+.
+
+,
+--
+. 
+
+\
+
+`.
+'
+  /
+
+\ 
+
+ \ 
+
+/(
+__
+/ 
+/ 
+ .
+' 
+
+.-
+')
+
+ ' 
+
+.-
+.  
+' 
+
+| 
+ .
+--
+-'  
+|
+
+  `
+.'
+   |  
+|
+
+|
+ | 
+
+|
+
+\
+
+/
+\
+
+\ 
+
+ \
+ /
+
+/
+ .
+
+/ 
+-
+.    _(  OO)   ,|  | |  |   |  |      |         |  |  | | .-')
+   \   \ |  
+
+\
+
+'
+
+/
+,
+ |
+
+.
+-
+. 
+
+'
+
+(
+,
+-
+-
+-
+-
+-
+-
+.
+
+(
+_
+|
+
+ |
+
+|
+
+|
+
+(
+|
+
+'
+-
+-
+.
+
+  |
+
+ |
+'.
+'|
+
+ |
+
+|
+
+ |
+_
+|
+(
+
+O
+O
+
+)
+
+.'
+
+\
+_
+) 
+
+ \
+
+/
+__
+)
+' 
+\
+
+| 
+ |
+
+'-
+--
+-
+--
+'
+
+|
+
+|
+ |
+
+|
+
+|
+
+.
+-
+-' 
+
+|
+
+|
+
+|
+
+ |
+
+|
+
+|
+ |
+
+`
+-'
+
+/
+
+/
+
+.
+'
+. 
+
+\ 
+
+\
+
+/
+
+ \
+
+ `
+'
+
+/
+
+ '
+
+ '
+-
+'
+
+'
+-
+. 
+|
+
+ `
+--
+-
+. 
+
+|
+
+|
+
+|
+
+|
+
+(
+'
+
+'
+-
+'
+(_
+.
+-
+'
+
+'
+-
+-
+'
+
+'
+-
+-
+'
+
+ `
+-
+' 
+
+ `
+-
+--
+-
+'
+
+ `----
+-
+'-
+-
+'
+
+`
+-
+-
+--
+-
+-
+'
+
+`-
+-' 
+
+`
+--
+'
+
+ `
+-
+---
+-
+'
+
+h
+a
+r
+t
+ 0 
+e
+n
+t
+e
+r
+
+m
+a
+i
+n
+(
+)
+...
+
+k
+e
+r
+n
+e
+l_e
+n
+d
+:
+
+0
+x
+0
+0
+000
+0
+0
+0
+8
+0
+2
+2
+6
+0
+0
+0
+, 
+ph
+y
+st
+op
+:
+
+0x
+0
+0
+00
+0
+00
+0806
+0
+0
+0
+0
+0
+
+k
+i
+n
+i
+t
+
+kv
+m
+i
+n
+i
+t
+
+k
+vm
+i
+n
+i
+t
+h
+a
+r
+t
+
+t
+i
+m
+e
+r
+ini
+t
+
+t
+r
+ap
+i
+ni
+t
+h
+a
+r
+t
+
+pro
+c
+i
+n
+i
+t
+
+p
+l
+i
+c
+in
+i
+t
+
+pl
+i
+c
+i
+n
+i
+t
+h
+a
+r
+t
+
+v
+i
+r
+t
+i
+o_
+d
+i
+sk
+_
+in
+i
+t
+
+b
+in
+i
+t
+
+f
+i
+l
+e
+i
+ni
+t
+
+us
+er
+in
+i
+t
+
+ha
+r
+t
+ 0 
+in
+i
+t 
+d
+on
+e
+
+[
+f
+a
+t
+32
+_
+in
+i
+t]
+
+e
+n
+t
+e
+r
+!
+
+[F
+A
+T3
+2
+ i
+ni
+t
+]
+b
+y
+t
+s_
+p
+e
+r
+_
+s
+e
+c
+:
+
+5
+1
+2
+
+[
+F
+AT
+3
+2
+ i
+n
+it
+]
+r
+o
+ot
+_c
+lu
+s: 2
+[FAT32 init]s
+e
+c
+_
+p
+e
+r
+_
+-- [2分41秒] --
+c
+l
+u
+s
+:
+
+1
+
+[
+F
+A
+T
+3
+2
+
+i
+nit
+]
+f
+a
+t
+_
+c
+n
+t: 2
+[FAT32 init]fat_sz: 4033
+[FAT32 init]first_data_sec: 8098
+init: starting sh
+-> / $ init: starting sh
+-> / $ 

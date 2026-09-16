@@ -1,0 +1,36 @@
+==== labtracker 终端转录 ====
+录像: 20260910T155129-12346.out.gz   时长: 0分24秒   原始大小: 1026B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ cdls
+公共  视频  文档  音乐  clash               labtracker
+
+模板  图片  下载  桌面  claude_code_env.sh  snap
+
+-- [0分10秒] --
+a
+i
+l
+a
+b
+-
+os@ailab-os
+-VMware-Virtual-Platform:~$ cd
+ cd zhu-[ferdesktop
+bash: cd: desktop: 没有那个文件或目录
+
+-- [0分19秒] --
+ai
+l
+ab-o
+s@ai
+lab-
+os-V
+M
+w
+-- [0分24秒] --
+are-Virtual-Platf
+orm:~$ cd desktopzzhupz
+exit
+
