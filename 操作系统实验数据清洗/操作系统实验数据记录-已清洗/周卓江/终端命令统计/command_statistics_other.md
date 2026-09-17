@@ -9,8 +9,8 @@
 
 - 实验分类：其他（非 lab0–lab8 或目录未知）
 
-- Shell 命令执行总次数：28
-- 不同 Shell 命令数量：17
+- Shell 命令执行总次数：27
+- 不同 Shell 命令数量：16
 
 | command | count |
 | --- | ---: |
@@ -29,5 +29,4 @@
 | gsettings get org.gnome.desktop.input-sources sources | 1 |
 | ibus engine | 1 |
 | ibus list-engine \| grep -A 3 -B 3 pinyin | 1 |
-| ibus restart | 1 |
 | sudo apt upgrade | 1 |

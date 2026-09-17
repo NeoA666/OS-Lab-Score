@@ -3,7 +3,7 @@
   "student": {
     "student_id": "2406080118",
     "name": "杨涵清",
-    "source": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926"
+    "source": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926"
   },
   "lab": "other",
   "status": "complete",
@@ -37,7 +37,7 @@
   "recording_details": [
     {
       "recording_id": "20260903T173049-4240",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260903T173049-4240.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260903T173049-4240.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -67,7 +67,7 @@
     },
     {
       "recording_id": "20260903T173143-4453",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260903T173143-4453.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260903T173143-4453.out.gz",
       "status": "ok",
       "events": 3,
       "claude_retained_pairs": 0,
@@ -97,7 +97,7 @@
     },
     {
       "recording_id": "20260903T173318-4937",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260903T173318-4937.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260903T173318-4937.out.gz",
       "status": "ok",
       "events": 5,
       "claude_retained_pairs": 0,
@@ -127,7 +127,7 @@
     },
     {
       "recording_id": "20260903T173517-6160",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260903T173517-6160.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260903T173517-6160.out.gz",
       "status": "ok",
       "events": 13,
       "claude_retained_pairs": 0,
@@ -157,7 +157,7 @@
     },
     {
       "recording_id": "20260903T174239-8600",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260903T174239-8600.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260903T174239-8600.out.gz",
       "status": "ok",
       "events": 1,
       "claude_retained_pairs": 0,
@@ -187,7 +187,7 @@
     },
     {
       "recording_id": "20260903T174725-9416",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260903T174725-9416.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260903T174725-9416.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -217,7 +217,7 @@
     },
     {
       "recording_id": "20260903T174725-9473",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260903T174725-9473.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260903T174725-9473.out.gz",
       "status": "ok",
       "events": 2,
       "claude_retained_pairs": 0,
@@ -247,7 +247,7 @@
     },
     {
       "recording_id": "20260903T175141-11248",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260903T175141-11248.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260903T175141-11248.out.gz",
       "status": "ok",
       "events": 7,
       "claude_retained_pairs": 0,
@@ -277,7 +277,7 @@
     },
     {
       "recording_id": "20260903T175414-12209",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260903T175414-12209.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260903T175414-12209.out.gz",
       "status": "ok",
       "events": 6,
       "claude_retained_pairs": 0,
@@ -307,7 +307,7 @@
     },
     {
       "recording_id": "20260903T175628-13424",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260903T175628-13424.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260903T175628-13424.out.gz",
       "status": "ok",
       "events": 1,
       "claude_retained_pairs": 0,
@@ -337,7 +337,7 @@
     },
     {
       "recording_id": "20260903T175756-13613",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260903T175756-13613.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260903T175756-13613.out.gz",
       "status": "ok",
       "events": 5,
       "claude_retained_pairs": 0,
@@ -367,7 +367,7 @@
     },
     {
       "recording_id": "20260904T010738-2629",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260904T010738-2629.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260904T010738-2629.out.gz",
       "status": "ok",
       "events": 1,
       "claude_retained_pairs": 0,
@@ -397,7 +397,7 @@
     },
     {
       "recording_id": "20260909T112124-3580",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260909T112124-3580.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260909T112124-3580.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -429,7 +429,7 @@
     },
     {
       "recording_id": "20260909T112134-3694",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260909T112134-3694.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260909T112134-3694.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -459,7 +459,7 @@
     },
     {
       "recording_id": "20260909T112245-3848",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260909T112245-3848.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260909T112245-3848.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -489,7 +489,7 @@
     },
     {
       "recording_id": "20260909T112307-4022",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260909T112307-4022.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260909T112307-4022.out.gz",
       "status": "ok",
       "events": 1,
       "claude_retained_pairs": 0,
@@ -519,7 +519,7 @@
     },
     {
       "recording_id": "20260909T113602-3086",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260909T113602-3086.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260909T113602-3086.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -551,7 +551,7 @@
     },
     {
       "recording_id": "20260909T113613-3208",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260909T113613-3208.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260909T113613-3208.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -581,7 +581,7 @@
     },
     {
       "recording_id": "20260909T113625-3366",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260909T113625-3366.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260909T113625-3366.out.gz",
       "status": "ok",
       "events": 1,
       "claude_retained_pairs": 0,
@@ -613,7 +613,7 @@
     },
     {
       "recording_id": "20260909T114003-3719",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260909T114003-3719.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260909T114003-3719.out.gz",
       "status": "ok",
       "events": 1,
       "claude_retained_pairs": 0,
@@ -643,7 +643,7 @@
     },
     {
       "recording_id": "20260911T083845-3061",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260911T083845-3061.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260911T083845-3061.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -673,7 +673,7 @@
     },
     {
       "recording_id": "20260911T083854-3223",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260911T083854-3223.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260911T083854-3223.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -703,7 +703,7 @@
     },
     {
       "recording_id": "20260911T084036-3582",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260911T084036-3582.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260911T084036-3582.out.gz",
       "status": "ok",
       "events": 31,
       "claude_retained_pairs": 15,
@@ -733,7 +733,7 @@
     },
     {
       "recording_id": "20260911T085435-4493",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260911T085435-4493.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260911T085435-4493.out.gz",
       "status": "ok",
       "events": 17,
       "claude_retained_pairs": 0,
@@ -766,7 +766,7 @@
   ],
   "events": [
     {
-      "event_id": "596699ac3a8a:20260909T112307-4022:shell:1",
+      "event_id": "6d228c7baf7a:20260909T112307-4022:shell:1",
       "student": {
         "student_id": "2406080118",
         "name": "杨涵清"
@@ -790,8 +790,8 @@
       "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
       "related_event_id": null,
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260909T112307-4022.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260909T112307-4022.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260909T112307-4022.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260909T112307-4022.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 124,
         "observation": {
@@ -808,21 +808,21 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\logs\\events.jsonl",
             "line": 145,
             "ts": "2026-09-09T11:23:07+08:00",
             "epoch": 1788924187
           }
         ],
         "shell_ranges": {
-          "prompt_begin": 79,
+          "prompt_begin": 0,
           "echo_begin": 172,
           "echo_end": 178,
           "output_begin": 178,
           "output_end": 7732
         },
         "shell_decompressed_ranges": {
-          "prompt_begin": 203,
+          "prompt_begin": 124,
           "echo_begin": 296,
           "echo_end": 302,
           "output_begin": 302,
@@ -837,7 +837,7 @@
       "output_truncated": false
     },
     {
-      "event_id": "596699ac3a8a:20260909T114003-3719:shell:1",
+      "event_id": "6d228c7baf7a:20260909T114003-3719:shell:1",
       "student": {
         "student_id": "2406080118",
         "name": "杨涵清"
@@ -861,8 +861,8 @@
       "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
       "related_event_id": null,
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260909T114003-3719.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/term/20260909T114003-3719.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260909T114003-3719.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\term\\20260909T114003-3719.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 124,
         "observation": {
@@ -879,21 +879,21 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926\\logs\\events.jsonl",
             "line": 165,
             "ts": "2026-09-09T11:40:03+08:00",
             "epoch": 1788925203
           }
         ],
         "shell_ranges": {
-          "prompt_begin": 65,
+          "prompt_begin": 0,
           "echo_begin": 144,
           "echo_end": 185,
           "output_begin": 185,
           "output_end": 30364
         },
         "shell_decompressed_ranges": {
-          "prompt_begin": 189,
+          "prompt_begin": 124,
           "echo_begin": 268,
           "echo_end": 309,
           "output_begin": 309,

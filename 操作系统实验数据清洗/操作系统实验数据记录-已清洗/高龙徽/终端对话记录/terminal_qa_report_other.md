@@ -39,51 +39,32 @@ sudo apt update
 获取:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
 获取:2 https://packages.microsoft.com/repos/code stable InRelease [3,590 B]
 命中:3 https://deb.nodesource.com/node_24.x nodistro InRelease
-获取:4 https://packages.microsoft.com/repos/code stable/main amd64 Packages [29.
-9 kB]
-获取:6 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1,0
-05 kB]
+获取:4 https://packages.microsoft.com/repos/code stable/main amd64 Packages [29.9 kB]
+获取:6 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1,005 kB]
 命中:5 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble InRelease
-获取:7 http://security.ubuntu.com/ubuntu noble-security/main Translation-en [213
- kB]
-获取:8 http://security.ubuntu.com/ubuntu noble-security/main amd64 Components [4
-6.5 kB]
-获取:9 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Package
-s [1,441 kB]
-获取:10 http://security.ubuntu.com/ubuntu noble-security/restricted Translation-
-en [334 kB]
-获取:11 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages
- [1,206 kB]
-获取:12 http://security.ubuntu.com/ubuntu noble-security/universe Translation-en
- [241 kB]
-获取:13 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Componen
-ts [76.3 kB]
+获取:7 http://security.ubuntu.com/ubuntu noble-security/main Translation-en [213 kB]
+获取:8 http://security.ubuntu.com/ubuntu noble-security/main amd64 Components [46.5 kB]
+获取:9 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1,441 kB]
+获取:10 http://security.ubuntu.com/ubuntu noble-security/restricted Translation-en [334 kB]
+获取:11 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1,206 kB]
+获取:12 http://security.ubuntu.com/ubuntu noble-security/universe Translation-en [241 kB]
+获取:13 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [76.3 kB]
 获取:14 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates InRelease [126
 kB]
-获取:15 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-backports InRelease [12
-6 kB]
-获取:16 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 Pack
-ages [1,260 kB]
-获取:17 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main Translatio
-n-en [292 kB]
-获取:18 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 Comp
-onents [180 kB]
-获取:19 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/restricted amd6
-4 Packages [1,536 kB]
-获取:20 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/restricted Tran
-slation-en [352 kB]
+获取:15 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-backports InRelease [126 kB]
+获取:16 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 Packages [1,260 kB]
+获取:17 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main Translation-en [292 kB]
+获取:18 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 Components [180 kB]
+获取:19 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/restricted amd64 Packages [1,536 kB]
+获取:20 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/restricted Translation-en [352 kB]
 获取:21 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/universe amd64
 Packages [1,690 kB]
-获取:22 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/universe Transl
-ation-en [339 kB]
+获取:22 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/universe Translation-en [339 kB]
 获取:23 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/universe amd64
 Components [388 kB]
-获取:24 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/multiverse amd6
-4 Components [940 B]
-获取:25 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-backports/main amd64 Co
-mponents [5,760 B]
-获取:26 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-backports/universe amd6
-4 Components [12.6 kB]
+获取:24 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/multiverse amd64 Components [940 B]
+获取:25 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-backports/main amd64 Components [5,760 B]
+获取:26 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-backports/universe amd64 Components [12.6 kB]
 已下载 11.0 MB，耗时 27秒 (412 kB/s)
 正在读取软件包列表... 完成
 正在分析软件包的依赖关系树... 完成
@@ -253,261 +234,261 @@ Learn more about Ubuntu Pro at https://ubuntu.com/pro
 解压缩后会消耗 556 MB 的额外空间。
 N: Some packages may have been kept back due to phasing.
 您希望继续执行吗？ [Y/n] y
-获取:1 https://packages.microsoft.com/repos/code stable/main amd64 code amd64 1.
-136.2-1788561671 [244 MB]
-获取:2 https://deb.nodesource.com/node_24.x nodistro/main amd64 nodejs amd64 24.
-20.0-1nodesource1 [39.1 MB]
-获取:3 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 conso
-le-setup-linux all 1.226ubuntu1.1 [1,880 kB]
-获取:4 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 conso
-le-setup all 1.226ubuntu1.1 [111 kB]
-获取:5 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 keybo
-ard-configuration all 1.226ubuntu1.1 [212 kB]
-获取:6 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libpy
-thon3.12t64 amd64 3.12.3-1ubuntu0.16 [2,339 kB]
-获取:7 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 pytho
-n3.12 amd64 3.12.3-1ubuntu0.16 [651 kB]
-获取:8 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libpy
-thon3.12-stdlib amd64 3.12.3-1ubuntu0.16 [2,070 kB]
-获取:9 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 pytho
-n3.12-minimal amd64 3.12.3-1ubuntu0.16 [2,335 kB]
-获取:10 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libp
-ython3.12-minimal amd64 3.12.3-1ubuntu0.16 [838 kB]
-获取:11 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gpg-
-wks-client amd64 2.4.4-2ubuntu17.6 [70.9 kB]
-获取:12 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 dirm
-ngr amd64 2.4.4-2ubuntu17.6 [323 kB]
-获取:13 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gpgs
-m amd64 2.4.4-2ubuntu17.6 [232 kB]
-获取:14 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gnup
-g-utils amd64 2.4.4-2ubuntu17.6 [109 kB]
-获取:15 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gpg-
-agent amd64 2.4.4-2ubuntu17.6 [227 kB]
+获取:1 https://packages.microsoft.com/repos/code stable/main amd64 code amd64 1.136.2-1788561671 [244 MB]
+获取:2 https://deb.nodesource.com/node_24.x nodistro/main amd64 nodejs amd64 24.20.0-1nodesource1 [39.1 MB]
+获取:3 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 console-setup-linux all 1.226ubuntu1.1 [1,880 kB]
+获取:4 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 console-setup all 1.226ubuntu1.1 [111 kB]
+获取:5 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 keyboard-configuration all 1.226ubuntu1.1 [212 kB]
+获取:6 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libpython3.12t64 amd64 3.12.3-1ubuntu0.16 [2,339 kB]
+获取:7 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 python3.12 amd64 3.12.3-1ubuntu0.16 [651 kB]
+获取:8 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libpython3.12-stdlib amd64 3.12.3-1ubuntu0.16 [2,070 kB]
+获取:9 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 python3.12-minimal amd64 3.12.3-1ubuntu0.16 [2,335 kB]
+获取:10 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libpython3.12-minimal amd64 3.12.3-1ubuntu0.16 [838 kB]
+获取:11 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gpg-wks-client amd64 2.4.4-2ubuntu17.6 [70.9 kB]
+获取:12 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 dirmngr amd64 2.4.4-2ubuntu17.6 [323 kB]
+获取:13 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gpgsm amd64 2.4.4-2ubuntu17.6 [232 kB]
+获取:14 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gnupg-utils amd64 2.4.4-2ubuntu17.6 [109 kB]
+获取:15 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gpg-agent amd64 2.4.4-2ubuntu17.6 [227 kB]
 获取:16 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gpg
 amd64 2.4.4-2ubuntu17.6 [565 kB]
-获取:17 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gpgc
-onf amd64 2.4.4-2ubuntu17.6 [104 kB]
-获取:18 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gnup
-g all 2.4.4-2ubuntu17.6 [359 kB]
-获取:19 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 keyb
-oxd amd64 2.4.4-2ubuntu17.6 [78.3 kB]
+获取:17 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gpgconf amd64 2.4.4-2ubuntu17.6 [104 kB]
+获取:18 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gnupg all 2.4.4-2ubuntu17.6 [359 kB]
+获取:19 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 keyboxd amd64 2.4.4-2ubuntu17.6 [78.3 kB]
 获取:20 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 ldap-utils
 amd64 2.6.10+dfsg-0ubuntu0.24.04.1 [153 kB]
-获取:21 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libldap2 am
-d64 2.6.10+dfsg-0ubuntu0.24.04.1 [198 kB]
-获取:22 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gpgv
- amd64 2.4.4-2ubuntu17.6 [158 kB]
-获取:23 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 pyth
-on-apt-common all 2.7.7ubuntu5.3 [20.5 kB]
-获取:24 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 pyth
-on3-apt amd64 2.7.7ubuntu5.3 [169 kB]
-获取:25 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 pyth
-on3-problem-report all 2.28.3-0ubuntu0.1 [26.5 kB]
-获取:26 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 pyth
-on3-apport all 2.28.3-0ubuntu0.1 [93.7 kB]
-获取:27 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 appo
-rt-core-dump-handler all 2.28.3-0ubuntu0.1 [19.2 kB]
-获取:28 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 appo
-rt all 2.28.3-0ubuntu0.1 [85.3 kB]
-获取:29 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 blue
-z amd64 5.72-0ubuntu5.5 [1,361 kB]
-获取:30 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 language-pa
-ck-gnome-zh-hans all 1:24.04+20260905 [1,948 B]
-获取:31 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 language-pa
-ck-gnome-zh-hans-base all 1:24.04+20260905 [1,715 kB]
-获取:32 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libg
-ssapi-krb5-2 amd64 1.20.1-6ubuntu2.8 [143 kB]
-获取:33 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libk
-rb5-3 amd64 1.20.1-6ubuntu2.8 [348 kB]
-获取:34 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libk
-rb5support0 amd64 1.20.1-6ubuntu2.8 [34.7 kB]
-获取:35 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libk
-5crypto3 amd64 1.20.1-6ubuntu2.8 [81.9 kB]
-获取:36 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 open
-ssh-sftp-server amd64 1:9.6p1-3ubuntu13.19 [37.1 kB]
-获取:37 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 open
-ssh-server amd64 1:9.6p1-3ubuntu13.19 [511 kB]
-获取:38 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 open
-ssh-client amd64 1:9.6p1-3ubuntu13.19 [908 kB]
-获取:39 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libp
-roc2-0 amd64 2:4.0.4-4ubuntu3.3 [58.9 kB]
-获取:40 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 proc
-ps amd64 2:4.0.4-4ubuntu3.3 [707 kB]
-获取:41 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 spic
-e-vdagent amd64 0.22.1-4ubuntu0.1 [57.4 kB]
-获取:42 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 ubun
-tu-drivers-common amd64 1:0.9.7.6ubuntu3.7 [66.5 kB]
-获取:43 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 whoo
-psie amd64 0.2.77ubuntu0.1 [20.0 kB]
-获取:44 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libw
-hoopsie0 amd64 0.2.77ubuntu0.1 [11.0 kB]
-获取:45 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 open
--vm-tools-desktop amd64 2:13.0.10-0ubuntu0.24.04.1 [136 kB]
-获取:46 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 ipro
-ute2 amd64 6.1.0-1ubuntu6.4 [1,120 kB]
-获取:47 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 open
--vm-tools amd64 2:13.0.10-0ubuntu0.24.04.1 [723 kB]
-获取:48 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 dhcp
-cd-base amd64 1:10.0.6-1ubuntu3.2 [215 kB]
-获取:49 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 krb5
--locales all 1.20.1-6ubuntu2.8 [15.1 kB]
-获取:50 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 liba
-pparmor1 amd64 4.0.1really4.0.1-0ubuntu0.24.04.7 [51.3 kB]
-获取:51 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 netplan-gen
-erator amd64 1.1.2-8ubuntu1~24.04.2 [61.2 kB]
-获取:52 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-net
-plan amd64 1.1.2-8ubuntu1~24.04.2 [24.3 kB]
-获取:53 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linu
-x-firmware all 20240318.git3b128b60.0ubuntu3.1 [1,816 B]
-获取:54 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linu
-x-firmware-amd-graphics all 20240318.git3b128b60-0ubuntu3.2 [30.0 MB]
-获取:55 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linu
-x-firmware-amd-misc all 20240318.git3b128b60-0ubuntu3.1 [266 kB]
-获取:56 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linu
-x-firmware-broadcom-wireless all 20240318.git3b128b60-0ubuntu3.1 [11.3 MB]
-获取:57 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linu
-x-firmware-intel-graphics all 20240318.git3b128b60-0ubuntu3.1 [22.0 MB]
-获取:58 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linu
-x-firmware-intel-misc all 20240318.git3b128b60-0ubuntu3.1 [10.2 MB]
-获取:59 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linu
-x-firmware-intel-wireless all 20240318.git3b128b60-0ubuntu3.1 [112 MB]
-获取:60 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linu
-x-firmware-marvell-prestera all 20240318.git3b128b60-0ubuntu3.1 [74.8 MB]
-获取:61 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linu
-x-firmware-marvell-wireless all 20240318.git3b128b60-0ubuntu3.1 [7,568 kB]
-获取:62 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linu
-x-firmware-mediatek all 20240318.git3b128b60-0ubuntu3.1 [24.7 MB]
-获取:63 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linu
-x-firmware-mellanox-spectrum all 20240318.git3b128b60-0ubuntu3.1 [80.8 MB]
-获取:64 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linu
-x-firmware-misc all 20240318.git3b128b60-0ubuntu3.1 [33.1 MB]
-获取:65 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linu
-x-firmware-netronome all 20240318.git3b128b60-0ubuntu3.1 [5,827 kB]
-获取:66 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linu
-x-firmware-nvidia-graphics all 20240318.git3b128b60-0ubuntu3.1 [109 MB]
-获取:67 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linu
-x-firmware-qlogic all 20240318.git3b128b60-0ubuntu3.1 [13.3 MB]
-获取:68 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linu
-x-firmware-qualcomm-graphics all 20240318.git3b128b60-0ubuntu3.1 [6,728 kB]
-获取:69 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linu
-x-firmware-qualcomm-misc all 20240318.git3b128b60-0ubuntu3.1 [60.2 MB]
-获取:70 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linu
-x-firmware-qualcomm-wireless all 20240318.git3b128b60-0ubuntu3.1 [47.8 MB]
-获取:71 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linu
-x-firmware-realtek all 20240318.git3b128b60-0ubuntu3.1 [6,185 kB]
-获取:72 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 init
-ramfs-tools all 0.142ubuntu25.8 [9,076 B]
-获取:73 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 init
-ramfs-tools-core all 0.142ubuntu25.8 [50.5 kB]
-获取:74 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 init
-ramfs-tools-bin amd64 0.142ubuntu25.8 [21.6 kB]
+获取:21 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libldap2 amd64 2.6.10+dfsg-0ubuntu0.24.04.1 [198 kB]
+获取:22 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gpgv amd64 2.4.4-2ubuntu17.6 [158 kB]
+获取:23 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 python-apt-common all 2.7.7ubuntu5.3 [20.5 kB]
+获取:24 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 python3-apt amd64 2.7.7ubuntu5.3 [169 kB]
+获取:25 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 python3-problem-report all 2.28.3-0ubuntu0.1 [26.5 kB]
+获取:26 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 python3-apport all 2.28.3-0ubuntu0.1 [93.7 kB]
+获取:27 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 apport-core-dump-handler all 2.28.3-0ubuntu0.1 [19.2 kB]
+获取:28 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 apport all 2.28.3-0ubuntu0.1 [85.3 kB]
+获取:29 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 bluez amd64 5.72-0ubuntu5.5 [1,361 kB]
+获取:30 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 language-pack-gnome-zh-hans all 1:24.04+20260905 [1,948 B]
+获取:31 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 language-pack-gnome-zh-hans-base all 1:24.04+20260905 [1,715 kB]
+获取:32 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libgssapi-krb5-2 amd64 1.20.1-6ubuntu2.8 [143 kB]
+获取:33 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libkrb5-3 amd64 1.20.1-6ubuntu2.8 [348 kB]
+获取:34 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libkrb5support0 amd64 1.20.1-6ubuntu2.8 [34.7 kB]
+获取:35 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libk5crypto3 amd64 1.20.1-6ubuntu2.8 [81.9 kB]
+获取:36 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 openssh-sftp-server amd64 1:9.6p1-3ubuntu13.19 [37.1 kB]
+获取:37 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 openssh-server amd64 1:9.6p1-3ubuntu13.19 [511 kB]
+获取:38 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.19 [908 kB]
+获取:39 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libproc2-0 amd64 2:4.0.4-4ubuntu3.3 [58.9 kB]
+获取:40 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 procps amd64 2:4.0.4-4ubuntu3.3 [707 kB]
+获取:41 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 spice-vdagent amd64 0.22.1-4ubuntu0.1 [57.4 kB]
+获取:42 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 ubuntu-drivers-common amd64 1:0.9.7.6ubuntu3.7 [66.5 kB]
+获取:43 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 whoopsie amd64 0.2.77ubuntu0.1 [20.0 kB]
+获取:44 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libwhoopsie0 amd64 0.2.77ubuntu0.1 [11.0 kB]
+获取:45 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 open-vm-tools-desktop amd64 2:13.0.10-0ubuntu0.24.04.1 [136 kB]
+获取:46 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 iproute2 amd64 6.1.0-1ubuntu6.4 [1,120 kB]
+获取:47 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 open-vm-tools amd64 2:13.0.10-0ubuntu0.24.04.1 [723 kB]
+获取:48 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 dhcpcd-base amd64 1:10.0.6-1ubuntu3.2 [215 kB]
+获取:49 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 krb5-locales all 1.20.1-6ubuntu2.8 [15.1 kB]
+获取:50 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libapparmor1 amd64 4.0.1really4.0.1-0ubuntu0.24.04.7 [51.3 kB]
+获取:51 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 netplan-generator amd64 1.1.2-8ubuntu1~24.04.2 [61.2 kB]
+获取:52 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-netplan amd64 1.1.2-8ubuntu1~24.04.2 [24.3 kB]
+获取:53 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linux-firmware all 20240318.git3b128b60.0ubuntu3.1 [1,816 B]
+获取:54 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linux-firmware-amd-graphics all 20240318.git3b128b60-0ubuntu3.2 [30.0 MB]
+获取:55 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linux-firmware-amd-misc all 20240318.git3b128b60-0ubuntu3.1 [266 kB]
+获取:56 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linux-firmware-broadcom-wireless all 20240318.git3b128b60-0ubuntu3.1 [11.3 MB]
+获取:57 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linux-firmware-intel-graphics all 20240318.git3b128b60-0ubuntu3.1 [22.0 MB]
+获取:58 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linux-firmware-intel-misc all 20240318.git3b128b60-0ubuntu3.1 [10.2 MB]
+获取:59 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linux-firmware-intel-wireless all 20240318.git3b128b60-0ubuntu3.1 [112 MB]
+获取:60 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linux-firmware-marvell-prestera all 20240318.git3b128b60-0ubuntu3.1 [74.8 MB]
+获取:61 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linux-firmware-marvell-wireless all 20240318.git3b128b60-0ubuntu3.1 [7,568 kB]
+获取:62 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linux-firmware-mediatek all 20240318.git3b128b60-0ubuntu3.1 [24.7 MB]
+获取:63 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linux-firmware-mellanox-spectrum all 20240318.git3b128b60-0ubuntu3.1 [80.8 MB]
+获取:64 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linux-firmware-misc all 20240318.git3b128b60-0ubuntu3.1 [33.1 MB]
+获取:65 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linux-firmware-netronome all 20240318.git3b128b60-0ubuntu3.1 [5,827 kB]
+获取:66 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linux-firmware-nvidia-graphics all 20240318.git3b128b60-0ubuntu3.1 [109 MB]
+获取:67 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linux-firmware-qlogic all 20240318.git3b128b60-0ubuntu3.1 [13.3 MB]
+获取:68 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linux-firmware-qualcomm-graphics all 20240318.git3b128b60-0ubuntu3.1 [6,728 kB]
+获取:69 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linux-firmware-qualcomm-misc all 20240318.git3b128b60-0ubuntu3.1 [60.2 MB]
+获取:70 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linux-firmware-qualcomm-wireless all 20240318.git3b128b60-0ubuntu3.1 [47.8 MB]
+获取:71 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linux-firmware-realtek all 20240318.git3b128b60-0ubuntu3.1 [6,185 kB]
+获取:72 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 initramfs-tools all 0.142ubuntu25.8 [9,076 B]
+获取:73 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 initramfs-tools-core all 0.142ubuntu25.8 [50.5 kB]
+获取:74 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 initramfs-tools-bin amd64 0.142ubuntu25.8 [21.6 kB]
 获取:75 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-base
 all 4.5ubuntu9+24.04.2 [19.6 kB]
 获取:76 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 netplan.io
 amd64 1.1.2-8ubuntu1~24.04.2 [69.8 kB]
-获取:77 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libnetplan1
- amd64 1.1.2-8ubuntu1~24.04.2 [133 kB]
-获取:78 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 syst
-emd-hwe-hwdb all 255.1.7 [3,716 B]
-获取:79 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 appa
-rmor amd64 4.0.1really4.0.1-0ubuntu0.24.04.7 [640 kB]
-获取:80 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 nfta
-bles amd64 1.0.9-1ubuntu0.1 [69.8 kB]
-获取:81 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libn
-ftables1 amd64 1.0.9-1ubuntu0.1 [359 kB]
-获取:82 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libn
-uma1 amd64 2.0.18-1ubuntu0.24.04.1 [23.4 kB]
-获取:83 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libp
-lymouth5 amd64 24.004.60-1ubuntu7.2 [137 kB]
-获取:84 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 lshw
- amd64 02.19.git.2021.06.19.996aaad9c7-2ubuntu0.24.04.1 [334 kB]
-获取:85 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 numa
-ctl amd64 2.0.18-1ubuntu0.24.04.1 [39.1 kB]
-获取:86 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 plym
-outh-theme-spinner amd64 24.004.60-1ubuntu7.2 [132 kB]
-获取:87 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 plym
-outh-label amd64 24.004.60-1ubuntu7.2 [9,366 B]
-获取:88 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 plym
-outh-theme-ubuntu-text amd64 24.004.60-1ubuntu7.2 [9,924 B]
-获取:89 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 plym
-outh amd64 24.004.60-1ubuntu7.2 [134 kB]
-获取:90 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 powe
-rmgmt-base all 1.37ubuntu0.1 [7,650 B]
-获取:91 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 tcpd
-ump amd64 4.99.4-3ubuntu4.24.04.1 [479 kB]
-获取:92 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 alsa
--ucm-conf all 1.2.10-1ubuntu5.14 [70.2 kB]
-获取:93 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 appo
-rt-gtk all 2.28.3-0ubuntu0.1 [9,746 B]
-获取:94 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 blue
-z-cups amd64 5.72-0ubuntu5.5 [29.6 kB]
-获取:95 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 blue
-z-obexd amd64 5.72-0ubuntu5.5 [233 kB]
-获取:96 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 dcon
-f-cli amd64 0.40.0-4ubuntu0.1 [28.0 kB]
-获取:97 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 dcon
-f-gsettings-backend amd64 0.40.0-4ubuntu0.1 [22.1 kB]
-获取:98 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 dcon
-f-service amd64 0.40.0-4ubuntu0.1 [27.6 kB]
-获取:99 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libd
-conf1 amd64 0.40.0-4ubuntu0.1 [39.6 kB]
-获取:100 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgtk-4-c
-ommon all 4.14.5+ds-0ubuntu0.10 [1,497 kB]
-获取:101 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgtk-4-1
- amd64 4.14.5+ds-0ubuntu0.10 [3,295 kB]
-获取:102 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libjcat1 a
-md64 0.2.3-1~ubuntu0.24.04.1 [34.3 kB]
+获取:77 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libnetplan1 amd64 1.1.2-8ubuntu1~24.04.2 [133 kB]
+获取:78 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 systemd-hwe-hwdb all 255.1.7 [3,716 B]
+获取:79 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 apparmor amd64 4.0.1really4.0.1-0ubuntu0.24.04.7 [640 kB]
+获取:80 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 nftables amd64 1.0.9-1ubuntu0.1 [69.8 kB]
+获取:81 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libnftables1 amd64 1.0.9-1ubuntu0.1 [359 kB]
+获取:82 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libnuma1 amd64 2.0.18-1ubuntu0.24.04.1 [23.4 kB]
+获取:83 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libplymouth5 amd64 24.004.60-1ubuntu7.2 [137 kB]
+获取:84 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 lshw amd64 02.19.git.2021.06.19.996aaad9c7-2ubuntu0.24.04.1 [334 kB]
+获取:85 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 numactl amd64 2.0.18-1ubuntu0.24.04.1 [39.1 kB]
+获取:86 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 plymouth-theme-spinner amd64 24.004.60-1ubuntu7.2 [132 kB]
+获取:87 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 plymouth-label amd64 24.004.60-1ubuntu7.2 [9,366 B]
+获取:88 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 plymouth-theme-ubuntu-text amd64 24.004.60-1ubuntu7.2 [9,924 B]
+获取:89 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 plymouth amd64 24.004.60-1ubuntu7.2 [134 kB]
+获取:90 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 powermgmt-base all 1.37ubuntu0.1 [7,650 B]
+获取:91 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 tcpdump amd64 4.99.4-3ubuntu4.24.04.1 [479 kB]
+获取:92 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 alsa-ucm-conf all 1.2.10-1ubuntu5.14 [70.2 kB]
+获取:93 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 apport-gtk all 2.28.3-0ubuntu0.1 [9,746 B]
+获取:94 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 bluez-cups amd64 5.72-0ubuntu5.5 [29.6 kB]
+获取:95 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 bluez-obexd amd64 5.72-0ubuntu5.5 [233 kB]
+获取:96 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 dconf-cli amd64 0.40.0-4ubuntu0.1 [28.0 kB]
+获取:97 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 dconf-gsettings-backend amd64 0.40.0-4ubuntu0.1 [22.1 kB]
+获取:98 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 dconf-service amd64 0.40.0-4ubuntu0.1 [27.6 kB]
+获取:99 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libdconf1 amd64 0.40.0-4ubuntu0.1 [39.6 kB]
+获取:100 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgtk-4-common all 4.14.5+ds-0ubuntu0.10 [1,497 kB]
+获取:101 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgtk-4-1 amd64 4.14.5+ds-0ubuntu0.10 [3,295 kB]
+获取:102 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libjcat1 amd64 0.2.3-1~ubuntu0.24.04.1 [34.3 kB]
 获取:103 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libfwupd3
 amd64 2.0.20-1ubuntu2~24.04.2 [140 kB]
-获取:104 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 lib
-mbim-proxy amd64 1.31.2-0ubuntu3.1 [6,172 B]
-获取:105 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 lib
-mbim-glib4 amd64 1.31.2-0ubuntu3.1 [233 kB]
-获取:106 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libxmlb2 a
-md64 0.3.24-1~ubuntu0.24.04.1 [67.6 kB]
-获取:107 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 fwupd amd6
-4 2.0.20-1ubuntu2~24.04.2 [6,136 kB]
-获取:108 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 gdm3 amd64
- 46.2-1ubuntu1~24.04.9 [336 kB]
-获取:109 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgdm1 am
-d64 46.2-1ubuntu1~24.04.9 [77.6 kB]
-获取:110 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 gir1.2-gdm
--1.0 amd64 46.2-1ubuntu1~24.04.9 [11.3 kB]
-获取:111 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gno
-me-settings-daemon amd64 46.0-1ubuntu1.24.04.1 [323 kB]
-获取:112 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gno
-me-settings-daemon-common all 46.0-1ubuntu1.24.04.1 [27.3 kB]
-获取:113 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 wpa
-supplicant amd64 2:2.10-21ubuntu0.4 [1,472 kB]
-获取:114 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 lib
-bluetooth3 amd64 5.72-0ubuntu5.5 [85.4 kB]
-获取:115 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 net
-work-manager amd64 1.46.0-1ubuntu2.8 [2,330 kB]
-获取:116 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 lib
-nm0 amd64 1.46.0-1ubuntu2.8 [481 kB]
-获取:117 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gir
-1.2-mutter-14 amd64 46.2-1ubuntu0.24.04.16 [131 kB]
-获取:118 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 mut
-ter-common all 46.2-1ubuntu0.24.04.16 [50.6 kB]
-获取:119 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 lib
-mutter-14-0 amd64 46.2-1ubuntu0.24.04.16 [1,395 kB]
-获取:120 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 mut
-ter-common-bin amd64 46.2-1ubuntu0.24.04.16 [53.5 kB]
-获取:121 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 lib
-input-bin amd64 1.25.0-1ubuntu3.6 [23.2 kB]
-获取:122 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 lib
-input10 amd64 1.25.0-1ubuntu3.6 [133 kB]
-获取:123 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gno
-me-remote-desktop amd64 46.3-0ubuntu1.2 [216 kB]
-获取:124 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gno
-me-control-center-data all 1:46.7-0ubuntu0.24.04.6 [164 kB]
-获取:125 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gno
-me-control-center amd64 1:46.7-0ubuntu0.24.04.6 [5,015 kB]
-获取:126 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 gnome-shel
-l amd64 46.0-0ubuntu6~24.04.14 [955 kB]
-获取:127 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 gnome-shel
+获取:104 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libmbim-proxy amd64 1.31.2-0ubuntu3.1 [6,172 B]
+获取:105 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libmbim-glib4 amd64 1.31.2-0ubuntu3.1 [233 kB]
+获取:106 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libxmlb2 amd64 0.3.24-1~ubuntu0.24.04.1 [67.6 kB]
+获取:107 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 fwupd amd64 2.0.20-1ubuntu2~24.04.2 [6,136 kB]
+获取:108 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 gdm3 amd64 46.2-1ubuntu1~24.04.9 [336 kB]
+获取:109 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgdm1 amd64 46.2-1ubuntu1~24.04.9 [77.6 kB]
+获取:110 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 gir1.2-gdm-1.0 amd64 46.2-1ubuntu1~24.04.9 [11.3 kB]
+获取:111 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gnome-settings-daemon amd64 46.0-1ubuntu1.24.04.1 [323 kB]
+获取:112 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gnome-settings-daemon-common all 46.0-1ubuntu1.24.04.1 [27.3 kB]
+获取:113 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 wpasupplicant amd64 2:2.10-21ubuntu0.4 [1,472 kB]
+获取:114 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libbluetooth3 amd64 5.72-0ubuntu5.5 [85.4 kB]
+获取:115 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 network-manager amd64 1.46.0-1ubuntu2.8 [2,330 kB]
+获取:116 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libnm0 amd64 1.46.0-1ubuntu2.8 [481 kB]
+获取:117 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gir1.2-mutter-14 amd64 46.2-1ubuntu0.24.04.16 [131 kB]
+获取:118 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 mutter-common all 46.2-1ubuntu0.24.04.16 [50.6 kB]
+获取:119 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libmutter-14-0 amd64 46.2-1ubuntu0.24.04.16 [1,395 kB]
+获取:120 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 mutter-common-bin amd64 46.2-1ubuntu0.24.04.16 [53.5 kB]
+获取:121 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libinput-bin amd64 1.25.0-1ubuntu3.6 [23.2 kB]
+获取:122 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libinput10 amd64 1.25.0-1ubuntu3.6 [133 kB]
+获取:123 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gnome-remote-desktop amd64 46.3-0ubuntu1.2 [216 kB]
+获取:124 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gnome-control-center-data all 1:46.7-0ubuntu0.24.04.6 [164 kB]
+获取:125 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gnome-control-center amd64 1:46.7-0ubuntu0.24.04.6 [5,015 kB]
+获取:126 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 gnome-shell amd64 46.0-0ubuntu6~24.04.14 [955 kB]
+获取:127 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 gnome-shell-common all 46.0-0ubuntu6~24.04.14 [249 kB]
+获取:128 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 wireplumber amd64 0.4.17-1ubuntu4.1 [80.0 kB]
+获取:129 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libwireplumber-0.4-0 amd64 0.4.17-1ubuntu4.1 [247 kB]
+获取:130 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgtk-4-media-gstreamer amd64 4.14.5+ds-0ubuntu0.10 [67.8 kB]
+获取:131 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 tecla amd64 46.0-1ubuntu0.1 [26.4 kB]
+获取:132 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libgtop2-common all 2.41.3-1ubuntu0.24.04.1 [3,662 B]
+获取:133 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libgtop-2.0-11 amd64 2.41.3-1ubuntu0.24.04.1 [40.1 kB]
+获取:134 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libmalcontent-0-0 amd64 0.11.1-1ubuntu1.3 [22.3 kB]
+获取:135 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 gir1.2-gtk-4.0 amd64 4.14.5+ds-0ubuntu0.10 [223 kB]
+获取:136 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gir1.2-nm-1.0 amd64 1.46.0-1ubuntu2.8 [86.8 kB]
+获取:137 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gnome-control-center-faces all 1:46.7-0ubuntu0.24.04.6 [1,232 kB]
+获取:138 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gnome-keyring amd64 46.1-2ubuntu0.2 [640 kB]
+获取:139 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gnome-keyring-pkcs11 amd64 46.1-2ubuntu0.2 [28.2 kB]
+获取:140 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 nautilus amd64 1:46.4-0ubuntu0.2 [510 kB]
+获取:141 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libnautilus-extension4 amd64 1:46.4-0ubuntu0.2 [23.0 kB]
+获取:142 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 nautilus-data all 1:46.4-0ubuntu0.2 [18.1 kB]
+获取:143 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 gnome-shell-extension-desktop-icons-ng all 46+really47.0.9-1ubuntu5 [67.6 kB]
+获取:144 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 gnupg-l10n all 2.4.4-2ubuntu17.6 [66.5 kB]
+获取:145 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libfprint-2-tod1 amd64 1:1.94.7+tod1-0ubuntu5~24.04.8 [64.7 kB]
+获取:146 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libfprint-2-2 amd64 1:1.94.7+tod1-0ubuntu5~24.04.8 [272 kB]
+获取:147 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libfwupd2
+amd64 1.9.34-0ubuntu1~24.04.1 [139 kB]
+获取:148 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgtk-4-bin amd64 4.14.5+ds-0ubuntu0.10 [3,354 kB]
+获取:149 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 sssd amd64 2.9.4-1.1ubuntu6.8 [4,120 B]
+获取:150 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 python3-sss amd64 2.9.4-1.1ubuntu6.8 [48.0 kB]
+获取:151 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libsss-certmap0 amd64 2.9.4-1.1ubuntu6.8 [48.1 kB]
+获取:152 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 sssd-proxy amd64 2.9.4-1.1ubuntu6.8 [44.6 kB]
+获取:153 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 sssd-krb5 amd64 2.9.4-1.1ubuntu6.8 [14.5 kB]
+获取:154 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 sssd-ad amd64 2.9.4-1.1ubuntu6.8 [136 kB]
+获取:155 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 sssd-ldap amd64 2.9.4-1.1ubuntu6.8 [31.3 kB]
+获取:156 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 sssd-ipa amd64 2.9.4-1.1ubuntu6.8 [221 kB]
+获取:157 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 sssd-krb5-common amd64 2.9.4-1.1ubuntu6.8 [88.8 kB]
+获取:158 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 sssd-ad-common amd64 2.9.4-1.1ubuntu6.8 [77.1 kB]
+获取:159 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 sssd-common amd64 2.9.4-1.1ubuntu6.8 [1,141 kB]
+获取:160 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libnss-sss amd64 2.9.4-1.1ubuntu6.8 [32.5 kB]
+获取:161 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libpam-sss amd64 2.9.4-1.1ubuntu6.8 [51.3 kB]
+获取:162 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libsss-nss-idmap0 amd64 2.9.4-1.1ubuntu6.8 [31.3 kB]
+获取:163 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libsss-idmap0 amd64 2.9.4-1.1ubuntu6.8 [22.7 kB]
+获取:164 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libipa-hbac0t64 amd64 2.9.4-1.1ubuntu6.8 [18.4 kB]
+获取:165 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libldap-common all 2.6.10+dfsg-0ubuntu0.24.04.1 [32.9 kB]
+获取:166 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libmbim-utils amd64 1.31.2-0ubuntu3.1 [71.6 kB]
+获取:167 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libmtp-common all 1.1.21-3.1ubuntu1 [19.7 kB]
+获取:168 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libmtp-runtime amd64 1.1.21-3.1ubuntu1 [6,046 B]
+获取:169 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libmtp9t64 amd64 1.1.21-3.1ubuntu1 [162 kB]
+获取:170 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libpam-gnome-keyring amd64 46.1-2ubuntu0.2 [17.5 kB]
+获取:171 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 libqpdf29t64 amd64 11.9.0-1.1ubuntu0.1 [798 kB]
+获取:172 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-modules-7.0.0-31-generic amd64 7.0.0-31.31~24.04.1 [168 MB]
+获取:173 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-image-7.0.0-31-generic amd64 7.0.0-31.31~24.04.1 [16.7 MB]
+获取:174 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-generic-hwe-24.04 amd64 7.0.0-31.31~24.04.1 [1,726 B]
+获取:175 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-image-generic-hwe-24.04 amd64 7.0.0-31.31~24.04.1 [2,458 B]
+获取:176 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-hwe-7.0-headers-7.0.0-31 all 7.0.0-31.31~24.04.1 [14.9 MB]
+获取:177 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-headers-7.0.0-31-generic amd64 7.0.0-31.31~24.04.1 [4,173 kB]
+获取:178 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-headers-generic-hwe-24.04 amd64 7.0.0-31.31~24.04.1 [2,300 B]
+获取:179 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linux-tools-common all 6.8.0-139.139 [368 kB]
+获取:180 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-hwe-7.0-tools-7.0.0-31 amd64 7.0.0-31.31~24.04.1 [9,269 kB]
+获取:181 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 linux-libc-dev amd64 6.8.0-139.139 [1,527 kB]
+获取:182 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 linux-tools-7.0.0-31-generic amd64 7.0.0-31.31~24.04.1 [1,634 B]
+获取:183 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 network-manager-config-connectivity-ubuntu all 1.46.0-1ubuntu2.8 [2,270 B]
+获取:184 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 network-manager-openvpn-gnome amd64 1.10.2-4ubuntu0.2 [57.7 kB]
+获取:185 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 network-manager-openvpn amd64 1.10.2-4ubuntu0.2 [58.8 kB]
+获取:186 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 power-profiles-daemon amd64 0.21-1ubuntu2 [50.2 kB]
+获取:187 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 software-properties-common all 0.99.49.4 [14.4 kB]
+获取:188 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 software-properties-gtk all 0.99.49.4 [83.2 kB]
+获取:189 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 python3-software-properties all 0.99.49.4 [30.0 kB]
+获取:190 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 qemu-system-modules-spice amd64 1:8.2.2+ds-0ubuntu1.18 [70.2 kB]
+获取:191 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 qemu-system-modules-opengl amd64 1:8.2.2+ds-0ubuntu1.18 [186 kB]
+获取:192 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 qemu-system-gui amd64 1:8.2.2+ds-0ubuntu1.18 [312 kB]
+获取:193 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 qemu-block-extra amd64 1:8.2.2+ds-0ubuntu1.18 [114 kB]
+获取:194 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 qemu-utils amd64 1:8.2.2+ds-0ubuntu1.18 [2,221 kB]
+获取:195 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 qemu-system-misc amd64 1:8.2.2+ds-0ubuntu1.18 [57.7 MB]
+获取:196 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 qemu-system-common amd64 1:8.2.2+ds-0ubuntu1.18 [1,255 kB]
+获取:197 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 qemu-system-data all 1:8.2.2+ds-0ubuntu1.18 [1,796 kB]
+获取:198 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 snapd amd64 2.76.3+ubuntu24.04 [36.6 MB]
+获取:199 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 xserver-common all 2:21.1.12-1ubuntu1.6 [34.7 kB]
+获取:200 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 xserver-xephyr amd64 2:21.1.12-1ubuntu1.6 [1,019 kB]
+获取:201 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 xserver-xorg-legacy amd64 2:21.1.12-1ubuntu1.6 [41.6 kB]
+获取:202 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 xserver-xorg-core amd64 2:21.1.12-1ubuntu1.6 [1,476 kB]
+获取:203 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 xserver-xorg-video-amdgpu amd64 23.0.0-1ubuntu0.24.04.1 [69.8 kB]
+获取:204 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 xserver-xorg-video-nouveau amd64 1:1.0.17-2ubuntu0.1 [91.5 kB]
+获取:205 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 xserver-xorg-video-vesa amd64 1:2.6.0-1ubuntu0.1 [15.5 kB]
+获取:206 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 xwayland amd64 2:23.2.6-1ubuntu0.8 [947 kB]
+获取:207 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 cloud-init all 26.1-0ubuntu1~24.04.1 [629 kB]
+已下载 1,318 MB，耗时 1小时 6分 48秒 (329 kB/s)
+正在从软件包中解出模板：100%
+正在预设定软件包 ...
+(正在读取数据库 ... 系统当前共安装有 231344 个文件和目录。)figuration file
+准备解压 .../00-console-setup-linux_1.226ubuntu1.1_all.deb  ...
+正在解压 console-setup-linux (1.226ubuntu1.1) 并覆盖 (1.226ubuntu1) ...
+准备解压 .../01-console-setup_1.226ubuntu1.1_all.deb  ...
+正在解压 console-setup (1.226ubuntu1.1) 并覆盖 (1.226ubuntu1) ...
+准备解压 .../02-keyboard-configuration_1.226ubuntu1.1_all.deb  ...
+正在解压 keyboard-configuration (1.226ubuntu1.1) 并覆盖 (1.226ubuntu1) ...
+准备解压 .../03-libpython3.12t64_3.12.3-1ubuntu0.16_amd64.deb  ...
+正在解压 libpython3.12t64:amd64 (3.12.3-1ubuntu0.16) 并覆盖 (3.12.3-1ubuntu0.15) ...
+准备解压 .../04-python3.12_3.12.3-1ubuntu0.16_amd64.deb  ...
+正在解压 python3.12 (3.12.3-1ubuntu0.16) 并覆盖 (3.12.3-1ubuntu0.15) ...
+准备解压 .../05-libpython3.12-stdlib_3.12.3-1ubuntu0.16_amd64.deb  ...
+正在解压 libpython3.12-stdlib:amd64 (3.12.3-1ubuntu0.16) 并覆盖 (3.12.3-1ubuntu0.15) ...
+准备解压 .../06-python3.12-minimal_3.12.3-1ubuntu0.16_amd64.deb  ...
+正在解压 python3.12-minimal (3.12.3-1ubuntu0.16) 并覆盖 (3.12.3-1ubuntu0.15) ...准备解压 .../07-libpython3.12-minimal_3.12.3-1ubuntu0.16_amd64.deb  ...
+正在解压 libpython3.12-minimal:amd64 (3.12.3-1ubuntu0.16) 并覆盖 (3.12.3-1ubuntu0.15) ...
+准备解压 .../08-gpg-wks-client_2.4.4-2ubuntu17.6_amd64.deb  ...
+正在解压 gpg-wks-client (2.4.4-2ubuntu17.6) 并覆盖 (2.4.4-2ubuntu17.4) ...
+准备解压 .../09-dirmngr_2.4.4-2ubuntu17.6_amd64.deb  ...
+正在解压 dirmngr (2.4.4-2ubuntu17.6) 并覆盖 (2.4.4-2ubuntu17.4) ...
+准备解压 .../10-gpgsm_2.4.4-2ubuntu17.6_amd64.deb  ...
+正在解压 gpgsm (2.4.4-2ubuntu17.6) 并覆盖 (2.4.4-2ubuntu17.4) ...
+准备解压 .../11-gnupg-utils_2.4.4-2ubuntu17.6_amd64.deb  ...
+正在解压 gnupg-utils (2.4.4-2ubuntu17.6) 并覆盖 (2.4.4-2ubuntu17.4) ...
+准备解压 .../12-gpg-agent_2.4.4-2ubuntu17.6_amd64.deb  ...
+正在解压 gpg-agent (2.4.4-2ubuntu17.6) 并覆盖 (2.4.4-2ubuntu17.4) ...
+准备解压 .../13-gpg_2.4.4-2ubuntu17.6_amd64.deb  ...
+正在解压 gpg (2.4.4-2ubuntu17.6) 并覆盖 (2.4.4-2ubuntu17.4) ...
+准备解压 .../14-gpgconf_2.4.4-2ubuntu17.6_amd64.deb  ...
+正在解压 gpgconf (2.4.4-2ubuntu17.6) 并覆盖 (2.4.4-2ubuntu17.4) ...
+准备解压 .../15-gnupg_2.4.4-2ubuntu17.6_all.deb  ...
+正在解压 gnupg (2.4.4-2ubuntu17.6) 并覆盖 (2.4.4-2ubuntu17.4) ...
+准备解压 .../16-keyboxd_2.4.4-2ubuntu17.6_amd64.deb  ...
+正在解压 keyboxd (2.4.4-2ubuntu17.6) 并覆盖 (2.4.4-2ubuntu17.4) ...
+准备解压 .../17-ldap-utils_2.6.10+dfsg-0ubuntu0.24.04.1_amd64.deb  ...
+正在解压 ldap-utils (2.6.10+dfsg-0ubuntu0.24.04.1) 并覆盖 (2.6.7+dfsg-1~exp1ubuntu8.2) ...
+准备解压 .../18-libldap2_2.6.10+dfsg-0ubuntu0.24.04.1_amd64.deb  ...
 ```
-（其余 1020 行已省略，详见完整转写。）
+（其余 721 行已省略，详见完整转写。）
 
 ### 问答 1 · 录像 20260909T110139-7535
 

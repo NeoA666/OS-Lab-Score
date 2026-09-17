@@ -17,10 +17,10 @@
 
 ## 已对齐事件
 
-<a id="event-596699ac3a8a-20260903T175756-13613-shell-1"></a>
+<a id="event-6d228c7baf7a-20260903T175756-13613-shell-1"></a>
 ### 1. Shell 命令
 
-- 事件编号：596699ac3a8a:20260903T175756-13613:shell:1
+- 事件编号：6d228c7baf7a:20260903T175756-13613:shell:1
 - 显示时间：2026-09-03T17:58:07.865+08:00（北京时间）
 - 录像相对时间：\+11.865364 秒
 - 录像：20260903T175756-13613
@@ -248,17 +248,16 @@ riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_ha
 alloc.o
 riscv64-unknown-elf-ld: warning: xv6-user/_halt has a LOAD segment with RWX permissions
 riscv64-unknown-elf-ld: xv6-user/halt.o: in function `main':
-/home/ailab-os/桌面/xv6-ai-labs-km/lab1/xv6-user/halt.c:10:(.text+0x8): undefine
-d reference to `halt'
+/home/ailab-os/桌面/xv6-ai-labs-km/lab1/xv6-user/halt.c:10:(.text+0x8): undefined reference to `halt'
 make: *** [Makefile:173：xv6-user/_halt] 错误 1
 ```
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-596699ac3a8a-20260903T175756-13613-shell-2"></a>
+<a id="event-6d228c7baf7a-20260903T175756-13613-shell-2"></a>
 ### 2. Shell 命令
 
-- 事件编号：596699ac3a8a:20260903T175756-13613:shell:2
+- 事件编号：6d228c7baf7a:20260903T175756-13613:shell:2
 - 显示时间：2026-09-03T17:58:14.140+08:00（北京时间）
 - 录像相对时间：\+18.140167 秒
 - 录像：20260903T175756-13613
@@ -281,17 +280,16 @@ riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_ha
 alloc.o
 riscv64-unknown-elf-ld: warning: xv6-user/_halt has a LOAD segment with RWX permissions
 riscv64-unknown-elf-ld: xv6-user/halt.o: in function `main':
-/home/ailab-os/桌面/xv6-ai-labs-km/lab1/xv6-user/halt.c:10:(.text+0x8): undefine
-d reference to `halt'
+/home/ailab-os/桌面/xv6-ai-labs-km/lab1/xv6-user/halt.c:10:(.text+0x8): undefined reference to `halt'
 make: *** [Makefile:173：xv6-user/_halt] 错误 1
 ```
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-596699ac3a8a-20260903T175756-13613-shell-3"></a>
+<a id="event-6d228c7baf7a-20260903T175756-13613-shell-3"></a>
 ### 3. Shell 命令
 
-- 事件编号：596699ac3a8a:20260903T175756-13613:shell:3
+- 事件编号：6d228c7baf7a:20260903T175756-13613:shell:3
 - 显示时间：2026-09-03T17:58:25.849+08:00（北京时间）
 - 录像相对时间：\+29.849890 秒
 - 录像：20260903T175756-13613
@@ -314,17 +312,16 @@ riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_ha
 alloc.o
 riscv64-unknown-elf-ld: warning: xv6-user/_halt has a LOAD segment with RWX permissions
 riscv64-unknown-elf-ld: xv6-user/halt.o: in function `main':
-/home/ailab-os/桌面/xv6-ai-labs-km/lab1/xv6-user/halt.c:10:(.text+0x8): undefine
-d reference to `halt'
+/home/ailab-os/桌面/xv6-ai-labs-km/lab1/xv6-user/halt.c:10:(.text+0x8): undefined reference to `halt'
 make: *** [Makefile:173：xv6-user/_halt] 错误 1
 ```
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-596699ac3a8a-20260903T175756-13613-shell-4"></a>
+<a id="event-6d228c7baf7a-20260903T175756-13613-shell-4"></a>
 ### 4. Shell 命令
 
-- 事件编号：596699ac3a8a:20260903T175756-13613:shell:4
+- 事件编号：6d228c7baf7a:20260903T175756-13613:shell:4
 - 显示时间：2026-09-03T17:58:34.863+08:00（北京时间）
 - 录像相对时间：\+38.863501 秒
 - 录像：20260903T175756-13613
@@ -347,17 +344,16 @@ riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_ha
 alloc.o
 riscv64-unknown-elf-ld: warning: xv6-user/_halt has a LOAD segment with RWX permissions
 riscv64-unknown-elf-ld: xv6-user/halt.o: in function `main':
-/home/ailab-os/桌面/xv6-ai-labs-km/lab1/xv6-user/halt.c:10:(.text+0x8): undefine
-d reference to `halt'
+/home/ailab-os/桌面/xv6-ai-labs-km/lab1/xv6-user/halt.c:10:(.text+0x8): undefined reference to `halt'
 make: *** [Makefile:173：xv6-user/_halt] 错误 1
 ```
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-596699ac3a8a-20260903T175756-13613-shell-5"></a>
+<a id="event-6d228c7baf7a-20260903T175756-13613-shell-5"></a>
 ### 5. Shell 命令
 
-- 事件编号：596699ac3a8a:20260903T175756-13613:shell:5
+- 事件编号：6d228c7baf7a:20260903T175756-13613:shell:5
 - 显示时间：2026-09-03T17:58:43.722+08:00（北京时间）
 - 录像相对时间：\+47.722276 秒
 - 录像：20260903T175756-13613

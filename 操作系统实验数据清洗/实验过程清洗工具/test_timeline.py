@@ -7,7 +7,9 @@ import hashlib
 import io
 import contextlib
 import json
+import os
 from pathlib import Path
+import subprocess
 import tempfile
 import unittest
 
@@ -225,15 +227,25 @@ class TimelineCliTests(unittest.TestCase):
         self.assertEqual(self.run_app(), 0)
         student_out = self.output / "测试"
         before = self.hashes(student_out)
+        before_block = app.existing_timeline_readme_block(self.output / "README.md")
+        self.assertIsNotNone(before_block)
         self.assertEqual(self.run_app("--no-timeline"), 0)
         after_no = self.hashes(student_out)
         self.assertEqual(before, after_no)
+        self.assertEqual(before_block, app.existing_timeline_readme_block(self.output / "README.md"))
         self.assertEqual(self.run_app(), 0)
         self.assertEqual(after_no, self.hashes(student_out))
         manifests = list(student_out.rglob(".timeline_manifest.json"))
         self.assertEqual(len(manifests), 1)
         manifest = json.loads(manifests[0].read_text(encoding="utf-8"))
         self.assertEqual(manifest["source"], str(self.student.resolve()))
+
+    def test_timeline_only_help_states_that_the_readme_block_is_updated(self):
+        stream = io.StringIO()
+        with contextlib.redirect_stdout(stream), self.assertRaises(SystemExit) as exited:
+            app.main(["--help"])
+        self.assertEqual(exited.exception.code, 0)
+        self.assertIn("更新根 README 的时间线说明块", stream.getvalue())
 
     def test_different_source_gets_distinct_timeline_owner(self):
         self.assertEqual(self.run_app("--timeline-only"), 0)
@@ -267,6 +279,29 @@ class TimelineCliTests(unittest.TestCase):
         with contextlib.redirect_stdout(io.StringIO()):
             code = app.main([str(self.input), "-o", str(self.output), "--timeline-only", "--student", "888"])
         self.assertNotEqual(code, 0)
+
+    @unittest.skipUnless(os.name == "nt", "Windows junction fixture")
+    def test_junction_output_is_not_used_for_student_reports(self):
+        external = self.root / "external"
+        external.mkdir()
+        self.output.mkdir()
+        junction = self.output / "测试"
+        created = subprocess.run(
+            ["cmd", "/d", "/c", "mklink", "/J", str(junction), str(external)],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            check=False,
+        )
+        if created.returncode:
+            self.skipTest("当前 Windows 环境不允许创建 junction")
+        try:
+            self.assertEqual(self.run_app("--no-timeline", "--overwrite"), 0)
+            self.assertEqual(list(external.iterdir()), [])
+            safe_output = self.output / "测试-123-20260910-2221"
+            self.assertTrue((safe_output / app.OWNER_FILE).is_file())
+        finally:
+            subprocess.run(["cmd", "/d", "/c", "rmdir", str(junction)],
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=False)
 
 
 if __name__ == "__main__":

@@ -3,11 +3,11 @@
 - 学号：2406080205
 - 姓名：周卓江
 - 实验分类：其他（非 lab0–lab8 或目录未知）
-- 事件总数：30
+- 事件总数：29
 - 有绝对显示时间：19
-- 仅有录像相对时间：11
+- 仅有录像相对时间：10
 - 时间缺失：0
-- 带不确定性说明：11
+- 带不确定性说明：10
 
 时间表示终端画面中相应文本的可观察显示时间，不等同于按键提交、命令开始执行、模型开始生成或回复完成时间。
 同一 lab 内跨终端按带时区的绝对时间合并并稳定排列；相同或接近的显示时间不证明严格先后或因果关系。
@@ -17,10 +17,10 @@
 
 ## 已对齐事件
 
-<a id="event-38148365e903-20260910T154050-3982-shell-1"></a>
+<a id="event-8bae461d8d9d-20260910T154050-3982-shell-1"></a>
 ### 1. Shell 命令
 
-- 事件编号：38148365e903:20260910T154050-3982:shell:1
+- 事件编号：8bae461d8d9d:20260910T154050-3982:shell:1
 - 显示时间：2026-09-10T15:43:27.127+08:00（北京时间）
 - 录像相对时间：\+157.127886 秒
 - 录像：20260910T154050-3982
@@ -52,10 +52,10 @@ sudo apt update
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-38148365e903-20260910T154050-3982-shell-2"></a>
+<a id="event-8bae461d8d9d-20260910T154050-3982-shell-2"></a>
 ### 2. Shell 命令
 
-- 事件编号：38148365e903:20260910T154050-3982:shell:2
+- 事件编号：8bae461d8d9d:20260910T154050-3982:shell:2
 - 显示时间：2026-09-10T15:43:51.668+08:00（北京时间）
 - 录像相对时间：\+181.668705 秒
 - 录像：20260910T154050-3982
@@ -159,18 +159,14 @@ Learn more about Ubuntu Pro at https://ubuntu.com/pro
 解压缩后会消耗 487 MB 的额外空间。
 您希望继续执行吗？ [Y/n] Y
 
-获取:1 https://packages.microsoft.com/repos/code stable/main amd64 code amd64 1.
-137.0-1788902055 [237 MB]
+获取:1 https://packages.microsoft.com/repos/code stable/main amd64 code amd64 1.137.0-1788902055 [237 MB]
 
-获取:2 http://security.ubuntu.com/ubuntu noble-security/main amd64 openssh-sftp-
-server amd64 1:9.6p1-3ubuntu13.19 [37.1 kB]
+获取:2 http://security.ubuntu.com/ubuntu noble-security/main amd64 openssh-sftp-server amd64 1:9.6p1-3ubuntu13.19 [37.1 kB]
 0% [2 openssh-sftp-server 13.5 kB/37.1 kB 36%] [1 code 64.5 kB/237 MB 0%] [正在等
 
-获取:3 https://deb.nodesource.com/node_24.x nodistro/main amd64 nodejs amd64 24.
-21.0-1nodesource1 [39.3 MB]
+获取:3 https://deb.nodesource.com/node_24.x nodistro/main amd64 nodejs amd64 24.21.0-1nodesource1 [39.3 MB]
 
-获取:4 http://security.ubuntu.com/ubuntu noble-security/main amd64 openssh-serve
-r amd64 1:9.6p1-3ubuntu13.19 [511 kB]
+获取:4 http://security.ubuntu.com/ubuntu noble-security/main amd64 openssh-server amd64 1:9.6p1-3ubuntu13.19 [511 kB]
 2% [4 openssh-server 2,468 B/511 kB 0%] [1 code 10.3 MB/237 MB 4%] [3 nodejs 63.4% [4 openssh-server 78.5 kB/511 kB 15%] [1 code 21.3 MB/237 MB 9%] [3 nodejs 23
 6% [4 openssh-server 249 kB/511 kB 49%] [1 code 32.9 MB/237 MB 14%] [3 nodejs 53获取:5 http://security.ubuntu.com/ubuntu noble-security/main amd64 openssh-clien
 t amd64 1:9.6p1-3ubuntu13.19 [908 kB]
@@ -180,8 +176,7 @@ t amd64 1:9.6p1-3ubuntu13.19 [908 kB]
 12% [6 spice-vdagent 49.8 kB/57.4 kB 87%] [1 code 59.9 MB/237 MB 25%] [3 nodejs
 
 
-获取:7 http://security.ubuntu.com/ubuntu noble-security/main amd64 gpg-wks-clien
-t amd64 2.4.4-2ubuntu17.6 [70.9 kB]
+获取:7 http://security.ubuntu.com/ubuntu noble-security/main amd64 gpg-wks-client amd64 2.4.4-2ubuntu17.6 [70.9 kB]
 13% [7 gpg-wks-client 23.6 kB/70.9 kB 33%] [1 code 59.9 MB/237 MB 25%] [3 nodejs获取:8 http://security.ubuntu.com/ubuntu noble-security/main amd64 dirmngr amd64
  2.4.4-2ubuntu17.6 [323 kB]
 13% [8 dirmngr 117 kB/323 kB 36%] [1 code 59.9 MB/237 MB 25%] [3 nodejs 5,127 kB获取:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 gpgsm amd64 2
@@ -196,13 +191,11 @@ d64 2.4.4-2ubuntu17.6 [227 kB]
 4 2.4.4-2ubuntu17.6 [104 kB]
 17% [13 gpgconf 16.8 kB/104 kB 16%] [1 code 67.5 MB/237 MB 28%] [3 nodejs 9,469
 
-获取:14 http://security.ubuntu.com/ubuntu noble-security/main amd64 gnupg all 2.
-4.4-2ubuntu17.6 [359 kB]
+获取:14 http://security.ubuntu.com/ubuntu noble-security/main amd64 gnupg all 2.4.4-2ubuntu17.6 [359 kB]
 18% [14 gnupg 16.6 kB/359 kB 5%] [1 code 67.8 MB/237 MB 29%] [3 nodejs 9,469 kB/20% [14 gnupg 156 kB/359 kB 43%] [1 code 72.4 MB/237 MB 31%] [3 nodejs 16.3 MB/3
 
 
-获取:15 http://security.ubuntu.com/ubuntu noble-security/main amd64 keyboxd amd6
-4 2.4.4-2ubuntu17.6 [78.3 kB]
+获取:15 http://security.ubuntu.com/ubuntu noble-security/main amd64 keyboxd amd64 2.4.4-2ubuntu17.6 [78.3 kB]
 21% [15 keyboxd 2,038 B/78.3 kB 3%] [1 code 74.3 MB/237 MB 31%] [3 nodejs 17.6 M获取:16 http://security.ubuntu.com/ubuntu noble-security/main amd64 gpgv amd64 2
 .4.4-2ubuntu17.6 [158 kB]
 21% [16 gpgv 19.0 kB/158 kB 12%] [1 code 74.3 MB/237 MB 31%] [3 nodejs 17.6 MB/3获取:17 http://security.ubuntu.com/ubuntu noble-security/main amd64 gnupg-l10n a
@@ -231,24 +224,19 @@ on amd64 2.9.4-1.1ubuntu6.8 [77.1 kB]
 amd64 2.9.4-1.1ubuntu6.8 [1,141 kB]
 32% [28 sssd-common 2,386 B/1,141 kB 0%] [1 code 86.0 MB/237 MB 36%] [3 nodejs 333% [1 code 86.8 MB/237 MB 37%] [3 nodejs 38.4 MB/39.3 MB 98%]             19.8
 
-获取:29 http://security.ubuntu.com/ubuntu noble-security/main amd64 libnss-sss a
-md64 2.9.4-1.1ubuntu6.8 [32.5 kB]
+获取:29 http://security.ubuntu.com/ubuntu noble-security/main amd64 libnss-sss amd64 2.9.4-1.1ubuntu6.8 [32.5 kB]
 33% [29 libnss-sss 32.5 kB/32.5 kB 100%] [1 code 86.8 MB/237 MB 37%] [3 nodejs 3获取:30 http://security.ubuntu.com/ubuntu noble-security/main amd64 libpam-sss a
 md64 2.9.4-1.1ubuntu6.8 [51.3 kB]
 33% [30 libpam-sss 24.6 kB/51.3 kB 48%] [1 code 86.9 MB/237 MB 37%] [3 nodejs 3834% [1 code 86.9 MB/237 MB 37%] [3 nodejs 38.4 MB/39.3 MB 98%]             19.8
 
-获取:31 http://security.ubuntu.com/ubuntu noble-security/main amd64 libsss-nss-i
-dmap0 amd64 2.9.4-1.1ubuntu6.8 [31.3 kB]
+获取:31 http://security.ubuntu.com/ubuntu noble-security/main amd64 libsss-nss-idmap0 amd64 2.9.4-1.1ubuntu6.8 [31.3 kB]
 34% [31 libsss-nss-idmap0 14.1 kB/31.3 kB 45%] [1 code 86.9 MB/237 MB 37%] [3 no34% [1 code 86.9 MB/237 MB 37%] [3 nodejs 38.4 MB/39.3 MB 98%]             19.8
 
-获取:32 http://security.ubuntu.com/ubuntu noble-security/main amd64 libsss-idmap
-0 amd64 2.9.4-1.1ubuntu6.8 [22.7 kB]
+获取:32 http://security.ubuntu.com/ubuntu noble-security/main amd64 libsss-idmap0 amd64 2.9.4-1.1ubuntu6.8 [22.7 kB]
 34% [32 libsss-idmap0 22.7 kB/22.7 kB 100%] [1 code 86.9 MB/237 MB 37%] [3 nodej获取:33 http://security.ubuntu.com/ubuntu noble-security/main amd64 libipa-hbac0
 t64 amd64 2.9.4-1.1ubuntu6.8 [18.4 kB]
 35% [33 libipa-hbac0t64 18.4 kB/18.4 kB 100%] [1 code 87.0 MB/237 MB 37%] [3 nod35% [1 code 87.0 MB/237 MB 37%] [3 nodejs 38.4 MB/39.3 MB 98%]             19.8
-36% [正在等待报头] [1 code 88.3 MB/237 MB 37%]                       19.8 MB/s 1
-
-获取:34 http://security.ubuntu.com/ubuntu noble-security/main amd64 linux-module
+36% [正在等待报头] [1 code 88.3 MB/237 MB 37%]                       19.8 MB/s 1获取:34 http://security.ubuntu.com/ubuntu noble-security/main amd64 linux-module
 s-7.0.0-31-generic amd64 7.0.0-31.31~24.04.1 [168 MB]
 
 36% [34 linux-modules-7.0.0-31-generic 7,983 B/168 MB 0%] [1 code 90.9 MB/237 MB38% [34 linux-modules-7.0.0-31-generic 447 kB/168 MB 0%] [1 code 99.9 MB/237 MB
@@ -271,58 +259,46 @@ s-7.0.0-31-generic amd64 7.0.0-31.31~24.04.1 [168 MB]
 81% [34 linux-modules-7.0.0-31-generic 160 MB/168 MB 95%] [1 code 206 MB/237 MB
 83% [正在等待报头] [1 code 211 MB/237 MB 89%]                         22.7 MB/s
 
-获取:35 http://security.ubuntu.com/ubuntu noble-security/main amd64 linux-image-
-7.0.0-31-generic amd64 7.0.0-31.31~24.04.1 [16.7 MB]
+获取:35 http://security.ubuntu.com/ubuntu noble-security/main amd64 linux-image-7.0.0-31-generic amd64 7.0.0-31.31~24.04.1 [16.7 MB]
 
 85% [35 linux-image-7.0.0-31-generic 8,348 kB/16.7 MB 50%] [1 code 215 MB/237 MB86% [35 linux-image-7.0.0-31-generic 9,091 kB/16.7 MB 54%] [1 code 221 MB/237 MB
 88% [正在等待报头] [1 code 223 MB/237 MB 94%]                         22.7 MB/s
 
-获取:36 http://security.ubuntu.com/ubuntu noble-security/main amd64 linux-generi
-c-hwe-24.04 amd64 7.0.0-31.31~24.04.1 [1,726 B]
+获取:36 http://security.ubuntu.com/ubuntu noble-security/main amd64 linux-generic-hwe-24.04 amd64 7.0.0-31.31~24.04.1 [1,726 B]
 88% [36 linux-generic-hwe-24.04 0 B/1,726 B 0%] [1 code 223 MB/237 MB 94%]  22.789% [1 code 223 MB/237 MB 94%]                                              22.7
 
-获取:37 http://security.ubuntu.com/ubuntu noble-security/main amd64 linux-image-
-generic-hwe-24.04 amd64 7.0.0-31.31~24.04.1 [2,458 B]
+获取:37 http://security.ubuntu.com/ubuntu noble-security/main amd64 linux-image-generic-hwe-24.04 amd64 7.0.0-31.31~24.04.1 [2,458 B]
 
 89% [37 linux-image-generic-hwe-24.04 2,458 B/2,458 B 100%] [1 code 223 MB/237 M89% [正在等待报头] [1 code 223 MB/237 MB 94%]                         22.7 MB/s
 
-获取:38 http://security.ubuntu.com/ubuntu noble-security/main amd64 linux-hwe-7.
-0-headers-7.0.0-31 all 7.0.0-31.31~24.04.1 [14.9 MB]
+获取:38 http://security.ubuntu.com/ubuntu noble-security/main amd64 linux-hwe-7.0-headers-7.0.0-31 all 7.0.0-31.31~24.04.1 [14.9 MB]
 
 89% [38 linux-hwe-7.0-headers-7.0.0-31 0 B/14.9 MB 0%] [1 code 223 MB/237 MB 94%91% [38 linux-hwe-7.0-headers-7.0.0-31 3,420 kB/14.9 MB 23%] [1 code 228 MB/237
 92% [38 linux-hwe-7.0-headers-7.0.0-31 5,179 kB/14.9 MB 35%] [1 code 235 MB/237
 93% [38 linux-hwe-7.0-headers-7.0.0-31 6,382 kB/14.9 MB 43%] [1 code 237 MB/237
 93% [38 linux-hwe-7.0-headers-7.0.0-31 7,725 kB/14.9 MB 52%]                22.795% [正在等待报头]                                                    22.7 MB/s
 
-获取:39 http://security.ubuntu.com/ubuntu noble-security/main amd64 linux-header
-s-7.0.0-31-generic amd64 7.0.0-31.31~24.04.1 [4,173 kB]
+获取:39 http://security.ubuntu.com/ubuntu noble-security/main amd64 linux-headers-7.0.0-31-generic amd64 7.0.0-31.31~24.04.1 [4,173 kB]
 95% [39 linux-headers-7.0.0-31-generic 11.3 kB/4,173 kB 0%]                 22.796% [正在等待报头]                                                    22.7 MB/s
 
-获取:40 http://security.ubuntu.com/ubuntu noble-security/main amd64 linux-header
-s-generic-hwe-24.04 amd64 7.0.0-31.31~24.04.1 [2,300 B]
+获取:40 http://security.ubuntu.com/ubuntu noble-security/main amd64 linux-headers-generic-hwe-24.04 amd64 7.0.0-31.31~24.04.1 [2,300 B]
 96% [40 linux-headers-generic-hwe-24.04 0 B/2,300 B 0%]                     22.796% [正在等待报头]                                                    22.7 MB/s
 
-获取:41 http://security.ubuntu.com/ubuntu noble-security/main amd64 linux-tools-
-common all 6.8.0-139.139 [368 kB]
+获取:41 http://security.ubuntu.com/ubuntu noble-security/main amd64 linux-tools-common all 6.8.0-139.139 [368 kB]
 96% [41 linux-tools-common 0 B/368 kB 0%]                                   22.797% [正在等待报头]                                                    22.7 MB/s
 
-获取:42 http://security.ubuntu.com/ubuntu noble-security/main amd64 linux-hwe-7.
-0-tools-7.0.0-31 amd64 7.0.0-31.31~24.04.1 [9,269 kB]
+获取:42 http://security.ubuntu.com/ubuntu noble-security/main amd64 linux-hwe-7.0-tools-7.0.0-31 amd64 7.0.0-31.31~24.04.1 [9,269 kB]
 97% [42 linux-hwe-7.0-tools-7.0.0-31 0 B/9,269 kB 0%]                       22.798% [42 linux-hwe-7.0-tools-7.0.0-31 6,577 kB/9,269 kB 71%]                 22.7
 
-获取:43 http://security.ubuntu.com/ubuntu noble-security/main amd64 linux-libc-d
-ev amd64 6.8.0-139.139 [1,527 kB]
+获取:43 http://security.ubuntu.com/ubuntu noble-security/main amd64 linux-libc-dev amd64 6.8.0-139.139 [1,527 kB]
 99% [43 linux-libc-dev 49.2 kB/1,527 kB 3%]                                 22.7获取:44 http://security.ubuntu.com/ubuntu noble-security/main amd64 linux-tools-
 7.0.0-31-generic amd64 7.0.0-31.31~24.04.1 [1,634 B]
 100% [44 linux-tools-7.0.0-31-generic 1,634 B/1,634 B 100%]                 19.2(正在读取数据库 ... 系统当前共安装有 231344 个文件和目录。)              19.2 MB
 准备解压 .../00-openssh-sftp-server_1%3a9.6p1-3ubuntu13.19_amd64.deb  ...
-正在解压 openssh-sftp-server (1:9.6p1-3ubuntu13.19) 并覆盖 (1:9.6p1-3ubuntu13.18
-) ...
+正在解压 openssh-sftp-server (1:9.6p1-3ubuntu13.19) 并覆盖 (1:9.6p1-3ubuntu13.18) ...
 准备解压 .../01-openssh-server_1%3a9.6p1-3ubuntu13.19_amd64.deb  ...
-正在解压 openssh-server (1:9.6p1-3ubuntu13.19) 并覆盖 (1:9.6p1-3ubuntu13.18) ...
-准备解压 .../02-openssh-client_1%3a9.6p1-3ubuntu13.19_amd64.deb  ...
-正在解压 openssh-client (1:9.6p1-3ubuntu13.19) 并覆盖 (1:9.6p1-3ubuntu13.18) ...
-准备解压 .../03-spice-vdagent_0.22.1-4ubuntu0.1_amd64.deb  ...
+正在解压 openssh-server (1:9.6p1-3ubuntu13.19) 并覆盖 (1:9.6p1-3ubuntu13.18) ...准备解压 .../02-openssh-client_1%3a9.6p1-3ubuntu13.19_amd64.deb  ...
+正在解压 openssh-client (1:9.6p1-3ubuntu13.19) 并覆盖 (1:9.6p1-3ubuntu13.18) ...准备解压 .../03-spice-vdagent_0.22.1-4ubuntu0.1_amd64.deb  ...
 正在解压 spice-vdagent (0.22.1-4ubuntu0.1) 并覆盖 (0.22.1-4build3) ...
 准备解压 .../04-gpg-wks-client_2.4.4-2ubuntu17.6_amd64.deb  ...
 正在解压 gpg-wks-client (2.4.4-2ubuntu17.6) 并覆盖 (2.4.4-2ubuntu17.4) ...
@@ -383,31 +359,26 @@ ev amd64 6.8.0-139.139 [1,527 kB]
 准备解压 .../17-libipa-hbac0t64_2.9.4-1.1ubuntu6.8_amd64.deb  ...
 正在解压 libipa-hbac0t64 (2.9.4-1.1ubuntu6.8) 并覆盖 (2.9.4-1.1ubuntu6.7) ...
 正在选中未选择的软件包 linux-modules-7.0.0-31-generic。
-准备解压 .../18-linux-modules-7.0.0-31-generic_7.0.0-31.31~24.04.1_amd64.deb  ..
-.
+准备解压 .../18-linux-modules-7.0.0-31-generic_7.0.0-31.31~24.04.1_amd64.deb  ...
 正在解压 linux-modules-7.0.0-31-generic (7.0.0-31.31~24.04.1) ...
 正在选中未选择的软件包 linux-image-7.0.0-31-generic。
 准备解压 .../19-linux-image-7.0.0-31-generic_7.0.0-31.31~24.04.1_amd64.deb  ...
 正在解压 linux-image-7.0.0-31-generic (7.0.0-31.31~24.04.1) ...
 准备解压 .../20-linux-generic-hwe-24.04_7.0.0-31.31~24.04.1_amd64.deb  ...
-正在解压 linux-generic-hwe-24.04 (7.0.0-31.31~24.04.1) 并覆盖 (7.0.0-30.30~24.04
-.1) ...
-准备解压 .../21-linux-image-generic-hwe-24.04_7.0.0-31.31~24.04.1_amd64.deb  ...
-正在解压 linux-image-generic-hwe-24.04 (7.0.0-31.31~24.04.1) 并覆盖 (7.0.0-30.30
+正在解压 linux-generic-hwe-24.04 (7.0.0-31.31~24.04.1) 并覆盖 (7.0.0-30.30~24.04.1) ...
+准备解压 .../21-linux-image-generic-hwe-24.04_7.0.0-31.31~24.04.1_amd64.deb  ...正在解压 linux-image-generic-hwe-24.04 (7.0.0-31.31~24.04.1) 并覆盖 (7.0.0-30.30
 ~24.04.1) ...
 正在选中未选择的软件包 linux-hwe-7.0-headers-7.0.0-31。
 准备解压 .../22-linux-hwe-7.0-headers-7.0.0-31_7.0.0-31.31~24.04.1_all.deb  ...
 正在解压 linux-hwe-7.0-headers-7.0.0-31 (7.0.0-31.31~24.04.1) ...
 正在选中未选择的软件包 linux-headers-7.0.0-31-generic。
-准备解压 .../23-linux-headers-7.0.0-31-generic_7.0.0-31.31~24.04.1_amd64.deb  ..
-.
+准备解压 .../23-linux-headers-7.0.0-31-generic_7.0.0-31.31~24.04.1_amd64.deb  ...
 正在解压 linux-headers-7.0.0-31-generic (7.0.0-31.31~24.04.1) ...
 软件包设置
 
 
 
- ┌──────────────────────────────────┤ 正在设定 code ├───────────────────────────
-─│
+ ┌──────────────────────────────────┤ 正在设定 code ├────────────────────────────│
  │ The installer would like to add the Microsoft repository and signing key to up│ VS Code through apt.
  │
  │ Add Microsoft apt repository for Visual Studio Code?
@@ -474,16 +445,43 @@ Could not execute systemctl:  at /usr/bin/deb-systemd-invoke line 148.
 正在设置 sssd-ad (2.9.4-1.1ubuntu6.8) ...
 正在设置 gpg-wks-client (2.4.4-2ubuntu17.6) ...
 正在设置 linux-generic-hwe-24.04 (7.0.0-31.31~24.04.1) ...
+正在设置 sssd-ipa (2.9.4-1.1ubuntu6.8) ...
+正在设置 sssd (2.9.4-1.1ubuntu6.8) ...
+正在处理用于 desktop-file-utils (0.27-2build1) 的触发器 ...
+正在处理用于 gnome-menus (3.36.0-1.1ubuntu3) 的触发器 ...
+正在处理用于 libc-bin (2.39-0ubuntu8.8) 的触发器 ...
+正在处理用于 ufw (0.36.2-6) 的触发器 ...
+正在处理用于 man-db (2.12.0-4build2) 的触发器 ...
+正在处理用于 shared-mime-info (2.4-4) 的触发器 ...
+正在处理用于 install-info (7.1-3build2) 的触发器 ...
+正在处理用于 linux-image-7.0.0-31-generic (7.0.0-31.31~24.04.1) 的触发器 ...
+/etc/kernel/postinst.d/initramfs-tools:
+update-initramfs: Generating /boot/initrd.img-7.0.0-31-generic
+/etc/kernel/postinst.d/zz-update-grub:
+Sourcing file `/etc/default/grub'
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-7.0.0-31-generic
+Found initrd image: /boot/initrd.img-7.0.0-31-generic
+Found linux image: /boot/vmlinuz-7.0.0-30-generic
+Found initrd image: /boot/initrd.img-7.0.0-30-generic
+Found linux image: /boot/vmlinuz-6.17.0-35-generic
+Found initrd image: /boot/initrd.img-6.17.0-35-generic
+Found memtest86+x64 image: /boot/memtest86+x64.bin
+Warning: os-prober will not be executed to detect other bootable partitions.
+Systems on them will not be added to the GRUB boot configuration.
+Check GRUB_DISABLE_OS_PROBER documentation entry.
+Adding boot menu entry for UEFI Firmware Settings ...
+done
+ailab-os@ailab-os-VMware-Virtual-Platform:~$
+exit
 ```
-
-说明：输出已按原报告上限截断，可依据原始定位回查完整录像。
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-38148365e903-20260910T155129-12346-shell-1"></a>
+<a id="event-8bae461d8d9d-20260910T155129-12346-shell-1"></a>
 ### 3. Shell 命令
 
-- 事件编号：38148365e903:20260910T155129-12346:shell:1
+- 事件编号：8bae461d8d9d:20260910T155129-12346:shell:1
 - 显示时间：2026-09-10T15:51:32.761+08:00（北京时间）
 - 录像相对时间：\+3.761860 秒
 - 录像：20260910T155129-12346
@@ -508,10 +506,10 @@ ls
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-38148365e903-20260910T155129-12346-shell-2"></a>
+<a id="event-8bae461d8d9d-20260910T155129-12346-shell-2"></a>
 ### 4. Shell 命令
 
-- 事件编号：38148365e903:20260910T155129-12346:shell:2
+- 事件编号：8bae461d8d9d:20260910T155129-12346:shell:2
 - 显示时间：2026-09-10T15:51:42.383+08:00（北京时间）
 - 录像相对时间：\+13.383384 秒
 - 录像：20260910T155129-12346
@@ -535,10 +533,10 @@ bash: cd: desktop: 没有那个文件或目录
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-38148365e903-20260910T155240-13114-shell-1"></a>
+<a id="event-8bae461d8d9d-20260910T155240-13114-shell-1"></a>
 ### 5. Shell 命令
 
-- 事件编号：38148365e903:20260910T155240-13114:shell:1
+- 事件编号：8bae461d8d9d:20260910T155240-13114:shell:1
 - 显示时间：2026-09-10T15:52:46.636+08:00（北京时间）
 - 录像相对时间：\+6.636555 秒
 - 录像：20260910T155240-13114
@@ -561,10 +559,10 @@ cd lab0
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-38148365e903-20260910T155351-13954-shell-1"></a>
+<a id="event-8bae461d8d9d-20260910T155351-13954-shell-1"></a>
 ### 6. Shell 命令
 
-- 事件编号：38148365e903:20260910T155351-13954:shell:1
+- 事件编号：8bae461d8d9d:20260910T155351-13954:shell:1
 - 显示时间：2026-09-10T15:53:59.230+08:00（北京时间）
 - 录像相对时间：\+8.230144 秒
 - 录像：20260910T155351-13954
@@ -587,10 +585,10 @@ clear
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-38148365e903-20260910T155351-13954-shell-2"></a>
+<a id="event-8bae461d8d9d-20260910T155351-13954-shell-2"></a>
 ### 7. Shell 命令
 
-- 事件编号：38148365e903:20260910T155351-13954:shell:2
+- 事件编号：8bae461d8d9d:20260910T155351-13954:shell:2
 - 显示时间：2026-09-10T15:54:04.634+08:00（北京时间）
 - 录像相对时间：\+13.634913 秒
 - 录像：20260910T155351-13954
@@ -613,10 +611,10 @@ cd lab0
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-38148365e903-20260910T160308-18505-shell-1"></a>
+<a id="event-8bae461d8d9d-20260910T160308-18505-shell-1"></a>
 ### 8. Shell 命令
 
-- 事件编号：38148365e903:20260910T160308-18505:shell:1
+- 事件编号：8bae461d8d9d:20260910T160308-18505:shell:1
 - 显示时间：2026-09-10T16:03:18.520+08:00（北京时间）
 - 录像相对时间：\+10.520089 秒
 - 录像：20260910T160308-18505
@@ -640,10 +638,10 @@ echo：未找到命令
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-38148365e903-20260910T160308-18505-shell-2"></a>
+<a id="event-8bae461d8d9d-20260910T160308-18505-shell-2"></a>
 ### 9. Shell 命令
 
-- 事件编号：38148365e903:20260910T160308-18505:shell:2
+- 事件编号：8bae461d8d9d:20260910T160308-18505:shell:2
 - 显示时间：2026-09-10T16:03:19.073+08:00（北京时间）
 - 录像相对时间：\+11.073362 秒
 - 录像：20260910T160308-18505
@@ -667,10 +665,10 @@ ibus
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-38148365e903-20260910T160308-18505-shell-3"></a>
+<a id="event-8bae461d8d9d-20260910T160308-18505-shell-3"></a>
 ### 10. Shell 命令
 
-- 事件编号：38148365e903:20260910T160308-18505:shell:3
+- 事件编号：8bae461d8d9d:20260910T160308-18505:shell:3
 - 显示时间：2026-09-10T16:03:32.539+08:00（北京时间）
 - 录像相对时间：\+24.539477 秒
 - 录像：20260910T160308-18505
@@ -695,10 +693,10 @@ echo $XMODIFIERS
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-38148365e903-20260910T160308-18505-shell-4"></a>
+<a id="event-8bae461d8d9d-20260910T160308-18505-shell-4"></a>
 ### 11. Shell 命令
 
-- 事件编号：38148365e903:20260910T160308-18505:shell:4
+- 事件编号：8bae461d8d9d:20260910T160308-18505:shell:4
 - 显示时间：2026-09-10T16:03:33.466+08:00（北京时间）
 - 录像相对时间：\+25.466793 秒
 - 录像：20260910T160308-18505
@@ -725,10 +723,10 @@ ibus
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-38148365e903-20260910T160308-18505-shell-5"></a>
+<a id="event-8bae461d8d9d-20260910T160308-18505-shell-5"></a>
 ### 12. Shell 命令
 
-- 事件编号：38148365e903:20260910T160308-18505:shell:5
+- 事件编号：8bae461d8d9d:20260910T160308-18505:shell:5
 - 显示时间：2026-09-10T16:04:31.223+08:00（北京时间）
 - 录像相对时间：\+83.223680 秒
 - 录像：20260910T160308-18505
@@ -746,17 +744,17 @@ claude
 
 输出说明：Claude 启动输出含 TUI，正文单独展开；完整输出可按原始字节范围回查
 
-<a id="event-38148365e903-20260910T160308-18505-region-1-qa-1-user"></a>
+<a id="event-8bae461d8d9d-20260910T160308-18505-region-1-qa-1-user"></a>
 ### 13. 用户问题
 
-- 事件编号：38148365e903:20260910T160308-18505:region:1:qa:1:user
+- 事件编号：8bae461d8d9d:20260910T160308-18505:region:1:qa:1:user
 - 显示时间：2026-09-10T16:04:34.966+08:00（北京时间）
 - 录像相对时间：\+86.966549 秒
 - 录像：20260910T160308-18505
 - 终端：header TTY: /dev/pts/2 / session TTY: /dev/pts/3 / PID: 18517
 - 工作目录：\~
 - 时间语义：最终保留问题文本首次完整显示；不是回车提交时间
-- 关联事件：[38148365e903:20260910T160308-18505:shell:5](#event-38148365e903-20260910T160308-18505-shell-5)
+- 关联事件：[8bae461d8d9d:20260910T160308-18505:shell:5](#event-8bae461d8d9d-20260910T160308-18505-shell-5)
 - 原始文件：[录像](../../../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C%E6%95%B0%E6%8D%AE%E8%AE%B0%E5%BD%95/2406080205-%E5%91%A8%E5%8D%93%E6%B1%9F-20260910-2322/term/20260910T160308-18505.out.gz) / [计时](../../../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C%E6%95%B0%E6%8D%AE%E8%AE%B0%E5%BD%95/2406080205-%E5%91%A8%E5%8D%93%E6%B1%9F-20260910-2322/term/20260910T160308-18505.tim.gz)
 - 观察定位：timing 第 64 行；画面 30；解压字节 \[7883, 7986\)
 
@@ -766,17 +764,17 @@ claude
 你好
 ```
 
-<a id="event-38148365e903-20260910T160308-18505-region-1-qa-1-reply"></a>
+<a id="event-8bae461d8d9d-20260910T160308-18505-region-1-qa-1-reply"></a>
 ### 14. Claude 回复
 
-- 事件编号：38148365e903:20260910T160308-18505:region:1:qa:1:reply
+- 事件编号：8bae461d8d9d:20260910T160308-18505:region:1:qa:1:reply
 - 显示时间：2026-09-10T16:04:38.164+08:00（北京时间）
 - 录像相对时间：\+90.164829 秒
 - 录像：20260910T160308-18505
 - 终端：header TTY: /dev/pts/2 / session TTY: /dev/pts/3 / PID: 18517
 - 工作目录：\~
 - 时间语义：关联回复正文首次显示；不是后台开始生成或完成时间
-- 关联事件：[38148365e903:20260910T160308-18505:region:1:qa:1:user](#event-38148365e903-20260910T160308-18505-region-1-qa-1-user)
+- 关联事件：[8bae461d8d9d:20260910T160308-18505:region:1:qa:1:user](#event-8bae461d8d9d-20260910T160308-18505-region-1-qa-1-user)
 - 原始文件：[录像](../../../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C%E6%95%B0%E6%8D%AE%E8%AE%B0%E5%BD%95/2406080205-%E5%91%A8%E5%8D%93%E6%B1%9F-20260910-2322/term/20260910T160308-18505.out.gz) / [计时](../../../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C%E6%95%B0%E6%8D%AE%E8%AE%B0%E5%BD%95/2406080205-%E5%91%A8%E5%8D%93%E6%B1%9F-20260910-2322/term/20260910T160308-18505.tim.gz)
 - 观察定位：timing 第 83 行；画面 42；解压字节 \[10864, 11986\)
 - 最终正文完整显示时间：2026-09-10T16:04:38.592+08:00（北京时间）
@@ -797,10 +795,10 @@ claude
 当前工作目录是 /home/ailab-os（不是 git 仓库）。你想做什么？
 ```
 
-<a id="event-38148365e903-20260910T222112-4100-shell-1"></a>
+<a id="event-8bae461d8d9d-20260910T222112-4100-shell-1"></a>
 ### 15. Shell 命令
 
-- 事件编号：38148365e903:20260910T222112-4100:shell:1
+- 事件编号：8bae461d8d9d:20260910T222112-4100:shell:1
 - 显示时间：2026-09-10T22:21:18.450+08:00（北京时间）
 - 录像相对时间：\+6.450479 秒
 - 录像：20260910T222112-4100
@@ -823,10 +821,10 @@ cd lab0
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-38148365e903-20260910T222131-4401-shell-1"></a>
+<a id="event-8bae461d8d9d-20260910T222131-4401-shell-1"></a>
 ### 16. Shell 命令
 
-- 事件编号：38148365e903:20260910T222131-4401:shell:1
+- 事件编号：8bae461d8d9d:20260910T222131-4401:shell:1
 - 显示时间：2026-09-10T22:21:33.951+08:00（北京时间）
 - 录像相对时间：\+2.951211 秒
 - 录像：20260910T222131-4401
@@ -849,10 +847,10 @@ cd lab0
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-38148365e903-20260910T231934-3312-shell-1"></a>
+<a id="event-8bae461d8d9d-20260910T231934-3312-shell-1"></a>
 ### 17. Shell 命令
 
-- 事件编号：38148365e903:20260910T231934-3312:shell:1
+- 事件编号：8bae461d8d9d:20260910T231934-3312:shell:1
 - 显示时间：2026-09-10T23:19:46.901+08:00（北京时间）
 - 录像相对时间：\+12.901453 秒
 - 录像：20260910T231934-3312
@@ -875,10 +873,10 @@ cd 桌面
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-38148365e903-20260910T231934-3312-shell-2"></a>
+<a id="event-8bae461d8d9d-20260910T231934-3312-shell-2"></a>
 ### 18. Shell 命令
 
-- 事件编号：38148365e903:20260910T231934-3312:shell:2
+- 事件编号：8bae461d8d9d:20260910T231934-3312:shell:2
 - 显示时间：2026-09-10T23:19:51.972+08:00（北京时间）
 - 录像相对时间：\+17.972805 秒
 - 录像：20260910T231934-3312
@@ -902,10 +900,10 @@ ls
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-38148365e903-20260910T231934-3312-shell-3"></a>
+<a id="event-8bae461d8d9d-20260910T231934-3312-shell-3"></a>
 ### 19. Shell 命令
 
-- 事件编号：38148365e903:20260910T231934-3312:shell:3
+- 事件编号：8bae461d8d9d:20260910T231934-3312:shell:3
 - 显示时间：2026-09-10T23:20:03.079+08:00（北京时间）
 - 录像相对时间：\+29.079426 秒
 - 录像：20260910T231934-3312
@@ -930,10 +928,10 @@ cd xv6-ai-labs-km/lab0
 
 ## 未对齐事件
 
-<a id="event-38148365e903-20260910T155636-14821-shell-1"></a>
+<a id="event-8bae461d8d9d-20260910T155636-14821-shell-1"></a>
 ### 20. Shell 命令
 
-- 事件编号：38148365e903:20260910T155636-14821:shell:1
+- 事件编号：8bae461d8d9d:20260910T155636-14821:shell:1
 - 显示时间：未知
 - 录像相对时间：\+13.093516 秒
 - 录像：20260910T155636-14821
@@ -964,10 +962,10 @@ im-config -m
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-38148365e903-20260910T155636-14821-shell-2"></a>
+<a id="event-8bae461d8d9d-20260910T155636-14821-shell-2"></a>
 ### 21. Shell 命令
 
-- 事件编号：38148365e903:20260910T155636-14821:shell:2
+- 事件编号：8bae461d8d9d:20260910T155636-14821:shell:2
 - 显示时间：未知
 - 录像相对时间：\+14.444243 秒
 - 录像：20260910T155636-14821
@@ -1022,10 +1020,10 @@ ibus
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-38148365e903-20260910T155636-14821-shell-3"></a>
+<a id="event-8bae461d8d9d-20260910T155636-14821-shell-3"></a>
 ### 22. Shell 命令
 
-- 事件编号：38148365e903:20260910T155636-14821:shell:3
+- 事件编号：8bae461d8d9d:20260910T155636-14821:shell:3
 - 显示时间：未知
 - 录像相对时间：\+107.119572 秒
 - 录像：20260910T155636-14821
@@ -1049,10 +1047,10 @@ GTK_IM_MODULE=ibus gnome-terminal
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-38148365e903-20260910T155636-14821-shell-4"></a>
+<a id="event-8bae461d8d9d-20260910T155636-14821-shell-4"></a>
 ### 23. Shell 命令
 
-- 事件编号：38148365e903:20260910T155636-14821:shell:4
+- 事件编号：8bae461d8d9d:20260910T155636-14821:shell:4
 - 显示时间：未知
 - 录像相对时间：\+115.673688 秒
 - 录像：20260910T155636-14821
@@ -1076,10 +1074,10 @@ GTK_IM_MODULE=ibus gnome-terminal
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-38148365e903-20260910T155636-14821-shell-5"></a>
+<a id="event-8bae461d8d9d-20260910T155636-14821-shell-5"></a>
 ### 24. Shell 命令
 
-- 事件编号：38148365e903:20260910T155636-14821:shell:5
+- 事件编号：8bae461d8d9d:20260910T155636-14821:shell:5
 - 显示时间：未知
 - 录像相对时间：\+136.031899 秒
 - 录像：20260910T155636-14821
@@ -1106,10 +1104,10 @@ GTK_IM_MODULE=ibus gnome-terminal
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-38148365e903-20260910T155636-14821-shell-6"></a>
+<a id="event-8bae461d8d9d-20260910T155636-14821-shell-6"></a>
 ### 25. Shell 命令
 
-- 事件编号：38148365e903:20260910T155636-14821:shell:6
+- 事件编号：8bae461d8d9d:20260910T155636-14821:shell:6
 - 显示时间：未知
 - 录像相对时间：\+176.740977 秒
 - 录像：20260910T155636-14821
@@ -1133,10 +1131,10 @@ GTK_IM_MODULE=ibus gnome-terminal
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-38148365e903-20260910T155636-14821-shell-7"></a>
+<a id="event-8bae461d8d9d-20260910T155636-14821-shell-7"></a>
 ### 26. Shell 命令
 
-- 事件编号：38148365e903:20260910T155636-14821:shell:7
+- 事件编号：8bae461d8d9d:20260910T155636-14821:shell:7
 - 显示时间：未知
 - 录像相对时间：\+231.560458 秒
 - 录像：20260910T155636-14821
@@ -1161,10 +1159,10 @@ libpinyin
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-38148365e903-20260910T155636-14821-shell-8"></a>
+<a id="event-8bae461d8d9d-20260910T155636-14821-shell-8"></a>
 ### 27. Shell 命令
 
-- 事件编号：38148365e903:20260910T155636-14821:shell:8
+- 事件编号：8bae461d8d9d:20260910T155636-14821:shell:8
 - 显示时间：未知
 - 录像相对时间：\+243.272008 秒
 - 录像：20260910T155636-14821
@@ -1205,10 +1203,10 @@ ibus list-engine | grep -A 3 -B 3 pinyin
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-38148365e903-20260910T155636-14821-shell-9"></a>
+<a id="event-8bae461d8d9d-20260910T155636-14821-shell-9"></a>
 ### 28. Shell 命令
 
-- 事件编号：38148365e903:20260910T155636-14821:shell:9
+- 事件编号：8bae461d8d9d:20260910T155636-14821:shell:9
 - 显示时间：未知
 - 录像相对时间：\+254.076733 秒
 - 录像：20260910T155636-14821
@@ -1234,10 +1232,10 @@ gsettings get org.gnome.desktop.input-sources sources
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
 
-<a id="event-38148365e903-20260910T155636-14821-shell-10"></a>
+<a id="event-8bae461d8d9d-20260910T155636-14821-shell-10"></a>
 ### 29. Shell 命令
 
-- 事件编号：38148365e903:20260910T155636-14821:shell:10
+- 事件编号：8bae461d8d9d:20260910T155636-14821:shell:10
 - 显示时间：未知
 - 录像相对时间：\+316.773181 秒
 - 录像：20260910T155636-14821
@@ -1317,88 +1315,41 @@ node-loader-runner node-locate-path
   node-v8flags node-validate-npm-package-license node-wcwidth.js node-webpack-sources node-wordwrap node-wrappy
   node-write-file-atomic node-xtend node-y18n node-yallist node-yaml
 使用'sudo apt autoremove'来卸载它(它们)。
-升级了 0 个软件包，新安装了 0 个软件包，重新安装了 4 个软件包，要卸载 0 个软件包
-，有 0 个软件包未被升级。
+升级了 0 个软件包，新安装了 0 个软件包，重新安装了 4 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
 需要下载 1,149 kB 的归档。
 解压缩后会消耗 0 B 的额外空间。
-获取:1 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble/main amd64 ibus amd64 1.
-5.29-2 [320 kB]
-获取:2 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble/main amd64 ibus-gtk amd6
-4 1.5.29-2 [17.2 kB]
-获取:3 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble/main amd64 ibus-gtk3 amd
-64 1.5.29-2 [17.6 kB]
-获取:4 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble/main amd64 ibus-libpinyi
-n amd64 1.15.7-1build2 [794 kB]
+获取:1 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble/main amd64 ibus amd64 1.5.29-2 [320 kB]
+获取:2 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble/main amd64 ibus-gtk amd64 1.5.29-2 [17.2 kB]
+获取:3 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble/main amd64 ibus-gtk3 amd64 1.5.29-2 [17.6 kB]
+获取:4 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble/main amd64 ibus-libpinyin amd64 1.15.7-1build2 [794 kB]
 已下载 1,149 kB，耗时 3秒 (372 kB/s)
 (正在读取数据库 ... 系统当前共安装有 267926 个文件和目录。)
 准备解压 .../ibus_1.5.29-2_amd64.deb  ...
-进度：[  0%] [..................................................................
-进度：[  6%] [######............................................................
+进度：[  0%] [..................................................................进度：[  6%] [######............................................................
 正在解压 ibus (1.5.29-2) 并覆盖 (1.5.29-2) ...
-进度：[ 12%] [#############.....................................................
-准备解压 .../ibus-gtk_1.5.29-2_amd64.deb  ...]
-进度：[ 18%] [###################...............................................
-正在解压 ibus-gtk:amd64 (1.5.29-2) 并覆盖 (1.5.29-2) ...
-进度：[ 21%] [#######################...........................................
-准备解压 .../ibus-gtk3_1.5.29-2_amd64.deb  ...
-进度：[ 26%] [#############################.....................................
-正在解压 ibus-gtk3:amd64 (1.5.29-2) 并覆盖 (1.5.29-2) ...
-进度：[ 29%] [###############################...................................
-准备解压 .../ibus-libpinyin_1.15.7-1build2_amd64.deb  ...
-进度：[ 33%] [####################################..............................
-正在解压 ibus-libpinyin (1.15.7-1build2) 并覆盖 (1.15.7-1build2) ...
-进度：[ 35%] [######################################............................
-正在设置 ibus-gtk:amd64 (1.5.29-2) ..........]
-进度：[ 39%] [###########################################.......................
-进度：[ 43%] [################################################..................
+进度：[ 12%] [#############.....................................................准备解压 .../ibus-gtk_1.5.29-2_amd64.deb  ...]
+进度：[ 18%] [###################...............................................正在解压 ibus-gtk:amd64 (1.5.29-2) 并覆盖 (1.5.29-2) ...
+进度：[ 21%] [#######################...........................................准备解压 .../ibus-gtk3_1.5.29-2_amd64.deb  ...
+进度：[ 26%] [#############################.....................................正在解压 ibus-gtk3:amd64 (1.5.29-2) 并覆盖 (1.5.29-2) ...
+进度：[ 29%] [###############################...................................准备解压 .../ibus-libpinyin_1.15.7-1build2_amd64.deb  ...
+进度：[ 33%] [####################################..............................正在解压 ibus-libpinyin (1.15.7-1build2) 并覆盖 (1.15.7-1build2) ...
+进度：[ 35%] [######################################............................正在设置 ibus-gtk:amd64 (1.5.29-2) ..........]
+进度：[ 39%] [###########################################.......................进度：[ 43%] [################################################..................
 正在设置 ibus (1.5.29-2) ....................]
-进度：[ 48%] [#####################################################.............
-进度：[ 52%] [#########################################################.........
+进度：[ 48%] [#####################################################.............进度：[ 52%] [#########################################################.........
 正在设置 ibus-libpinyin (1.15.7-1build2) ....]
-进度：[ 57%] [##############################################################....
-正在设置 ibus-gtk3:amd64 (1.5.29-2) .........]
-进度：[ 61%] [##################################################################
-进度：[ 65%] [##################################################################
+进度：[ 57%] [##############################################################....正在设置 ibus-gtk3:amd64 (1.5.29-2) .........]
+进度：[ 61%] [##################################################################进度：[ 65%] [##################################################################
 正在处理用于 gnome-menus (3.36.0-1.1ubuntu3) 的触发器 ...
 正在处理用于 man-db (2.12.0-4build2) 的触发器 ...
 正在处理用于 libglib2.0-0t64:amd64 (2.80.0-6ubuntu3.8) 的触发器 ...
-进度：[ 70%] [##################################################################
-进度：[ 74%] [##################################################################
-进度：[ 78%] [##################################################################
-正在处理用于 libgtk-3-0t64:amd64 (3.24.41-4ubuntu1.3) 的触发器 ...
-进度：[ 83%] [##################################################################
-进度：[ 87%] [##################################################################
+进度：[ 70%] [##################################################################进度：[ 74%] [##################################################################
+进度：[ 78%] [##################################################################正在处理用于 libgtk-3-0t64:amd64 (3.24.41-4ubuntu1.3) 的触发器 ...
+进度：[ 83%] [##################################################################进度：[ 87%] [##################################################################
 正在处理用于 libgtk2.0-0t64:amd64 (2.24.33-4ubuntu1.1) 的触发器 ...
-进度：[ 91%] [##################################################################
-进度：[ 96%] [##################################################################
+进度：[ 91%] [##################################################################进度：[ 96%] [##################################################################
 正在处理用于 desktop-file-utils (0.27-2build1) 的触发器 ...
-```
-
-输出说明：关联原提取器的命令输出；未推定执行结束或输出时间
-
-<a id="event-38148365e903-20260910T155636-14821-shell-11"></a>
-### 30. Shell 命令
-
-- 事件编号：38148365e903:20260910T155636-14821:shell:11
-- 显示时间：未知
-- 录像相对时间：\+355.937384 秒
-- 录像：20260910T155636-14821
-- 终端：header TTY: /dev/pts/2 / session TTY: /dev/pts/3, /dev/pts/6 / PID: 14833, 15370
-- 工作目录：\~
-- 时间语义：命令回显末端所在输出块的观察时间；不是提交或执行时间
-- 不确定性：conflicting\_session\_start\_records；global\_order\_uncertain；absolute\_observation\_unavailable
-- 原始文件：[录像](../../../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C%E6%95%B0%E6%8D%AE%E8%AE%B0%E5%BD%95/2406080205-%E5%91%A8%E5%8D%93%E6%B1%9F-20260910-2322/term/20260910T155636-14821.out.gz) / [计时](../../../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C%E6%95%B0%E6%8D%AE%E8%AE%B0%E5%BD%95/2406080205-%E5%91%A8%E5%8D%93%E6%B1%9F-20260910-2322/term/20260910T155636-14821.tim.gz)
-- 观察定位：timing 第 308 行；解压字节 \[23232, 23267\)
-
-#### 正文
-
-```text
-ibus restart
-```
-
-#### 关联 Shell 输出
-
-```text
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ibus restart
 ```
 
 输出说明：关联原提取器的命令输出；未推定执行结束或输出时间

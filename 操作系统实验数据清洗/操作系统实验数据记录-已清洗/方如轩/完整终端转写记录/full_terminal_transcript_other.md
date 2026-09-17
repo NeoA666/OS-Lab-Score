@@ -10,26 +10,34 @@
 - 实验分类：其他（非 lab0–lab8 或目录未知）
 
 - 终端录像总数：8
-- 成功重放数量：7
-- 重放失败数量：1
+- 成功重放数量：8
+- 重放失败数量：0
 
 每对 .out.gz + .tim.gz 经 pyte 完整重放后输出连续文本，保留滚屏及清屏历史，不执行 Claude 清洗。
 跨 lab 的录像仍按原有分类分段，每个片段输出一次完整重放结果，不展开逐帧变化或逐字符中间状态。
 
-## Session 20260909T120838-19233
+## Session 20260909T120838-19233 · 片段 1
 
-- 失败文件：/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080104-方如轩-20260909-1237/term/20260909T120838-19233.out.gz
-- 错误原因：录像为空或缺少 script 头部换行
+- 原录像字节区间：[ 0, 140 )
+- 分类依据目录：\~
+
+- 开始时间：未知
+- 终端尺寸：198 × 59
+
+```text
+mahirolover@mahirolover-VMware-Virtual-Platform:~$
+```
 
 ## Session 20260909T120853-19758 · 片段 1
 
-- 原录像字节区间：[ 0, 3236 )
+- 原录像字节区间：[ 0, 3469 )
 - 分类依据目录：未知
 
 - 开始时间：未知
 - 终端尺寸：198 × 59
 
 ```text
+mahirolover@mahirolover-VMware-Virtual-Platform:~/文档/xv6-ai-labs-km-无答案/xv6
 -ai-labs-km-无答案/lab0$ make run
 
 OpenSBI v1.3
@@ -105,13 +113,14 @@ cat: cannot open 1
 
 ## Session 20260909T121201-20589 · 片段 1
 
-- 原录像字节区间：[ 0, 3907 )
+- 原录像字节区间：[ 0, 4140 )
 - 分类依据目录：未知
 
 - 开始时间：未知
 - 终端尺寸：198 × 59
 
 ```text
+mahirolover@mahirolover-VMware-Virtual-Platform:~/文档/xv6-ai-labs-km-无答案/xv6
 -ai-labs-km-无答案/lab0$ make run
 riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -
 D QEMU   -c -o xv6-user/cat.o xv6-user/cat.c
@@ -191,13 +200,14 @@ init: starting sh
 
 ## Session 20260909T121528-21382 · 片段 1
 
-- 原录像字节区间：[ 0, 6393 )
+- 原录像字节区间：[ 0, 6626 )
 - 分类依据目录：未知
 
 - 开始时间：未知
 - 终端尺寸：198 × 59
 
 ```text
+mahirolover@mahirolover-VMware-Virtual-Platform:~/文档/xv6-ai-labs-km-无答案/xv6
 -ai-labs-km-无答案/lab0$ make run
 riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -
 D QEMU   -c -o xv6-user/cat.o xv6-user/cat.c
@@ -305,13 +315,14 @@ README
 
 ## Session 20260909T122932-23272 · 片段 1
 
-- 原录像字节区间：[ 0, 5420 )
+- 原录像字节区间：[ 0, 5653 )
 - 分类依据目录：未知
 
 - 开始时间：未知
 - 终端尺寸：198 × 59
 
 ```text
+mahirolover@mahirolover-VMware-Virtual-Platform:~/文档/xv6-ai-labs-km-无答案/xv6
 -ai-labs-km-无答案/lab0$ make run
 
 OpenSBI v1.3
@@ -435,13 +446,14 @@ REA
 
 ## Session 20260909T122950-23863 · 片段 1
 
-- 原录像字节区间：[ 0, 4088 )
+- 原录像字节区间：[ 0, 4321 )
 - 分类依据目录：未知
 
 - 开始时间：未知
 - 终端尺寸：198 × 59
 
 ```text
+mahirolover@mahirolover-VMware-Virtual-Platform:~/文档/xv6-ai-labs-km-无答案/xv6
 -ai-labs-km-无答案/lab0$ cat readme
 cat: readme: 没有那个文件或目录
 mahirolover@mahirolover-VMware-Virtual-Platform:~/文档/xv6-ai-labs-km-无答案/xv6
@@ -523,19 +535,19 @@ cat: cannot open 1
 -> / $ cat
 
 
-daf
-gsdaf
+jagsdaf
 ```
 
 ## Session 20260909T123448-25012 · 片段 1
 
-- 原录像字节区间：[ 0, 3229 )
+- 原录像字节区间：[ 0, 3462 )
 - 分类依据目录：未知
 
 - 开始时间：未知
 - 终端尺寸：198 × 59
 
 ```text
+mahirolover@mahirolover-VMware-Virtual-Platform:~/文档/xv6-ai-labs-km-无答案/xv6
 -ai-labs-km-无答案/lab0$ make run\
 >
 
@@ -610,13 +622,14 @@ init: starting sh
 
 ## Session 20260909T123634-25637 · 片段 1
 
-- 原录像字节区间：[ 0, 7733 )
+- 原录像字节区间：[ 0, 7966 )
 - 分类依据目录：未知
 
 - 开始时间：未知
 - 终端尺寸：198 × 59
 
 ```text
+mahirolover@mahirolover-VMware-Virtual-Platform:~/文档/xv6-ai-labs-km-无答案/xv6
 -ai-labs-km-无答案/lab0$ make run
 riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -
 D QEMU   -c -o xv6-user/cat.o xv6-user/cat.c

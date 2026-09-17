@@ -1,7 +1,7 @@
 # 简洁实验过程时间线
 
 - 学号：2406080118
-- 姓名：yanghanqing
+- 姓名：杨涵清
 - 实验分类：lab1
 
 ## 过程
@@ -225,8 +225,7 @@ riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_ha
 alloc.o
 riscv64-unknown-elf-ld: warning: xv6-user/_halt has a LOAD segment with RWX permissions
 riscv64-unknown-elf-ld: xv6-user/halt.o: in function `main':
-/home/ailab-os/桌面/xv6-ai-labs-km/lab1/xv6-user/halt.c:10:(.text+0x8): undefine
-d reference to `halt'
+/home/ailab-os/桌面/xv6-ai-labs-km/lab1/xv6-user/halt.c:10:(.text+0x8): undefined reference to `halt'
 make: *** [Makefile:173：xv6-user/_halt] 错误 1
 ```
 
@@ -244,8 +243,7 @@ riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_ha
 alloc.o
 riscv64-unknown-elf-ld: warning: xv6-user/_halt has a LOAD segment with RWX permissions
 riscv64-unknown-elf-ld: xv6-user/halt.o: in function `main':
-/home/ailab-os/桌面/xv6-ai-labs-km/lab1/xv6-user/halt.c:10:(.text+0x8): undefine
-d reference to `halt'
+/home/ailab-os/桌面/xv6-ai-labs-km/lab1/xv6-user/halt.c:10:(.text+0x8): undefined reference to `halt'
 make: *** [Makefile:173：xv6-user/_halt] 错误 1
 ```
 
@@ -263,8 +261,7 @@ riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_ha
 alloc.o
 riscv64-unknown-elf-ld: warning: xv6-user/_halt has a LOAD segment with RWX permissions
 riscv64-unknown-elf-ld: xv6-user/halt.o: in function `main':
-/home/ailab-os/桌面/xv6-ai-labs-km/lab1/xv6-user/halt.c:10:(.text+0x8): undefine
-d reference to `halt'
+/home/ailab-os/桌面/xv6-ai-labs-km/lab1/xv6-user/halt.c:10:(.text+0x8): undefined reference to `halt'
 make: *** [Makefile:173：xv6-user/_halt] 错误 1
 ```
 
@@ -282,8 +279,7 @@ riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_ha
 alloc.o
 riscv64-unknown-elf-ld: warning: xv6-user/_halt has a LOAD segment with RWX permissions
 riscv64-unknown-elf-ld: xv6-user/halt.o: in function `main':
-/home/ailab-os/桌面/xv6-ai-labs-km/lab1/xv6-user/halt.c:10:(.text+0x8): undefine
-d reference to `halt'
+/home/ailab-os/桌面/xv6-ai-labs-km/lab1/xv6-user/halt.c:10:(.text+0x8): undefined reference to `halt'
 make: *** [Makefile:173：xv6-user/_halt] 错误 1
 ```
 

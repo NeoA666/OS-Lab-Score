@@ -28,7 +28,7 @@ def read_recording(out_path, tim_path):
     """识别真正的 script 头，并保留 timing 的原始行号和字节边界。"""
     raw = gzip.open(out_path, "rb").read()
     first = raw.split(b"\n", 1)[0].decode("utf-8", "replace")
-    has_header = first.startswith(("Script started on ", "脚本启动于 ", "脚本开始于 "))
+    has_header = raw.split(b"\n", 1)[0].startswith(app.SCRIPT_HEADER_PREFIXES)
     header_bytes = raw.index(b"\n") + 1 if has_header and b"\n" in raw else 0
     if has_header and not header_bytes:
         raise ValueError("script 头缺少换行，无法定位正文")
@@ -64,13 +64,18 @@ def read_recording(out_path, tim_path):
             offset = 0
     if not entries and not issues:
         issues.append("timing_empty")
-    trailer = body[offset:] if entries and offset <= len(body) else b""
-    administrative_tail = bool(trailer.strip()) and trailer.lstrip().startswith(
-        (b"Script done on ", "脚本完成于 ".encode(), "脚本结束于 ".encode()))
+    administrative_tail = app.has_administrative_script_tail(body, offset) if entries else False
     if entries and offset > len(body):
         issues.append("timing_exceeds_body")
     elif entries and offset < len(body) and not administrative_tail:
         issues.append("timing_uncovered_tail")
+    if entries and not app.timing_entries_cover_body(
+        [(entry["delay"], entry["end"] - entry["begin"]) for entry in entries], body
+    ):
+        # Keep the recording available for a single replay, but do not assign
+        # any event a time from an incomplete timing file.
+        entries = []
+        offset = 0
     def dimension(name, default):
         value = attr(name)
         return int(value) if value and re.fullmatch(r"\d+", value) and int(value) > 0 else default
@@ -87,6 +92,8 @@ def read_recording(out_path, tim_path):
 def load_session_logs(source):
     path = Path(source) / "logs" / "events.jsonl"
     sessions, issues = {}, []
+    if app.has_link_component(path):
+        return sessions, ["session_log_linked"]
     if not path.is_file():
         return sessions, ["session_log_missing"]
     previous = None
@@ -328,11 +335,13 @@ def is_claude_launch(command):
 
 def build_student_timeline(info):
     source = Path(info["source"])
-    if not (source / "term").is_dir():
+    term = source / "term"
+    if not term.is_dir() or app.is_link_like(term):
         return {"events": [], "recordings": 0, "errors": ["缺少 term/ 录像目录"], "recording_details": [], "processing_failed": True}
     sessions, log_issues = load_session_logs(source)
     events, errors, details = [], list(log_issues), []
-    files = sorted((source / "term").glob("*.out.gz"))
+    observed_labs = set()
+    files = app.term_recordings(term)
     prefix = hashlib.sha256(str(source.resolve()).encode("utf-8")).hexdigest()[:12]
     for out in files:
         rec_id = out.name[:-len(".out.gz")]
@@ -345,6 +354,11 @@ def build_student_timeline(info):
         before = len(events)
         try:
             recording = read_recording(out, tim)
+            regions = app.split_lab_regions(recording["body"])
+            observed_labs.update(
+                region["lab"] for region in regions
+                if region.get("lab") in app.LAB_KEYS
+            )
             clock = choose_clock(recording, sessions.get(rec_id, []))
             detail.update(format=recording["format"], header_bytes=recording["header_bytes"],
                           body_bytes=len(recording["body"]), timing_bytes=recording["timed_bytes"],
@@ -372,7 +386,6 @@ def build_student_timeline(info):
             # 没有角色标记的流无法包含现有识别器可识别的问答，无需逐帧重放。
             if "❯".encode() in recording["body"] and "●".encode() in recording["body"]:
                 detail["claude_extraction_status"] = "screen_replayed_no_retained_pairs"
-                regions = app.split_lab_regions(recording["body"])
                 for region_no, region in enumerate(regions, 1):
                     frames, trace = [], {}
                     _, pairs = app.extract_claude_session(str(out), str(tim), frame_source=iter_region_frames(recording, region, frames), evidence=trace)
@@ -425,4 +438,5 @@ def build_student_timeline(info):
                               parse_datetime(e["observed_at"]).timestamp() if e["observed_at"] else 0,
                               e["recording_id"], e["elapsed_seconds"] if e["elapsed_seconds"] is not None else float("inf"),
                               e["event_id"]))
-    return {"events": events, "recordings": len(files), "errors": errors, "recording_details": details}
+    return {"events": events, "recordings": len(files), "errors": errors,
+            "recording_details": details, "labs": sorted(observed_labs)}

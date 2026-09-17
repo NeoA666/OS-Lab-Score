@@ -10,18 +10,26 @@ from pathlib import Path
 import re
 import tempfile
 
+from timeline_reports import (
+    TIMELINE_MANIFEST,
+    TIMELINE_TOOL,
+    has_link_component,
+    is_link_like,
+)
+
 
 SOURCE_DIRECTORY = "实验过程时间线"
 OUTPUT_DIRECTORY = "简洁实验过程时间线"
 OUTPUT_MANIFEST = ".readable_timeline_manifest.json"
 TOOL_NAME = "generate_readable_timeline"
 JSON_NAME = re.compile(r"^timeline_(lab[0-8]|other)\.json$")
+MARKDOWN_NAME = re.compile(r"^timeline_(lab[0-8]|other)\.md$")
 DEFAULT_CLEANED_ROOT = Path(__file__).resolve().parent.parent / "操作系统实验数据记录-已清洗"
 
 
 def _atomic_write(path, text):
     path = Path(path)
-    if path.is_symlink():
+    if has_link_component(path):
         raise ValueError(f"拒绝覆盖符号链接：{path}")
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = None
@@ -112,6 +120,8 @@ def render(document):
 
 
 def _read_manifest(path):
+    if has_link_component(path):
+        return None
     try:
         value = json.loads(Path(path).read_text(encoding="utf-8"))
     except (OSError, TypeError, ValueError):
@@ -119,25 +129,114 @@ def _read_manifest(path):
     return value if isinstance(value, dict) else None
 
 
+def _owned_artifact(target, name):
+    if not isinstance(name, str) or not MARKDOWN_NAME.fullmatch(name):
+        return None
+    candidate = Path(target) / name
+    if has_link_component(candidate):
+        return None
+    try:
+        if Path(target).resolve() not in candidate.resolve().parents:
+            return None
+    except OSError:
+        return None
+    return candidate
+
+
+def _source_timeline_files(source):
+    """Return current JSON artifacts, preferring the producer's manifest contract."""
+    source = Path(source)
+    producer_manifest = source / TIMELINE_MANIFEST
+    if not producer_manifest.exists():
+        return ([
+            path for path in sorted(source.glob("timeline_*.json"))
+            if JSON_NAME.fullmatch(path.name) and not is_link_like(path)
+        ], None)
+    manifest = _read_manifest(producer_manifest)
+    if (
+        isinstance(manifest, dict)
+        and manifest.get("tool") == TIMELINE_TOOL
+        and manifest.get("status") == "cleared"
+        and manifest.get("artifacts") == []
+    ):
+        return [], None
+    if not (
+        isinstance(manifest, dict)
+        and manifest.get("tool") == TIMELINE_TOOL
+        and manifest.get("status") in {"complete", "partial"}
+        and isinstance(manifest.get("artifacts"), list)
+    ):
+        return [], f"时间线归属清单无效或尚未完成：{producer_manifest}"
+    artifacts = manifest["artifacts"]
+    if not all(isinstance(relative, str) for relative in artifacts):
+        return [], f"时间线归属清单含无效产物：{producer_manifest}"
+    if len(set(artifacts)) != len(artifacts):
+        return [], f"时间线归属清单含重复产物：{producer_manifest}"
+    json_labs = set()
+    markdown_labs = set()
+    for relative in artifacts:
+        path = Path(relative)
+        if path.parent.as_posix() != SOURCE_DIRECTORY:
+            return [], f"时间线归属清单含越界产物：{producer_manifest}"
+        json_match = JSON_NAME.fullmatch(path.name)
+        markdown_match = MARKDOWN_NAME.fullmatch(path.name)
+        if json_match:
+            json_labs.add(json_match.group(1))
+        elif markdown_match:
+            markdown_labs.add(markdown_match.group(1))
+        else:
+            return [], f"时间线归属清单含未知产物：{producer_manifest}"
+    if not json_labs or json_labs != markdown_labs:
+        return [], f"时间线归属清单缺少成对 JSON/Markdown 产物：{producer_manifest}"
+    source_files = []
+    for lab in sorted(json_labs):
+        source_file = source / f"timeline_{lab}.json"
+        if has_link_component(source_file) or not source_file.is_file():
+            return [], f"时间线归属清单登记的 JSON 不可用：{source_file}"
+        source_files.append(source_file)
+    return source_files, None
+
+
+def _clear_owned_output(target, manifest_path, existing, source_id):
+    if not (
+        isinstance(existing, dict)
+        and existing.get("tool") == TOOL_NAME
+        and existing.get("source") == source_id
+    ):
+        return
+    for name in existing.get("artifacts", []):
+        artifact = _owned_artifact(target, name)
+        if artifact is not None and artifact.is_file():
+            artifact.unlink()
+    _atomic_write(manifest_path, json.dumps({
+        "tool": TOOL_NAME,
+        "source": source_id,
+        "artifacts": [],
+    }, ensure_ascii=False, indent=2) + "\n")
+
+
 def write_student(student_directory):
     student_directory = Path(student_directory)
+    if has_link_component(student_directory):
+        raise ValueError(f"拒绝使用符号链接学生目录：{student_directory}")
     source = student_directory / SOURCE_DIRECTORY
     target = student_directory / OUTPUT_DIRECTORY
-    if target.is_symlink():
+    if has_link_component(target):
         raise ValueError(f"拒绝使用符号链接输出目录：{target}")
     if student_directory.resolve() not in target.resolve().parents:
         raise ValueError(f"输出目录越出学生目录：{target}")
 
-    source_files = [
-        path for path in sorted(source.glob("timeline_*.json"))
-        if JSON_NAME.fullmatch(path.name)
-    ]
-    if not source_files:
-        return []
-
     manifest_path = target / OUTPUT_MANIFEST
     existing = _read_manifest(manifest_path)
     source_id = str(source.resolve())
+    source_files, source_error = _source_timeline_files(source)
+    if source_error:
+        _clear_owned_output(target, manifest_path, existing, source_id)
+        raise ValueError(source_error)
+    if not source_files:
+        _clear_owned_output(target, manifest_path, existing, source_id)
+        return []
+
     if manifest_path.exists() and (
         not existing
         or existing.get("tool") != TOOL_NAME
@@ -158,10 +257,18 @@ def write_student(student_directory):
 
     for target_file, text in rendered:
         _atomic_write(target_file, text)
+    wanted = {path.name for path, _ in rendered}
+    if existing:
+        for name in existing.get("artifacts", []):
+            if name in wanted:
+                continue
+            artifact = _owned_artifact(target, name)
+            if artifact is not None and artifact.is_file():
+                artifact.unlink()
     _atomic_write(manifest_path, json.dumps({
         "tool": TOOL_NAME,
         "source": source_id,
-        "artifacts": [path.name for path, _ in rendered],
+        "artifacts": sorted(wanted),
     }, ensure_ascii=False, indent=2) + "\n")
     return [path for path, _ in rendered]
 
@@ -179,14 +286,17 @@ def main(argv=None):
         help="仅处理指定的学生输出目录名；可重复指定",
     )
     args = parser.parse_args(argv)
-    root = Path(args.input_dir).resolve()
+    root_path = Path(args.input_dir)
+    if has_link_component(root_path):
+        parser.error(f"目录不得为符号链接或 junction：{root_path}")
+    root = root_path.resolve()
     if not root.is_dir():
         parser.error(f"目录不存在：{root}")
 
     processed = 0
     files = 0
     failures = []
-    candidates = sorted(path for path in root.iterdir() if path.is_dir())
+    candidates = sorted(path for path in root.iterdir() if path.is_dir() and not is_link_like(path))
     if args.students:
         requested = set(args.students)
         candidates = [path for path in candidates if path.name in requested]
@@ -194,7 +304,7 @@ def main(argv=None):
         if missing:
             parser.error("未找到学生输出目录：" + "、".join(missing))
     for student in candidates:
-        if not (student / SOURCE_DIRECTORY).is_dir():
+        if is_link_like(student / SOURCE_DIRECTORY) or not (student / SOURCE_DIRECTORY).is_dir():
             continue
         try:
             output = write_student(student)

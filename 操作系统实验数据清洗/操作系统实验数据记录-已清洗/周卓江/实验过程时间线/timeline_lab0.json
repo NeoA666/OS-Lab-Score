@@ -3,7 +3,7 @@
   "student": {
     "student_id": "2406080205",
     "name": "周卓江",
-    "source": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322"
+    "source": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322"
   },
   "lab": "lab0",
   "status": "complete",
@@ -41,7 +41,7 @@
   "recording_details": [
     {
       "recording_id": "20260910T151405-5961",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T151405-5961.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T151405-5961.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -71,7 +71,7 @@
     },
     {
       "recording_id": "20260910T151409-6066",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T151409-6066.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T151409-6066.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -101,7 +101,7 @@
     },
     {
       "recording_id": "20260910T151448-6350",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T151448-6350.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T151448-6350.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -131,7 +131,7 @@
     },
     {
       "recording_id": "20260910T151451-6453",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T151451-6453.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T151451-6453.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -163,7 +163,7 @@
     },
     {
       "recording_id": "20260910T151504-6649",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T151504-6649.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T151504-6649.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -193,7 +193,7 @@
     },
     {
       "recording_id": "20260910T151508-6756",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T151508-6756.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T151508-6756.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -223,7 +223,7 @@
     },
     {
       "recording_id": "20260910T153945-3361",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T153945-3361.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T153945-3361.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -253,7 +253,7 @@
     },
     {
       "recording_id": "20260910T153951-3528",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T153951-3528.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T153951-3528.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -283,7 +283,7 @@
     },
     {
       "recording_id": "20260910T154050-3982",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T154050-3982.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T154050-3982.out.gz",
       "status": "ok",
       "events": 2,
       "claude_retained_pairs": 0,
@@ -313,7 +313,7 @@
     },
     {
       "recording_id": "20260910T155129-12346",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T155129-12346.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T155129-12346.out.gz",
       "status": "ok",
       "events": 2,
       "claude_retained_pairs": 0,
@@ -343,7 +343,7 @@
     },
     {
       "recording_id": "20260910T155221-12730",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T155221-12730.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T155221-12730.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -373,7 +373,7 @@
     },
     {
       "recording_id": "20260910T155226-12874",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T155226-12874.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T155226-12874.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -403,7 +403,7 @@
     },
     {
       "recording_id": "20260910T155240-13114",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T155240-13114.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T155240-13114.out.gz",
       "status": "ok",
       "events": 2,
       "claude_retained_pairs": 0,
@@ -433,7 +433,7 @@
     },
     {
       "recording_id": "20260910T155340-13693",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T155340-13693.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T155340-13693.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -463,7 +463,7 @@
     },
     {
       "recording_id": "20260910T155343-13835",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T155343-13835.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T155343-13835.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -493,7 +493,7 @@
     },
     {
       "recording_id": "20260910T155351-13954",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T155351-13954.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T155351-13954.out.gz",
       "status": "ok",
       "events": 5,
       "claude_retained_pairs": 1,
@@ -523,9 +523,9 @@
     },
     {
       "recording_id": "20260910T155636-14821",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T155636-14821.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T155636-14821.out.gz",
       "status": "ok",
-      "events": 11,
+      "events": 10,
       "claude_retained_pairs": 0,
       "claude_record_count": 0,
       "claude_unretained_record_count": 0,
@@ -558,7 +558,7 @@
     },
     {
       "recording_id": "20260910T160308-18505",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T160308-18505.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T160308-18505.out.gz",
       "status": "ok",
       "events": 7,
       "claude_retained_pairs": 1,
@@ -588,7 +588,7 @@
     },
     {
       "recording_id": "20260910T222015-3353",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222015-3353.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222015-3353.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -618,7 +618,7 @@
     },
     {
       "recording_id": "20260910T222021-3614",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222021-3614.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222021-3614.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -648,7 +648,7 @@
     },
     {
       "recording_id": "20260910T222027-3740",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222027-3740.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222027-3740.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -678,7 +678,7 @@
     },
     {
       "recording_id": "20260910T222042-3937",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222042-3937.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222042-3937.out.gz",
       "status": "ok",
       "events": 0,
       "claude_retained_pairs": 0,
@@ -710,7 +710,7 @@
     },
     {
       "recording_id": "20260910T222112-4100",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222112-4100.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222112-4100.out.gz",
       "status": "ok",
       "events": 10,
       "claude_retained_pairs": 4,
@@ -740,7 +740,7 @@
     },
     {
       "recording_id": "20260910T222131-4401",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222131-4401.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.out.gz",
       "status": "ok",
       "events": 5,
       "claude_retained_pairs": 0,
@@ -770,7 +770,7 @@
     },
     {
       "recording_id": "20260910T231934-3312",
-      "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T231934-3312.out.gz",
+      "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T231934-3312.out.gz",
       "status": "ok",
       "events": 9,
       "claude_retained_pairs": 2,
@@ -801,7 +801,7 @@
   ],
   "events": [
     {
-      "event_id": "38148365e903:20260910T155240-13114:shell:2",
+      "event_id": "8bae461d8d9d:20260910T155240-13114:shell:2",
       "student": {
         "student_id": "2406080205",
         "name": "周卓江"
@@ -825,8 +825,8 @@
       "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
       "related_event_id": null,
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T155240-13114.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T155240-13114.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T155240-13114.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T155240-13114.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 125,
         "observation": {
@@ -843,21 +843,21 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\logs\\events.jsonl",
             "line": 70,
             "ts": "2026-09-10T15:52:40+08:00",
             "epoch": 1789026760
           }
         ],
         "shell_ranges": {
-          "prompt_begin": 290,
+          "prompt_begin": 206,
           "echo_begin": 388,
           "echo_end": 394,
           "output_begin": 394,
           "output_end": 9983
         },
         "shell_decompressed_ranges": {
-          "prompt_begin": 415,
+          "prompt_begin": 331,
           "echo_begin": 513,
           "echo_end": 519,
           "output_begin": 519,
@@ -872,7 +872,7 @@
       "output_truncated": false
     },
     {
-      "event_id": "38148365e903:20260910T155351-13954:shell:3",
+      "event_id": "8bae461d8d9d:20260910T155351-13954:shell:3",
       "student": {
         "student_id": "2406080205",
         "name": "周卓江"
@@ -896,8 +896,8 @@
       "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
       "related_event_id": null,
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T155351-13954.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T155351-13954.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T155351-13954.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T155351-13954.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 125,
         "observation": {
@@ -914,21 +914,21 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\logs\\events.jsonl",
             "line": 75,
             "ts": "2026-09-10T15:53:51+08:00",
             "epoch": 1789026831
           }
         ],
         "shell_ranges": {
-          "prompt_begin": 517,
+          "prompt_begin": 433,
           "echo_begin": 615,
           "echo_end": 621,
           "output_begin": 621,
           "output_end": 17928
         },
         "shell_decompressed_ranges": {
-          "prompt_begin": 642,
+          "prompt_begin": 558,
           "echo_begin": 740,
           "echo_end": 746,
           "output_begin": 746,
@@ -943,7 +943,7 @@
       "output_truncated": false
     },
     {
-      "event_id": "38148365e903:20260910T155351-13954:region:2:qa:1:user",
+      "event_id": "8bae461d8d9d:20260910T155351-13954:region:2:qa:1:user",
       "student": {
         "student_id": "2406080205",
         "name": "周卓江"
@@ -965,10 +965,10 @@
       "observed_at": "2026-09-10T15:54:10.348680+08:00",
       "elapsed_seconds": 19.348680000000005,
       "observation_semantics": "最终保留问题文本首次完整显示；不是回车提交时间",
-      "related_event_id": "38148365e903:20260910T155351-13954:shell:3",
+      "related_event_id": "8bae461d8d9d:20260910T155351-13954:shell:3",
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T155351-13954.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T155351-13954.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T155351-13954.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T155351-13954.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 125,
         "observation": {
@@ -989,7 +989,7 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\logs\\events.jsonl",
             "line": 75,
             "ts": "2026-09-10T15:53:51+08:00",
             "epoch": 1789026831
@@ -997,7 +997,7 @@
         ],
         "region_number": 2,
         "region_body_byte_range": [
-          517,
+          433,
           17928
         ],
         "message_record_ids": [
@@ -1007,11 +1007,11 @@
       "absolute_time_resolution_seconds": 1,
       "uncertainty": [],
       "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
-      "qa_pair_id": "38148365e903:20260910T155351-13954:region:2:qa:1",
-      "claude_launch_event_id": "38148365e903:20260910T155351-13954:shell:3"
+      "qa_pair_id": "8bae461d8d9d:20260910T155351-13954:region:2:qa:1",
+      "claude_launch_event_id": "8bae461d8d9d:20260910T155351-13954:shell:3"
     },
     {
-      "event_id": "38148365e903:20260910T155351-13954:region:2:qa:1:reply",
+      "event_id": "8bae461d8d9d:20260910T155351-13954:region:2:qa:1:reply",
       "student": {
         "student_id": "2406080205",
         "name": "周卓江"
@@ -1033,10 +1033,10 @@
       "observed_at": "2026-09-10T15:54:11.678805+08:00",
       "elapsed_seconds": 20.678805000000004,
       "observation_semantics": "关联回复正文首次显示；不是后台开始生成或完成时间",
-      "related_event_id": "38148365e903:20260910T155351-13954:region:2:qa:1:user",
+      "related_event_id": "8bae461d8d9d:20260910T155351-13954:region:2:qa:1:user",
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T155351-13954.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T155351-13954.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T155351-13954.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T155351-13954.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 125,
         "observation": {
@@ -1062,7 +1062,7 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\logs\\events.jsonl",
             "line": 75,
             "ts": "2026-09-10T15:53:51+08:00",
             "epoch": 1789026831
@@ -1070,7 +1070,7 @@
         ],
         "region_number": 2,
         "region_body_byte_range": [
-          517,
+          433,
           17928
         ],
         "message_record_ids": [
@@ -1103,15 +1103,15 @@
       "absolute_time_resolution_seconds": 1,
       "uncertainty": [],
       "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
-      "qa_pair_id": "38148365e903:20260910T155351-13954:region:2:qa:1",
-      "claude_launch_event_id": "38148365e903:20260910T155351-13954:shell:3",
+      "qa_pair_id": "8bae461d8d9d:20260910T155351-13954:region:2:qa:1",
+      "claude_launch_event_id": "8bae461d8d9d:20260910T155351-13954:shell:3",
       "first_observed_excerpt": "你好！",
       "final_text_first_observed_at": "2026-09-10T15:54:12.085256+08:00",
       "final_text_first_elapsed_seconds": 21.085256000000005,
       "final_text_observation_semantics": "最终保留正文首次完整匹配的观察时间；不是后台完成事件，可能晚于下一轮问题"
     },
     {
-      "event_id": "38148365e903:20260910T222112-4100:shell:2",
+      "event_id": "8bae461d8d9d:20260910T222112-4100:shell:2",
       "student": {
         "student_id": "2406080205",
         "name": "周卓江"
@@ -1135,8 +1135,8 @@
       "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
       "related_event_id": null,
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222112-4100.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222112-4100.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222112-4100.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222112-4100.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 125,
         "observation": {
@@ -1153,25 +1153,25 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\logs\\events.jsonl",
             "line": 125,
             "ts": "2026-09-10T22:21:12+08:00",
             "epoch": 1789050072
           }
         ],
         "shell_ranges": {
-          "prompt_begin": 284,
+          "prompt_begin": 200,
           "echo_begin": 382,
           "echo_end": 388,
           "output_begin": 388,
-          "output_end": 195662
+          "output_end": 195569
         },
         "shell_decompressed_ranges": {
-          "prompt_begin": 409,
+          "prompt_begin": 325,
           "echo_begin": 507,
           "echo_end": 513,
           "output_begin": 513,
-          "output_end": 195787
+          "output_end": 195694
         }
       },
       "absolute_time_resolution_seconds": 1,
@@ -1182,7 +1182,7 @@
       "output_truncated": false
     },
     {
-      "event_id": "38148365e903:20260910T222112-4100:region:2:qa:1:user",
+      "event_id": "8bae461d8d9d:20260910T222112-4100:region:2:qa:1:user",
       "student": {
         "student_id": "2406080205",
         "name": "周卓江"
@@ -1204,10 +1204,10 @@
       "observed_at": "2026-09-10T22:23:17.961003+08:00",
       "elapsed_seconds": 125.961003,
       "observation_semantics": "最终保留问题文本首次完整显示；不是回车提交时间",
-      "related_event_id": "38148365e903:20260910T222112-4100:shell:2",
+      "related_event_id": "8bae461d8d9d:20260910T222112-4100:shell:2",
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222112-4100.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222112-4100.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222112-4100.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222112-4100.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 125,
         "observation": {
@@ -1242,7 +1242,7 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\logs\\events.jsonl",
             "line": 125,
             "ts": "2026-09-10T22:21:12+08:00",
             "epoch": 1789050072
@@ -1250,7 +1250,7 @@
         ],
         "region_number": 2,
         "region_body_byte_range": [
-          284,
+          200,
           195777
         ],
         "message_record_ids": [
@@ -1260,11 +1260,11 @@
       "absolute_time_resolution_seconds": 1,
       "uncertainty": [],
       "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
-      "qa_pair_id": "38148365e903:20260910T222112-4100:region:2:qa:1",
-      "claude_launch_event_id": "38148365e903:20260910T222112-4100:shell:2"
+      "qa_pair_id": "8bae461d8d9d:20260910T222112-4100:region:2:qa:1",
+      "claude_launch_event_id": "8bae461d8d9d:20260910T222112-4100:shell:2"
     },
     {
-      "event_id": "38148365e903:20260910T222112-4100:region:2:qa:1:reply",
+      "event_id": "8bae461d8d9d:20260910T222112-4100:region:2:qa:1:reply",
       "student": {
         "student_id": "2406080205",
         "name": "周卓江"
@@ -1286,10 +1286,10 @@
       "observed_at": "2026-09-10T22:23:22.863928+08:00",
       "elapsed_seconds": 130.86392800000002,
       "observation_semantics": "关联回复正文首次显示；不是后台开始生成或完成时间",
-      "related_event_id": "38148365e903:20260910T222112-4100:region:2:qa:1:user",
+      "related_event_id": "8bae461d8d9d:20260910T222112-4100:region:2:qa:1:user",
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222112-4100.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222112-4100.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222112-4100.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222112-4100.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 125,
         "observation": {
@@ -1316,7 +1316,7 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\logs\\events.jsonl",
             "line": 125,
             "ts": "2026-09-10T22:21:12+08:00",
             "epoch": 1789050072
@@ -1324,7 +1324,7 @@
         ],
         "region_number": 2,
         "region_body_byte_range": [
-          284,
+          200,
           195777
         ],
         "message_record_ids": [
@@ -1359,15 +1359,15 @@
       "absolute_time_resolution_seconds": 1,
       "uncertainty": [],
       "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
-      "qa_pair_id": "38148365e903:20260910T222112-4100:region:2:qa:1",
-      "claude_launch_event_id": "38148365e903:20260910T222112-4100:shell:2",
+      "qa_pair_id": "8bae461d8d9d:20260910T222112-4100:region:2:qa:1",
+      "claude_launch_event_id": "8bae461d8d9d:20260910T222112-4100:shell:2",
       "first_observed_excerpt": "这一串其实分五类，你在 lab0 里天天真正会用到的是第一类 + man，其余的先认个脸。\n\n目录与文件",
       "final_text_first_observed_at": "2026-09-10T22:23:25.260372+08:00",
       "final_text_first_elapsed_seconds": 133.260372,
       "final_text_observation_semantics": "最终保留正文首次完整匹配的观察时间；不是后台完成事件，可能晚于下一轮问题"
     },
     {
-      "event_id": "38148365e903:20260910T222112-4100:region:2:qa:2:user",
+      "event_id": "8bae461d8d9d:20260910T222112-4100:region:2:qa:2:user",
       "student": {
         "student_id": "2406080205",
         "name": "周卓江"
@@ -1389,10 +1389,10 @@
       "observed_at": "2026-09-10T22:26:08.329844+08:00",
       "elapsed_seconds": 296.32984400000004,
       "observation_semantics": "最终保留问题文本首次完整显示；不是回车提交时间",
-      "related_event_id": "38148365e903:20260910T222112-4100:shell:2",
+      "related_event_id": "8bae461d8d9d:20260910T222112-4100:shell:2",
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222112-4100.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222112-4100.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222112-4100.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222112-4100.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 125,
         "observation": {
@@ -1413,7 +1413,7 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\logs\\events.jsonl",
             "line": 125,
             "ts": "2026-09-10T22:21:12+08:00",
             "epoch": 1789050072
@@ -1421,7 +1421,7 @@
         ],
         "region_number": 2,
         "region_body_byte_range": [
-          284,
+          200,
           195777
         ],
         "message_record_ids": [
@@ -1431,11 +1431,11 @@
       "absolute_time_resolution_seconds": 1,
       "uncertainty": [],
       "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
-      "qa_pair_id": "38148365e903:20260910T222112-4100:region:2:qa:2",
-      "claude_launch_event_id": "38148365e903:20260910T222112-4100:shell:2"
+      "qa_pair_id": "8bae461d8d9d:20260910T222112-4100:region:2:qa:2",
+      "claude_launch_event_id": "8bae461d8d9d:20260910T222112-4100:shell:2"
     },
     {
-      "event_id": "38148365e903:20260910T222112-4100:region:2:qa:2:reply",
+      "event_id": "8bae461d8d9d:20260910T222112-4100:region:2:qa:2:reply",
       "student": {
         "student_id": "2406080205",
         "name": "周卓江"
@@ -1457,10 +1457,10 @@
       "observed_at": "2026-09-10T22:26:28.733524+08:00",
       "elapsed_seconds": 316.7335240000001,
       "observation_semantics": "关联回复正文首次显示；不是后台开始生成或完成时间",
-      "related_event_id": "38148365e903:20260910T222112-4100:region:2:qa:2:user",
+      "related_event_id": "8bae461d8d9d:20260910T222112-4100:region:2:qa:2:user",
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222112-4100.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222112-4100.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222112-4100.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222112-4100.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 125,
         "observation": {
@@ -1483,7 +1483,7 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\logs\\events.jsonl",
             "line": 125,
             "ts": "2026-09-10T22:21:12+08:00",
             "epoch": 1789050072
@@ -1491,7 +1491,7 @@
         ],
         "region_number": 2,
         "region_body_byte_range": [
-          284,
+          200,
           195777
         ],
         "message_record_ids": [
@@ -1525,15 +1525,15 @@
       "absolute_time_resolution_seconds": 1,
       "uncertainty": [],
       "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
-      "qa_pair_id": "38148365e903:20260910T222112-4100:region:2:qa:2",
-      "claude_launch_event_id": "38148365e903:20260910T222112-4100:shell:2",
+      "qa_pair_id": "8bae461d8d9d:20260910T222112-4100:region:2:qa:2",
+      "claude_launch_event_id": "8bae461d8d9d:20260910T222112-4100:shell:2",
       "first_observed_excerpt": "一句话：编译器本身是一个程序，它也得先在某台机器上跑起来；\"交叉\"说的是——它跑在你的 x86 上，但吐出来的东西是给另一种 CPU 看的。\n\n大白话版",
       "final_text_first_observed_at": "2026-09-10T22:26:31.699605+08:00",
       "final_text_first_elapsed_seconds": 319.69960500000013,
       "final_text_observation_semantics": "最终保留正文首次完整匹配的观察时间；不是后台完成事件，可能晚于下一轮问题"
     },
     {
-      "event_id": "38148365e903:20260910T222131-4401:shell:2",
+      "event_id": "8bae461d8d9d:20260910T222131-4401:shell:2",
       "student": {
         "student_id": "2406080205",
         "name": "周卓江"
@@ -1557,8 +1557,8 @@
       "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
       "related_event_id": null,
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222131-4401.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222131-4401.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 125,
         "observation": {
@@ -1575,25 +1575,25 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\logs\\events.jsonl",
             "line": 127,
             "ts": "2026-09-10T22:21:31+08:00",
             "epoch": 1789050091
           }
         ],
         "shell_ranges": {
-          "prompt_begin": 274,
+          "prompt_begin": 190,
           "echo_begin": 372,
           "echo_end": 382,
           "output_begin": 382,
-          "output_end": 918
+          "output_end": 834
         },
         "shell_decompressed_ranges": {
-          "prompt_begin": 399,
+          "prompt_begin": 315,
           "echo_begin": 497,
           "echo_end": 507,
           "output_begin": 507,
-          "output_end": 1043
+          "output_end": 959
         }
       },
       "absolute_time_resolution_seconds": 1,
@@ -1613,7 +1613,7 @@
       "output_truncated": false
     },
     {
-      "event_id": "38148365e903:20260910T222131-4401:shell:3",
+      "event_id": "8bae461d8d9d:20260910T222131-4401:shell:3",
       "student": {
         "student_id": "2406080205",
         "name": "周卓江"
@@ -1637,8 +1637,8 @@
       "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
       "related_event_id": null,
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222131-4401.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222131-4401.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 125,
         "observation": {
@@ -1655,25 +1655,25 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\logs\\events.jsonl",
             "line": 127,
             "ts": "2026-09-10T22:21:31+08:00",
             "epoch": 1789050091
           }
         ],
         "shell_ranges": {
-          "prompt_begin": 918,
+          "prompt_begin": 834,
           "echo_begin": 1016,
           "echo_end": 1024,
           "output_begin": 1024,
-          "output_end": 22256
+          "output_end": 22172
         },
         "shell_decompressed_ranges": {
-          "prompt_begin": 1043,
+          "prompt_begin": 959,
           "echo_begin": 1141,
           "echo_end": 1149,
           "output_begin": 1149,
-          "output_end": 22381
+          "output_end": 22297
         }
       },
       "absolute_time_resolution_seconds": 1,
@@ -1830,7 +1830,7 @@
       "output_truncated": false
     },
     {
-      "event_id": "38148365e903:20260910T222131-4401:shell:4",
+      "event_id": "8bae461d8d9d:20260910T222131-4401:shell:4",
       "student": {
         "student_id": "2406080205",
         "name": "周卓江"
@@ -1854,8 +1854,8 @@
       "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
       "related_event_id": null,
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222131-4401.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222131-4401.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 125,
         "observation": {
@@ -1872,25 +1872,25 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\logs\\events.jsonl",
             "line": 127,
             "ts": "2026-09-10T22:21:31+08:00",
             "epoch": 1789050091
           }
         ],
         "shell_ranges": {
-          "prompt_begin": 22256,
+          "prompt_begin": 22172,
           "echo_begin": 22354,
           "echo_end": 22361,
           "output_begin": 22361,
-          "output_end": 22658
+          "output_end": 22574
         },
         "shell_decompressed_ranges": {
-          "prompt_begin": 22381,
+          "prompt_begin": 22297,
           "echo_begin": 22479,
           "echo_end": 22486,
           "output_begin": 22486,
-          "output_end": 22783
+          "output_end": 22699
         }
       },
       "absolute_time_resolution_seconds": 1,
@@ -1908,7 +1908,7 @@
       "output_truncated": false
     },
     {
-      "event_id": "38148365e903:20260910T222131-4401:shell:5",
+      "event_id": "8bae461d8d9d:20260910T222131-4401:shell:5",
       "student": {
         "student_id": "2406080205",
         "name": "周卓江"
@@ -1932,8 +1932,8 @@
       "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
       "related_event_id": null,
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222131-4401.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222131-4401.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 125,
         "observation": {
@@ -1950,21 +1950,21 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\logs\\events.jsonl",
             "line": 127,
             "ts": "2026-09-10T22:21:31+08:00",
             "epoch": 1789050091
           }
         ],
         "shell_ranges": {
-          "prompt_begin": 22658,
+          "prompt_begin": 22574,
           "echo_begin": 22756,
           "echo_end": 22764,
           "output_begin": 22764,
           "output_end": 29542
         },
         "shell_decompressed_ranges": {
-          "prompt_begin": 22783,
+          "prompt_begin": 22699,
           "echo_begin": 22881,
           "echo_end": 22889,
           "output_begin": 22889,
@@ -2131,7 +2131,7 @@
       "output_truncated": false
     },
     {
-      "event_id": "38148365e903:20260910T222112-4100:region:2:qa:3:user",
+      "event_id": "8bae461d8d9d:20260910T222112-4100:region:2:qa:3:user",
       "student": {
         "student_id": "2406080205",
         "name": "周卓江"
@@ -2153,10 +2153,10 @@
       "observed_at": "2026-09-10T22:37:43.025304+08:00",
       "elapsed_seconds": 991.0253040000005,
       "observation_semantics": "最终保留问题文本首次完整显示；不是回车提交时间",
-      "related_event_id": "38148365e903:20260910T222112-4100:shell:2",
+      "related_event_id": "8bae461d8d9d:20260910T222112-4100:shell:2",
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222112-4100.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222112-4100.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222112-4100.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222112-4100.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 125,
         "observation": {
@@ -2177,7 +2177,7 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\logs\\events.jsonl",
             "line": 125,
             "ts": "2026-09-10T22:21:12+08:00",
             "epoch": 1789050072
@@ -2185,7 +2185,7 @@
         ],
         "region_number": 2,
         "region_body_byte_range": [
-          284,
+          200,
           195777
         ],
         "message_record_ids": [
@@ -2195,11 +2195,11 @@
       "absolute_time_resolution_seconds": 1,
       "uncertainty": [],
       "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
-      "qa_pair_id": "38148365e903:20260910T222112-4100:region:2:qa:3",
-      "claude_launch_event_id": "38148365e903:20260910T222112-4100:shell:2"
+      "qa_pair_id": "8bae461d8d9d:20260910T222112-4100:region:2:qa:3",
+      "claude_launch_event_id": "8bae461d8d9d:20260910T222112-4100:shell:2"
     },
     {
-      "event_id": "38148365e903:20260910T222112-4100:region:2:qa:3:reply",
+      "event_id": "8bae461d8d9d:20260910T222112-4100:region:2:qa:3:reply",
       "student": {
         "student_id": "2406080205",
         "name": "周卓江"
@@ -2221,10 +2221,10 @@
       "observed_at": "2026-09-10T22:37:53.010717+08:00",
       "elapsed_seconds": 1001.0107170000007,
       "observation_semantics": "关联回复正文首次显示；不是后台开始生成或完成时间",
-      "related_event_id": "38148365e903:20260910T222112-4100:region:2:qa:3:user",
+      "related_event_id": "8bae461d8d9d:20260910T222112-4100:region:2:qa:3:user",
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222112-4100.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222112-4100.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222112-4100.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222112-4100.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 125,
         "observation": {
@@ -2247,7 +2247,7 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\logs\\events.jsonl",
             "line": 125,
             "ts": "2026-09-10T22:21:12+08:00",
             "epoch": 1789050072
@@ -2255,7 +2255,7 @@
         ],
         "region_number": 2,
         "region_body_byte_range": [
-          284,
+          200,
           195777
         ],
         "message_record_ids": [
@@ -2289,15 +2289,15 @@
       "absolute_time_resolution_seconds": 1,
       "uncertainty": [],
       "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
-      "qa_pair_id": "38148365e903:20260910T222112-4100:region:2:qa:3",
-      "claude_launch_event_id": "38148365e903:20260910T222112-4100:shell:2",
+      "qa_pair_id": "8bae461d8d9d:20260910T222112-4100:region:2:qa:3",
+      "claude_launch_event_id": "8bae461d8d9d:20260910T222112-4100:shell:2",
       "first_observed_excerpt": "一句话：几乎可以这么理解——对 xv6 内核来说，它就是一块能读能写的硬盘；但它在物理上并不存在，是 QEMU 用你磁盘上的一个普通文件演出来的。\n\n把名字拆成两半",
       "final_text_first_observed_at": "2026-09-10T22:37:57.028462+08:00",
       "final_text_first_elapsed_seconds": 1005.0284620000007,
       "final_text_observation_semantics": "最终保留正文首次完整匹配的观察时间；不是后台完成事件，可能晚于下一轮问题"
     },
     {
-      "event_id": "38148365e903:20260910T222112-4100:region:2:qa:4:user",
+      "event_id": "8bae461d8d9d:20260910T222112-4100:region:2:qa:4:user",
       "student": {
         "student_id": "2406080205",
         "name": "周卓江"
@@ -2319,10 +2319,10 @@
       "observed_at": "2026-09-10T22:39:42.694650+08:00",
       "elapsed_seconds": 1110.6946500000001,
       "observation_semantics": "最终保留问题文本首次完整显示；不是回车提交时间",
-      "related_event_id": "38148365e903:20260910T222112-4100:shell:2",
+      "related_event_id": "8bae461d8d9d:20260910T222112-4100:shell:2",
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222112-4100.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222112-4100.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222112-4100.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222112-4100.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 125,
         "observation": {
@@ -2343,7 +2343,7 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\logs\\events.jsonl",
             "line": 125,
             "ts": "2026-09-10T22:21:12+08:00",
             "epoch": 1789050072
@@ -2351,7 +2351,7 @@
         ],
         "region_number": 2,
         "region_body_byte_range": [
-          284,
+          200,
           195777
         ],
         "message_record_ids": [
@@ -2361,11 +2361,11 @@
       "absolute_time_resolution_seconds": 1,
       "uncertainty": [],
       "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
-      "qa_pair_id": "38148365e903:20260910T222112-4100:region:2:qa:4",
-      "claude_launch_event_id": "38148365e903:20260910T222112-4100:shell:2"
+      "qa_pair_id": "8bae461d8d9d:20260910T222112-4100:region:2:qa:4",
+      "claude_launch_event_id": "8bae461d8d9d:20260910T222112-4100:shell:2"
     },
     {
-      "event_id": "38148365e903:20260910T222112-4100:region:2:qa:4:reply",
+      "event_id": "8bae461d8d9d:20260910T222112-4100:region:2:qa:4:reply",
       "student": {
         "student_id": "2406080205",
         "name": "周卓江"
@@ -2387,10 +2387,10 @@
       "observed_at": "2026-09-10T22:39:53.094780+08:00",
       "elapsed_seconds": 1121.0947799999994,
       "observation_semantics": "关联回复正文首次显示；不是后台开始生成或完成时间",
-      "related_event_id": "38148365e903:20260910T222112-4100:region:2:qa:4:user",
+      "related_event_id": "8bae461d8d9d:20260910T222112-4100:region:2:qa:4:user",
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222112-4100.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T222112-4100.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222112-4100.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222112-4100.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 125,
         "observation": {
@@ -2419,7 +2419,7 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\logs\\events.jsonl",
             "line": 125,
             "ts": "2026-09-10T22:21:12+08:00",
             "epoch": 1789050072
@@ -2427,7 +2427,7 @@
         ],
         "region_number": 2,
         "region_body_byte_range": [
-          284,
+          200,
           195777
         ],
         "message_record_ids": [
@@ -2457,15 +2457,15 @@
       "absolute_time_resolution_seconds": 1,
       "uncertainty": [],
       "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
-      "qa_pair_id": "38148365e903:20260910T222112-4100:region:2:qa:4",
-      "claude_launch_event_id": "38148365e903:20260910T222112-4100:shell:2",
+      "qa_pair_id": "8bae461d8d9d:20260910T222112-4100:region:2:qa:4",
+      "claude_launch_event_id": "8bae461d8d9d:20260910T222112-4100:shell:2",
       "first_observed_excerpt": "明白，记下了，之后不再提环境。",
       "final_text_first_observed_at": "2026-09-10T22:39:53.618663+08:00",
       "final_text_first_elapsed_seconds": 1121.6186629999993,
       "final_text_observation_semantics": "最终保留正文首次完整匹配的观察时间；不是后台完成事件，可能晚于下一轮问题"
     },
     {
-      "event_id": "38148365e903:20260910T231934-3312:shell:4",
+      "event_id": "8bae461d8d9d:20260910T231934-3312:shell:4",
       "student": {
         "student_id": "2406080205",
         "name": "周卓江"
@@ -2489,8 +2489,8 @@
       "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
       "related_event_id": null,
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T231934-3312.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T231934-3312.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T231934-3312.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T231934-3312.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 124,
         "observation": {
@@ -2507,25 +2507,25 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\logs\\events.jsonl",
             "line": 166,
             "ts": "2026-09-10T23:19:34+08:00",
             "epoch": 1789053574
           }
         ],
         "shell_ranges": {
-          "prompt_begin": 962,
+          "prompt_begin": 878,
           "echo_begin": 1060,
           "echo_end": 1071,
           "output_begin": 1071,
-          "output_end": 5655
+          "output_end": 5571
         },
         "shell_decompressed_ranges": {
-          "prompt_begin": 1086,
+          "prompt_begin": 1002,
           "echo_begin": 1184,
           "echo_end": 1195,
           "output_begin": 1195,
-          "output_end": 5779
+          "output_end": 5695
         }
       },
       "absolute_time_resolution_seconds": 1,
@@ -2536,7 +2536,7 @@
       "output_truncated": false
     },
     {
-      "event_id": "38148365e903:20260910T231934-3312:shell:5",
+      "event_id": "8bae461d8d9d:20260910T231934-3312:shell:5",
       "student": {
         "student_id": "2406080205",
         "name": "周卓江"
@@ -2560,8 +2560,8 @@
       "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
       "related_event_id": null,
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T231934-3312.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T231934-3312.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T231934-3312.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T231934-3312.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 124,
         "observation": {
@@ -2578,25 +2578,25 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\logs\\events.jsonl",
             "line": 166,
             "ts": "2026-09-10T23:19:34+08:00",
             "epoch": 1789053574
           }
         ],
         "shell_ranges": {
-          "prompt_begin": 5655,
+          "prompt_begin": 5571,
           "echo_begin": 5753,
           "echo_end": 5769,
           "output_begin": 5769,
-          "output_end": 44188
+          "output_end": 44095
         },
         "shell_decompressed_ranges": {
-          "prompt_begin": 5779,
+          "prompt_begin": 5695,
           "echo_begin": 5877,
           "echo_end": 5893,
           "output_begin": 5893,
-          "output_end": 44312
+          "output_end": 44219
         }
       },
       "absolute_time_resolution_seconds": 1,
@@ -2607,7 +2607,7 @@
       "output_truncated": false
     },
     {
-      "event_id": "38148365e903:20260910T231934-3312:region:2:qa:1:user",
+      "event_id": "8bae461d8d9d:20260910T231934-3312:region:2:qa:1:user",
       "student": {
         "student_id": "2406080205",
         "name": "周卓江"
@@ -2629,10 +2629,10 @@
       "observed_at": "2026-09-10T23:21:46.270964+08:00",
       "elapsed_seconds": 132.27096400000005,
       "observation_semantics": "最终保留问题文本首次完整显示；不是回车提交时间",
-      "related_event_id": "38148365e903:20260910T231934-3312:shell:5",
+      "related_event_id": "8bae461d8d9d:20260910T231934-3312:shell:5",
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T231934-3312.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T231934-3312.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T231934-3312.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T231934-3312.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 124,
         "observation": {
@@ -2653,7 +2653,7 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\logs\\events.jsonl",
             "line": 166,
             "ts": "2026-09-10T23:19:34+08:00",
             "epoch": 1789053574
@@ -2661,7 +2661,7 @@
         ],
         "region_number": 2,
         "region_body_byte_range": [
-          962,
+          878,
           44511
         ],
         "message_record_ids": [
@@ -2671,11 +2671,11 @@
       "absolute_time_resolution_seconds": 1,
       "uncertainty": [],
       "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
-      "qa_pair_id": "38148365e903:20260910T231934-3312:region:2:qa:1",
-      "claude_launch_event_id": "38148365e903:20260910T231934-3312:shell:5"
+      "qa_pair_id": "8bae461d8d9d:20260910T231934-3312:region:2:qa:1",
+      "claude_launch_event_id": "8bae461d8d9d:20260910T231934-3312:shell:5"
     },
     {
-      "event_id": "38148365e903:20260910T231934-3312:region:2:qa:1:reply",
+      "event_id": "8bae461d8d9d:20260910T231934-3312:region:2:qa:1:reply",
       "student": {
         "student_id": "2406080205",
         "name": "周卓江"
@@ -2697,10 +2697,10 @@
       "observed_at": "2026-09-10T23:21:47.773742+08:00",
       "elapsed_seconds": 133.77374200000003,
       "observation_semantics": "关联回复正文首次显示；不是后台开始生成或完成时间",
-      "related_event_id": "38148365e903:20260910T231934-3312:region:2:qa:1:user",
+      "related_event_id": "8bae461d8d9d:20260910T231934-3312:region:2:qa:1:user",
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T231934-3312.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T231934-3312.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T231934-3312.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T231934-3312.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 124,
         "observation": {
@@ -2727,7 +2727,7 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\logs\\events.jsonl",
             "line": 166,
             "ts": "2026-09-10T23:19:34+08:00",
             "epoch": 1789053574
@@ -2735,7 +2735,7 @@
         ],
         "region_number": 2,
         "region_body_byte_range": [
-          962,
+          878,
           44511
         ],
         "message_record_ids": [
@@ -2769,15 +2769,15 @@
       "absolute_time_resolution_seconds": 1,
       "uncertainty": [],
       "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
-      "qa_pair_id": "38148365e903:20260910T231934-3312:region:2:qa:1",
-      "claude_launch_event_id": "38148365e903:20260910T231934-3312:shell:5",
+      "qa_pair_id": "8bae461d8d9d:20260910T231934-3312:region:2:qa:1",
+      "claude_launch_event_id": "8bae461d8d9d:20260910T231934-3312:shell:5",
       "first_observed_excerpt": "你好！收到，不回复。",
       "final_text_first_observed_at": "2026-09-10T23:21:47.858567+08:00",
       "final_text_first_elapsed_seconds": 133.85856700000002,
       "final_text_observation_semantics": "最终保留正文首次完整匹配的观察时间；不是后台完成事件，可能晚于下一轮问题"
     },
     {
-      "event_id": "38148365e903:20260910T231934-3312:region:2:qa:2:user",
+      "event_id": "8bae461d8d9d:20260910T231934-3312:region:2:qa:2:user",
       "student": {
         "student_id": "2406080205",
         "name": "周卓江"
@@ -2799,10 +2799,10 @@
       "observed_at": "2026-09-10T23:22:09.145091+08:00",
       "elapsed_seconds": 155.14509100000004,
       "observation_semantics": "最终保留问题文本首次完整显示；不是回车提交时间",
-      "related_event_id": "38148365e903:20260910T231934-3312:shell:5",
+      "related_event_id": "8bae461d8d9d:20260910T231934-3312:shell:5",
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T231934-3312.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T231934-3312.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T231934-3312.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T231934-3312.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 124,
         "observation": {
@@ -2823,7 +2823,7 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\logs\\events.jsonl",
             "line": 166,
             "ts": "2026-09-10T23:19:34+08:00",
             "epoch": 1789053574
@@ -2831,7 +2831,7 @@
         ],
         "region_number": 2,
         "region_body_byte_range": [
-          962,
+          878,
           44511
         ],
         "message_record_ids": [
@@ -2841,11 +2841,11 @@
       "absolute_time_resolution_seconds": 1,
       "uncertainty": [],
       "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
-      "qa_pair_id": "38148365e903:20260910T231934-3312:region:2:qa:2",
-      "claude_launch_event_id": "38148365e903:20260910T231934-3312:shell:5"
+      "qa_pair_id": "8bae461d8d9d:20260910T231934-3312:region:2:qa:2",
+      "claude_launch_event_id": "8bae461d8d9d:20260910T231934-3312:shell:5"
     },
     {
-      "event_id": "38148365e903:20260910T231934-3312:region:2:qa:2:reply",
+      "event_id": "8bae461d8d9d:20260910T231934-3312:region:2:qa:2:reply",
       "student": {
         "student_id": "2406080205",
         "name": "周卓江"
@@ -2867,10 +2867,10 @@
       "observed_at": "2026-09-10T23:22:15.559236+08:00",
       "elapsed_seconds": 161.5592360000001,
       "observation_semantics": "关联回复正文首次显示；不是后台开始生成或完成时间",
-      "related_event_id": "38148365e903:20260910T231934-3312:region:2:qa:2:user",
+      "related_event_id": "8bae461d8d9d:20260910T231934-3312:region:2:qa:2:user",
       "source": {
-        "out": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T231934-3312.out.gz",
-        "tim": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/term/20260910T231934-3312.tim.gz",
+        "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T231934-3312.out.gz",
+        "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T231934-3312.tim.gz",
         "time_source": "script_header_plus_timing",
         "header_bytes": 124,
         "observation": {
@@ -2893,7 +2893,7 @@
         },
         "session_start": [
           {
-            "file": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080205-周卓江-20260910-2322/logs/events.jsonl",
+            "file": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\logs\\events.jsonl",
             "line": 166,
             "ts": "2026-09-10T23:19:34+08:00",
             "epoch": 1789053574
@@ -2901,7 +2901,7 @@
         ],
         "region_number": 2,
         "region_body_byte_range": [
-          962,
+          878,
           44511
         ],
         "message_record_ids": [
@@ -2935,8 +2935,8 @@
       "absolute_time_resolution_seconds": 1,
       "uncertainty": [],
       "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
-      "qa_pair_id": "38148365e903:20260910T231934-3312:region:2:qa:2",
-      "claude_launch_event_id": "38148365e903:20260910T231934-3312:shell:5",
+      "qa_pair_id": "8bae461d8d9d:20260910T231934-3312:region:2:qa:2",
+      "claude_launch_event_id": "8bae461d8d9d:20260910T231934-3312:shell:5",
       "first_observed_excerpt": "lab0 是整套实验的环境搭建章：不挖空、不改代码、不要求读懂 xv6。它只有一件事——把 xv6-k210 在 QEMU 里跑起来，直到你看见 shell 提示符 -> / $。\n\n它为什么单独成一章",
       "final_text_first_observed_at": "2026-09-10T23:22:16.993623+08:00",
       "final_text_first_elapsed_seconds": 162.99362300000007,

@@ -5,6 +5,7 @@ import io
 import json
 from pathlib import Path
 import tempfile
+import tracemalloc
 import unittest
 from unittest import mock
 import replay_term_qa as app
@@ -51,6 +52,125 @@ class BatchTests(unittest.TestCase):
         pairs = app.extract_claude_session(str(out), str(tim))[1]
         self.assertEqual(pairs, [{'user': '分析 Makefile', 'claude': '最终回答'}])
         self.assertEqual(app.read_term(out)[1], '2026-09-10 22:21:12+08:00')
+    def test_headerless_recording_keeps_first_command_in_reports_and_timeline(self):
+        root, output = self.root / 'input', self.root / 'output'
+        term = root / '123-无头-20260911-2046' / 'term'
+        body = (PROMPT + 'echo first\r\nfirst output\r\n').encode('utf-8')
+        term.mkdir(parents=True)
+        (term / 'headerless.out.gz').write_bytes(gzip.compress(body))
+        (term / 'headerless.tim.gz').write_bytes(gzip.compress(f'0.1 {len(body)}\n'.encode('ascii')))
+
+        self.assertEqual(self.run_app(root, output), 0)
+        report = (output / '无头' / app.lab_report_paths('lab0')[0]).read_text(encoding='utf-8')
+        timeline = json.loads((output / '无头' / '实验过程时间线' / 'timeline_lab0.json').read_text(encoding='utf-8'))
+        self.assertIn('echo first', report)
+        self.assertIn('echo first', [event['content'] for event in timeline['events']])
+    def test_plain_bash_prompt_is_extracted_and_classified(self):
+        root, output = self.root / 'input', self.root / 'output'
+        term = root / '123-普通提示符-20260911-2046' / 'term'
+        recording(term, chunks=['student@host:~/lab3$ echo ordinary\r\nordinary\r\n'])
+
+        self.assertEqual(self.run_app(root, output), 0)
+        report = (output / '普通提示符' / app.lab_report_paths('lab3')[0]).read_text(encoding='utf-8')
+        timeline = json.loads((output / '普通提示符' / '实验过程时间线' / 'timeline_lab3.json').read_text(encoding='utf-8'))
+        self.assertIn('echo ordinary', report)
+        self.assertIn('echo ordinary', [event['content'] for event in timeline['events']])
+
+    def test_osc_prefix_before_prompt_preserves_command_and_lab(self):
+        root, output = self.root / 'input', self.root / 'output'
+        term = root / '123-OSC提示符-20260911-2046' / 'term'
+        prompt = PROMPT.replace('lab0', 'lab2')
+        chunks = ['\x1b]0: student@host ~/lab2\x07' + prompt + 'echo OSC_OK\r\nOSC_OK\r\n']
+        recording(term, chunks=chunks)
+
+        self.assertEqual(self.run_app(root, output), 0)
+        report = (output / 'OSC提示符' / app.lab_report_paths('lab2')[0]).read_text(encoding='utf-8')
+        timeline = json.loads((output / 'OSC提示符' / '实验过程时间线' /
+                               'timeline_lab2.json').read_text(encoding='utf-8'))
+        self.assertIn('echo OSC_OK', report)
+        self.assertIn('echo OSC_OK', [event['content'] for event in timeline['events']])
+
+    def test_evidence_without_paste_markers_has_bounded_memory(self):
+        body = b'x' * (512 * 1024)
+        tracemalloc.start()
+        try:
+            app.extract_session('large.out.gz', '', source_data=('', '', 80, 24, body), evidence=[])
+            _, peak = tracemalloc.get_traced_memory()
+        finally:
+            tracemalloc.stop()
+        self.assertLess(peak, len(body) * 8)
+
+    def test_mixed_prompt_forms_preserve_all_commands_and_lab_regions(self):
+        root, output = self.root / 'input', self.root / 'output'
+        term = root / '123-混合提示符-20260911-2046' / 'term'
+        chunks = [
+            PROMPT + 'echo colored\r\ncolored\r\n',
+            'student@host:~/lab3$ echo ordinary\r\nordinary\r\n',
+        ]
+        out, tim = recording(term, chunks=chunks)
+        body = b''.join(chunk.encode('utf-8') for chunk in chunks)
+
+        self.assertEqual([region['lab'] for region in app.split_lab_regions(body)], ['lab0', 'lab3'])
+        self.assertEqual(
+            [command['command'] for command in app.extract_session(str(out), str(tim))[2]],
+            ['echo colored', 'echo ordinary'],
+        )
+        self.assertEqual(self.run_app(root, output), 0)
+        timeline = json.loads((output / '混合提示符' / '实验过程时间线' /
+                               'timeline_lab3.json').read_text(encoding='utf-8'))
+        self.assertIn('echo ordinary', [event['content'] for event in timeline['events']])
+    def test_wide_character_wrap_does_not_insert_a_space(self):
+        first = 'a' * 78 + '中'
+        self.assertEqual(app.join_wrapped([first, '续'], 80), [first + '续'])
+    def test_incomplete_timing_keeps_commands_but_uses_unknown_time_everywhere(self):
+        root, output = self.root / 'input', self.root / 'output'
+        term = root / '123-计时-20260911-2046' / 'term'
+        _, tim = recording(term, chunks=[PROMPT + 'echo timing\r\ntiming\r\n'])
+        tim.write_bytes(gzip.compress(b'0.1 1\n'))
+
+        self.assertEqual(self.run_app(root, output), 0)
+        report = (output / '计时' / app.lab_report_paths('lab0')[0]).read_text(encoding='utf-8')
+        timeline = json.loads((output / '计时' / '实验过程时间线' / 'timeline_lab0.json').read_text(encoding='utf-8'))
+        shell = next(event for event in timeline['events'] if event['type'] == 'shell_command_observed')
+        self.assertIn('- 相对时间：未知', report)
+        self.assertIsNone(shell['elapsed_seconds'])
+        self.assertIn('timing_uncovered_tail', shell['uncertainty'])
+    def test_missing_or_empty_term_fails_without_writing_empty_student_artifacts(self):
+        for label, create_term in (('缺失目录', False), ('空目录', True)):
+            root = self.root / label / 'input'
+            student = root / f'123-{label}-20260911-2046'
+            if create_term:
+                (student / 'term').mkdir(parents=True)
+            else:
+                student.mkdir(parents=True)
+            for mode, args in (
+                ('default', ()),
+                ('timeline', ('--timeline-only',)),
+                ('reports', ('--no-timeline',)),
+            ):
+                output = self.root / label / f'output-{mode}'
+                self.assertEqual(self.run_app(root, output, *args), 1)
+                target = output / label
+                self.assertFalse(any((target / path).exists() for path in app.lab_report_paths('other')))
+                self.assertFalse((target / '实验过程时间线').exists())
+
+    def test_student_filter_without_match_fails_before_creating_output(self):
+        root, output = self.root / 'input', self.root / 'output'
+        recording(root / '123-学生-20260911-2046' / 'term')
+        with self.assertRaises(SystemExit) as exited:
+            self.run_app(root, output, '--student', 'not-found')
+        self.assertEqual(exited.exception.code, 2)
+        self.assertFalse(output.exists())
+
+    def test_timing_overflow_and_byte_boundaries_are_not_misattributed(self):
+        timing = self.root / 'overflow.tim.gz'
+        timing.write_bytes(gzip.compress(b'1e308 1\n1e308 1\n'))
+        self.assertEqual(app.read_timing_entries(timing, b'xx'), [])
+        self.assertIsNone(app.build_time_map(timing, b'xx'))
+        time_map = ([4, 8], [1.0, 3.0])
+        self.assertEqual(app.time_at(time_map, 3), 1.0)
+        self.assertEqual(app.time_at(time_map, 4), 3.0)
+        self.assertEqual(app.time_at(time_map, 8), 3.0)
     def test_unfinished_and_tool_permission(self):
         chunks = ['❯ 用户问题\r\n', '● Bash(ls)\r\n  ⎿ file\r\n',
                   'Do you want to proceed?\r\n❯ 1. Yes\r\n  2. No\r\n',
@@ -106,9 +226,10 @@ class BatchTests(unittest.TestCase):
         self.assertIn('### Turn 1', qa)
         self.assertIn('## Session 1：', qa)
         self.assertIn('- 对话轮次总数：1', qa)
-        before = {p: p.read_bytes() for p in output.rglob('*.md')}
+        before = {p: p.read_bytes() for p in output.rglob('*.md') if p != output / 'README.md'}
         self.assertEqual(self.run_app(root, output), 1)
-        self.assertEqual(before, {p: p.read_bytes() for p in output.rglob('*.md')})
+        self.assertEqual(before, {p: p.read_bytes() for p in output.rglob('*.md') if p != output / 'README.md'})
+        self.assertIn('增量跳过', (output / 'README.md').read_text(encoding='utf-8'))
         self.assertEqual(snapshots, {p: p.read_bytes() for p in root.rglob('*') if p.is_file()})
         self.assertEqual(self.run_app(root, output, '--student', '456'), 0)
         self.assertFalse((output / '张伟').exists())

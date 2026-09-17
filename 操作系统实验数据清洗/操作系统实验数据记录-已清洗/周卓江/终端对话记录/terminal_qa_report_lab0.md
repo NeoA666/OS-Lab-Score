@@ -701,13 +701,10 @@ claude
 ────────────────────────────────────────────────────────────────────────────────●─Thinking for 2s… (ctrl+o to expand)───────────────────────────────────────────
 ──── The user asks me to introduce the main content of lab0. But CLAUDE.md says: 教师侧信息静默 — don't output full syllabus unless student explicitly asks for
 a summary. Actually the student is ──────────────────────────────────────────────────explicitly asking for an introduction to lab0's main content. Hmm. But CLAU
-DE.md says: "不要一上来甩完整大纲，除非学生明确要求总结。" The student explicitl
-y asked to introduce lab0. Also rrupt · ← for agents
+DE.md says: "不要一上来甩完整大纲，除非学生明确要求总结。" The student explicitly asked to introduce lab0. Also rrupt · ← for agents
      "学生侧只给一句最小语境 + 一个问题。一次只问一题，等待回答。不要开场宣讲实验
-概览、安装流程清单或后续计划". Hmm, there's tension. The student is asking for a
-   vegive opening overviews. However the rule about "学生侧只给一句最小语境 + 一
-个问题" is about the AI's teaching approach — starting the interaction. I should
-     answering, per the rules "如果需要查代码，先查再讲，不要凭印象猜". Let me l
+概览、安装流程清单或后续计划". Hmm, there's tension. The student is asking for a   vegive opening overviews. However the rule about "学生侧只给一句最小语境 + 一
+个问题" is about the AI's teaching approach — starting the interaction. I should     answering, per the rules "如果需要查代码，先查再讲，不要凭印象猜". Let me l
 ook at the lab0 directory. Given the request is explicit ("请你介绍一下lab0实验的
 ●   is reasona4l,.reading 1 file, listingd1ndirectory…e(ctrl+o to expand)memory
  says envstudent asksefdr an introduction to lab0. PervCLAUDE.md, don't dump thwhole outline unless explici                                                    l
@@ -718,28 +715,23 @@ fine —────────────────────────
 
 ●────
 eady
-✢elab0d是整套实验的环境搭建章：不挖空、不改代码、不要求读懂 xv6。它只有一件事——x
-v6-k210p: Use /theme to change the color themeompt. Break into: what you do (4-QEMU                   516          thought for 2s)                             里
-跑起来，直到你看见─────────────────────────────────────────────────────────────s
-hell───────────────────────────────────────────────────────────────────────────提示符────────────────────────────────                                           -
-> / $。tural stopping point and invite the n xt q estion. Don't reveal teacher-s
+✢elab0d是整套实验的环境搭建章：不挖空、不改代码、不要求读懂 xv6。它只有一件事——xv6-k210p: Use /theme to change the color themeompt. Break into: what you do (4-Q
+EMU                   516          thought for 2s)                             里
+跑起来，直到你看见─────────────────────────────────────────────────────────────shell───────────────────────────────────────────────────────────────────────────提
+示符────────────────────────────────                                           -> / $。tural stopping point and invite the n xt q estion. Don't reveal teacher-s
 ide info. Keep it around a scree                                               f  它为什么单独成一章
 
-  因为操作系统实验和普通编程实验有个根本区别：你写的代码不跑在你自己的电脑上。你
-的电脑是                                                                       x
-86_64，而                                                                      x
-v6-k210                                                                        要跑在                                                                           R
-ISC-V                                                                          上────────────────────────────────────────────────────────────────────────────────
-────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  因为操作系统实验和普通编程实验有个根本区别：你写的代码不跑在你自己的电脑上。你的电脑是                                                                       x
+86_64，而                                                                      xv6-k210                                                                        要
+跑在                                                                           RISC-V                                                                          上
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+────────────────────────────────────
 ❯ - 目标机（RISC-V）：内核和用户程序在这一侧
 
 
 ────────────────────────────────────
-❯ 中间靠 riscv64-unknown-elf-gcc（交叉编译器）和 qemu-system-riscv64（模拟器）连
-起来。lab0─────────────────────────────────────────────────────────────────────就
-是让你亲手把这条链路接通的。────────────────────────────────────────────────────
-
-  你要做的事，按顺序大致是五步terrupt · ← for agents
+❯ 中间靠 riscv64-unknown-elf-gcc（交叉编译器）和 qemu-system-riscv64（模拟器）连起来。lab0─────────────────────────────────────────────────────────────────────就
+是让你亲手把这条链路接通的。────────────────────────────────────────────────────  你要做的事，按顺序大致是五步terrupt · ← for agents
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ────────────────────────────────────
@@ -756,12 +748,11 @@ ISC-V                                                                          �
 ❯ 5. make run 启动 QEMU，看到 OpenSBI banner → 内核 banner → -> / $
 
 ────────────────────────────────────
-❯ 成功标志：在 shell 里敲 ls、cat README 有正常输出。走到这里，lab0 就算完成，后
-面─────────────────────────────────────────────────────────────────────────────l
-ab1────────────────────────────────────────────────────────────────────────────才动代码。────────────────────────────
+❯ 成功标志：在 shell 里敲 ls、cat README 有正常输出。走到这里，lab0 就算完成，后面─────────────────────────────────────────────────────────────────────────────l
+ab1────────────────────────────────────────────────────────────────────────────才
+动代码。────────────────────────────
 ❯ 这里已经牵出好几个隐藏概念了——交叉编译、特权级、SBI、QEMU 的 virt 机器、FAT32镜
-像为什么是必须的。你想先挖哪一个？──────────────────────────────────────────────
-✻ Brewed for 6s─────────────────────
+像为什么是必须的。你想先挖哪一个？──────────────────────────────────────────────✻ Brewed for 6s─────────────────────
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ────────────────────────────────────
 ❯
