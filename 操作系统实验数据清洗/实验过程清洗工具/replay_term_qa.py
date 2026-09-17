@@ -20,6 +20,8 @@ import json
 import argparse
 import tempfile
 import hashlib
+import math
+from bisect import bisect_right
 from pathlib import Path
 from datetime import datetime
 from urllib.parse import quote
@@ -36,22 +38,69 @@ from pyte import ByteStream                      # noqa: E402
 from pyte.screens import Screen                  # noqa: E402
 from wcwidth import wcwidth                      # noqa: E402
 from timeline_reports import (                  # noqa: E402
+    README_BLOCK_END,
+    README_BLOCK_START,
+    TIMELINE_DIRECTORY,
+    TIMELINE_MANIFEST,
+    TIMELINE_TOOL,
+    mark_timeline_rebuild,
+    remove_student_timeline,
+    timeline_cache_hit,
     timeline_owned_by,
     update_readme_timeline_block,
     write_student_timeline,
+    has_link_component,
+    is_link_like,
 )
 
 
 # Bash 提示符在原始流中的形态（user@host 用绿色，路径用蓝色，`$`/`#` 结束）。
-# 例： ESC[01;32mailab-os@ailab-os-...ESC[00m:ESC[01;34m~/桌面/...ESC[00m$
+# 也接受行首未着色的普通 Bash 提示符，避免把提示符配色当成数据契约。
 SGR = rb"\x1b\[[0-9;]*m"
+ZERO_WIDTH_ANSI = (
+    rb"(?:\x1b\][^\x07\x1b]*(?:\x07|\x1b\\)"
+    rb"|\x1b\[[0-?]*[ -/]*[@-~])"
+)
+LOGICAL_LINE_PREFIX = rb"(?:^|(?<=[\r\n]))(?:" + ZERO_WIDTH_ANSI + rb")*?"
 PROMPT_RAW = re.compile(
-    SGR + rb"(?P<uh>ailab-os@ailab-os-VMware-Virtual-Platform)" + SGR + rb":"
+    LOGICAL_LINE_PREFIX + SGR + rb"(?P<uh>[^\s@\x1b]+@[^\s:\x1b]+)" + SGR + rb":"
     + SGR + rb"(?P<cwd>.*?)" + SGR + rb"(?P<mark>[$#]) "
 )
+PLAIN_PROMPT_RAW = re.compile(
+    LOGICAL_LINE_PREFIX + rb"[^\s@\x1b]+@[^\s:\x1b]+:(?P<cwd>[^\r\n\x1b]*?)(?P<mark>[$#]) "
+)
+SCRIPT_HEADER_PREFIXES = (
+    b"Script started on ",
+    "脚本启动于 ".encode("utf-8"),
+    "脚本开始于 ".encode("utf-8"),
+)
+SCRIPT_DONE_PREFIXES = (
+    b"Script done on ",
+    "脚本完成于 ".encode("utf-8"),
+    "脚本结束于 ".encode("utf-8"),
+)
 
-PASTE_MARKERS = (b"\x1b[200~", b"\x1b[201~")   # 括号粘贴起止标记，无视觉含义
 MAX_OUTPUT_LINES = 400                          # 每条命令输出在报告中最多保留的行数
+
+# 增量状态只保存在各学生既有的归属清单中。版本变化会让旧清单安全地失效。
+INCREMENTAL_CACHE_FORMAT_VERSION = 2
+_HASH_CHUNK_SIZE = 1024 * 1024
+MAX_CACHED_DIAGNOSTICS = 100
+MAX_CACHED_DIAGNOSTIC_LENGTH = 2000
+
+
+def shell_prompt_matches(body):
+    """Return every supported shell prompt in byte order.
+
+    A recording can change its prompt style mid-session, for example after a
+    shell profile reload. Both patterns use the same named groups and accept
+    OSC/CSI controls before the visible prompt on a logical line.
+    """
+    return sorted(
+        [*PROMPT_RAW.finditer(body), *PLAIN_PROMPT_RAW.finditer(body)],
+        key=lambda match: match.start(),
+    )
+
 
 # Claude Code 会在终端内反复重绘。以下规则只用于 claude_qa_clean.md；
 # full_terminal_transcript.md 不使用这些过滤规则。
@@ -182,7 +231,8 @@ def join_wrapped(lines, cols):
     """合并被终端自动换行拆开的行：上一行恰好填满整列宽则视为续行。"""
     out = []
     for ln in lines:
-        if out and len(out[-1]) == cols:
+        width = sum(max(wcwidth(char), 0) for char in out[-1]) if out else 0
+        if out and width == cols:
             out[-1] += ln
         else:
             out.append(ln)
@@ -207,17 +257,42 @@ def normalize_command(cmd):
     return cmd
 
 
+def _header_dimension(header, name, default):
+    match = re.search(rf'{re.escape(name)}="(\d+)"', header)
+    if not match:
+        return default
+    value = int(match.group(1))
+    return value if value > 0 else default
+
+
+def has_administrative_script_tail(body, offset):
+    """Return whether bytes after timing coverage are script's own footer."""
+    tail = body[offset:]
+    return bool(tail.strip()) and tail.lstrip().startswith(SCRIPT_DONE_PREFIXES)
+
+
+def timing_entries_cover_body(entries, body):
+    """Timing is usable only when it covers the recording except script's own footer."""
+    if not entries:
+        return False
+    covered = sum(size for _, size in entries)
+    return covered <= len(body) and (
+        covered == len(body) or has_administrative_script_tail(body, covered)
+    )
+
+
 def read_term(out_path):
     with gzip.open(out_path, "rb") as f:
         raw = f.read()
-    if b"\n" not in raw:
-        raise ValueError("录像为空或缺少 script 头部换行")
-    nl = raw.index(b"\n")
-    header = raw[:nl].decode("utf-8", "replace")
-    body = raw[nl + 1:]
-    start = re.search(r"Script started on (.+?)(?: \[|$)", header)
-    cols = int(re.search(r'COLUMNS="(\d+)"', header).group(1)) if re.search(r'COLUMNS="(\d+)"', header) else 198
-    rows = int(re.search(r'LINES="(\d+)"', header).group(1)) if re.search(r'LINES="(\d+)"', header) else 59
+    first, newline, remainder = raw.partition(b"\n")
+    has_header = first.startswith(SCRIPT_HEADER_PREFIXES)
+    if has_header and not newline:
+        raise ValueError("script 头缺少换行，无法定位正文")
+    header = first.decode("utf-8", "replace") if has_header else ""
+    body = remainder if has_header else raw
+    start = re.search(r"(?:Script started on|脚本启动于|脚本开始于)\s+(.+?)(?: \[|$)", header)
+    cols = _header_dimension(header, "COLUMNS", 198)
+    rows = _header_dimension(header, "LINES", 59)
     return header, (start.group(1) if start else ""), cols, rows, body
 
 
@@ -238,21 +313,29 @@ def infer_replay_columns(body, header_cols):
     return max(widths) if widths else header_cols
 
 
-def read_timing_entries(tim_path):
+def read_timing_entries(tim_path, body=None):
     """读取 script 的 timing 条目；失败时由调用方退化为一次性重放。"""
     if not (tim_path and os.path.exists(tim_path)):
         return []
     try:
-        with gzip.open(tim_path, "rt", encoding="utf-8", errors="replace") as f:
+        with gzip.open(tim_path, "rt", encoding="utf-8", errors="strict") as f:
             entries = []
+            elapsed = 0.0
             for line in f:
                 parts = line.split()
-                if len(parts) == 2:
-                    delay, size = float(parts[0]), int(parts[1])
-                    if size > 0:
-                        entries.append((delay, size))
-            return entries
-    except Exception:
+                if len(parts) != 2:
+                    return []
+                delay, size = float(parts[0]), int(parts[1])
+                if not math.isfinite(delay) or delay < 0 or size < 0:
+                    return []
+                elapsed += delay
+                if not math.isfinite(elapsed):
+                    return []
+                entries.append((delay, size))
+        if body is not None and not timing_entries_cover_body(entries, body):
+            return []
+        return entries
+    except (OSError, EOFError, UnicodeError, ValueError, OverflowError):
         return []
 
 
@@ -263,7 +346,7 @@ def iter_screen_diff_frames(out_path, tim_path, archive_clears=False):
     """
     _, start, header_cols, rows, body = read_term(out_path)
     cols = infer_replay_columns(body, header_cols)
-    entries = read_timing_entries(tim_path) or [(0.0, len(body))]
+    entries = read_timing_entries(tim_path, body) or [(0.0, len(body))]
 
     # 干净 QA 只看 Screen/scrollback 的变化；完整转写额外归档清屏前画面。
     screen = TranscriptScreen(cols, rows) if archive_clears else ScrollScreen(cols, rows)
@@ -318,18 +401,10 @@ def iter_screen_diff_frames(out_path, tim_path, archive_clears=False):
             yield frame_no, elapsed, current, changed_rows, start, cols, rows
 
 
-def build_time_map(tim_path, body_len):
+def build_time_map(tim_path, body):
     """根据 .tim 建立「累计字节数 -> 累计秒」的映射，返回按字节升序的两个数组。"""
-    if not (tim_path and os.path.exists(tim_path)):
-        return None
-    try:
-        with gzip.open(tim_path, "rb") as f:
-            entries = []
-            for ln in f.read().decode("utf-8", "replace").splitlines():
-                parts = ln.split()
-                if len(parts) == 2:
-                    entries.append((float(parts[0]), int(parts[1])))
-    except Exception:
+    entries = read_timing_entries(tim_path, body)
+    if not entries:
         return None
     cum_b, cum_t = [], []
     b = t = 0.0
@@ -342,11 +417,11 @@ def build_time_map(tim_path, body_len):
 
 
 def time_at(time_map, offset):
-    import bisect
     if not time_map:
         return None
     cum_b, cum_t = time_map
-    i = bisect.bisect_left(cum_b, offset)
+    # A byte at the end of one timing block belongs to the next block.
+    i = bisect_right(cum_b, offset)
     if i >= len(cum_t):
         return cum_t[-1]
     return cum_t[i]
@@ -355,27 +430,32 @@ def time_at(time_map, offset):
 def extract_session(out_path, tim_path, *, source_data=None, evidence=None):
     rec_id = os.path.basename(out_path)[:-len(".out.gz")]
     header, start, cols, rows, body = source_data if source_data is not None else read_term(out_path)
+    raw_body = body
 
-    # 新时间线旁路保留删去粘贴标记之前的字节坐标；旧报告字段不变。
-    source_positions = list(range(len(body))) if evidence is not None else None
+    marker_ranges = [(match.start(), match.end())
+                     for match in re.finditer(rb"\x1b\[20[01]~", raw_body)]
 
-    # 去掉括号粘贴标记，避免其参与正文
-    for mk in PASTE_MARKERS:
-        if source_positions is not None:
-            cursor, kept = 0, []
-            while True:
-                found = body.find(mk, cursor)
-                if found < 0:
-                    kept.extend(source_positions[cursor:])
-                    break
-                kept.extend(source_positions[cursor:found])
-                cursor = found + len(mk)
-            source_positions = kept
-        body = body.replace(mk, b"")
+    # 保存的只是被删标记的断点。普通录像不再为每个字节建立 Python int 映射表。
+    clean_marker_starts, removed_totals = [], []
+    removed = 0
+    for begin, end in marker_ranges:
+        clean_marker_starts.append(begin - removed)
+        removed += end - begin
+        removed_totals.append(removed)
+    if marker_ranges:
+        body = re.sub(rb"\x1b\[20[01]~", b"", raw_body)
 
-    time_map = build_time_map(tim_path, len(body))
+    time_map = build_time_map(tim_path, raw_body)
 
-    matches = list(PROMPT_RAW.finditer(body))
+    def raw_offset(offset):
+        index = bisect_right(clean_marker_starts, offset)
+        return offset + (removed_totals[index - 1] if index else 0)
+
+    def raw_end_offset(offset):
+        # A content range ending immediately before a paste marker excludes it.
+        return raw_offset(offset - 1) + 1 if offset else raw_offset(0)
+
+    matches = shell_prompt_matches(body)
     commands = []
     for i, m in enumerate(matches):
         region_end = matches[i + 1].start() if i + 1 < len(matches) else len(body)
@@ -408,7 +488,7 @@ def extract_session(out_path, tim_path, *, source_data=None, evidence=None):
         out_lines = join_wrapped(out_lines, cols)
 
         cwd = m.group("cwd").decode("utf-8", "replace")
-        elapsed = time_at(time_map, m.start())
+        elapsed = time_at(time_map, raw_offset(m.start()))
         commands.append({
             "rec": rec_id,
             "seq": None,  # 稍后补序号
@@ -419,14 +499,12 @@ def extract_session(out_path, tim_path, *, source_data=None, evidence=None):
             "start": start,
         })
         if evidence is not None:
-            def original_position(position):
-                return source_positions[position] if position < len(source_positions) else (source_positions[-1] + 1 if source_positions else 0)
             evidence.append({
-                "prompt_begin": original_position(m.start()),
-                "echo_begin": original_position(m.end()),
-                "echo_end": original_position(m.end() + cut - 1) + 1 if cut else original_position(m.end()),
-                "output_begin": original_position(m.end() + cut),
-                "output_end": original_position(region_end),
+                "prompt_begin": raw_offset(m.start()),
+                "echo_begin": raw_offset(m.end()),
+                "echo_end": raw_end_offset(m.end() + cut) if cut else raw_offset(m.end()),
+                "output_begin": raw_offset(m.end() + cut),
+                "output_end": raw_offset(region_end),
             })
 
     for seq, c in enumerate(commands, 1):
@@ -742,6 +820,8 @@ REPORT_NAMES = ("terminal_qa_report.md", "full_terminal_transcript.md",
                 "command_statistics.md", "claude_qa_clean.md")
 OWNER_FILE = ".replay_term_qa.json"
 README_TITLE = "# 终端实验数据批处理说明"
+TIMELINE_DIAGNOSTICS_START = "<!-- replay_term_qa:timeline-diagnostics:start -->"
+TIMELINE_DIAGNOSTICS_END = "<!-- replay_term_qa:timeline-diagnostics:end -->"
 
 # README 的版本说明与验证记录；历史验证和每次动态汇总分开。
 README_UPDATE_NOTES = [
@@ -808,7 +888,7 @@ def student_header(title, info, count):
 def atomic_write(path, text):
     """在目标目录写临时文件后原子替换；中断不会留下半份 Markdown。"""
     path = Path(path)
-    if path.is_symlink():
+    if has_link_component(path):
         raise ValueError(f"拒绝覆盖符号链接：{path}")
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = None
@@ -822,6 +902,123 @@ def atomic_write(path, text):
     finally:
         if temporary and temporary.exists():
             temporary.unlink()
+
+
+def _stream_sha256(path):
+    """Return a SHA-256 digest without loading a recording into memory."""
+    digest = hashlib.sha256()
+    with Path(path).open("rb") as stream:
+        for block in iter(lambda: stream.read(_HASH_CHUNK_SIZE), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def _snapshot_file(path, relative):
+    """Describe one input file for an incremental fingerprint.
+
+    Missing timing or event-log files are valid input states. Symlinks and
+    unreadable entries remain visible in the snapshot but never become cacheable.
+    """
+    path = Path(path)
+    record = {"path": str(relative).replace("\\", "/")}
+    if has_link_component(path):
+        record["state"] = "symlink"
+        return record, False
+    if not path.exists():
+        record["state"] = "missing"
+        return record, True
+    if not path.is_file():
+        record["state"] = "not_regular"
+        return record, False
+    try:
+        record.update({"state": "file", "sha256": _stream_sha256(path)})
+    except OSError:
+        record["state"] = "unreadable"
+        return record, False
+    return record, True
+
+
+def snapshot_student_inputs(source, include_timeline_log=False):
+    """Build the deterministic, stage-specific input snapshot for one student.
+
+    The report stage observes only term/*.out.gz plus each matching .tim.gz.
+    The timeline stage adds logs/events.jsonl. Paths are sorted and every
+    regular file contributes its original-byte SHA-256; no input is decompressed
+    or replayed while taking the snapshot.
+    """
+    source = Path(source)
+    entries = []
+    cacheable = True
+    term = source / "term"
+    if is_link_like(term):
+        entries.append({"path": "term", "state": "symlink"})
+        cacheable = False
+    elif not term.is_dir():
+        entries.append({"path": "term", "state": "missing_or_not_directory"})
+        cacheable = False
+    else:
+        recordings = sorted(term.glob("*.out.gz"), key=lambda item: item.name)
+        for out in recordings:
+            out_entry, out_cacheable = _snapshot_file(out, out.relative_to(source).as_posix())
+            entries.append(out_entry)
+            cacheable = cacheable and out_cacheable
+            tim = out.with_name(out.name[:-len(".out.gz")] + ".tim.gz")
+            tim_entry, tim_cacheable = _snapshot_file(tim, tim.relative_to(source).as_posix())
+            entries.append(tim_entry)
+            cacheable = cacheable and tim_cacheable
+    if include_timeline_log:
+        event_entry, event_cacheable = _snapshot_file(
+            source / "logs" / "events.jsonl", "logs/events.jsonl"
+        )
+        entries.append(event_entry)
+        cacheable = cacheable and event_cacheable
+    entries.sort(key=lambda item: item["path"])
+    payload = {
+        "cache_format_version": INCREMENTAL_CACHE_FORMAT_VERSION,
+        "stage": "timeline" if include_timeline_log else "reports",
+        "entries": entries,
+    }
+    encoded = json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    return {
+        "fingerprint": hashlib.sha256(encoded).hexdigest(),
+        "cacheable": cacheable,
+        "entries": entries,
+    }
+
+
+def term_recordings(term):
+    """Return regular recording files without following symbolic links."""
+    term = Path(term)
+    if not term.is_dir() or is_link_like(term):
+        return []
+    return sorted(
+        (path for path in term.glob("*.out.gz") if path.is_file() and not is_link_like(path)),
+        key=lambda path: path.name,
+    )
+
+
+def _processor_signature(stage, paths):
+    """Fingerprint the code that semantically owns one output stage."""
+    digest = hashlib.sha256()
+    digest.update(f"replay_term_qa:{stage}:cache-v{INCREMENTAL_CACHE_FORMAT_VERSION}\\0".encode("utf-8"))
+    for path in paths:
+        path = Path(path)
+        digest.update(path.name.encode("utf-8"))
+        digest.update(b"\\0")
+        digest.update(_stream_sha256(path).encode("ascii"))
+        digest.update(b"\\0")
+    return digest.hexdigest()
+
+
+def report_processor_signature():
+    return _processor_signature("reports", (Path(__file__).resolve(),))
+
+
+def timeline_processor_signature():
+    return _processor_signature(
+        "timeline",
+        (Path(__file__).resolve(), TOOL_DIR / "timeline_alignment.py", TOOL_DIR / "timeline_reports.py"),
+    )
 
 
 def safe_component(name):
@@ -846,7 +1043,7 @@ def scan_students(input_dir, student_filter=None):
     for directory in candidates:
         if not directory.is_dir():
             continue
-        if directory.is_symlink():
+        if is_link_like(directory):
             skipped.append((str(directory), "跳过符号链接目录"))
             continue
         info = parse_student_name(directory.name)
@@ -881,28 +1078,24 @@ def allocate_outputs(students, output_dir, overwrite=False):
         while True:
             key = candidate.casefold()
             target = existing.get(key, output_dir / candidate)
-            available = key not in used and not target.is_symlink()
+            available = key not in used and not has_link_component(target)
             if target.exists():
-                owner = None
-                try:
-                    owner = json.loads((target / OWNER_FILE).read_text(encoding="utf-8"))
-                except (OSError, ValueError):
-                    pass
+                owner_path = target / OWNER_FILE
+                owner = _read_json_object(owner_path)
+                owner_exists = owner_path.exists() or is_link_like(owner_path)
                 report_owned = isinstance(owner, dict) and owner.get("source") == info["source"]
-                # 允许整理后将提交目录改名（例如英文拼音改为中文姓名）时复用原结果。
-                # 仍要求原归属能解析出相同学号，且目标目录就是当前学生姓名目录。
-                previous = None
-                if isinstance(owner, dict) and isinstance(owner.get("source"), str):
-                    source_name = owner["source"].rstrip("/\\").replace("\\", "/").rsplit("/", 1)[-1]
-                    previous = parse_student_name(source_name)
-                renamed_owner = (
-                    previous is not None
-                    and previous["student_id"] == info["student_id"]
-                    and target.name.casefold() == safe_component(info["name"]).casefold()
+                timeline_owned = not is_link_like(owner_path) and timeline_owned_by(target, info["source"])
+                # A timeline-only directory can be reused before reports have
+                # an owner. A malformed owner can recover only from a valid
+                # same-source timeline; a parseable foreign owner remains an
+                # absolute boundary.
+                timeline_reusable = timeline_owned and (
+                    (not owner_exists and (overwrite or not has_fixed_report_artifacts(target)))
+                    or (owner_exists and owner is None)
                 )
-                timeline_owned = owner is None and timeline_owned_by(target, info["source"])
                 available = available and target.is_dir() and (
-                    report_owned or renamed_owner or timeline_owned or (owner is None and overwrite))
+                    report_owned or timeline_reusable or (not owner_exists and overwrite)
+                )
             if available:
                 break
             sequence += 1
@@ -922,15 +1115,6 @@ def add_statistics_table(md, counter):
 REPORT_FOLDERS = ("终端对话记录", "完整终端转写记录", "终端命令统计", "claude对话")
 LAB_KEYS = tuple(f"lab{i}" for i in range(9)) + ("other",)
 # 仅用于工作目录分类，不改变原有 Shell 命令提取规则。
-LAB_PROMPT_RAW = re.compile(
-    SGR + rb"(?P<uh>[^\s@\x1b]+@[^\s:\x1b]+)" + SGR + rb":"
-    + SGR + rb"(?P<cwd>.*?)" + SGR + rb"[$#] "
-)
-PLAIN_LAB_PROMPT_RAW = re.compile(
-    rb"(?:^|(?<=[\r\n]))[^\s@\x1b]+@[^\s:\x1b]+:(?P<cwd>[^\r\n\x1b]*?)[$#] "
-)
-
-
 def lab_from_cwd(cwd):
     """仅按完整目录段识别 lab0–lab8，支持其子目录；lab10、lab0-copy 不匹配。"""
     parts = cwd.strip().replace("\\", "/").split("/")
@@ -953,12 +1137,26 @@ def lab_report_paths(lab):
                  for folder, name in zip(REPORT_FOLDERS, REPORT_NAMES))
 
 
+def fixed_report_artifact_paths():
+    """Return every fixed report name the report stage may own or replace."""
+    return tuple(Path(name) for name in REPORT_NAMES) + tuple(
+        path for lab in LAB_KEYS for path in lab_report_paths(lab)
+    )
+
+
+def has_fixed_report_artifacts(directory):
+    """Return whether an otherwise unowned output contains a fixed report path."""
+    directory = Path(directory)
+    for relative in fixed_report_artifact_paths():
+        target = directory / relative
+        if target.exists() or has_link_component(target):
+            return True
+    return False
+
+
 def split_lab_regions(body):
     """在真实提示符处切分工作目录变化；不根据用户输入、cd 文本或回复内容猜测。"""
-    prompts = list(LAB_PROMPT_RAW.finditer(body))
-    if not prompts:
-        # 无彩色提示符的录像才使用行首普通提示符，避免 Claude 粘贴文本误触发。
-        prompts = list(PLAIN_LAB_PROMPT_RAW.finditer(body))
+    prompts = shell_prompt_matches(body)
     if not prompts:
         return [{"lab": "other", "begin": 0, "end": len(body), "cwd": "未知"}]
     first_cwd = prompts[0].group("cwd").decode("utf-8", "replace")
@@ -1002,27 +1200,308 @@ def new_lab_bucket():
             "errors": [], "shell_success": set()}
 
 
-def finish_student_reports(info, paths):
-    """登记新版报告清单；仅移除同来源清单中已过时的程序报告，不碰原始数据。"""
-    directory = info["output"].resolve()
-    owner_path = directory / OWNER_FILE
+def _read_json_object(path):
+    path = Path(path)
+    if is_link_like(path):
+        return None
     try:
-        previous = json.loads(owner_path.read_text(encoding="utf-8"))
-    except (OSError, ValueError):
-        previous = {}
+        value = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError, TypeError):
+        return None
+    return value if isinstance(value, dict) else None
+
+
+def _report_manifest_matches_student(manifest, info):
+    return bool(
+        isinstance(manifest, dict)
+        and manifest.get("tool") == "replay_term_qa"
+        and manifest.get("source") == info.get("source")
+    )
+
+
+def _bounded_diagnostics(errors):
+    """Keep cache and README diagnostics useful without making manifests unbounded."""
+    if not isinstance(errors, (list, tuple)):
+        return []
+    result, seen = [], set()
+    for error in errors:
+        if not isinstance(error, str):
+            continue
+        text = error[:MAX_CACHED_DIAGNOSTIC_LENGTH]
+        if text in seen:
+            continue
+        seen.add(text)
+        result.append(text)
+        if len(result) >= MAX_CACHED_DIAGNOSTICS:
+            break
+    return result
+
+
+def _report_summary(result):
+    keys = ("recordings", "commands", "claude_sessions", "turns", "replay_failed")
+    labs = {}
+    for lab, values in (result.get("labs") or {}).items():
+        if lab not in LAB_KEYS or not isinstance(values, dict):
+            continue
+        labs[lab] = {key: int(values.get(key, 0)) for key in keys}
+    return {key: int(result.get(key, 0)) for key in keys} | {
+        "labs": labs,
+        "errors": _bounded_diagnostics(result.get("errors")),
+    }
+
+
+def _report_summary_is_valid(summary):
+    keys = ("recordings", "commands", "claude_sessions", "turns", "replay_failed")
+    if not isinstance(summary, dict) or not isinstance(summary.get("labs"), dict):
+        return False
+    errors = summary.get("errors")
+    if (
+        not isinstance(errors, list)
+        or len(errors) > MAX_CACHED_DIAGNOSTICS
+        or not all(isinstance(error, str) and len(error) <= MAX_CACHED_DIAGNOSTIC_LENGTH
+                   for error in errors)
+    ):
+        return False
+    if not summary["labs"]:
+        return False
+    for key in keys:
+        if not isinstance(summary.get(key), int) or isinstance(summary.get(key), bool):
+            return False
+    for lab, values in summary["labs"].items():
+        if lab not in LAB_KEYS or not isinstance(values, dict):
+            return False
+        for key in keys:
+            if not isinstance(values.get(key), int) or isinstance(values.get(key), bool):
+                return False
+    return True
+
+
+def _report_paths_from_summary(summary):
+    if not _report_summary_is_valid(summary):
+        return None
+    return sorted(
+        path.as_posix()
+        for lab in summary["labs"]
+        for path in lab_report_paths(lab)
+    )
+
+
+def _report_artifact_is_valid(output, relative):
+    allowed = {path.as_posix() for lab in LAB_KEYS for path in lab_report_paths(lab)}
+    if relative not in allowed:
+        return False
+    target = Path(output) / Path(relative)
+    if has_link_component(target) or not target.is_file():
+        return False
+    try:
+        resolved = target.resolve()
+        output = Path(output).resolve()
+    except OSError:
+        return False
+    return output in resolved.parents
+
+
+def _report_artifact_hashes_are_valid(output, reports, hashes):
+    if not isinstance(hashes, dict) or set(hashes) != set(reports):
+        return False
+    for relative in reports:
+        digest = hashes.get(relative)
+        if not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest):
+            return False
+        try:
+            if _stream_sha256(Path(output) / relative) != digest:
+                return False
+        except OSError:
+            return False
+    return True
+
+
+def report_cache_hit(info, snapshot, processor_signature):
+    """Return a restored report result only when every cache invariant holds."""
+    output = Path(info["output"])
+    owner_path = output / OWNER_FILE
+    if not snapshot.get("cacheable") or has_link_component(output) or not output.is_dir():
+        return None
+    manifest = _read_json_object(owner_path)
+    if (
+        not isinstance(manifest, dict)
+        or manifest.get("tool") != "replay_term_qa"
+        or manifest.get("source") != info.get("source")
+    ):
+        return None
+    if (
+        manifest.get("status") != "complete"
+        or manifest.get("cache_format_version") != INCREMENTAL_CACHE_FORMAT_VERSION
+        or manifest.get("input_fingerprint") != snapshot.get("fingerprint")
+        or manifest.get("processor_signature") != processor_signature
+    ):
+        return None
+    summary = manifest.get("summary")
+    expected = _report_paths_from_summary(summary)
+    reports = manifest.get("reports")
+    if (
+        not isinstance(reports, list)
+        or not all(isinstance(relative, str) for relative in reports)
+        or sorted(reports) != expected
+        or len(set(reports)) != len(reports)
+    ):
+        return None
+    if not all(isinstance(relative, str) and _report_artifact_is_valid(output, relative)
+               for relative in reports):
+        return None
+    if not _report_artifact_hashes_are_valid(output, reports, manifest.get("artifact_sha256")):
+        return None
+    return {
+        "status": "增量跳过",
+        "info": info,
+        "cache_hit": True,
+        **summary,
+    }
+
+
+def mark_report_rebuild(info):
+    """Invalidate a prior successful report cache before any rebuild work starts."""
+    output = Path(info["output"])
+    owner_path = output / OWNER_FILE
+    if has_link_component(owner_path):
+        raise ValueError(f"拒绝覆盖符号链接归属清单：{owner_path}")
+    previous = _read_json_object(owner_path)
+    if owner_path.exists() and not _report_manifest_matches_student(previous, info):
+        return
+    allowed = set(REPORT_NAMES) | {path.as_posix() for lab in LAB_KEYS for path in lab_report_paths(lab)}
+    reports = previous.get("reports") if isinstance(previous, dict) and isinstance(previous.get("reports"), list) else []
+    manifest = {
+        "tool": "replay_term_qa",
+        "source": info["source"],
+        "layout": previous.get("layout", "by-lab-v1") if isinstance(previous, dict) else "by-lab-v1",
+        "status": "building",
+        "reports": sorted(relative for relative in reports if relative in allowed),
+    }
+    atomic_write(owner_path, json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
+
+
+def remove_student_reports(info):
+    """Clear same-source registered reports when the source has no recordings."""
+    output_path = Path(info["output"])
+    if has_link_component(output_path):
+        raise ValueError(f"拒绝使用符号链接学生输出目录：{output_path}")
+    if not output_path.is_dir():
+        return False
+    output = output_path.resolve()
+    owner_path = output / OWNER_FILE
+    if has_link_component(owner_path):
+        raise ValueError(f"拒绝删除符号链接归属清单：{owner_path}")
+    manifest = _read_json_object(owner_path)
+    if not _report_manifest_matches_student(manifest, info):
+        return False
+
+    allowed = set(REPORT_NAMES) | {
+        path.as_posix() for lab in LAB_KEYS for path in lab_report_paths(lab)
+    }
+    reports = manifest.get("reports")
+    if (
+        not isinstance(reports, list)
+        or not all(isinstance(relative, str) for relative in reports)
+        or len(reports) != len(set(reports))
+        or not all(relative in allowed for relative in reports)
+    ):
+        raise ValueError(f"归属清单中的报告路径无效：{owner_path}")
+
+    targets = []
+    for relative in reports:
+        target = output / Path(relative)
+        if has_link_component(target):
+            raise ValueError(f"拒绝删除符号链接报告：{target}")
+        resolved = target.resolve()
+        if output not in resolved.parents:
+            raise ValueError(f"报告目标越出学生输出目录：{target}")
+        if target.exists() and not target.is_file():
+            raise ValueError(f"拒绝删除非普通文件报告：{target}")
+        targets.append(target)
+
+    for target in targets:
+        if target.exists():
+            target.unlink()
+    atomic_write(owner_path, json.dumps({
+        "tool": "replay_term_qa",
+        "source": info["source"],
+        "layout": "by-lab-v1",
+        "status": "cleared",
+        "reports": [],
+    }, ensure_ascii=False, indent=2) + "\n")
+    return True
+
+
+def validate_student_report_targets(info, paths, *, overwrite=False):
+    """Reject unowned fixed report files before any student report is replaced."""
+    directory_path = Path(info["output"])
+    if has_link_component(directory_path):
+        raise ValueError(f"拒绝使用符号链接学生输出目录：{directory_path}")
+    directory = directory_path.resolve()
+    owner_path = directory / OWNER_FILE
+    if has_link_component(owner_path):
+        raise ValueError(f"拒绝覆盖符号链接归属清单：{owner_path}")
+    manifest = _read_json_object(owner_path)
+    report_owned = _report_manifest_matches_student(manifest, info)
+    recovering_timeline_owned_output = (
+        owner_path.exists()
+        and manifest is None
+        and timeline_owned_by(directory, info["source"])
+    )
+    if owner_path.exists() and not report_owned and not recovering_timeline_owned_output:
+        raise ValueError(f"报告归属清单无效或属于其他来源：{owner_path}")
+    for relative in paths:
+        target = directory / relative
+        if has_link_component(target):
+            raise ValueError(f"拒绝覆盖符号链接报告：{target}")
+        resolved = target.resolve()
+        if directory not in resolved.parents:
+            raise ValueError(f"报告目标越出学生输出目录：{target}")
+        if target.exists() and not target.is_file():
+            raise ValueError(f"报告目标不是普通文件：{target}")
+        if target.exists() and not report_owned and not overwrite and not recovering_timeline_owned_output:
+            raise ValueError(
+                f"报告路径已有未登记内容，请使用 --overwrite 或选择其他输出目录：{target}"
+            )
+
+
+def finish_student_reports(info, paths, *, stage_status, incremental=None, summary=None):
+    """登记新版报告清单；仅移除同来源清单中已过时的程序报告，不碰原始数据。"""
+    directory_path = Path(info["output"])
+    if has_link_component(directory_path):
+        raise ValueError(f"拒绝使用符号链接学生输出目录：{directory_path}")
+    directory = directory_path.resolve()
+    owner_path = directory / OWNER_FILE
+    previous = _read_json_object(owner_path) or {}
     allowed = set(REPORT_NAMES) | {p.as_posix() for lab in LAB_KEYS for p in lab_report_paths(lab)}
     wanted = {p.as_posix() for p in paths}
-    if (isinstance(previous, dict) and previous.get("tool") == "replay_term_qa"
-            and previous.get("source") == info["source"]):
+    if _report_manifest_matches_student(previous, info):
         for relative in previous.get("reports", []):
             if relative in allowed and relative not in wanted:
                 target = directory / relative
                 resolved = target.resolve()
-                if directory in resolved.parents and not target.is_symlink() and target.is_file():
+                if directory in resolved.parents and not has_link_component(target) and target.is_file():
                     target.unlink()
-    atomic_write(owner_path, json.dumps(
-        {"tool": "replay_term_qa", "source": info["source"], "layout": "by-lab-v1",
-         "reports": sorted(wanted)}, ensure_ascii=False, indent=2))
+    manifest = {"tool": "replay_term_qa", "source": info["source"], "layout": "by-lab-v1",
+                "status": stage_status, "reports": sorted(wanted)}
+    if (
+        stage_status == "complete"
+        and isinstance(incremental, dict)
+        and isinstance(incremental.get("fingerprint"), str)
+        and isinstance(incremental.get("processor_signature"), str)
+        and _report_summary_is_valid(summary)
+    ):
+        manifest.update({
+            "cache_format_version": INCREMENTAL_CACHE_FORMAT_VERSION,
+            "input_fingerprint": incremental["fingerprint"],
+            "processor_signature": incremental["processor_signature"],
+            "summary": summary,
+            "artifact_sha256": {
+                relative: _stream_sha256(directory / relative)
+                for relative in sorted(wanted)
+            },
+        })
+    atomic_write(owner_path, json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
 
 
 def write_student_reports(info, files, commands, full_sessions, claude_sessions, errors,
@@ -1096,12 +1575,26 @@ def write_student_reports(info, files, commands, full_sessions, claude_sessions,
             "turns": turns, "replay_failed": len({s['rec'] for s in full_sessions if "error" in s})}
 
 
-def process_student(info):
+def process_student(info, incremental=None, overwrite=False):
     """按提示符工作目录分段重放；Claude 保持启动目录归属，直到返回新的 Shell 提示符。"""
+    if incremental is None:
+        incremental = info.get("_report_incremental")
     term = Path(info["source"]) / "term"
-    if not term.is_dir() or term.is_symlink():
-        return {"status": "跳过", "info": info, "errors": [f"{term}：缺少 term/ 或为符号链接"]}
-    files = sorted((p for p in term.glob("*.out.gz") if p.is_file()), key=lambda p: p.name)
+    if not term.is_dir() or is_link_like(term):
+        return {"status": "失败", "info": info, "errors": [f"{term}：缺少 term/ 或为符号链接"]}
+    files = term_recordings(term)
+    if not files:
+        return {
+            "status": "失败",
+            "info": info,
+            "errors": [f"{term}：未发现可处理的 *.out.gz 录像，不生成空报告"],
+            "recordings": 0,
+            "commands": 0,
+            "claude_sessions": 0,
+            "turns": 0,
+            "replay_failed": 0,
+            "labs": {},
+        }
     buckets, errors, failed_recordings = {}, [], set()
     claude_recordings = set()
     stage_failed = False
@@ -1113,11 +1606,6 @@ def process_student(info):
         tim = out.with_name(out.name[:-len(".out.gz")] + ".tim.gz")
         rec = out.name[:-len(".out.gz")]
         print(f"  [录像 {number}/{len(files)}] {out.name}", flush=True)
-        entries = read_timing_entries(tim)
-        if not entries:
-            warning = f"{tim}：计时文件缺失、为空或不可读，使用一次性重放降级"
-            errors.append(warning)
-            print(f"  [警告] {warning}", flush=True)
         try:
             header, start, columns, rows, body = read_term(out)
             regions = split_lab_regions(body)
@@ -1132,6 +1620,11 @@ def process_student(info):
             group["full"].append({"rec": rec, "file": str(out), "error": str(exc)})
             print(f"  [失败] {message}", flush=True)
             continue
+        entries = read_timing_entries(tim, body)
+        if not entries:
+            warning = f"{tim}：计时文件缺失、为空、损坏或未覆盖完整录像，使用一次性重放且不记录相对时间"
+            errors.append(warning)
+            print(f"  [警告] {warning}", flush=True)
         for region in regions:
             group = bucket(region["lab"])
             group["files"].add(out)
@@ -1166,7 +1659,8 @@ def process_student(info):
                         segment_out = Path(temporary) / out.name
                         segment_tim = Path(temporary) / tim.name
                         segment = body[region["begin"]:region["end"]]
-                        segment_out.write_bytes(gzip.compress(header.encode("utf-8") + b"\n" + segment))
+                        segment_header = header.encode("utf-8") + b"\n" if header else b""
+                        segment_out.write_bytes(gzip.compress(segment_header + segment))
                         clipped = region_timing(entries, region["begin"], region["end"])
                         segment_tim.write_bytes(gzip.compress("".join(
                             f"{delay:.9f} {size}\n" for delay, size in clipped).encode("ascii")))
@@ -1201,7 +1695,9 @@ def process_student(info):
                             group["full"].append({"rec": rec, "file": str(out), "error": str(exc)})
     if not buckets:
         bucket("other")
-    per_lab, paths = {}, []
+    paths = [path for lab in LAB_KEYS if lab in buckets for path in lab_report_paths(lab)]
+    validate_student_report_targets(info, paths, overwrite=overwrite)
+    per_lab = {}
     for lab in LAB_KEYS:
         if lab not in buckets:
             continue
@@ -1209,23 +1705,191 @@ def process_student(info):
         per_lab[lab] = write_student_reports(
             info, group["files"], group["commands"], group["full"], list(group["claude"].values()),
             group["errors"], len(group["shell_success"]), lab)
-        paths.extend(lab_report_paths(lab))
         print(f"  [分类 {lab}] {per_lab[lab]['recordings']} 个录像，"
               f"{per_lab[lab]['commands']} 条命令，{per_lab[lab]['turns']} 轮 QA", flush=True)
-    finish_student_reports(info, paths)
-    return {"status": "部分失败" if stage_failed else "成功", "info": info, "errors": errors,
-            "recordings": len(files), "commands": sum(r["commands"] for r in per_lab.values()),
-            "claude_sessions": len(claude_recordings), "turns": sum(r["turns"] for r in per_lab.values()),
-            "replay_failed": len(failed_recordings), "labs": per_lab}
+    result = {"status": "部分失败" if stage_failed else "成功", "info": info, "errors": errors,
+              "recordings": len(files), "commands": sum(r["commands"] for r in per_lab.values()),
+              "claude_sessions": len(claude_recordings), "turns": sum(r["turns"] for r in per_lab.values()),
+              "replay_failed": len(failed_recordings), "labs": per_lab}
+    finish_student_reports(
+        info,
+        paths,
+        stage_status="partial" if stage_failed else "complete",
+        incremental=incremental,
+        summary=_report_summary(result),
+    )
+    return result
 
 
-def write_readme(output_dir, input_dir, results, skipped):
+def _report_stage_label(result):
+    return {
+        "成功": "已处理",
+        "增量跳过": "增量跳过",
+        "部分失败": "部分失败",
+        "失败": "失败",
+        "跳过": "跳过",
+    }.get(result.get("status"), "未运行")
+
+
+def _timeline_stage_label(result):
+    status = result.get("status")
+    return {
+        "complete": "已处理",
+        "incremental_skip": "增量跳过",
+        "partial": "部分失败",
+        "failed": "失败",
+    }.get(status, result.get("stage_status", "未运行"))
+
+
+def _missing_source_outputs(output_dir, assigned_outputs):
+    """Find tool-owned student outputs whose original source is now absent.
+
+    This is intentionally limited to a default full batch. The caller supplies
+    all currently assigned output directories, including unselected entries.
+    """
+    output_dir = Path(output_dir)
+    assigned = {Path(path).resolve() for path in assigned_outputs}
+    missing = []
+    for directory in sorted(output_dir.iterdir(), key=lambda path: path.name):
+        if has_link_component(directory) or not directory.is_dir() or directory.resolve() in assigned:
+            continue
+        report_owner = _read_json_object(directory / OWNER_FILE)
+        timeline_owner = _read_json_object(
+            directory / TIMELINE_DIRECTORY / TIMELINE_MANIFEST
+        )
+        sources = []
+        if isinstance(report_owner, dict) and report_owner.get("tool") == "replay_term_qa":
+            sources.append(("报告", report_owner.get("source")))
+        if isinstance(timeline_owner, dict) and timeline_owner.get("tool") == TIMELINE_TOOL:
+            sources.append(("时间线", timeline_owner.get("source")))
+        valid_sources = [(stage, source) for stage, source in sources if isinstance(source, str)]
+        if not valid_sources or any(Path(source).exists() for _, source in valid_sources):
+            continue
+        source = valid_sources[0][1]
+        source_name = source.rstrip("/\\").replace("\\", "/").rsplit("/", 1)[-1] or directory.name
+        parsed = parse_student_name(source_name) or {
+            "student_id": "未知", "name": directory.name, "collected": "未知",
+            "raw_time": "未知", "source_name": source_name,
+        }
+        parsed.update({"source": source, "output": directory})
+        stages = {stage for stage, _ in valid_sources}
+        missing.append({
+            "status": "原始提交已不存在，输出已保留",
+            "info": parsed,
+            "errors": [],
+            "report_stage": "原始提交已不存在，输出已保留" if "报告" in stages else "未管理",
+            "timeline_stage": "原始提交已不存在，输出已保留" if "时间线" in stages else "未管理",
+        })
+    return missing
+
+
+def _overview_rows(results, timeline_results, missing_sources):
+    rows = {}
+    for result in results:
+        info = result["info"]
+        key = str(Path(info["output"]).resolve())
+        rows[key] = {"info": info, "report": result, "timeline": None}
+    for result in timeline_results:
+        info = result["info"]
+        key = str(Path(info["output"]).resolve())
+        rows.setdefault(key, {"info": info, "report": None, "timeline": None})["timeline"] = result
+    ordered = list(rows.values())
+    for result in missing_sources:
+        ordered.append({"info": result["info"], "report": None, "timeline": None, "missing": result})
+    return ordered
+
+
+def existing_timeline_readme_block(readme_path):
+    """Return complete prior timeline blocks so reports-only runs preserve them."""
+    path = Path(readme_path)
+    if not path.is_file():
+        return None
+    try:
+        text = path.read_text(encoding="utf-8")
+    except OSError:
+        return None
+    start = text.find(README_BLOCK_START)
+    end = text.find(README_BLOCK_END, start)
+    if start < 0 or end < start:
+        return None
+    blocks = [text[start:end + len(README_BLOCK_END)]]
+    diagnostic_start = text.find(TIMELINE_DIAGNOSTICS_START)
+    diagnostic_end = text.find(TIMELINE_DIAGNOSTICS_END, diagnostic_start)
+    if diagnostic_start >= 0 and diagnostic_end >= diagnostic_start:
+        blocks.append(text[diagnostic_start:diagnostic_end + len(TIMELINE_DIAGNOSTICS_END)])
+    return "\n\n".join(blocks)
+
+
+def _timeline_result_diagnostics(result):
+    """Restore timeline warnings from validated JSON artifacts on a cache hit."""
+    direct = _bounded_diagnostics(result.get("errors"))
+    if direct or not result.get("cache_hit"):
+        return direct
+    info = result.get("info") or {}
+    output = info.get("output")
+    if not output:
+        return []
+    recovered = []
+    for relative in result.get("artifacts") or []:
+        path = Path(relative)
+        if (
+            len(path.parts) != 2
+            or path.parts[0] != TIMELINE_DIRECTORY
+            or not re.fullmatch(r"timeline_(?:lab[0-8]|other)\.json", path.name)
+        ):
+            continue
+        target = Path(output) / path
+        if has_link_component(target) or not target.is_file():
+            continue
+        try:
+            document = json.loads(target.read_text(encoding="utf-8"))
+        except (OSError, TypeError, ValueError):
+            continue
+        if isinstance(document, dict):
+            recovered.extend(document.get("errors") or [])
+    return _bounded_diagnostics(recovered)
+
+
+def update_timeline_diagnostics_block(readme_path, timeline_results):
+    """Keep per-student timeline diagnostics visible for normal and cached runs."""
+    path = Path(readme_path)
+    original = path.read_text(encoding="utf-8") if path.is_file() else README_TITLE + "\n"
+    diagnostics = []
+    for result in timeline_results:
+        info = result.get("info") or {}
+        source_name = info.get("source_name") or Path(str(info.get("source") or "未知")).name
+        diagnostics.extend(
+            f"{source_name} [时间线] {error}"
+            for error in _timeline_result_diagnostics(result)
+        )
+    diagnostics = _bounded_diagnostics(diagnostics)
+    block = [TIMELINE_DIAGNOSTICS_START, "### 时间线异常详情", ""]
+    if diagnostics:
+        block.extend(f"- {markdown_text(error)}" for error in diagnostics)
+    else:
+        block.append("无。")
+    block.extend(["", TIMELINE_DIAGNOSTICS_END])
+    start = original.find(TIMELINE_DIAGNOSTICS_START)
+    end = original.find(TIMELINE_DIAGNOSTICS_END, start)
+    if start >= 0 and end >= start:
+        end += len(TIMELINE_DIAGNOSTICS_END)
+        text = original[:start] + "\n".join(block) + original[end:]
+    else:
+        text = original + ("\n" if original.endswith("\n") else "\n\n") + "\n".join(block) + "\n"
+    atomic_write(path, text)
+
+
+def write_readme(output_dir, input_dir, results, skipped, timeline_results=(), missing_sources=(),
+                 preserved_timeline_block=None):
     """生成中文使用说明和本次运行的可核对汇总（筛选运行只汇总本次）。"""
+    timeline_results = list(timeline_results)
+    missing_sources = list(missing_sources)
+    overview_rows = _overview_rows(results, timeline_results, missing_sources)
     md = [README_TITLE, "", *README_UPDATE_NOTES, "## 工具用途与数据来源", "",
           "将 Linux `script` 采集的终端录像批量重放为可审阅的实验过程记录。"
           "只读取原始数据，不修改、移动或删除原始文件；不直接读取 transcripts 提取 Claude QA。", "",
           "## 输入命名与结构", "",
-          "默认输入为当前目录的 `操作系统实验数据记录`，只扫描根目录的直接子目录。",
+          "默认输入为本脚本上级目录下的 `操作系统实验数据记录`，只扫描根目录的直接子目录。",
           "学生目录为 `学号-姓名-YYYYMMDD-HHMM`；也接受 `学号-姓名-实验提交-YYYYMMDD-HHMM-序号`。",
           "学号从左端匹配，日期、时间及可选重复编号从右端匹配，中间整体作为姓名（可包含连字符）。",
           "解析函数也支持同结构的 `.tar.gz` 名称；本工具不自动解压归档文件。",
@@ -1243,7 +1907,7 @@ def write_readme(output_dir, input_dir, results, skipped):
           "    └── claude对话/", "        ├── claude_qa_clean_lab0.md", "        ├── claude_qa_clean_lab1.md",
           "        └── claude_qa_clean_other.md", "```", "",
           "仅为实际出现的 lab0–lab8 分类生成报告；非实验目录、无法识别目录及失败录像归入 `other`（其他）。",
-          "每个分类均生成四份报告，即使某类中没有 Shell 命令或有效 Claude 对话。空学生目录生成 other 四份空报告。",
+          "每个分类均生成四份报告，即使某类中没有 Shell 命令或有效 Claude 对话。没有 `*.out.gz` 录像的 term 目录会记录为失败且不生成空报告。",
           "## Lab 分类原则", "",
           "只根据 Shell 提示符的工作目录匹配完整路径段，例如 `~/lab0`、`/home/user/lab1/kernel`。"
           "`lab10`、`lab0-copy` 不属于 lab0–lab8；命令参数或对话正文提到 lab 不用于分类。",
@@ -1268,16 +1932,17 @@ def write_readme(output_dir, input_dir, results, skipped):
           "合并流式增长和重复重绘，不将未完成回复计入完整轮次。",
           "一个终端录像对应一个 Claude Session；仅有启动界面或缺少完整问答的录像不计入有效会话。"
           "每个 Session 从 Turn 1 开始；总轮次等于各 Session 轮次之和。",
-          "Shell 统计保持原来的彩色提示符锚点识别方法，保留完整参数、选项、管道及重定向。"
+          "Shell 统计识别彩色及行首普通 `user@host:cwd$`/`#` 提示符，保留完整参数、选项、管道及重定向。"
           "Shell 中启动的 `claude` 会计入；Claude TUI 的 `❯` 输入不会计入。", "",
           "## 重名、覆盖和异常", "",
           "同名学生全部使用 `姓名-学号`；同一学生多次采集或其他名称冲突时再附加学号、采集标识及序号。"
           "分配目录前会检查已有结果的来源，不会把不同学生合并到同一输出目录。",
-          "隐藏文件 `.replay_term_qa.json` 记录输出归属。默认可原子替换本工具为相同来源生成的分类报告。"
+          "隐藏文件 `.replay_term_qa.json` 记录输出归属和报告阶段增量状态。默认可原子替换本工具为相同来源生成的分类报告。"
           "无归属的既有目录默认另选名称；`--overwrite` 可允许覆盖此类目录中的分类报告，仍禁止覆盖已标记为其他来源的结果。"
           "分类报告全部写入成功后，仅清理同来源归属清单中已过时的旧版报告。原始数据和其他文件不变。每个文件单独原子替换，整个学生目录不是跨文件事务。",
-          "无效学生目录、缺少 term 的目录会跳过；单个录像或学生失败不会中断其余处理。"
-          "缺少或不可读的 timing 文件时降级一次性重放，QA 可能不完整。重放失败记录在完整转写中，全部异常还列于本页。"
+          "默认运行会为每位学生分别检查报告和时间线输入指纹；输入、处理器代码、登记产物及其哈希都未变化时显示“增量跳过”，并从清单恢复本次总览统计。`--force` 可忽略该判断并重建当前选中的阶段。",
+          "无效学生目录会跳过；缺少、为空或为符号链接/junction 的 term 目录属于该学生的失败，不生成空报告或时间线，且不会中断其余处理。"
+          "缺少、不可读、含非法值或未覆盖完整录像的 timing 文件会降级一次性重放，不记录相对时间。重放失败记录在完整转写中，全部异常还列于本页。"
           "Shell 提取失败的录像单独计数，不计入“无 Shell 命令”会话。", "",
           "## 安装和运行", "",
           "需要 Python 3.9+，依赖 `pyte` 和 `wcwidth`。本工作区使用上级 `公共依赖/pylib/` 依赖目录。", "",
@@ -1285,37 +1950,59 @@ def write_readme(output_dir, input_dir, results, skipped):
           'python3 replay_term_qa.py "../操作系统实验数据记录" --output "../操作系统实验数据记录-已清洗"',
           'python3 replay_term_qa.py "../操作系统实验数据记录" --student 2306010113',
           'python3 replay_term_qa.py "../操作系统实验数据记录" --student "刘梓宸" --overwrite',
+          'python3 replay_term_qa.py "../操作系统实验数据记录" --student 2306010113 --force',
           'python3 replay_term_qa.py "../操作系统实验数据记录/2306010113-刘梓宸-20260911-2046"',
           "python3 replay_term_qa.py --help", "```", "",
-          "| 参数 | 说明 |", "| --- | --- |", "| input_dir | 可选；默认当前目录的操作系统实验数据记录 |",
-          "| --output / -o | 输出根目录，禁止与输入目录重叠 |", "| --student | 精确匹配学号或姓名 |",
-          "| --overwrite | 允许覆盖无归属目录中已有的分类报告 |", "",
+          "| 参数 | 说明 |", "| --- | --- |", "| input_dir | 可选；默认本脚本上级目录的操作系统实验数据记录 |",
+          "| --output / -o | 输出根目录，禁止与输入目录重叠 |", "| --student | 精确匹配学号或姓名；无匹配时参数错误 |",
+          "| --overwrite | 允许覆盖无归属目录中已有的分类报告 |", "| --force | 忽略当前所选学生和阶段的增量命中，强制完整重建 |",
+          "| --timeline-only | 只刷新时间线，并替换根 README 的时间线说明块 |", "| --no-timeline | 只重建四类报告，保留既有时间线产物和说明块 |", "",
           "存在学生/录像失败时退出码为 1；参数或根目录错误为 2；其余为 0。", "",
           "## 已知限制", "",
           "- script 未记录 resize ioctl 时，只能根据 TUI 边框推断宽度；多次 resize 可能影响重放。",
-          "- 保持现有提示符识别规则，目前针对 ailab-os 实验环境；其他用户名/主机名或非标准提示符可能无法识别。",
+          "- 提示符识别支持标准彩色或行首普通 `user@host:cwd$`/`#` 形式；自定义 PS1、PowerShell 或没有目录信息的提示符可能无法识别。",
           "- TUI 格式发生较大版本变化时可能需要更新过滤规则；终端录像无法提供可靠的结构化消息边界。",
           "- 完整转写保留最终屏幕、滚屏及清屏历史；被原地重绘覆盖且未进入历史的瞬时字符（如 spinner 和流式中间状态）不单独导出。",
           "- 时间优先保留 script 头部的原始时区；学生目录采集时间本身不包含时区。", "",
           "## 本次运行汇总", "", f"- 输入目录：{markdown_text(input_dir)}",
-          f"- 处理学生数：{len(results)}", f"- 成功学生数：{sum(r['status'] == '成功' for r in results)}",
-          f"- 跳过数量：{len(skipped) + sum(r['status'] == '跳过' for r in results)}",
-          f"- 失败或部分失败学生数：{sum(r['status'] in ('失败', '部分失败') for r in results)}"]
+          f"- 报告阶段学生数：{len(results)}",
+          f"- 报告阶段已处理：{sum(r['status'] == '成功' for r in results)}",
+          f"- 报告阶段增量跳过：{sum(r['status'] == '增量跳过' for r in results)}",
+          f"- 报告阶段跳过：{sum(r['status'] == '跳过' for r in results)}",
+          f"- 报告阶段失败或部分失败：{sum(r['status'] in ('失败', '部分失败') for r in results)}",
+          f"- 时间线阶段学生数：{len(timeline_results)}",
+          f"- 时间线阶段已处理：{sum(_timeline_stage_label(r) == '已处理' for r in timeline_results)}",
+          f"- 时间线阶段增量跳过：{sum(_timeline_stage_label(r) == '增量跳过' for r in timeline_results)}",
+          f"- 时间线阶段失败或部分失败：{sum(_timeline_stage_label(r) in ('失败', '部分失败') for r in timeline_results)}",
+          f"- 跳过数量：{len(skipped) + sum(r['status'] == '跳过' for r in results)}"]
     for key, label in (("recordings", "终端录像数"), ("replay_failed", "重放失败数"),
                        ("commands", "Shell 命令执行总次数"), ("claude_sessions", "Claude 会话总数"),
                        ("turns", "对话轮次总数")):
         md.append(f"- {label}：{sum(r.get(key, 0) for r in results)}")
-    md.extend(["", "| 学生目录 | 状态 | 录像 | 命令 | Claude 会话 | 轮次 | 输出 |",
-               "| --- | --- | ---: | ---: | ---: | ---: | --- |"])
-    for r in results:
-        info = r["info"]
+    md.extend(["", "| 学生目录 | 报告阶段 | 时间线阶段 | 录像 | 命令 | Claude 会话 | 轮次 | 输出 |",
+               "| --- | --- | --- | ---: | ---: | ---: | ---: | --- |"])
+    for row in overview_rows:
+        info = row["info"]
+        missing = row.get("missing")
+        report = row.get("report")
+        timeline = row.get("timeline")
         links = []
-        for lab in r.get("labs", {}):
+        for lab in (report or {}).get("labs", {}):
             relative = Path(info["output"].name) / lab_report_paths(lab)[0]
             links.append(f"[{lab if lab != 'other' else '其他'}]({quote(relative.as_posix())})")
         output = " / ".join(links) or "—"
-        md.append(f"| {markdown_text(info['source_name'])} | {r['status']} | {r.get('recordings', 0)} | "
-                  f"{r.get('commands', 0)} | {r.get('claude_sessions', 0)} | {r.get('turns', 0)} | {output} |")
+        report_stage = missing["report_stage"] if missing else (
+            _report_stage_label(report) if report else "未运行"
+        )
+        timeline_stage = missing["timeline_stage"] if missing else (
+            _timeline_stage_label(timeline) if timeline else "未运行"
+        )
+        md.append(
+            f"| {markdown_text(info.get('source_name', Path(info['source']).name))} | {report_stage} | "
+            f"{timeline_stage} | {(report or {}).get('recordings', 0)} | "
+            f"{(report or {}).get('commands', 0)} | {(report or {}).get('claude_sessions', 0)} | "
+            f"{(report or {}).get('turns', 0)} | {output} |"
+        )
     md.extend(["", "### 按实验分类汇总", "",
                "| 分类 | 录像（分类内去重） | 命令 | Claude 会话（分类内去重） | 轮次 |",
                "| --- | ---: | ---: | ---: | ---: |"])
@@ -1328,9 +2015,17 @@ def write_readme(output_dir, input_dir, results, skipped):
     md.extend(f"- {markdown_text(path)}：{markdown_text(reason)}" for path, reason in skipped)
     for r in results:
         md.extend(f"- {markdown_text(e)}" for e in r["errors"])
-    if not skipped and not any(r["errors"] for r in results):
+    if missing_sources:
+        md.extend(
+            f"- {markdown_text(item['info']['source_name'])}：原始提交已不存在，输出已保留"
+            for item in missing_sources
+        )
+    if not skipped and not any(r["errors"] for r in results) and not missing_sources:
         md.append("无。")
-    atomic_write(output_dir / "README.md", "\n".join(md) + "\n")
+    text = "\n".join(md) + "\n"
+    if preserved_timeline_block:
+        text = text.rstrip("\n") + "\n\n" + preserved_timeline_block.rstrip("\n") + "\n"
+    atomic_write(output_dir / "README.md", text)
 
 
 def main(argv=None):
@@ -1339,61 +2034,142 @@ def main(argv=None):
     parser.add_argument("input_dir", nargs="?", default=str(CLEANING_DIR / "操作系统实验数据记录"), help="输入根目录或单学生目录")
     parser.add_argument("--output", "-o", help="输出根目录，默认输入目录同级的 输入目录名-已清洗")
     parser.add_argument("--overwrite", action="store_true", help="允许覆盖无归属输出目录中的固定程序产物，不删除其他文件")
-    parser.add_argument("--student", help="只处理精确匹配的学号或姓名")
+    parser.add_argument("--student", help="只处理精确匹配的学号或姓名；无匹配时参数错误")
+    parser.add_argument("--force", action="store_true", help="忽略增量命中，强制重建当前选中的阶段")
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--timeline-only", action="store_true",
-                      help="只生成实验过程时间线，不重建原有四类报告或根 README")
+                      help="只生成实验过程时间线并更新根 README 的时间线说明块，不重建原有四类报告")
     mode.add_argument("--no-timeline", action="store_true",
                       help="只生成原有四类报告，不生成实验过程时间线")
     args = parser.parse_args(argv)
     run_reports = not args.timeline_only
     run_timeline = not args.no_timeline
-    input_dir = Path(args.input_dir).resolve()
-    output_dir = Path(args.output).resolve() if args.output else input_dir.with_name(input_dir.name + "-已清洗")
+    report_signature = report_processor_signature() if run_reports else None
+    timeline_signature = timeline_processor_signature() if run_timeline else None
+    input_path = Path(args.input_dir)
+    if has_link_component(input_path):
+        parser.error(f"输入目录不得为符号链接或 junction：{input_path}")
+    input_dir = input_path.resolve()
+    output_path = Path(args.output) if args.output else input_dir.with_name(input_dir.name + "-已清洗")
+    if has_link_component(output_path):
+        parser.error(f"输出目录不得为符号链接或 junction：{output_path}")
+    output_dir = output_path.resolve()
     if not input_dir.is_dir():
         parser.error(f"输入目录不存在：{input_dir}")
     if input_dir == output_dir or input_dir in output_dir.parents or output_dir in input_dir.parents:
         parser.error(f"输入和输出目录不得重叠：{input_dir} / {output_dir}")
     try:
+        students, skipped = scan_students(input_dir, args.student)
+    except (OSError, ValueError) as exc:
+        parser.error(str(exc))
+    selected = [s for s in students if s["selected"]]
+    if args.student and not selected:
+        parser.error(f"未找到匹配 --student 的学生：{args.student}")
+    try:
         output_dir.mkdir(parents=True, exist_ok=True)
         readme = output_dir / "README.md"
         if readme.exists() and not args.overwrite and not readme.read_text(encoding="utf-8").startswith(README_TITLE):
             parser.error(f"输出目录已有其他 README.md，请选择其他 --output 或显式使用 --overwrite：{readme}")
-        students, skipped = scan_students(input_dir, args.student)
         allocate_outputs(students, output_dir, args.overwrite)
     except (OSError, ValueError) as exc:
         parser.error(str(exc))
-    selected = [s for s in students if s["selected"]]
+    preserved_timeline_block = existing_timeline_readme_block(readme) if args.no_timeline else None
     results = []
     timeline_results = []
     timeline_failed = False
     for i, info in enumerate(selected, 1):
         print(f"[学生 {i}/{len(selected)}] {info['name']}（{info['student_id']}）", flush=True)
+        has_recordings = bool(term_recordings(Path(info["source"]) / "term"))
         if run_reports:
-            try:
-                result = process_student(info)
-            except Exception as exc:
-                result = {"status": "失败", "info": info,
-                          "errors": [f"{info['source']}：{type(exc).__name__}: {exc}"]}
+            report_snapshot = snapshot_student_inputs(info["source"])
+            report_incremental = {
+                "fingerprint": report_snapshot["fingerprint"],
+                "processor_signature": report_signature,
+            }
+            result = None if args.force or not has_recordings else report_cache_hit(
+                info, report_snapshot, report_signature
+            )
+            if result is not None:
+                print("  [报告] 增量跳过（输入及产物未变）", flush=True)
+            else:
+                info["_report_incremental"] = report_incremental
+                try:
+                    if has_recordings:
+                        mark_report_rebuild(info)
+                    result = process_student(info, overwrite=True) if args.overwrite else process_student(info)
+                except Exception as exc:
+                    result = {"status": "失败", "info": info,
+                              "errors": [f"{info['source']}：{type(exc).__name__}: {exc}"]}
+                finally:
+                    info.pop("_report_incremental", None)
+                if not has_recordings:
+                    try:
+                        remove_student_reports(info)
+                    except Exception as exc:
+                        result.setdefault("errors", []).append(
+                            f"{info['source']} [报告清理] {type(exc).__name__}: {exc}"
+                        )
             results.append(result)
-            print(f"  [{result['status']}] {result.get('recordings', 0)} 个录像，"
-                  f"{result.get('commands', 0)} 条 Shell 命令，{result.get('claude_sessions', 0)} 个 Claude 会话，"
-                  f"{result.get('turns', 0)} 组 QA\n  输出：{info['output']}", flush=True)
+            if not result.get("cache_hit"):
+                print(f"  [{result['status']}] {result.get('recordings', 0)} 个录像，"
+                      f"{result.get('commands', 0)} 条 Shell 命令，{result.get('claude_sessions', 0)} 个 Claude 会话，"
+                      f"{result.get('turns', 0)} 组 QA\n  输出：{info['output']}", flush=True)
             if result["status"] in ("失败", "跳过"):
                 for error in result["errors"]:
                     print(f"  [{result['status']}] {error}", flush=True)
         if run_timeline:
-            try:
-                from timeline_alignment import build_student_timeline
-                aligned = build_student_timeline(info)
-                timeline_result = write_student_timeline(info, aligned)
-                timeline_result["info"] = info
-                timeline_results.append(timeline_result)
-                stats = timeline_result["statistics"]
-                recording_failures = stats.get("recording_failures", 0)
-                processing_failures = stats.get("processing_failures", recording_failures)
-                if processing_failures:
-                    timeline_failed = True
+            if not has_recordings:
+                timeline_failed = True
+                message = f"{info['source']} [时间线处理] 未发现可处理的 term/*.out.gz 录像"
+                timeline_errors = [message]
+                try:
+                    remove_student_timeline(info)
+                except Exception as exc:
+                    timeline_errors.append(
+                        f"{info['source']} [时间线清理] {type(exc).__name__}: {exc}"
+                    )
+                timeline_result = {"info": info, "status": "failed", "statistics": {
+                    "events": 0, "absolute_time_events": 0, "relative_time_only_events": 0,
+                    "missing_time_events": 0, "uncertain_events": 0, "recording_failures": 0,
+                    "processing_failures": 1, "errors": len(timeline_errors),
+                }, "errors": timeline_errors}
+                print(f"  [时间线失败] {message}", file=sys.stderr, flush=True)
+            else:
+                timeline_snapshot = snapshot_student_inputs(info["source"], include_timeline_log=True)
+                timeline_incremental = {
+                    "fingerprint": timeline_snapshot["fingerprint"],
+                    "processor_signature": timeline_signature,
+                }
+                timeline_result = None if args.force else timeline_cache_hit(
+                    info, timeline_snapshot, timeline_signature
+                )
+                if timeline_result is not None:
+                    print("  [时间线] 增量跳过（输入及产物未变）", flush=True)
+                else:
+                    try:
+                        mark_timeline_rebuild(info, allow_invalid_manifest_recovery=args.force)
+                        from timeline_alignment import build_student_timeline
+                        aligned = build_student_timeline(info)
+                        timeline_result = write_student_timeline(
+                            info, aligned, incremental=timeline_incremental
+                        )
+                        timeline_result["info"] = info
+                    except Exception as exc:
+                        timeline_failed = True
+                        message = f"{info['source']} [时间线处理] {type(exc).__name__}: {exc}"
+                        timeline_result = {"info": info, "status": "failed", "statistics": {
+                            "events": 0, "absolute_time_events": 0, "relative_time_only_events": 0,
+                            "missing_time_events": 0, "uncertain_events": 0, "recording_failures": 0,
+                            "processing_failures": 1, "errors": 1,
+                        }, "errors": [message]}
+                        print(f"  [时间线失败] {message}", file=sys.stderr, flush=True)
+            timeline_results.append(timeline_result)
+            stats = timeline_result["statistics"]
+            recording_failures = stats.get("recording_failures", 0)
+            processing_failures = stats.get("processing_failures", recording_failures)
+            if processing_failures:
+                timeline_failed = True
+            if not timeline_result.get("cache_hit") and timeline_result.get("status") != "failed":
                 timeline_label = "时间线部分失败" if processing_failures else "时间线成功"
                 print(f"  [{timeline_label}] {stats['events']} 个事件，"
                       f"{stats['absolute_time_events']} 个有绝对时间，"
@@ -1403,28 +2179,34 @@ def main(argv=None):
                       f"{stats['errors']} 个异常或不确定性提示", flush=True)
                 for error in timeline_result["errors"]:
                     print(f"  [时间线提示] {error}", flush=True)
-            except Exception as exc:
-                timeline_failed = True
-                message = f"{info['source']} [时间线处理] {type(exc).__name__}: {exc}"
-                timeline_results.append({"info": info, "statistics": {
-                    "events": 0, "absolute_time_events": 0, "relative_time_only_events": 0,
-                    "missing_time_events": 0, "uncertain_events": 0, "recording_failures": 0,
-                    "processing_failures": 1, "errors": 1,
-                }, "errors": [message]})
-                print(f"  [时间线失败] {message}", file=sys.stderr, flush=True)
     for path, reason in skipped:
         print(f"[跳过] {path}：{reason}", flush=True)
+    default_full_batch = (
+        not args.student
+        and not args.timeline_only
+        and not args.no_timeline
+        and not (input_dir / "term").is_dir()
+    )
+    missing_sources = (
+        _missing_source_outputs(output_dir, [info["output"] for info in students])
+        if default_full_batch else []
+    )
     if run_reports:
         try:
-            write_readme(output_dir, input_dir, results, skipped)
+            write_readme(
+                output_dir, input_dir, results, skipped, timeline_results, missing_sources,
+                preserved_timeline_block=preserved_timeline_block,
+            )
             if run_timeline:
                 update_readme_timeline_block(output_dir / "README.md", timeline_results)
+                update_timeline_diagnostics_block(output_dir / "README.md", timeline_results)
         except (OSError, ValueError) as exc:
             print(f"[失败] {output_dir / 'README.md'}：{exc}", file=sys.stderr)
             return 1
     elif run_timeline:
         try:
             update_readme_timeline_block(output_dir / "README.md", timeline_results)
+            update_timeline_diagnostics_block(output_dir / "README.md", timeline_results)
         except (OSError, ValueError) as exc:
             print(f"[失败] {output_dir / 'README.md'}：{exc}", file=sys.stderr)
             return 1

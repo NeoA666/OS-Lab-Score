@@ -9,8 +9,16 @@
 
 - 实验分类：lab0
 
-- Shell 命令执行总次数：0
-- 不同 Shell 命令数量：0
+- Shell 命令执行总次数：9
+- 不同 Shell 命令数量：8
 
 | command | count |
 | --- | ---: |
+| make run | 2 |
+| ls -lh fs.img | 1 |
+| make build | 1 |
+| make clean | 1 |
+| make fd | 1 |
+| make fs | 1 |
+| mkfs.vfat --help | 1 |
+| sudo apt install dosfstools | 1 |

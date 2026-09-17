@@ -16,9 +16,9 @@
 每对 .out.gz + .tim.gz 经 pyte 完整重放后输出连续文本，保留滚屏及清屏历史，不执行 Claude 清洗。
 跨 lab 的录像仍按原有分类分段，每个片段输出一次完整重放结果，不展开逐帧变化或逐字符中间状态。
 
-## Session 20260911T204037-63059 · 片段 1
+## Session 20260911T204037-63059 · 片段 2
 
-- 原录像字节区间：[ 0, 35952 )
+- 原录像字节区间：[ 269, 36212 )
 - 分类依据目录：\~/桌面/xv6-ai-labs-km-无答案/lab0
 
 - 开始时间：未知
@@ -340,7 +340,7 @@ Boot HART MEDELEG         : 0x0000000000f0b509
 '--'   '--'      `-'      `----'                `-----'--' `------'  `--'   `--'   `-----'
 hart 0 init done
 init: starting sh
--> / $ Terminated
+-> / $ QEMU: Terminated
 ubuntu@ubuntu-pc:~/桌面/xv6-ai-labs-km-无答案/lab0$ make run
 
 OpenSBI v1.3
@@ -495,6 +495,6 @@ You will need a RISC-V "newlib" tool chain from
 https://github.com/riscv/riscv-gnu-toolchain, and qemu compiled for
 riscv64-softmmu. Once they are installed, and in your shell
 search path, you can run "make qemu".
--> / $
+-> / $ QEMU: Terminated
 ubuntu@ubuntu-pc:~/桌面/xv6-ai-labs-km-无答案/lab0$
 ```

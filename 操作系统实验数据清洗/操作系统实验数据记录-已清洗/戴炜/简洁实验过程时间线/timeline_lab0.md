@@ -1,7 +1,7 @@
 # 简洁实验过程时间线
 
 - 学号：2406080102
-- 姓名：daiwei
+- 姓名：戴炜
 - 实验分类：lab0
 
 ## 过程
@@ -2207,8 +2207,7 @@ Remote debugging using localhost:1234
 A debugging session is active.
         Inferior 1 [process 1] will be detached.
 Quit anyway? (y or n) y
-Detaching from program: /home/ailab-os/桌面/xv6-ai-labs-km/lab0/target/kernel, p
-rocess 1
+Detaching from program: /home/ailab-os/桌面/xv6-ai-labs-km/lab0/target/kernel, process 1
 Ending remote debugging.
 [Inferior 1 (process 1) detached]
 ```

@@ -1,6 +1,6 @@
 {
   "tool": "replay_term_qa.timeline",
-  "source": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926",
+  "source": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260911-0926",
   "schema_version": 1,
   "status": "complete",
   "artifacts": [
@@ -10,5 +10,34 @@
     "实验过程时间线/timeline_lab1.md",
     "实验过程时间线/timeline_other.json",
     "实验过程时间线/timeline_other.md"
-  ]
+  ],
+  "cache_format_version": 1,
+  "input_fingerprint": "e92dde0c465ab3353d5cd25326371e090f29196342835150684d4162fc835d3d",
+  "processor_signature": "dab3ac3695922021dc4634af109a6f80b6e6d8a83b95727047209cff85929fe4",
+  "summary": {
+    "statistics": {
+      "events": 95,
+      "absolute_time_events": 95,
+      "relative_time_only_events": 0,
+      "missing_time_events": 0,
+      "uncertain_events": 18,
+      "errors": 7,
+      "by_type": {
+        "claude_reply_observed": 15,
+        "claude_user_observed": 15,
+        "shell_command_observed": 65
+      },
+      "recordings": 24,
+      "recording_failures": 0,
+      "processing_failures": 0
+    }
+  },
+  "artifact_sha256": {
+    "实验过程时间线/timeline_lab0.json": "67d5f947925782c25b61cc00b8986d84e1f879343b41722316b565b75e143244",
+    "实验过程时间线/timeline_lab0.md": "02631346bf6d863b5be1ec0ed39003423f14e24c4e135205b8d01f8e1785465f",
+    "实验过程时间线/timeline_lab1.json": "607ebebdade26d06afa116fecb0a4f44493c7faa0107f0bab26591b0a51ee731",
+    "实验过程时间线/timeline_lab1.md": "252c067f236021c8646442f2a21f22979b0092e21708e9c2b57b9331f713bef3",
+    "实验过程时间线/timeline_other.json": "4e6b82ced3c31e44efb7995f0401edad75ce4505d54f43296b1c27b22df374d6",
+    "实验过程时间线/timeline_other.md": "995939a1d5e7831030c9a2516473de9d3c3357c3ba0a4f19d38570ab69a2a069"
+  }
 }

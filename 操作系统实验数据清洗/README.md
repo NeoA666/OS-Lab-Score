@@ -23,6 +23,15 @@ python3 replay_term_qa.py ../操作系统实验数据记录 \
   --output ../操作系统实验数据记录-已清洗
 ```
 
+默认按“学生目录 + 处理阶段”增量处理：所有输入仍会扫描，但输入内容、处理器代码和登记产物都未变化的阶段会跳过重放并保留统计。使用 `--force` 可强制重建当前选中的学生和阶段：
+
+```bash
+python3 replay_term_qa.py ../操作系统实验数据记录 \
+  --output ../操作系统实验数据记录-已清洗 --student 2306010113 --force
+```
+
+每名学生必须提供至少一个常规 `term/*.out.gz` 录像。缺失、为空、符号链接或 Windows junction 的 `term/` 会按学生级失败处理，命令返回 `1`，不会生成空学生报告或时间线；无匹配的 `--student` 返回参数错误 `2`。
+
 只更新时间线：
 
 ```bash
@@ -35,7 +44,8 @@ python3 replay_term_qa.py ../操作系统实验数据记录 \
 ```bash
 python3 -m unittest -v \
   test_replay_term_qa test_timeline test_timeline_alignment \
-  test_timeline_reports test_generate_readable_timeline
+  test_timeline_reports test_generate_readable_timeline \
+  test_incremental_processing
 ```
 
 ## xv6 源码差异报告
@@ -65,4 +75,5 @@ python3 generate_lab_diff_reports.py --lab lab1 --strict-whitespace
 
 - [已清洗数据与报告说明](操作系统实验数据记录-已清洗/README.md)
 - [实验过程数据背景总结](文档/实验过程数据背景总结.md)
+- [2026-09-17 工具修复与复跑报告](文档/2026-09-17-工具修复与复跑报告.md)
 - [历史验证记录](历史验证记录/README.md)

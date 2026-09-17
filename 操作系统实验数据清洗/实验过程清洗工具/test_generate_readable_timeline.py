@@ -1,6 +1,8 @@
 import hashlib
 import json
+import os
 from pathlib import Path
+import subprocess
 import tempfile
 import unittest
 
@@ -47,6 +49,37 @@ class ReadableTimelineTests(unittest.TestCase):
         self.assertNotIn("hidden-recording", text)
         self.assertNotIn("/dev/pts/0", text)
         self.assertEqual(source_hash, hashlib.sha256(self.timeline.read_bytes()).hexdigest())
+
+    def test_removes_only_owned_markdown_when_source_json_disappears(self):
+        output = app.write_student(self.student)[0]
+        manifest = output.parent / app.OUTPUT_MANIFEST
+        self.timeline.unlink()
+
+        self.assertEqual(app.write_student(self.student), [])
+        self.assertFalse(output.exists())
+        document = json.loads(manifest.read_text(encoding="utf-8"))
+        self.assertEqual(document["artifacts"], [])
+
+    @unittest.skipUnless(os.name == "nt", "Windows junction fixture")
+    def test_junction_output_is_rejected_without_writing_external_files(self):
+        external = self.root / "external"
+        external.mkdir()
+        junction = self.student / app.OUTPUT_DIRECTORY
+        created = subprocess.run(
+            ["cmd", "/d", "/c", "mklink", "/J", str(junction), str(external)],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            check=False,
+        )
+        if created.returncode:
+            self.skipTest("当前 Windows 环境不允许创建 junction")
+        try:
+            with self.assertRaises(ValueError):
+                app.write_student(self.student)
+            self.assertEqual(list(external.iterdir()), [])
+        finally:
+            subprocess.run(["cmd", "/d", "/c", "rmdir", str(junction)],
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=False)
 
 
 if __name__ == "__main__":

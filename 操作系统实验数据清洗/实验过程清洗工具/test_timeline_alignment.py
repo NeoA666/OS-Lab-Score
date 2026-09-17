@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest import mock
 
 import replay_term_qa as app
 import timeline_alignment as timeline
@@ -53,6 +54,12 @@ class AlignmentTests(unittest.TestCase):
         self.assertIsNone(result["events"][0]["observed_at"])
         self.assertEqual(result["events"][0]["elapsed_seconds"], 1)
 
+    def test_prompt_only_lab_is_declared_without_fictitious_other_event(self):
+        self.recording([PROMPT])
+        result = self.build()
+        self.assertEqual(result["events"], [])
+        self.assertEqual(result["labs"], ["lab0"])
+
     def test_chinese_header_and_invalid_dimensions(self):
         self.recording([PROMPT + 'pwd\r\n'], header='脚本启动于 2026-09-05 09:49:18+00:00 [COLUMNS="-1" LINES="-1"]\n')
         event = self.build()["events"][0]
@@ -95,7 +102,8 @@ class AlignmentTests(unittest.TestCase):
         self.recording([PROMPT + 'pwd\r\n'], sizes=[99999])
         event = self.build()["events"][0]
         self.assertIsNone(event["elapsed_seconds"])
-        self.assertIn("timing_block_exceeds_available_body", event["uncertainty"])
+        self.assertIn("timing_exceeds_body", event["uncertainty"])
+        self.assertIn("byte_not_covered_by_valid_timing", event["uncertainty"])
 
     def test_conflicting_session_starts_preserve_relative_time(self):
         self.recording([PROMPT + 'pwd\r\n'])
@@ -107,6 +115,25 @@ class AlignmentTests(unittest.TestCase):
         self.assertIsNone(event["observed_at"])
         self.assertEqual(event["elapsed_seconds"], 1)
         self.assertIn("conflicting_session_start_records", event["uncertainty"])
+
+    def test_linked_session_log_is_not_read_or_cached(self):
+        log = self.root / "logs" / "events.jsonl"
+        log.parent.mkdir()
+        log.write_text(json.dumps({"type": "session_start", "rec": "r", "ts": "2026-09-10T22:21:13+08:00"}),
+                       encoding="utf-8")
+
+        original_link_check = app.has_link_component
+        with mock.patch.object(app, "has_link_component", side_effect=lambda path: (
+            Path(path).name == "events.jsonl" or original_link_check(path)
+        )), mock.patch.object(Path, "open", side_effect=AssertionError("linked log was read")):
+            sessions, issues = timeline.load_session_logs(self.root)
+            snapshot = app.snapshot_student_inputs(self.root, include_timeline_log=True)
+
+        self.assertEqual(sessions, {})
+        self.assertEqual(issues, ["session_log_linked"])
+        self.assertFalse(snapshot["cacheable"])
+        event_entry = next(item for item in snapshot["entries"] if item["path"] == "logs/events.jsonl")
+        self.assertEqual(event_entry["state"], "symlink")
 
     def test_repeated_question_gets_distinct_identity(self):
         self.recording([PROMPT + 'claude\r\n', '❯ 同问\r\n● 甲\r\n❯ \r\n',

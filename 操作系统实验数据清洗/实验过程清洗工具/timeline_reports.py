@@ -2,9 +2,11 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import re
+import stat
 import tempfile
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -15,6 +17,7 @@ TIMELINE_DIRECTORY = "实验过程时间线"
 TIMELINE_MANIFEST = ".timeline_manifest.json"
 TIMELINE_TOOL = "replay_term_qa.timeline"
 TIMELINE_SCHEMA_VERSION = 1
+TIMELINE_CACHE_FORMAT_VERSION = 1
 LAB_KEYS = tuple(f"lab{i}" for i in range(9)) + ("other",)
 README_BLOCK_START = "<!-- replay_term_qa:timeline:start -->"
 README_BLOCK_END = "<!-- replay_term_qa:timeline:end -->"
@@ -23,9 +26,37 @@ _ARTIFACT_RE = re.compile(
 )
 
 
+def is_link_like(path):
+    """Return whether a path is a symlink or Windows reparse-point link."""
+    path = Path(path)
+    junction = getattr(path, "is_junction", None)
+    try:
+        if path.is_symlink() or bool(junction and junction()):
+            return True
+        attributes = getattr(os.lstat(path), "st_file_attributes", 0)
+        reparse_point = getattr(stat, "FILE_ATTRIBUTE_REPARSE_POINT", 0)
+        return bool(reparse_point and attributes & reparse_point)
+    except FileNotFoundError:
+        return False
+    except OSError:
+        return True
+
+
+def has_link_component(path):
+    """Reject a target when it or any existing parent is link-like."""
+    current = Path(path)
+    while True:
+        if is_link_like(current):
+            return True
+        parent = current.parent
+        if parent == current:
+            return False
+        current = parent
+
+
 def _atomic_write(path, text):
     path = Path(path)
-    if path.is_symlink():
+    if has_link_component(path):
         raise ValueError(f"拒绝覆盖符号链接：{path}")
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = None
@@ -42,8 +73,18 @@ def _atomic_write(path, text):
             temporary.unlink()
 
 
+def _stream_sha256(path):
+    digest = hashlib.sha256()
+    with Path(path).open("rb") as stream:
+        for block in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
 def _read_manifest(student_output):
     path = Path(student_output) / TIMELINE_DIRECTORY / TIMELINE_MANIFEST
+    if has_link_component(path):
+        return None
     try:
         value = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, ValueError, TypeError):
@@ -51,30 +92,248 @@ def _read_manifest(student_output):
     return value if isinstance(value, dict) else None
 
 
-def timeline_owned_by(student_output, source):
-    """Return whether the independent timeline manifest owns this directory."""
-    manifest = _read_manifest(student_output)
+def _manifest_matches_source(manifest, source):
     return bool(
-        manifest
+        isinstance(manifest, dict)
         and manifest.get("tool") == TIMELINE_TOOL
         and manifest.get("source") == str(source)
     )
 
 
-def _renamed_source_owner(manifest, info, output):
-    """允许同一学号的提交目录改名后复用其现有时间线目录。"""
-    if not isinstance(manifest, dict) or manifest.get("tool") != TIMELINE_TOOL:
+def _recoverable_invalid_manifest_artifacts(output, source):
+    """Return artifacts that prove ownership when only the manifest is corrupt."""
+    output = Path(output)
+    timeline_dir = output / TIMELINE_DIRECTORY
+    if has_link_component(timeline_dir) or not timeline_dir.is_dir():
+        return None
+    artifacts = []
+    json_labs = set()
+    markdown_labs = set()
+    for candidate in sorted(timeline_dir.iterdir(), key=lambda path: path.name):
+        match = re.fullmatch(r"timeline_(lab[0-8]|other)\.(json|md)", candidate.name)
+        if not match:
+            continue
+        if is_link_like(candidate) or not candidate.is_file():
+            return None
+        lab, extension = match.groups()
+        if extension == "json":
+            try:
+                document = json.loads(candidate.read_text(encoding="utf-8"))
+            except (OSError, TypeError, ValueError):
+                return None
+            student = document.get("student") if isinstance(document, dict) else None
+            if (
+                not isinstance(student, dict)
+                or document.get("lab") != lab
+                or student.get("source") != str(source)
+            ):
+                return None
+            json_labs.add(lab)
+        else:
+            markdown_labs.add(lab)
+        artifacts.append((Path(TIMELINE_DIRECTORY) / candidate.name).as_posix())
+    if not json_labs or not markdown_labs.issubset(json_labs):
+        return None
+    return artifacts
+
+
+def timeline_owned_by(student_output, source, info=None):
+    """Return whether the independent timeline manifest owns this directory."""
+    output = Path(student_output)
+    manifest_path = output / TIMELINE_DIRECTORY / TIMELINE_MANIFEST
+    if has_link_component(manifest_path):
         return False
-    source = manifest.get("source")
-    if not isinstance(source, str):
+    manifest = _read_manifest(output)
+    if _manifest_matches_source(manifest, source):
+        return True
+    if manifest is not None or not manifest_path.exists():
         return False
-    source_name = source.rstrip("/\\").replace("\\", "/").rsplit("/", 1)[-1]
-    match = re.match(r"^(\d+)-", source_name)
-    return bool(
-        match
-        and match.group(1) == str(info.get("student_id", ""))
-        and output.name == str(info.get("name", ""))
+    return _recoverable_invalid_manifest_artifacts(output, source) is not None
+
+
+def _timeline_artifact_is_valid(output, relative):
+    if not isinstance(relative, str) or not _ARTIFACT_RE.fullmatch(relative):
+        return False
+    target = Path(output) / Path(relative)
+    if has_link_component(target) or not target.is_file():
+        return False
+    try:
+        resolved = target.resolve()
+        output = Path(output).resolve()
+    except OSError:
+        return False
+    return output in resolved.parents
+
+
+def _timeline_artifacts_are_complete(output, artifacts):
+    if not isinstance(artifacts, list) or not artifacts or not all(isinstance(item, str) for item in artifacts):
+        return False
+    if len(set(artifacts)) != len(artifacts) or not all(
+        _timeline_artifact_is_valid(output, relative) for relative in artifacts
+    ):
+        return False
+    grouped = {}
+    for relative in artifacts:
+        path = Path(relative)
+        match = re.fullmatch(r"timeline_(lab[0-8]|other)\.(json|md)", path.name)
+        if not match or path.parent.as_posix() != TIMELINE_DIRECTORY:
+            return False
+        grouped.setdefault(match.group(1), set()).add(match.group(2))
+    return bool(grouped) and all(kinds == {"json", "md"} for kinds in grouped.values())
+
+
+def _timeline_artifact_hashes_are_valid(output, artifacts, hashes):
+    if not isinstance(hashes, dict) or set(hashes) != set(artifacts):
+        return False
+    for relative in artifacts:
+        digest = hashes.get(relative)
+        if not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest):
+            return False
+        try:
+            if _stream_sha256(Path(output) / relative) != digest:
+                return False
+        except OSError:
+            return False
+    return True
+
+
+_TIMELINE_STAT_KEYS = (
+    "recordings",
+    "events",
+    "absolute_time_events",
+    "relative_time_only_events",
+    "missing_time_events",
+    "uncertain_events",
+    "recording_failures",
+    "processing_failures",
+    "errors",
+)
+
+
+def _timeline_summary_is_valid(summary):
+    if not isinstance(summary, dict) or not isinstance(summary.get("statistics"), dict):
+        return False
+    statistics = summary["statistics"]
+    return (
+        all(
+            isinstance(statistics.get(key), int) and not isinstance(statistics.get(key), bool)
+            for key in _TIMELINE_STAT_KEYS
+        )
+        and isinstance(statistics.get("by_type"), dict)
+        and all(
+            isinstance(key, str) and isinstance(value, int) and not isinstance(value, bool)
+            for key, value in statistics["by_type"].items()
+        )
     )
+
+
+def timeline_cache_hit(info, snapshot, processor_signature):
+    """Restore a cached timeline summary only after validating every artifact."""
+    output = Path(info["output"])
+    if not snapshot.get("cacheable") or has_link_component(output) or not output.is_dir():
+        return None
+    manifest = _read_manifest(output)
+    if not isinstance(manifest, dict) or manifest.get("tool") != TIMELINE_TOOL:
+        return None
+    if (
+        manifest.get("source") != info.get("source")
+        or manifest.get("status") != "complete"
+        or manifest.get("schema_version") != TIMELINE_SCHEMA_VERSION
+        or manifest.get("cache_format_version") != TIMELINE_CACHE_FORMAT_VERSION
+        or manifest.get("input_fingerprint") != snapshot.get("fingerprint")
+        or manifest.get("processor_signature") != processor_signature
+    ):
+        return None
+    artifacts = manifest.get("artifacts")
+    summary = manifest.get("summary")
+    if (
+        not _timeline_summary_is_valid(summary)
+        or not _timeline_artifacts_are_complete(output, artifacts)
+        or not _timeline_artifact_hashes_are_valid(output, artifacts, manifest.get("artifact_sha256"))
+    ):
+        return None
+    return {
+        "info": info,
+        "statistics": dict(summary["statistics"]),
+        "artifacts": list(artifacts),
+        "errors": [],
+        "fatal_errors": [],
+        "cache_hit": True,
+        "status": "incremental_skip",
+    }
+
+
+def mark_timeline_rebuild(info, allow_invalid_manifest_recovery=False):
+    """Invalidate a prior success before construction can leave partial output."""
+    output = Path(info["output"])
+    manifest_path = output / TIMELINE_DIRECTORY / TIMELINE_MANIFEST
+    if has_link_component(manifest_path):
+        raise ValueError(f"拒绝覆盖符号链接时间线归属清单：{manifest_path}")
+    previous = _read_manifest(output)
+    previous_owned = _manifest_matches_source(previous, info.get("source"))
+    if manifest_path.exists() and not previous_owned:
+        if not allow_invalid_manifest_recovery or previous is not None:
+            return
+        artifacts = _recoverable_invalid_manifest_artifacts(output, info.get("source"))
+        if artifacts is None:
+            return
+    else:
+        artifacts = previous.get("artifacts") if isinstance(previous, dict) and isinstance(previous.get("artifacts"), list) else []
+    manifest = {
+        "tool": TIMELINE_TOOL,
+        "source": info.get("source"),
+        "schema_version": TIMELINE_SCHEMA_VERSION,
+        "status": "building",
+        "artifacts": sorted(
+            relative for relative in artifacts
+            if isinstance(relative, str) and _ARTIFACT_RE.fullmatch(relative)
+        ),
+    }
+    _atomic_write(manifest_path, json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
+
+
+def _remove_registered_artifacts(output, artifacts, keep=()):
+    """Remove only valid timeline paths registered by the matching manifest."""
+    output = Path(output).resolve()
+    keep = set(keep)
+    removed = []
+    for relative in artifacts if isinstance(artifacts, list) else []:
+        if (
+            not isinstance(relative, str)
+            or not _ARTIFACT_RE.fullmatch(relative)
+            or relative in keep
+            or not _timeline_artifact_is_valid(output, relative)
+        ):
+            continue
+        target = output / Path(relative)
+        target.unlink()
+        removed.append(relative)
+    return removed
+
+
+def remove_student_timeline(info):
+    """Clear same-source registered artifacts while retaining a reusable owner marker."""
+    output_path = Path(info["output"])
+    if has_link_component(output_path):
+        raise ValueError(f"拒绝使用符号链接学生输出目录：{output_path}")
+    if not output_path.is_dir():
+        return False
+    output = output_path.resolve()
+    manifest_path = output / TIMELINE_DIRECTORY / TIMELINE_MANIFEST
+    if has_link_component(manifest_path):
+        raise ValueError(f"拒绝删除符号链接时间线归属清单：{manifest_path}")
+    manifest = _read_manifest(output)
+    if not _manifest_matches_source(manifest, info.get("source")):
+        return False
+    _remove_registered_artifacts(output, manifest.get("artifacts", []))
+    _atomic_write(manifest_path, json.dumps({
+        "tool": TIMELINE_TOOL,
+        "source": info.get("source"),
+        "schema_version": TIMELINE_SCHEMA_VERSION,
+        "status": "cleared",
+        "artifacts": [],
+    }, ensure_ascii=False, indent=2) + "\n")
+    return True
 
 
 def _event_lab(event):
@@ -295,24 +554,23 @@ def _render_markdown(info, lab, events, stats, errors):
     return "\n".join(md)
 
 
-def write_student_timeline(info, result):
+def write_student_timeline(info, result, incremental=None):
     """Write all timeline artifacts, then clean only stale artifacts from the same source."""
-    output = Path(info["output"]).resolve()
+    output_path = Path(info["output"])
+    if has_link_component(output_path):
+        raise ValueError(f"拒绝使用符号链接学生输出目录：{output_path}")
+    output = output_path.resolve()
     timeline_dir = output / TIMELINE_DIRECTORY
-    if timeline_dir.is_symlink():
+    if has_link_component(timeline_dir):
         raise ValueError(f"拒绝使用符号链接时间线目录：{timeline_dir}")
     if output not in timeline_dir.resolve().parents:
         raise ValueError(f"时间线目标越出学生输出目录：{timeline_dir}")
 
     manifest_path = timeline_dir / TIMELINE_MANIFEST
-    if manifest_path.is_symlink():
+    if has_link_component(manifest_path):
         raise ValueError(f"拒绝覆盖符号链接时间线归属清单：{manifest_path}")
     previous = _read_manifest(output)
-    previous_owned = (
-        isinstance(previous, dict)
-        and previous.get("tool") == TIMELINE_TOOL
-        and (previous.get("source") == info.get("source") or _renamed_source_owner(previous, info, output))
-    )
+    previous_owned = _manifest_matches_source(previous, info.get("source"))
     if manifest_path.exists() and (
         not previous
         or not previous_owned
@@ -320,6 +578,9 @@ def write_student_timeline(info, result):
         raise ValueError(f"时间线目录已有其他来源或无效归属清单：{manifest_path}")
 
     raw_events = result.get("events") or []
+    total_recordings = int(result.get("recordings") or 0)
+    if total_recordings <= 0:
+        raise ValueError("未发现可处理的 term/*.out.gz 录像，不生成空时间线")
     errors = [str(error) for error in (result.get("errors") or [])]
     groups = {lab: [] for lab in LAB_KEYS}
     for raw_event in raw_events:
@@ -332,19 +593,22 @@ def write_student_timeline(info, result):
             event["lab"] = "other"
             event["uncertainty"] = list(event.get("uncertainty") or []) + ["实验分类无效，已归入 other"]
         groups[lab].append(event)
-    active_labs = [lab for lab in LAB_KEYS if groups[lab]] or ["other"]
+    declared_labs = result.get("labs")
+    if not isinstance(declared_labs, (list, tuple, set)):
+        declared_labs = ()
+    active_labs = [
+        lab for lab in LAB_KEYS
+        if groups[lab] or lab in declared_labs
+    ] or ["other"]
 
     wanted = []
     summaries = {}
     recording_details = result.get("recording_details") or []
-    total_recordings = int(result.get("recordings") or 0)
     recording_failures = sum(
         isinstance(detail, dict) and detail.get("status") == "error"
         for detail in recording_details
     )
     fatal_errors = [str(error) for error in (result.get("fatal_errors") or [])]
-    if total_recordings == 0:
-        fatal_errors.append("未发现可处理的 term/*.out.gz 录像")
     fatal_errors = list(dict.fromkeys(fatal_errors))
     for error in fatal_errors:
         if error not in errors:
@@ -378,21 +642,14 @@ def write_student_timeline(info, result):
         _atomic_write(output / md_relative, _render_markdown(info, lab, events, stats, errors))
         wanted.extend((json_relative.as_posix(), md_relative.as_posix()))
 
-    if not processing_failures and previous_owned:
-        for relative in previous.get("artifacts", []):
-            if not isinstance(relative, str) or not _ARTIFACT_RE.fullmatch(relative) or relative in wanted:
-                continue
-            target = output / Path(relative)
-            resolved = target.resolve()
-            if output in resolved.parents and not target.is_symlink() and target.is_file():
-                target.unlink()
+    if previous_owned:
+        _remove_registered_artifacts(output, previous.get("artifacts", []), wanted)
 
     manifest_artifacts = set(wanted)
-    if processing_failures and previous:
-        manifest_artifacts.update(
-            relative for relative in previous.get("artifacts", [])
-            if isinstance(relative, str) and _ARTIFACT_RE.fullmatch(relative)
-        )
+    aggregate = _stats([event for lab in active_labs for event in groups[lab]], errors)
+    aggregate["recordings"] = total_recordings
+    aggregate["recording_failures"] = recording_failures
+    aggregate["processing_failures"] = processing_failures
     manifest = {
         "tool": TIMELINE_TOOL,
         "source": info.get("source"),
@@ -400,13 +657,26 @@ def write_student_timeline(info, result):
         "status": "partial" if processing_failures else "complete",
         "artifacts": sorted(manifest_artifacts),
     }
+    if (
+        not processing_failures
+        and isinstance(incremental, dict)
+        and isinstance(incremental.get("fingerprint"), str)
+        and isinstance(incremental.get("processor_signature"), str)
+    ):
+        manifest.update({
+            "cache_format_version": TIMELINE_CACHE_FORMAT_VERSION,
+            "input_fingerprint": incremental["fingerprint"],
+            "processor_signature": incremental["processor_signature"],
+            "summary": {"statistics": aggregate},
+            "artifact_sha256": {
+                relative: _stream_sha256(output / relative)
+                for relative in sorted(manifest_artifacts)
+            },
+        })
     _atomic_write(manifest_path, json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
-    aggregate = _stats([event for lab in active_labs for event in groups[lab]], errors)
-    aggregate["recordings"] = total_recordings
-    aggregate["recording_failures"] = recording_failures
-    aggregate["processing_failures"] = processing_failures
     return {"labs": summaries, "statistics": aggregate, "artifacts": sorted(manifest_artifacts),
-            "errors": errors, "fatal_errors": fatal_errors}
+            "errors": errors, "fatal_errors": fatal_errors,
+            "status": "partial" if processing_failures else "complete"}
 
 
 def update_readme_timeline_block(readme_path, timeline_results):
@@ -427,6 +697,32 @@ def update_readme_timeline_block(readme_path, timeline_results):
     for item in timeline_results:
         for key, value in (item.get("statistics") or {}).get("by_type", {}).items():
             by_type[key] = by_type.get(key, 0) + value
+    def stage_label(item):
+        return {
+            "complete": "已处理",
+            "incremental_skip": "增量跳过",
+            "partial": "部分失败",
+            "failed": "失败",
+        }.get(item.get("status"), "未运行")
+
+    stage_counts = {label: sum(stage_label(item) == label for item in timeline_results)
+                    for label in ("已处理", "增量跳过", "部分失败", "失败")}
+    stage_rows = ["", "| 学生目录 | 时间线阶段 |", "| --- | --- |"]
+    detail_rows = []
+    for item in timeline_results:
+        info = item.get("info") or {}
+        source_name = info.get("source_name") or Path(str(info.get("source") or "未知")).name
+        stage = stage_label(item)
+        stage_rows.append(f"| {_markdown_text(source_name)} | {stage} |")
+        item_errors = item.get("errors") or []
+        if not isinstance(item_errors, (list, tuple)):
+            item_errors = [item_errors]
+        for error in dict.fromkeys(str(error) for error in item_errors):
+            detail_rows.append(
+                f"- {_markdown_text(source_name)}（{stage}）：{_markdown_text(error)}"
+            )
+    detail_block = (["", "### 时间线提示与失败详情", "", *detail_rows]
+                    if detail_rows else [])
     block = [
         README_BLOCK_START,
         "## 实验过程时间线", "",
@@ -435,12 +731,15 @@ def update_readme_timeline_block(readme_path, timeline_results):
         "录像起始时钟只有秒级精度；显示到毫秒仅用于保留 timing 相对偏移，不代表绝对时间具有毫秒精度。Claude 回复最终正文完整可见时间可能晚于下一轮问题，它不是回复完成时间。", "",
         "JSON 中 `observed_at` 为带时区的显示时间，`elapsed_seconds` 为原录像累计偏移；`source.observation` 保留原 timing 行号、变化画面编号和解压字节区间（零基、左闭右开）。画面编号不等于 timing 行号，观察帧的位置也不代表正文全部字符都来自这一帧。`final_text_first_observed_at` 仅记录最终回复正文首次完整可见时间。无法确定的值保留为 null，原因见 `uncertainty`。", "",
         "`recording_details` 保留所有录像的读取、时钟和提取检查记录；`errors` 包含异常与不确定性提示，不等同于处理失败。没有提取到事件不代表没有发生操作或对话。内部未保留的 Claude 记录可能只是重绘残留，不能作为额外未完成对话计数。", "",
-        "默认运行同时生成原有四类报告和时间线；`--timeline-only` 只刷新时间线并仅替换本说明块，保留 README 中原有报告统计与其他内容；`--no-timeline` 只生成原有报告。两项不能同时使用。", "",
+        "默认运行同时生成原有四类报告和时间线；`--timeline-only` 只刷新时间线并仅替换本说明块，保留 README 中原有报告统计与其他内容；`--no-timeline` 只生成原有报告。两项不能同时使用。输入、处理器代码和登记产物未变化时会增量跳过；`--force` 可强制重建所选时间线。", "",
         "本工作区仅更新时间线的命令（在脚本所在目录执行）：", "",
         "```powershell",
         'python3 replay_term_qa.py "../操作系统实验数据记录" -o "../操作系统实验数据记录-已清洗" --timeline-only',
         "```", "",
         f"- 本次时间线学生数：{len(timeline_results)}",
+        f"- 时间线阶段已处理：{stage_counts['已处理']}",
+        f"- 时间线阶段增量跳过：{stage_counts['增量跳过']}",
+        f"- 时间线阶段失败或部分失败：{stage_counts['部分失败'] + stage_counts['失败']}",
         f"- 终端录像数：{totals['recordings']}",
         f"- 事件数：{totals['events']}",
         f"- Shell 命令事件：{by_type.get('shell_command_observed', 0)}",
@@ -453,6 +752,8 @@ def update_readme_timeline_block(readme_path, timeline_results):
         f"- 录像处理失败：{totals['recording_failures']}",
         f"- 处理失败总数：{totals['processing_failures']}",
         f"- 异常数：{totals['errors']}",
+        *stage_rows,
+        *detail_block,
         README_BLOCK_END,
     ]
     if start >= 0 and end >= start:

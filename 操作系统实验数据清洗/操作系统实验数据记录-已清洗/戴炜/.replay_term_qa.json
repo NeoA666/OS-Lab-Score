@@ -1,7 +1,8 @@
 {
   "tool": "replay_term_qa",
-  "source": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080102-戴炜-20260909-1131",
+  "source": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080102-戴炜-20260909-1131",
   "layout": "by-lab-v1",
+  "status": "complete",
   "reports": [
     "claude对话/claude_qa_clean_lab0.md",
     "claude对话/claude_qa_clean_lab1.md",
@@ -15,5 +16,53 @@
     "终端对话记录/terminal_qa_report_lab0.md",
     "终端对话记录/terminal_qa_report_lab1.md",
     "终端对话记录/terminal_qa_report_other.md"
-  ]
+  ],
+  "cache_format_version": 2,
+  "input_fingerprint": "f99f4067919a997606d8c8512edc63e2c3a609e73d3a2bcba858308b687f7944",
+  "processor_signature": "6a613b91290b4a52d5d6c74b11a5302eb7e1958bd530af409b0f248a91eaa36f",
+  "summary": {
+    "recordings": 18,
+    "commands": 54,
+    "claude_sessions": 2,
+    "turns": 11,
+    "replay_failed": 0,
+    "labs": {
+      "lab0": {
+        "recordings": 14,
+        "commands": 46,
+        "claude_sessions": 1,
+        "turns": 10,
+        "replay_failed": 0
+      },
+      "lab1": {
+        "recordings": 1,
+        "commands": 5,
+        "claude_sessions": 0,
+        "turns": 0,
+        "replay_failed": 0
+      },
+      "other": {
+        "recordings": 3,
+        "commands": 3,
+        "claude_sessions": 1,
+        "turns": 1,
+        "replay_failed": 0
+      }
+    },
+    "errors": []
+  },
+  "artifact_sha256": {
+    "claude对话/claude_qa_clean_lab0.md": "6eb7e701b35628944efebec947bcf27a7ae2fd99931d8c0cf132eff4c1bf4365",
+    "claude对话/claude_qa_clean_lab1.md": "6796611482fe2a81099787a396a0d35b2a217dbe56e599e9b33b6579aad30d67",
+    "claude对话/claude_qa_clean_other.md": "a6f0f261745bbe11f11d931f9d1d4955aca34249613c39a779189d16fc47a8af",
+    "完整终端转写记录/full_terminal_transcript_lab0.md": "f138b2012b3a2463d99b8cc70ee7ff1b7482eb66e01aad479ec75607b619972c",
+    "完整终端转写记录/full_terminal_transcript_lab1.md": "7a216701dbc2eead946d85787f33fe4db9474d9b4d68df9d5eab28cd7e3a364d",
+    "完整终端转写记录/full_terminal_transcript_other.md": "b609a7f894932574c9d207aa4686ea55a17719569d10e8b2f7cf5cf69bec6425",
+    "终端命令统计/command_statistics_lab0.md": "b616daf211ae6c752995910f6edbdda585e32edaa823a965c9d27730b269eadf",
+    "终端命令统计/command_statistics_lab1.md": "1b47a76d4827f20b6b551a777fc51de58ae887ff895d911d623f89f88fe64505",
+    "终端命令统计/command_statistics_other.md": "9d03c65de062bbaccf32c799475d3efd0bb2fc98c898265cc36e97de0224948a",
+    "终端对话记录/terminal_qa_report_lab0.md": "239545c0e2450ac46013d0eeebb176d42cc0bf68a6821b868e27d0500e4f3000",
+    "终端对话记录/terminal_qa_report_lab1.md": "d30d6476ae917269822a5d5d12885c53f575fec3011c2def0b5e4b986b8b6990",
+    "终端对话记录/terminal_qa_report_other.md": "39b8563ad9046c0002a2cc43591b076cc295f2f6d0e2d0fa3720bd7aee26d4bf"
+  }
 }
