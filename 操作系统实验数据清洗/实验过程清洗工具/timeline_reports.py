@@ -419,7 +419,7 @@ def update_readme_timeline_block(readme_path, timeline_results):
         "默认运行同时生成原有四类报告和时间线；`--timeline-only` 只刷新时间线并仅替换本说明块，保留 README 中原有报告统计与其他内容；`--no-timeline` 只生成原有报告。两项不能同时使用。", "",
         "本工作区仅更新时间线的命令（在脚本所在目录执行）：", "",
         "```powershell",
-        'python replay_term_qa.py "学生操作系统实验数据爬取/操作系统实验数据记录" -o "操作系统实验数据记录-已清洗" --timeline-only',
+        'python3 replay_term_qa.py "../操作系统实验数据记录" -o "../操作系统实验数据记录-已清洗" --timeline-only',
         "```", "",
         f"- 本次时间线学生数：{len(timeline_results)}",
         f"- 终端录像数：{totals['recordings']}",

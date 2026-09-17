@@ -16,6 +16,7 @@ OUTPUT_DIRECTORY = "简洁实验过程时间线"
 OUTPUT_MANIFEST = ".readable_timeline_manifest.json"
 TOOL_NAME = "generate_readable_timeline"
 JSON_NAME = re.compile(r"^timeline_(lab[0-8]|other)\.json$")
+DEFAULT_CLEANED_ROOT = Path(__file__).resolve().parent.parent / "操作系统实验数据记录-已清洗"
 
 
 def _atomic_write(path, text):
@@ -170,7 +171,7 @@ def main(argv=None):
         description="从既有时间线 JSON 生成仅含录像时间、录像类型和内容的简洁 Markdown 时间线。"
     )
     parser.add_argument(
-        "input_dir", nargs="?", default="操作系统实验数据记录-已清洗",
+        "input_dir", nargs="?", default=str(DEFAULT_CLEANED_ROOT),
         help="包含学生目录的清洗结果根目录",
     )
     parser.add_argument(
