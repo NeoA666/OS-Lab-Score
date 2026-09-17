@@ -889,9 +889,20 @@ def allocate_outputs(students, output_dir, overwrite=False):
                 except (OSError, ValueError):
                     pass
                 report_owned = isinstance(owner, dict) and owner.get("source") == info["source"]
+                # 允许整理后将提交目录改名（例如英文拼音改为中文姓名）时复用原结果。
+                # 仍要求原归属能解析出相同学号，且目标目录就是当前学生姓名目录。
+                previous = None
+                if isinstance(owner, dict) and isinstance(owner.get("source"), str):
+                    source_name = owner["source"].rstrip("/\\").replace("\\", "/").rsplit("/", 1)[-1]
+                    previous = parse_student_name(source_name)
+                renamed_owner = (
+                    previous is not None
+                    and previous["student_id"] == info["student_id"]
+                    and target.name.casefold() == safe_component(info["name"]).casefold()
+                )
                 timeline_owned = owner is None and timeline_owned_by(target, info["source"])
                 available = available and target.is_dir() and (
-                    report_owned or timeline_owned or (owner is None and overwrite))
+                    report_owned or renamed_owner or timeline_owned or (owner is None and overwrite))
             if available:
                 break
             sequence += 1

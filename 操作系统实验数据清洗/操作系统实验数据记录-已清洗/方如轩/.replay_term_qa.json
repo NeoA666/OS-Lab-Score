@@ -1,6 +1,6 @@
 {
   "tool": "replay_term_qa",
-  "source": "D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080104-方如轩-20260909-1237",
+  "source": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080104-方如轩-20260909-1237",
   "layout": "by-lab-v1",
   "reports": [
     "claude对话/claude_qa_clean_other.md",

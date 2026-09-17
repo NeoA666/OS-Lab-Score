@@ -20,9 +20,9 @@
 从脚本所在目录复查：
 
 ```bash
-python -m py_compile replay_term_qa.py
-python -m unittest -v test_replay_term_qa
-python replay_term_qa.py "学生操作系统实验数据爬取/操作系统实验数据记录" --output "操作系统实验数据记录-已清洗"
+python3 -m py_compile replay_term_qa.py
+python3 -m unittest -v test_replay_term_qa
+python3 replay_term_qa.py "../操作系统实验数据记录" --output "../操作系统实验数据记录-已清洗"
 ```
 
 以上批处理命令显式指定工作区中的输出目录；省略 `--output` 时仍按输入目录同级的默认规则输出。
@@ -109,16 +109,16 @@ Shell 统计保持原来的彩色提示符锚点识别方法，保留完整参�
 
 ## 安装和运行
 
-需要 Python 3.9+，依赖 `pyte` 和 `wcwidth`。也支持脚本同级的 `pylib/` 依赖目录。
+需要 Python 3.9+，依赖 `pyte` 和 `wcwidth`。本工作区使用上级 `公共依赖/pylib/` 依赖目录。
 
 ```bash
-python -m pip install pyte wcwidth
-python replay_term_qa.py "操作系统实验数据记录"
-python replay_term_qa.py "操作系统实验数据记录" --output "操作系统实验数据记录-已清洗"
-python replay_term_qa.py "操作系统实验数据记录" --student 2306010113
-python replay_term_qa.py "操作系统实验数据记录" --student "刘梓宸" --overwrite
-python replay_term_qa.py "操作系统实验数据记录/2306010113-刘梓宸-20260911-2046"
-python replay_term_qa.py --help
+python3 -m pip install pyte wcwidth
+python3 replay_term_qa.py "../操作系统实验数据记录"
+python3 replay_term_qa.py "../操作系统实验数据记录" --output "../操作系统实验数据记录-已清洗"
+python3 replay_term_qa.py "../操作系统实验数据记录" --student 2306010113
+python3 replay_term_qa.py "../操作系统实验数据记录" --student "刘梓宸" --overwrite
+python3 replay_term_qa.py "../操作系统实验数据记录/2306010113-刘梓宸-20260911-2046"
+python3 replay_term_qa.py --help
 ```
 
 | 参数 | 说明 |
@@ -140,43 +140,38 @@ python replay_term_qa.py --help
 
 ## 本次运行汇总
 
-- 输入目录：D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录
-- 处理学生数：12
-- 成功学生数：11
+- 输入目录：/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录
+- 处理学生数：7
+- 成功学生数：6
 - 跳过数量：0
 - 失败或部分失败学生数：1
-- 终端录像数：134
+- 终端录像数：117
 - 重放失败数：1
-- Shell 命令执行总次数：262
+- Shell 命令执行总次数：209
 - Claude 会话总数：8
 - 对话轮次总数：35
 
 | 学生目录 | 状态 | 录像 | 命令 | Claude 会话 | 轮次 | 输出 |
 | --- | --- | ---: | ---: | ---: | ---: | --- |
-| 123456-114-20260905-0950 | 成功 | 1 | 0 | 0 | 0 | [lab0](114/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_lab0.md) |
-| 20101200-zhaoxia-20260903-1759 | 成功 | 12 | 44 | 0 | 0 | [lab0](zhaoxia/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_lab0.md) / [lab1](zhaoxia/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_lab1.md) / [其他](zhaoxia/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_other.md) |
-| 20260001-张三-20260903-1032 | 成功 | 2 | 4 | 0 | 0 | [其他](%E5%BC%A0%E4%B8%89/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_other.md) |
 | 2306010113-刘梓宸-20260911-2046 | 成功 | 1 | 0 | 0 | 0 | [lab0](%E5%88%98%E6%A2%93%E5%AE%B8/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_lab0.md) |
-| 2306030105-何俊林-20260909-1218 | 成功 | 1 | 5 | 0 | 0 | [lab0](%E4%BD%95%E4%BF%8A%E6%9E%97/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_lab0.md) |
-| 2406080102-daiwei-20260909-1131 | 成功 | 18 | 54 | 2 | 11 | [lab0](daiwei/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_lab0.md) / [lab1](daiwei/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_lab1.md) / [其他](daiwei/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_other.md) |
+| 2406080102-戴炜-20260909-1131 | 成功 | 18 | 54 | 2 | 11 | [lab0](%E6%88%B4%E7%82%9C/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_lab0.md) / [lab1](%E6%88%B4%E7%82%9C/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_lab1.md) / [其他](%E6%88%B4%E7%82%9C/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_other.md) |
 | 2406080104-方如轩-20260909-1237 | 部分失败 | 8 | 0 | 0 | 0 | [其他](%E6%96%B9%E5%A6%82%E8%BD%A9/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_other.md) |
 | 2406080106-高龙徽-20260909-1215 | 成功 | 20 | 6 | 1 | 1 | [lab0](%E9%AB%98%E9%BE%99%E5%BE%BD/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_lab0.md) / [其他](%E9%AB%98%E9%BE%99%E5%BE%BD/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_other.md) |
-| 2406080111-lizhaozhuo-20260909-1215 | 成功 | 21 | 47 | 0 | 0 | [lab0](lizhaozhuo/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_lab0.md) / [lab1](lizhaozhuo/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_lab1.md) / [其他](lizhaozhuo/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_other.md) |
-| 2406080118-yanghanqing-20260911-0926 | 成功 | 24 | 65 | 1 | 15 | [lab0](yanghanqing/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_lab0.md) / [lab1](yanghanqing/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_lab1.md) / [其他](yanghanqing/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_other.md) |
+| 2406080111-李兆卓-20260909-1215 | 成功 | 21 | 47 | 0 | 0 | [lab0](%E6%9D%8E%E5%85%86%E5%8D%93/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_lab0.md) / [lab1](%E6%9D%8E%E5%85%86%E5%8D%93/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_lab1.md) / [其他](%E6%9D%8E%E5%85%86%E5%8D%93/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_other.md) |
+| 2406080118-杨涵清-20260911-0926 | 成功 | 24 | 65 | 1 | 15 | [lab0](%E6%9D%A8%E6%B6%B5%E6%B8%85/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_lab0.md) / [lab1](%E6%9D%A8%E6%B6%B5%E6%B8%85/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_lab1.md) / [其他](%E6%9D%A8%E6%B6%B5%E6%B8%85/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_other.md) |
 | 2406080205-周卓江-20260910-2322 | 成功 | 25 | 37 | 4 | 8 | [lab0](%E5%91%A8%E5%8D%93%E6%B1%9F/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_lab0.md) / [其他](%E5%91%A8%E5%8D%93%E6%B1%9F/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_other.md) |
-| 565786786-法规和个-20260905-0939 | 成功 | 1 | 0 | 0 | 0 | [lab0](%E6%B3%95%E8%A7%84%E5%92%8C%E4%B8%AA/%E7%BB%88%E7%AB%AF%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95/terminal_qa_report_lab0.md) |
 
 ### 按实验分类汇总
 
 | 分类 | 录像（分类内去重） | 命令 | Claude 会话（分类内去重） | 轮次 |
 | --- | ---: | ---: | ---: | ---: |
-| lab0 | 63 | 199 | 5 | 32 |
-| lab1 | 4 | 20 | 0 | 0 |
-| 其他 | 72 | 43 | 3 | 3 |
+| lab0 | 50 | 155 | 5 | 32 |
+| lab1 | 3 | 15 | 0 | 0 |
+| 其他 | 69 | 39 | 3 | 3 |
 
 ### 跳过与异常详情
 
-- D:\\操作系统实验评分机制\\操作系统实验\\学生操作系统实验数据爬取\\操作系统实验数据记录\\2406080104-方如轩-20260909-1237\\term\\20260909T120838-19233.out.gz \[完整重放/目录分类\] ValueError: 录像为空或缺少 script 头部换行
+- /Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080104-方如轩-20260909-1237/term/20260909T120838-19233.out.gz \[完整重放/目录分类\] ValueError: 录像为空或缺少 script 头部换行
 
 <!-- replay_term_qa:timeline:start -->
 ## 实验过程时间线
@@ -196,30 +191,20 @@ JSON 中 `observed_at` 为带时区的显示时间，`elapsed_seconds` 为原录
 本工作区仅更新时间线的命令（在脚本所在目录执行）：
 
 ```powershell
-python replay_term_qa.py "学生操作系统实验数据爬取/操作系统实验数据记录" -o "操作系统实验数据记录-已清洗" --timeline-only
+python3 replay_term_qa.py "../操作系统实验数据记录" -o "../操作系统实验数据记录-已清洗" --timeline-only
 ```
 
-- 本次时间线学生数：12
-- 终端录像数：134
-- 事件数：332
-- Shell 命令事件：262
+- 本次时间线学生数：7
+- 终端录像数：117
+- 事件数：279
+- Shell 命令事件：209
 - Claude 用户问题事件：35
 - Claude 回复事件：35
-- 有绝对显示时间：321
+- 有绝对显示时间：268
 - 仅有录像相对时间：11
 - 时间缺失：0
 - 带不确定性说明：29
 - 录像处理失败：0
 - 处理失败总数：0
-- 异常数：17
+- 异常数：15
 <!-- replay_term_qa:timeline:end -->
-
-<!-- timeline-verification:start -->
-## 本次时间线验收（2026-09-12）
-
-已覆盖 12 名学生、134 个录像，生成 19 组 Markdown/JSON。332 个事件中，321 个有绝对显示时间，11 个因录像开始日志冲突仅保留相对时间；无完全缺少观察时间的事件。
-
-45 项测试通过，1 项符号链接测试受 Windows 权限限制而跳过。原始 11,576 个文件及 72 个旧输出全量 SHA-256 一致；262 条命令和 70 个问答文本块与旧结果一致。
-
-[详细验收说明、覆盖表与异常清单](../.verification/timeline_acceptance.md)
-<!-- timeline-verification:end -->

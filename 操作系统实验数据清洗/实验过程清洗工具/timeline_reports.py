@@ -61,6 +61,22 @@ def timeline_owned_by(student_output, source):
     )
 
 
+def _renamed_source_owner(manifest, info, output):
+    """允许同一学号的提交目录改名后复用其现有时间线目录。"""
+    if not isinstance(manifest, dict) or manifest.get("tool") != TIMELINE_TOOL:
+        return False
+    source = manifest.get("source")
+    if not isinstance(source, str):
+        return False
+    source_name = source.rstrip("/\\").replace("\\", "/").rsplit("/", 1)[-1]
+    match = re.match(r"^(\d+)-", source_name)
+    return bool(
+        match
+        and match.group(1) == str(info.get("student_id", ""))
+        and output.name == str(info.get("name", ""))
+    )
+
+
 def _event_lab(event):
     lab = event.get("lab", "other") if isinstance(event, dict) else "other"
     return lab if lab in LAB_KEYS else "other"
@@ -292,10 +308,14 @@ def write_student_timeline(info, result):
     if manifest_path.is_symlink():
         raise ValueError(f"拒绝覆盖符号链接时间线归属清单：{manifest_path}")
     previous = _read_manifest(output)
+    previous_owned = (
+        isinstance(previous, dict)
+        and previous.get("tool") == TIMELINE_TOOL
+        and (previous.get("source") == info.get("source") or _renamed_source_owner(previous, info, output))
+    )
     if manifest_path.exists() and (
         not previous
-        or previous.get("tool") != TIMELINE_TOOL
-        or previous.get("source") != info.get("source")
+        or not previous_owned
     ):
         raise ValueError(f"时间线目录已有其他来源或无效归属清单：{manifest_path}")
 
@@ -358,8 +378,7 @@ def write_student_timeline(info, result):
         _atomic_write(output / md_relative, _render_markdown(info, lab, events, stats, errors))
         wanted.extend((json_relative.as_posix(), md_relative.as_posix()))
 
-    if (not processing_failures and previous and previous.get("tool") == TIMELINE_TOOL
-            and previous.get("source") == info.get("source")):
+    if not processing_failures and previous_owned:
         for relative in previous.get("artifacts", []):
             if not isinstance(relative, str) or not _ARTIFACT_RE.fullmatch(relative) or relative in wanted:
                 continue
