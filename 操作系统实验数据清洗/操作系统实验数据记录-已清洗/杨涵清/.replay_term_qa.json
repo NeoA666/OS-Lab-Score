@@ -1,0 +1,19 @@
+{
+  "tool": "replay_term_qa",
+  "source": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录/2406080118-杨涵清-20260911-0926",
+  "layout": "by-lab-v1",
+  "reports": [
+    "claude对话/claude_qa_clean_lab0.md",
+    "claude对话/claude_qa_clean_lab1.md",
+    "claude对话/claude_qa_clean_other.md",
+    "完整终端转写记录/full_terminal_transcript_lab0.md",
+    "完整终端转写记录/full_terminal_transcript_lab1.md",
+    "完整终端转写记录/full_terminal_transcript_other.md",
+    "终端命令统计/command_statistics_lab0.md",
+    "终端命令统计/command_statistics_lab1.md",
+    "终端命令统计/command_statistics_other.md",
+    "终端对话记录/terminal_qa_report_lab0.md",
+    "终端对话记录/terminal_qa_report_lab1.md",
+    "终端对话记录/terminal_qa_report_other.md"
+  ]
+}
