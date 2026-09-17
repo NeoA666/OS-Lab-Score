@@ -26,7 +26,9 @@ from urllib.parse import quote
 import gzip
 from collections import Counter
 
-PYLIB = str(Path(__file__).resolve().parent.parent / "公共依赖" / "pylib")
+TOOL_DIR = Path(__file__).resolve().parent
+CLEANING_DIR = TOOL_DIR.parent
+PYLIB = str(CLEANING_DIR.parent / "公共依赖" / "pylib")
 if os.path.isdir(PYLIB):
     sys.path.insert(0, PYLIB)
 
@@ -763,9 +765,9 @@ README_UPDATE_NOTES = [
     "从脚本所在目录复查：",
     "",
     "```bash",
-    "python -m py_compile replay_term_qa.py",
-    "python -m unittest -v test_replay_term_qa",
-    "python replay_term_qa.py \"学生操作系统实验数据爬取/操作系统实验数据记录\" --output \"操作系统实验数据记录-已清洗\"",
+    "python3 -m py_compile replay_term_qa.py",
+    "python3 -m unittest -v test_replay_term_qa",
+    "python3 replay_term_qa.py \"../操作系统实验数据记录\" --output \"../操作系统实验数据记录-已清洗\"",
     "```",
     "",
     "以上批处理命令显式指定工作区中的输出目录；省略 `--output` 时仍按输入目录同级的默认规则输出。",
@@ -1268,12 +1270,12 @@ def write_readme(output_dir, input_dir, results, skipped):
           "Shell 提取失败的录像单独计数，不计入“无 Shell 命令”会话。", "",
           "## 安装和运行", "",
           "需要 Python 3.9+，依赖 `pyte` 和 `wcwidth`。本工作区使用上级 `公共依赖/pylib/` 依赖目录。", "",
-          "```bash", "python -m pip install pyte wcwidth", 'python replay_term_qa.py "操作系统实验数据记录"',
-          'python replay_term_qa.py "操作系统实验数据记录" --output "操作系统实验数据记录-已清洗"',
-          'python replay_term_qa.py "操作系统实验数据记录" --student 2306010113',
-          'python replay_term_qa.py "操作系统实验数据记录" --student "刘梓宸" --overwrite',
-          'python replay_term_qa.py "操作系统实验数据记录/2306010113-刘梓宸-20260911-2046"',
-          "python replay_term_qa.py --help", "```", "",
+          "```bash", "python3 -m pip install pyte wcwidth", 'python3 replay_term_qa.py "../操作系统实验数据记录"',
+          'python3 replay_term_qa.py "../操作系统实验数据记录" --output "../操作系统实验数据记录-已清洗"',
+          'python3 replay_term_qa.py "../操作系统实验数据记录" --student 2306010113',
+          'python3 replay_term_qa.py "../操作系统实验数据记录" --student "刘梓宸" --overwrite',
+          'python3 replay_term_qa.py "../操作系统实验数据记录/2306010113-刘梓宸-20260911-2046"',
+          "python3 replay_term_qa.py --help", "```", "",
           "| 参数 | 说明 |", "| --- | --- |", "| input_dir | 可选；默认当前目录的操作系统实验数据记录 |",
           "| --output / -o | 输出根目录，禁止与输入目录重叠 |", "| --student | 精确匹配学号或姓名 |",
           "| --overwrite | 允许覆盖无归属目录中已有的分类报告 |", "",
@@ -1323,7 +1325,7 @@ def write_readme(output_dir, input_dir, results, skipped):
 def main(argv=None):
     """批处理入口；原报告和独立时间线均按学生隔离失败。"""
     parser = argparse.ArgumentParser(description="批量重放学生 Linux script 录像，生成原有报告和实验过程时间线")
-    parser.add_argument("input_dir", nargs="?", default="操作系统实验数据记录", help="输入根目录或单学生目录")
+    parser.add_argument("input_dir", nargs="?", default=str(CLEANING_DIR / "操作系统实验数据记录"), help="输入根目录或单学生目录")
     parser.add_argument("--output", "-o", help="输出根目录，默认输入目录同级的 输入目录名-已清洗")
     parser.add_argument("--overwrite", action="store_true", help="允许覆盖无归属输出目录中的固定程序产物，不删除其他文件")
     parser.add_argument("--student", help="只处理精确匹配的学号或姓名")
