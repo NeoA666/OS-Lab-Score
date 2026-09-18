@@ -1,6 +1,8 @@
 from __future__ import annotations
 
-from datetime import datetime, timezone
+import os
+import re
+import tempfile
 from pathlib import Path
 from typing import Any
 
@@ -9,20 +11,40 @@ from .repository import StudentAuditRepository
 
 
 TEACHER_REVIEW_LEVELS = {"R1", "R2"}
+FULL_REPORT_FILENAME = "完整诚信审核报告.md"
+TEACHER_REPORT_FILENAME = "教师诚信复核报告.md"
 DISPOSITION_LABELS = {
     "N0": "不进入诚信复核",
     "N1": "教学过程提示",
     "R1": "学习能力复核",
     "R2": "正式诚信核实建议",
 }
+INTEGRITY_LABELS = {
+    "完全诚信": "当前材料未形成诚信复核线索",
+    "基本诚信": "存在教学提醒或资料边界，未形成高风险结论",
+    "存在疑点": "贡献材料形成待教师核实线索",
+    "高风险待核实": "满足独立证据门槛后进入正式核实",
+    "资料不足/无法判定": "当前材料不足以作出诚信判断",
+}
+_SECRET_TEXT_RE = re.compile(
+    r"(?i)(?:nvapi-[A-Za-z0-9_-]+|bearer\s+[A-Za-z0-9._~+/=-]+|"
+    r"(?:api[_ -]?key|token|password)\s*[:=]\s*[^\s,;]+)"
+)
 
 
 def _bullet(items: list[str]) -> str:
-    return "\n".join(f"- {item}" for item in items)
+    return "\n".join(f"- {_safe_text(item)}" for item in items)
+
+
+def _safe_text(value: Any, limit: int | None = None) -> str:
+    text = _SECRET_TEXT_RE.sub("[已脱敏]", str(value))
+    if limit is not None and len(text) > limit:
+        return text[: max(0, limit - 3)] + "..."
+    return text
 
 
 def _table_cell(value: Any) -> str:
-    return str(value).replace("|", "\\|").replace("\n", "<br>")
+    return _safe_text(value).replace("|", "\\|").replace("\n", "<br>")
 
 
 def _table(headers: list[str], rows: list[list[Any]]) -> list[str]:
@@ -35,7 +57,7 @@ def _table(headers: list[str], rows: list[list[Any]]) -> list[str]:
 
 
 def _blockquote(text: str) -> str:
-    return "\n".join(f"> {line}" for line in text.splitlines())
+    return "\n".join(f"> {_safe_text(line)}" for line in str(text).splitlines())
 
 
 def _source_locator(provenance: dict[str, Any]) -> str:
@@ -52,7 +74,67 @@ def _source_locator(provenance: dict[str, Any]) -> str:
             pieces.append(f"timing 行：`{timing_line}`")
         if byte_range is not None:
             pieces.append(f"解压字节范围：`{byte_range}`")
-    return "；".join(pieces) or "清洗材料未提供可展示的原始定位"
+    return _safe_text("；".join(pieces) or "清洗材料未提供可展示的原始定位")
+
+
+def _v3_ref_locator(reference: dict[str, Any]) -> str:
+    """Render only bounded v3 identity fields, never the complete source."""
+
+    source_id = reference.get("source_id", "未知 source")
+    path = reference.get("relative_path", "未知路径")
+    sha256 = reference.get("sha256", "未知哈希")
+    line_start = reference.get("line_start", "?")
+    line_end = reference.get("line_end", "?")
+    return (
+        f"source：`{_safe_text(source_id)}`；路径：`{_safe_text(path)}`；"
+        f"SHA-256：`{_safe_text(sha256)}`；行：`{line_start}-{line_end}`"
+    )
+
+
+def _render_v3_evidence(item: dict[str, Any], index: int, include_locator: bool) -> list[str]:
+    unit_id = _safe_text(item.get("unit_id", "未知单元"), 200)
+    label = _safe_text(item.get("unit_label", "indeterminate"), 80)
+    confidence = _safe_text(item.get("unit_confidence", "weak"), 40)
+    lines = [
+        f"#### 证据 {index}：`{_safe_text(item.get('evidence_level', 'E2'))}` / 贡献单元 `{unit_id}`",
+        "",
+        f"贡献画像：`{label}`；置信度：`{confidence}`",
+        "",
+    ]
+    references = item.get("evidence_refs", [])
+    if not isinstance(references, list) or not references:
+        lines.extend(["来源引用：未提供可展示的范围引用。", ""])
+        return lines
+    for ref_index, reference in enumerate(references, start=1):
+        if not isinstance(reference, dict):
+            continue
+        excerpt = _safe_text(reference.get("excerpt", ""), 600)
+        if include_locator:
+            lines.extend(
+                [
+                    f"**来源 {ref_index}**：{_v3_ref_locator(reference)}",
+                    "",
+                    _blockquote(excerpt),
+                    "",
+                ]
+            )
+        else:
+            # The complete report keeps the same bounded identity in a
+            # collapsible block so the first screen remains scannable.
+            lines.extend(
+                [
+                    "<details>",
+                    "<summary>展开查看来源定位</summary>",
+                    "",
+                    f"**来源 {ref_index}**：{_v3_ref_locator(reference)}",
+                    "",
+                    "</details>",
+                    "",
+                    _blockquote(excerpt),
+                    "",
+                ]
+            )
+    return lines
 
 
 def _evidence_counts(findings: list[dict[str, Any]]) -> dict[str, int]:
@@ -96,9 +178,142 @@ def _finding_index_rows(findings: list[dict[str, Any]]) -> list[list[str]]:
     return rows
 
 
+_CONTRIBUTION_LABELS = {
+    "ai_dominant": "AI 主导线索",
+    "human_dominant": "人工主导线索",
+    "mixed": "混合贡献线索",
+    "indeterminate": "无法区分",
+}
+
+
+def _integrity_assessment_payload(assessment: dict[str, Any]) -> dict[str, Any] | None:
+    value = assessment.get("integrity_assessment")
+    if isinstance(value, dict):
+        return value
+    # Keep compatibility with an early flat producer while the host is being
+    # migrated to the nested contract.
+    if isinstance(assessment.get("integrity_label"), str):
+        return {
+            "overall_label": assessment.get("integrity_label"),
+            "overall_disposition": assessment.get("integrity_disposition"),
+            "coverage": assessment.get("coverage", {}),
+            "contribution_access": assessment.get("contribution_access", {}),
+            "teacher_actions": assessment.get("teacher_actions", []),
+            "limitations": assessment.get("integrity_limitations", []),
+            "contribution_units": assessment.get("contribution_units", []),
+        }
+    return None
+
+
+def _render_integrity_assessment(assessment: dict[str, Any]) -> list[str]:
+    """Render the host-owned conclusion and bounded v3 context near the top."""
+
+    payload = _integrity_assessment_payload(assessment)
+    if payload is None:
+        return []
+    label = _safe_text(payload.get("overall_label", "资料不足/无法判定"), 80)
+    description = INTEGRITY_LABELS.get(label, "由宿主规则和证据门槛生成的处理标签")
+    coverage = payload.get("coverage") if isinstance(payload.get("coverage"), dict) else {}
+    access = payload.get("contribution_access") if isinstance(payload.get("contribution_access"), dict) else {}
+    review_status = access.get("review_status", "未运行")
+    lines = [
+        "## 诚信结论（宿主判定）",
+        "",
+        "> 该标签是当前材料和规则门槛下的复核分流结果，不是违规认定、处分或评分决定。",
+        "",
+    ]
+    lines.extend(
+        _table(
+            ["项目", "内容"],
+            [
+                ["诚信标签", f"**{label}**"],
+                ["标签说明", description],
+                ["宿主处理路径", payload.get("overall_disposition", "未提供")],
+                ["贡献材料状态", access.get("analysis_status", "未提供")],
+                ["独立复核状态", review_status],
+                ["材料覆盖", coverage.get("status", "未提供")],
+                ["有效贡献单元", access.get("valid_unit_count", 0)],
+            ],
+        )
+    )
+    missing = coverage.get("missing_or_limited")
+    if isinstance(missing, list) and missing:
+        lines.extend(["", "**覆盖限制**：", _bullet([_safe_text(item, 500) for item in missing]), ""])
+
+    actions = payload.get("teacher_actions")
+    if isinstance(actions, list) and actions:
+        lines.extend(["", "### 教师动作", "", _bullet([_safe_text(item, 800) for item in actions]), ""])
+    limits = payload.get("limitations")
+    if isinstance(limits, list) and limits:
+        lines.extend(["", "### 宿主限制", "", _bullet([_safe_text(item, 800) for item in limits]), ""])
+
+    units = payload.get("contribution_units")
+    if not isinstance(units, list):
+        units = payload.get("units")
+    if isinstance(units, list) and units:
+        rows: list[list[Any]] = []
+        for unit in units[:96]:
+            if not isinstance(unit, dict):
+                continue
+            raw_label = str(unit.get("label", "indeterminate"))
+            refs = unit.get("evidence_refs", [])
+            rows.append(
+                [
+                    f"`{_safe_text(unit.get('unit_id', '未知'), 120)}`",
+                    _CONTRIBUTION_LABELS.get(raw_label, raw_label),
+                    unit.get("confidence", "weak"),
+                    len(refs) if isinstance(refs, list) else 0,
+                    _short_text(_safe_text(unit.get("summary", ""), 120), 80),
+                ]
+            )
+        if rows:
+            lines.extend(["", "### 贡献单元（补充材料）", ""])
+            lines.extend(_table(["单元", "画像", "置信度", "引用数", "摘要"], rows))
+            lines.append("")
+
+    # Show source identity and short redacted excerpts only.  We deliberately
+    # do not render arbitrary nested model fields or complete source files.
+    refs: list[dict[str, Any]] = []
+    for container in (payload.get("evidence"),):
+        if isinstance(container, list):
+            for item in container:
+                if isinstance(item, dict):
+                    refs.extend(ref for ref in item.get("evidence_refs", []) if isinstance(ref, dict))
+    if isinstance(units, list):
+        for unit in units:
+            if isinstance(unit, dict):
+                refs.extend(ref for ref in unit.get("evidence_refs", []) if isinstance(ref, dict))
+    lab_conclusion = access.get("lab_conclusion")
+    if isinstance(lab_conclusion, dict):
+        refs.extend(
+            ref for ref in lab_conclusion.get("evidence_refs", []) if isinstance(ref, dict)
+        )
+    seen: set[tuple[Any, ...]] = set()
+    bounded_refs: list[dict[str, Any]] = []
+    for ref in refs:
+        key = tuple(ref.get(name) for name in ("source_id", "line_start", "line_end", "sha256"))
+        if key in seen:
+            continue
+        seen.add(key)
+        bounded_refs.append(ref)
+    if bounded_refs:
+        lines.extend(["### 贡献来源定位", ""])
+        for ref in bounded_refs[:96]:
+            lines.extend(
+                [
+                    f"- {_v3_ref_locator(ref)}；摘录：{_safe_text(ref.get('excerpt', ''), 600)}",
+                ]
+            )
+        lines.append("")
+    return lines
+
+
 def _render_evidence(evidence: list[dict[str, Any]], include_locator: bool) -> list[str]:
     lines: list[str] = []
     for index, item in enumerate(evidence, start=1):
+        if item.get("kind") == "v3" or "unit_id" in item or "evidence_refs" in item:
+            lines.extend(_render_v3_evidence(item, index, include_locator))
+            continue
         lines.extend(
             [
                 f"#### 证据 {index}：`{item['evidence_level']}` / `{item['event_id']}`",
@@ -182,7 +397,6 @@ def render_report(
 ) -> str:
     """Render the complete, evidence-indexed audit draft for internal review."""
 
-    generated_at = datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds")
     student_id = assessment.get("student_id") or repository.reference.directory_name
     quality = repository.data_quality()
     findings = assessment["findings"]
@@ -198,6 +412,10 @@ def render_report(
         "## 一页摘要",
         "",
     ]
+    lines.extend(_render_integrity_assessment(assessment))
+    if lines and lines[-1] != "":
+        lines.append("")
+    lines.extend(["## 审核摘要", ""])
     lines.extend(
         _table(
             ["项目", "内容"],
@@ -294,7 +512,6 @@ def render_report(
         _table(
             ["项目", "内容"],
             [
-                ["生成时间", generated_at],
                 ["Agent 轮次", run_metadata.get("turns", "未提供")],
                 ["工具调用数", run_metadata.get("tool_calls", "未提供")],
                 ["运行日志", run_metadata.get("trace_path") or "未保存"],
@@ -313,7 +530,6 @@ def render_teacher_review_report(
 ) -> str:
     """Render a teacher-facing report containing only R1 and R2 review items."""
 
-    generated_at = datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds")
     student_id = assessment.get("student_id") or repository.reference.directory_name
     findings = [
         finding for finding in assessment["findings"] if finding["disposition"] in TEACHER_REVIEW_LEVELS
@@ -328,6 +544,9 @@ def render_teacher_review_report(
         "## 复核概览",
         "",
     ]
+    lines.extend(_render_integrity_assessment(assessment))
+    if lines and lines[-1] != "":
+        lines.append("")
     lines.extend(
         _table(
             ["项目", "内容"],
@@ -336,7 +555,6 @@ def render_teacher_review_report(
                 ["实验", f"`{repository.lab}`"],
                 ["待复核条目", f"R1 {dispositions['R1']} 项，R2 {dispositions['R2']} 项"],
                 ["规则版本", f"`{policy.sha256}`"],
-                ["生成时间", generated_at],
             ],
         )
     )
@@ -420,17 +638,65 @@ def _write_markdown(
     content: str,
     report_kind: str,
 ) -> Path:
-    output_dir.mkdir(parents=True, exist_ok=True)
-    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-    identifier = repository.reference.student_id or repository.reference.directory_name
-    safe_identifier = "".join(character for character in identifier if character.isalnum() or character in "-_")
-    target = output_dir / f"{repository.lab}-{report_kind}-{safe_identifier or 'student'}-{stamp}.md"
-    suffix = 1
-    while target.exists():
-        target = output_dir / f"{repository.lab}-{report_kind}-{safe_identifier or 'student'}-{stamp}-{suffix}.md"
-        suffix += 1
-    target.write_text(content, encoding="utf-8")
+    """Write a report to its stable student/lab location.
+
+    The previous implementation appended a timestamp to every report name,
+    which made the current result difficult to locate and left stale runs in
+    the output directory.  The path is now the current result for one
+    student/lab; run timestamps remain in the trace and manifest.
+    """
+
+    target = report_path(output_dir, repository, report_kind)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    temporary: Path | None = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            encoding="utf-8",
+            newline="\n",
+            dir=target.parent,
+            prefix=".audit-report-",
+            suffix=".tmp",
+            delete=False,
+        ) as stream:
+            temporary = Path(stream.name)
+            stream.write(content)
+        os.replace(temporary, target)
+    finally:
+        if temporary is not None and temporary.exists():
+            temporary.unlink()
     return target
+
+
+def _safe_component(value: str | None, fallback: str) -> str:
+    """Return a path component that cannot escape the report root."""
+
+    text = str(value or "").strip()
+    cleaned = "".join(
+        character if (character.isalnum() or character in "-_.") else "_"
+        for character in text
+    ).strip(".")
+    return cleaned[:160] or fallback
+
+
+def report_path(output_dir: Path, repository: StudentAuditRepository, report_kind: str) -> Path:
+    """Return the stable path for one report without creating it.
+
+    Reports are separated by the student directory name and the lab label.
+    The directory name is used instead of a timestamp or only the student ID,
+    because it is the identity used by the cleaned-data tree and remains
+    unique when a data set contains duplicate or missing IDs.
+    """
+
+    filename = {
+        "full": FULL_REPORT_FILENAME,
+        "teacher-review": TEACHER_REPORT_FILENAME,
+    }.get(report_kind)
+    if filename is None:
+        raise ValueError(f"未知报告类型：{report_kind}")
+    student_component = _safe_component(repository.reference.directory_name, "student")
+    lab_component = _safe_component(repository.lab, "lab")
+    return Path(output_dir) / student_component / lab_component / filename
 
 
 def write_report(output_dir: Path, repository: StudentAuditRepository, content: str) -> Path:

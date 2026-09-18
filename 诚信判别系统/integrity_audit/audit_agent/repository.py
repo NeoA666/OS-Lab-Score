@@ -66,8 +66,8 @@ class StudentAuditRepository:
 
     @staticmethod
     def _validate_lab(lab: str) -> str:
-        if not re.fullmatch(r"lab[0-9]+", lab):
-            raise DataAccessError("实验标签必须形如 lab0")
+        if not re.fullmatch(r"lab[0-8]", lab):
+            raise DataAccessError("实验标签必须是 lab0 到 lab8")
         return lab
 
     @classmethod
@@ -78,6 +78,11 @@ class StudentAuditRepository:
 
         result: list[StudentReference] = []
         for directory in sorted(path for path in root.iterdir() if path.is_dir()):
+            # The cleaning pipeline keeps course-wide exports beside student
+            # directories. They are not student scopes and must not become
+            # batch tasks merely because they happen to be directories.
+            if directory.name.startswith(".") or directory.name.endswith(("汇总", "运行日志")):
+                continue
             student_id = cls._read_student_id_from_directory(directory)
             result.append(StudentReference(directory.name, student_id))
         return result
@@ -105,18 +110,29 @@ class StudentAuditRepository:
 
         direct = self.data_root / student_reference
         if direct.is_dir():
-            return direct.resolve()
+            resolved = direct.resolve()
+            self._ensure_inside(resolved)
+            return resolved
 
         matches = [
-            path
+            path.resolve()
             for path in self.data_root.iterdir()
-            if path.is_dir() and self._read_student_id_from_directory(path) == student_reference
+            if path.is_dir()
+            and self._read_student_id_from_directory(path) == student_reference
         ]
+        for match in matches:
+            self._ensure_inside(match)
         if len(matches) == 1:
-            return matches[0].resolve()
+            return matches[0]
         if not matches:
             raise DataAccessError(f"未找到学生：{student_reference}")
         raise DataAccessError(f"学生标识不唯一：{student_reference}")
+
+    def _ensure_inside(self, path: Path) -> None:
+        try:
+            path.relative_to(self.data_root)
+        except ValueError as error:
+            raise DataAccessError("学生路径越过清洗数据根目录") from error
 
     def _find_student_id(self) -> str | None:
         return self._read_student_id_from_directory(self.student_dir)
@@ -352,4 +368,3 @@ class StudentAuditRepository:
             "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
             "note": "本版本只报告基线清单是否已配置；精确文件差异需要后续受控 diff 工具。",
         }
-

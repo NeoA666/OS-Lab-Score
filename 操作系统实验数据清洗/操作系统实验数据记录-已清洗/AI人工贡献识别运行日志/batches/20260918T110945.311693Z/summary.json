@@ -1,0 +1,466 @@
+{
+  "batch_id": "20260918T110945.311693Z",
+  "created_at": "2026-09-18T11:09:45.311728+00:00",
+  "force": false,
+  "results": [
+    {
+      "analysis_status": "failed",
+      "assessment": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/刘梓宸/AI人工贡献识别/assessment_lab0.json",
+      "coverage": {
+        "materials": [
+          {
+            "kind": "timeline",
+            "line_count": 513,
+            "reason": null,
+            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "required": true,
+            "sha256": "94f29eb383ca415756756c410125a68922362adb6c86e8a59844e3fe9bda2181",
+            "source_id": "source:lab0:timeline",
+            "status": "available"
+          },
+          {
+            "kind": "terminal_qa",
+            "line_count": 587,
+            "reason": null,
+            "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+            "required": true,
+            "sha256": "a4003a6cb2a5d0c1f456b3f5c6c79530869f86b73afddd850ed5445cc4b8c02e",
+            "source_id": "source:lab0:terminal_qa",
+            "status": "available"
+          },
+          {
+            "kind": "command_statistics",
+            "line_count": 24,
+            "reason": null,
+            "relative_path": "终端命令统计/command_statistics_lab0.md",
+            "required": true,
+            "sha256": "3b6282e709911d3eb4c93da3b251b08c27f32a8cd0de791238adb197fc66c077",
+            "source_id": "source:lab0:command_statistics",
+            "status": "available"
+          },
+          {
+            "kind": "diff_report",
+            "line_count": null,
+            "reason": "lab0 的贡献识别仅评估实验过程材料，不使用代码差异报告",
+            "relative_path": null,
+            "required": false,
+            "sha256": null,
+            "source_id": "source:lab0:diff_report",
+            "status": "not_applicable"
+          }
+        ],
+        "missing_or_limited": [],
+        "status": "complete"
+      },
+      "full_report": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/刘梓宸/AI人工贡献识别/完整贡献识别报告_lab0.md",
+      "lab": "lab0",
+      "lab_conclusion": {
+        "alternative_explanation": "运行失败不反映 AI 或人工贡献的实际情况。",
+        "confidence": "weak",
+        "evidence_refs": [],
+        "label": "indeterminate",
+        "limitations": [
+          "主分析或独立复核没有形成可验证结果。"
+        ],
+        "summary": "本次贡献识别未完成，未输出未经独立复核的语义归属。"
+      },
+      "message": "lab_conclusion 必须是对象",
+      "review": {
+        "disagreement_unit_ids": [],
+        "downgraded_unit_ids": [],
+        "overall_decision": null,
+        "reviewed_unit_ids": [],
+        "status": "not_run",
+        "summary": "未形成可写入的独立复核结果。",
+        "unit_reviews": []
+      },
+      "run_log": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/AI人工贡献识别运行日志/刘梓宸/lab0/runs/20260918T110630.266199Z.jsonl",
+      "status": "failed",
+      "student_directory": "刘梓宸",
+      "teacher_report": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/刘梓宸/AI人工贡献识别/教师贡献复核报告_lab0.md"
+    },
+    {
+      "analysis_status": "failed",
+      "assessment": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/周卓江/AI人工贡献识别/assessment_lab0.json",
+      "coverage": {
+        "materials": [
+          {
+            "kind": "timeline",
+            "line_count": 713,
+            "reason": null,
+            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "required": true,
+            "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
+            "source_id": "source:lab0:timeline",
+            "status": "available"
+          },
+          {
+            "kind": "terminal_qa",
+            "line_count": 774,
+            "reason": null,
+            "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+            "required": true,
+            "sha256": "d4f9823175ea9ecc5e7d4a6bad8a826bebd76a38ca18fb0e3d4f4614ac469c39",
+            "source_id": "source:lab0:terminal_qa",
+            "status": "available"
+          },
+          {
+            "kind": "command_statistics",
+            "line_count": 20,
+            "reason": null,
+            "relative_path": "终端命令统计/command_statistics_lab0.md",
+            "required": true,
+            "sha256": "a36291031f40dde7d9b523b3b0b570c8d7be2c279242d7163c04bab33a50af1a",
+            "source_id": "source:lab0:command_statistics",
+            "status": "available"
+          },
+          {
+            "kind": "diff_report",
+            "line_count": null,
+            "reason": "lab0 的贡献识别仅评估实验过程材料，不使用代码差异报告",
+            "relative_path": null,
+            "required": false,
+            "sha256": null,
+            "source_id": "source:lab0:diff_report",
+            "status": "not_applicable"
+          }
+        ],
+        "missing_or_limited": [],
+        "status": "complete"
+      },
+      "full_report": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/周卓江/AI人工贡献识别/完整贡献识别报告_lab0.md",
+      "lab": "lab0",
+      "lab_conclusion": {
+        "alternative_explanation": "运行失败不反映 AI 或人工贡献的实际情况。",
+        "confidence": "weak",
+        "evidence_refs": [],
+        "label": "indeterminate",
+        "limitations": [
+          "主分析或独立复核没有形成可验证结果。"
+        ],
+        "summary": "本次贡献识别未完成，未输出未经独立复核的语义归属。"
+      },
+      "message": "contribution_units[0].evidence_refs[0] 未经受控读取",
+      "review": {
+        "disagreement_unit_ids": [],
+        "downgraded_unit_ids": [],
+        "overall_decision": null,
+        "reviewed_unit_ids": [],
+        "status": "not_run",
+        "summary": "未形成可写入的独立复核结果。",
+        "unit_reviews": []
+      },
+      "run_log": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/AI人工贡献识别运行日志/周卓江/lab0/runs/20260918T110714.521352Z.jsonl",
+      "status": "failed",
+      "student_directory": "周卓江",
+      "teacher_report": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/周卓江/AI人工贡献识别/教师贡献复核报告_lab0.md"
+    },
+    {
+      "analysis_status": "failed",
+      "assessment": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/戴炜/AI人工贡献识别/assessment_lab0.json",
+      "coverage": {
+        "materials": [
+          {
+            "kind": "timeline",
+            "line_count": 2784,
+            "reason": null,
+            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "required": true,
+            "sha256": "5bdeacfa74886697118eb83e28941de3b272baa1d2cda2d97685c84831fd5cdc",
+            "source_id": "source:lab0:timeline",
+            "status": "available"
+          },
+          {
+            "kind": "terminal_qa",
+            "line_count": 3070,
+            "reason": null,
+            "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+            "required": true,
+            "sha256": "239545c0e2450ac46013d0eeebb176d42cc0bf68a6821b868e27d0500e4f3000",
+            "source_id": "source:lab0:terminal_qa",
+            "status": "available"
+          },
+          {
+            "kind": "command_statistics",
+            "line_count": 25,
+            "reason": null,
+            "relative_path": "终端命令统计/command_statistics_lab0.md",
+            "required": true,
+            "sha256": "b616daf211ae6c752995910f6edbdda585e32edaa823a965c9d27730b269eadf",
+            "source_id": "source:lab0:command_statistics",
+            "status": "available"
+          },
+          {
+            "kind": "diff_report",
+            "line_count": null,
+            "reason": "lab0 的贡献识别仅评估实验过程材料，不使用代码差异报告",
+            "relative_path": null,
+            "required": false,
+            "sha256": null,
+            "source_id": "source:lab0:diff_report",
+            "status": "not_applicable"
+          }
+        ],
+        "missing_or_limited": [],
+        "status": "complete"
+      },
+      "full_report": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/戴炜/AI人工贡献识别/完整贡献识别报告_lab0.md",
+      "lab": "lab0",
+      "lab_conclusion": {
+        "alternative_explanation": "运行失败不反映 AI 或人工贡献的实际情况。",
+        "confidence": "weak",
+        "evidence_refs": [],
+        "label": "indeterminate",
+        "limitations": [
+          "主分析或独立复核没有形成可验证结果。"
+        ],
+        "summary": "本次贡献识别未完成，未输出未经独立复核的语义归属。"
+      },
+      "message": "单次读取行数超过上限：source:lab0:timeline",
+      "review": {
+        "disagreement_unit_ids": [],
+        "downgraded_unit_ids": [],
+        "overall_decision": null,
+        "reviewed_unit_ids": [],
+        "status": "not_run",
+        "summary": "未形成可写入的独立复核结果。",
+        "unit_reviews": []
+      },
+      "run_log": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/AI人工贡献识别运行日志/戴炜/lab0/runs/20260918T110729.676827Z.jsonl",
+      "status": "failed",
+      "student_directory": "戴炜",
+      "teacher_report": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/戴炜/AI人工贡献识别/教师贡献复核报告_lab0.md"
+    },
+    {
+      "analysis_status": "failed",
+      "assessment": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/李兆卓/AI人工贡献识别/assessment_lab0.json",
+      "coverage": {
+        "materials": [
+          {
+            "kind": "timeline",
+            "line_count": 2257,
+            "reason": null,
+            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "required": true,
+            "sha256": "d543f225704befec32b6c0cd7b790daaec32e4655c57703292ef33fd1752d1b1",
+            "source_id": "source:lab0:timeline",
+            "status": "available"
+          },
+          {
+            "kind": "terminal_qa",
+            "line_count": 2557,
+            "reason": null,
+            "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+            "required": true,
+            "sha256": "63c56d54e488fef99986e32e6b6abe4170b71a939c93bb4b398e17c46095abd7",
+            "source_id": "source:lab0:terminal_qa",
+            "status": "available"
+          },
+          {
+            "kind": "command_statistics",
+            "line_count": 25,
+            "reason": null,
+            "relative_path": "终端命令统计/command_statistics_lab0.md",
+            "required": true,
+            "sha256": "3e53ce7ed587532e1abc548a87d408de32fbc5b63a8c76a4c44e2b796592cef1",
+            "source_id": "source:lab0:command_statistics",
+            "status": "available"
+          },
+          {
+            "kind": "diff_report",
+            "line_count": null,
+            "reason": "lab0 的贡献识别仅评估实验过程材料，不使用代码差异报告",
+            "relative_path": null,
+            "required": false,
+            "sha256": null,
+            "source_id": "source:lab0:diff_report",
+            "status": "not_applicable"
+          }
+        ],
+        "missing_or_limited": [],
+        "status": "complete"
+      },
+      "full_report": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/李兆卓/AI人工贡献识别/完整贡献识别报告_lab0.md",
+      "lab": "lab0",
+      "lab_conclusion": {
+        "alternative_explanation": "运行失败不反映 AI 或人工贡献的实际情况。",
+        "confidence": "weak",
+        "evidence_refs": [],
+        "label": "indeterminate",
+        "limitations": [
+          "主分析或独立复核没有形成可验证结果。"
+        ],
+        "summary": "本次贡献识别未完成，未输出未经独立复核的语义归属。"
+      },
+      "message": "模型返回的 JSON 无法解析",
+      "review": {
+        "disagreement_unit_ids": [],
+        "downgraded_unit_ids": [],
+        "overall_decision": null,
+        "reviewed_unit_ids": [],
+        "status": "not_run",
+        "summary": "未形成可写入的独立复核结果。",
+        "unit_reviews": []
+      },
+      "run_log": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/AI人工贡献识别运行日志/李兆卓/lab0/runs/20260918T110847.205814Z.jsonl",
+      "status": "failed",
+      "student_directory": "李兆卓",
+      "teacher_report": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/李兆卓/AI人工贡献识别/教师贡献复核报告_lab0.md"
+    },
+    {
+      "analysis_status": "failed",
+      "assessment": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/杨涵清/AI人工贡献识别/assessment_lab0.json",
+      "coverage": {
+        "materials": [
+          {
+            "kind": "timeline",
+            "line_count": 3878,
+            "reason": null,
+            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "required": true,
+            "sha256": "7b65d8b35aca2a4e768b1874734a3b3ca43eb38a90f6ca90dd38b3b79c4963b0",
+            "source_id": "source:lab0:timeline",
+            "status": "available"
+          },
+          {
+            "kind": "terminal_qa",
+            "line_count": 3680,
+            "reason": null,
+            "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+            "required": true,
+            "sha256": "57d7571f01ba508f51f49311841c1aad3f3e5c459014a4909c8c54054723e9b2",
+            "source_id": "source:lab0:terminal_qa",
+            "status": "available"
+          },
+          {
+            "kind": "command_statistics",
+            "line_count": 33,
+            "reason": null,
+            "relative_path": "终端命令统计/command_statistics_lab0.md",
+            "required": true,
+            "sha256": "c81ed1b2e1d908a3cdc50b1b35348877c94c737816bc5cee18d4fc323e3b2ff1",
+            "source_id": "source:lab0:command_statistics",
+            "status": "available"
+          },
+          {
+            "kind": "diff_report",
+            "line_count": null,
+            "reason": "lab0 的贡献识别仅评估实验过程材料，不使用代码差异报告",
+            "relative_path": null,
+            "required": false,
+            "sha256": null,
+            "source_id": "source:lab0:diff_report",
+            "status": "not_applicable"
+          }
+        ],
+        "missing_or_limited": [],
+        "status": "complete"
+      },
+      "full_report": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/杨涵清/AI人工贡献识别/完整贡献识别报告_lab0.md",
+      "lab": "lab0",
+      "lab_conclusion": {
+        "alternative_explanation": "运行失败不反映 AI 或人工贡献的实际情况。",
+        "confidence": "weak",
+        "evidence_refs": [],
+        "label": "indeterminate",
+        "limitations": [
+          "主分析或独立复核没有形成可验证结果。"
+        ],
+        "summary": "本次贡献识别未完成，未输出未经独立复核的语义归属。"
+      },
+      "message": "lab_conclusion 必须是对象",
+      "review": {
+        "disagreement_unit_ids": [],
+        "downgraded_unit_ids": [],
+        "overall_decision": null,
+        "reviewed_unit_ids": [],
+        "status": "not_run",
+        "summary": "未形成可写入的独立复核结果。",
+        "unit_reviews": []
+      },
+      "run_log": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/AI人工贡献识别运行日志/杨涵清/lab0/runs/20260918T110920.239978Z.jsonl",
+      "status": "failed",
+      "student_directory": "杨涵清",
+      "teacher_report": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/杨涵清/AI人工贡献识别/教师贡献复核报告_lab0.md"
+    },
+    {
+      "analysis_status": "failed",
+      "assessment": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/高龙徽/AI人工贡献识别/assessment_lab0.json",
+      "coverage": {
+        "materials": [
+          {
+            "kind": "timeline",
+            "line_count": 9,
+            "reason": null,
+            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "required": true,
+            "sha256": "32b711a9d30c44b823ce1ef5274a21b0750e54400bd32f6652aca6a930d17e46",
+            "source_id": "source:lab0:timeline",
+            "status": "available"
+          },
+          {
+            "kind": "terminal_qa",
+            "line_count": 25,
+            "reason": null,
+            "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+            "required": true,
+            "sha256": "fa6dbb5391a7cfd239bc76c767ddae514d775647d944068b67541d438c0e698e",
+            "source_id": "source:lab0:terminal_qa",
+            "status": "available"
+          },
+          {
+            "kind": "command_statistics",
+            "line_count": 16,
+            "reason": null,
+            "relative_path": "终端命令统计/command_statistics_lab0.md",
+            "required": true,
+            "sha256": "c578962af76d12b58c5edae161ddc456f76c1a0528ce2af1fb8b04c5b2e8af24",
+            "source_id": "source:lab0:command_statistics",
+            "status": "available"
+          },
+          {
+            "kind": "diff_report",
+            "line_count": null,
+            "reason": "lab0 的贡献识别仅评估实验过程材料，不使用代码差异报告",
+            "relative_path": null,
+            "required": false,
+            "sha256": null,
+            "source_id": "source:lab0:diff_report",
+            "status": "not_applicable"
+          }
+        ],
+        "missing_or_limited": [],
+        "status": "complete"
+      },
+      "full_report": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/高龙徽/AI人工贡献识别/完整贡献识别报告_lab0.md",
+      "lab": "lab0",
+      "lab_conclusion": {
+        "alternative_explanation": "运行失败不反映 AI 或人工贡献的实际情况。",
+        "confidence": "weak",
+        "evidence_refs": [],
+        "label": "indeterminate",
+        "limitations": [
+          "主分析或独立复核没有形成可验证结果。"
+        ],
+        "summary": "本次贡献识别未完成，未输出未经独立复核的语义归属。"
+      },
+      "message": "lab_conclusion 必须是对象",
+      "review": {
+        "disagreement_unit_ids": [],
+        "downgraded_unit_ids": [],
+        "overall_decision": null,
+        "reviewed_unit_ids": [],
+        "status": "not_run",
+        "summary": "未形成可写入的独立复核结果。",
+        "unit_reviews": []
+      },
+      "run_log": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/AI人工贡献识别运行日志/高龙徽/lab0/runs/20260918T110945.308430Z.jsonl",
+      "status": "failed",
+      "student_directory": "高龙徽",
+      "teacher_report": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/高龙徽/AI人工贡献识别/教师贡献复核报告_lab0.md"
+    }
+  ],
+  "resume": false,
+  "retry_failed": false,
+  "task_count": 6
+}

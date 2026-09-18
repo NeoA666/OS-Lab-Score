@@ -1,0 +1,168 @@
+{
+  "analysis_status": "failed",
+  "contribution_units": [],
+  "coverage": {
+    "materials": [
+      {
+        "kind": "timeline",
+        "line_count": 305,
+        "reason": null,
+        "relative_path": "简洁实验过程时间线/timeline_lab1.md",
+        "required": true,
+        "sha256": "a120ed2fbfda48502aa3583a68622a8a4f3ab3cf35db21aa4a007cf6327da90c",
+        "source_id": "source:lab1:timeline",
+        "status": "available"
+      },
+      {
+        "kind": "terminal_qa",
+        "line_count": 352,
+        "reason": null,
+        "relative_path": "终端对话记录/terminal_qa_report_lab1.md",
+        "required": true,
+        "sha256": "d30d6476ae917269822a5d5d12885c53f575fec3011c2def0b5e4b986b8b6990",
+        "source_id": "source:lab1:terminal_qa",
+        "status": "available"
+      },
+      {
+        "kind": "command_statistics",
+        "line_count": 20,
+        "reason": null,
+        "relative_path": "终端命令统计/command_statistics_lab1.md",
+        "required": true,
+        "sha256": "1b47a76d4827f20b6b551a777fc51de58ae887ff895d911d623f89f88fe64505",
+        "source_id": "source:lab1:command_statistics",
+        "status": "available"
+      },
+      {
+        "kind": "diff_report",
+        "line_count": 54,
+        "reason": null,
+        "relative_path": "代码差异报告/lab1.md",
+        "required": true,
+        "sha256": "8b3cf1014ba03f2b60ae3d1a804e0a6894644398c85610844d6d4327243cfa12",
+        "source_id": "source:lab1:diff_report",
+        "status": "available"
+      }
+    ],
+    "missing_or_limited": [],
+    "status": "complete"
+  },
+  "diff_hunks": [
+    {
+      "change_kind": "修改",
+      "file_path": "Makefile",
+      "hunk_id": "hunk:lab1:1",
+      "line_end": 44,
+      "line_start": 32,
+      "new_line_count": 12,
+      "new_line_start": 151,
+      "old_line_count": 6,
+      "old_line_start": 151,
+      "source_id": "source:lab1:diff_report"
+    },
+    {
+      "change_kind": "修改",
+      "file_path": "Makefile",
+      "hunk_id": "hunk:lab1:2",
+      "line_end": 53,
+      "line_start": 45,
+      "new_line_count": 7,
+      "new_line_start": 248,
+      "old_line_count": 7,
+      "old_line_start": 242,
+      "source_id": "source:lab1:diff_report"
+    }
+  ],
+  "errors": [
+    {
+      "code": "NimConfigurationError",
+      "message": "未配置模型服务凭据",
+      "retryable": false,
+      "stage": "configuration"
+    }
+  ],
+  "input_fingerprint": "sha256:47771f1c7e1bc910f6dec455fec85d20d6e6668971fcf37e567ce5e4cb5d0a99",
+  "lab": "lab1",
+  "lab_conclusion": {
+    "alternative_explanation": "运行失败不反映 AI 或人工贡献的实际情况。",
+    "confidence": "weak",
+    "evidence_refs": [],
+    "label": "indeterminate",
+    "limitations": [
+      "主分析或独立复核没有形成可验证结果。"
+    ],
+    "summary": "本次贡献识别未完成，未输出未经独立复核的语义归属。"
+  },
+  "limitations": [
+    "失败状态不是贡献、诚信、违规或评分结论。",
+    "修复配置或材料问题后可使用 --retry-failed 重新运行。"
+  ],
+  "review": {
+    "disagreement_unit_ids": [],
+    "downgraded_unit_ids": [],
+    "overall_decision": null,
+    "reviewed_unit_ids": [],
+    "status": "not_run",
+    "summary": "未形成可写入的独立复核结果。",
+    "unit_reviews": []
+  },
+  "run_metadata": {
+    "completed_at": "2026-09-18T12:00:54.532566+00:00",
+    "controlled_read_protocol_version": "contribution-read-material-v3",
+    "prompt_version": "contribution-attribution-v3-nim-semantic-primary-v2",
+    "review_prompt_version": "contribution-attribution-v3-nim-independent-review-v2",
+    "tool_version": "3.1.1",
+    "validator_version": "contribution-assessment-validator-v4"
+  },
+  "schema_version": "ai-human-contribution-assessment/v3",
+  "source_manifest": [
+    {
+      "availability": "available",
+      "kind": "timeline",
+      "line_count": 305,
+      "reason": null,
+      "relative_path": "简洁实验过程时间线/timeline_lab1.md",
+      "required": true,
+      "sha256": "a120ed2fbfda48502aa3583a68622a8a4f3ab3cf35db21aa4a007cf6327da90c",
+      "source_id": "source:lab1:timeline"
+    },
+    {
+      "availability": "available",
+      "kind": "terminal_qa",
+      "line_count": 352,
+      "reason": null,
+      "relative_path": "终端对话记录/terminal_qa_report_lab1.md",
+      "required": true,
+      "sha256": "d30d6476ae917269822a5d5d12885c53f575fec3011c2def0b5e4b986b8b6990",
+      "source_id": "source:lab1:terminal_qa"
+    },
+    {
+      "availability": "available",
+      "kind": "command_statistics",
+      "line_count": 20,
+      "reason": null,
+      "relative_path": "终端命令统计/command_statistics_lab1.md",
+      "required": true,
+      "sha256": "1b47a76d4827f20b6b551a777fc51de58ae887ff895d911d623f89f88fe64505",
+      "source_id": "source:lab1:command_statistics"
+    },
+    {
+      "availability": "available",
+      "kind": "diff_report",
+      "line_count": 54,
+      "reason": null,
+      "relative_path": "代码差异报告/lab1.md",
+      "required": true,
+      "sha256": "8b3cf1014ba03f2b60ae3d1a804e0a6894644398c85610844d6d4327243cfa12",
+      "source_id": "source:lab1:diff_report"
+    }
+  ],
+  "student": {
+    "directory_name": "戴炜",
+    "display_name": "戴炜",
+    "student_id": null
+  },
+  "teacher_actions": [
+    "检查运行日志中的脱敏错误信息，并在问题修复后重新运行。"
+  ]
+}
