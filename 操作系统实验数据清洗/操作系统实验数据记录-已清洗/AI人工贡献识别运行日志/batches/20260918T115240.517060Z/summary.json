@@ -1,0 +1,951 @@
+{
+  "batch_id": "20260918T115240.517060Z",
+  "created_at": "2026-09-18T11:52:40.517078+00:00",
+  "force": false,
+  "results": [
+    {
+      "analysis_status": "complete",
+      "assessment": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/刘梓宸/AI人工贡献识别/assessment_lab0.json",
+      "coverage": {
+        "materials": [
+          {
+            "kind": "timeline",
+            "line_count": 513,
+            "reason": null,
+            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "required": true,
+            "sha256": "94f29eb383ca415756756c410125a68922362adb6c86e8a59844e3fe9bda2181",
+            "source_id": "source:lab0:timeline",
+            "status": "available"
+          },
+          {
+            "kind": "terminal_qa",
+            "line_count": 587,
+            "reason": null,
+            "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+            "required": true,
+            "sha256": "a4003a6cb2a5d0c1f456b3f5c6c79530869f86b73afddd850ed5445cc4b8c02e",
+            "source_id": "source:lab0:terminal_qa",
+            "status": "available"
+          },
+          {
+            "kind": "command_statistics",
+            "line_count": 24,
+            "reason": null,
+            "relative_path": "终端命令统计/command_statistics_lab0.md",
+            "required": true,
+            "sha256": "3b6282e709911d3eb4c93da3b251b08c27f32a8cd0de791238adb197fc66c077",
+            "source_id": "source:lab0:command_statistics",
+            "status": "available"
+          },
+          {
+            "kind": "diff_report",
+            "line_count": null,
+            "reason": "lab0 的贡献识别仅评估实验过程材料，不使用代码差异报告",
+            "relative_path": null,
+            "required": false,
+            "sha256": null,
+            "source_id": "source:lab0:diff_report",
+            "status": "not_applicable"
+          }
+        ],
+        "missing_or_limited": [],
+        "status": "complete"
+      },
+      "full_report": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/刘梓宸/AI人工贡献识别/完整贡献识别报告_lab0.md",
+      "lab": "lab0",
+      "lab_conclusion": {
+        "alternative_explanation": "AI might have been used to suggest commands or troubleshoot issues outside the recorded terminal sessions, but the observable record shows only human execution.",
+        "confidence": "strong",
+        "evidence_refs": [
+          {
+            "excerpt": "# 简洁实验过程时间线\n\n- 学号：2306010113\n- 姓名：刘梓宸\n- 实验分类：lab0\n\n## 过程\n\n### 录像时间：2026-09-11T21:03:13.980+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nmake clean\n\n[终端输出]\nrm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \\\n*/*.o */*.d */*.asm */*.sym \\\ntarget/* \\\nxv6-user/initcode xv6-user/initcode.out \\\nkernel/kernel \\\n.gdbinit \\\nxv6-user/usys.S \\\nxv6-user/_init xv6-user/_sh xv6-user/_cat xv6-user/_echo xv6-user/_grep xv6-user/_ls xv6-user/_kill xv6-user/_mkdir xv6-user/_xargs xv6-user/_sleep xv6-user/_find xv6-user/_rm xv6-user/_wc xv6-user/_test xv6-user/_usertests xv6-user/_strace xv6-user/_mv\n```\n\n### 录像时…",
+            "excerpt_redacted": true,
+            "line_end": 513,
+            "line_start": 1,
+            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "sha256": "94f29eb383ca415756756c410125a68922362adb6c86e8a59844e3fe9bda2181",
+            "source_id": "source:lab0:timeline",
+            "source_kind": "timeline"
+          },
+          {
+            "excerpt": "# 终端会话问答对与命令频次报告\n\n- 学号：2306010113\n- 姓名：刘梓宸\n- 数据采集时间：2026-09-11 20:46\n- 原始时间标识：20260911-2046\n- 原始数据目录：2306010113-刘梓宸-20260911-2046\n- 终端录像数量：1\n\n- 实验分类：lab0\n\n- Shell 命令执行总次数：9\n- 不同 Shell 命令数量：8\n- 包含 Shell 命令的终端会话数：1\n- 无 Shell 命令的终端会话数：0\n- Shell 提取失败会话数：0\n\nQ 为 shell 提示符下输入的完整命令，A 为命令输出。每条命令输出最多保留 400 行。\n\n## 一、问答对集合\n\n### 问答 2 · 录像 20260911T204037-63059\n\n- 开始时间：未知\n- 相对时间：320.2s\n- 命令执行目录：\\~/桌面/xv6-ai-labs-km-无答案/lab0\n\n**Q（命令）：**\n\n```text\nmake clean\n```\n\n**A（输出）：**\n\n```text\nrm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \\\n*/*.o */*.d */*.asm */*.sym \\\ntarget/* \\\nxv6-user/initcode xv6-user/initcode.o…",
+            "excerpt_redacted": true,
+            "line_end": 200,
+            "line_start": 1,
+            "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+            "sha256": "a4003a6cb2a5d0c1f456b3f5c6c79530869f86b73afddd850ed5445cc4b8c02e",
+            "source_id": "source:lab0:terminal_qa",
+            "source_kind": "terminal_qa"
+          },
+          {
+            "excerpt": "# Terminal Command Statistics\n\n- 学号：2306010113\n- 姓名：刘梓宸\n- 数据采集时间：2026-09-11 20:46\n- 原始时间标识：20260911-2046\n- 原始数据目录：2306010113-刘梓宸-20260911-2046\n- 终端录像数量：1\n\n- 实验分类：lab0\n\n- Shell 命令执行总次数：9\n- 不同 Shell 命令数量：8\n\n| command | count |\n| --- | ---: |\n| make run | 2 |\n| ls -lh fs.img | 1 |\n| make build | 1 |\n| make clean | 1 |\n| make fd | 1 |\n| make fs | 1 |\n| mkfs.vfat --help | 1 |\n| sudo apt install dosfstools | 1 |",
+            "excerpt_redacted": true,
+            "line_end": 24,
+            "line_start": 1,
+            "relative_path": "终端命令统计/command_statistics_lab0.md",
+            "sha256": "3b6282e709911d3eb4c93da3b251b08c27f32a8cd0de791238adb197fc66c077",
+            "source_id": "source:lab0:command_statistics",
+            "source_kind": "command_statistics"
+          }
+        ],
+        "label": "human_dominant",
+        "limitations": [
+          "Cannot rule out offline AI assistance that did not leave traces in the terminal logs.",
+          "The materials do not capture potential AI-generated explanations or code that the student may have read but not typed into the terminal.",
+          "The process-only assessment cannot evaluate contributions to code authorship or debugging."
+        ],
+        "summary": "The lab0 process consists entirely of observable shell commands executed by the student, with no evidence of AI contribution in the provided logs."
+      },
+      "message": "输入未变，仅重渲染双报告。",
+      "review": {
+        "disagreement_unit_ids": [],
+        "downgraded_unit_ids": [],
+        "overall_decision": "agree",
+        "reviewed_unit_ids": [
+          "unit-1"
+        ],
+        "status": "agreed",
+        "summary": "The unit's conclusion of human_dominant is supported by the observable shell command logs; no AI contribution is evident.",
+        "unit_reviews": [
+          {
+            "decision": "agree",
+            "evidence_refs": [
+              {
+                "excerpt": "```text\nmake clean\n\n[终端输出]\nrm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \\\n*/*.o */*.d */*.asm */*.sym \\\ntarget/* \\\nxv6-user/initcode xv6-user/initcode.out \\\nkernel/kernel \\\n.gdbinit \\\nxv6-user/usys.S \\\nxv6-user/_init xv6-user/_sh xv6-user/_cat xv6-user/_echo xv6-user/_grep xv6-user/_ls xv6-user/_kill xv6-user/_mkdir xv6-user/_xargs xv6-user/_sleep xv6-user/_find xv6-user/_rm xv6-user/_wc xv6-user/_test xv6-user/_usertests xv6-user/_strace xv6-user/_mv",
+                "excerpt_redacted": true,
+                "line_end": 26,
+                "line_start": 15,
+                "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+                "sha256": "94f29eb383ca415756756c410125a68922362adb6c86e8a59844e3fe9bda2181",
+                "source_id": "source:lab0:timeline",
+                "source_kind": "timeline"
+              },
+              {
+                "excerpt": "```text\nmake build\n\n[终端输出]\nriscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/printf.o kernel/printf.c\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/kalloc.o kernel/kalloc.c\nriscv64-u…",
+                "excerpt_redacted": true,
+                "line_end": 50,
+                "line_start": 35,
+                "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+                "sha256": "94f29eb383ca415756756c410125a68922362adb6c86e8a59844e3fe9bda2181",
+                "source_id": "source:lab0:timeline",
+                "source_kind": "timeline"
+              },
+              {
+                "excerpt": "```text\nmake clean\n```\n\n**A（输出）：**\n\n```text\nrm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \\\n*/*.o */*.d */*.asm */*.sym \\\ntarget/* \\\nxv6-user/initcode xv6-user/initcode.out \\\nkernel/kernel \\\n.gdbinit \\\nxv6-user/usys.S \\\nxv6-user/_init xv6-user/_sh xv6-user/_cat xv6-user/_echo xv6-user/_grep xv6-user/_ls xv6-user/_kill xv6-user/_mkdir xv6-user/_xargs xv6-user/_sleep xv6-user/_find xv6-user/_rm xv6-user/_wc xv6-user/_test xv6-user/_usertests xv6-user/_strace xv6-user/_mv",
+                "excerpt_redacted": true,
+                "line_end": 44,
+                "line_start": 30,
+                "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+                "sha256": "a4003a6cb2a5d0c1f456b3f5c6c79530869f86b73afddd850ed5445cc4b8c02e",
+                "source_id": "source:lab0:terminal_qa",
+                "source_kind": "terminal_qa"
+              },
+              {
+                "excerpt": "```text\nmake build\n```\n\n**A（输出）：**\n\n```text\nriscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/printf.o kernel/printf.c\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/kalloc.o kernel/k…",
+                "excerpt_redacted": true,
+                "line_end": 70,
+                "line_start": 55,
+                "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+                "sha256": "a4003a6cb2a5d0c1f456b3f5c6c79530869f86b73afddd850ed5445cc4b8c02e",
+                "source_id": "source:lab0:terminal_qa",
+                "source_kind": "terminal_qa"
+              },
+              {
+                "excerpt": "| command | count |\n| --- | ---: |\n| make run | 2 |\n| ls -lh fs.img | 1 |\n| make build | 1 |\n| make clean | 1 |\n| make fd | 1 |\n| make fs | 1 |\n| mkfs.vfat --help | 1 |\n| sudo apt install dosfstools | 1 |",
+                "excerpt_redacted": true,
+                "line_end": 24,
+                "line_start": 15,
+                "relative_path": "终端命令统计/command_statistics_lab0.md",
+                "sha256": "3b6282e709911d3eb4c93da3b251b08c27f32a8cd0de791238adb197fc66c077",
+                "source_id": "source:lab0:command_statistics",
+                "source_kind": "command_statistics"
+              }
+            ],
+            "reason": "The materials show only shell commands (make clean, make build, mkfs.vfat --help, sudo apt install dosfstools) and their outputs, with no indication of AI involvement. The timeline, terminal Q&A, and command statistics all reflect human-executed commands.",
+            "unit_id": "unit-1"
+          }
+        ]
+      },
+      "status": "rerendered",
+      "student_directory": "刘梓宸",
+      "teacher_report": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/刘梓宸/AI人工贡献识别/教师贡献复核报告_lab0.md"
+    },
+    {
+      "analysis_status": "complete",
+      "assessment": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/周卓江/AI人工贡献识别/assessment_lab0.json",
+      "coverage": {
+        "materials": [
+          {
+            "kind": "timeline",
+            "line_count": 713,
+            "reason": null,
+            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "required": true,
+            "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
+            "source_id": "source:lab0:timeline",
+            "status": "available"
+          },
+          {
+            "kind": "terminal_qa",
+            "line_count": 774,
+            "reason": null,
+            "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+            "required": true,
+            "sha256": "d4f9823175ea9ecc5e7d4a6bad8a826bebd76a38ca18fb0e3d4f4614ac469c39",
+            "source_id": "source:lab0:terminal_qa",
+            "status": "available"
+          },
+          {
+            "kind": "command_statistics",
+            "line_count": 20,
+            "reason": null,
+            "relative_path": "终端命令统计/command_statistics_lab0.md",
+            "required": true,
+            "sha256": "a36291031f40dde7d9b523b3b0b570c8d7be2c279242d7163c04bab33a50af1a",
+            "source_id": "source:lab0:command_statistics",
+            "status": "available"
+          },
+          {
+            "kind": "diff_report",
+            "line_count": null,
+            "reason": "lab0 的贡献识别仅评估实验过程材料，不使用代码差异报告",
+            "relative_path": null,
+            "required": false,
+            "sha256": null,
+            "source_id": "source:lab0:diff_report",
+            "status": "not_applicable"
+          }
+        ],
+        "missing_or_limited": [],
+        "status": "complete"
+      },
+      "full_report": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/周卓江/AI人工贡献识别/完整贡献识别报告_lab0.md",
+      "lab": "lab0",
+      "lab_conclusion": {
+        "alternative_explanation": "If the student had relied mainly on prior knowledge and used the AI only sparingly, the label could shift to human‑dominant.",
+        "confidence": "moderate",
+        "evidence_refs": [
+          {
+            "excerpt": "# 简洁实验过程时间线\n\n- 学号：2406080205\n- 姓名：周卓江\n- 实验分类：lab0\n\n## 过程\n\n### 录像时间：2026-09-10T15:52:49.913+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nclaude\n```\n\n### 录像时间：2026-09-10T15:54:06.929+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nclaude\n```\n\n### 录像时间：2026-09-10T15:54:10.348+08:00（北京时间）\n\n- 录像类型：用户问题\n\n- 内容：\n\n```text\nnihao\n```\n\n### 录像时间：2026-09-10T15:54:11.678+08:00（北京时间）\n\n- 录像类型：Claude 回复\n\n- 内容：\n\n```text\n你好！\n\nlab0 是搭环境那一章，目标是把 xv6-k210 在 qemu 上跑通，看到 shell 提示符。\n\n在开始之前，我想先确认一件事：\n\n你现在用的环境是哪种？ 是课程给的镜像（.ova 导入 VMware、希冀云端、或者硬盘拷贝过来的），还是你自己机器上全新装的系统？\n\n这个决定了后面是「直接验证」还是「先装工具链」，差别挺大。\n```\n\n### 录像时间：2026-09-10…",
+            "excerpt_redacted": true,
+            "line_end": 200,
+            "line_start": 1,
+            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
+            "source_id": "source:lab0:timeline",
+            "source_kind": "timeline"
+          },
+          {
+            "excerpt": "# 终端会话问答对与命令频次报告\n\n- 学号：2406080205\n- 姓名：周卓江\n- 数据采集时间：2026-09-10 23:22\n- 原始时间标识：20260910-2322\n- 原始数据目录：2406080205-周卓江-20260910-2322\n- 终端录像数量：5\n\n- 实验分类：lab0\n\n- Shell 命令执行总次数：9\n- 不同 Shell 命令数量：4\n- 包含 Shell 命令的终端会话数：5\n- 无 Shell 命令的终端会话数：0\n- Shell 提取失败会话数：0\n\nQ 为 shell 提示符下输入的完整命令，A 为命令输出。每条命令输出最多保留 400 行。\n\n## 一、问答对集合\n\n### 问答 2 · 录像 20260910T155240-13114\n\n- 开始时间：2026-09-10 15:52:40+08:00\n- 相对时间：7.4s\n- 命令执行目录：\\~/桌面/xv6-ai-labs-km/lab0\n\n**Q（命令）：**\n\n```text\nclaude\n```\n\n**A（输出）：**\n\n```text\n ▐▛███▜▌   Claude Code v2.1.221\n▝▜█████▛▘  deepseek-v4-flash · API Usage Billing\n  ▘▘ ▝▝    ~/桌面/xv6-ai-labs-km/lab…",
+            "excerpt_redacted": true,
+            "line_end": 200,
+            "line_start": 1,
+            "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+            "sha256": "d4f9823175ea9ecc5e7d4a6bad8a826bebd76a38ca18fb0e3d4f4614ac469c39",
+            "source_id": "source:lab0:terminal_qa",
+            "source_kind": "terminal_qa"
+          },
+          {
+            "excerpt": "# Terminal Command Statistics\n\n- 学号：2406080205\n- 姓名：周卓江\n- 数据采集时间：2026-09-10 23:22\n- 原始时间标识：20260910-2322\n- 原始数据目录：2406080205-周卓江-20260910-2322\n- 终端录像数量：5\n\n- 实验分类：lab0\n\n- Shell 命令执行总次数：9\n- 不同 Shell 命令数量：4\n\n| command | count |\n| --- | ---: |\n| claude | 5 |\n| make run | 2 |\n| make clean | 1 |\n| make fs | 1 |",
+            "excerpt_redacted": true,
+            "line_end": 20,
+            "line_start": 1,
+            "relative_path": "终端命令统计/command_statistics_lab0.md",
+            "sha256": "a36291031f40dde7d9b523b3b0b570c8d7be2c279242d7163c04bab33a50af1a",
+            "source_id": "source:lab0:command_statistics",
+            "source_kind": "command_statistics"
+          }
+        ],
+        "label": "mixed",
+        "limitations": [
+          "Cannot assess depth of learning or long‑term retention from interaction logs alone.",
+          "No visibility into any self‑studied documentation or external tutorials.",
+          "The analysis is limited to the supplied slices; missing segments could alter the balance."
+        ],
+        "summary": "Lab0 involved a blend of AI‑provided explanations and student‑driven command execution and prompting, resulting in a mixed contribution profile."
+      },
+      "message": "输入未变，仅重渲染双报告。",
+      "review": {
+        "disagreement_unit_ids": [],
+        "downgraded_unit_ids": [],
+        "overall_decision": "agree",
+        "reviewed_unit_ids": [
+          "proc-1"
+        ],
+        "status": "agreed",
+        "summary": "The evidence shows both AI-generated explanations and human-initiated command execution, supporting the mixed label.",
+        "unit_reviews": [
+          {
+            "decision": "agree",
+            "evidence_refs": [
+              {
+                "excerpt": "claude",
+                "excerpt_redacted": true,
+                "line_end": 16,
+                "line_start": 16,
+                "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+                "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
+                "source_id": "source:lab0:timeline",
+                "source_kind": "timeline"
+              },
+              {
+                "excerpt": "claude",
+                "excerpt_redacted": true,
+                "line_end": 26,
+                "line_start": 26,
+                "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+                "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
+                "source_id": "source:lab0:timeline",
+                "source_kind": "timeline"
+              },
+              {
+                "excerpt": "claude",
+                "excerpt_redacted": true,
+                "line_end": 64,
+                "line_start": 64,
+                "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+                "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
+                "source_id": "source:lab0:timeline",
+                "source_kind": "timeline"
+              },
+              {
+                "excerpt": "```text\nnihao\n```\n\n### 录像时间：2026-09-10T15:54:11.678+08:00（北京时间）\n\n- 录像类型：Claude 回复\n\n- 内容：\n\n```text\n你好！\n\nlab0 是搭环境那一章，目标是把 xv6-k210 在 qemu 上跑通，看到 shell 提示符。\n\n在开始之前，我想先确认一件事：\n\n你现在用的环境是哪种？ 是课程给的镜像（.ova 导入 VMware、希冀云端、或者硬盘拷贝过来的），还是你自己机器上全新装的系统？\n\n这个决定了后面是「直接验证」还是「先装工具链」，差别挺大。\n```",
+                "excerpt_redacted": true,
+                "line_end": 55,
+                "line_start": 35,
+                "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+                "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
+                "source_id": "source:lab0:timeline",
+                "source_kind": "timeline"
+              },
+              {
+                "excerpt": "```text\n### Linux 命令行与包管理器\n\n实验全程在 Linux 命令行下进行。对 Linux 还不熟悉的同学，建议先掌握下面这些常用命令：\n\n- 目录与文件：`cd`、`ls`、`pwd`、`mkdir`、`rm`、`cp`、`mv`\n- 权限与进程：`chmod`、`chown`、`ps`\n- 重定向与管道：`>`、`<`、`|`\n- 包管理（Ubuntu/Debian）：`apt update`、`apt install`、`apt search`\n- 系统管理：`sudo`、`man`给我简要介绍一下这些命令\n```\n\n### 录像时间：2026-09-10T22:23:22.863+08:00（北京时间）\n\n- 录像类型：Claude 回复\n\n- 内容：\n\n```text\n这一串其实分五类，你在 lab0 里天天真正会用到的是第一类 + man，其余的先认个脸。\n\n目录与文件\n- pwd — print working directory，我现在在哪个目录\n- ls — 列出当前目录有什么（ls -l 看详情，ls -a 连隐藏文件）\n- cd — 切换目录（cd .. 回上一级，cd 单独敲回 home）\n- mkdir — 建目录\n- cp — 复制（cp -r 连目录一起复制）\n- mv — 移动；同一目录内移动就是改名\n- rm — 删除。⚠  L…",
+                "excerpt_redacted": true,
+                "line_end": 125,
+                "line_start": 73,
+                "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+                "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
+                "source_id": "source:lab0:timeline",
+                "source_kind": "timeline"
+              },
+              {
+                "excerpt": "- 内容：\n\n```text\n这一串其实分五类，你在 lab0 里天天真正会用到的是第一类 + man，其余的先认个脸。\n\n目录与文件\n- pwd — print working directory，我现在在哪个目录\n- ls — 列出当前目录有什么（ls -l 看详情，ls -a 连隐藏文件）\n- cd — 切换目录（cd .. 回上一级，cd 单独敲回 home）\n- mkdir — 建目录\n- cp — 复制（cp -r 连目录一起复制）\n- mv — 移动；同一目录内移动就是改名\n- rm — 删除。⚠  Linux 命令行下没有回收站，删了就没了，rm -rf 尤其要想清楚再敲\n\n权限与进程\n- chmod — 改文件权限（谁能读/写/执行）\n- chown — 改文件属主（通常要 sudo）\n- ps — 看当前有哪些进程在跑\n\n重定向与管道\n- > — 把命令本该打印到屏幕的输出，写进文件（< 是反过来：从文件读输入）\n- | — 把左边命令的输出，直接当成右边命令的输入\n\n包管理（Ubuntu/Debian）\n- apt update — 更新\"可安装软件清单\"（不是升级软件）\n- apt search xxx — 按关键词找包\n- apt install xxx — 装包\n\n系统管理\n- sudo — 以 root 身份执行这条命令\n- man xxx — 看某…",
+                "excerpt_redacted": true,
+                "line_end": 125,
+                "line_start": 89,
+                "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+                "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
+                "source_id": "source:lab0:timeline",
+                "source_kind": "timeline"
+              },
+              {
+                "excerpt": "make clean\n\n[终端输出]\nrm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \\\n*/*.o */*.d */*.asm */*.sym \\\ntarget/* \\\nxv6-user/initcode xv6-user/initcode.out \\\nkernel/kernel \\\n.gdbinit \\\nxv6-user/usys.S \\\nxv6-user/_init xv6-user/_sh xv6-user/_cat xv6-user/_echo xv6-user/_grep xv6-user/_ls xv6-user/_kill xv6-user/_mkdir xv6-user/_xargs xv6-user/_sleep xv6-user/_find xv6-user/_rm xv6-user/_wc xv6-user/_test xv6-user/_usertests xv6-user/_strace xv6-user/_mv",
+                "excerpt_redacted": true,
+                "line_end": 200,
+                "line_start": 190,
+                "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+                "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
+                "source_id": "source:lab0:timeline",
+                "source_kind": "timeline"
+              },
+              {
+                "excerpt": "| claude | 5 |\n| make run | 2 |\n| make clean | 1 |\n| make fs | 1 |",
+                "excerpt_redacted": true,
+                "line_end": 20,
+                "line_start": 17,
+                "relative_path": "终端命令统计/command_statistics_lab0.md",
+                "sha256": "a36291031f40dde7d9b523b3b0b570c8d7be2c279242d7163c04bab33a50af1a",
+                "source_id": "source:lab0:command_statistics",
+                "source_kind": "command_statistics"
+              }
+            ],
+            "reason": "The materials show repeated AI-generated explanations (Claude responses to user questions about Linux basics and cross-compilation) alongside human-initiated actions (prompting questions and executing shell commands such as make clean, make run, and make fs). This combination of AI-provided guidance and human-driven execution matches a mixed contribution profile.",
+            "unit_id": "proc-1"
+          }
+        ]
+      },
+      "status": "rerendered",
+      "student_directory": "周卓江",
+      "teacher_report": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/周卓江/AI人工贡献识别/教师贡献复核报告_lab0.md"
+    },
+    {
+      "analysis_status": "complete",
+      "assessment": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/戴炜/AI人工贡献识别/assessment_lab0.json",
+      "coverage": {
+        "materials": [
+          {
+            "kind": "timeline",
+            "line_count": 2784,
+            "reason": null,
+            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "required": true,
+            "sha256": "5bdeacfa74886697118eb83e28941de3b272baa1d2cda2d97685c84831fd5cdc",
+            "source_id": "source:lab0:timeline",
+            "status": "available"
+          },
+          {
+            "kind": "terminal_qa",
+            "line_count": 3070,
+            "reason": null,
+            "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+            "required": true,
+            "sha256": "239545c0e2450ac46013d0eeebb176d42cc0bf68a6821b868e27d0500e4f3000",
+            "source_id": "source:lab0:terminal_qa",
+            "status": "available"
+          },
+          {
+            "kind": "command_statistics",
+            "line_count": 25,
+            "reason": null,
+            "relative_path": "终端命令统计/command_statistics_lab0.md",
+            "required": true,
+            "sha256": "b616daf211ae6c752995910f6edbdda585e32edaa823a965c9d27730b269eadf",
+            "source_id": "source:lab0:command_statistics",
+            "status": "available"
+          },
+          {
+            "kind": "diff_report",
+            "line_count": null,
+            "reason": "lab0 的贡献识别仅评估实验过程材料，不使用代码差异报告",
+            "relative_path": null,
+            "required": false,
+            "sha256": null,
+            "source_id": "source:lab0:diff_report",
+            "status": "not_applicable"
+          }
+        ],
+        "missing_or_limited": [],
+        "status": "complete"
+      },
+      "full_report": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/戴炜/AI人工贡献识别/完整贡献识别报告_lab0.md",
+      "lab": "lab0",
+      "lab_conclusion": {
+        "alternative_explanation": "学生可能在未记录的环境中借助 AI 编写代码，随后在此只进行编译和运行；但此假设无观测支持。",
+        "confidence": "strong",
+        "evidence_refs": [
+          {
+            "excerpt": "make run\n\n[终端输出]\nmake: 警告：文件“target/kernel”的修改时间在未来 27355 秒后\nqemu-system-riscv64: -drive file=fs.img,if=none,format=raw,id=x0: Could not open 'fs.img': No such file or directory\nmake: *** [Makefile:152：run] 错误 1",
+            "excerpt_redacted": true,
+            "line_end": 21,
+            "line_start": 16,
+            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "sha256": "5bdeacfa74886697118eb83e28941de3b272baa1d2cda2d97685c84831fd5cdc",
+            "source_id": "source:lab0:timeline",
+            "source_kind": "timeline"
+          },
+          {
+            "excerpt": "make run\n\n[终端输出]\nmake: 警告：文件“target/kernel”的修改时间在未来 27304 秒后\nmaking fs image...\n输入了 512+0 块记录\n输出了 512+0 块记录",
+            "excerpt_redacted": true,
+            "line_end": 50,
+            "line_start": 44,
+            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "sha256": "5bdeacfa74886697118eb83e28941de3b272baa1d2cda2d97685c84831fd5cdc",
+            "source_id": "source:lab0:timeline",
+            "source_kind": "timeline"
+          }
+        ],
+        "label": "human_dominant",
+        "limitations": [
+          "过程记录仅限于可观察的命令行交互，无法直接察看代码编写细节。",
+          "可能的离线 AI 使用未被时间线捕获。"
+        ],
+        "summary": "Lab0 的学生全程通过亲自执行 Shell 命令完成实验流程，未出现 AI 生成或辅助的证据。"
+      },
+      "message": "输入未变，未调用 NIM。",
+      "review": {
+        "disagreement_unit_ids": [],
+        "downgraded_unit_ids": [],
+        "overall_decision": "agree",
+        "reviewed_unit_ids": [
+          "unit-lab0-process-001"
+        ],
+        "status": "agreed",
+        "summary": "All observed actions are manual command-line operations by the student; no AI-generated or assisted traces are present.",
+        "unit_reviews": [
+          {
+            "decision": "agree",
+            "evidence_refs": [
+              {
+                "excerpt": "make run\n\n[终端输出]\nmake: 警告：文件“target/kernel”的修改时间在未来 27355 秒后\nqemu-system-riscv64: -drive file=fs.img,if=none,format=raw,id=x0: Could not open 'fs.img': No such file or directory\nmake: *** [Makefile:152：run] 错误 1",
+                "excerpt_redacted": true,
+                "line_end": 21,
+                "line_start": 16,
+                "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+                "sha256": "5bdeacfa74886697118eb83e28941de3b272baa1d2cda2d97685c84831fd5cdc",
+                "source_id": "source:lab0:timeline",
+                "source_kind": "timeline"
+              },
+              {
+                "excerpt": "make ru\n\n[终端输出]\nmake: *** 没有规则可制作目标“ru”。 停止。",
+                "excerpt_redacted": true,
+                "line_end": 34,
+                "line_start": 31,
+                "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+                "sha256": "5bdeacfa74886697118eb83e28941de3b272baa1d2cda2d97685c84831fd5cdc",
+                "source_id": "source:lab0:timeline",
+                "source_kind": "timeline"
+              },
+              {
+                "excerpt": "make run\n\n[终端输出]\nmake: 警告：文件“target/kernel”的修改时间在未来 27304 秒后\nmaking fs image...\n输入了 512+0 块记录\n输出了 512+0 块记录\n268435456 字节 (268 MB, 256 MiB) 已复制，0.361707 s，742 MB/s\nmkfs.fat 4.2 (2021-01-31)",
+                "excerpt_redacted": true,
+                "line_end": 52,
+                "line_start": 44,
+                "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+                "sha256": "5bdeacfa74886697118eb83e28941de3b272baa1d2cda2d97685c84831fd5cdc",
+                "source_id": "source:lab0:timeline",
+                "source_kind": "timeline"
+              },
+              {
+                "excerpt": "make gdb\n\n[终端输出]\nmake: 警告：文件“target/kernel”的修改时间在未来 27253 秒后\n*** QEMU 已在 :1234 等待 gdb，请在另⼀个终端运⾏: ***\n gdb-multiarch target/kernel -ex 'set arch riscv:rv64' -ex 'target remote localhost:1234'\nqemu-system-riscv64: -device virtio-blk-device,drive=x0,bus=virtio-mmio-bus.0: Failed to get \"write\" lock\nIs another process using the image [fs.img]?\nmake: *** [Makefile:159：gdb] 错误 1\n```",
+                "excerpt_redacted": true,
+                "line_end": 150,
+                "line_start": 141,
+                "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+                "sha256": "5bdeacfa74886697118eb83e28941de3b272baa1d2cda2d97685c84831fd5cdc",
+                "source_id": "source:lab0:timeline",
+                "source_kind": "timeline"
+              },
+              {
+                "excerpt": "make fs\n```",
+                "excerpt_redacted": true,
+                "line_end": 179,
+                "line_start": 178,
+                "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+                "sha256": "5bdeacfa74886697118eb83e28941de3b272baa1d2cda2d97685c84831fd5cdc",
+                "source_id": "source:lab0:timeline",
+                "source_kind": "timeline"
+              },
+              {
+                "excerpt": "make clean\n\n[终端输出]\nrm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \\\n*/*.o */*.d */*.asm */*.sym \\\ntarget/* \\\nxv6-user/initcode xv6-user/initcode.out \\\nkernel/kernel \\\n.gdbinit \\\nxv6-user/usys.S \\\nxv6-user/_init xv6-user/_sh xv6-user/_cat xv6-user/_echo xv6-user/_grep xv6-user/_ls xv6-user/_kill xv6-user/_mkdir xv6-user/_xargs xv6-user/_sleep xv6-user/_fi\nnd xv6-user/_rm xv6-user/_wc xv6-user/_test xv6-user/_usertests xv6-user/_strace xv6-user/_mv\n```",
+                "excerpt_redacted": true,
+                "line_end": 200,
+                "line_start": 188,
+                "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+                "sha256": "5bdeacfa74886697118eb83e28941de3b272baa1d2cda2d97685c84831fd5cdc",
+                "source_id": "source:lab0:timeline",
+                "source_kind": "timeline"
+              }
+            ],
+            "reason": "The timeline shows only student-executed shell commands (make run, make ru, make gdb, make fs, make clean) with no indication of AI involvement.",
+            "unit_id": "unit-lab0-process-001"
+          }
+        ]
+      },
+      "status": "cached",
+      "student_directory": "戴炜",
+      "teacher_report": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/戴炜/AI人工贡献识别/教师贡献复核报告_lab0.md"
+    },
+    {
+      "analysis_status": "complete",
+      "assessment": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/李兆卓/AI人工贡献识别/assessment_lab0.json",
+      "coverage": {
+        "materials": [
+          {
+            "kind": "timeline",
+            "line_count": 2257,
+            "reason": null,
+            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "required": true,
+            "sha256": "d543f225704befec32b6c0cd7b790daaec32e4655c57703292ef33fd1752d1b1",
+            "source_id": "source:lab0:timeline",
+            "status": "available"
+          },
+          {
+            "kind": "terminal_qa",
+            "line_count": 2557,
+            "reason": null,
+            "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+            "required": true,
+            "sha256": "63c56d54e488fef99986e32e6b6abe4170b71a939c93bb4b398e17c46095abd7",
+            "source_id": "source:lab0:terminal_qa",
+            "status": "available"
+          },
+          {
+            "kind": "command_statistics",
+            "line_count": 25,
+            "reason": null,
+            "relative_path": "终端命令统计/command_statistics_lab0.md",
+            "required": true,
+            "sha256": "3e53ce7ed587532e1abc548a87d408de32fbc5b63a8c76a4c44e2b796592cef1",
+            "source_id": "source:lab0:command_statistics",
+            "status": "available"
+          },
+          {
+            "kind": "diff_report",
+            "line_count": null,
+            "reason": "lab0 的贡献识别仅评估实验过程材料，不使用代码差异报告",
+            "relative_path": null,
+            "required": false,
+            "sha256": null,
+            "source_id": "source:lab0:diff_report",
+            "status": "not_applicable"
+          }
+        ],
+        "missing_or_limited": [],
+        "status": "complete"
+      },
+      "full_report": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/李兆卓/AI人工贡献识别/完整贡献识别报告_lab0.md",
+      "lab": "lab0",
+      "lab_conclusion": {
+        "alternative_explanation": "学生可能在未记录的时间段内查阅了资料或获得过他人提示，但现有记录未体现 AI 介入的明确痕迹。",
+        "confidence": "strong",
+        "evidence_refs": [
+          {
+            "excerpt": "make run\n\n[终端输出]\nmake: 警告：文件“target/kernel”的修改时间在未来 27355 秒后\nqemu-system-riscv64: -drive file=fs.img,if=none,format=raw,id=x0: Could not open 'fs.img': No such file or directory\nmake: *** [Makefile:152：run] 错误 1\n```\n\n### 录像时间：2026-09-03T17:32:38.616+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nmake ru\n\n[终端输出]\nmake: *** 没有规则可制作目标“ru”。 停止。\n```\n\n### 录像时间：2026-09-03T17:32:41.880+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nmake run\n\n[终端输出]\nmake: 警告：文件“target/kernel”的修改时间在未来 27304 秒后\nmaking fs image...\n输入了 512+0 块记录\n输出了 512+0 块记录",
+            "excerpt_redacted": true,
+            "line_end": 50,
+            "line_start": 16,
+            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "sha256": "d543f225704befec32b6c0cd7b790daaec32e4655c57703292ef33fd1752d1b1",
+            "source_id": "source:lab0:timeline",
+            "source_kind": "timeline"
+          }
+        ],
+        "label": "human_dominant",
+        "limitations": [
+          "材料仅包含时间线，未包括终端问答或命令统计的细节，可能遗漏辅助信息。",
+          "无法确定学生是否在课前或课后使用了外部资源（包括 AI）来准备命令。"
+        ],
+        "summary": "Lab0 的过程材料显示学生亲自执行了编译和运行命令，经历了文件缺失错误、输入错误以及后续成功的 fs 镜像生成，整体表现为人类主导的实验操作。"
+      },
+      "message": "输入未变，未调用 NIM。",
+      "review": {
+        "disagreement_unit_ids": [],
+        "downgraded_unit_ids": [],
+        "overall_decision": "agree",
+        "reviewed_unit_ids": [
+          "unit-lab0-1"
+        ],
+        "status": "agreed",
+        "summary": "The primary assessment labeling the lab0 process as human-dominant is supported by the observed command sequence and error-handling in the timeline, which reflects human trial-and-error operation without evidence of AI involvement.",
+        "unit_reviews": [
+          {
+            "decision": "agree",
+            "evidence_refs": [
+              {
+                "excerpt": "make run\n\n[终端输出]\nmake: 警告：文件“target/kernel”的修改时间在未来 27355 秒后\nqemu-system-riscv64: -drive file=fs.img,if=none,format=raw,id=x0: Could not open 'fs.img': No such file or directory\nmake: *** [Makefile:152：run] 错误 1",
+                "excerpt_redacted": true,
+                "line_end": 21,
+                "line_start": 16,
+                "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+                "sha256": "d543f225704befec32b6c0cd7b790daaec32e4655c57703292ef33fd1752d1b1",
+                "source_id": "source:lab0:timeline",
+                "source_kind": "timeline"
+              },
+              {
+                "excerpt": "make ru\n\n[终端输出]\nmake: *** 没有规则可制作目标“ru”。 停止。",
+                "excerpt_redacted": true,
+                "line_end": 34,
+                "line_start": 31,
+                "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+                "sha256": "d543f225704befec32b6c0cd7b790daaec32e4655c57703292ef33fd1752d1b1",
+                "source_id": "source:lab0:timeline",
+                "source_kind": "timeline"
+              },
+              {
+                "excerpt": "make run\n\n[终端输出]\nmake: 警告：文件“target/kernel”的修改时间在未来 27304 秒后\nmaking fs image...\n输入了 512+0 块记录\n输出了 512+0 块记录\n268435456 字节 (268 MB, 256 MiB) 已复制，0.361707 s，742 MB/s\nmkfs.fat 4.2 (2021-01-31)\n[sudo] ailab-os 的密码：\n对不起，请重试。\n[sudo] ailab-os 的密码：",
+                "excerpt_redacted": true,
+                "line_end": 55,
+                "line_start": 44,
+                "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+                "sha256": "d543f225704befec32b6c0cd7b790daaec32e4655c57703292ef33fd1752d1b1",
+                "source_id": "source:lab0:timeline",
+                "source_kind": "timeline"
+              }
+            ],
+            "reason": "The timeline shows a human-like trial-and-error sequence: initial make run fails due to missing fs.img, a typo 'make ru' yields no rule error, then a corrected make run proceeds to create the fs image and boot. This pattern of mistake and correction is consistent with human operation and contains no indications of AI assistance.",
+            "unit_id": "unit-lab0-1"
+          }
+        ]
+      },
+      "status": "cached",
+      "student_directory": "李兆卓",
+      "teacher_report": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/李兆卓/AI人工贡献识别/教师贡献复核报告_lab0.md"
+    },
+    {
+      "analysis_status": "complete",
+      "assessment": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/杨涵清/AI人工贡献识别/assessment_lab0.json",
+      "coverage": {
+        "materials": [
+          {
+            "kind": "timeline",
+            "line_count": 3878,
+            "reason": null,
+            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "required": true,
+            "sha256": "7b65d8b35aca2a4e768b1874734a3b3ca43eb38a90f6ca90dd38b3b79c4963b0",
+            "source_id": "source:lab0:timeline",
+            "status": "available"
+          },
+          {
+            "kind": "terminal_qa",
+            "line_count": 3680,
+            "reason": null,
+            "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+            "required": true,
+            "sha256": "57d7571f01ba508f51f49311841c1aad3f3e5c459014a4909c8c54054723e9b2",
+            "source_id": "source:lab0:terminal_qa",
+            "status": "available"
+          },
+          {
+            "kind": "command_statistics",
+            "line_count": 33,
+            "reason": null,
+            "relative_path": "终端命令统计/command_statistics_lab0.md",
+            "required": true,
+            "sha256": "c81ed1b2e1d908a3cdc50b1b35348877c94c737816bc5cee18d4fc323e3b2ff1",
+            "source_id": "source:lab0:command_statistics",
+            "status": "available"
+          },
+          {
+            "kind": "diff_report",
+            "line_count": null,
+            "reason": "lab0 的贡献识别仅评估实验过程材料，不使用代码差异报告",
+            "relative_path": null,
+            "required": false,
+            "sha256": null,
+            "source_id": "source:lab0:diff_report",
+            "status": "not_applicable"
+          }
+        ],
+        "missing_or_limited": [],
+        "status": "complete"
+      },
+      "full_report": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/杨涵清/AI人工贡献识别/完整贡献识别报告_lab0.md",
+      "lab": "lab0",
+      "lab_conclusion": {
+        "alternative_explanation": "It remains possible that the student used AI tools for command suggestions or troubleshooting outside the recorded sessions, but the logs do not contain any explicit AI-generated content.",
+        "confidence": "strong",
+        "evidence_refs": [
+          {
+            "excerpt": "make run\n\n[终端输出]\nmake: 警告：文件“target/kernel”的修改时间在未来 27355 秒后\nqemu-system-riscv64: -drive file=fs.img,if=none,format=raw,id=x0: Could not open 'fs.img': No such file or directory\nmake: *** [Makefile:152：run] 错误 1\n```\n\n### 录像时间：2026-09-03T17:32:38.616+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nmake ru\n\n[终端输出]\nmake: *** 没有规则可制作目标“ru”。 停止。\n```\n\n### 录像时间：2026-09-03T17:32:41.880+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nmake run\n\n[终端输出]\nmake: 警告：文件“target/kernel”的修改时间在未来 27304 秒后\nmaking fs image...\n输入了 512+0 块记录\n输出了 512+0 块记录\n268435456 字节 (268 MB, 256 MiB) 已复制，0.361707 s，742 MB/s\nmkfs.fat 4.2…",
+            "excerpt_redacted": true,
+            "line_end": 200,
+            "line_start": 16,
+            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "sha256": "7b65d8b35aca2a4e768b1874734a3b3ca43eb38a90f6ca90dd38b3b79c4963b0",
+            "source_id": "source:lab0:timeline",
+            "source_kind": "timeline"
+          },
+          {
+            "excerpt": "**Q（命令）：**\n\n```text\nmake run\n```\n\n**A（输出）：**\n\n```text\nmake: 警告：文件“target/kernel”的修改时间在未来 27355 秒后\nqemu-system-riscv64: -drive file=fs.img,if=none,format=raw,id=x0: Could not open 'fs.img': No such file or directory\nmake: *** [Makefile:152：run] 错误 1\n```\n\n### 问答 2 · 录像 20260903T173143-4453\n\n- 开始时间：2026-09-03 17:31:44+08:00\n- 相对时间：7.4s\n- 命令执行目录：\\~/桌面/xv6-ai-labs-km/lab0\n\n**Q（命令）：**\n\n```text\nmake ru\n```\n\n**A（输出）：**\n\n```text\nmake: *** 没有规则可制作目标“ru”。 停止。\n```\n\n### 问答 3 · 录像 20260903T173143-4453\n\n- 开始时间：2026-09-03 17:31:44+08:00\n- 相对时间：55.1s\n- 命令执行目录：\\~/桌面/xv6-ai-labs-km/lab0\n\n**Q（命令）：**\n\n```text\nmak…",
+            "excerpt_redacted": true,
+            "line_end": 200,
+            "line_start": 28,
+            "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+            "sha256": "57d7571f01ba508f51f49311841c1aad3f3e5c459014a4909c8c54054723e9b2",
+            "source_id": "source:lab0:terminal_qa",
+            "source_kind": "terminal_qa"
+          }
+        ],
+        "label": "human_dominant",
+        "limitations": [
+          "Only terminal interactions are recorded; any off‑screen AI usage cannot be detected.",
+          "The logs do not capture the student's decision‑making process, so indirect AI influence cannot be ruled out.",
+          "Repeated command attempts could reflect trial‑and‑error learning or AI‑guided hints; we cannot distinguish between them."
+        ],
+        "summary": "The lab0 process timeline and terminal Q&A demonstrate the student independently performing command‑line operations to set up, run, debug, and clean the lab environment. No observable AI contribution is present."
+      },
+      "message": "输入未变，仅重渲染双报告。",
+      "review": {
+        "disagreement_unit_ids": [],
+        "downgraded_unit_ids": [],
+        "overall_decision": "agree",
+        "reviewed_unit_ids": [
+          "proc0"
+        ],
+        "status": "agreed",
+        "summary": "The lab0 process timeline demonstrates the student independently performing command-line operations to set up, run, debug, and clean the environment. No observable AI contribution is present, supporting the human_dominant label.",
+        "unit_reviews": [
+          {
+            "decision": "agree",
+            "evidence_refs": [
+              {
+                "excerpt": "make run\n\n[终端输出]\nmake: 警告：文件“target/kernel”的修改时间在未来 27355 秒后\nqemu-system-riscv64: -drive file=fs.img,if=none,format=raw,id=x0: Could not open 'fs.img': No such file or directory\nmake: *** [Makefile:152：run] 错误 1\n```\n\n### 录像时间：2026-09-03T17:32:38.616+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nmake ru\n\n[终端输出]\nmake: *** 没有规则可制作目标“ru”。 停止。\n```\n\n### 录像时间：2026-09-03T17:32:41.880+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nmake run\n\n[终端输出]\nmake: 警告：文件“target/kernel”的修改时间在未来 27304 秒后\nmaking fs image...\n输入了 512+0 块记录\n输出了 512+0 块记录\n268435456 字节 (268 MB, 256 MiB) 已复制，0.361707 s，742 MB/s\nmkfs.fat 4.2…",
+                "excerpt_redacted": true,
+                "line_end": 200,
+                "line_start": 16,
+                "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+                "sha256": "7b65d8b35aca2a4e768b1874734a3b3ca43eb38a90f6ca90dd38b3b79c4963b0",
+                "source_id": "source:lab0:timeline",
+                "source_kind": "timeline"
+              }
+            ],
+            "reason": "The provided timeline shows only shell commands typed and executed by the student, with outputs consistent with manual interaction. No AI-generated content, tool suggestions, or indications of external AI assistance are present in the logs.",
+            "unit_id": "proc0"
+          }
+        ]
+      },
+      "status": "rerendered",
+      "student_directory": "杨涵清",
+      "teacher_report": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/杨涵清/AI人工贡献识别/教师贡献复核报告_lab0.md"
+    },
+    {
+      "analysis_status": "complete",
+      "assessment": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/高龙徽/AI人工贡献识别/assessment_lab0.json",
+      "coverage": {
+        "materials": [
+          {
+            "kind": "timeline",
+            "line_count": 9,
+            "reason": null,
+            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "required": true,
+            "sha256": "32b711a9d30c44b823ce1ef5274a21b0750e54400bd32f6652aca6a930d17e46",
+            "source_id": "source:lab0:timeline",
+            "status": "available"
+          },
+          {
+            "kind": "terminal_qa",
+            "line_count": 25,
+            "reason": null,
+            "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+            "required": true,
+            "sha256": "fa6dbb5391a7cfd239bc76c767ddae514d775647d944068b67541d438c0e698e",
+            "source_id": "source:lab0:terminal_qa",
+            "status": "available"
+          },
+          {
+            "kind": "command_statistics",
+            "line_count": 16,
+            "reason": null,
+            "relative_path": "终端命令统计/command_statistics_lab0.md",
+            "required": true,
+            "sha256": "c578962af76d12b58c5edae161ddc456f76c1a0528ce2af1fb8b04c5b2e8af24",
+            "source_id": "source:lab0:command_statistics",
+            "status": "available"
+          },
+          {
+            "kind": "diff_report",
+            "line_count": null,
+            "reason": "lab0 的贡献识别仅评估实验过程材料，不使用代码差异报告",
+            "relative_path": null,
+            "required": false,
+            "sha256": null,
+            "source_id": "source:lab0:diff_report",
+            "status": "not_applicable"
+          }
+        ],
+        "missing_or_limited": [],
+        "status": "complete"
+      },
+      "full_report": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/高龙徽/AI人工贡献识别/完整贡献识别报告_lab0.md",
+      "lab": "lab0",
+      "lab_conclusion": {
+        "alternative_explanation": "The student may have completed lab0 through means not captured in the provided logs (e.g., offline work, GUI tools, or undocumented sessions).",
+        "confidence": "weak",
+        "evidence_refs": [
+          {
+            "excerpt": "# 简洁实验过程时间线\n\n- 学号：2406080106\n- 姓名：高龙徽\n- 实验分类：lab0\n\n## 过程\n\n暂无可展示内容。",
+            "excerpt_redacted": true,
+            "line_end": 9,
+            "line_start": 1,
+            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "sha256": "32b711a9d30c44b823ce1ef5274a21b0750e54400bd32f6652aca6a930d17e46",
+            "source_id": "source:lab0:timeline",
+            "source_kind": "timeline"
+          },
+          {
+            "excerpt": "# 终端会话问答对与命令频次报告\n\n- 学号：2406080106\n- 姓名：高龙徽\n- 数据采集时间：2026-09-09 12:15\n- 原始时间标识：20260909-1215\n- 原始数据目录：2406080106-高龙徽-20260909-1215\n- 终端录像数量：2\n\n- 实验分类：lab0\n\n- Shell 命令执行总次数：0\n- 不同 Shell 命令数量：0\n- 包含 Shell 命令的终端会话数：0\n- 无 Shell 命令的终端会话数：2\n- Shell 提取失败会话数：0\n\nQ 为 shell 提示符下输入的完整命令，A 为命令输出。每条命令输出最多保留 400 行。\n\n## 一、问答对集合\n\n## 二、终端命令频次\n\n| command | count |\n| --- | ---: |",
+            "excerpt_redacted": true,
+            "line_end": 25,
+            "line_start": 1,
+            "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+            "sha256": "fa6dbb5391a7cfd239bc76c767ddae514d775647d944068b67541d438c0e698e",
+            "source_id": "source:lab0:terminal_qa",
+            "source_kind": "terminal_qa"
+          },
+          {
+            "excerpt": "# Terminal Command Statistics\n\n- 学号：2406080106\n- 姓名：高龙徽\n- 数据采集时间：2026-09-09 12:15\n- 原始时间标识：20260909-1215\n- 原始数据目录：2406080106-高龙徽-20260909-1215\n- 终端录像数量：2\n\n- 实验分类：lab0\n\n- Shell 命令执行总次数：0\n- 不同 Shell 命令数量：0\n\n| command | count |\n| --- | ---: |",
+            "excerpt_redacted": true,
+            "line_end": 16,
+            "line_start": 1,
+            "relative_path": "终端命令统计/command_statistics_lab0.md",
+            "sha256": "c578962af76d12b58c5edae161ddc456f76c1a0528ce2af1fb8b04c5b2e8af24",
+            "source_id": "source:lab0:command_statistics",
+            "source_kind": "command_statistics"
+          }
+        ],
+        "label": "indeterminate",
+        "limitations": [
+          "Materials lack any record of commands, edits, or process steps.",
+          "Absence of evidence is not evidence of absence; inactivity cannot be confirmed."
+        ],
+        "summary": "All available process materials for lab0 show no observable student activity (no timeline entries, zero terminal commands, and zero command statistics). Consequently, no determination can be made about AI or human contribution."
+      },
+      "message": "输入未变，未调用 NIM。",
+      "review": {
+        "disagreement_unit_ids": [],
+        "downgraded_unit_ids": [],
+        "overall_decision": "agree",
+        "reviewed_unit_ids": [
+          "unit-command-stats",
+          "unit-terminal-qa",
+          "unit-timeline"
+        ],
+        "status": "agreed",
+        "summary": "All available materials for lab0 show no observable student activity (no timeline entries, zero terminal commands, and zero command statistics). Consequently, no determination can be made about AI or human contribution, making the indeterminate label correct for each unit.",
+        "unit_reviews": [
+          {
+            "decision": "agree",
+            "evidence_refs": [
+              {
+                "excerpt": "# 简洁实验过程时间线\n\n- 学号：2406080106\n- 姓名：高龙徽\n- 实验分类：lab0\n\n## 过程\n\n暂无可展示内容。",
+                "excerpt_redacted": true,
+                "line_end": 9,
+                "line_start": 1,
+                "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+                "sha256": "32b711a9d30c44b823ce1ef5274a21b0750e54400bd32f6652aca6a930d17e46",
+                "source_id": "source:lab0:timeline",
+                "source_kind": "timeline"
+              }
+            ],
+            "reason": "The timeline contains no recorded process steps or content, providing no evidence of AI or human activity; thus the indeterminate label is appropriate.",
+            "unit_id": "unit-timeline"
+          },
+          {
+            "decision": "agree",
+            "evidence_refs": [
+              {
+                "excerpt": "# 终端会话问答对与命令频次报告\n\n- 学号：2406080106\n- 姓名：高龙徽\n- 数据采集时间：2026-09-09 12:15\n- 原始时间标识：20260909-1215\n- 原始数据目录：2406080106-高龙徽-20260909-1215\n- 终端录像数量：2\n\n- 实验分类：lab0\n\n- Shell 命令执行总次数：0\n- 不同 Shell 命令数量：0\n- 包含 Shell 命令的终端会话数：0\n- 无 Shell 命令的终端会话数：2\n- Shell 提取失败会话数：0\n\nQ 为 shell 提示符下输入的完整命令，A 为命令输出。每条命令输出最多保留 400 行。\n\n## 一、问答对集合\n\n## 二、终端命令频次\n\n| command | count |\n| --- | ---: |",
+                "excerpt_redacted": true,
+                "line_end": 25,
+                "line_start": 1,
+                "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+                "sha256": "fa6dbb5391a7cfd239bc76c767ddae514d775647d944068b67541d438c0e698e",
+                "source_id": "source:lab0:terminal_qa",
+                "source_kind": "terminal_qa"
+              }
+            ],
+            "reason": "Terminal QA records zero shell commands executed across two terminal sessions, showing no observable activity; thus the indeterminate label is appropriate.",
+            "unit_id": "unit-terminal-qa"
+          },
+          {
+            "decision": "agree",
+            "evidence_refs": [
+              {
+                "excerpt": "# Terminal Command Statistics\n\n- 学号：2406080106\n- 姓名：高龙徽\n- 数据采集时间：2026-09-09 12:15\n- 原始时间标识：20260909-1215\n- 原始数据目录：2406080106-高龙徽-20260909-1215\n- 终端录像数量：2\n\n- 实验分类：lab0\n\n- Shell 命令执行总次数：0\n- 不同 Shell 命令数量：0\n\n| command | count |\n| --- | ---: |",
+                "excerpt_redacted": true,
+                "line_end": 16,
+                "line_start": 1,
+                "relative_path": "终端命令统计/command_statistics_lab0.md",
+                "sha256": "c578962af76d12b58c5edae161ddc456f76c1a0528ce2af1fb8b04c5b2e8af24",
+                "source_id": "source:lab0:command_statistics",
+                "source_kind": "command_statistics"
+              }
+            ],
+            "reason": "Command statistics indicate zero total and distinct shell commands executed, providing no evidence of activity; thus the indeterminate label is appropriate.",
+            "unit_id": "unit-command-stats"
+          }
+        ]
+      },
+      "status": "cached",
+      "student_directory": "高龙徽",
+      "teacher_report": "/Users/neoa/OS-Lab-Score/操作系统实验数据清洗/操作系统实验数据记录-已清洗/高龙徽/AI人工贡献识别/教师贡献复核报告_lab0.md"
+    }
+  ],
+  "resume": true,
+  "retry_failed": false,
+  "task_count": 6
+}

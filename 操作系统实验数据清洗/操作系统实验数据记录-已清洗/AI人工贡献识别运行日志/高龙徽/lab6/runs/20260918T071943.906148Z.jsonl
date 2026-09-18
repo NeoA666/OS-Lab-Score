@@ -1,0 +1,1 @@
+{"event": "analysis_skipped_insufficient_material", "input_fingerprint": "sha256:49d86255f8b533b66c00138e484849f2582e87d7c41901cd1a4e16137ed5250f", "reason_code": "missing_ai_reply_or_diff_hunk"}

@@ -1,0 +1,1 @@
+{"error_code": "AssessmentValidationError", "event": "analysis_failed", "input_fingerprint": "sha256:7f95881c6d142a73c05a5d82d165769c6ea0eeec30b5d830095fb54cbde5ec5c", "retryable": false, "stage": "semantic_analysis_or_review"}

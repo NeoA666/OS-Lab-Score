@@ -1,0 +1,781 @@
+{
+  "data_limitations": [
+    "所用证据均为 E2 级别（清洗后的时间线），仅能确认文本可见时间，不能推定键入、执行或模型生成的因果关系。",
+    "时间线显示的时间是文本出现时间，不等同于命令开始或完成时间，无法证明命令是由学生亲自键入。",
+    "未获取原始终端归档，无法核验命令的实际执行细节或工作目录变化。"
+  ],
+  "findings": [
+    {
+      "alternative_explanations": [
+        "学生可能使用了预先构建好的 fs.img 或内核二进制，但观察到学生先执行了 make fs 生成镜像，随后启动使用了刚刚生成的镜像，说明构建过程是学生亲自完成的。",
+        "输出中的 OpenSBI 和内核日志同样可能来自课程提供的预构建镜像，但 make fs 的执行以及随后成功的 make run 表明学生使用了自行生成的文件系统。"
+      ],
+      "disposition": "N0",
+      "evidence": [
+        {
+          "event_id": "8bae461d8d9d:20260910T222131-4401:shell:2",
+          "evidence_level": "E2",
+          "kind": "event",
+          "provenance": {
+            "note": "原始路径仅作为定位信息出现在清洗材料中；当前 Agent 未获原始归档访问权。",
+            "observation": {
+              "body_byte_range": [
+                381,
+                382
+              ],
+              "decompressed_byte_range": [
+                506,
+                507
+              ],
+              "elapsed_seconds": 855.87766,
+              "timing_line": 17
+            },
+            "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.out.gz",
+            "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.tim.gz",
+            "time_source": "script_header_plus_timing"
+          },
+          "quote": "make clean"
+        },
+        {
+          "event_id": "8bae461d8d9d:20260910T222131-4401:shell:3",
+          "evidence_level": "E2",
+          "kind": "event",
+          "provenance": {
+            "note": "原始路径仅作为定位信息出现在清洗材料中；当前 Agent 未获原始归档访问权。",
+            "observation": {
+              "body_byte_range": [
+                1023,
+                1024
+              ],
+              "decompressed_byte_range": [
+                1148,
+                1149
+              ],
+              "elapsed_seconds": 859.70328,
+              "timing_line": 28
+            },
+            "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.out.gz",
+            "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.tim.gz",
+            "time_source": "script_header_plus_timing"
+          },
+          "quote": "make run"
+        },
+        {
+          "event_id": "8bae461d8d9d:20260910T222131-4401:shell:4",
+          "evidence_level": "E2",
+          "kind": "event",
+          "provenance": {
+            "note": "原始路径仅作为定位信息出现在清洗材料中；当前 Agent 未获原始归档访问权。",
+            "observation": {
+              "body_byte_range": [
+                22360,
+                22361
+              ],
+              "decompressed_byte_range": [
+                22485,
+                22486
+              ],
+              "elapsed_seconds": 878.2217330000007,
+              "timing_line": 164
+            },
+            "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.out.gz",
+            "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.tim.gz",
+            "time_source": "script_header_plus_timing"
+          },
+          "quote": "make fs"
+        },
+        {
+          "event_id": "8bae461d8d9d:20260910T222131-4401:shell:5",
+          "evidence_level": "E2",
+          "kind": "event",
+          "provenance": {
+            "note": "原始路径仅作为定位信息出现在清洗材料中；当前 Agent 未获原始归档访问权。",
+            "observation": {
+              "body_byte_range": [
+                22763,
+                22764
+              ],
+              "decompressed_byte_range": [
+                22888,
+                22889
+              ],
+              "elapsed_seconds": 894.2566990000007,
+              "timing_line": 180
+            },
+            "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.out.gz",
+            "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.tim.gz",
+            "time_source": "script_header_plus_timing"
+          },
+          "quote": "make run"
+        }
+      ],
+      "evidence_refs": [],
+      "id": "f1",
+      "limitations": [
+        "无法从时间线中确定命令的确切键入时间或执行时长。",
+        "未观察到学生实际键入过程，仅见命令回显和输出。"
+      ],
+      "observations": [
+        "学生执行了 make clean，清理了之前的编译产物。",
+        "学生执行了 make run（首次），尝试启动 QEMU 但因缺少 fs.img 而失败。",
+        "学生执行了 make fs，成功生成了 256 MiB 的 FAT32 镜像 fs.img。",
+        "学生再次执行了 make run，启动成功，输出显示 OpenSBI v1.3、内核初始化序列（hart 0 init done、init: starting sh）以及 xv6 shell 提示符 -> / $。",
+        "在 shell 中学生能够运行 ls 列出文件并 cat README 查看文件内容，输出与预期一致。"
+      ],
+      "rule_refs": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "teacher_verification": [
+        "请学生在当前实验目录重新演示一次 make clean、make fs、make run 的完整流程，并说明 TOOLPREFIX 的设置及其与交叉编译工具链的对应关系。",
+        "让学生解释 make fs 输出中的参数（如块大小、复制速度）以及 QEMU 启动命令中的关键参数（-drive、-device virtio-blk-device）。"
+      ]
+    }
+  ],
+  "integrity_assessment": {
+    "alternative_explanations": [
+      "学生可能使用了预先构建好的 fs.img 或内核二进制，但观察到学生先执行了 make fs 生成镜像，随后启动使用了刚刚生成的镜像，说明构建过程是学生亲自完成的。",
+      "输出中的 OpenSBI 和内核日志同样可能来自课程提供的预构建镜像，但 make fs 的执行以及随后成功的 make run 表明学生使用了自行生成的文件系统。"
+    ],
+    "contribution_access": {
+      "analysis_status": "complete",
+      "contribution_refs_valid": true,
+      "contribution_upgrade": true,
+      "invalid_unit_count": 0,
+      "issues": [],
+      "lab_conclusion": {
+        "alternative_explanation": "If the student had relied mainly on prior knowledge and used the AI only sparingly, the label could shift to human‑dominant.",
+        "confidence": "moderate",
+        "evidence_refs": [
+          {
+            "evidence_level": "E2",
+            "excerpt": "# 简洁实验过程时间线\n\n- 学号：2406080205\n- 姓名：周卓江\n- 实验分类：lab0\n\n## 过程\n\n### 录像时间：2026-09-10T15:52:49.913+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nclaude\n```\n\n### 录像时间：2026-09-10T15:54:06.929+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nclaude\n```\n\n### 录像时间：2026-09-10T15:54:10.348+08:00（北京时间）\n\n- 录像类型：用户问题\n\n- 内容：\n\n```text\nnihao\n```\n\n### 录像时间：2026-09-10T15:54:11.678+08:00（北京时间）\n\n- 录像类型：Claude 回复\n\n- 内容：\n\n```text\n你好！\n\nlab0 是搭环境那一章，目标是把 xv6-k210 在 qemu 上跑通，看到 shell 提示符。\n\n在开始之前，我想先确认一件事：\n\n你现在用的环境是哪种？ 是课程给的镜像（.ova 导入 VMware、希冀云端、或者硬盘拷贝过来的），还是你自己机器上全新装的系统？\n\n这个决定了后面是「直接验证」还是「先装工具链」，差别挺大。\n```\n\n### 录像时间：2026-09-10…",
+            "kind": "v3",
+            "line_end": 200,
+            "line_start": 1,
+            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
+            "source_id": "source:lab0:timeline",
+            "valid": true
+          },
+          {
+            "evidence_level": "E2",
+            "excerpt": "# 终端会话问答对与命令频次报告\n\n- 学号：2406080205\n- 姓名：周卓江\n- 数据采集时间：2026-09-10 23:22\n- 原始时间标识：20260910-2322\n- 原始数据目录：2406080205-周卓江-20260910-2322\n- 终端录像数量：5\n\n- 实验分类：lab0\n\n- Shell 命令执行总次数：9\n- 不同 Shell 命令数量：4\n- 包含 Shell 命令的终端会话数：5\n- 无 Shell 命令的终端会话数：0\n- Shell 提取失败会话数：0\n\nQ 为 shell 提示符下输入的完整命令，A 为命令输出。每条命令输出最多保留 400 行。\n\n## 一、问答对集合\n\n### 问答 2 · 录像 20260910T155240-13114\n\n- 开始时间：2026-09-10 15:52:40+08:00\n- 相对时间：7.4s\n- 命令执行目录：\\~/桌面/xv6-ai-labs-km/lab0\n\n**Q（命令）：**\n\n```text\nclaude\n```\n\n**A（输出）：**\n\n```text\n ▐▛███▜▌   Claude Code v2.1.221\n▝▜█████▛▘  deepseek-v4-flash · API Usage Billing\n  ▘▘ ▝▝    ~/桌面/xv6-ai-labs-km/lab…",
+            "kind": "v3",
+            "line_end": 200,
+            "line_start": 1,
+            "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+            "sha256": "d4f9823175ea9ecc5e7d4a6bad8a826bebd76a38ca18fb0e3d4f4614ac469c39",
+            "source_id": "source:lab0:terminal_qa",
+            "valid": true
+          },
+          {
+            "evidence_level": "E2",
+            "excerpt": "# Terminal Command Statistics\n\n- 学号：2406080205\n- 姓名：周卓江\n- 数据采集时间：2026-09-10 23:22\n- 原始时间标识：20260910-2322\n- 原始数据目录：2406080205-周卓江-20260910-2322\n- 终端录像数量：5\n\n- 实验分类：lab0\n\n- Shell 命令执行总次数：9\n- 不同 Shell 命令数量：4\n\n| command | count |\n| --- | ---: |\n| claude | 5 |\n| make run | 2 |\n| make clean | 1 |\n| make fs | 1 |",
+            "kind": "v3",
+            "line_end": 20,
+            "line_start": 1,
+            "relative_path": "终端命令统计/command_statistics_lab0.md",
+            "sha256": "a36291031f40dde7d9b523b3b0b570c8d7be2c279242d7163c04bab33a50af1a",
+            "source_id": "source:lab0:command_statistics",
+            "valid": true
+          }
+        ],
+        "label": "mixed",
+        "limitations": [
+          "Cannot assess depth of learning or long‑term retention from interaction logs alone.",
+          "No visibility into any self‑studied documentation or external tutorials.",
+          "The analysis is limited to the supplied slices; missing segments could alter the balance."
+        ],
+        "summary": "Lab0 involved a blend of AI‑provided explanations and student‑driven command execution and prompting, resulting in a mixed contribution profile."
+      },
+      "lab_conclusion_valid": true,
+      "overall_decision": "agree",
+      "review_status": "agreed",
+      "schema_compatibility": "compatible",
+      "source_manifest": [
+        {
+          "availability": "available",
+          "issues": [],
+          "kind": "timeline",
+          "line_count": 713,
+          "reason": null,
+          "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+          "required": true,
+          "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
+          "source_id": "source:lab0:timeline",
+          "valid": true
+        },
+        {
+          "availability": "available",
+          "issues": [],
+          "kind": "terminal_qa",
+          "line_count": 774,
+          "reason": null,
+          "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+          "required": true,
+          "sha256": "d4f9823175ea9ecc5e7d4a6bad8a826bebd76a38ca18fb0e3d4f4614ac469c39",
+          "source_id": "source:lab0:terminal_qa",
+          "valid": true
+        },
+        {
+          "availability": "available",
+          "issues": [],
+          "kind": "command_statistics",
+          "line_count": 20,
+          "reason": null,
+          "relative_path": "终端命令统计/command_statistics_lab0.md",
+          "required": true,
+          "sha256": "a36291031f40dde7d9b523b3b0b570c8d7be2c279242d7163c04bab33a50af1a",
+          "source_id": "source:lab0:command_statistics",
+          "valid": true
+        },
+        {
+          "availability": "not_applicable",
+          "issues": [],
+          "kind": "diff_report",
+          "line_count": null,
+          "reason": "lab0 的贡献识别仅评估实验过程材料，不使用代码差异报告",
+          "relative_path": null,
+          "required": false,
+          "sha256": null,
+          "source_id": "source:lab0:diff_report",
+          "valid": false
+        }
+      ],
+      "units": [
+        {
+          "confidence": "moderate",
+          "evidence_refs": [
+            {
+              "evidence_level": "E2",
+              "excerpt": "# 简洁实验过程时间线\n\n- 学号：2406080205\n- 姓名：周卓江\n- 实验分类：lab0\n\n## 过程\n\n### 录像时间：2026-09-10T15:52:49.913+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nclaude\n```\n\n### 录像时间：2026-09-10T15:54:06.929+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nclaude\n```\n\n### 录像时间：2026-09-10T15:54:10.348+08:00（北京时间）\n\n- 录像类型：用户问题\n\n- 内容：\n\n```text\nnihao\n```\n\n### 录像时间：2026-09-10T15:54:11.678+08:00（北京时间）\n\n- 录像类型：Claude 回复\n\n- 内容：\n\n```text\n你好！\n\nlab0 是搭环境那一章，目标是把 xv6-k210 在 qemu 上跑通，看到 shell 提示符。\n\n在开始之前，我想先确认一件事：\n\n你现在用的环境是哪种？ 是课程给的镜像（.ova 导入 VMware、希冀云端、或者硬盘拷贝过来的），还是你自己机器上全新装的系统？\n\n这个决定了后面是「直接验证」还是「先装工具链」，差别挺大。\n```\n\n### 录像时间：2026-09-10…",
+              "kind": "v3",
+              "line_end": 200,
+              "line_start": 1,
+              "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+              "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
+              "source_id": "source:lab0:timeline",
+              "valid": true
+            },
+            {
+              "evidence_level": "E2",
+              "excerpt": "# 终端会话问答对与命令频次报告\n\n- 学号：2406080205\n- 姓名：周卓江\n- 数据采集时间：2026-09-10 23:22\n- 原始时间标识：20260910-2322\n- 原始数据目录：2406080205-周卓江-20260910-2322\n- 终端录像数量：5\n\n- 实验分类：lab0\n\n- Shell 命令执行总次数：9\n- 不同 Shell 命令数量：4\n- 包含 Shell 命令的终端会话数：5\n- 无 Shell 命令的终端会话数：0\n- Shell 提取失败会话数：0\n\nQ 为 shell 提示符下输入的完整命令，A 为命令输出。每条命令输出最多保留 400 行。\n\n## 一、问答对集合\n\n### 问答 2 · 录像 20260910T155240-13114\n\n- 开始时间：2026-09-10 15:52:40+08:00\n- 相对时间：7.4s\n- 命令执行目录：\\~/桌面/xv6-ai-labs-km/lab0\n\n**Q（命令）：**\n\n```text\nclaude\n```\n\n**A（输出）：**\n\n```text\n ▐▛███▜▌   Claude Code v2.1.221\n▝▜█████▛▘  deepseek-v4-flash · API Usage Billing\n  ▘▘ ▝▝    ~/桌面/xv6-ai-labs-km/lab…",
+              "kind": "v3",
+              "line_end": 200,
+              "line_start": 1,
+              "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+              "sha256": "d4f9823175ea9ecc5e7d4a6bad8a826bebd76a38ca18fb0e3d4f4614ac469c39",
+              "source_id": "source:lab0:terminal_qa",
+              "valid": true
+            },
+            {
+              "evidence_level": "E2",
+              "excerpt": "# Terminal Command Statistics\n\n- 学号：2406080205\n- 姓名：周卓江\n- 数据采集时间：2026-09-10 23:22\n- 原始时间标识：20260910-2322\n- 原始数据目录：2406080205-周卓江-20260910-2322\n- 终端录像数量：5\n\n- 实验分类：lab0\n\n- Shell 命令执行总次数：9\n- 不同 Shell 命令数量：4\n\n| command | count |\n| --- | ---: |\n| claude | 5 |\n| make run | 2 |\n| make clean | 1 |\n| make fs | 1 |",
+              "kind": "v3",
+              "line_end": 20,
+              "line_start": 1,
+              "relative_path": "终端命令统计/command_statistics_lab0.md",
+              "sha256": "a36291031f40dde7d9b523b3b0b570c8d7be2c279242d7163c04bab33a50af1a",
+              "source_id": "source:lab0:command_statistics",
+              "valid": true
+            }
+          ],
+          "issues": [],
+          "label": "mixed",
+          "summary": "The student repeatedly invoked the AI assistant (Claude) to obtain explanations on Linux basics, cross‑compiler concepts, and environment setup, then executed shell commands such as `make clean`, `make run`, and `make fs` to build and run the xv6 kernel.",
+          "unit_id": "proc-1",
+          "unit_type": "process_segment",
+          "valid": true
+        }
+      ],
+      "valid_unit_count": 1
+    },
+    "contribution_units": [
+      {
+        "confidence": "moderate",
+        "evidence_refs": [
+          {
+            "evidence_level": "E2",
+            "excerpt": "# 简洁实验过程时间线\n\n- 学号：2406080205\n- 姓名：周卓江\n- 实验分类：lab0\n\n## 过程\n\n### 录像时间：2026-09-10T15:52:49.913+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nclaude\n```\n\n### 录像时间：2026-09-10T15:54:06.929+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nclaude\n```\n\n### 录像时间：2026-09-10T15:54:10.348+08:00（北京时间）\n\n- 录像类型：用户问题\n\n- 内容：\n\n```text\nnihao\n```\n\n### 录像时间：2026-09-10T15:54:11.678+08:00（北京时间）\n\n- 录像类型：Claude 回复\n\n- 内容：\n\n```text\n你好！\n\nlab0 是搭环境那一章，目标是把 xv6-k210 在 qemu 上跑通，看到 shell 提示符。\n\n在开始之前，我想先确认一件事：\n\n你现在用的环境是哪种？ 是课程给的镜像（.ova 导入 VMware、希冀云端、或者硬盘拷贝过来的），还是你自己机器上全新装的系统？\n\n这个决定了后面是「直接验证」还是「先装工具链」，差别挺大。\n```\n\n### 录像时间：2026-09-10…",
+            "kind": "v3",
+            "line_end": 200,
+            "line_start": 1,
+            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
+            "source_id": "source:lab0:timeline",
+            "valid": true
+          },
+          {
+            "evidence_level": "E2",
+            "excerpt": "# 终端会话问答对与命令频次报告\n\n- 学号：2406080205\n- 姓名：周卓江\n- 数据采集时间：2026-09-10 23:22\n- 原始时间标识：20260910-2322\n- 原始数据目录：2406080205-周卓江-20260910-2322\n- 终端录像数量：5\n\n- 实验分类：lab0\n\n- Shell 命令执行总次数：9\n- 不同 Shell 命令数量：4\n- 包含 Shell 命令的终端会话数：5\n- 无 Shell 命令的终端会话数：0\n- Shell 提取失败会话数：0\n\nQ 为 shell 提示符下输入的完整命令，A 为命令输出。每条命令输出最多保留 400 行。\n\n## 一、问答对集合\n\n### 问答 2 · 录像 20260910T155240-13114\n\n- 开始时间：2026-09-10 15:52:40+08:00\n- 相对时间：7.4s\n- 命令执行目录：\\~/桌面/xv6-ai-labs-km/lab0\n\n**Q（命令）：**\n\n```text\nclaude\n```\n\n**A（输出）：**\n\n```text\n ▐▛███▜▌   Claude Code v2.1.221\n▝▜█████▛▘  deepseek-v4-flash · API Usage Billing\n  ▘▘ ▝▝    ~/桌面/xv6-ai-labs-km/lab…",
+            "kind": "v3",
+            "line_end": 200,
+            "line_start": 1,
+            "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+            "sha256": "d4f9823175ea9ecc5e7d4a6bad8a826bebd76a38ca18fb0e3d4f4614ac469c39",
+            "source_id": "source:lab0:terminal_qa",
+            "valid": true
+          },
+          {
+            "evidence_level": "E2",
+            "excerpt": "# Terminal Command Statistics\n\n- 学号：2406080205\n- 姓名：周卓江\n- 数据采集时间：2026-09-10 23:22\n- 原始时间标识：20260910-2322\n- 原始数据目录：2406080205-周卓江-20260910-2322\n- 终端录像数量：5\n\n- 实验分类：lab0\n\n- Shell 命令执行总次数：9\n- 不同 Shell 命令数量：4\n\n| command | count |\n| --- | ---: |\n| claude | 5 |\n| make run | 2 |\n| make clean | 1 |\n| make fs | 1 |",
+            "kind": "v3",
+            "line_end": 20,
+            "line_start": 1,
+            "relative_path": "终端命令统计/command_statistics_lab0.md",
+            "sha256": "a36291031f40dde7d9b523b3b0b570c8d7be2c279242d7163c04bab33a50af1a",
+            "source_id": "source:lab0:command_statistics",
+            "valid": true
+          }
+        ],
+        "issues": [],
+        "label": "mixed",
+        "summary": "The student repeatedly invoked the AI assistant (Claude) to obtain explanations on Linux basics, cross‑compiler concepts, and environment setup, then executed shell commands such as `make clean`, `make run`, and `make fs` to build and run the xv6 kernel.",
+        "unit_id": "proc-1",
+        "unit_type": "process_segment",
+        "valid": true
+      }
+    ],
+    "coverage": {
+      "materials": [
+        {
+          "kind": "timeline",
+          "line_count": 713,
+          "reason": null,
+          "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+          "required": true,
+          "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
+          "source_id": "source:lab0:timeline",
+          "status": "available"
+        },
+        {
+          "kind": "terminal_qa",
+          "line_count": 774,
+          "reason": null,
+          "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+          "required": true,
+          "sha256": "d4f9823175ea9ecc5e7d4a6bad8a826bebd76a38ca18fb0e3d4f4614ac469c39",
+          "source_id": "source:lab0:terminal_qa",
+          "status": "available"
+        },
+        {
+          "kind": "command_statistics",
+          "line_count": 20,
+          "reason": null,
+          "relative_path": "终端命令统计/command_statistics_lab0.md",
+          "required": true,
+          "sha256": "a36291031f40dde7d9b523b3b0b570c8d7be2c279242d7163c04bab33a50af1a",
+          "source_id": "source:lab0:command_statistics",
+          "status": "available"
+        },
+        {
+          "kind": "diff_report",
+          "line_count": null,
+          "reason": "lab0 的贡献识别仅评估实验过程材料，不使用代码差异报告",
+          "relative_path": null,
+          "required": false,
+          "sha256": null,
+          "source_id": "source:lab0:diff_report",
+          "status": "not_applicable"
+        }
+      ],
+      "missing_or_limited": [],
+      "status": "complete"
+    },
+    "evidence": [
+      {
+        "event_id": "8bae461d8d9d:20260910T222131-4401:shell:2",
+        "evidence_level": "E2",
+        "kind": "event",
+        "provenance": {
+          "note": "原始路径仅作为定位信息出现在清洗材料中；当前 Agent 未获原始归档访问权。",
+          "observation": {
+            "body_byte_range": [
+              381,
+              382
+            ],
+            "decompressed_byte_range": [
+              506,
+              507
+            ],
+            "elapsed_seconds": 855.87766,
+            "timing_line": 17
+          },
+          "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.out.gz",
+          "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.tim.gz",
+          "time_source": "script_header_plus_timing"
+        },
+        "quote": "make clean"
+      },
+      {
+        "event_id": "8bae461d8d9d:20260910T222131-4401:shell:3",
+        "evidence_level": "E2",
+        "kind": "event",
+        "provenance": {
+          "note": "原始路径仅作为定位信息出现在清洗材料中；当前 Agent 未获原始归档访问权。",
+          "observation": {
+            "body_byte_range": [
+              1023,
+              1024
+            ],
+            "decompressed_byte_range": [
+              1148,
+              1149
+            ],
+            "elapsed_seconds": 859.70328,
+            "timing_line": 28
+          },
+          "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.out.gz",
+          "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.tim.gz",
+          "time_source": "script_header_plus_timing"
+        },
+        "quote": "make run"
+      },
+      {
+        "event_id": "8bae461d8d9d:20260910T222131-4401:shell:4",
+        "evidence_level": "E2",
+        "kind": "event",
+        "provenance": {
+          "note": "原始路径仅作为定位信息出现在清洗材料中；当前 Agent 未获原始归档访问权。",
+          "observation": {
+            "body_byte_range": [
+              22360,
+              22361
+            ],
+            "decompressed_byte_range": [
+              22485,
+              22486
+            ],
+            "elapsed_seconds": 878.2217330000007,
+            "timing_line": 164
+          },
+          "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.out.gz",
+          "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.tim.gz",
+          "time_source": "script_header_plus_timing"
+        },
+        "quote": "make fs"
+      },
+      {
+        "event_id": "8bae461d8d9d:20260910T222131-4401:shell:5",
+        "evidence_level": "E2",
+        "kind": "event",
+        "provenance": {
+          "note": "原始路径仅作为定位信息出现在清洗材料中；当前 Agent 未获原始归档访问权。",
+          "observation": {
+            "body_byte_range": [
+              22763,
+              22764
+            ],
+            "decompressed_byte_range": [
+              22888,
+              22889
+            ],
+            "elapsed_seconds": 894.2566990000007,
+            "timing_line": 180
+          },
+          "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.out.gz",
+          "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.tim.gz",
+          "time_source": "script_header_plus_timing"
+        },
+        "quote": "make run"
+      }
+    ],
+    "findings": [
+      {
+        "alternative_explanations": [
+          "学生可能使用了预先构建好的 fs.img 或内核二进制，但观察到学生先执行了 make fs 生成镜像，随后启动使用了刚刚生成的镜像，说明构建过程是学生亲自完成的。",
+          "输出中的 OpenSBI 和内核日志同样可能来自课程提供的预构建镜像，但 make fs 的执行以及随后成功的 make run 表明学生使用了自行生成的文件系统。"
+        ],
+        "disposition": "N0",
+        "evidence": [
+          {
+            "event_id": "8bae461d8d9d:20260910T222131-4401:shell:2",
+            "evidence_level": "E2",
+            "kind": "event",
+            "provenance": {
+              "note": "原始路径仅作为定位信息出现在清洗材料中；当前 Agent 未获原始归档访问权。",
+              "observation": {
+                "body_byte_range": [
+                  381,
+                  382
+                ],
+                "decompressed_byte_range": [
+                  506,
+                  507
+                ],
+                "elapsed_seconds": 855.87766,
+                "timing_line": 17
+              },
+              "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.out.gz",
+              "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.tim.gz",
+              "time_source": "script_header_plus_timing"
+            },
+            "quote": "make clean"
+          },
+          {
+            "event_id": "8bae461d8d9d:20260910T222131-4401:shell:3",
+            "evidence_level": "E2",
+            "kind": "event",
+            "provenance": {
+              "note": "原始路径仅作为定位信息出现在清洗材料中；当前 Agent 未获原始归档访问权。",
+              "observation": {
+                "body_byte_range": [
+                  1023,
+                  1024
+                ],
+                "decompressed_byte_range": [
+                  1148,
+                  1149
+                ],
+                "elapsed_seconds": 859.70328,
+                "timing_line": 28
+              },
+              "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.out.gz",
+              "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.tim.gz",
+              "time_source": "script_header_plus_timing"
+            },
+            "quote": "make run"
+          },
+          {
+            "event_id": "8bae461d8d9d:20260910T222131-4401:shell:4",
+            "evidence_level": "E2",
+            "kind": "event",
+            "provenance": {
+              "note": "原始路径仅作为定位信息出现在清洗材料中；当前 Agent 未获原始归档访问权。",
+              "observation": {
+                "body_byte_range": [
+                  22360,
+                  22361
+                ],
+                "decompressed_byte_range": [
+                  22485,
+                  22486
+                ],
+                "elapsed_seconds": 878.2217330000007,
+                "timing_line": 164
+              },
+              "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.out.gz",
+              "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.tim.gz",
+              "time_source": "script_header_plus_timing"
+            },
+            "quote": "make fs"
+          },
+          {
+            "event_id": "8bae461d8d9d:20260910T222131-4401:shell:5",
+            "evidence_level": "E2",
+            "kind": "event",
+            "provenance": {
+              "note": "原始路径仅作为定位信息出现在清洗材料中；当前 Agent 未获原始归档访问权。",
+              "observation": {
+                "body_byte_range": [
+                  22763,
+                  22764
+                ],
+                "decompressed_byte_range": [
+                  22888,
+                  22889
+                ],
+                "elapsed_seconds": 894.2566990000007,
+                "timing_line": 180
+              },
+              "out": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.out.gz",
+              "tim": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080205-周卓江-20260910-2322\\term\\20260910T222131-4401.tim.gz",
+              "time_source": "script_header_plus_timing"
+            },
+            "quote": "make run"
+          }
+        ],
+        "evidence_refs": [],
+        "id": "f1",
+        "limitations": [
+          "无法从时间线中确定命令的确切键入时间或执行时长。",
+          "未观察到学生实际键入过程，仅见命令回显和输出。"
+        ],
+        "observations": [
+          "学生执行了 make clean，清理了之前的编译产物。",
+          "学生执行了 make run（首次），尝试启动 QEMU 但因缺少 fs.img 而失败。",
+          "学生执行了 make fs，成功生成了 256 MiB 的 FAT32 镜像 fs.img。",
+          "学生再次执行了 make run，启动成功，输出显示 OpenSBI v1.3、内核初始化序列（hart 0 init done、init: starting sh）以及 xv6 shell 提示符 -> / $。",
+          "在 shell 中学生能够运行 ls 列出文件并 cat README 查看文件内容，输出与预期一致。"
+        ],
+        "rule_refs": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "teacher_verification": [
+          "请学生在当前实验目录重新演示一次 make clean、make fs、make run 的完整流程，并说明 TOOLPREFIX 的设置及其与交叉编译工具链的对应关系。",
+          "让学生解释 make fs 输出中的参数（如块大小、复制速度）以及 QEMU 启动命令中的关键参数（-drive、-device virtio-blk-device）。"
+        ]
+      }
+    ],
+    "lab": "lab0",
+    "limitations": [
+      "所用证据均为 E2 级别（清洗后的时间线），仅能确认文本可见时间，不能推定键入、执行或模型生成的因果关系。",
+      "时间线显示的时间是文本出现时间，不等同于命令开始或完成时间，无法证明命令是由学生亲自键入。",
+      "未获取原始终端归档，无法核验命令的实际执行细节或工作目录变化。",
+      "The assessment is based solely on process materials; it does not evaluate code authorship or correctness.",
+      "Interaction logs may not capture all student activities (e.g., reading documentation, offline trial‑and‑error).",
+      "Evidence is confined to the provided time windows; earlier or later sessions could change the interpretation.",
+      "该结果是课程贡献归属线索，不认定真实作者、手打或粘贴方式、理解程度、诚信、违规或分数。",
+      "贡献分流仅基于经重验的 E2 材料，仍需教师复核。"
+    ],
+    "overall_disposition": "teacher_review",
+    "overall_label": "存在疑点",
+    "render_fingerprint": "sha256:384dd7177cb7ed4c1e4f7295e6f02c3624e816f9ac67f8002aab8e988f61ddcf",
+    "rule_registry": {
+      "labs": {
+        "lab0": {
+          "contribution_routing_enabled": true,
+          "enabled": true,
+          "evidence_level": "E1",
+          "lab": "lab0",
+          "notes": [],
+          "rule_file": "/Users/neoa/OS-Lab-Score/诚信判别系统/lab0课程规则边界.md",
+          "rule_sha256": "4096edfef661227425db67980422736db61d59a4a1e1b0b8ee9ae0b246bafdff",
+          "teacher_actions": [
+            "仅在独立 E1 与 R1/R2 校验成立时进入高风险待核实。",
+            "贡献层 E2 只作为已启用规则的存在疑点分流线索。"
+          ]
+        },
+        "lab1": {
+          "contribution_routing_enabled": false,
+          "enabled": false,
+          "evidence_level": "E2",
+          "lab": "lab1",
+          "notes": [
+            "缺规则或尚未启用；不得由贡献标签自动升级风险。"
+          ],
+          "rule_file": null,
+          "rule_sha256": null,
+          "teacher_actions": [
+            "当前 Lab 尚未注册正式诚信规则。"
+          ]
+        },
+        "lab2": {
+          "contribution_routing_enabled": false,
+          "enabled": false,
+          "evidence_level": "E2",
+          "lab": "lab2",
+          "notes": [
+            "缺规则或尚未启用；不得由贡献标签自动升级风险。"
+          ],
+          "rule_file": null,
+          "rule_sha256": null,
+          "teacher_actions": [
+            "当前 Lab 尚未注册正式诚信规则。"
+          ]
+        },
+        "lab3": {
+          "contribution_routing_enabled": false,
+          "enabled": false,
+          "evidence_level": "E2",
+          "lab": "lab3",
+          "notes": [
+            "缺规则或尚未启用；不得由贡献标签自动升级风险。"
+          ],
+          "rule_file": null,
+          "rule_sha256": null,
+          "teacher_actions": [
+            "当前 Lab 尚未注册正式诚信规则。"
+          ]
+        },
+        "lab4": {
+          "contribution_routing_enabled": false,
+          "enabled": false,
+          "evidence_level": "E2",
+          "lab": "lab4",
+          "notes": [
+            "缺规则或尚未启用；不得由贡献标签自动升级风险。"
+          ],
+          "rule_file": null,
+          "rule_sha256": null,
+          "teacher_actions": [
+            "当前 Lab 尚未注册正式诚信规则。"
+          ]
+        },
+        "lab5": {
+          "contribution_routing_enabled": false,
+          "enabled": false,
+          "evidence_level": "E2",
+          "lab": "lab5",
+          "notes": [
+            "缺规则或尚未启用；不得由贡献标签自动升级风险。"
+          ],
+          "rule_file": null,
+          "rule_sha256": null,
+          "teacher_actions": [
+            "当前 Lab 尚未注册正式诚信规则。"
+          ]
+        },
+        "lab6": {
+          "contribution_routing_enabled": false,
+          "enabled": false,
+          "evidence_level": "E2",
+          "lab": "lab6",
+          "notes": [
+            "缺规则或尚未启用；不得由贡献标签自动升级风险。"
+          ],
+          "rule_file": null,
+          "rule_sha256": null,
+          "teacher_actions": [
+            "当前 Lab 尚未注册正式诚信规则。"
+          ]
+        },
+        "lab7": {
+          "contribution_routing_enabled": false,
+          "enabled": false,
+          "evidence_level": "E2",
+          "lab": "lab7",
+          "notes": [
+            "缺规则或尚未启用；不得由贡献标签自动升级风险。"
+          ],
+          "rule_file": null,
+          "rule_sha256": null,
+          "teacher_actions": [
+            "当前 Lab 尚未注册正式诚信规则。"
+          ]
+        },
+        "lab8": {
+          "contribution_routing_enabled": false,
+          "enabled": false,
+          "evidence_level": "E2",
+          "lab": "lab8",
+          "notes": [
+            "缺规则或尚未启用；不得由贡献标签自动升级风险。"
+          ],
+          "rule_file": null,
+          "rule_sha256": null,
+          "teacher_actions": [
+            "当前 Lab 尚未注册正式诚信规则。"
+          ]
+        }
+      },
+      "schema_version": "integrity-rule-registry/v1",
+      "sha256": "af686ebbf90d5af1abb4fc13ec46e3955b347db458e1c2680642f8e42b39b60f"
+    },
+    "run_fingerprint": "sha256:ac773e7fe26b99ce0ea8543ed7f75da6dcb56396b9e83b13b4c7c5f165f53b57",
+    "schema_version": "integrity-assessment/v1",
+    "student_directory": "周卓江",
+    "student_id": "2406080205",
+    "teacher_actions": [
+      "仅在独立 E1 与 R1/R2 校验成立时进入高风险待核实。",
+      "贡献层 E2 只作为已启用规则的存在疑点分流线索。",
+      "请学生在当前实验目录重新演示一次 make clean、make fs、make run 的完整流程，并说明 TOOLPREFIX 的设置及其与交叉编译工具链的对应关系。",
+      "让学生解释 make fs 输出中的参数（如块大小、复制速度）以及 QEMU 启动命令中的关键参数（-drive、-device virtio-blk-device）。"
+    ]
+  },
+  "integrity_disposition": "teacher_review",
+  "lab": "lab0",
+  "overall_disposition": "N0",
+  "overall_label": "存在疑点",
+  "policy_sha256": "4096edfef661227425db67980422736db61d59a4a1e1b0b8ee9ae0b246bafdff",
+  "render_fingerprint": "sha256:384dd7177cb7ed4c1e4f7295e6f02c3624e816f9ac67f8002aab8e988f61ddcf",
+  "run_fingerprint": "sha256:ac773e7fe26b99ce0ea8543ed7f75da6dcb56396b9e83b13b4c7c5f165f53b57",
+  "student_id": "2406080205",
+  "summary": "学生在 lab0 中完成了标准的构建、文件系统生成和启动流程。观察到执行了 make clean、make run、make fs 和再次 make run，并在第二次 make run 的输出中看到 OpenSBI banner、内核初始化日志以及 xv6 shell 提示符，能够成功运行 ls 和 cat README 命令。未发现 AI 替代学生执行必需命令的证据，所有操作均符合 Lab0 的环境搭建与启动验证目标。"
+}

@@ -21,3 +21,6 @@ htmlcov/
 Thumbs.db
 .idea/
 .vscode/
+
+# Local Firecrawl research cache
+.firecrawl/
