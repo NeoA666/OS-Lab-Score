@@ -88,6 +88,10 @@ class AssessmentValidationError(ContributionRecognitionError):
     """A model response did not satisfy the v3 assessment contract."""
 
 
+class TransientProtocolError(AssessmentValidationError):
+    """A malformed submission envelope that may recover in a fresh model session."""
+
+
 class ControlledReadError(AssessmentValidationError):
     """A model requested material outside the host-controlled read boundary."""
 
@@ -173,10 +177,10 @@ def _parse_json_object(content: str) -> dict[str, Any]:
                 fallback = candidate
         else:
             if fallback is None:
-                raise AssessmentValidationError("模型返回的 JSON 无法解析")
+                raise TransientProtocolError("模型返回的 JSON 无法解析")
             parsed = fallback
     if not isinstance(parsed, dict):
-        raise AssessmentValidationError("模型返回的 JSON 根节点必须是对象")
+        raise TransientProtocolError("模型返回的 JSON 根节点必须是对象")
     return parsed
 
 
@@ -533,10 +537,10 @@ def _fragment_payload(excerpts: Sequence[MaterialExcerpt]) -> dict[str, Any]:
 
 def _submission_from_response(raw: Mapping[str, Any], action: str, field: str) -> dict[str, Any]:
     if raw.get("action") != action:
-        raise AssessmentValidationError(f"模型应返回 action={action}")
+        raise TransientProtocolError(f"模型应返回 action={action}")
     value = raw.get(field)
     if not isinstance(value, dict):
-        raise AssessmentValidationError(f"模型返回缺少对象字段 {field}")
+        raise TransientProtocolError(f"模型返回缺少对象字段 {field}")
     return dict(value)
 
 

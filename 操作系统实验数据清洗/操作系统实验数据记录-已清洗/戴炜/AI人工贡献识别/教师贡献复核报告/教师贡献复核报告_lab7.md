@@ -26,10 +26,10 @@
 - 限制：source:lab7:timeline: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI
 - 限制：source:lab7:terminal_qa: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI
 - 限制：source:lab7:command_statistics: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI
-- `source:lab7:timeline`（timeline）：missing；`简洁实验过程时间线/timeline_lab7.md`；SHA-256 `未提供哈希`；未知 行；原因：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI
-- `source:lab7:terminal_qa`（terminal_qa）：missing；`终端对话记录/terminal_qa_report_lab7.md`；SHA-256 `未提供哈希`；未知 行；原因：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI
-- `source:lab7:command_statistics`（command_statistics）：missing；`终端命令统计/command_statistics_lab7.md`；SHA-256 `未提供哈希`；未知 行；原因：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI
-- `source:lab7:diff_report`（diff_report）：available；`代码差异报告/lab7.md`；SHA-256 `ec05c323363f8e72fe23f8b68f55d5ea5ff81cd84de6a96ee03487935be30fc2`；45 行
+- `source:lab7:timeline`（timeline）：missing；`简洁实验过程时间线\timeline_lab7.md`；SHA-256 `未提供哈希`；未知 行；原因：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI
+- `source:lab7:terminal_qa`（terminal_qa）：missing；`终端对话记录\terminal_qa_report_lab7.md`；SHA-256 `未提供哈希`；未知 行；原因：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI
+- `source:lab7:command_statistics`（command_statistics）：missing；`终端命令统计\command_statistics_lab7.md`；SHA-256 `未提供哈希`；未知 行；原因：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI
+- `source:lab7:diff_report`（diff_report）：available；`代码差异报告\lab7.md`；SHA-256 `857ff64ba29c2949347b50ff09f6a9c8c30c99ba41b2dd7742b2b0276a915a47`；45 行
 
 ## 关键贡献项
 
@@ -50,5 +50,5 @@
 - tool_version：3.1.1
 - prompt_version：contribution-attribution-v3-nim-semantic-primary-v2
 - validator_version：contribution-assessment-validator-v4
-- completed_at：2026-09-18T11:57:21.179390+00:00
+- completed_at：2026-09-19T05:03:03.617357+00:00
 - 报告模板版本：6

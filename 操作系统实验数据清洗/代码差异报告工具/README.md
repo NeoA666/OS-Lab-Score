@@ -1,10 +1,10 @@
 # xv6 源码差异报告工具
 
-批量比较学生提交的 `lab1` 至 `lab8` 源码与 `xv6-ai-labs-km-无答案` 基准，并生成便于评分审阅的 Markdown 差异报告。工具只读取基准和学生提交，不执行学生的 Makefile、脚本或代码。
+批量比较学生提交的 `lab0` 至 `lab8` 源码与 `xv6-ai-labs-km-无答案` 基准，并生成便于评分审阅的 Markdown 差异报告。工具只读取基准和学生提交，不执行学生的 Makefile、脚本或代码。
 
 ## 功能与比较范围
 
-- 支持 `lab1` 至 `lab8`；`lab0` 不在比较范围内。
+- 支持 `lab0` 至 `lab8`：每个实验都把学生提交的 `labs/labN` 与基准根目录下对应的 `labN` 逐一比较，`lab0` 也遵循同一对应规则。
 - 比较 `kernel/`、`xv6-user/`、`linker/` 下的 C、头文件、手写汇编、链接脚本、脚本和构建配置，以及实验根目录的 `Makefile`/`GNUmakefile`。
 - 跳过文档、构建产物、`.git`/`.hg`/`.svn` 目录、系统元数据、符号链接和 Windows junction。xv6 各 lab 的 Makefile 通过 `usys.pl` 生成 `xv6-user/usys.S`，因此比较 `usys.pl` 而明确排除该生成汇编文件。
 - 默认忽略空格、Tab、空白行和行尾空白造成的差异；`--strict-whitespace` 可改为精确比较。

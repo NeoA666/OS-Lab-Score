@@ -2,15 +2,15 @@
 
 - 学号：2406080118
 - 姓名：杨涵清
-- 数据采集时间：2026-09-11 09:26
-- 原始时间标识：20260911-0926
-- 原始数据目录：2406080118-杨涵清-20260911-0926
-- 终端录像数量：13
+- 数据采集时间：2026-09-17 17:29
+- 原始时间标识：20260917-1729
+- 原始数据目录：2406080118-杨涵清-20260917-1729
+- 终端录像数量：14
 
 - 实验分类：lab0
 
-- Shell 命令执行总次数：58
-- 不同 Shell 命令数量：17
+- Shell 命令执行总次数：59
+- 不同 Shell 命令数量：18
 
 | command | count |
 | --- | ---: |
@@ -23,6 +23,7 @@
 | claude | 2 |
 | ls -lh fs.img | 2 |
 | qemu-system-riscv64 --version | 2 |
+| cd \~/桌面/xv6-ai-labs-km/lab1 | 1 |
 | gdb-multiarch target/kernel -ex 'set arch riscv:rv64' -ex 'target remote localhost:1234' | 1 |
 | ls -lh target/ | 1 |
 | make fa | 1 |

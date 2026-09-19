@@ -7,7 +7,7 @@
         "kind": "timeline",
         "line_count": null,
         "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
-        "relative_path": "简洁实验过程时间线/timeline_lab5.md",
+        "relative_path": "简洁实验过程时间线\\timeline_lab5.md",
         "required": true,
         "sha256": null,
         "source_id": "source:lab5:timeline",
@@ -17,7 +17,7 @@
         "kind": "terminal_qa",
         "line_count": null,
         "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
-        "relative_path": "终端对话记录/terminal_qa_report_lab5.md",
+        "relative_path": "终端对话记录\\terminal_qa_report_lab5.md",
         "required": true,
         "sha256": null,
         "source_id": "source:lab5:terminal_qa",
@@ -27,7 +27,7 @@
         "kind": "command_statistics",
         "line_count": null,
         "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
-        "relative_path": "终端命令统计/command_statistics_lab5.md",
+        "relative_path": "终端命令统计\\command_statistics_lab5.md",
         "required": true,
         "sha256": null,
         "source_id": "source:lab5:command_statistics",
@@ -37,9 +37,9 @@
         "kind": "diff_report",
         "line_count": 45,
         "reason": null,
-        "relative_path": "代码差异报告/lab5.md",
+        "relative_path": "代码差异报告\\lab5.md",
         "required": true,
-        "sha256": "08fdf23f98236748565c2546148bab479e91a4b2980b9110252b749d10a16dd7",
+        "sha256": "4f90402e7dfec82cdc3c5f6c5b40846348dbcdf9975ef9a370aa11ff3ff2a256",
         "source_id": "source:lab5:diff_report",
         "status": "available"
       }
@@ -66,7 +66,7 @@
     }
   ],
   "errors": [],
-  "input_fingerprint": "sha256:0180bd35f4c2c7d9a28e88b0960ac7c4be0288a56d2252412dae92550f12d08b",
+  "input_fingerprint": "sha256:bd78ad750468c72ea28a7f8ae3c32d90442bc4ba7e03b07cec329fff93ed42e6",
   "lab": "lab5",
   "lab_conclusion": {
     "alternative_explanation": "资料缺失不表示未使用 AI、未进行人工操作或没有代码变化。",
@@ -92,7 +92,7 @@
     "unit_reviews": []
   },
   "run_metadata": {
-    "completed_at": "2026-09-18T11:57:21.174141+00:00",
+    "completed_at": "2026-09-19T05:03:03.505850+00:00",
     "controlled_read_protocol_version": "contribution-read-material-v3",
     "host_insufficient_version": "contribution-host-insufficient-v3",
     "prompt_version": "contribution-attribution-v3-nim-semantic-primary-v2",
@@ -107,7 +107,7 @@
       "kind": "timeline",
       "line_count": null,
       "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
-      "relative_path": "简洁实验过程时间线/timeline_lab5.md",
+      "relative_path": "简洁实验过程时间线\\timeline_lab5.md",
       "required": true,
       "sha256": null,
       "source_id": "source:lab5:timeline"
@@ -117,7 +117,7 @@
       "kind": "terminal_qa",
       "line_count": null,
       "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
-      "relative_path": "终端对话记录/terminal_qa_report_lab5.md",
+      "relative_path": "终端对话记录\\terminal_qa_report_lab5.md",
       "required": true,
       "sha256": null,
       "source_id": "source:lab5:terminal_qa"
@@ -127,7 +127,7 @@
       "kind": "command_statistics",
       "line_count": null,
       "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
-      "relative_path": "终端命令统计/command_statistics_lab5.md",
+      "relative_path": "终端命令统计\\command_statistics_lab5.md",
       "required": true,
       "sha256": null,
       "source_id": "source:lab5:command_statistics"
@@ -137,9 +137,9 @@
       "kind": "diff_report",
       "line_count": 45,
       "reason": null,
-      "relative_path": "代码差异报告/lab5.md",
+      "relative_path": "代码差异报告\\lab5.md",
       "required": true,
-      "sha256": "08fdf23f98236748565c2546148bab479e91a4b2980b9110252b749d10a16dd7",
+      "sha256": "4f90402e7dfec82cdc3c5f6c5b40846348dbcdf9975ef9a370aa11ff3ff2a256",
       "source_id": "source:lab5:diff_report"
     }
   ],

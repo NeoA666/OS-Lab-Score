@@ -1,6 +1,6 @@
 {
   "tool": "replay_term_qa",
-  "source": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080104-方如轩-20260909-1237",
+  "source": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080104-方如轩-20260916-1215",
   "layout": "by-lab-v1",
   "status": "complete",
   "reports": [
@@ -10,29 +10,29 @@
     "终端对话记录/terminal_qa_report_other.md"
   ],
   "cache_format_version": 2,
-  "input_fingerprint": "de380295df0c8d06b1e6e7e4f38cfa8612118bceca5db19a2e5f551c8846f821",
+  "input_fingerprint": "f33924b834eb15daf76d9ba3b7e2793bcb0b0127f853bff4d460a1a46d6809ad",
   "processor_signature": "6a613b91290b4a52d5d6c74b11a5302eb7e1958bd530af409b0f248a91eaa36f",
   "summary": {
-    "recordings": 8,
+    "recordings": 3,
     "commands": 0,
-    "claude_sessions": 0,
-    "turns": 0,
+    "claude_sessions": 1,
+    "turns": 302,
     "replay_failed": 0,
     "labs": {
       "other": {
-        "recordings": 8,
+        "recordings": 3,
         "commands": 0,
-        "claude_sessions": 0,
-        "turns": 0,
+        "claude_sessions": 1,
+        "turns": 302,
         "replay_failed": 0
       }
     },
     "errors": []
   },
   "artifact_sha256": {
-    "claude对话/claude_qa_clean_other.md": "38c8ed8ede9283f940cb9060ed85593dfff4f68c7e2c27e722d885612c8f8ec0",
-    "完整终端转写记录/full_terminal_transcript_other.md": "e0ef0ac908462521f21e4601d0b7459503861f049c2bf68f57e4a4a0aee3fa4b",
-    "终端命令统计/command_statistics_other.md": "be47c12188edbba52455bd3bf1a9b97a26e660f38eb98fbec0d2a2c5c8b8a69c",
-    "终端对话记录/terminal_qa_report_other.md": "a3c494f5d8ec2a820e7b7a51f588a50f6248ddb4d9a1a3f1df40fef1d8be9f1b"
+    "claude对话/claude_qa_clean_other.md": "b989efc59effe08e2eaff060612253bc4042cb7a6bc79a3aa7c5dba12977b0ee",
+    "完整终端转写记录/full_terminal_transcript_other.md": "3186decc830d614dff60a877ec8299fd66c2dd3d5f12067840d85b6349d8fc06",
+    "终端命令统计/command_statistics_other.md": "75299fca1d34a1beac3549290aad505256120a13a8717b60924b0839b5aa88fd",
+    "终端对话记录/terminal_qa_report_other.md": "d01c49cea23cb8e2a30c5a5a7ea967f24989331a67dec15f4d0a56b584796f4b"
   }
 }

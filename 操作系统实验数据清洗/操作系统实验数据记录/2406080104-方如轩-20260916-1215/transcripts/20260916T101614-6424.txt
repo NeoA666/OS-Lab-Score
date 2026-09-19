@@ -1,0 +1,1252 @@
+==== labtracker 终端转录 ====
+录像: 20260916T101614-6424.out.gz   时长: 1043小时57分19秒   原始大小: 18536B
+==================================================
+-- [开始] --
+mahirolover@mahirolover-VMware-Virtual-Platform:~/文档/xv6-ai-labs-km-无答案/xv6
+-ai-labs-km-无答案/lab1$ 
+-- [0分13秒] --
+
+-- [1分22秒] --
+make
+-- [2分31秒] --
+b
+-- [3分41秒] --
+u
+
+-- [8分24秒] --
+b
+-- [9分36秒] --
+u
+-- [10分47秒] --
+i
+-- [11分59秒] --
+l
+-- [13分11秒] --
+e
+
+-- [15分37秒] --
+d
+
+-- [18分03秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_halt xv6-user/halt.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [19分16秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_halt has a LOAD segment with RWX permissions
+
+-- [20分29秒] --
+riscv64-unknown-elf-ld: xv6-user/halt.o: in function `main':
+/home/hejunlin/xv6-ai-labs-km/lab1/xv6-user/halt.c:10:(.text+0x8): undefined reference to `halt'
+
+-- [21分42秒] --
+make: *** [Makefile:167：xv6-user/_halt] 错误 1
+
+-- [22分56秒] --
+mahirolover@mahirolover-VMware-Virtual-Platform:~/文档/xv6-ai-labs-km-无答案/xv6
+
+-- [24分09秒] --
+-ai-labs-km-无答案/lab1$ 
+-- [40分12秒] --
+halt
+
+-- [1小时12分20秒] --
+Call to Halt failed: Interactive authentication required.
+
+-- [1小时28分24秒] --
+mahirolover@mahirolover-VMware-Virtual-Platform:~/文档/xv6-ai-labs-km-无答案/xv6
+-ai-labs-km-无答案/lab1$ 
+-- [1小时44分36秒] --
+halt
+-- [2小时0分48秒] --
+.
+-- [2小时17分01秒] --
+c
+
+-- [3小时5分42秒] --
+halt.c：未找到命令
+
+-- [3小时21分56秒] --
+mahirolover@mahirolover-VMware-Virtual-Platform:~/文档/xv6-ai-labs-km-无答案/xv6
+-ai-labs-km-无答案/lab1$ 
+-- [3小时58分57秒] --
+马克
+-- [4小时35分58秒] --
+=
+
+-- [7小时4分07秒] --
+make
+
+-- [8小时18分18秒] --
+build
+
+-- [9小时32分31秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_halt xv6-user/halt.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [10小时9分38秒] --
+riscv64-unknown-elf-ld: warning: 
+-- [10小时46分44秒] --
+xv6-user/_halt has a LOAD segment with RWX permissions
+riscv64-unknown-elf-ld
+-- [11小时23分51秒] --
+: xv6-user/halt.o: in function `
+-- [12小时0分58秒] --
+main':
+/home/hejunlin/xv6-ai-labs-km/lab1/xv6-user/halt.c:10:(.text+0x8): undefined reference to `halt'
+
+-- [12小时38分05秒] --
+make: *** [Makefile:167：xv6-user/_halt] 错误 1
+
+-- [13小时15分12秒] --
+mahirolover@mahirolover-VMware-Virtual-Platform:~/文档/xv6-ai-labs-km-无答案/xv6
+
+-- [13小时52分19秒] --
+-ai-labs-km-无答案/lab1$ 
+-- [14小时29分43秒] --
+make
+
+-- [15小时44分33秒] --
+fd
+
+-- [16小时59分25秒] --
+make: *** 没有规则可制作目标“fd”。 停止。
+
+-- [17小时36分51秒] --
+mahirolover@mahirolover-VMware-Virtual-Platform:~/文档/xv6-ai-labs-km-无答案/xv6
+-ai-labs-km-无答案/lab1$ 
+-- [18小时14分20秒] --
+make fd
+
+-- [19小时29分18秒] --
+s
+
+-- [20小时44分18秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_halt xv6-user/halt.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [21小时21分49秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_halt has a LOAD segment with RWX permissions
+
+-- [21小时59分19秒] --
+riscv64-unknown-elf-ld: 
+-- [22小时36分49秒] --
+xv6-user/halt.o: in function `
+-- [23小时14分19秒] --
+main':
+/home/hejunlin/xv6-ai-labs-km/lab1/xv6-user/halt.c:
+-- [23小时51分50秒] --
+10:(.text+0x8): undefined reference to `halt'
+
+-- [24小时29分20秒] --
+make: *** [Makefile:167：xv6-user/_halt] 错误 1
+
+-- [25小时44分21秒] --
+mahirolover@mahirolover-VMware-Virtual-Platform:~/文档/xv6-ai-labs-km-无答案/xv6
+-ai-labs-km-无答案/lab1$ 
+-- [27小时39分16秒] --
+make
+
+-- [31小时29分13秒] --
+build
+
+-- [35小时19分13秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/syscall.o kernel/syscall.c
+
+-- [37小时14分13秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/sysproc.o kernel/sysproc.c
+
+-- [39小时9分13秒] --
+kernel/sysproc.c: In function 'sys_halt':
+
+-- [41小时4分13秒] --
+kernel/sysproc.c:191:1: error: expected expression before '}' token
+  191 | }
+      | ^
+
+-- [42小时59分14秒] --
+kernel/sysproc.c:191:1: error: control reaches end of non-void function [-Werror=return-type]
+  191 | }
+      | ^
+
+-- [44小时54分14秒] --
+cc1: all warnings being treated as errors
+
+-- [46小时49分14秒] --
+make: *** [<内置>：kernel/sysproc.o] 错误 1
+
+-- [50小时39分15秒] --
+mahirolover@mahirolover-VMware-Virtual-Platform:~/文档/xv6-ai-labs-km-无答案/xv6
+
+-- [52小时34分15秒] --
+-ai-labs-km-无答案/lab1$ 
+-- [54小时31分16秒] --
+make
+
+-- [58小时25分19秒] --
+build
+
+-- [62小时19分24秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/sysproc.o kernel/sysproc.c
+
+-- [64小时16分27秒] --
+kernel/sysproc.c: In function 'sys_halt':
+kernel/sysproc.c:190:12: error: expected ';' before '}' token
+  190 |   return -1
+      |            ^
+      |            ;
+  191 | }
+      | ~           
+
+-- [66小时13分29秒] --
+make: *** [<内置>：kernel/sysproc.o] 错误 1
+
+-- [68小时10分32秒] --
+mahirolover@mahirolover-VMware-Virtual-Platform:~/文档/xv6-ai-labs-km-无答案/xv6
+-ai-labs-km-无答案/lab1$ 
+-- [70小时7分54秒] --
+make
+
+-- [74小时2分40秒] --
+build
+
+-- [77小时57分30秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/sysproc.o kernel/sysproc.c
+
+-- [79小时54分56秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU -c -o xv6-user/usys.o xv6-user/usys.S
+
+-- [81小时52分21秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_init xv6-user/init.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [83小时49分47秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_init has a LOAD segment with RWX permissions
+
+-- [85小时47分12秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_init > xv6-user/init.asm
+
+-- [87小时44分38秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_init | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/init.sym
+
+-- [89小时42分03秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_sh xv6-user/sh.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [91小时39分29秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_sh has a LOAD segment with RWX permissions
+
+-- [93小时36分54秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_sh > xv6-user/sh.asm
+
+-- [95小时34分20秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_sh | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/sh.sym
+
+-- [97小时31分45秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_cat xv6-user/cat.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [99小时29分11秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_cat has a LOAD segment with RWX permissions
+
+-- [101小时26分36秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_cat > xv6-user/cat.asm
+
+-- [103小时24分02秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_cat | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/cat.sym
+
+-- [105小时21分28秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_echo xv6-user/echo.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [107小时18分53秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_echo has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_echo > xv6-user/echo.asm
+
+-- [109小时16分19秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_echo | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/echo.sym
+
+-- [111小时13分45秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_grep xv6-user/grep.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [113小时11分10秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_grep has a LOAD segment with RWX permissions
+
+-- [115小时8分36秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_grep > xv6-user/grep.asm
+
+-- [117小时6分02秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_grep | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/grep.sym
+
+-- [119小时3分27秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_ls xv6-user/ls.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [121小时0分53秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_ls has a LOAD segment with RWX permissions
+
+-- [122小时58分19秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_ls > xv6-user/ls.asm
+
+-- [124小时55分45秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_ls | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/ls.sym
+
+-- [126小时53分11秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_kill xv6-user/kill.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [128小时50分36秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_kill has a LOAD segment with RWX permissions
+
+-- [130小时48分02秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_kill > xv6-user/kill.asm
+
+-- [132小时45分28秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_kill | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/kill.sym
+
+-- [134小时42分54秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_mkdir xv6-user/mkdir.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [136小时40分20秒] --
+riscv64-unknown-elf-ld: warning: 
+-- [138小时37分46秒] --
+xv6-user/_mkdir has a LOAD segment with RWX permissions
+
+-- [140小时35分12秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_mkdir > xv6-user/mkdir.asm
+
+-- [142小时32分38秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_mkdir | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/mkdir.sym
+
+-- [144小时30分04秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_xargs xv6-user/xargs.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [146小时27分30秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_xargs has a LOAD segment with RWX permissions
+
+-- [148小时24分56秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_xargs > xv6-user/xargs.asm
+
+-- [150小时22分22秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_xargs | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/xargs.sym
+
+-- [152小时19分48秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_sleep xv6-user/sleep.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [154小时17分14秒] --
+riscv64-unknown-elf-ld: 
+-- [156小时14分40秒] --
+warning: xv6-user/_sleep has a LOAD segment with RWX permissions
+
+-- [158小时12分06秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_sleep > xv6-user/sleep.asm
+
+-- [160小时9分32秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_sleep | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/sleep.sym
+
+-- [162小时6分58秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_find xv6-user/find.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [164小时4分24秒] --
+riscv64-unknown-elf-ld: warning: 
+-- [166小时1分50秒] --
+xv6-user/_find has a LOAD segment with RWX permissions
+
+-- [167小时59分17秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_find > xv6-user/find.asm
+
+-- [169小时56分43秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_find | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/find.sym
+
+-- [171小时54分09秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_rm xv6-user/rm.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [173小时51分35秒] --
+riscv64-unknown-elf-ld: warning: 
+-- [175小时49分01秒] --
+xv6-user/_rm has a LOAD segment with RWX permissions
+
+-- [177小时46分28秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_rm > xv6-user/rm.asm
+
+-- [179小时43分54秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_rm | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/rm.sym
+
+-- [181小时41分20秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_wc xv6-user/wc.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [183小时38分46秒] --
+riscv64-unknown-elf-ld: warning: 
+-- [185小时36分13秒] --
+xv6-user/_wc
+-- [187小时33分39秒] --
+ has a LOAD segment with RWX permissions
+
+-- [189小时31分05秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_wc > xv6-user/wc.asm
+
+-- [191小时28分32秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_wc | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/wc.sym
+
+-- [193小时25分58秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_test xv6-user/test.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [195小时23分24秒] --
+riscv64-unknown-elf-ld: warning: 
+-- [197小时20分50秒] --
+xv6-user/_test has a LOAD segment with RWX permissions
+
+-- [199小时18分17秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_test > xv6-user/test.asm
+
+-- [201小时15分43秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_test | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/test.sym
+
+-- [203小时13分10秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_usertests xv6-user/usertests.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [205小时10分36秒] --
+riscv64-unknown-elf-ld: 
+-- [207小时8分02秒] --
+warning: 
+-- [209小时5分29秒] --
+xv6-user/_usertests has a LOAD segment with RWX permissions
+
+-- [211小时2分55秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_usertests > xv6-user/usertests.asm
+
+-- [213小时0分22秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_usertests | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/usertests.sym
+
+-- [214小时57分48秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_strace xv6-user/strace.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [216小时55分15秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_strace has a LOAD segment with RWX permissions
+
+-- [218小时52分41秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_strace > xv6-user/strace.asm
+
+-- [220小时50分08秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_strace | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/strace.sym
+
+-- [222小时47分34秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_mv xv6-user/mv.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [224小时45分01秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_mv has a LOAD segment with RWX permissions
+
+-- [226小时42分27秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_mv > xv6-user/mv.asm
+
+-- [228小时39分54秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_mv | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/mv.sym
+
+-- [230小时37分20秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_halt xv6-user/halt.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [232小时34分47秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_halt has a LOAD segment with RWX permissions
+
+-- [234小时32分14秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_halt > xv6-user/halt.asm
+
+-- [236小时29分40秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_halt | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/halt.sym
+
+-- [238小时27分07秒] --
+mahirolover@mahirolover-VMware-Virtual-Platform:~/文档/xv6-ai-labs-km-无答案/xv6
+
+-- [240小时24分34秒] --
+-ai-labs-km-无答案/lab1$ 
+-- [242小时22分04秒] --
+make
+
+-- [246小时17分06秒] --
+fs
+
+-- [250小时12分08秒] --
+making fs image...
+
+-- [252小时9分41秒] --
+输入了 512+0 块记录
+输出了 512+0 块记录
+
+-- [254小时7分13秒] --
+268435456 字节 (268 MB, 256 MiB) 已复制，0.919668 s，292 MB/s
+
+-- [256小时4分46秒] --
+mkfs.fat 4.2 (2021-01-31)
+
+-- [258小时2分18秒] --
+[sudo] mahirolover 的密码： 
+
+-- [261小时57分36秒] --
+对不起，请重试。
+[sudo] mahirolover 的密码： 
+
+-- [267小时50分57秒] --
+mahirolover@mahirolover-VMware-Virtual-Platform:~/文档/xv6-ai-labs-km-无答案/xv6
+
+-- [269小时48分45秒] --
+-ai-labs-km-无答案/lab1$ 
+-- [271小时46分36秒] --
+m
+-- [273小时44分27秒] --
+a
+-- [275小时42分18秒] --
+k
+-- [277小时40分10秒] --
+e
+
+-- [281小时35分54秒] --
+r
+-- [283小时33分46秒] --
+u
+-- [285小时31分39秒] --
+n
+
+-- [291小时25分19秒] --
+OpenS
+-- [293小时23分12秒] --
+BI v1.3
+
+-- [297小时18分58秒] --
+ ___
+-- [299小时16分52秒] --
+_     
+
+-- [307小时8分25秒] --
+ _____ __
+-- [309小时6分18秒] --
+__ ____
+-- [311小时4分11秒] --
+_
+
+-- [313小时2分05秒] --
+  / __
+-- [314小时59分58秒] --
+ \   
+
+-- [320小时53分38秒] --
+   / _
+-- [322小时51分31秒] --
+___| 
+-- [324小时49分24秒] --
+ _ 
+-- [326小时47分17秒] --
+\_   
+-- [328小时45分11秒] --
+_|
+ |
+-- [330小时43分04秒] --
+ |  | 
+-- [332小时40分57秒] --
+|_ 
+-- [334小时38分50秒] --
+__   _
+-- [336小时36分44秒] --
+__ _ _
+-- [338小时34分37秒] --
+_ | (___
+-- [340小时32分30秒] --
+ | |
+-- [342小时30分24秒] --
+_) ||
+-- [344小时28分17秒] --
+ |
+
+-- [346小时26分10秒] --
+ | |  
+-- [348小时24分03秒] --
+| | 
+-- [350小时21分57秒] --
+'_ \ 
+-- [352小时19分50秒] --
+/ _ \ 
+-- [354小时17分43秒] --
+'_ \ 
+-- [356小时15分36秒] --
+\___
+-- [358小时13分30秒] --
+ \|  _ 
+-- [360小时11分23秒] --
+< | 
+-- [362小时9分16秒] --
+|
+
+-- [366小时5分03秒] --
+| |_
+-- [368小时2分56秒] --
+_| | |
+-- [370小时0分49秒] --
+_) |  
+-- [371小时58分43秒] --
+__/ 
+-- [373小时56分36秒] --
+| | |
+-- [375小时54分29秒] --
+____) 
+-- [377小时52分22秒] --
+| |_) || |_
+
+-- [381小时48分09秒] --
+\____/
+-- [383小时46分02秒] --
+| .__
+-- [385小时43分55秒] --
+/ \_
+-- [387小时41分49秒] --
+__|_|
+-- [389小时39分42秒] --
+ |_|_
+-- [391小时37分35秒] --
+____/|
+-- [393小时35分29秒] --
+___
+-- [395小时33分22秒] --
+/_
+-- [397小时31分15秒] --
+____|
+
+-- [401小时27分02秒] --
+   |
+-- [403小时24分55秒] --
+ |
+
+-- [407小时20分41秒] --
+  |_
+-- [409小时18分35秒] --
+|
+
+-- [413小时14分21秒] --
+Platform Name          
+
+-- [417小时10分08秒] --
+ : riscv-virtio,qem
+-- [419小时8分01秒] --
+u
+
+-- [421小时5分55秒] --
+Plat
+-- [423小时3分48秒] --
+form
+-- [425小时1分41秒] --
+ Featu
+-- [426小时59分35秒] --
+res   
+-- [428小时57分28秒] --
+      : 
+-- [430小时55分21秒] --
+me
+-- [432小时53分14秒] --
+del
+-- [434小时51分08秒] --
+eg
+Platform HART Count       : 2
+P
+-- [436小时49分01秒] --
+latf
+-- [438小时46分54秒] --
+orm
+-- [440小时44分48秒] --
+ IPI
+-- [442小时42分41秒] --
+ De
+-- [444小时40分34秒] --
+vice
+
+-- [450小时34分14秒] --
+: a
+-- [452小时32分08秒] --
+cli
+-- [454小时30分01秒] --
+nt-
+-- [456小时27分54秒] --
+msw
+-- [458小时25分48秒] --
+i
+
+-- [460小时23分41秒] --
+P
+-- [462小时21分34秒] --
+latform Timer Device     : aclint-mtimer @ 10000000Hz
+Platform 
+-- [464小时19分28秒] --
+Cons
+-- [466小时17分21秒] --
+ole
+-- [468小时15分14秒] --
+ De
+-- [470小时13分08秒] --
+vic
+-- [472小时11分01秒] --
+e   : uart8250
+Platform HSM Devic
+-- [474小时8分54秒] --
+e       :
+-- [476小时6分48秒] --
+ ---
+
+-- [478小时4分41秒] --
+Pla
+-- [480小时2分34秒] --
+tform PMU Device       : ---
+Platform Reb
+-- [482小时0分27秒] --
+oot Dev
+-- [483小时58分21秒] --
+ice  
+-- [485小时56分14秒] --
+  : sifi
+-- [487小时54分07秒] --
+ve_tes
+-- [489小时52分01秒] --
+t
+
+-- [491小时49分54秒] --
+Pl
+-- [493小时47分47秒] --
+atform Shutdown Device  : sifive_t
+-- [495小时45分41秒] --
+est
+
+-- [497小时43分34秒] --
+Pl
+-- [499小时41分27秒] --
+atfor
+-- [501小时39分21秒] --
+m Suspend Device   : ---
+Platform CPPC Device      : ---
+
+-- [503小时37分14秒] --
+Fi
+-- [505小时35分07秒] --
+rmwa
+-- [507小时33分01秒] --
+re Base 
+
+-- [511小时28分47秒] --
+       : 
+-- [513小时26分41秒] --
+0x80
+-- [515小时24分34秒] --
+0000
+-- [517小时22分27秒] --
+00
+Fi
+-- [519小时20分21秒] --
+rmw
+-- [521小时18分14秒] --
+are
+-- [523小时16分07秒] --
+ Size             : 332 KB
+
+-- [525小时14分01秒] --
+Firmware RW Offset       
+-- [527小时11分54秒] --
+ : 0x40
+-- [529小时9分47秒] --
+000
+
+-- [531小时7分41秒] --
+F
+-- [533小时5分34秒] --
+ir
+-- [535小时3分27秒] --
+mw
+-- [537小时1分21秒] --
+are RW Size          : 76 KB
+Firmware Heap Offset      : 0x4a000
+
+-- [538小时59分14秒] --
+F
+-- [540小时57分08秒] --
+irm
+-- [542小时55分01秒] --
+war
+-- [544小时52分54秒] --
+e
+-- [546小时50分48秒] --
+ He
+-- [548小时48分41秒] --
+ap 
+-- [550小时46分34秒] --
+Siz
+-- [552小时44分28秒] --
+e        : 36 KB (total), 2 KB (reserved), 9 KB (used), 24 K
+-- [554小时42分21秒] --
+B (fr
+-- [556小时40分14秒] --
+ee)
+
+-- [558小时38分08秒] --
+Firm
+-- [560小时36分01秒] --
+ware 
+-- [562小时33分54秒] --
+Scra
+-- [564小时31分48秒] --
+tch Size     : 4096 B (total), 760 B (used), 3336 B (
+-- [566小时29分41秒] --
+free)
+
+-- [568小时27分34秒] --
+R
+-- [570小时25分28秒] --
+unt
+-- [572小时23分21秒] --
+ime S
+-- [574小时21分14秒] --
+BI Version    
+-- [576小时19分08秒] --
+   :
+-- [578小时17分01秒] --
+ 1.0
+
+-- [582小时12分48秒] --
+Doma
+-- [584小时10分41秒] --
+in0 
+-- [586小时8分35秒] --
+Name 
+
+-- [594小时0分08秒] --
+  : ro
+-- [595小时58分01秒] --
+ot
+Do
+-- [597小时55分55秒] --
+main0 
+-- [599小时53分48秒] --
+Boot
+-- [601小时51分41秒] --
+ HART 
+
+-- [605小时47分28秒] --
+   : 
+-- [607小时45分21秒] --
+0
+Do
+-- [609小时43分15秒] --
+main0 HARTs             : 0*
+-- [611小时41分08秒] --
+,1*
+
+-- [613小时39分02秒] --
+Dom
+-- [615小时36分55秒] --
+ain
+-- [617小时34分48秒] --
+0 Regi
+-- [619小时32分42秒] --
+on00
+
+-- [625小时26分22秒] --
+: 0x00
+-- [627小时24分15秒] --
+000
+-- [629小时22分08秒] --
+00002
+-- [631小时20分02秒] --
+000000-0
+-- [633小时17分55秒] --
+x0
+-- [635小时15分48秒] --
+0000
+-- [637小时13分42秒] --
+000
+-- [639小时11分35秒] --
+0
+-- [641小时9分29秒] --
+200ffff M: (I,R,W) S/U: 
+-- [643小时7分22秒] --
+()
+Domain0 Region01
+-- [645小时5分15秒] --
+          : 0x0000000080040000-0x000000008005f
+-- [647小时3分09秒] --
+fff 
+-- [649小时1分02秒] --
+M: 
+-- [650小时58分55秒] --
+(R
+-- [652小时56分49秒] --
+,W) S
+-- [654小时54分42秒] --
+/U: 
+-- [656小时52分36秒] --
+()
+
+-- [658小时50分29秒] --
+D
+-- [660小时48分22秒] --
+om
+-- [662小时46分16秒] --
+ain
+-- [664小时44分09秒] --
+0 R
+-- [666小时42分02秒] --
+egi
+-- [668小时39分56秒] --
+on0
+-- [670小时37分49秒] --
+2  
+-- [672小时35分42秒] --
+        : 0x0000000080000000-0x000000008003ffff M: (R,X) S/U: ()
+Domain0 Region03          : 0x0
+-- [674小时33分36秒] --
+0000
+-- [676小时31分29秒] --
+000
+-- [678小时29分23秒] --
+00
+-- [680小时27分16秒] --
+0
+-- [682小时25分09秒] --
+000
+-- [684小时23分03秒] --
+00-0xff
+-- [686小时20分56秒] --
+fff
+-- [688小时18分49秒] --
+fffff
+-- [690小时16分43秒] --
+ffffff
+-- [692小时14分36秒] --
+ M: (R,W,X) S/U: (R,W,X)
+Domain0 Next Address      : 0x000000008020
+-- [694小时12分30秒] --
+000
+-- [696小时10分23秒] --
+0
+Do
+-- [698小时8分16秒] --
+mai
+-- [700小时6分10秒] --
+n0 Ne
+-- [702小时4分03秒] --
+xt 
+-- [704小时1分56秒] --
+Arg1 
+
+-- [707小时57分43秒] --
+  : 0
+-- [709小时55分37秒] --
+x000000
+-- [711小时53分30秒] --
+0087e0
+-- [713小时51分23秒] --
+0000
+Domain0 Next Mode         : 
+-- [715小时49分17秒] --
+S-mode
+
+-- [717小时47分10秒] --
+Doma
+-- [719小时45分03秒] --
+in0 
+-- [721小时42分57秒] --
+SysRe
+-- [723小时40分50秒] --
+set   
+
+-- [729小时34分30秒] --
+ : yes
+
+-- [731小时32分24秒] --
+D
+-- [733小时30分17秒] --
+omai
+-- [735小时28分10秒] --
+n0 Sy
+-- [737小时26分04秒] --
+sSuspe
+-- [739小时23分57秒] --
+nd     
+-- [741小时21分51秒] --
+   :
+-- [743小时19分44秒] --
+ yes
+
+-- [747小时15分31秒] --
+Bo
+-- [749小时13分24秒] --
+o
+-- [751小时11分18秒] --
+t HART ID              : 0
+Boot HART Domain 
+
+-- [755小时7分04秒] --
+  : 
+-- [757小时4分58秒] --
+root
+Boot HART 
+-- [759小时2分51秒] --
+Priv Ver
+-- [761小时0分44秒] --
+sion  
+-- [762小时58分38秒] --
+  : v1
+-- [764小时56分31秒] --
+.12
+
+-- [766小时54分25秒] --
+Bo
+-- [768小时52分18秒] --
+ot HA
+-- [770小时50分11秒] --
+RT 
+-- [772小时48分05秒] --
+Base ISA        : rv64imafd
+-- [774小时45分58秒] --
+ch
+Boot HART
+-- [776小时43分52秒] --
+ ISA Ex
+-- [778小时41分45秒] --
+ten
+-- [780小时39分38秒] --
+sion
+-- [782小时37分32秒] --
+s  : time,sstc
+Boot HART PMP Cou
+-- [784小时35分25秒] --
+nt  
+
+-- [788小时31分12秒] --
+ : 
+-- [790小时29分05秒] --
+16
+
+-- [792小时26分59秒] --
+Boot 
+-- [794小时24分52秒] --
+HART
+-- [796小时22分45秒] --
+ PM
+-- [798小时20分39秒] --
+P Granularity : 4
+Boot HART PMP Address Bits: 54
+Boot HART MHPM Count      
+-- [800小时18分32秒] --
+: 1
+-- [802小时16分26秒] --
+6
+Boot HART MIDELEG         : 0x0000000000001666
+
+-- [806小时12分12秒] --
+Bo
+-- [808小时10分06秒] --
+ot 
+-- [810小时7分59秒] --
+HAR
+-- [812小时5分53秒] --
+T M
+-- [814小时3分46秒] --
+EDELEG
+-- [816小时1分39秒] --
+         : 0x0000000000f0b509
+
+-- [817小时59分33秒] --
+  (`-.            (`-.                   
+-- [819小时57分26秒] --
+         .-')       ('-.    _   .-')
+ ( OO ).        _(OO  )_          
+
+-- [825小时51分06秒] --
+    .
+-- [827小时49分00秒] --
+(  OO
+-- [829小时46分53秒] --
+)  
+
+-- [833小时42分40秒] --
+_(  O
+-- [835小时40分34秒] --
+O)  ( '
+-- [837小时38分27秒] --
+.( OO
+-- [839小时36分20秒] --
+ )_
+
+-- [843小时32分07秒] --
+(_/.
+-- [845小时30分01秒] --
+  \
+-- [847小时27分54秒] --
+_)-.
+-- [849小时25分47秒] --
+ ,--(
+-- [851小时23分41秒] --
+_/  
+-- [853小时21分34秒] --
+ ,.
+-- [855小时19分28秒] --
+ \  
+-- [857小时17分21秒] --
+,--.      
+
+-- [863小时11分01秒] --
+   (_)---\_)  (,------.  ,-
+-- [865小时8分55秒] --
+-.  
+-- [867小时6分48秒] --
+ ,--.
+-- [869小时4分42秒] --
+) ,--. ,--.  
+ \  `.'  
+-- [871小时2分35秒] --
+/
+-- [873小时0分28秒] --
+  \ 
+
+-- [876小时56分15秒] --
+\  
+-- [878小时54分09秒] --
+ /(__/ /  .'       .-')   
+-- [880小时52分02秒] --
+  '
+
+-- [884小时47分49秒] --
+.-.
+-- [886小时45分42秒] --
+  '
+
+-- [890小时41分29秒] --
+ | 
+-- [892小时39分23秒] --
+ .
+-- [894小时37分16秒] --
+---
+-- [896小时35分10秒] --
+'  |   `.'   |  |  | |  |   
+  \     /\   \   \ /   / .  / -.    _
+-- [898小时33分03秒] --
+(  
+-- [900小时30分56秒] --
+OO)
+-- [902小时28分50秒] --
+   ,|  | |  |   |  |      |         |  |
+-- [904小时26分43秒] --
+  | 
+-- [906小时24分37秒] --
+| 
+-- [908小时22分30秒] --
+.-'
+-- [910小时20分23秒] --
+)
+
+-- [916小时14分04秒] --
+\   \ |    \   '   /, | .-.  '  (,------. (_| 
+-- [918小时11分57秒] --
+ | 
+-- [920小时9分51秒] --
+|  | 
+-- [922小时7分44秒] --
+ (| 
+-- [924小时5分37秒] --
+ '--.
+
+-- [928小时1分24秒] --
+|  |'
+-- [929小时59分18秒] --
+.'| 
+-- [931小时57分11秒] --
+ |  |  |_|( OO )
+  .'    
+-- [933小时55分05秒] --
+\_)    
+-- [935小时52分58秒] --
+\     
+-- [937小时50分52秒] --
+/__)' 
+-- [939小时48分45秒] --
+\  | 
+-- [941小时46分38秒] --
+ |  '-
+-- [943小时44分32秒] --
+-----
+-- [945小时42分25秒] --
+'   |
+-- [947小时40分19秒] --
+  | |
+-- [949小时38分12秒] --
+  |  
+-- [951小时36分06秒] --
+ |  .-
+-- [953小时33分59秒] --
+-'   |  |   |  |  |  | | `-' /
+
+-- [957小时29分46秒] --
+ /  
+-- [959小时27分39秒] --
+.'.  
+-- [961小时25分33秒] --
+\    
+
+-- [965小时21分20秒] --
+\   /
+-- [967小时19分13秒] --
+    \
+-- [969小时17分06秒] --
+  `'  /
+
+-- [977小时8分40秒] --
+ '  
+-- [979小时6分34秒] --
+'-'  
+-- [981小时4分27秒] --
+'-
+-- [983小时2分21秒] --
+. | 
+-- [985小时0分14秒] --
+ `-
+-- [986小时58分07秒] --
+--.  |  |   |  | ('  '-'(_.
+-- [988小时56分01秒] --
+-'
+'--'   '--' 
+-- [990小时53分54秒] --
+     `-'      `----'                `-----'-
+-- [992小时51分48秒] --
+-' `
+-- [994小时49分41秒] --
+---
+-- [996小时47分35秒] --
+---
+-- [998小时45分28秒] --
+' 
+-- [1000小时43分22秒] --
+ `-
+-- [1002小时41分15秒] --
+-'
+
+-- [1006小时37分02秒] --
+`--
+-- [1008小时34分55秒] --
+'  
+-- [1010小时32分49秒] --
+ `---
+-- [1012小时30分42秒] --
+--'
+
+-- [1016小时26分29秒] --
+hart 
+-- [1018小时24分23秒] --
+0 init done
+
+-- [1020小时22分16秒] --
+init: st
+-- [1022小时20分10秒] --
+arting sh
+
+-- [1024小时18分03秒] --
+-> 
+-- [1026小时15分57秒] --
+/
+-- [1028小时13分50秒] --
+ $
+
+-- [1032小时9分39秒] --
+h
+-- [1034小时7分35秒] --
+a
+-- [1036小时5分31秒] --
+l
+-- [1038小时3分27秒] --
+t
+
+-- [1043小时57分19秒] --
+mahirolover@mahirolover-VMware-Virtual-Platform:~/文档/xv6-ai-labs-km-无答案/xv6
+-ai-labs-km-无答案/lab1$ 

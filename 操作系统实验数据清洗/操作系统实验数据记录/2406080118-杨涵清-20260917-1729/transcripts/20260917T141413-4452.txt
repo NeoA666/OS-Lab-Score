@@ -1,0 +1,38 @@
+==== labtracker 终端转录 ====
+录像: 20260917T141413-4452.out.gz   时长: 3分12秒   原始大小: 1780B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-o
+s
+-VMware-Virtual-Platform:~/.claude$ curl https://api.deepseek.com/anthropic
+
+-- [0分20秒] --
+curl https://api.deepseek.com/anthropic
+
+curl: (6) Could not resolve host: api.deepseek.com
+
+-- [0分50秒] --
+ailab-os@ailab-os-VMware-Virtual-
+Platform:~/.claude$ echo "nameserver 223.5.5.5" | sudo tee /etc/resolv.conf
+
+-- [1分20秒] --
+ec
+ho "nameserver 223.5.5.5" | sudo tee /etc/resolv.conf
+
+[sudo] ailab-os 的密码： 
+nameserver 223.5.5.5
+
+-- [1分29秒] --
+ailab-os@ailab-os
+-VMware-Virtual-Platform:~/.claude$ curl https://api.deepseek.com/anthropic
+
+-- [1分36秒] --
+curl https://api.deepseek.com/anthropic
+
+curl: (6) Could not resolve host: api.deepseek.com
+
+-- [3分12秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/.claude$ 
+exit
+

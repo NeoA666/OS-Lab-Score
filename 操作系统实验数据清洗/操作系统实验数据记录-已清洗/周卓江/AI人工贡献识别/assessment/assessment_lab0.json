@@ -2,7 +2,7 @@
   "analysis_status": "complete",
   "contribution_units": [
     {
-      "alternative_explanation": "The student could have primarily performed the steps independently, using the AI only for occasional clarification, which would make the process human‑dominant.",
+      "alternative_explanation": "学生可能完全自行完成操作，只是碰巧在终端中输入了claude字符串但未实际交互；不过多次出现及关联命令使得AI involvement较为 plausibly。",
       "behavior_roles": {
         "ai": [
           "ai_explanation",
@@ -17,21 +17,21 @@
       "confidence": "moderate",
       "evidence_refs": [
         {
-          "excerpt": "# 简洁实验过程时间线\n\n- 学号：2406080205\n- 姓名：周卓江\n- 实验分类：lab0\n\n## 过程\n\n### 录像时间：2026-09-10T15:52:49.913+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nclaude\n```\n\n### 录像时间：2026-09-10T15:54:06.929+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nclaude\n```\n\n### 录像时间：2026-09-10T15:54:10.348+08:00（北京时间）\n\n- 录像类型：用户问题\n\n- 内容：\n\n```text\nnihao\n```\n\n### 录像时间：2026-09-10T15:54:11.678+08:00（北京时间）\n\n- 录像类型：Claude 回复\n\n- 内容：\n\n```text\n你好！\n\nlab0 是搭环境那一章，目标是把 xv6-k210 在 qemu 上跑通，看到 shell 提示符。\n\n在开始之前，我想先确认一件事：\n\n你现在用的环境是哪种？ 是课程给的镜像（.ova 导入 VMware、希冀云端、或者硬盘拷贝过来的），还是你自己机器上全新装的系统？\n\n这个决定了后面是「直接验证」还是「先装工具链」，差别挺大。\n```\n\n### 录像时间：2026-09-10…",
+          "excerpt": "```text\nclaude\n```\n\n### 录像时间：2026-09-10T15:54:06.929+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nclaude\n```",
           "excerpt_redacted": true,
-          "line_end": 200,
-          "line_start": 1,
-          "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+          "line_end": 27,
+          "line_start": 15,
+          "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
           "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
           "source_id": "source:lab0:timeline",
           "source_kind": "timeline"
         },
         {
-          "excerpt": "# 终端会话问答对与命令频次报告\n\n- 学号：2406080205\n- 姓名：周卓江\n- 数据采集时间：2026-09-10 23:22\n- 原始时间标识：20260910-2322\n- 原始数据目录：2406080205-周卓江-20260910-2322\n- 终端录像数量：5\n\n- 实验分类：lab0\n\n- Shell 命令执行总次数：9\n- 不同 Shell 命令数量：4\n- 包含 Shell 命令的终端会话数：5\n- 无 Shell 命令的终端会话数：0\n- Shell 提取失败会话数：0\n\nQ 为 shell 提示符下输入的完整命令，A 为命令输出。每条命令输出最多保留 400 行。\n\n## 一、问答对集合\n\n### 问答 2 · 录像 20260910T155240-13114\n\n- 开始时间：2026-09-10 15:52:40+08:00\n- 相对时间：7.4s\n- 命令执行目录：\\~/桌面/xv6-ai-labs-km/lab0\n\n**Q（命令）：**\n\n```text\nclaude\n```\n\n**A（输出）：**\n\n```text\n ▐▛███▜▌   Claude Code v2.1.221\n▝▜█████▛▘  deepseek-v4-flash · API Usage Billing\n  ▘▘ ▝▝    ~/桌面/xv6-ai-labs-km/lab…",
+          "excerpt": "# 终端会话问答对与命令频次报告\n\n- 学号：2406080205\n- 姓名：周卓江\n- 数据采集时间：2026-09-10 23:22\n- 原始时间标识：20260910-2322\n- 原始数据目录：2406080205-周卓江-20260910-2322\n- 终端录像数量：5\n\n- 实验分类：lab0\n\n- Shell 命令执行总次数：9\n- 不同 Shell 命令数量：4\n- 包含 Shell 命令的终端会话数：5\n- 无 Shell 命令的终端会话数：0\n- Shell 提取失败会话数：0\n\nQ 为 shell 提示符下输入的完整命令，A 为命令输出。每条命令输出最多保留 400 行。\n\n## 一、问答对集合\n\n### 问答 2 · 录像 20260910T155240-13114\n\n- 开始时间：2026-09-10 15:52:40+08:00\n- 相对时间：7.4s\n- 命令执行目录：\\~/桌面/xv6-ai-labs-km/lab0\n\n**Q（命令）：**\n\n```text",
           "excerpt_redacted": true,
-          "line_end": 200,
+          "line_end": 30,
           "line_start": 1,
-          "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+          "relative_path": "终端对话记录\\terminal_qa_report_lab0.md",
           "sha256": "d4f9823175ea9ecc5e7d4a6bad8a826bebd76a38ca18fb0e3d4f4614ac469c39",
           "source_id": "source:lab0:terminal_qa",
           "source_kind": "terminal_qa"
@@ -41,7 +41,7 @@
           "excerpt_redacted": true,
           "line_end": 20,
           "line_start": 1,
-          "relative_path": "终端命令统计/command_statistics_lab0.md",
+          "relative_path": "终端命令统计\\command_statistics_lab0.md",
           "sha256": "a36291031f40dde7d9b523b3b0b570c8d7be2c279242d7163c04bab33a50af1a",
           "source_id": "source:lab0:command_statistics",
           "source_kind": "command_statistics"
@@ -49,17 +49,15 @@
       ],
       "label": "mixed",
       "limitations": [
-        "The materials show only observed interactions, not the student's internal understanding or mastery.",
-        "No code authoring or modification is visible in lab0, so contributions are limited to explanatory and command‑execution actions.",
-        "The timeline may omit offline activities or additional resources consulted."
+        "材料仅展示命令调用，未显示claude的具体回复内容，无法判断AI提供的建议是否被实际采纳；仅凭命令名不能完全区分AI与人类的主导程度。"
       ],
       "scope": {
-        "line_end": 200,
-        "line_start": 1,
+        "line_end": 27,
+        "line_start": 15,
         "source_id": "source:lab0:timeline"
       },
-      "summary": "The student repeatedly invoked the AI assistant (Claude) to obtain explanations on Linux basics, cross‑compiler concepts, and environment setup, then executed shell commands such as `make clean`, `make run`, and `make fs` to build and run the xv6 kernel.",
-      "unit_id": "proc-1",
+      "summary": "学生在lab0中多次调用claude（AI助手）获取说明或建议，随后执行make等命令完成实验过程。AI提供解释和建议，学生负责提示、执行命令以及验证输出。",
+      "unit_id": "lab0_process",
       "unit_type": "process_segment"
     }
   ],
@@ -69,7 +67,7 @@
         "kind": "timeline",
         "line_count": 713,
         "reason": null,
-        "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+        "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
         "required": true,
         "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
         "source_id": "source:lab0:timeline",
@@ -79,7 +77,7 @@
         "kind": "terminal_qa",
         "line_count": 774,
         "reason": null,
-        "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+        "relative_path": "终端对话记录\\terminal_qa_report_lab0.md",
         "required": true,
         "sha256": "d4f9823175ea9ecc5e7d4a6bad8a826bebd76a38ca18fb0e3d4f4614ac469c39",
         "source_id": "source:lab0:terminal_qa",
@@ -89,7 +87,7 @@
         "kind": "command_statistics",
         "line_count": 20,
         "reason": null,
-        "relative_path": "终端命令统计/command_statistics_lab0.md",
+        "relative_path": "终端命令统计\\command_statistics_lab0.md",
         "required": true,
         "sha256": "a36291031f40dde7d9b523b3b0b570c8d7be2c279242d7163c04bab33a50af1a",
         "source_id": "source:lab0:command_statistics",
@@ -110,28 +108,28 @@
     "status": "complete"
   },
   "diff_hunks": [],
-  "input_fingerprint": "sha256:80e3b6b887dfbaff4efff8aa2900ccd57e6e643c130d96d74b45e46ad874d8a6",
+  "input_fingerprint": "sha256:ba63aac47428f7b8bd79d40d4bfff1da3fb313a36a7ebbe945240ce2de1965b1",
   "lab": "lab0",
   "lab_conclusion": {
-    "alternative_explanation": "If the student had relied mainly on prior knowledge and used the AI only sparingly, the label could shift to human‑dominant.",
+    "alternative_explanation": "也有可能学生只是在终端中测试claude命令而未实际获取有用信息，全部操作均由学生独立完成。",
     "confidence": "moderate",
     "evidence_refs": [
       {
-        "excerpt": "# 简洁实验过程时间线\n\n- 学号：2406080205\n- 姓名：周卓江\n- 实验分类：lab0\n\n## 过程\n\n### 录像时间：2026-09-10T15:52:49.913+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nclaude\n```\n\n### 录像时间：2026-09-10T15:54:06.929+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nclaude\n```\n\n### 录像时间：2026-09-10T15:54:10.348+08:00（北京时间）\n\n- 录像类型：用户问题\n\n- 内容：\n\n```text\nnihao\n```\n\n### 录像时间：2026-09-10T15:54:11.678+08:00（北京时间）\n\n- 录像类型：Claude 回复\n\n- 内容：\n\n```text\n你好！\n\nlab0 是搭环境那一章，目标是把 xv6-k210 在 qemu 上跑通，看到 shell 提示符。\n\n在开始之前，我想先确认一件事：\n\n你现在用的环境是哪种？ 是课程给的镜像（.ova 导入 VMware、希冀云端、或者硬盘拷贝过来的），还是你自己机器上全新装的系统？\n\n这个决定了后面是「直接验证」还是「先装工具链」，差别挺大。\n```\n\n### 录像时间：2026-09-10…",
+        "excerpt": "```text\nclaude\n```\n\n### 录像时间：2026-09-10T15:54:06.929+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nclaude\n```",
         "excerpt_redacted": true,
-        "line_end": 200,
-        "line_start": 1,
-        "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+        "line_end": 27,
+        "line_start": 15,
+        "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
         "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
         "source_id": "source:lab0:timeline",
         "source_kind": "timeline"
       },
       {
-        "excerpt": "# 终端会话问答对与命令频次报告\n\n- 学号：2406080205\n- 姓名：周卓江\n- 数据采集时间：2026-09-10 23:22\n- 原始时间标识：20260910-2322\n- 原始数据目录：2406080205-周卓江-20260910-2322\n- 终端录像数量：5\n\n- 实验分类：lab0\n\n- Shell 命令执行总次数：9\n- 不同 Shell 命令数量：4\n- 包含 Shell 命令的终端会话数：5\n- 无 Shell 命令的终端会话数：0\n- Shell 提取失败会话数：0\n\nQ 为 shell 提示符下输入的完整命令，A 为命令输出。每条命令输出最多保留 400 行。\n\n## 一、问答对集合\n\n### 问答 2 · 录像 20260910T155240-13114\n\n- 开始时间：2026-09-10 15:52:40+08:00\n- 相对时间：7.4s\n- 命令执行目录：\\~/桌面/xv6-ai-labs-km/lab0\n\n**Q（命令）：**\n\n```text\nclaude\n```\n\n**A（输出）：**\n\n```text\n ▐▛███▜▌   Claude Code v2.1.221\n▝▜█████▛▘  deepseek-v4-flash · API Usage Billing\n  ▘▘ ▝▝    ~/桌面/xv6-ai-labs-km/lab…",
+        "excerpt": "# 终端会话问答对与命令频次报告\n\n- 学号：2406080205\n- 姓名：周卓江\n- 数据采集时间：2026-09-10 23:22\n- 原始时间标识：20260910-2322\n- 原始数据目录：2406080205-周卓江-20260910-2322\n- 终端录像数量：5\n\n- 实验分类：lab0\n\n- Shell 命令执行总次数：9\n- 不同 Shell 命令数量：4\n- 包含 Shell 命令的终端会话数：5\n- 无 Shell 命令的终端会话数：0\n- Shell 提取失败会话数：0\n\nQ 为 shell 提示符下输入的完整命令，A 为命令输出。每条命令输出最多保留 400 行。\n\n## 一、问答对集合\n\n### 问答 2 · 录像 20260910T155240-13114\n\n- 开始时间：2026-09-10 15:52:40+08:00\n- 相对时间：7.4s\n- 命令执行目录：\\~/桌面/xv6-ai-labs-km/lab0\n\n**Q（命令）：**\n\n```text",
         "excerpt_redacted": true,
-        "line_end": 200,
+        "line_end": 30,
         "line_start": 1,
-        "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+        "relative_path": "终端对话记录\\terminal_qa_report_lab0.md",
         "sha256": "d4f9823175ea9ecc5e7d4a6bad8a826bebd76a38ca18fb0e3d4f4614ac469c39",
         "source_id": "source:lab0:terminal_qa",
         "source_kind": "terminal_qa"
@@ -141,7 +139,7 @@
         "excerpt_redacted": true,
         "line_end": 20,
         "line_start": 1,
-        "relative_path": "终端命令统计/command_statistics_lab0.md",
+        "relative_path": "终端命令统计\\command_statistics_lab0.md",
         "sha256": "a36291031f40dde7d9b523b3b0b570c8d7be2c279242d7163c04bab33a50af1a",
         "source_id": "source:lab0:command_statistics",
         "source_kind": "command_statistics"
@@ -149,16 +147,12 @@
     ],
     "label": "mixed",
     "limitations": [
-      "Cannot assess depth of learning or long‑term retention from interaction logs alone.",
-      "No visibility into any self‑studied documentation or external tutorials.",
-      "The analysis is limited to the supplied slices; missing segments could alter the balance."
+      "缺少claude的具体回复记录，无法直接观察AI提供的内容；命令统计只显示调用频率，不显示交互深度。"
     ],
-    "summary": "Lab0 involved a blend of AI‑provided explanations and student‑driven command execution and prompting, resulting in a mixed contribution profile."
+    "summary": "lab0过程中学生与AI（claude）交互较多，AI主要提供解释和建议，学生负责提示、执行命令并验证结果，整体呈现混合贡献。"
   },
   "limitations": [
-    "The assessment is based solely on process materials; it does not evaluate code authorship or correctness.",
-    "Interaction logs may not capture all student activities (e.g., reading documentation, offline trial‑and‑error).",
-    "Evidence is confined to the provided time windows; earlier or later sessions could change the interpretation.",
+    "材料仅包含命令名称和时间线，未包含详细的对话内容或代码片段，因此只能基于调用频率推断AI作用。",
     "该结果是课程贡献归属线索，不认定真实作者、手打或粘贴方式、理解程度、诚信、违规或分数。"
   ],
   "review": {
@@ -166,107 +160,47 @@
     "downgraded_unit_ids": [],
     "overall_decision": "agree",
     "reviewed_unit_ids": [
-      "proc-1"
+      "lab0_process"
     ],
     "status": "agreed",
-    "summary": "The evidence shows both AI-generated explanations and human-initiated command execution, supporting the mixed label.",
+    "summary": "The evidence supports a mixed AI-human contribution in lab0, with multiple claude invocations indicating AI assistance and make commands indicating human execution.",
     "unit_reviews": [
       {
         "decision": "agree",
         "evidence_refs": [
           {
-            "excerpt": "claude",
+            "excerpt": "```text\nclaude\n```\n\n### 录像时间：2026-09-10T15:54:06.929+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nclaude\n```",
             "excerpt_redacted": true,
-            "line_end": 16,
-            "line_start": 16,
-            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "line_end": 27,
+            "line_start": 15,
+            "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
             "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
             "source_id": "source:lab0:timeline",
             "source_kind": "timeline"
           },
           {
-            "excerpt": "claude",
-            "excerpt_redacted": true,
-            "line_end": 26,
-            "line_start": 26,
-            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
-            "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
-            "source_id": "source:lab0:timeline",
-            "source_kind": "timeline"
-          },
-          {
-            "excerpt": "claude",
-            "excerpt_redacted": true,
-            "line_end": 64,
-            "line_start": 64,
-            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
-            "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
-            "source_id": "source:lab0:timeline",
-            "source_kind": "timeline"
-          },
-          {
-            "excerpt": "```text\nnihao\n```\n\n### 录像时间：2026-09-10T15:54:11.678+08:00（北京时间）\n\n- 录像类型：Claude 回复\n\n- 内容：\n\n```text\n你好！\n\nlab0 是搭环境那一章，目标是把 xv6-k210 在 qemu 上跑通，看到 shell 提示符。\n\n在开始之前，我想先确认一件事：\n\n你现在用的环境是哪种？ 是课程给的镜像（.ova 导入 VMware、希冀云端、或者硬盘拷贝过来的），还是你自己机器上全新装的系统？\n\n这个决定了后面是「直接验证」还是「先装工具链」，差别挺大。\n```",
-            "excerpt_redacted": true,
-            "line_end": 55,
-            "line_start": 35,
-            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
-            "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
-            "source_id": "source:lab0:timeline",
-            "source_kind": "timeline"
-          },
-          {
-            "excerpt": "```text\n### Linux 命令行与包管理器\n\n实验全程在 Linux 命令行下进行。对 Linux 还不熟悉的同学，建议先掌握下面这些常用命令：\n\n- 目录与文件：`cd`、`ls`、`pwd`、`mkdir`、`rm`、`cp`、`mv`\n- 权限与进程：`chmod`、`chown`、`ps`\n- 重定向与管道：`>`、`<`、`|`\n- 包管理（Ubuntu/Debian）：`apt update`、`apt install`、`apt search`\n- 系统管理：`sudo`、`man`给我简要介绍一下这些命令\n```\n\n### 录像时间：2026-09-10T22:23:22.863+08:00（北京时间）\n\n- 录像类型：Claude 回复\n\n- 内容：\n\n```text\n这一串其实分五类，你在 lab0 里天天真正会用到的是第一类 + man，其余的先认个脸。\n\n目录与文件\n- pwd — print working directory，我现在在哪个目录\n- ls — 列出当前目录有什么（ls -l 看详情，ls -a 连隐藏文件）\n- cd — 切换目录（cd .. 回上一级，cd 单独敲回 home）\n- mkdir — 建目录\n- cp — 复制（cp -r 连目录一起复制）\n- mv — 移动；同一目录内移动就是改名\n- rm — 删除。⚠  L…",
-            "excerpt_redacted": true,
-            "line_end": 125,
-            "line_start": 73,
-            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
-            "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
-            "source_id": "source:lab0:timeline",
-            "source_kind": "timeline"
-          },
-          {
-            "excerpt": "- 内容：\n\n```text\n这一串其实分五类，你在 lab0 里天天真正会用到的是第一类 + man，其余的先认个脸。\n\n目录与文件\n- pwd — print working directory，我现在在哪个目录\n- ls — 列出当前目录有什么（ls -l 看详情，ls -a 连隐藏文件）\n- cd — 切换目录（cd .. 回上一级，cd 单独敲回 home）\n- mkdir — 建目录\n- cp — 复制（cp -r 连目录一起复制）\n- mv — 移动；同一目录内移动就是改名\n- rm — 删除。⚠  Linux 命令行下没有回收站，删了就没了，rm -rf 尤其要想清楚再敲\n\n权限与进程\n- chmod — 改文件权限（谁能读/写/执行）\n- chown — 改文件属主（通常要 sudo）\n- ps — 看当前有哪些进程在跑\n\n重定向与管道\n- > — 把命令本该打印到屏幕的输出，写进文件（< 是反过来：从文件读输入）\n- | — 把左边命令的输出，直接当成右边命令的输入\n\n包管理（Ubuntu/Debian）\n- apt update — 更新\"可安装软件清单\"（不是升级软件）\n- apt search xxx — 按关键词找包\n- apt install xxx — 装包\n\n系统管理\n- sudo — 以 root 身份执行这条命令\n- man xxx — 看某…",
-            "excerpt_redacted": true,
-            "line_end": 125,
-            "line_start": 89,
-            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
-            "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
-            "source_id": "source:lab0:timeline",
-            "source_kind": "timeline"
-          },
-          {
-            "excerpt": "make clean\n\n[终端输出]\nrm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \\\n*/*.o */*.d */*.asm */*.sym \\\ntarget/* \\\nxv6-user/initcode xv6-user/initcode.out \\\nkernel/kernel \\\n.gdbinit \\\nxv6-user/usys.S \\\nxv6-user/_init xv6-user/_sh xv6-user/_cat xv6-user/_echo xv6-user/_grep xv6-user/_ls xv6-user/_kill xv6-user/_mkdir xv6-user/_xargs xv6-user/_sleep xv6-user/_find xv6-user/_rm xv6-user/_wc xv6-user/_test xv6-user/_usertests xv6-user/_strace xv6-user/_mv",
-            "excerpt_redacted": true,
-            "line_end": 200,
-            "line_start": 190,
-            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
-            "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
-            "source_id": "source:lab0:timeline",
-            "source_kind": "timeline"
-          },
-          {
-            "excerpt": "| claude | 5 |\n| make run | 2 |\n| make clean | 1 |\n| make fs | 1 |",
+            "excerpt": "| command | count |\n| --- | ---: |\n| claude | 5 |\n| make run | 2 |\n| make clean | 1 |\n| make fs | 1 |",
             "excerpt_redacted": true,
             "line_end": 20,
-            "line_start": 17,
-            "relative_path": "终端命令统计/command_statistics_lab0.md",
+            "line_start": 15,
+            "relative_path": "终端命令统计\\command_statistics_lab0.md",
             "sha256": "a36291031f40dde7d9b523b3b0b570c8d7be2c279242d7163c04bab33a50af1a",
             "source_id": "source:lab0:command_statistics",
             "source_kind": "command_statistics"
           }
         ],
-        "reason": "The materials show repeated AI-generated explanations (Claude responses to user questions about Linux basics and cross-compilation) alongside human-initiated actions (prompting questions and executing shell commands such as make clean, make run, and make fs). This combination of AI-provided guidance and human-driven execution matches a mixed contribution profile.",
-        "unit_id": "proc-1"
+        "reason": "The materials show five invocations of 'claude' (AI) and multiple make commands (human execution), indicating both AI assistance (explanation/advice) and human prompting, execution, and verification, supporting a mixed contribution.",
+        "unit_id": "lab0_process"
       }
     ]
   },
   "run_metadata": {
-    "completed_at": "2026-09-18T11:50:28.642961+00:00",
+    "completed_at": "2026-09-19T04:58:32.719351+00:00",
     "controlled_read_protocol_version": "contribution-read-material-v3",
     "primary_attempts": 1,
     "primary_model": "nvidia/nemotron-3-super-120b-a12b",
     "primary_read_count": 3,
-    "primary_repaired": false,
+    "primary_repaired": true,
     "primary_request_id": null,
     "primary_usage": null,
     "prompt_version": "contribution-attribution-v3-nim-semantic-primary-v2",
@@ -287,7 +221,7 @@
       "kind": "timeline",
       "line_count": 713,
       "reason": null,
-      "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+      "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
       "required": true,
       "sha256": "147ed8dbe247cbd3d206b914afec2bfb1f1a57801da58f4a54a06ed8aac186be",
       "source_id": "source:lab0:timeline"
@@ -297,7 +231,7 @@
       "kind": "terminal_qa",
       "line_count": 774,
       "reason": null,
-      "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+      "relative_path": "终端对话记录\\terminal_qa_report_lab0.md",
       "required": true,
       "sha256": "d4f9823175ea9ecc5e7d4a6bad8a826bebd76a38ca18fb0e3d4f4614ac469c39",
       "source_id": "source:lab0:terminal_qa"
@@ -307,7 +241,7 @@
       "kind": "command_statistics",
       "line_count": 20,
       "reason": null,
-      "relative_path": "终端命令统计/command_statistics_lab0.md",
+      "relative_path": "终端命令统计\\command_statistics_lab0.md",
       "required": true,
       "sha256": "a36291031f40dde7d9b523b3b0b570c8d7be2c279242d7163c04bab33a50af1a",
       "source_id": "source:lab0:command_statistics"
@@ -329,8 +263,7 @@
     "student_id": null
   },
   "teacher_actions": [
-    "Encourage students to attempt solving environment‑setup problems before consulting the AI, to foster independent troubleshooting.",
-    "Provide checklists or reflection prompts after each lab step to surface self‑assessment of understanding.",
-    "Consider logging additional metadata (e.g., command durations, error rates) to better differentiate between guided and autonomous execution."
+    "建议在后续实验中记录AI交互的完整文档（如claude的回复），以便更准确判断贡献比例；",
+    "鼓励学生在报告中注明使用AI的具体目的和采纳情况。"
   ]
 }

@@ -2,7 +2,7 @@
   "analysis_status": "complete",
   "contribution_units": [
     {
-      "alternative_explanation": "The student may have completed lab0 activities outside the captured timeline, or the timeline may not have been populated due to logging issues.",
+      "alternative_explanation": "The student may have performed lab0 activities that are not captured in the timeline (e.g., offline setup, GUI interactions) but left no trace in the provided material.",
       "behavior_roles": {
         "ai": [],
         "human": []
@@ -14,7 +14,7 @@
           "excerpt_redacted": true,
           "line_end": 9,
           "line_start": 1,
-          "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+          "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
           "sha256": "32b711a9d30c44b823ce1ef5274a21b0750e54400bd32f6652aca6a930d17e46",
           "source_id": "source:lab0:timeline",
           "source_kind": "timeline"
@@ -22,20 +22,21 @@
       ],
       "label": "indeterminate",
       "limitations": [
-        "No observable actions or steps are documented in the timeline.",
-        "Cannot infer any AI or human contribution from empty records."
+        "No observable actions or commands are recorded in the timeline.",
+        "Cannot infer any AI or human contribution from absent data.",
+        "独立 NIM 复核不同意该归属，已按协议降级为无法判断。"
       ],
       "scope": {
         "line_end": 9,
         "line_start": 1,
         "source_id": "source:lab0:timeline"
       },
-      "summary": "The timeline shows no recorded process steps or content for lab0.",
-      "unit_id": "unit-timeline",
+      "summary": "The timeline file shows no experimental content displayed; it only contains header information and a note that there is no displayable content.",
+      "unit_id": "unit-lab0-timeline",
       "unit_type": "process_segment"
     },
     {
-      "alternative_explanation": "The student might have performed lab0 tasks via non-shell methods (e.g., GUI) or the terminal capture may have missed command input.",
+      "alternative_explanation": "The student might have used non-shell interfaces (e.g., graphical editors, IDE) that are not reflected in shell command logs.",
       "behavior_roles": {
         "ai": [],
         "human": []
@@ -47,7 +48,7 @@
           "excerpt_redacted": true,
           "line_end": 25,
           "line_start": 1,
-          "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+          "relative_path": "终端对话记录\\terminal_qa_report_lab0.md",
           "sha256": "fa6dbb5391a7cfd239bc76c767ddae514d775647d944068b67541d438c0e698e",
           "source_id": "source:lab0:terminal_qa",
           "source_kind": "terminal_qa"
@@ -55,20 +56,21 @@
       ],
       "label": "indeterminate",
       "limitations": [
-        "No shell commands were observed, providing no evidence of process execution.",
-        "Absence of command data does not confirm lack of activity."
+        "Absence of shell command execution prevents determination of any activity.",
+        "No evidence of AI assistance or human input in the captured terminal data.",
+        "独立 NIM 复核不同意该归属，已按协议降级为无法判断。"
       ],
       "scope": {
         "line_end": 25,
         "line_start": 1,
         "source_id": "source:lab0:terminal_qa"
       },
-      "summary": "Terminal QA records zero shell commands executed across two terminal sessions.",
-      "unit_id": "unit-terminal-qa",
+      "summary": "Terminal QA report indicates zero shell commands executed and two terminal sessions with no shell command content.",
+      "unit_id": "unit-lab0-terminal_qa",
       "unit_type": "process_segment"
     },
     {
-      "alternative_explanation": "Possible use of non-command-based interactions or incomplete command logging.",
+      "alternative_explanation": "Student may have completed lab0 using methods not involving shell commands (e.g., file manipulation via GUI) which are not logged.",
       "behavior_roles": {
         "ai": [],
         "human": []
@@ -80,7 +82,7 @@
           "excerpt_redacted": true,
           "line_end": 16,
           "line_start": 1,
-          "relative_path": "终端命令统计/command_statistics_lab0.md",
+          "relative_path": "终端命令统计\\command_statistics_lab0.md",
           "sha256": "c578962af76d12b58c5edae161ddc456f76c1a0528ce2af1fb8b04c5b2e8af24",
           "source_id": "source:lab0:command_statistics",
           "source_kind": "command_statistics"
@@ -88,16 +90,17 @@
       ],
       "label": "indeterminate",
       "limitations": [
-        "Lack of command execution data prevents any assessment of contribution.",
-        "Zero counts may reflect logging gaps rather than actual inactivity."
+        "Lack of command-line data makes it impossible to attribute contributions to AI or human.",
+        "The materials provide no observable process to analyze.",
+        "独立 NIM 复核不同意该归属，已按协议降级为无法判断。"
       ],
       "scope": {
         "line_end": 16,
         "line_start": 1,
         "source_id": "source:lab0:command_statistics"
       },
-      "summary": "Command statistics indicate zero total and distinct shell commands executed.",
-      "unit_id": "unit-command-stats",
+      "summary": "Command statistics show zero total and distinct shell commands, confirming no shell-based activity was recorded.",
+      "unit_id": "unit-lab0-command_statistics",
       "unit_type": "process_segment"
     }
   ],
@@ -107,7 +110,7 @@
         "kind": "timeline",
         "line_count": 9,
         "reason": null,
-        "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+        "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
         "required": true,
         "sha256": "32b711a9d30c44b823ce1ef5274a21b0750e54400bd32f6652aca6a930d17e46",
         "source_id": "source:lab0:timeline",
@@ -117,7 +120,7 @@
         "kind": "terminal_qa",
         "line_count": 25,
         "reason": null,
-        "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+        "relative_path": "终端对话记录\\terminal_qa_report_lab0.md",
         "required": true,
         "sha256": "fa6dbb5391a7cfd239bc76c767ddae514d775647d944068b67541d438c0e698e",
         "source_id": "source:lab0:terminal_qa",
@@ -127,7 +130,7 @@
         "kind": "command_statistics",
         "line_count": 16,
         "reason": null,
-        "relative_path": "终端命令统计/command_statistics_lab0.md",
+        "relative_path": "终端命令统计\\command_statistics_lab0.md",
         "required": true,
         "sha256": "c578962af76d12b58c5edae161ddc456f76c1a0528ce2af1fb8b04c5b2e8af24",
         "source_id": "source:lab0:command_statistics",
@@ -148,10 +151,10 @@
     "status": "complete"
   },
   "diff_hunks": [],
-  "input_fingerprint": "sha256:9b5026a6fcaba5eefaf5e687241d5fd57980f98aa55ed13b2cb9f5f3042dd5b4",
+  "input_fingerprint": "sha256:7d78c65bfd97e8ed4465a86786b54d7dc931f7d506afeb099c5ce05636310b54",
   "lab": "lab0",
   "lab_conclusion": {
-    "alternative_explanation": "The student may have completed lab0 through means not captured in the provided logs (e.g., offline work, GUI tools, or undocumented sessions).",
+    "alternative_explanation": "The student may have completed lab0 through means not captured in the provided logs (e.g., offline work, GUI-based tools), leaving no trace in the timeline, terminal QA, or command statistics.",
     "confidence": "weak",
     "evidence_refs": [
       {
@@ -159,7 +162,7 @@
         "excerpt_redacted": true,
         "line_end": 9,
         "line_start": 1,
-        "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+        "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
         "sha256": "32b711a9d30c44b823ce1ef5274a21b0750e54400bd32f6652aca6a930d17e46",
         "source_id": "source:lab0:timeline",
         "source_kind": "timeline"
@@ -169,7 +172,7 @@
         "excerpt_redacted": true,
         "line_end": 25,
         "line_start": 1,
-        "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+        "relative_path": "终端对话记录\\terminal_qa_report_lab0.md",
         "sha256": "fa6dbb5391a7cfd239bc76c767ddae514d775647d944068b67541d438c0e698e",
         "source_id": "source:lab0:terminal_qa",
         "source_kind": "terminal_qa"
@@ -179,7 +182,7 @@
         "excerpt_redacted": true,
         "line_end": 16,
         "line_start": 1,
-        "relative_path": "终端命令统计/command_statistics_lab0.md",
+        "relative_path": "终端命令统计\\command_statistics_lab0.md",
         "sha256": "c578962af76d12b58c5edae161ddc456f76c1a0528ce2af1fb8b04c5b2e8af24",
         "source_id": "source:lab0:command_statistics",
         "source_kind": "command_statistics"
@@ -187,85 +190,96 @@
     ],
     "label": "indeterminate",
     "limitations": [
-      "Materials lack any record of commands, edits, or process steps.",
-      "Absence of evidence is not evidence of absence; inactivity cannot be confirmed."
+      "No shell commands or terminal output were recorded.",
+      "The materials lack any evidence of code creation, editing, or execution.",
+      "Without observable process, contribution attribution is speculative.",
+      "独立 NIM 复核存在分歧，实验级结论已降级为无法判断。"
     ],
-    "summary": "All available process materials for lab0 show no observable student activity (no timeline entries, zero terminal commands, and zero command statistics). Consequently, no determination can be made about AI or human contribution."
+    "summary": "独立复核对一个或多个贡献归属存在分歧，当前实验级结论为无法判断。"
   },
   "limitations": [
-    "Only process-related materials are available for lab0; no code or artifact diffs exist.",
-    "The provided logs may be incomplete or may not capture all forms of student interaction.",
-    "该结果是课程贡献归属线索，不认定真实作者、手打或粘贴方式、理解程度、诚信、违规或分数。"
+    "The provided materials for lab0 contain no executable commands or visible activity, limiting any inference about AI or human involvement.",
+    "Absence of data cannot be interpreted as lack of effort; it only reflects what was captured.",
+    "该结果是课程贡献归属线索，不认定真实作者、手打或粘贴方式、理解程度、诚信、违规或分数。",
+    "独立 NIM 复核存在分歧；相关单元和实验级结论已降级为无法判断。"
   ],
   "review": {
-    "disagreement_unit_ids": [],
-    "downgraded_unit_ids": [],
-    "overall_decision": "agree",
-    "reviewed_unit_ids": [
-      "unit-command-stats",
-      "unit-terminal-qa",
-      "unit-timeline"
+    "disagreement_unit_ids": [
+      "unit-lab0-timeline",
+      "unit-lab0-terminal_qa",
+      "unit-lab0-command_statistics"
     ],
-    "status": "agreed",
-    "summary": "All available materials for lab0 show no observable student activity (no timeline entries, zero terminal commands, and zero command statistics). Consequently, no determination can be made about AI or human contribution, making the indeterminate label correct for each unit.",
+    "downgraded_unit_ids": [
+      "unit-lab0-timeline",
+      "unit-lab0-terminal_qa",
+      "unit-lab0-command_statistics"
+    ],
+    "overall_decision": "disagree",
+    "reviewed_unit_ids": [
+      "unit-lab0-command_statistics",
+      "unit-lab0-terminal_qa",
+      "unit-lab0-timeline"
+    ],
+    "status": "disagreed",
+    "summary": "All three unit assessments lack observable evidence of AI or human contribution; therefore, the initial indeterminate labels are not supported by the provided material.",
     "unit_reviews": [
       {
-        "decision": "agree",
+        "decision": "disagree",
         "evidence_refs": [
           {
             "excerpt": "# 简洁实验过程时间线\n\n- 学号：2406080106\n- 姓名：高龙徽\n- 实验分类：lab0\n\n## 过程\n\n暂无可展示内容。",
             "excerpt_redacted": true,
             "line_end": 9,
             "line_start": 1,
-            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
             "sha256": "32b711a9d30c44b823ce1ef5274a21b0750e54400bd32f6652aca6a930d17e46",
             "source_id": "source:lab0:timeline",
             "source_kind": "timeline"
           }
         ],
-        "reason": "The timeline contains no recorded process steps or content, providing no evidence of AI or human activity; thus the indeterminate label is appropriate.",
-        "unit_id": "unit-timeline"
+        "reason": "The timeline file contains only header information and a note that there is no displayable content; there is no evidence of any AI or human contribution.",
+        "unit_id": "unit-lab0-timeline"
       },
       {
-        "decision": "agree",
+        "decision": "disagree",
         "evidence_refs": [
           {
             "excerpt": "# 终端会话问答对与命令频次报告\n\n- 学号：2406080106\n- 姓名：高龙徽\n- 数据采集时间：2026-09-09 12:15\n- 原始时间标识：20260909-1215\n- 原始数据目录：2406080106-高龙徽-20260909-1215\n- 终端录像数量：2\n\n- 实验分类：lab0\n\n- Shell 命令执行总次数：0\n- 不同 Shell 命令数量：0\n- 包含 Shell 命令的终端会话数：0\n- 无 Shell 命令的终端会话数：2\n- Shell 提取失败会话数：0\n\nQ 为 shell 提示符下输入的完整命令，A 为命令输出。每条命令输出最多保留 400 行。\n\n## 一、问答对集合\n\n## 二、终端命令频次\n\n| command | count |\n| --- | ---: |",
             "excerpt_redacted": true,
             "line_end": 25,
             "line_start": 1,
-            "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+            "relative_path": "终端对话记录\\terminal_qa_report_lab0.md",
             "sha256": "fa6dbb5391a7cfd239bc76c767ddae514d775647d944068b67541d438c0e698e",
             "source_id": "source:lab0:terminal_qa",
             "source_kind": "terminal_qa"
           }
         ],
-        "reason": "Terminal QA records zero shell commands executed across two terminal sessions, showing no observable activity; thus the indeterminate label is appropriate.",
-        "unit_id": "unit-terminal-qa"
+        "reason": "The terminal QA report shows zero shell commands executed and two terminal sessions with no shell command content, providing no evidence of AI or human contribution.",
+        "unit_id": "unit-lab0-terminal_qa"
       },
       {
-        "decision": "agree",
+        "decision": "disagree",
         "evidence_refs": [
           {
             "excerpt": "# Terminal Command Statistics\n\n- 学号：2406080106\n- 姓名：高龙徽\n- 数据采集时间：2026-09-09 12:15\n- 原始时间标识：20260909-1215\n- 原始数据目录：2406080106-高龙徽-20260909-1215\n- 终端录像数量：2\n\n- 实验分类：lab0\n\n- Shell 命令执行总次数：0\n- 不同 Shell 命令数量：0\n\n| command | count |\n| --- | ---: |",
             "excerpt_redacted": true,
             "line_end": 16,
             "line_start": 1,
-            "relative_path": "终端命令统计/command_statistics_lab0.md",
+            "relative_path": "终端命令统计\\command_statistics_lab0.md",
             "sha256": "c578962af76d12b58c5edae161ddc456f76c1a0528ce2af1fb8b04c5b2e8af24",
             "source_id": "source:lab0:command_statistics",
             "source_kind": "command_statistics"
           }
         ],
-        "reason": "Command statistics indicate zero total and distinct shell commands executed, providing no evidence of activity; thus the indeterminate label is appropriate.",
-        "unit_id": "unit-command-stats"
+        "reason": "The command statistics indicate zero total and distinct shell commands, confirming no shell-based activity was recorded and thus no evidence of AI or human contribution.",
+        "unit_id": "unit-lab0-command_statistics"
       }
     ]
   },
   "run_metadata": {
-    "completed_at": "2026-09-18T11:47:43.274088+00:00",
+    "completed_at": "2026-09-19T05:06:22.816064+00:00",
     "controlled_read_protocol_version": "contribution-read-material-v3",
-    "primary_attempts": 1,
+    "primary_attempts": 2,
     "primary_model": "nvidia/nemotron-3-super-120b-a12b",
     "primary_read_count": 3,
     "primary_repaired": false,
@@ -289,7 +303,7 @@
       "kind": "timeline",
       "line_count": 9,
       "reason": null,
-      "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+      "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
       "required": true,
       "sha256": "32b711a9d30c44b823ce1ef5274a21b0750e54400bd32f6652aca6a930d17e46",
       "source_id": "source:lab0:timeline"
@@ -299,7 +313,7 @@
       "kind": "terminal_qa",
       "line_count": 25,
       "reason": null,
-      "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+      "relative_path": "终端对话记录\\terminal_qa_report_lab0.md",
       "required": true,
       "sha256": "fa6dbb5391a7cfd239bc76c767ddae514d775647d944068b67541d438c0e698e",
       "source_id": "source:lab0:terminal_qa"
@@ -309,7 +323,7 @@
       "kind": "command_statistics",
       "line_count": 16,
       "reason": null,
-      "relative_path": "终端命令统计/command_statistics_lab0.md",
+      "relative_path": "终端命令统计\\command_statistics_lab0.md",
       "required": true,
       "sha256": "c578962af76d12b58c5edae161ddc456f76c1a0528ce2af1fb8b04c5b2e8af24",
       "source_id": "source:lab0:command_statistics"
@@ -331,8 +345,8 @@
     "student_id": null
   },
   "teacher_actions": [
-    "Require students to submit explicit artifacts (e.g., configuration files, scripts) or reflective logs for lab0.",
-    "Use screen recording or command auditing tools that guarantee capture of all terminal interactions.",
-    "Provide a minimal set of required actions for lab0 and verify their completion via checklists or automated verification."
+    "Require students to submit explicit command logs or screenshots for lab0 to ensure traceable process.",
+    "Consider using a standardized checklist or initial setup script that generates verifiable output for process-based labs.",
+    "Encourage students to document any non-terminal steps (e.g., GUI usage) in a brief text file to accompany their submissions."
   ]
 }
