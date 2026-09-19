@@ -1,0 +1,1033 @@
+{
+  "batch_id": "20260918T175648.921647Z",
+  "created_at": "2026-09-18T17:56:48.921647+00:00",
+  "force": false,
+  "results": [
+    {
+      "analysis_status": "complete",
+      "assessment": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\assessment\\assessment_lab0.json",
+      "coverage": {
+        "materials": [
+          {
+            "kind": "timeline",
+            "line_count": 3953,
+            "reason": null,
+            "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
+            "required": true,
+            "sha256": "d24e0dba61a000b75e2ab76202178984cda50d6efe6550a8a999bb012dd1082e",
+            "source_id": "source:lab0:timeline",
+            "status": "available"
+          },
+          {
+            "kind": "terminal_qa",
+            "line_count": 3761,
+            "reason": null,
+            "relative_path": "终端对话记录\\terminal_qa_report_lab0.md",
+            "required": true,
+            "sha256": "a739ff6e08973e388d18ae7d2761b7d1b6053eb1a9a767055ff84625535341ff",
+            "source_id": "source:lab0:terminal_qa",
+            "status": "available"
+          },
+          {
+            "kind": "command_statistics",
+            "line_count": 34,
+            "reason": null,
+            "relative_path": "终端命令统计\\command_statistics_lab0.md",
+            "required": true,
+            "sha256": "d196b61f4c3d77a918057a9887a29de250e216e14c4bb359d1021a4dc71e6103",
+            "source_id": "source:lab0:command_statistics",
+            "status": "available"
+          },
+          {
+            "kind": "diff_report",
+            "line_count": null,
+            "reason": "lab0 的贡献识别仅评估实验过程材料，不使用代码差异报告",
+            "relative_path": null,
+            "required": false,
+            "sha256": null,
+            "source_id": "source:lab0:diff_report",
+            "status": "not_applicable"
+          }
+        ],
+        "missing_or_limited": [],
+        "status": "complete"
+      },
+      "full_report": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab0.md",
+      "lab": "lab0",
+      "lab_conclusion": {
+        "alternative_explanation": "若学生在未记录的步骤中使用了 AI 辅助（例如查询命令语义或错误含义），当前材料无法体现这一点。",
+        "confidence": "strong",
+        "evidence_refs": [
+          {
+            "excerpt": "```text\nmake run\n\n[终端输出]\nmake: 警告：文件“target/kernel”的修改时间在未来 27355 秒后\nqemu-system-riscv64: -drive file=fs.img,if=none,format=raw,id=x0: Could not open 'fs.img': No such file or directory\nmake: *** [Makefile:152：run] 错误 1\n```",
+            "excerpt_redacted": true,
+            "line_end": 22,
+            "line_start": 15,
+            "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
+            "sha256": "d24e0dba61a000b75e2ab76202178984cda50d6efe6550a8a999bb012dd1082e",
+            "source_id": "source:lab0:timeline",
+            "source_kind": "timeline"
+          },
+          {
+            "excerpt": "```text\nmake ru\n\n[终端输出]\nmake: *** 没有规则可制作目标“ru”。 停止。\n```",
+            "excerpt_redacted": true,
+            "line_end": 35,
+            "line_start": 30,
+            "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
+            "sha256": "d24e0dba61a000b75e2ab76202178984cda50d6efe6550a8a999bb012dd1082e",
+            "source_id": "source:lab0:timeline",
+            "source_kind": "timeline"
+          },
+          {
+            "excerpt": "\n```text\nmake run\n\n[终端输出]\nmake: 警告：文件“target/kernel”的修改时间在未来 27304 秒后\nmaking fs image...\n输入了 512+0 块记录\n输出了 512+0 块记录\n268435456 字节 (268 MB, 256 MiB) 已复制，0.361707 s，742 MB/s\nmkfs.fat 4.2 (2021-01-31)\n[sudo] ailab-os 的密码：\n对不起，请重试。\n[sudo] ailab-os 的密码：\n\nOpenSBI v1.3\n   ____                    _____ ____ _____\n  / __ \\                  / ____|  _ \\_   _|\n | |  | |_ __   ___ _ __ | (___ | |_) || |\n | |  | | '_ \\ / _ \\ '_ \\ \\___ \\|  _ < | |\n | |__| | |_) |  __/ | | |____) | |_) || |_\n  \\____/| .__/ \\___|_| |_|_____/|___/_____|\n        | |\n        |_|\n\nPlatform Name             : riscv-virtio,qemu\nPl…",
+            "excerpt_redacted": true,
+            "line_end": 100,
+            "line_start": 42,
+            "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
+            "sha256": "d24e0dba61a000b75e2ab76202178984cda50d6efe6550a8a999bb012dd1082e",
+            "source_id": "source:lab0:timeline",
+            "source_kind": "timeline"
+          }
+        ],
+        "label": "human_dominant",
+        "limitations": [
+          "无法排除学生在未被捕获的时间点使用了 AI 获取帮助。",
+          "仅记录了终端交互，未包括代码编辑或文件内容变化的细节。"
+        ],
+        "summary": "学生通过自行执行 shell 命令完成了 lab0 的构建与运行过程，遇到文件缺失和拼写错误后进行了调试，最终成功启动系统。整个过程均可归因于人类操作。"
+      },
+      "message": "输入未变，仅重渲染双报告。",
+      "review": {
+        "disagreement_unit_ids": [],
+        "downgraded_unit_ids": [],
+        "overall_decision": "agree",
+        "reviewed_unit_ids": [
+          "lab0-process-01"
+        ],
+        "status": "agreed",
+        "summary": "The provided timeline confirms human-dominant execution of lab0 steps; no AI traces observed.",
+        "unit_reviews": [
+          {
+            "decision": "agree",
+            "evidence_refs": [
+              {
+                "excerpt": "```text\nmake run\n\n[终端输出]\nmake: 警告：文件“target/kernel”的修改时间在未来 27355 秒后\nqemu-system-riscv64: -drive file=fs.img,if=none,format=raw,id=x0: Could not open 'fs.img': No such file or directory\nmake: *** [Makefile:152：run] 错误 1\n```\n\n### 录像时间：2026-09-03T17:32:38.616+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nmake ru\n\n[终端输出]\nmake: *** 没有规则可制作目标“ru”。 停止。\n```\n\n### 录像时间：2026-09-03T17:32:41.880+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nmake run\n\n[终端输出]\nmake: 警告：文件“target/kernel”的修改时间在未来 27304 秒后\nmaking fs image...\n输入了 512+0 块记录\n输出了 512+0 块记录\n268435456 字节 (268 MB, 256 MiB) 已复制，0.361707 s，742 MB/s\nmkfs.…",
+                "excerpt_redacted": true,
+                "line_end": 100,
+                "line_start": 15,
+                "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
+                "sha256": "d24e0dba61a000b75e2ab76202178984cda50d6efe6550a8a999bb012dd1082e",
+                "source_id": "source:lab0:timeline",
+                "source_kind": "timeline"
+              }
+            ],
+            "reason": "The timeline shows only student-entered commands (make run, make ru, make run) and corresponding terminal outputs, with no indication of AI assistance or generated content.",
+            "unit_id": "lab0-process-01"
+          }
+        ]
+      },
+      "status": "rerendered",
+      "student_directory": "杨涵清",
+      "teacher_report": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab0.md"
+    },
+    {
+      "analysis_status": "complete",
+      "assessment": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\assessment\\assessment_lab1.json",
+      "coverage": {
+        "materials": [
+          {
+            "kind": "timeline",
+            "line_count": 1291,
+            "reason": null,
+            "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+            "required": true,
+            "sha256": "0a41f38067c250585c9b6e9b55a506624ec565c53580b62eb58641f4f2ec6621",
+            "source_id": "source:lab1:timeline",
+            "status": "available"
+          },
+          {
+            "kind": "terminal_qa",
+            "line_count": 1447,
+            "reason": null,
+            "relative_path": "终端对话记录\\terminal_qa_report_lab1.md",
+            "required": true,
+            "sha256": "ae9b4ca1a7be52bf641b4c4dfa8196980346f5e0f073ef5d6fa1e13f1c98ffa0",
+            "source_id": "source:lab1:terminal_qa",
+            "status": "available"
+          },
+          {
+            "kind": "command_statistics",
+            "line_count": 28,
+            "reason": null,
+            "relative_path": "终端命令统计\\command_statistics_lab1.md",
+            "required": true,
+            "sha256": "1ccb0797722afd484a778fcd0189098d7ebfb5958e9a97c164b0dd26b765cbca",
+            "source_id": "source:lab1:command_statistics",
+            "status": "available"
+          },
+          {
+            "kind": "diff_report",
+            "line_count": 130,
+            "reason": null,
+            "relative_path": "代码差异报告\\lab1.md",
+            "required": true,
+            "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+            "source_id": "source:lab1:diff_report",
+            "status": "available"
+          }
+        ],
+        "missing_or_limited": [],
+        "status": "complete"
+      },
+      "full_report": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab1.md",
+      "lab": "lab1",
+      "lab_conclusion": {
+        "alternative_explanation": "The student could have completed the halt system call independently, using only their own knowledge and the provided TODOs, with claude used for unrelated queries.",
+        "confidence": "weak",
+        "evidence_refs": [
+          {
+            "excerpt": "# lab1 源码差异报告\n\n- 学号：2406080118\n- 姓名：杨涵清\n- 数据采集时间：2026-09-17 17:29\n- 原始提交目录：`D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260917-1729`\n- 基准目录：`D:\\OS-Lab-Score\\xv6-ai-labs-km-无答案\\lab1`\n- 生成时间：2026-09-19 01:37:12 +0800\n- 比较范围：kernel、xv6-user、linker 下的源码/脚本/构建配置，以及根目录 Makefile\n- 空白符策略：忽略空格、Tab、空白行和行尾空白差异\n\n## 统计\n\n| 项目 | 数量 |\n| --- | ---: |\n| 纳入比较的文件 | 107 |\n| 一致文件 | 102 |\n| 有差异文件 | 5 |\n| 新增行 | 15 |\n| 删除行 | 5 |\n| 处理异常文件 | 0 |\n\n## 差异详情\n\n### `Makefile`（修改）\n\n```diff\ndiff --git 基准/Makefile 学生/Makefile\nindex f727dde..2aaf8f5 100644\n--- 基准/Makefile\n+++ 学生/Makefile\n@@ -151,6 +151,12 @@ ifeq ($(p…",
+            "excerpt_redacted": true,
+            "line_end": 130,
+            "line_start": 1,
+            "relative_path": "代码差异报告\\lab1.md",
+            "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+            "source_id": "source:lab1:diff_report",
+            "source_kind": "diff_report"
+          },
+          {
+            "excerpt": "| claude | 1 |",
+            "excerpt_redacted": true,
+            "line_end": 24,
+            "line_start": 24,
+            "relative_path": "终端命令统计\\command_statistics_lab1.md",
+            "sha256": "1ccb0797722afd484a778fcd0189098d7ebfb5958e9a97c164b0dd26b765cbca",
+            "source_id": "source:lab1:command_statistics",
+            "source_kind": "command_statistics"
+          },
+          {
+            "excerpt": "```text\nmake build\n```",
+            "excerpt_redacted": true,
+            "line_end": 32,
+            "line_start": 30,
+            "relative_path": "终端对话记录\\terminal_qa_report_lab1.md",
+            "sha256": "ae9b4ca1a7be52bf641b4c4dfa8196980346f5e0f073ef5d6fa1e13f1c98ffa0",
+            "source_id": "source:lab1:terminal_qa",
+            "source_kind": "terminal_qa"
+          },
+          {
+            "excerpt": "```text\nmake build",
+            "excerpt_redacted": true,
+            "line_end": 16,
+            "line_start": 15,
+            "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+            "sha256": "0a41f38067c250585c9b6e9b55a506624ec565c53580b62eb58641f4f2ec6621",
+            "source_id": "source:lab1:timeline",
+            "source_kind": "timeline"
+          },
+          {
+            "excerpt": "make fs\n",
+            "excerpt_redacted": true,
+            "line_end": 240,
+            "line_start": 239,
+            "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+            "sha256": "0a41f38067c250585c9b6e9b55a506624ec565c53580b62eb58641f4f2ec6621",
+            "source_id": "source:lab1:timeline",
+            "source_kind": "timeline"
+          }
+        ],
+        "label": "indeterminate",
+        "limitations": [
+          "No direct observation of AI-generated code snippets.",
+          "Single claude command does not guarantee AI contributed code; it could have been used for explanation only.",
+          "Timeline and command statistics show edit and build activity but not the exact content of edits.",
+          "独立 NIM 复核存在分歧，实验级结论已降级为无法判断。"
+        ],
+        "summary": "独立复核对一个或多个贡献归属存在分歧，当前实验级结论为无法判断。"
+      },
+      "message": "输入未变，仅重渲染双报告。",
+      "review": {
+        "disagreement_unit_ids": [
+          "hunk:lab1:1",
+          "hunk:lab1:2",
+          "hunk:lab1:3",
+          "hunk:lab1:4",
+          "hunk:lab1:5",
+          "hunk:lab1:6",
+          "hunk:lab1:7"
+        ],
+        "downgraded_unit_ids": [
+          "hunk:lab1:1",
+          "hunk:lab1:2",
+          "hunk:lab1:3",
+          "hunk:lab1:4",
+          "hunk:lab1:5",
+          "hunk:lab1:6",
+          "hunk:lab1:7"
+        ],
+        "overall_decision": "disagree",
+        "reviewed_unit_ids": [
+          "hunk:lab1:1",
+          "hunk:lab1:2",
+          "hunk:lab1:3",
+          "hunk:lab1:4",
+          "hunk:lab1:5",
+          "hunk:lab1:6",
+          "hunk:lab1:7"
+        ],
+        "status": "disagreed",
+        "summary": "The evidence does not support AI contribution for any of the changed hunks; the only indication of AI use is a single 'claude' command that could have been for explanation only, and all changes could have been made independently by the student.",
+        "unit_reviews": [
+          {
+            "decision": "disagree",
+            "evidence_refs": [
+              {
+                "excerpt": "@@ -151,6 +151,12 @@ ifeq ($(platform), k210)\n else\n \t@$(QEMU) $(QEMUOPTS)\n endif\n+# 调试⽤：启动带 gdbstub 的 QEMU（端⼝ 1234），停在起点等 gdb 接管\n+# 另开⼀个终端跑：gdb-multiarch target/kernel -ex 'set arch riscv:rv64' -ex 'target remote localhost:1234'\n+gdb: build\n+\t@echo \"*** QEMU 已在 :1234 等待 gdb，请在另⼀个终端运⾏: ***\"\n+\t@echo \" gdb-multiarch target/kernel -ex 'set arch riscv:rv64' -ex 'target remote localhost:1234'\"\n+\t@$(QEMU) $(QEMUOPTS) -S -s\n \n $U/initcode: $U/initcode.S\n \t$(CC) $(CFLAGS) -march=rv64g -nostdinc -I. -Ikernel -c $U/initcode.S -o $U/initcode.o",
+                "excerpt_redacted": true,
+                "line_end": 44,
+                "line_start": 32,
+                "relative_path": "代码差异报告\\lab1.md",
+                "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+                "source_id": "source:lab1:diff_report",
+                "source_kind": "diff_report"
+              },
+              {
+                "excerpt": "| claude | 1 |",
+                "excerpt_redacted": true,
+                "line_end": 24,
+                "line_start": 24,
+                "relative_path": "终端命令统计\\command_statistics_lab1.md",
+                "sha256": "1ccb0797722afd484a778fcd0189098d7ebfb5958e9a97c164b0dd26b765cbca",
+                "source_id": "source:lab1:command_statistics",
+                "source_kind": "command_statistics"
+              }
+            ],
+            "reason": "The materials show only a single 'claude' command in the command statistics, which does not demonstrate AI-generated code; the changes to the Makefile could have been made independently by the student, and there is no direct evidence of AI contribution for this hunk.",
+            "unit_id": "hunk:lab1:1"
+          },
+          {
+            "decision": "disagree",
+            "evidence_refs": [
+              {
+                "excerpt": "@@ -242,7 +248,7 @@ sdcard: userprogs\n \t@sudo cp README $(dst)/README\n \n clean: \n-\trm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \\\n+\trm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg fs.img\\\n \t*/*.o */*.d */*.asm */*.sym \\\n \t$T/* \\\n \t$U/initcode $U/initcode.out \\",
+                "excerpt_redacted": true,
+                "line_end": 53,
+                "line_start": 45,
+                "relative_path": "代码差异报告\\lab1.md",
+                "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+                "source_id": "source:lab1:diff_report",
+                "source_kind": "diff_report"
+              },
+              {
+                "excerpt": "| claude | 1 |",
+                "excerpt_redacted": true,
+                "line_end": 24,
+                "line_start": 24,
+                "relative_path": "终端命令统计\\command_statistics_lab1.md",
+                "sha256": "1ccb0797722afd484a778fcd0189098d7ebfb5958e9a97c164b0dd26b765cbca",
+                "source_id": "source:lab1:command_statistics",
+                "source_kind": "command_statistics"
+              }
+            ],
+            "reason": "The materials show only a single 'claude' command in the command statistics, which does not demonstrate AI-generated code; the changes to the Makefile clean target could have been made independently by the student, and there is no direct evidence of AI contribution for this hunk.",
+            "unit_id": "hunk:lab1:2"
+          },
+          {
+            "decision": "disagree",
+            "evidence_refs": [
+              {
+                "excerpt": "### `kernel/include/sysnum.h`（修改）\n\n```diff\ndiff --git 基准/kernel/include/sysnum.h 学生/kernel/include/sysnum.h\nindex fe4492e..2e7ef0b 100644\n--- 基准/kernel/include/sysnum.h\n+++ 学生/kernel/include/sysnum.h\n@@ -56,6 +56,5 @@\n //   - 你选的号和已有 syscall 冲突了吗？\n //   - syscalls[] 用这个号做下标会越界吗？\n // ───────────────────────────────────────────────────────────\n-#define SYS_halt   0   // ← 占位。学生：思考后改成未占用号\n-\n+#define SYS_halt   27\n #endif\n```",
+                "excerpt_redacted": true,
+                "line_end": 71,
+                "line_start": 56,
+                "relative_path": "代码差异报告\\lab1.md",
+                "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+                "source_id": "source:lab1:diff_report",
+                "source_kind": "diff_report"
+              },
+              {
+                "excerpt": "| claude | 1 |",
+                "excerpt_redacted": true,
+                "line_end": 24,
+                "line_start": 24,
+                "relative_path": "终端命令统计\\command_statistics_lab1.md",
+                "sha256": "1ccb0797722afd484a778fcd0189098d7ebfb5958e9a97c164b0dd26b765cbca",
+                "source_id": "source:lab1:command_statistics",
+                "source_kind": "command_statistics"
+              }
+            ],
+            "reason": "The materials show only a single 'claude' command in the command statistics, which does not demonstrate AI-generated code; the change to sysnum.h could have been made independently by the student, and there is no direct evidence of AI contribution for this hunk.",
+            "unit_id": "hunk:lab1:3"
+          },
+          {
+            "decision": "disagree",
+            "evidence_refs": [
+              {
+                "excerpt": "### `kernel/syscall.c`（修改）\n\n```diff\ndiff --git 基准/kernel/syscall.c 学生/kernel/syscall.c\nindex 0219b80..71a393b 100644\n--- 基准/kernel/syscall.c\n+++ 学生/kernel/syscall.c\n@@ -145,6 +146,8 @@ static uint64 (*syscalls[])(void) = {\n   [SYS_trace]       sys_trace,\n   [SYS_sysinfo]     sys_sysinfo,\n   [SYS_rename]      sys_rename,\n+  [SYS_halt]        sys_halt,\n+\n   // ═══════════════════════════════════════════════════════════════\n   // 【AI-CHECKPOINT ③】syscall.c syscalls[] dispatch（主线·教学）\n   // ────────────────────────────────────────────────────────────────\n@@ -199,6 +202,8 @@ static char *sysnames[]…",
+                "excerpt_redacted": true,
+                "line_end": 98,
+                "line_start": 73,
+                "relative_path": "代码差异报告\\lab1.md",
+                "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+                "source_id": "source:lab1:diff_report",
+                "source_kind": "diff_report"
+              },
+              {
+                "excerpt": "| claude | 1 |",
+                "excerpt_redacted": true,
+                "line_end": 24,
+                "line_start": 24,
+                "relative_path": "终端命令统计\\command_statistics_lab1.md",
+                "sha256": "1ccb0797722afd484a778fcd0189098d7ebfb5958e9a97c164b0dd26b765cbca",
+                "source_id": "source:lab1:command_statistics",
+                "source_kind": "command_statistics"
+              }
+            ],
+            "reason": "The materials show only a single 'claude' command in the command statistics, which does not demonstrate AI-generated code; the addition to syscall.c could have been made independently by the student, and there is no direct evidence of AI contribution for this hunk.",
+            "unit_id": "hunk:lab1:4"
+          },
+          {
+            "decision": "disagree",
+            "evidence_refs": [
+              {
+                "excerpt": "\n### `kernel/sysproc.c`（修改）\n\n```diff\ndiff --git 基准/kernel/sysproc.c 学生/kernel/sysproc.c\nindex 809b911..0396327 100644\n--- 基准/kernel/sysproc.c\n+++ 学生/kernel/sysproc.c\n@@ -185,6 +185,6 @@ sys_trace(void)\n uint64\n sys_halt(void)\n {\n-  // todo（CP④）：通过 SBI 提供的关机封装结束系统\n-  return -1;  // 占位——学生实现后替换为实际关机逻辑\n+sbi_shutdown();\n+  return 0;  \n }\n```",
+                "excerpt_redacted": true,
+                "line_end": 116,
+                "line_start": 99,
+                "relative_path": "代码差异报告\\lab1.md",
+                "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+                "source_id": "source:lab1:diff_report",
+                "source_kind": "diff_report"
+              },
+              {
+                "excerpt": "| claude | 1 |",
+                "excerpt_redacted": true,
+                "line_end": 24,
+                "line_start": 24,
+                "relative_path": "终端命令统计\\command_statistics_lab1.md",
+                "sha256": "1ccb0797722afd484a778fcd0189098d7ebfb5958e9a97c164b0dd26b765cbca",
+                "source_id": "source:lab1:command_statistics",
+                "source_kind": "command_statistics"
+              }
+            ],
+            "reason": "The materials show only a single 'claude' command in the command statistics, which does not demonstrate AI-generated code; the addition to sysnames[] could have been made independently by the student, and there is no direct evidence of AI contribution for this hunk.",
+            "unit_id": "hunk:lab1:5"
+          },
+          {
+            "decision": "disagree",
+            "evidence_refs": [
+              {
+                "excerpt": "```diff\ndiff --git 基准/kernel/sysproc.c 学生/kernel/sysproc.c\nindex 809b911..0396327 100644\n--- 基准/kernel/sysproc.c\n+++ 学生/kernel/sysproc.c\n@@ -185,6 +185,6 @@ sys_trace(void)\n uint64\n sys_halt(void)\n {\n-  // todo（CP④）：通过 SBI 提供的关机封装结束系统\n-  return -1;  // 占位——学生实现后替换为实际关机逻辑\n+sbi_shutdown();\n+  return 0;  \n }\n```",
+                "excerpt_redacted": true,
+                "line_end": 116,
+                "line_start": 102,
+                "relative_path": "代码差异报告\\lab1.md",
+                "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+                "source_id": "source:lab1:diff_report",
+                "source_kind": "diff_report"
+              },
+              {
+                "excerpt": "| claude | 1 |",
+                "excerpt_redacted": true,
+                "line_end": 24,
+                "line_start": 24,
+                "relative_path": "终端命令统计\\command_statistics_lab1.md",
+                "sha256": "1ccb0797722afd484a778fcd0189098d7ebfb5958e9a97c164b0dd26b765cbca",
+                "source_id": "source:lab1:command_statistics",
+                "source_kind": "command_statistics"
+              }
+            ],
+            "reason": "The materials show only a single 'claude' command in the command statistics, which does not demonstrate AI-generated code; the implementation of sys_halt could have been made independently by the student, and there is no direct evidence of AI contribution for this hunk.",
+            "unit_id": "hunk:lab1:6"
+          },
+          {
+            "decision": "disagree",
+            "evidence_refs": [
+              {
+                "excerpt": "### `xv6-user/usys.pl`（修改）\n\n```diff\ndiff --git 基准/xv6-user/usys.pl 学生/xv6-user/usys.pl\nindex 2e7f4bc..3c77c44 100644\n--- 基准/xv6-user/usys.pl\n+++ 学生/xv6-user/usys.pl\n@@ -65,3 +65,4 @@ entry(\"rename\");\n #   - ecall 后的路径能和 syscall.c 的分发表连起来吗？\n # ───────────────────────────────────────────────────────────\n # entry(\"halt\");  // TODO: 学生自行添加此行（CP②）\n+entry(\"halt\");\n```",
+                "excerpt_redacted": true,
+                "line_end": 130,
+                "line_start": 118,
+                "relative_path": "代码差异报告\\lab1.md",
+                "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+                "source_id": "source:lab1:diff_report",
+                "source_kind": "diff_report"
+              },
+              {
+                "excerpt": "| claude | 1 |",
+                "excerpt_redacted": true,
+                "line_end": 24,
+                "line_start": 24,
+                "relative_path": "终端命令统计\\command_statistics_lab1.md",
+                "sha256": "1ccb0797722afd484a778fcd0189098d7ebfb5958e9a97c164b0dd26b765cbca",
+                "source_id": "source:lab1:command_statistics",
+                "source_kind": "command_statistics"
+              }
+            ],
+            "reason": "The materials show only a single 'claude' command in the command statistics, which does not demonstrate AI-generated code; the addition to usys.pl could have been made independently by the student, and there is no direct evidence of AI contribution for this hunk.",
+            "unit_id": "hunk:lab1:7"
+          }
+        ]
+      },
+      "status": "rerendered",
+      "student_directory": "杨涵清",
+      "teacher_report": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab1.md"
+    },
+    {
+      "analysis_status": "insufficient_data",
+      "assessment": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\assessment\\assessment_lab2.json",
+      "coverage": {
+        "materials": [
+          {
+            "kind": "timeline",
+            "line_count": null,
+            "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+            "relative_path": "简洁实验过程时间线\\timeline_lab2.md",
+            "required": true,
+            "sha256": null,
+            "source_id": "source:lab2:timeline",
+            "status": "missing"
+          },
+          {
+            "kind": "terminal_qa",
+            "line_count": null,
+            "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+            "relative_path": "终端对话记录\\terminal_qa_report_lab2.md",
+            "required": true,
+            "sha256": null,
+            "source_id": "source:lab2:terminal_qa",
+            "status": "missing"
+          },
+          {
+            "kind": "command_statistics",
+            "line_count": null,
+            "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+            "relative_path": "终端命令统计\\command_statistics_lab2.md",
+            "required": true,
+            "sha256": null,
+            "source_id": "source:lab2:command_statistics",
+            "status": "missing"
+          },
+          {
+            "kind": "diff_report",
+            "line_count": 45,
+            "reason": null,
+            "relative_path": "代码差异报告\\lab2.md",
+            "required": true,
+            "sha256": "b39be7b08928d9359c38c0b90a14e756506b26f9347e3cd8004645cb88f5c56e",
+            "source_id": "source:lab2:diff_report",
+            "status": "available"
+          }
+        ],
+        "missing_or_limited": [
+          "source:lab2:timeline: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+          "source:lab2:terminal_qa: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+          "source:lab2:command_statistics: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI"
+        ],
+        "status": "insufficient"
+      },
+      "full_report": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab2.md",
+      "lab": "lab2",
+      "lab_conclusion": {
+        "alternative_explanation": "资料缺失不表示未使用 AI、未进行人工操作或没有代码变化。",
+        "confidence": "weak",
+        "evidence_refs": [],
+        "label": "indeterminate",
+        "limitations": [
+          "缺少必需的已清洗材料：source:lab2:timeline（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）；source:lab2:terminal_qa（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）；source:lab2:command_statistics（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）"
+        ],
+        "summary": "当前 Lab 缺少必需的已清洗过程或代码材料，未进行 AI/人工贡献归属。"
+      },
+      "message": "输入未变，未调用 NIM。",
+      "review": {
+        "disagreement_unit_ids": [],
+        "downgraded_unit_ids": [],
+        "overall_decision": null,
+        "reviewed_unit_ids": [],
+        "status": "not_run",
+        "summary": "资料不足，未调用主分析或独立复核模型。",
+        "unit_reviews": []
+      },
+      "status": "cached",
+      "student_directory": "杨涵清",
+      "teacher_report": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab2.md"
+    },
+    {
+      "analysis_status": "insufficient_data",
+      "assessment": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\assessment\\assessment_lab3.json",
+      "coverage": {
+        "materials": [
+          {
+            "kind": "timeline",
+            "line_count": null,
+            "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+            "relative_path": "简洁实验过程时间线\\timeline_lab3.md",
+            "required": true,
+            "sha256": null,
+            "source_id": "source:lab3:timeline",
+            "status": "missing"
+          },
+          {
+            "kind": "terminal_qa",
+            "line_count": null,
+            "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+            "relative_path": "终端对话记录\\terminal_qa_report_lab3.md",
+            "required": true,
+            "sha256": null,
+            "source_id": "source:lab3:terminal_qa",
+            "status": "missing"
+          },
+          {
+            "kind": "command_statistics",
+            "line_count": null,
+            "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+            "relative_path": "终端命令统计\\command_statistics_lab3.md",
+            "required": true,
+            "sha256": null,
+            "source_id": "source:lab3:command_statistics",
+            "status": "missing"
+          },
+          {
+            "kind": "diff_report",
+            "line_count": 45,
+            "reason": null,
+            "relative_path": "代码差异报告\\lab3.md",
+            "required": true,
+            "sha256": "7e6c45e2602860b6551a22a6584da073ab370f4ebbe8c1002bf9159dc0974423",
+            "source_id": "source:lab3:diff_report",
+            "status": "available"
+          }
+        ],
+        "missing_or_limited": [
+          "source:lab3:timeline: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+          "source:lab3:terminal_qa: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+          "source:lab3:command_statistics: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI"
+        ],
+        "status": "insufficient"
+      },
+      "full_report": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab3.md",
+      "lab": "lab3",
+      "lab_conclusion": {
+        "alternative_explanation": "资料缺失不表示未使用 AI、未进行人工操作或没有代码变化。",
+        "confidence": "weak",
+        "evidence_refs": [],
+        "label": "indeterminate",
+        "limitations": [
+          "缺少必需的已清洗材料：source:lab3:timeline（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）；source:lab3:terminal_qa（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）；source:lab3:command_statistics（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）"
+        ],
+        "summary": "当前 Lab 缺少必需的已清洗过程或代码材料，未进行 AI/人工贡献归属。"
+      },
+      "message": "输入未变，未调用 NIM。",
+      "review": {
+        "disagreement_unit_ids": [],
+        "downgraded_unit_ids": [],
+        "overall_decision": null,
+        "reviewed_unit_ids": [],
+        "status": "not_run",
+        "summary": "资料不足，未调用主分析或独立复核模型。",
+        "unit_reviews": []
+      },
+      "status": "cached",
+      "student_directory": "杨涵清",
+      "teacher_report": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab3.md"
+    },
+    {
+      "analysis_status": "insufficient_data",
+      "assessment": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\assessment\\assessment_lab4.json",
+      "coverage": {
+        "materials": [
+          {
+            "kind": "timeline",
+            "line_count": null,
+            "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+            "relative_path": "简洁实验过程时间线\\timeline_lab4.md",
+            "required": true,
+            "sha256": null,
+            "source_id": "source:lab4:timeline",
+            "status": "missing"
+          },
+          {
+            "kind": "terminal_qa",
+            "line_count": null,
+            "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+            "relative_path": "终端对话记录\\terminal_qa_report_lab4.md",
+            "required": true,
+            "sha256": null,
+            "source_id": "source:lab4:terminal_qa",
+            "status": "missing"
+          },
+          {
+            "kind": "command_statistics",
+            "line_count": null,
+            "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+            "relative_path": "终端命令统计\\command_statistics_lab4.md",
+            "required": true,
+            "sha256": null,
+            "source_id": "source:lab4:command_statistics",
+            "status": "missing"
+          },
+          {
+            "kind": "diff_report",
+            "line_count": 45,
+            "reason": null,
+            "relative_path": "代码差异报告\\lab4.md",
+            "required": true,
+            "sha256": "be55074d07c3fcb6fc56145ac9b617257b349835cec1a8ea9999de6e941069e4",
+            "source_id": "source:lab4:diff_report",
+            "status": "available"
+          }
+        ],
+        "missing_or_limited": [
+          "source:lab4:timeline: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+          "source:lab4:terminal_qa: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+          "source:lab4:command_statistics: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI"
+        ],
+        "status": "insufficient"
+      },
+      "full_report": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab4.md",
+      "lab": "lab4",
+      "lab_conclusion": {
+        "alternative_explanation": "资料缺失不表示未使用 AI、未进行人工操作或没有代码变化。",
+        "confidence": "weak",
+        "evidence_refs": [],
+        "label": "indeterminate",
+        "limitations": [
+          "缺少必需的已清洗材料：source:lab4:timeline（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）；source:lab4:terminal_qa（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）；source:lab4:command_statistics（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）"
+        ],
+        "summary": "当前 Lab 缺少必需的已清洗过程或代码材料，未进行 AI/人工贡献归属。"
+      },
+      "message": "输入未变，未调用 NIM。",
+      "review": {
+        "disagreement_unit_ids": [],
+        "downgraded_unit_ids": [],
+        "overall_decision": null,
+        "reviewed_unit_ids": [],
+        "status": "not_run",
+        "summary": "资料不足，未调用主分析或独立复核模型。",
+        "unit_reviews": []
+      },
+      "status": "cached",
+      "student_directory": "杨涵清",
+      "teacher_report": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab4.md"
+    },
+    {
+      "analysis_status": "insufficient_data",
+      "assessment": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\assessment\\assessment_lab5.json",
+      "coverage": {
+        "materials": [
+          {
+            "kind": "timeline",
+            "line_count": null,
+            "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+            "relative_path": "简洁实验过程时间线\\timeline_lab5.md",
+            "required": true,
+            "sha256": null,
+            "source_id": "source:lab5:timeline",
+            "status": "missing"
+          },
+          {
+            "kind": "terminal_qa",
+            "line_count": null,
+            "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+            "relative_path": "终端对话记录\\terminal_qa_report_lab5.md",
+            "required": true,
+            "sha256": null,
+            "source_id": "source:lab5:terminal_qa",
+            "status": "missing"
+          },
+          {
+            "kind": "command_statistics",
+            "line_count": null,
+            "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+            "relative_path": "终端命令统计\\command_statistics_lab5.md",
+            "required": true,
+            "sha256": null,
+            "source_id": "source:lab5:command_statistics",
+            "status": "missing"
+          },
+          {
+            "kind": "diff_report",
+            "line_count": 45,
+            "reason": null,
+            "relative_path": "代码差异报告\\lab5.md",
+            "required": true,
+            "sha256": "b4d1ea32e26616e024572280a972536d732a50630da34d24bdd41a8927324b3a",
+            "source_id": "source:lab5:diff_report",
+            "status": "available"
+          }
+        ],
+        "missing_or_limited": [
+          "source:lab5:timeline: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+          "source:lab5:terminal_qa: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+          "source:lab5:command_statistics: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI"
+        ],
+        "status": "insufficient"
+      },
+      "full_report": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab5.md",
+      "lab": "lab5",
+      "lab_conclusion": {
+        "alternative_explanation": "资料缺失不表示未使用 AI、未进行人工操作或没有代码变化。",
+        "confidence": "weak",
+        "evidence_refs": [],
+        "label": "indeterminate",
+        "limitations": [
+          "缺少必需的已清洗材料：source:lab5:timeline（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）；source:lab5:terminal_qa（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）；source:lab5:command_statistics（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）"
+        ],
+        "summary": "当前 Lab 缺少必需的已清洗过程或代码材料，未进行 AI/人工贡献归属。"
+      },
+      "message": "输入未变，未调用 NIM。",
+      "review": {
+        "disagreement_unit_ids": [],
+        "downgraded_unit_ids": [],
+        "overall_decision": null,
+        "reviewed_unit_ids": [],
+        "status": "not_run",
+        "summary": "资料不足，未调用主分析或独立复核模型。",
+        "unit_reviews": []
+      },
+      "status": "cached",
+      "student_directory": "杨涵清",
+      "teacher_report": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab5.md"
+    },
+    {
+      "analysis_status": "insufficient_data",
+      "assessment": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\assessment\\assessment_lab6.json",
+      "coverage": {
+        "materials": [
+          {
+            "kind": "timeline",
+            "line_count": null,
+            "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+            "relative_path": "简洁实验过程时间线\\timeline_lab6.md",
+            "required": true,
+            "sha256": null,
+            "source_id": "source:lab6:timeline",
+            "status": "missing"
+          },
+          {
+            "kind": "terminal_qa",
+            "line_count": null,
+            "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+            "relative_path": "终端对话记录\\terminal_qa_report_lab6.md",
+            "required": true,
+            "sha256": null,
+            "source_id": "source:lab6:terminal_qa",
+            "status": "missing"
+          },
+          {
+            "kind": "command_statistics",
+            "line_count": null,
+            "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+            "relative_path": "终端命令统计\\command_statistics_lab6.md",
+            "required": true,
+            "sha256": null,
+            "source_id": "source:lab6:command_statistics",
+            "status": "missing"
+          },
+          {
+            "kind": "diff_report",
+            "line_count": 45,
+            "reason": null,
+            "relative_path": "代码差异报告\\lab6.md",
+            "required": true,
+            "sha256": "4223b15f62e462856dc6eaae276dfe27b3ddddabc130fabcd1ba43d00a360f4e",
+            "source_id": "source:lab6:diff_report",
+            "status": "available"
+          }
+        ],
+        "missing_or_limited": [
+          "source:lab6:timeline: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+          "source:lab6:terminal_qa: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+          "source:lab6:command_statistics: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI"
+        ],
+        "status": "insufficient"
+      },
+      "full_report": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab6.md",
+      "lab": "lab6",
+      "lab_conclusion": {
+        "alternative_explanation": "资料缺失不表示未使用 AI、未进行人工操作或没有代码变化。",
+        "confidence": "weak",
+        "evidence_refs": [],
+        "label": "indeterminate",
+        "limitations": [
+          "缺少必需的已清洗材料：source:lab6:timeline（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）；source:lab6:terminal_qa（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）；source:lab6:command_statistics（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）"
+        ],
+        "summary": "当前 Lab 缺少必需的已清洗过程或代码材料，未进行 AI/人工贡献归属。"
+      },
+      "message": "输入未变，未调用 NIM。",
+      "review": {
+        "disagreement_unit_ids": [],
+        "downgraded_unit_ids": [],
+        "overall_decision": null,
+        "reviewed_unit_ids": [],
+        "status": "not_run",
+        "summary": "资料不足，未调用主分析或独立复核模型。",
+        "unit_reviews": []
+      },
+      "status": "cached",
+      "student_directory": "杨涵清",
+      "teacher_report": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab6.md"
+    },
+    {
+      "analysis_status": "insufficient_data",
+      "assessment": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\assessment\\assessment_lab7.json",
+      "coverage": {
+        "materials": [
+          {
+            "kind": "timeline",
+            "line_count": null,
+            "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+            "relative_path": "简洁实验过程时间线\\timeline_lab7.md",
+            "required": true,
+            "sha256": null,
+            "source_id": "source:lab7:timeline",
+            "status": "missing"
+          },
+          {
+            "kind": "terminal_qa",
+            "line_count": null,
+            "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+            "relative_path": "终端对话记录\\terminal_qa_report_lab7.md",
+            "required": true,
+            "sha256": null,
+            "source_id": "source:lab7:terminal_qa",
+            "status": "missing"
+          },
+          {
+            "kind": "command_statistics",
+            "line_count": null,
+            "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+            "relative_path": "终端命令统计\\command_statistics_lab7.md",
+            "required": true,
+            "sha256": null,
+            "source_id": "source:lab7:command_statistics",
+            "status": "missing"
+          },
+          {
+            "kind": "diff_report",
+            "line_count": 45,
+            "reason": null,
+            "relative_path": "代码差异报告\\lab7.md",
+            "required": true,
+            "sha256": "451b383d06deb88e9d314aa04c1449ad56539eb4370334e9e72176c1d3943f3e",
+            "source_id": "source:lab7:diff_report",
+            "status": "available"
+          }
+        ],
+        "missing_or_limited": [
+          "source:lab7:timeline: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+          "source:lab7:terminal_qa: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+          "source:lab7:command_statistics: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI"
+        ],
+        "status": "insufficient"
+      },
+      "full_report": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab7.md",
+      "lab": "lab7",
+      "lab_conclusion": {
+        "alternative_explanation": "资料缺失不表示未使用 AI、未进行人工操作或没有代码变化。",
+        "confidence": "weak",
+        "evidence_refs": [],
+        "label": "indeterminate",
+        "limitations": [
+          "缺少必需的已清洗材料：source:lab7:timeline（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）；source:lab7:terminal_qa（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）；source:lab7:command_statistics（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）"
+        ],
+        "summary": "当前 Lab 缺少必需的已清洗过程或代码材料，未进行 AI/人工贡献归属。"
+      },
+      "message": "输入未变，未调用 NIM。",
+      "review": {
+        "disagreement_unit_ids": [],
+        "downgraded_unit_ids": [],
+        "overall_decision": null,
+        "reviewed_unit_ids": [],
+        "status": "not_run",
+        "summary": "资料不足，未调用主分析或独立复核模型。",
+        "unit_reviews": []
+      },
+      "status": "cached",
+      "student_directory": "杨涵清",
+      "teacher_report": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab7.md"
+    },
+    {
+      "analysis_status": "insufficient_data",
+      "assessment": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\assessment\\assessment_lab8.json",
+      "coverage": {
+        "materials": [
+          {
+            "kind": "timeline",
+            "line_count": null,
+            "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+            "relative_path": "简洁实验过程时间线\\timeline_lab8.md",
+            "required": true,
+            "sha256": null,
+            "source_id": "source:lab8:timeline",
+            "status": "missing"
+          },
+          {
+            "kind": "terminal_qa",
+            "line_count": null,
+            "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+            "relative_path": "终端对话记录\\terminal_qa_report_lab8.md",
+            "required": true,
+            "sha256": null,
+            "source_id": "source:lab8:terminal_qa",
+            "status": "missing"
+          },
+          {
+            "kind": "command_statistics",
+            "line_count": null,
+            "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+            "relative_path": "终端命令统计\\command_statistics_lab8.md",
+            "required": true,
+            "sha256": null,
+            "source_id": "source:lab8:command_statistics",
+            "status": "missing"
+          },
+          {
+            "kind": "diff_report",
+            "line_count": 45,
+            "reason": null,
+            "relative_path": "代码差异报告\\lab8.md",
+            "required": true,
+            "sha256": "fa8cf456bfa28cf232958c9958700aabdb9ed331e0be83b1f9c838a610d81a45",
+            "source_id": "source:lab8:diff_report",
+            "status": "available"
+          }
+        ],
+        "missing_or_limited": [
+          "source:lab8:timeline: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+          "source:lab8:terminal_qa: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+          "source:lab8:command_statistics: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI"
+        ],
+        "status": "insufficient"
+      },
+      "full_report": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab8.md",
+      "lab": "lab8",
+      "lab_conclusion": {
+        "alternative_explanation": "资料缺失不表示未使用 AI、未进行人工操作或没有代码变化。",
+        "confidence": "weak",
+        "evidence_refs": [],
+        "label": "indeterminate",
+        "limitations": [
+          "缺少必需的已清洗材料：source:lab8:timeline（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）；source:lab8:terminal_qa（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）；source:lab8:command_statistics（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）"
+        ],
+        "summary": "当前 Lab 缺少必需的已清洗过程或代码材料，未进行 AI/人工贡献归属。"
+      },
+      "message": "输入未变，未调用 NIM。",
+      "review": {
+        "disagreement_unit_ids": [],
+        "downgraded_unit_ids": [],
+        "overall_decision": null,
+        "reviewed_unit_ids": [],
+        "status": "not_run",
+        "summary": "资料不足，未调用主分析或独立复核模型。",
+        "unit_reviews": []
+      },
+      "status": "cached",
+      "student_directory": "杨涵清",
+      "teacher_report": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab8.md"
+    }
+  ],
+  "resume": false,
+  "retry_failed": false,
+  "task_count": 9
+}

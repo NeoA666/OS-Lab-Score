@@ -12,6 +12,7 @@ from typing import Any
 from .analysis import (
     AssessmentValidationError,
     ContributionAnalyzer,
+    TransientProtocolError,
     _parse_json_object,
     analysis_fingerprint,
     failed_assessment,
@@ -36,6 +37,7 @@ from .storage import (
 TOOL_DIRECTORY = Path(__file__).resolve().parents[1]
 CLEANING_DIRECTORY = TOOL_DIRECTORY.parent
 DEFAULT_CLEANED_ROOT = CLEANING_DIRECTORY / "操作系统实验数据记录-已清洗"
+MAX_TASK_ATTEMPTS = 2
 
 
 def _json_print(value: dict[str, Any]) -> None:
@@ -141,8 +143,12 @@ def _persist_failure(
     input_fingerprint: str,
     error: BaseException,
     stage: str,
+    task_attempt: int | None = None,
+    max_task_attempts: int | None = None,
 ) -> dict[str, Any]:
-    retryable = isinstance(error, NimError) and error.retryable
+    retryable = isinstance(error, TransientProtocolError) or (
+        isinstance(error, NimError) and error.retryable
+    )
     assessment = failed_assessment(
         snapshot,
         input_fingerprint,
@@ -157,18 +163,21 @@ def _persist_failure(
         assessment=assessment,
         input_fingerprint=input_fingerprint,
     )
+    record: dict[str, Any] = {
+        "event": "analysis_failed",
+        "stage": stage,
+        "input_fingerprint": input_fingerprint,
+        "error_code": type(error).__name__,
+        "retryable": retryable,
+    }
+    if task_attempt is not None:
+        record["task_attempt"] = task_attempt
+    if max_task_attempts is not None:
+        record["max_task_attempts"] = max_task_attempts
     log_path = storage.write_run_log(
         snapshot.student.directory_name,
         snapshot.lab,
-        [
-            {
-                "event": "analysis_failed",
-                "stage": stage,
-                "input_fingerprint": input_fingerprint,
-                "error_code": type(error).__name__,
-                "retryable": retryable,
-            }
-        ],
+        [record],
     )
     return _result_for_assessment(
         task_identity={"student_directory": snapshot.student.directory_name, "lab": snapshot.lab},
@@ -377,69 +386,105 @@ def _execute_task(
             stage="configuration",
         )
 
-    try:
-        run = ContributionAnalyzer(NimStreamingClient(config), config).analyze(
-            snapshot,
-            fingerprint,
-            material_reader=repository.read_snapshot_material,
-        )
-        assessment = run.assessment
-        _write_assessment(
-            storage=storage,
-            snapshot=snapshot,
-            assessment=assessment,
-            input_fingerprint=fingerprint,
-        )
-        log_path = storage.write_run_log(
-            snapshot.student.directory_name,
-            snapshot.lab,
-            [
-                {
-                    "event": "analysis_completed",
-                    "input_fingerprint": fingerprint,
-                    "analysis_status": assessment["analysis_status"],
-                    "primary_request_ids": [
-                        response.request_id for response in run.primary_responses
+    for task_attempt in range(1, MAX_TASK_ATTEMPTS + 1):
+        try:
+            # A retry must not inherit the failed exchange's messages, excerpts,
+            # or repair instruction. Recreate both objects for a clean session.
+            run = ContributionAnalyzer(NimStreamingClient(config), config).analyze(
+                snapshot,
+                fingerprint,
+                material_reader=repository.read_snapshot_material,
+            )
+            assessment = run.assessment
+            _write_assessment(
+                storage=storage,
+                snapshot=snapshot,
+                assessment=assessment,
+                input_fingerprint=fingerprint,
+            )
+            log_path = storage.write_run_log(
+                snapshot.student.directory_name,
+                snapshot.lab,
+                [
+                    {
+                        "event": "analysis_completed",
+                        "input_fingerprint": fingerprint,
+                        "analysis_status": assessment["analysis_status"],
+                        "task_attempt": task_attempt,
+                        "max_task_attempts": MAX_TASK_ATTEMPTS,
+                        "primary_request_ids": [
+                            response.request_id for response in run.primary_responses
+                        ],
+                        "reviewer_request_ids": [
+                            response.request_id for response in run.reviewer_responses
+                        ],
+                        "primary_attempts": [
+                            response.attempts for response in run.primary_responses
+                        ],
+                        "reviewer_attempts": [
+                            response.attempts for response in run.reviewer_responses
+                        ],
+                        "primary_usage": [
+                            response.usage for response in run.primary_responses
+                        ],
+                        "reviewer_usage": [
+                            response.usage for response in run.reviewer_responses
+                        ],
+                        "primary_read_count": run.primary_read_count,
+                        "reviewer_read_count": run.reviewer_read_count,
+                        "primary_repaired": run.primary_repaired,
+                        "reviewer_repaired": run.reviewer_repaired,
+                        "model": config.model,
+                    }
+                ],
+            )
+            return _result_for_assessment(
+                task_identity=task_identity,
+                status=assessment["analysis_status"],
+                message="NIM 主分析与独立 NIM 复核已完成。",
+                assessment=assessment,
+                storage=storage,
+                run_log=log_path,
+            )
+        except TransientProtocolError as error:
+            if task_attempt < MAX_TASK_ATTEMPTS:
+                storage.write_run_log(
+                    snapshot.student.directory_name,
+                    snapshot.lab,
+                    [
+                        {
+                            "event": "analysis_attempt_failed",
+                            "stage": "semantic_analysis_or_review",
+                            "input_fingerprint": fingerprint,
+                            "task_attempt": task_attempt,
+                            "max_task_attempts": MAX_TASK_ATTEMPTS,
+                            "error_code": type(error).__name__,
+                            "retryable": True,
+                        }
                     ],
-                    "reviewer_request_ids": [
-                        response.request_id for response in run.reviewer_responses
-                    ],
-                    "primary_attempts": [
-                        response.attempts for response in run.primary_responses
-                    ],
-                    "reviewer_attempts": [
-                        response.attempts for response in run.reviewer_responses
-                    ],
-                    "primary_usage": [
-                        response.usage for response in run.primary_responses
-                    ],
-                    "reviewer_usage": [
-                        response.usage for response in run.reviewer_responses
-                    ],
-                    "primary_read_count": run.primary_read_count,
-                    "reviewer_read_count": run.reviewer_read_count,
-                    "primary_repaired": run.primary_repaired,
-                    "reviewer_repaired": run.reviewer_repaired,
-                    "model": config.model,
-                }
-            ],
-        )
-        return _result_for_assessment(
-            task_identity=task_identity,
-            status=assessment["analysis_status"],
-            message="NIM 主分析与独立 NIM 复核已完成。",
-            assessment=assessment,
-            storage=storage,
-            run_log=log_path,
-        )
-    except (ContributionRecognitionError, OSError, ValueError) as error:
-        return _persist_failure(
-            storage=storage,
-            snapshot=snapshot,
-            input_fingerprint=fingerprint,
-            error=error,
-            stage="semantic_analysis_or_review",
-        )
+                )
+                continue
+            return _persist_failure(
+                storage=storage,
+                snapshot=snapshot,
+                input_fingerprint=fingerprint,
+                error=error,
+                stage="semantic_analysis_or_review",
+                task_attempt=task_attempt,
+                max_task_attempts=MAX_TASK_ATTEMPTS,
+            )
+        except (ContributionRecognitionError, OSError, ValueError) as error:
+            return _persist_failure(
+                storage=storage,
+                snapshot=snapshot,
+                input_fingerprint=fingerprint,
+                error=error,
+                stage="semantic_analysis_or_review",
+                task_attempt=task_attempt,
+                max_task_attempts=MAX_TASK_ATTEMPTS,
+            )
+
+    raise AssertionError("任务重试循环未返回结果")
 
 
 def _add_root_argument(parser: argparse.ArgumentParser) -> None:

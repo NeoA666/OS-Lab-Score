@@ -2,11 +2,10 @@
   "analysis_status": "complete",
   "contribution_units": [
     {
-      "alternative_explanation": "The student could have received AI-generated command suggestions offline, but the observable process shows only human execution.",
+      "alternative_explanation": "No AI involvement is visible in the logs; any prior AI use would be outside the recorded session.",
       "behavior_roles": {
         "ai": [],
         "human": [
-          "human_prompting",
           "human_execution",
           "human_verification"
         ]
@@ -16,9 +15,9 @@
         {
           "excerpt": "# 简洁实验过程时间线\n\n- 学号：2306010113\n- 姓名：刘梓宸\n- 实验分类：lab0\n\n## 过程\n\n### 录像时间：2026-09-11T21:03:13.980+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nmake clean\n\n[终端输出]\nrm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \\\n*/*.o */*.d */*.asm */*.sym \\\ntarget/* \\\nxv6-user/initcode xv6-user/initcode.out \\\nkernel/kernel \\\n.gdbinit \\\nxv6-user/usys.S \\\nxv6-user/_init xv6-user/_sh xv6-user/_cat xv6-user/_echo xv6-user/_grep xv6-user/_ls xv6-user/_kill xv6-user/_mkdir xv6-user/_xargs xv6-user/_sleep xv6-user/_find xv6-user/_rm xv6-user/_wc xv6-user/_test xv6-user/_usertests xv6-user/_strace xv6-user/_mv\n```\n\n### 录像时…",
           "excerpt_redacted": true,
-          "line_end": 513,
+          "line_end": 50,
           "line_start": 1,
-          "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+          "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
           "sha256": "94f29eb383ca415756756c410125a68922362adb6c86e8a59844e3fe9bda2181",
           "source_id": "source:lab0:timeline",
           "source_kind": "timeline"
@@ -28,35 +27,24 @@
           "excerpt_redacted": true,
           "line_end": 200,
           "line_start": 1,
-          "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+          "relative_path": "终端对话记录\\terminal_qa_report_lab0.md",
           "sha256": "a4003a6cb2a5d0c1f456b3f5c6c79530869f86b73afddd850ed5445cc4b8c02e",
           "source_id": "source:lab0:terminal_qa",
           "source_kind": "terminal_qa"
-        },
-        {
-          "excerpt": "# Terminal Command Statistics\n\n- 学号：2306010113\n- 姓名：刘梓宸\n- 数据采集时间：2026-09-11 20:46\n- 原始时间标识：20260911-2046\n- 原始数据目录：2306010113-刘梓宸-20260911-2046\n- 终端录像数量：1\n\n- 实验分类：lab0\n\n- Shell 命令执行总次数：9\n- 不同 Shell 命令数量：8\n\n| command | count |\n| --- | ---: |\n| make run | 2 |\n| ls -lh fs.img | 1 |\n| make build | 1 |\n| make clean | 1 |\n| make fd | 1 |\n| make fs | 1 |\n| mkfs.vfat --help | 1 |\n| sudo apt install dosfstools | 1 |",
-          "excerpt_redacted": true,
-          "line_end": 24,
-          "line_start": 1,
-          "relative_path": "终端命令统计/command_statistics_lab0.md",
-          "sha256": "3b6282e709911d3eb4c93da3b251b08c27f32a8cd0de791238adb197fc66c077",
-          "source_id": "source:lab0:command_statistics",
-          "source_kind": "command_statistics"
         }
       ],
       "label": "human_dominant",
       "limitations": [
-        "The materials only capture observable shell commands and outputs; they do not reveal internal thought processes, offline consultations, or potential AI assistance not reflected in the terminal logs.",
-        "The timeline and terminal Q&A may not include every intermediate step (e.g., editing files) if they were not captured as shell commands.",
-        "The command statistics aggregate counts but do not show the exact timing or context of each command."
+        "Only terminal command logs are available; internal reasoning or off-screen activities are not captured.",
+        "The logs do not show editor usage or potential AI-generated code that was typed elsewhere."
       ],
       "scope": {
-        "line_end": 513,
+        "line_end": 50,
         "line_start": 1,
         "source_id": "source:lab0:timeline"
       },
-      "summary": "The student executed a sequence of shell commands to clean, build, create filesystem, and run xv6, as shown in the timeline, terminal Q&A, and command statistics. No AI involvement is evident in the logs.",
-      "unit_id": "unit-1",
+      "summary": "The student executed 'make clean' and 'make build' commands to compile xv6 as part of lab0 setup.",
+      "unit_id": "unit-lab0-1",
       "unit_type": "process_segment"
     }
   ],
@@ -66,7 +54,7 @@
         "kind": "timeline",
         "line_count": 513,
         "reason": null,
-        "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+        "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
         "required": true,
         "sha256": "94f29eb383ca415756756c410125a68922362adb6c86e8a59844e3fe9bda2181",
         "source_id": "source:lab0:timeline",
@@ -76,7 +64,7 @@
         "kind": "terminal_qa",
         "line_count": 587,
         "reason": null,
-        "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+        "relative_path": "终端对话记录\\terminal_qa_report_lab0.md",
         "required": true,
         "sha256": "a4003a6cb2a5d0c1f456b3f5c6c79530869f86b73afddd850ed5445cc4b8c02e",
         "source_id": "source:lab0:terminal_qa",
@@ -86,7 +74,7 @@
         "kind": "command_statistics",
         "line_count": 24,
         "reason": null,
-        "relative_path": "终端命令统计/command_statistics_lab0.md",
+        "relative_path": "终端命令统计\\command_statistics_lab0.md",
         "required": true,
         "sha256": "3b6282e709911d3eb4c93da3b251b08c27f32a8cd0de791238adb197fc66c077",
         "source_id": "source:lab0:command_statistics",
@@ -107,18 +95,18 @@
     "status": "complete"
   },
   "diff_hunks": [],
-  "input_fingerprint": "sha256:f3643c658fe6ea3a54e4e5d09f7491e48b9b219da35b7601dec78ebbdb3a0ffc",
+  "input_fingerprint": "sha256:1cfec3f95649daa2d30634a89606c37c6a1b87fa998f20b6735eb225a30c0c2a",
   "lab": "lab0",
   "lab_conclusion": {
-    "alternative_explanation": "AI might have been used to suggest commands or troubleshoot issues outside the recorded terminal sessions, but the observable record shows only human execution.",
+    "alternative_explanation": "There is no evidence of AI assistance in the provided logs; any such assistance would have occurred outside the recorded timeframe.",
     "confidence": "strong",
     "evidence_refs": [
       {
         "excerpt": "# 简洁实验过程时间线\n\n- 学号：2306010113\n- 姓名：刘梓宸\n- 实验分类：lab0\n\n## 过程\n\n### 录像时间：2026-09-11T21:03:13.980+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nmake clean\n\n[终端输出]\nrm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \\\n*/*.o */*.d */*.asm */*.sym \\\ntarget/* \\\nxv6-user/initcode xv6-user/initcode.out \\\nkernel/kernel \\\n.gdbinit \\\nxv6-user/usys.S \\\nxv6-user/_init xv6-user/_sh xv6-user/_cat xv6-user/_echo xv6-user/_grep xv6-user/_ls xv6-user/_kill xv6-user/_mkdir xv6-user/_xargs xv6-user/_sleep xv6-user/_find xv6-user/_rm xv6-user/_wc xv6-user/_test xv6-user/_usertests xv6-user/_strace xv6-user/_mv\n```\n\n### 录像时…",
         "excerpt_redacted": true,
-        "line_end": 513,
+        "line_end": 50,
         "line_start": 1,
-        "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+        "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
         "sha256": "94f29eb383ca415756756c410125a68922362adb6c86e8a59844e3fe9bda2181",
         "source_id": "source:lab0:timeline",
         "source_kind": "timeline"
@@ -128,34 +116,22 @@
         "excerpt_redacted": true,
         "line_end": 200,
         "line_start": 1,
-        "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+        "relative_path": "终端对话记录\\terminal_qa_report_lab0.md",
         "sha256": "a4003a6cb2a5d0c1f456b3f5c6c79530869f86b73afddd850ed5445cc4b8c02e",
         "source_id": "source:lab0:terminal_qa",
         "source_kind": "terminal_qa"
-      },
-      {
-        "excerpt": "# Terminal Command Statistics\n\n- 学号：2306010113\n- 姓名：刘梓宸\n- 数据采集时间：2026-09-11 20:46\n- 原始时间标识：20260911-2046\n- 原始数据目录：2306010113-刘梓宸-20260911-2046\n- 终端录像数量：1\n\n- 实验分类：lab0\n\n- Shell 命令执行总次数：9\n- 不同 Shell 命令数量：8\n\n| command | count |\n| --- | ---: |\n| make run | 2 |\n| ls -lh fs.img | 1 |\n| make build | 1 |\n| make clean | 1 |\n| make fd | 1 |\n| make fs | 1 |\n| mkfs.vfat --help | 1 |\n| sudo apt install dosfstools | 1 |",
-        "excerpt_redacted": true,
-        "line_end": 24,
-        "line_start": 1,
-        "relative_path": "终端命令统计/command_statistics_lab0.md",
-        "sha256": "3b6282e709911d3eb4c93da3b251b08c27f32a8cd0de791238adb197fc66c077",
-        "source_id": "source:lab0:command_statistics",
-        "source_kind": "command_statistics"
       }
     ],
     "label": "human_dominant",
     "limitations": [
-      "Cannot rule out offline AI assistance that did not leave traces in the terminal logs.",
-      "The materials do not capture potential AI-generated explanations or code that the student may have read but not typed into the terminal.",
-      "The process-only assessment cannot evaluate contributions to code authorship or debugging."
+      "Assessment limited to recorded commands and outputs; cannot rule out unseen AI use.",
+      "No access to edit histories, clipboard, or external tool usage."
     ],
-    "summary": "The lab0 process consists entirely of observable shell commands executed by the student, with no evidence of AI contribution in the provided logs."
+    "summary": "The observable actions are manual build commands with compiler output, indicating student-led execution."
   },
   "limitations": [
-    "The assessment is limited to the provided process materials (timeline, terminal Q&A, command statistics) and cannot infer contributions not reflected in these logs.",
-    "The absence of AI evidence in the logs does not prove the absence of AI use; it only indicates that no AI interaction was observable in the captured data.",
-    "The analysis assumes that the shell commands and their outputs are complete and unaltered records of the student's session.",
+    "Only terminal command logs are available; internal reasoning or off-screen activities are not captured.",
+    "The logs do not show editor usage or potential AI-generated code that was typed elsewhere.",
     "该结果是课程贡献归属线索，不认定真实作者、手打或粘贴方式、理解程度、诚信、违规或分数。"
   ],
   "review": {
@@ -163,10 +139,10 @@
     "downgraded_unit_ids": [],
     "overall_decision": "agree",
     "reviewed_unit_ids": [
-      "unit-1"
+      "unit-lab0-1"
     ],
     "status": "agreed",
-    "summary": "The unit's conclusion of human_dominant is supported by the observable shell command logs; no AI contribution is evident.",
+    "summary": "The observable actions are manual build commands with compiler output, indicating student-led execution without AI assistance.",
     "unit_reviews": [
       {
         "decision": "agree",
@@ -176,7 +152,7 @@
             "excerpt_redacted": true,
             "line_end": 26,
             "line_start": 15,
-            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
             "sha256": "94f29eb383ca415756756c410125a68922362adb6c86e8a59844e3fe9bda2181",
             "source_id": "source:lab0:timeline",
             "source_kind": "timeline"
@@ -186,17 +162,17 @@
             "excerpt_redacted": true,
             "line_end": 50,
             "line_start": 35,
-            "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+            "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
             "sha256": "94f29eb383ca415756756c410125a68922362adb6c86e8a59844e3fe9bda2181",
             "source_id": "source:lab0:timeline",
             "source_kind": "timeline"
           },
           {
-            "excerpt": "```text\nmake clean\n```\n\n**A（输出）：**\n\n```text\nrm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \\\n*/*.o */*.d */*.asm */*.sym \\\ntarget/* \\\nxv6-user/initcode xv6-user/initcode.out \\\nkernel/kernel \\\n.gdbinit \\\nxv6-user/usys.S \\\nxv6-user/_init xv6-user/_sh xv6-user/_cat xv6-user/_echo xv6-user/_grep xv6-user/_ls xv6-user/_kill xv6-user/_mkdir xv6-user/_xargs xv6-user/_sleep xv6-user/_find xv6-user/_rm xv6-user/_wc xv6-user/_test xv6-user/_usertests xv6-user/_strace xv6-user/_mv",
+            "excerpt": "```text\nmake clean\n```\n\n**A（输出）：**\n\n```text\nrm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \\\n*/*.o */*.d */*.asm */*.sym \\\ntarget/* \\\nxv6-user/initcode xv6-user/initcode.out \\\nkernel/kernel \\\n.gdbinit \\\nxv6-user/usys.S \\\nxv6-user/_init xv6-user/_sh xv6-user/_cat xv6-user/_echo xv6-user/_grep xv6-user/_ls xv6-user/_kill xv6-user/_mkdir xv6-user/_xargs xv6-user/_sleep xv6-user/_find xv6-user/_rm xv6-user/_wc xv6-user/_test xv6-user/_usertests xv6-user/_strace xv6-user/_mv\n```",
             "excerpt_redacted": true,
-            "line_end": 44,
+            "line_end": 45,
             "line_start": 30,
-            "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+            "relative_path": "终端对话记录\\terminal_qa_report_lab0.md",
             "sha256": "a4003a6cb2a5d0c1f456b3f5c6c79530869f86b73afddd850ed5445cc4b8c02e",
             "source_id": "source:lab0:terminal_qa",
             "source_kind": "terminal_qa"
@@ -204,36 +180,26 @@
           {
             "excerpt": "```text\nmake build\n```\n\n**A（输出）：**\n\n```text\nriscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/printf.o kernel/printf.c\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/kalloc.o kernel/k…",
             "excerpt_redacted": true,
-            "line_end": 70,
+            "line_end": 200,
             "line_start": 55,
-            "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+            "relative_path": "终端对话记录\\terminal_qa_report_lab0.md",
             "sha256": "a4003a6cb2a5d0c1f456b3f5c6c79530869f86b73afddd850ed5445cc4b8c02e",
             "source_id": "source:lab0:terminal_qa",
             "source_kind": "terminal_qa"
-          },
-          {
-            "excerpt": "| command | count |\n| --- | ---: |\n| make run | 2 |\n| ls -lh fs.img | 1 |\n| make build | 1 |\n| make clean | 1 |\n| make fd | 1 |\n| make fs | 1 |\n| mkfs.vfat --help | 1 |\n| sudo apt install dosfstools | 1 |",
-            "excerpt_redacted": true,
-            "line_end": 24,
-            "line_start": 15,
-            "relative_path": "终端命令统计/command_statistics_lab0.md",
-            "sha256": "3b6282e709911d3eb4c93da3b251b08c27f32a8cd0de791238adb197fc66c077",
-            "source_id": "source:lab0:command_statistics",
-            "source_kind": "command_statistics"
           }
         ],
-        "reason": "The materials show only shell commands (make clean, make build, mkfs.vfat --help, sudo apt install dosfstools) and their outputs, with no indication of AI involvement. The timeline, terminal Q&A, and command statistics all reflect human-executed commands.",
-        "unit_id": "unit-1"
+        "reason": "The provided materials show only manual execution of 'make clean' and 'make build' commands with corresponding compiler output; no evidence of AI involvement is present in the logs.",
+        "unit_id": "unit-lab0-1"
       }
     ]
   },
   "run_metadata": {
-    "completed_at": "2026-09-18T11:43:09.777264+00:00",
+    "completed_at": "2026-09-19T04:57:37.998442+00:00",
     "controlled_read_protocol_version": "contribution-read-material-v3",
     "primary_attempts": 1,
     "primary_model": "nvidia/nemotron-3-super-120b-a12b",
-    "primary_read_count": 7,
-    "primary_repaired": false,
+    "primary_read_count": 4,
+    "primary_repaired": true,
     "primary_request_id": null,
     "primary_usage": null,
     "prompt_version": "contribution-attribution-v3-nim-semantic-primary-v2",
@@ -242,7 +208,7 @@
     "review_prompt_version": "contribution-attribution-v3-nim-independent-review-v2",
     "review_request_id": null,
     "review_usage": null,
-    "reviewer_read_count": 3,
+    "reviewer_read_count": 2,
     "reviewer_repaired": false,
     "tool_version": "3.1.1",
     "validator_version": "contribution-assessment-validator-v4"
@@ -254,7 +220,7 @@
       "kind": "timeline",
       "line_count": 513,
       "reason": null,
-      "relative_path": "简洁实验过程时间线/timeline_lab0.md",
+      "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
       "required": true,
       "sha256": "94f29eb383ca415756756c410125a68922362adb6c86e8a59844e3fe9bda2181",
       "source_id": "source:lab0:timeline"
@@ -264,7 +230,7 @@
       "kind": "terminal_qa",
       "line_count": 587,
       "reason": null,
-      "relative_path": "终端对话记录/terminal_qa_report_lab0.md",
+      "relative_path": "终端对话记录\\terminal_qa_report_lab0.md",
       "required": true,
       "sha256": "a4003a6cb2a5d0c1f456b3f5c6c79530869f86b73afddd850ed5445cc4b8c02e",
       "source_id": "source:lab0:terminal_qa"
@@ -274,7 +240,7 @@
       "kind": "command_statistics",
       "line_count": 24,
       "reason": null,
-      "relative_path": "终端命令统计/command_statistics_lab0.md",
+      "relative_path": "终端命令统计\\command_statistics_lab0.md",
       "required": true,
       "sha256": "3b6282e709911d3eb4c93da3b251b08c27f32a8cd0de791238adb197fc66c077",
       "source_id": "source:lab0:command_statistics"
@@ -296,8 +262,7 @@
     "student_id": null
   },
   "teacher_actions": [
-    "Consider requiring students to log any use of AI tools explicitly in a separate README or comment field for future labs.",
-    "Instructors could supplement process logs with intermittent screen recordings or keystroke audits to increase transparency.",
-    "Provide a checklist for students to self-report AI usage per assignment to improve data completeness for contribution analysis."
+    "Ask students to explicitly disclose any AI tool use in lab submissions.",
+    "Provide a simple log template for students to record AI interactions during labs."
   ]
 }

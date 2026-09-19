@@ -1,0 +1,296 @@
+==== labtracker 终端转录 ====
+录像: 20260917T142936-2915.out.gz   时长: 13分00秒   原始大小: 12565B
+==================================================
+-- [开始] --
+Script s
+tarted on 2026-09-17 14:29:36+08:00 [COMMAND="bash" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+
+-- [0分06秒] --
+ailab-o
+s@
+ailab-os-
+VMware-Virtual-Platform:
+~/桌面/xv6-ai-labs-km$ ^[[200~sudo systemctl restart systemd-resolved
+sudo：未找到命令
+
+ailab-os@ailab-os-VMware-Vi
+rtual-Platform:~
+/�
+��
+面/xv6-ai-labs-km$ echo "nameserver 223.5.5.5" | su
+-- [0分11秒] --
+do tee /etc/resolv.conf
+[sudo] ailab-os 的�
+-- [0分16秒] --
+��
+��： 
+
+对不起，�
+��重试。
+[sudo] ailab-os 的密码： 
+对不起，请重试。
+[sudo] ailab-os 的密码： 
+nameserver 223.5.5.5
+
+-- [0分36秒] --
+ailab-os@ailab-os-VMware-Virtu
+al-Platform:~/桌面/xv6-ai-labs-km$ sudo sys
+temctl re
+start systemd-resolved
+echo "nameserver 223.5.5.5" | sudo tee /etc/resolv.conf
+curl baidu.com
+
+sudo sy
+stemctl restart systemd
+-- [1分10秒] --
+-resolved
+echo "nameserver 223.5.5.5" | sudo te
+e 
+-- [1分20秒] --
+/etc/resolv.conf
+curl baidu.com
+
+nameserve
+r 223.5.5.5
+sudo nano /etc/netplan/00-installer-config.yaml
+
+<a href="https://www.baidu.com/">Moved Permanently</a>.
+
+ailab-os@ailab-os-V
+Mw
+are-Virtual-Platform:~/桌面/xv6-ai-labs-km
+$ sudo nano /
+etc/netplan/00-installer-config.yaml
+
+==
+[ 新文件 ]  GNU nano 7.2          /etc/netplan/00-installer-config.yaml 
+
+^G 帮助^O 写入^W 搜索
+^X 离开^R 读档^
+\ 替�
+��^U
+-- [1分33秒] --
+ 粘贴
+^J
+ 对齐
+
+^/ 跳行
+
+*
+net
+work:ethernets:ens33:dhcp4
+: truename
+servers
+:
+-- [1分43秒] --
+addresses: [
+
+223.5.5.5,114.114.114.114]version: 2
+保存已修改的缓冲区？                                         
+
+-- [1分51秒] --
+ Y
+
+ 是
+
+ N
+ 否  
+
+^C 取消
+
+
+-- [1分54秒] --
+
+^G
+^C 取消    M-M Mac 格式M-P 插入到开�
+-- [2分03秒] --
+��
+要写入�
+��文件名: /etc/netplan/00-installer-config.yaml [ 正在写入... ]
+
+>
+-- [2分11秒] --
+ailab-os@
+a
+ilab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km$ sudo netplan apply
+
+sudo netplan apply
+
+** (generate:3335): WARNING **: 14:31:50.076: Per
+missions for /etc/netplan/00-installer-config.yaml are too open. Netplan configuration should NOT be accessible by others.
+
+** (generate:3335): WARNING **: 14:31:50.078: Permis
+sions for /etc/netplan/01-network-manager-all.yaml are too open. Netplan configuration should NOT be accessible by others.
+
+** (process:3333): WARNING **: 14:31:51.334: Per
+missions for /etc/netplan/00-installer-config.yaml are too open. Netplan configuration should NOT be accessible by others.
+
+** (process:3333): WARNING **: 14:31:51.334: Permis
+-- [2分15秒] --
+sions for /etc/netplan/01-network-manager-all.yaml are too open. Netplan configuration should NOT be accessible by others.
+
+** 
+(process:3333): WARNING **: 14:31:51.600: Permissions for /etc/netplan/00-installer-config.yaml are too open. Netplan configuration should NOT be accessible by others.
+
+** (process:3333): WARNING **: 14:31:51.600: Permis
+sions for /etc/netplan/01-network-manager-all.yaml are too open. Netplan configura
+tion should NOT be accessible by others.
+systemd-networkd is not running, output might b
+e incomplete.
+Failed to reload network settin
+gs: Unit
+ dbus-org.freedesktop.network1.service not found.
+Falling back to a hard restart of systemd-networkd.service
+
+-- [3分26秒] --
+ailab-os@ailab-os-VMware-Virtual-Plat
+form:~/桌面/xv6-ai-labs-km$ sudo systemctl disable --now systemd-resolved
+
+sudo systemctl disable --now systemd-resolved
+
+Removed "/etc/systemd/syst
+em/sysin
+it.target.wants/systemd-resolved.service".
+Removed "/etc/systemd/system/dbus-org.freedesktop.resolve1.service".
+
+-- [3分33秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:
+~/桌面/xv6-ai-labs-km$ sudo rm /etc/resolv.conf
+sudo nano /etc/resolv.conf
+
+sudo rm 
+/etc/re
+solv.c
+onf
+sudo nano /etc/resolv.c
+onf
+
+==
+
+[ 新�
+��件 ]  GN
+U nano 7.2                   
+^X 离开^R 读档
+-- [3分41秒] --
+^\
+ 替换^U �
+�贴
+^J 对
+齐^/ 跳�
+�
+
+-- [3分51秒] --
+*
+
+nameserver 2
+-- [3分55秒] --
+23.5.5.5
+nameserver
+-- [4分06秒] --
+ 114.114.11
+保存已修改的缓冲区？                                         
+
+        Y 是
+ N 否     
+^C 取消
+^G 帮助M-D
+ DOS 格式M-A 追加M-B 备份
+^C
+ 取消    M-M Mac 格式
+M-
+-- [4分14秒] --
+P
+
+ 插�
+��到开头^T 浏
+要写入的文件名: /etc/resolv.conf [ 正在写入... ]
+
+>
+
+-- [5分00秒] --
+a
+ilab-os@a
+ilab-os-VMware-Virtual-Platfor
+m:
+~/桌面/xv6-ai-labs-km$ ^[[200~sudo chattr +i /etc/resolv.conf
+sudo：未找到命令
+
+-- [5分09秒] --
+ailab-os@ailab-os-VMware-Vir
+t
+-- [5分13秒] --
+ual-Platform:~/桌面/xv6-ai-labs-km$ ~sudo chattr +i /etc/resolv.conf
+
+sudo chattr +i /etc/resolv.conf
+
+-- [5分20秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km$ curl baidu.com
+
+-- [6分02秒] --
+curl baidu.com
+
+<a href="https://www.baidu.com/">Moved Permanently</a>.
+
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km$ 
+
+-- [6分25秒] --
+ailab-os@ailab-os-VMware-Virtu
+a
+l-Platform:~/桌面/xv6-ai-labs-km$ curl https://api.deepseek.com/anthropic
+
+-- [7分08秒] --
+curl https://api.deepseek.com/ant
+hropic
+
+curl: (7) Failed to connect to api.deepseek.com port 443 after 42104 ms: Couldn't connect to server
+
+-- [11分41秒] --
+ailab-os@ailab-os-VMwar
+e-Virtual-Platform:~/桌面/xv6-ai-labs-km$ ^Vcd ~/.claude
+nano settings.json
+
+c
+d ~/.claude
+nano settings.j
+son
+
+=
+=[ 正在读取... ]已�
+��取 
+16 行
+行 ]  GN
+U nano 7.2                   
+   settings.json             
+
+^G 帮助^O 写入
+^W 搜索
+^K 剪切
+^T 执行�
+��令  ^C 位�
+^X 离
+开^R
+ 读
+档^\
+ 替换^U 粘贴
+{"env"
+: {"ANTHROPIC_AUTH_TOKEN": "sk-2fd3010acaa54c22
+a413ae607eef7bb7","ANTHROPIC_BASE_URL": "https
+://api.deepseek.com/anthropic","ANTHROPIC_DEFAULT_SONN
+ET_MODEL": "deepseek-flash","ANTHROPIC_DEFAULT_OPU
+S_MODEL": "deepseek-flash","ANTHROPIC_D
+EFAULT_HAIKU_MODEL": "deepseek-flash",
+"CLAUDE_CODE_ATTRIBUTION_HEADER": "0",
+"ANTHROPIC_MODEL": "deepseek-flash","DISABLE_AUTOUPDATER": "1",
+"CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC":
+ "1","API_TIMEOUT_MS": "3000000"},"model":
+ "opus"
+-- [12分55秒] --
+,
+"skip
+-- [12分58秒] --
+DangerousModePermi
+ssionPrompt"
+: 
+true
+
+}*

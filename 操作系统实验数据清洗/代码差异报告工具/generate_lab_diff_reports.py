@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""批量生成 xv6 lab1--lab8 的学生源码差异 Markdown 报告。"""
+"""批量生成 xv6 lab0--lab8 的学生源码差异 Markdown 报告。"""
 
 from __future__ import annotations
 
@@ -25,7 +25,9 @@ DEFAULT_REFERENCE_ROOT = CLEANING_DIR.parent / "xv6-ai-labs-km-无答案"
 DEFAULT_SUBMISSIONS_ROOT = CLEANING_DIR / "操作系统实验数据记录"
 DEFAULT_CLEANED_ROOT = CLEANING_DIR / "操作系统实验数据记录-已清洗"
 
-LABS = tuple(f"lab{number}" for number in range(1, 9))
+# 基准仓库与清洗工具都覆盖 lab0--lab8；lab0 同样按“学生 labs/labN
+# 对比基准 labN”的规则纳入比较，而不是被排除在报告范围之外。
+LABS = tuple(f"lab{number}" for number in range(0, 9))
 OWNER_FILE = ".replay_term_qa.json"
 REPORT_FOLDER = "代码差异报告"
 SUMMARY_FOLDER = "代码差异报告汇总"
@@ -652,10 +654,10 @@ def render_summary(lab: str, summary_path: Path, results: list[ReportResult], sk
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="批量生成 xv6 lab1--lab8 源码差异 Markdown 报告")
+    parser = argparse.ArgumentParser(description="批量生成 xv6 lab0--lab8 源码差异 Markdown 报告")
     selection = parser.add_mutually_exclusive_group(required=True)
     selection.add_argument("--lab", action="append", choices=LABS, help="指定实验；可重复使用")
-    selection.add_argument("--all-labs", action="store_true", help="处理 lab1 至 lab8")
+    selection.add_argument("--all-labs", action="store_true", help="处理 lab0 至 lab8")
     parser.add_argument("--student", action="append", default=[], help="精确筛选学号或姓名；可重复使用")
     parser.add_argument("--reference-root", type=Path, default=DEFAULT_REFERENCE_ROOT)
     parser.add_argument("--submissions-root", type=Path, default=DEFAULT_SUBMISSIONS_ROOT)

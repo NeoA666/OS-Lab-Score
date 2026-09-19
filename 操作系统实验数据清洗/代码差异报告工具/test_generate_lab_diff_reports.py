@@ -75,6 +75,31 @@ class LabDiffReportTests(unittest.TestCase):
         self.assertIn("查看报告", summary_text)
         self.assertEqual((self.student_cleaned / "现有报告.md").read_text(encoding="utf-8"), "keep")
 
+    def test_lab0_is_in_scope_and_compares_against_the_reference_lab0(self):
+        # 回归：比较范围必须从 lab0 开始，且 lab0 与其它实验使用同一套
+        # “学生 labs/labN 对比基准 labN”的对应规则。
+        self.assertEqual(app.LABS, tuple(f"lab{number}" for number in range(0, 9)))
+        self.assertIn("lab0.md", app.REPORT_ARTIFACTS)
+        self.write(self.reference / "lab0" / "kernel" / "main.c", "int base = 1;\n")
+        self.write(self.student_source / "labs" / "lab0" / "kernel" / "main.c", "int base = 2;\n")
+        self.assertEqual(app.main([
+            "--lab", "lab0", "--reference-root", str(self.reference),
+            "--submissions-root", str(self.submissions), "--cleaned-root", str(self.cleaned),
+        ]), 0)
+        report = self.student_cleaned / app.REPORT_FOLDER / "lab0.md"
+        self.assertTrue(report.is_file())
+        text = report.read_text(encoding="utf-8")
+        self.assertIn("# lab0 源码差异报告", text)
+        self.assertIn(str(self.reference / "lab0"), text)
+        self.assertIn("kernel/main.c", text)
+        summary = (self.cleaned / app.SUMMARY_FOLDER / "lab0.md").read_text(encoding="utf-8")
+        self.assertIn("# lab0 源码差异报告汇总", summary)
+        self.assertIn("查看报告", summary)
+        manifest = json.loads(
+            (self.student_cleaned / app.REPORT_FOLDER / app.REPORT_MANIFEST).read_text(encoding="utf-8")
+        )
+        self.assertEqual(manifest["artifacts"], ["lab0.md"])
+
     def test_ignores_whitespace_by_default_and_strict_mode_shows_it(self):
         self.write(self.reference_lab / "kernel" / "space.c", "int  value = 1;\n\n")
         self.write(self.student_lab / "kernel" / "space.c", "int value = 1;\n \t \n")

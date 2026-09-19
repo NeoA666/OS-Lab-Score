@@ -1,0 +1,14 @@
+==== labtracker 终端转录 ====
+录像: 20260917T142420-3342.out.gz   时长: 1分40秒   原始大小: 561B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Plat
+form
+:~/桌面/xv6-ai-labs-km$ 1curl baidu.com
+curl: (6) Could not resolve host: baidu.com
+
+-- [1分40秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km$ 
+exit
+

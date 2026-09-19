@@ -11,11 +11,13 @@ from contribution_recognition.analysis import (
     AssessmentValidator,
     ContributionAnalyzer,
     ReviewValidator,
+    TransientProtocolError,
     _apply_review,
     _controlled_exchange,
     _initial_primary_payload,
     _parse_json_object,
     _primary_system_prompt,
+    _submission_from_response,
     _validate_read_requests,
 )
 from contribution_recognition.models import (
@@ -464,6 +466,63 @@ class SemanticProtocolTests(unittest.TestCase):
                 "sha256:input",
                 material_reader=_reader,
             )
+
+
+class TransientProtocolClassificationTests(unittest.TestCase):
+    """T01: only submission-envelope failures are transient."""
+
+    def test_transient_error_is_an_assessment_validation_error(self) -> None:
+        # The existing one-shot local repair catches AssessmentValidationError,
+        # so the transient subtype must remain a subclass.
+        self.assertTrue(issubclass(TransientProtocolError, AssessmentValidationError))
+
+    def test_unparseable_content_is_transient(self) -> None:
+        with self.assertRaises(TransientProtocolError):
+            _parse_json_object("this is not JSON at all")
+
+    def test_non_object_root_is_transient(self) -> None:
+        with self.assertRaises(TransientProtocolError):
+            _parse_json_object("[1, 2, 3]")
+
+    def test_wrong_action_is_transient(self) -> None:
+        with self.assertRaises(TransientProtocolError):
+            _submission_from_response(
+                {"action": "submit_review"},
+                "submit_assessment",
+                "assessment",
+            )
+        with self.assertRaises(TransientProtocolError):
+            _submission_from_response({}, "submit_assessment", "assessment")
+
+    def test_missing_submission_object_is_transient(self) -> None:
+        for raw in (
+            {"action": "submit_assessment"},
+            {"action": "submit_assessment", "assessment": "not-an-object"},
+            {"action": "submit_assessment", "assessment": None},
+        ):
+            with self.subTest(raw=raw):
+                with self.assertRaises(TransientProtocolError):
+                    _submission_from_response(raw, "submit_assessment", "assessment")
+
+    def test_citation_out_of_range_is_not_transient(self) -> None:
+        payload = _assessment_payload()
+        payload["contribution_units"][0]["evidence_refs"][0]["end_line"] = 99
+        with self.assertRaises(AssessmentValidationError) as context:
+            AssessmentValidator(_snapshot(), "sha256:input", [_excerpt()]).validate(payload, {})
+        self.assertNotIsInstance(context.exception, TransientProtocolError)
+
+    def test_semantic_field_error_is_not_transient(self) -> None:
+        with self.assertRaises(AssessmentValidationError) as context:
+            AssessmentValidator(_snapshot(), "sha256:input", [_excerpt()]).validate(
+                _assessment_payload(confidence="weak"), {}
+            )
+        self.assertNotIsInstance(context.exception, TransientProtocolError)
+
+    def test_controlled_read_error_is_not_transient(self) -> None:
+        from contribution_recognition.analysis import ControlledReadError
+
+        self.assertTrue(issubclass(ControlledReadError, AssessmentValidationError))
+        self.assertFalse(issubclass(ControlledReadError, TransientProtocolError))
 
 
 if __name__ == "__main__":

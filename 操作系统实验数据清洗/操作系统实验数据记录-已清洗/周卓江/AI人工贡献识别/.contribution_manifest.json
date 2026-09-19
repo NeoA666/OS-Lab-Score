@@ -2,98 +2,98 @@
   "labs": {
     "lab0": {
       "analysis_status": "complete",
-      "assessment_fingerprint": "sha256:80e3b6b887dfbaff4efff8aa2900ccd57e6e643c130d96d74b45e46ad874d8a6",
+      "assessment_fingerprint": "sha256:ba63aac47428f7b8bd79d40d4bfff1da3fb313a36a7ebbe945240ce2de1965b1",
       "assessment_schema_version": "ai-human-contribution-assessment/v3",
-      "assessment_sha256": "c079603e4c1a70556bb8d07b5cdd7ccc772400d9ac0b2f351f246bd6273ded89",
-      "full_report_sha256": "b243be3063ef5b7c23fe5d54651a00b045a19a31ce6571897d32b55a94ef52a6",
-      "render_fingerprint": "sha256:4b0fa55de411e4ffefc24b2f9a54104294bb2885ff4da36f9ccd51b876c072f2",
-      "teacher_report_sha256": "684a2a4840645dffcf60eff26ad02b123609b032447407a2d7523e657e69733f",
-      "updated_at": "2026-09-18T11:52:40.501069+00:00"
+      "assessment_sha256": "bc78b1fb3379cdc6d676407f40552f35dff4f4ec8d100dd25409df5c372ce96a",
+      "full_report_sha256": "32b0768ddd815b514d00e11b64216255affe5408b07567e9c2fae62795ed679c",
+      "render_fingerprint": "sha256:3f5849d3f286945a80731db2f0f6179ad29e98a5bc4bb6c0d57d0685e54836e4",
+      "teacher_report_sha256": "c76a9fe8b01d4a94697bdbc543919ea249139b75de0c8833c9942a6b8a473a65",
+      "updated_at": "2026-09-19T04:58:49.669620+00:00"
     },
     "lab1": {
       "analysis_status": "insufficient_data",
-      "assessment_fingerprint": "sha256:fbc3dcbefd017e60340165c05255d2971d947a8b3e4b09b23004a989635f9b80",
+      "assessment_fingerprint": "sha256:c234a01c8eef0a3464f66702aad882c0f7c2d8772c2465483db6345410c77d0c",
       "assessment_schema_version": "ai-human-contribution-assessment/v3",
-      "assessment_sha256": "88c8dfde9ae9cc008c1c09fc0944bf5342ea0b8a964c900d9d557b92fa1d8e01",
-      "full_report_sha256": "b724182c200550035ab3e77c9dc0d15404c71d6c935634c35c87ae722dd37f64",
-      "render_fingerprint": "sha256:ce9fbc717fd45aed938b31d6ad361575c31ba22a15315052ba9a8ff5a9bf6049",
-      "teacher_report_sha256": "d577ccb20b64db5b4b43c387b6cb00c378869020c5693c75d9b1bd9cca7ea361",
-      "updated_at": "2026-09-18T11:57:21.143266+00:00"
+      "assessment_sha256": "ae14751bb73da9eb01814a3e38442167f8c029a144bd1c43f70cc2553fcba8a9",
+      "full_report_sha256": "454792c6e0eebf831030514cf046f4cb26fba54c6cb15e360b92caabb6ec456e",
+      "render_fingerprint": "sha256:b109cafd2d2c255e63503d2a3ed23fea79cd5cadb306d6e0f7f17206e3546494",
+      "teacher_report_sha256": "c8e328b6a34f9d4bdd8f1f944c8b6aa6372cd0e36afe52b8aa05f061f0615fe4",
+      "updated_at": "2026-09-19T04:58:49.747118+00:00"
     },
     "lab2": {
       "analysis_status": "insufficient_data",
-      "assessment_fingerprint": "sha256:d506a71d77c86bf658ebf9514b329c7f2dfcd5e4fbd5e2c5abc3d2a9b5e72653",
+      "assessment_fingerprint": "sha256:2e28c4bc5343401ae02f6e761d231ed479d3eff6bcb1a07b72988350cba6f61f",
       "assessment_schema_version": "ai-human-contribution-assessment/v3",
-      "assessment_sha256": "f2361b4eb6ef5b374675e445265799ce8c643fbede484049c385dd252120e185",
-      "full_report_sha256": "02a05c67b7b38e2ecf86f67dc67219e042456543ea19a4d51584f96f3dd3380a",
-      "render_fingerprint": "sha256:7654b95f692548225c4c0081a6f17737b10145c15a4e647f756de7b2df75000d",
-      "teacher_report_sha256": "6008d96a8ac518daf15564ca189ec1c3d56dd8ef2bafae18d23d5e604577a77f",
-      "updated_at": "2026-09-18T11:57:21.145938+00:00"
+      "assessment_sha256": "5095f5d02c3f41c29156c39f792666686f8e82de1423471400cf8307499b94b1",
+      "full_report_sha256": "b7306b46ea033f3a6f640bc118d8aeec2a44a8cefe87113c6814e41e5d883ee8",
+      "render_fingerprint": "sha256:5a095385d8030fc26b052cce01d3e8107945615684e73e520ec761bd51e2333f",
+      "teacher_report_sha256": "3d8a98738f155fc1c00839faa3ea098cd99ef38942b239bb395336753c8d2ced",
+      "updated_at": "2026-09-19T04:58:49.807473+00:00"
     },
     "lab3": {
       "analysis_status": "insufficient_data",
-      "assessment_fingerprint": "sha256:9c6b4a01c968d054b75af48336deeb036fd8133ef2512c2a4d73f3b477cc1193",
+      "assessment_fingerprint": "sha256:90f0e94f98485b46e203942f67794a3cc9e35dabd995c2d7eb46ade29a989a6f",
       "assessment_schema_version": "ai-human-contribution-assessment/v3",
-      "assessment_sha256": "b2e290c3b7fc18be839ce1688995ed86dd5dea0552fb07b377a6ff78fe3ff5c6",
-      "full_report_sha256": "3e9d10c4aa118340fc58b91bfb7ccd5e492ec4b024be7a2d97cb56e0ee3addbc",
-      "render_fingerprint": "sha256:c633cd208f47e024760ace35e0a911d8797c3e3f6c9ae0be5416075ce26a965c",
-      "teacher_report_sha256": "f07745a3c60b9b8129dfe15742811c9934ca5366a89bf70ccc8e9d0afb398f02",
-      "updated_at": "2026-09-18T11:57:21.148520+00:00"
+      "assessment_sha256": "6867d52a7cbee21c42c712933861078e2fc4aa8f58852a61d5724f32c5896d6e",
+      "full_report_sha256": "143e1845be21a307060e520d0995958a8c7b61e85c825412c2836bf4030918ff",
+      "render_fingerprint": "sha256:aed6f9110f4c574e5faf4e7c0a72ecae73b871cd7b4d8f6428a63bd7d74aa44a",
+      "teacher_report_sha256": "2451bbf71548338c9914bfb29f045e77b6868c0de08ee48dac2003a0915c6444",
+      "updated_at": "2026-09-19T04:58:49.868128+00:00"
     },
     "lab4": {
       "analysis_status": "insufficient_data",
-      "assessment_fingerprint": "sha256:d437cc04ce5c4f3f1acaaaa0e497c8f15d95214098ca90b950cf6c50c23bf130",
+      "assessment_fingerprint": "sha256:11e4a37a87c01e41d277a3d8274f4d7bfdb2ee664eff81e19e2487b3b611d5f2",
       "assessment_schema_version": "ai-human-contribution-assessment/v3",
-      "assessment_sha256": "e8d2f9f2c9769ca2e713431d71ad3022dbe95a365fac820321c48f6ef0802e75",
-      "full_report_sha256": "afcb69d5365363b27cf9ca794c3627af41d44d2253b495335c2366907ebb3f95",
-      "render_fingerprint": "sha256:27b22a81ab1667a323e69273a209d4a2e180cef566be865df067f2498507141b",
-      "teacher_report_sha256": "cec3e3d55d0e20a20c0a73dc34e74b58411ff7bd2c7e5a4fa3731902a6a495f3",
-      "updated_at": "2026-09-18T11:57:21.151091+00:00"
+      "assessment_sha256": "d398db3afcce7575b4ac4e42a5c162eefceba12f9a6ae61224b8b6f6052d400e",
+      "full_report_sha256": "e1fc8e8e4fc5c5b2c0cff9e9ca92023e360ae463cdfb6bdc57e9df49410db168",
+      "render_fingerprint": "sha256:01b64054138fdc55028c6ed8967ea45a3ddcb72387e8167ccf4edc4ca236c93c",
+      "teacher_report_sha256": "4ef7d4542071950c707026875b16e2eeb47a6bff40fcbcf4694eecaea30f8af6",
+      "updated_at": "2026-09-19T04:58:49.930567+00:00"
     },
     "lab5": {
       "analysis_status": "insufficient_data",
-      "assessment_fingerprint": "sha256:0bf02939ce1c04568a085786eca8d6765c46051a22b1929444352cd2735d6cdd",
+      "assessment_fingerprint": "sha256:fe995415acbea11a2a9993df668f638ceb5885f26c21b2853ea83ad40c8d1053",
       "assessment_schema_version": "ai-human-contribution-assessment/v3",
-      "assessment_sha256": "e0190bd2b9cfcfbeb6f10177e8aa262749cf8b07777345b1f15a691a10d92080",
-      "full_report_sha256": "fefe054cfda5a062c76264f933deaec068e80061b94ea96108717c7b087ef92c",
-      "render_fingerprint": "sha256:62969a0abf1d66d945ee30925420ba0cef0e3a29b7fd4d71e58d193c85d1abe0",
-      "teacher_report_sha256": "ec2d128109e663784b55a74324e2eef1224ea7b9880c890b3ac0f4e7393be3f8",
-      "updated_at": "2026-09-18T11:57:21.153671+00:00"
+      "assessment_sha256": "6cf2fb02d3a6aaab1f9aa90144f610a662d96b7e13903d9f2746892687ce1380",
+      "full_report_sha256": "f46185b4690f72b94be401b225f9e9dcb7765139d7d88ed21b99c4f600d68e90",
+      "render_fingerprint": "sha256:14a2cc7656521d600628de901710f658d2734989d18fd8815502ddff8d2fc771",
+      "teacher_report_sha256": "3738e822d6c91cc8fb3aa7fedc9efb452066d53562c6a64009bb28eff54320f2",
+      "updated_at": "2026-09-19T04:58:49.995225+00:00"
     },
     "lab6": {
       "analysis_status": "insufficient_data",
-      "assessment_fingerprint": "sha256:a9622d50b4159e8cb52007a78884058390b35cb0daf24e1ad698336fade41ece",
+      "assessment_fingerprint": "sha256:8c3483829d7934358485a54c9e61e93786b1d143cc1baaf88e9e67d3d4d0563a",
       "assessment_schema_version": "ai-human-contribution-assessment/v3",
-      "assessment_sha256": "2bc466c68a84dc1f0820ffefb2f21ca03ac0d0e2c5c5189c6e12560fbb67a180",
-      "full_report_sha256": "246a01a37304f9b1c0541a313717e1f49dda359a334f8129801d0a598e023ab4",
-      "render_fingerprint": "sha256:0ceac7bcfac2cf7dcf24ed899616e3973fe3b54749606b8547ed4e3842bd1753",
-      "teacher_report_sha256": "0be2b57654614eadcc65d9499f2f72100468a95a02cfcdc0654e9d59328fb786",
-      "updated_at": "2026-09-18T11:57:21.156290+00:00"
+      "assessment_sha256": "480592b5a0b943f97e843c02287830166b2f1a450178faf8d0c2a6c3f0350ade",
+      "full_report_sha256": "7c417e85fda43f558ebfba742364201d1be9608d18ee2a0e2363fe989496ea79",
+      "render_fingerprint": "sha256:2b5f87d8f4889120ee5ff76d877c1abf6ee435f54893f3dcf73c1f79923a72c1",
+      "teacher_report_sha256": "57f3cfc362f9aff23c6c765dfe4579dde5bfbb727feea7c78d4250cf847a19dd",
+      "updated_at": "2026-09-19T04:58:50.056204+00:00"
     },
     "lab7": {
       "analysis_status": "insufficient_data",
-      "assessment_fingerprint": "sha256:627b9b005e8539673e95117c33dca1992d1731abd144c9b0596a4b90f989cc71",
+      "assessment_fingerprint": "sha256:c78bc9ec2c7b0ff4bc6296ec1a1876905eee438619e12edae13c1001ac65a702",
       "assessment_schema_version": "ai-human-contribution-assessment/v3",
-      "assessment_sha256": "0e775a6ecf80bc847bb542dbd1b18900d7a6bb5e5ebd6f0139a93e4b0bbe2489",
-      "full_report_sha256": "e92da352ded2b1074b53950cf968419a6040f8dec915182dd7241727f4807361",
-      "render_fingerprint": "sha256:f10235428d8dac8645847837337bae19f3792de4e3e7464a1eeddc552dccb156",
-      "teacher_report_sha256": "d5ec0f22d8685faa40edcbbcfb1fe8c1d64f9ad69b6f08426442793be757596e",
-      "updated_at": "2026-09-18T11:57:21.159424+00:00"
+      "assessment_sha256": "3584daac62f6903d7363f46b2d247f82b308168fd6eef5d1b733b8939d928ff2",
+      "full_report_sha256": "e71529f28263b8090bebb37b526378041d02e9b1433cf1f7c27af21846b77d8e",
+      "render_fingerprint": "sha256:c77a5b482d3bc42969502df7fe083a429d973775e990d390cf0a6f9d6f9bc1d6",
+      "teacher_report_sha256": "e997b02981bda7d814b95c0614aec305d6f623531a0696ef7f4e8f25f6fc9d05",
+      "updated_at": "2026-09-19T04:58:50.119385+00:00"
     },
     "lab8": {
       "analysis_status": "insufficient_data",
-      "assessment_fingerprint": "sha256:f636f7db64b8282cad1ee48c27d56e95936a9e935cdfacdbc1cee5d514117d92",
+      "assessment_fingerprint": "sha256:a3c1e4b83078f87e1fbda9e63444c798f234dfbab4cb4a2b8b48979e18d6e825",
       "assessment_schema_version": "ai-human-contribution-assessment/v3",
-      "assessment_sha256": "355ddc6611ca7248ffbad44ec376f250a2de9cae6bf6aacf92af1311fd3028e4",
-      "full_report_sha256": "0429bda668c9835f7d0bd1ffcfed21adb8b8e917b58a7479d96d8c9e3b3fc62b",
-      "render_fingerprint": "sha256:fa971fd40def910717c451757f129e4126f884ddabee9ec6846b66e71c359331",
-      "teacher_report_sha256": "13974d7aa4ebe04c7c2b57ced3c932a6256492339ddf51397fedc3e693fc396f",
-      "updated_at": "2026-09-18T11:57:21.162275+00:00"
+      "assessment_sha256": "5d996feb6ce0415b468bd823002345f73275505174f87ef817eb97e04ff42b32",
+      "full_report_sha256": "6c13302d64454a512637dd5f6c85194d615d2c2b0d59f65ed275f36d592aed28",
+      "render_fingerprint": "sha256:34490c9b4439c31ef758ee8b1a9423182f6f3696f020d0abe91426d61bce609c",
+      "teacher_report_sha256": "5ac101fc57c29ce7cd188c978fd2c9c0f193c60d7a249572f7268b9b7adf7eb6",
+      "updated_at": "2026-09-19T04:58:50.181492+00:00"
     }
   },
   "report_template_version": "6",
   "schema_version": "ai-human-contribution-manifest/v3",
   "tool": "ai-human-contribution-recognition",
   "tool_version": "3.1.1",
-  "updated_at": "2026-09-18T11:57:21.162277+00:00"
+  "updated_at": "2026-09-19T04:58:50.181492+00:00"
 }
