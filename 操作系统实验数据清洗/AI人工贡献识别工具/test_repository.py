@@ -23,15 +23,15 @@ _DIRECTORIES = {
     "diff_report": DIFF_DIRECTORY,
 }
 _FILENAMES = {
-    "timeline": "timeline_{lab}.md",
-    "terminal_qa": "terminal_qa_report_{lab}.md",
-    "command_statistics": "command_statistics_{lab}.md",
-    "diff_report": "{lab}.md",
+    "timeline": "简洁实验过程时间线.md",
+    "terminal_qa": "终端对话记录.md",
+    "command_statistics": "终端命令统计.md",
+    "diff_report": "代码差异报告.md",
 }
 
 
 def _write_material(root: Path, student: str, lab: str, kind: str, body: str) -> Path:
-    path = root / student / _DIRECTORIES[kind] / _FILENAMES[kind].format(lab=lab)
+    path = root / "按人分类" / student / lab / _DIRECTORIES[kind] / _FILENAMES[kind].format(lab=lab)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(body, encoding="utf-8")
     return path
@@ -106,7 +106,7 @@ class ContributionRepositoryV2Tests(unittest.TestCase):
         self.assertEqual(materials["terminal_qa"].availability, "missing")
         self.assertEqual(materials["command_statistics"].availability, "missing")
         self.assertEqual(materials["diff_report"].availability, "available")
-        self.assertEqual(materials["diff_report"].relative_path, "代码差异报告/lab1.md")
+        self.assertEqual(materials["diff_report"].relative_path, str(Path("lab1/代码差异报告工具/代码差异报告.md")))
         self.assertEqual(len(snapshot.diff_hunks), 1)
         hunk = snapshot.diff_hunks[0]
         self.assertEqual(hunk.source_id, "source:lab1:diff_report")

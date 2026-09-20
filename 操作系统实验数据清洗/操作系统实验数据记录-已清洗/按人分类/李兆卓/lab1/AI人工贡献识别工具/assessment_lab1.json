@@ -1,0 +1,456 @@
+{
+  "analysis_status": "complete",
+  "contribution_units": [
+    {
+      "alternative_explanation": "The target could have been suggested by AI and copied by the student, but no logs of AI interaction are present.",
+      "behavior_roles": {
+        "ai": [],
+        "human": [
+          "human_execution",
+          "human_code_editing",
+          "human_verification"
+        ]
+      },
+      "confidence": "moderate",
+      "evidence_refs": [
+        {
+          "excerpt": "@@ -151,6 +151,12 @@ ifeq ($(platform), k210)\n else\n \t@$(QEMU) $(QEMUOPTS)\n endif\n+# 调试⽤：启动带 gdbstub 的 QEMU（端⼝ 1234），停在起点等 gdb 接管\n+# 另开⼀个终端跑：gdb-multiarch target/kernel -ex 'set arch riscv:rv64' -ex 'target remote localhost:1234'\n+gdb: build\n+\t@echo \"*** QEMU 已在 :1234 等待 gdb，请在另⼀个终端运⾏: ***\"\n+\t@echo \" gdb-multiarch target/kernel -ex 'set arch riscv:rv64' -ex 'target remote localhost:1234'\"\n+\t@$(QEMU) $(QEMUOPTS) -S -s\n \n $U/initcode: $U/initcode.S\n \t$(CC) $(CFLAGS) -march=rv64g -nostdinc -I. -Ikernel -c $U/initcode.S -o $U/initcode.o",
+          "excerpt_redacted": true,
+          "line_end": 44,
+          "line_start": 32,
+          "relative_path": "代码差异报告\\lab1.md",
+          "sha256": "80e9eeca468ceba956a29564fe355684fb1955eff35da9ef1f743e526a468920",
+          "source_id": "source:lab1:diff_report",
+          "source_kind": "diff_report"
+        },
+        {
+          "excerpt": "| make gdb | 1 |",
+          "excerpt_redacted": true,
+          "line_end": 20,
+          "line_start": 20,
+          "relative_path": "终端命令统计\\command_statistics_lab1.md",
+          "sha256": "e53a2df8fab409356bae3bf8ebf60d332609dd5ddcf9b82a4cff6dc4a5c722bd",
+          "source_id": "source:lab1:command_statistics",
+          "source_kind": "command_statistics"
+        },
+        {
+          "excerpt": "make build\n```",
+          "excerpt_redacted": true,
+          "line_end": 32,
+          "line_start": 31,
+          "relative_path": "终端对话记录\\terminal_qa_report_lab1.md",
+          "sha256": "ac9a0c0375e40dda5643546a4bd457602bdb57ce25a56026eed7dbaf58255044",
+          "source_id": "source:lab1:terminal_qa",
+          "source_kind": "terminal_qa"
+        },
+        {
+          "excerpt": "make build",
+          "excerpt_redacted": true,
+          "line_end": 16,
+          "line_start": 16,
+          "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+          "sha256": "d48846cdc732ea32b5302222283252449e428d33e0305a2fcba951b96ca2050c",
+          "source_id": "source:lab1:timeline",
+          "source_kind": "timeline"
+        }
+      ],
+      "label": "human_dominant",
+      "limitations": [
+        "No direct logs of editing the Makefile or interaction with AI tools; inference based on command usage."
+      ],
+      "scope": {
+        "change_kind": "修改",
+        "file_path": "Makefile",
+        "hunk_id": "hunk:lab1:1",
+        "line_end": 44,
+        "line_start": 32,
+        "source_id": "source:lab1:diff_report"
+      },
+      "summary": "Added gdb target for launching QEMU with gdb stub, used by student as evidenced by make gdb command execution.",
+      "unit_id": "unit:lab1:hunk1",
+      "unit_type": "code_hunk"
+    },
+    {
+      "alternative_explanation": "The change could have been AI-generated and pasted, but no evidence of AI assistance.",
+      "behavior_roles": {
+        "ai": [],
+        "human": [
+          "human_execution",
+          "human_code_editing",
+          "human_verification"
+        ]
+      },
+      "confidence": "moderate",
+      "evidence_refs": [
+        {
+          "excerpt": "@@ -242,7 +248,7 @@ sdcard: userprogs\n \t@sudo cp README $(dst)/README\n \n clean: \n-\trm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \\\n+\trm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg fs.img\\\n \t*/*.o */*.d */*.asm */*.sym \\\n \t$T/* \\\n \t$U/initcode $U/initcode.out \\",
+          "excerpt_redacted": true,
+          "line_end": 53,
+          "line_start": 45,
+          "relative_path": "代码差异报告\\lab1.md",
+          "sha256": "80e9eeca468ceba956a29564fe355684fb1955eff35da9ef1f743e526a468920",
+          "source_id": "source:lab1:diff_report",
+          "source_kind": "diff_report"
+        },
+        {
+          "excerpt": "| make clean | 1 |",
+          "excerpt_redacted": true,
+          "line_end": 19,
+          "line_start": 19,
+          "relative_path": "终端命令统计\\command_statistics_lab1.md",
+          "sha256": "e53a2df8fab409356bae3bf8ebf60d332609dd5ddcf9b82a4cff6dc4a5c722bd",
+          "source_id": "source:lab1:command_statistics",
+          "source_kind": "command_statistics"
+        },
+        {
+          "excerpt": "make build\n```",
+          "excerpt_redacted": true,
+          "line_end": 32,
+          "line_start": 31,
+          "relative_path": "终端对话记录\\terminal_qa_report_lab1.md",
+          "sha256": "ac9a0c0375e40dda5643546a4bd457602bdb57ce25a56026eed7dbaf58255044",
+          "source_id": "source:lab1:terminal_qa",
+          "source_kind": "terminal_qa"
+        },
+        {
+          "excerpt": "make build",
+          "excerpt_redacted": true,
+          "line_end": 16,
+          "line_start": 16,
+          "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+          "sha256": "d48846cdc732ea32b5302222283252449e428d33e0305a2fcba951b96ca2050c",
+          "source_id": "source:lab1:timeline",
+          "source_kind": "timeline"
+        }
+      ],
+      "label": "human_dominant",
+      "limitations": [
+        "No direct logs of editing the Makefile or interaction with AI tools; inference based on command usage."
+      ],
+      "scope": {
+        "change_kind": "修改",
+        "file_path": "Makefile",
+        "hunk_id": "hunk:lab1:2",
+        "line_end": 53,
+        "line_start": 45,
+        "source_id": "source:lab1:diff_report"
+      },
+      "summary": "Modified clean target to remove fs.img, aligning with student's use of make clean.",
+      "unit_id": "unit:lab1:hunk2",
+      "unit_type": "code_hunk"
+    }
+  ],
+  "coverage": {
+    "materials": [
+      {
+        "kind": "timeline",
+        "line_count": 305,
+        "reason": null,
+        "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+        "required": true,
+        "sha256": "d48846cdc732ea32b5302222283252449e428d33e0305a2fcba951b96ca2050c",
+        "source_id": "source:lab1:timeline",
+        "status": "available"
+      },
+      {
+        "kind": "terminal_qa",
+        "line_count": 352,
+        "reason": null,
+        "relative_path": "终端对话记录\\terminal_qa_report_lab1.md",
+        "required": true,
+        "sha256": "ac9a0c0375e40dda5643546a4bd457602bdb57ce25a56026eed7dbaf58255044",
+        "source_id": "source:lab1:terminal_qa",
+        "status": "available"
+      },
+      {
+        "kind": "command_statistics",
+        "line_count": 20,
+        "reason": null,
+        "relative_path": "终端命令统计\\command_statistics_lab1.md",
+        "required": true,
+        "sha256": "e53a2df8fab409356bae3bf8ebf60d332609dd5ddcf9b82a4cff6dc4a5c722bd",
+        "source_id": "source:lab1:command_statistics",
+        "status": "available"
+      },
+      {
+        "kind": "diff_report",
+        "line_count": 54,
+        "reason": null,
+        "relative_path": "代码差异报告\\lab1.md",
+        "required": true,
+        "sha256": "80e9eeca468ceba956a29564fe355684fb1955eff35da9ef1f743e526a468920",
+        "source_id": "source:lab1:diff_report",
+        "status": "available"
+      }
+    ],
+    "missing_or_limited": [],
+    "status": "complete"
+  },
+  "diff_hunks": [
+    {
+      "change_kind": "修改",
+      "file_path": "Makefile",
+      "hunk_id": "hunk:lab1:1",
+      "line_end": 44,
+      "line_start": 32,
+      "new_line_count": 12,
+      "new_line_start": 151,
+      "old_line_count": 6,
+      "old_line_start": 151,
+      "source_id": "source:lab1:diff_report"
+    },
+    {
+      "change_kind": "修改",
+      "file_path": "Makefile",
+      "hunk_id": "hunk:lab1:2",
+      "line_end": 53,
+      "line_start": 45,
+      "new_line_count": 7,
+      "new_line_start": 248,
+      "old_line_count": 7,
+      "old_line_start": 242,
+      "source_id": "source:lab1:diff_report"
+    }
+  ],
+  "input_fingerprint": "sha256:08fc6fb2c3e9925f98a9ae542f4ee5c505571bf740b5fc40c547d1cdc3145efd",
+  "lab": "lab1",
+  "lab_conclusion": {
+    "alternative_explanation": "It is possible that an AI assistant suggested the Makefile modifications, which the student then copied and used, but the available logs do not show any AI interaction.",
+    "confidence": "moderate",
+    "evidence_refs": [
+      {
+        "excerpt": "--- 基准/Makefile\n+++ 学生/Makefile\n@@ -151,6 +151,12 @@ ifeq ($(platform), k210)\n else\n \t@$(QEMU) $(QEMUOPTS)\n endif\n+# 调试⽤：启动带 gdbstub 的 QEMU（端⼝ 1234），停在起点等 gdb 接管\n+# 另开⼀个终端跑：gdb-multiarch target/kernel -ex 'set arch riscv:rv64' -ex 'target remote localhost:1234'\n+gdb: build\n+\t@echo \"*** QEMU 已在 :1234 等待 gdb，请在另⼀个终端运⾏: ***\"\n+\t@echo \" gdb-multiarch target/kernel -ex 'set arch riscv:rv64' -ex 'target remote localhost:1234'\"\n+\t@$(QEMU) $(QEMUOPTS) -S -s\n \n $U/initcode: $U/initcode.S\n \t$(CC) $(CFLAGS) -march=rv64g -nostdinc -I. -Ikernel -c $U/initcode.S -o $U/initcode.o\n@@ -242,7 +248,7 @@ sdcard:…",
+        "excerpt_redacted": true,
+        "line_end": 54,
+        "line_start": 30,
+        "relative_path": "代码差异报告\\lab1.md",
+        "sha256": "80e9eeca468ceba956a29564fe355684fb1955eff35da9ef1f743e526a468920",
+        "source_id": "source:lab1:diff_report",
+        "source_kind": "diff_report"
+      },
+      {
+        "excerpt": "make build",
+        "excerpt_redacted": true,
+        "line_end": 16,
+        "line_start": 16,
+        "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+        "sha256": "d48846cdc732ea32b5302222283252449e428d33e0305a2fcba951b96ca2050c",
+        "source_id": "source:lab1:timeline",
+        "source_kind": "timeline"
+      },
+      {
+        "excerpt": "make build\n```",
+        "excerpt_redacted": true,
+        "line_end": 32,
+        "line_start": 31,
+        "relative_path": "终端对话记录\\terminal_qa_report_lab1.md",
+        "sha256": "ac9a0c0375e40dda5643546a4bd457602bdb57ce25a56026eed7dbaf58255044",
+        "source_id": "source:lab1:terminal_qa",
+        "source_kind": "terminal_qa"
+      },
+      {
+        "excerpt": "| make build | 1 |\n| make clean | 1 |\n| make gdb | 1 |",
+        "excerpt_redacted": true,
+        "line_end": 20,
+        "line_start": 18,
+        "relative_path": "终端命令统计\\command_statistics_lab1.md",
+        "sha256": "e53a2df8fab409356bae3bf8ebf60d332609dd5ddcf9b82a4cff6dc4a5c722bd",
+        "source_id": "source:lab1:command_statistics",
+        "source_kind": "command_statistics"
+      }
+    ],
+    "label": "human_dominant",
+    "limitations": [
+      "The snapshots only show cleaned materials (timeline, terminal QA, command statistics, diff); no logs of actual editor interactions or AI tool usage are available.",
+      "Materials record observable processes but cannot prove who typed the code or whether it was generated by AI.",
+      "Absence of evidence cannot be interpreted as absence of AI use or student effort."
+    ],
+    "summary": "The student added practical Makefile targets (gdb and clean) that correspond to observed command usage, indicating they authored the changes to support their workflow. No direct evidence of AI involvement was found."
+  },
+  "limitations": [
+    "The analysis relies solely on cleaned snapshot materials (timeline, terminal QA, command statistics, diff) and does not include logs of editor interactions, AI tool usage, or detailed revision history.",
+    "Inference of authorship is indirect, based on command usage and temporal proximity; definitive proof of who typed each line is not available.",
+    "The host-provided materials may not capture all relevant actions (e.g., offline discussions, external AI tool use outside the recorded environment).",
+    "该结果是课程贡献归属线索，不认定真实作者、手打或粘贴方式、理解程度、诚信、违规或分数。"
+  ],
+  "review": {
+    "disagreement_unit_ids": [],
+    "downgraded_unit_ids": [],
+    "overall_decision": "agree",
+    "reviewed_unit_ids": [
+      "unit:lab1:hunk1",
+      "unit:lab1:hunk2"
+    ],
+    "status": "agreed",
+    "summary": "Both Makefile changes correspond to observed student command usage (make gdb, make clean, make build). No direct evidence of AI assistance exists, supporting the human_dominant label.",
+    "unit_reviews": [
+      {
+        "decision": "agree",
+        "evidence_refs": [
+          {
+            "excerpt": "@@ -151,6 +151,12 @@ ifeq ($(platform), k210)\n else\n \t@$(QEMU) $(QEMUOPTS)\n endif\n+# 调试⽤：启动带 gdbstub 的 QEMU（端⼝ 1234），停在起点等 gdb 接管\n+# 另开⼀个终端跑：gdb-multiarch target/kernel -ex 'set arch riscv:rv64' -ex 'target remote localhost:1234'\n+gdb: build\n+\t@echo \"*** QEMU 已在 :1234 等待 gdb，请在另⼀个终端运⾏: ***\"\n+\t@echo \" gdb-multiarch target/kernel -ex 'set arch riscv:rv64' -ex 'target remote localhost:1234'\"\n+\t@$(QEMU) $(QEMUOPTS) -S -s\n \n $U/initcode: $U/initcode.S\n \t$(CC) $(CFLAGS) -march=rv64g -nostdinc -I. -Ikernel -c $U/initcode.S -o $U/initcode.o",
+            "excerpt_redacted": true,
+            "line_end": 44,
+            "line_start": 32,
+            "relative_path": "代码差异报告\\lab1.md",
+            "sha256": "80e9eeca468ceba956a29564fe355684fb1955eff35da9ef1f743e526a468920",
+            "source_id": "source:lab1:diff_report",
+            "source_kind": "diff_report"
+          },
+          {
+            "excerpt": "| make build | 1 |\n| make clean | 1 |\n| make gdb | 1 |",
+            "excerpt_redacted": true,
+            "line_end": 20,
+            "line_start": 18,
+            "relative_path": "终端命令统计\\command_statistics_lab1.md",
+            "sha256": "e53a2df8fab409356bae3bf8ebf60d332609dd5ddcf9b82a4cff6dc4a5c722bd",
+            "source_id": "source:lab1:command_statistics",
+            "source_kind": "command_statistics"
+          },
+          {
+            "excerpt": "make build\n```",
+            "excerpt_redacted": true,
+            "line_end": 32,
+            "line_start": 31,
+            "relative_path": "终端对话记录\\terminal_qa_report_lab1.md",
+            "sha256": "ac9a0c0375e40dda5643546a4bd457602bdb57ce25a56026eed7dbaf58255044",
+            "source_id": "source:lab1:terminal_qa",
+            "source_kind": "terminal_qa"
+          },
+          {
+            "excerpt": "make build",
+            "excerpt_redacted": true,
+            "line_end": 16,
+            "line_start": 16,
+            "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+            "sha256": "d48846cdc732ea32b5302222283252449e428d33e0305a2fcba951b96ca2050c",
+            "source_id": "source:lab1:timeline",
+            "source_kind": "timeline"
+          }
+        ],
+        "reason": "The added gdb target in the Makefile matches the observed execution of 'make gdb' (command_statistics) and the student's workflow of building then debugging (terminal_qa and timeline show make build). No evidence of AI involvement is present.",
+        "unit_id": "unit:lab1:hunk1"
+      },
+      {
+        "decision": "agree",
+        "evidence_refs": [
+          {
+            "excerpt": "@@ -242,7 +248,7 @@ sdcard: userprogs\n \t@sudo cp README $(dst)/README\n \n clean: \n-\trm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \\\n+\trm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg fs.img\\\n \t*/*.o */*.d */*.asm */*.sym \\\n \t$T/* \\\n \t$U/initcode $U/initcode.out \\",
+            "excerpt_redacted": true,
+            "line_end": 53,
+            "line_start": 45,
+            "relative_path": "代码差异报告\\lab1.md",
+            "sha256": "80e9eeca468ceba956a29564fe355684fb1955eff35da9ef1f743e526a468920",
+            "source_id": "source:lab1:diff_report",
+            "source_kind": "diff_report"
+          },
+          {
+            "excerpt": "| make build | 1 |\n| make clean | 1 |\n| make gdb | 1 |",
+            "excerpt_redacted": true,
+            "line_end": 20,
+            "line_start": 18,
+            "relative_path": "终端命令统计\\command_statistics_lab1.md",
+            "sha256": "e53a2df8fab409356bae3bf8ebf60d332609dd5ddcf9b82a4cff6dc4a5c722bd",
+            "source_id": "source:lab1:command_statistics",
+            "source_kind": "command_statistics"
+          },
+          {
+            "excerpt": "make build\n```",
+            "excerpt_redacted": true,
+            "line_end": 32,
+            "line_start": 31,
+            "relative_path": "终端对话记录\\terminal_qa_report_lab1.md",
+            "sha256": "ac9a0c0375e40dda5643546a4bd457602bdb57ce25a56026eed7dbaf58255044",
+            "source_id": "source:lab1:terminal_qa",
+            "source_kind": "terminal_qa"
+          },
+          {
+            "excerpt": "make build",
+            "excerpt_redacted": true,
+            "line_end": 16,
+            "line_start": 16,
+            "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+            "sha256": "d48846cdc732ea32b5302222283252449e428d33e0305a2fcba951b96ca2050c",
+            "source_id": "source:lab1:timeline",
+            "source_kind": "timeline"
+          }
+        ],
+        "reason": "The modification to the clean target (adding fs.img) aligns with the recorded execution of 'make clean' (command_statistics). The student's build activity is also evidenced by terminal_qa and timeline. No AI traces are found.",
+        "unit_id": "unit:lab1:hunk2"
+      }
+    ]
+  },
+  "run_metadata": {
+    "completed_at": "2026-09-19T05:05:20.085919+00:00",
+    "controlled_read_protocol_version": "contribution-read-material-v3",
+    "primary_attempts": 1,
+    "primary_model": "nvidia/nemotron-3-super-120b-a12b",
+    "primary_read_count": 4,
+    "primary_repaired": false,
+    "primary_request_id": null,
+    "primary_usage": null,
+    "prompt_version": "contribution-attribution-v3-nim-semantic-primary-v2",
+    "review_attempts": 2,
+    "review_model": "nvidia/nemotron-3-super-120b-a12b",
+    "review_prompt_version": "contribution-attribution-v3-nim-independent-review-v2",
+    "review_request_id": null,
+    "review_usage": null,
+    "reviewer_read_count": 5,
+    "reviewer_repaired": false,
+    "tool_version": "3.1.1",
+    "validator_version": "contribution-assessment-validator-v4"
+  },
+  "schema_version": "ai-human-contribution-assessment/v3",
+  "source_manifest": [
+    {
+      "availability": "available",
+      "kind": "timeline",
+      "line_count": 305,
+      "reason": null,
+      "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+      "required": true,
+      "sha256": "d48846cdc732ea32b5302222283252449e428d33e0305a2fcba951b96ca2050c",
+      "source_id": "source:lab1:timeline"
+    },
+    {
+      "availability": "available",
+      "kind": "terminal_qa",
+      "line_count": 352,
+      "reason": null,
+      "relative_path": "终端对话记录\\terminal_qa_report_lab1.md",
+      "required": true,
+      "sha256": "ac9a0c0375e40dda5643546a4bd457602bdb57ce25a56026eed7dbaf58255044",
+      "source_id": "source:lab1:terminal_qa"
+    },
+    {
+      "availability": "available",
+      "kind": "command_statistics",
+      "line_count": 20,
+      "reason": null,
+      "relative_path": "终端命令统计\\command_statistics_lab1.md",
+      "required": true,
+      "sha256": "e53a2df8fab409356bae3bf8ebf60d332609dd5ddcf9b82a4cff6dc4a5c722bd",
+      "source_id": "source:lab1:command_statistics"
+    },
+    {
+      "availability": "available",
+      "kind": "diff_report",
+      "line_count": 54,
+      "reason": null,
+      "relative_path": "代码差异报告\\lab1.md",
+      "required": true,
+      "sha256": "80e9eeca468ceba956a29564fe355684fb1955eff35da9ef1f743e526a468920",
+      "source_id": "source:lab1:diff_report"
+    }
+  ],
+  "student": {
+    "directory_name": "李兆卓",
+    "display_name": "李兆卓",
+    "student_id": null
+  },
+  "teacher_actions": [
+    "Request detailed editor action logs (e.g., IDE/vim history) to see precise timestamps and edit patterns for the Makefile changes.",
+    "Ask the student to walk through their process of adding the gdb and clean targets, including any consultation of external resources or AI tools.",
+    "If AI assistance was permitted, retrieve logs from those tools (e.g., GitHub Copilot, ChatGPT) to verify whether suggestions were made and accepted."
+  ]
+}

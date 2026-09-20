@@ -41,7 +41,7 @@ def _evidence(source_id: str = "source:lab1:timeline") -> dict[str, object]:
         "sha256": "a" * 64,
         "line_start": 3,
         "line_end": 5,
-        "excerpt": "学生询问原理；NVIDIA_API_KEY=[REDACTED]。",
+        "excerpt": "学生询问原理；NVIDIA_API_KEY=synthetic-test-secret。",
     }
 
 
@@ -131,7 +131,7 @@ class V3ReportingTests(unittest.TestCase):
             self.assertIn("SHA-256", report)
             self.assertIn("第 3-5 行", report)
             self.assertIn("[REDACTED]", report)
-            self.assertNotIn("[REDACTED]", report)
+            self.assertNotIn("synthetic-test-secret", report)
             self.assertNotIn("must never persist", report)
             self.assertNotIn("reasoning_content", report)
         self.assertIn("完整贡献识别报告", full)
@@ -155,13 +155,13 @@ class V3ReportingTests(unittest.TestCase):
             self.assertTrue(assessment_path.is_file())
             self.assertTrue(full_path.is_file())
             self.assertTrue(teacher_path.is_file())
-            self.assertEqual(assessment_path.parent.name, "assessment")
-            self.assertEqual(full_path.parent.name, "完整贡献识别报告")
-            self.assertEqual(teacher_path.parent.name, "教师贡献复核报告")
+            self.assertEqual(assessment_path.parent.name, "AI人工贡献识别工具")
+            self.assertEqual(full_path.parent.name, "AI人工贡献识别工具")
+            self.assertEqual(teacher_path.parent.name, "AI人工贡献识别工具")
             written = json.loads(assessment_path.read_text(encoding="utf-8"))
             self.assertEqual(written["schema_version"], V3_SCHEMA_VERSION)
             self.assertNotIn("reasoning_content", json.dumps(written, ensure_ascii=False))
-            self.assertNotIn("[REDACTED]", json.dumps(written, ensure_ascii=False))
+            self.assertNotIn("synthetic-test-secret", json.dumps(written, ensure_ascii=False))
             self.assertTrue(storage.cache_hit("2406080001-测试学生", "lab1", "sha256:input"))
             self.assertTrue(storage.reports_are_current("2406080001-测试学生", "lab1", "sha256:render"))
             manifest = storage.load_manifest("2406080001-测试学生")
@@ -180,36 +180,6 @@ class V3ReportingTests(unittest.TestCase):
             )
             self.assertFalse(storage.reports_are_current("2406080001-测试学生", "lab1", "sha256:render"))
             self.assertTrue(storage.reports_are_current("2406080001-测试学生", "lab1", "sha256:rerender"))
-
-    def test_flat_v3_artifacts_migrate_into_categorized_directories(self) -> None:
-        assessment = _assessment()
-        student = "2406080001-测试学生"
-        with tempfile.TemporaryDirectory() as temporary_directory:
-            storage = ContributionStorage(Path(temporary_directory))
-            assessment_path, full_path, teacher_path = storage.write_assessment_and_reports(
-                student,
-                "lab1",
-                assessment,
-                render_full_report(assessment),
-                render_teacher_report(assessment),
-                "sha256:input",
-                "sha256:render",
-            )
-            root = storage.analysis_directory(student)
-            legacy_assessment = root / "assessment_lab1.json"
-            legacy_full = root / "完整贡献识别报告_lab1.md"
-            legacy_teacher = root / "教师贡献复核报告_lab1.md"
-            os.replace(assessment_path, legacy_assessment)
-            os.replace(full_path, legacy_full)
-            os.replace(teacher_path, legacy_teacher)
-
-            self.assertTrue(storage.cache_hit(student, "lab1", "sha256:input"))
-            self.assertTrue(assessment_path.is_file())
-            self.assertTrue(full_path.is_file())
-            self.assertTrue(teacher_path.is_file())
-            self.assertFalse(legacy_assessment.exists())
-            self.assertFalse(legacy_full.exists())
-            self.assertFalse(legacy_teacher.exists())
 
     def test_insufficient_data_and_old_schema_are_strictly_handled(self) -> None:
         assessment = _assessment()

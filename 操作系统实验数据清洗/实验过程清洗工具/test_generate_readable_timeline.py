@@ -30,7 +30,8 @@ class ReadableTimelineTests(unittest.TestCase):
                 "elapsed_seconds": 1.25,
             }],
         }
-        self.timeline = self.source / "timeline_lab0.json"
+        self.timeline = self.student / "lab0" / "实验过程清洗工具" / "实验过程时间线.json"
+        self.timeline.parent.mkdir(parents=True)
         self.timeline.write_text(json.dumps(document, ensure_ascii=False), encoding="utf-8")
 
     def tearDown(self):
@@ -39,7 +40,7 @@ class ReadableTimelineTests(unittest.TestCase):
     def test_writes_simple_view_without_changing_source_json(self):
         source_hash = hashlib.sha256(self.timeline.read_bytes()).hexdigest()
         output = app.write_student(self.student)
-        self.assertEqual([path.name for path in output], ["timeline_lab0.md"])
+        self.assertEqual([path.name for path in output], ["简洁实验过程时间线.md"])
         text = output[0].read_text(encoding="utf-8")
         self.assertIn("录像时间：2026-09-10T22:00:00.000+08:00（北京时间）", text)
         self.assertIn("录像类型：Shell 命令", text)
@@ -52,7 +53,7 @@ class ReadableTimelineTests(unittest.TestCase):
 
     def test_removes_only_owned_markdown_when_source_json_disappears(self):
         output = app.write_student(self.student)[0]
-        manifest = output.parent / app.OUTPUT_MANIFEST
+        manifest = self.source / app.OUTPUT_MANIFEST
         self.timeline.unlink()
 
         self.assertEqual(app.write_student(self.student), [])
@@ -64,7 +65,9 @@ class ReadableTimelineTests(unittest.TestCase):
     def test_junction_output_is_rejected_without_writing_external_files(self):
         external = self.root / "external"
         external.mkdir()
-        junction = self.student / app.OUTPUT_DIRECTORY
+        junction = self.student / "lab0" / "实验过程清洗工具"
+        self.timeline.unlink()
+        junction.rmdir()
         created = subprocess.run(
             ["cmd", "/d", "/c", "mklink", "/J", str(junction), str(external)],
             stdout=subprocess.DEVNULL,

@@ -516,6 +516,9 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="操作系统实验 AI/人工贡献识别清洗工具")
     commands = parser.add_subparsers(dest="command", required=True)
 
+    migrate = commands.add_parser("migrate-legacy", help="离线保留旧版 AI 结果至双分类目录，不调用模型")
+    _add_root_argument(migrate)
+
     inspect = commands.add_parser("inspect", help="检查单个学生/Lab 的 v2 输入清单")
     _add_task_arguments(inspect)
 
@@ -696,6 +699,10 @@ def _batch(args: argparse.Namespace) -> int:
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     try:
+        if args.command == "migrate-legacy":
+            from .migration import migrate_legacy
+            _json_print(migrate_legacy(args.cleaned_root))
+            return 0
         if args.command == "inspect":
             return _inspect(args)
         if args.command == "analyze":

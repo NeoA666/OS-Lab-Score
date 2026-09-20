@@ -1,0 +1,974 @@
+{
+  "mode": "historical_offline_migration",
+  "model_called": false,
+  "source_files_preserved": true,
+  "artifact_count": 138,
+  "artifacts": [
+    {
+      "student": "刘梓宸",
+      "lab": "lab0",
+      "source": "刘梓宸\\AI人工贡献识别\\assessment\\assessment_lab0.json",
+      "target": "按人分类\\刘梓宸\\lab0\\AI人工贡献识别工具\\assessment_lab0.json",
+      "sha256": "f95acf8dbd4833d70d359732a7c32a10ef5cc038765805a975b2801951ec9edc"
+    },
+    {
+      "student": "刘梓宸",
+      "lab": "lab0",
+      "source": "刘梓宸\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab0.md",
+      "target": "按人分类\\刘梓宸\\lab0\\AI人工贡献识别工具\\完整贡献识别报告_lab0.md",
+      "sha256": "802a022335d4da2ae77f18c27cce7f26932e6bad56a0672ca14c665143c76b3e"
+    },
+    {
+      "student": "刘梓宸",
+      "lab": "lab0",
+      "source": "刘梓宸\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab0.md",
+      "target": "按人分类\\刘梓宸\\lab0\\AI人工贡献识别工具\\教师贡献复核报告_lab0.md",
+      "sha256": "b5cf2d1c587309421a0fac81cc6a9afcc06f5925bff7a86e7da1df8ef0d8693a"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab0",
+      "source": "周卓江\\AI人工贡献识别\\assessment\\assessment_lab0.json",
+      "target": "按人分类\\周卓江\\lab0\\AI人工贡献识别工具\\assessment_lab0.json",
+      "sha256": "bc78b1fb3379cdc6d676407f40552f35dff4f4ec8d100dd25409df5c372ce96a"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab1",
+      "source": "周卓江\\AI人工贡献识别\\assessment\\assessment_lab1.json",
+      "target": "按人分类\\周卓江\\lab1\\AI人工贡献识别工具\\assessment_lab1.json",
+      "sha256": "ae14751bb73da9eb01814a3e38442167f8c029a144bd1c43f70cc2553fcba8a9"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab2",
+      "source": "周卓江\\AI人工贡献识别\\assessment\\assessment_lab2.json",
+      "target": "按人分类\\周卓江\\lab2\\AI人工贡献识别工具\\assessment_lab2.json",
+      "sha256": "5095f5d02c3f41c29156c39f792666686f8e82de1423471400cf8307499b94b1"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab3",
+      "source": "周卓江\\AI人工贡献识别\\assessment\\assessment_lab3.json",
+      "target": "按人分类\\周卓江\\lab3\\AI人工贡献识别工具\\assessment_lab3.json",
+      "sha256": "6867d52a7cbee21c42c712933861078e2fc4aa8f58852a61d5724f32c5896d6e"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab4",
+      "source": "周卓江\\AI人工贡献识别\\assessment\\assessment_lab4.json",
+      "target": "按人分类\\周卓江\\lab4\\AI人工贡献识别工具\\assessment_lab4.json",
+      "sha256": "d398db3afcce7575b4ac4e42a5c162eefceba12f9a6ae61224b8b6f6052d400e"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab5",
+      "source": "周卓江\\AI人工贡献识别\\assessment\\assessment_lab5.json",
+      "target": "按人分类\\周卓江\\lab5\\AI人工贡献识别工具\\assessment_lab5.json",
+      "sha256": "6cf2fb02d3a6aaab1f9aa90144f610a662d96b7e13903d9f2746892687ce1380"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab6",
+      "source": "周卓江\\AI人工贡献识别\\assessment\\assessment_lab6.json",
+      "target": "按人分类\\周卓江\\lab6\\AI人工贡献识别工具\\assessment_lab6.json",
+      "sha256": "480592b5a0b943f97e843c02287830166b2f1a450178faf8d0c2a6c3f0350ade"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab7",
+      "source": "周卓江\\AI人工贡献识别\\assessment\\assessment_lab7.json",
+      "target": "按人分类\\周卓江\\lab7\\AI人工贡献识别工具\\assessment_lab7.json",
+      "sha256": "3584daac62f6903d7363f46b2d247f82b308168fd6eef5d1b733b8939d928ff2"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab8",
+      "source": "周卓江\\AI人工贡献识别\\assessment\\assessment_lab8.json",
+      "target": "按人分类\\周卓江\\lab8\\AI人工贡献识别工具\\assessment_lab8.json",
+      "sha256": "5d996feb6ce0415b468bd823002345f73275505174f87ef817eb97e04ff42b32"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab0",
+      "source": "周卓江\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab0.md",
+      "target": "按人分类\\周卓江\\lab0\\AI人工贡献识别工具\\完整贡献识别报告_lab0.md",
+      "sha256": "32b0768ddd815b514d00e11b64216255affe5408b07567e9c2fae62795ed679c"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab1",
+      "source": "周卓江\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab1.md",
+      "target": "按人分类\\周卓江\\lab1\\AI人工贡献识别工具\\完整贡献识别报告_lab1.md",
+      "sha256": "454792c6e0eebf831030514cf046f4cb26fba54c6cb15e360b92caabb6ec456e"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab2",
+      "source": "周卓江\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab2.md",
+      "target": "按人分类\\周卓江\\lab2\\AI人工贡献识别工具\\完整贡献识别报告_lab2.md",
+      "sha256": "b7306b46ea033f3a6f640bc118d8aeec2a44a8cefe87113c6814e41e5d883ee8"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab3",
+      "source": "周卓江\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab3.md",
+      "target": "按人分类\\周卓江\\lab3\\AI人工贡献识别工具\\完整贡献识别报告_lab3.md",
+      "sha256": "143e1845be21a307060e520d0995958a8c7b61e85c825412c2836bf4030918ff"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab4",
+      "source": "周卓江\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab4.md",
+      "target": "按人分类\\周卓江\\lab4\\AI人工贡献识别工具\\完整贡献识别报告_lab4.md",
+      "sha256": "e1fc8e8e4fc5c5b2c0cff9e9ca92023e360ae463cdfb6bdc57e9df49410db168"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab5",
+      "source": "周卓江\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab5.md",
+      "target": "按人分类\\周卓江\\lab5\\AI人工贡献识别工具\\完整贡献识别报告_lab5.md",
+      "sha256": "f46185b4690f72b94be401b225f9e9dcb7765139d7d88ed21b99c4f600d68e90"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab6",
+      "source": "周卓江\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab6.md",
+      "target": "按人分类\\周卓江\\lab6\\AI人工贡献识别工具\\完整贡献识别报告_lab6.md",
+      "sha256": "7c417e85fda43f558ebfba742364201d1be9608d18ee2a0e2363fe989496ea79"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab7",
+      "source": "周卓江\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab7.md",
+      "target": "按人分类\\周卓江\\lab7\\AI人工贡献识别工具\\完整贡献识别报告_lab7.md",
+      "sha256": "e71529f28263b8090bebb37b526378041d02e9b1433cf1f7c27af21846b77d8e"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab8",
+      "source": "周卓江\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab8.md",
+      "target": "按人分类\\周卓江\\lab8\\AI人工贡献识别工具\\完整贡献识别报告_lab8.md",
+      "sha256": "6c13302d64454a512637dd5f6c85194d615d2c2b0d59f65ed275f36d592aed28"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab0",
+      "source": "周卓江\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab0.md",
+      "target": "按人分类\\周卓江\\lab0\\AI人工贡献识别工具\\教师贡献复核报告_lab0.md",
+      "sha256": "c76a9fe8b01d4a94697bdbc543919ea249139b75de0c8833c9942a6b8a473a65"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab1",
+      "source": "周卓江\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab1.md",
+      "target": "按人分类\\周卓江\\lab1\\AI人工贡献识别工具\\教师贡献复核报告_lab1.md",
+      "sha256": "c8e328b6a34f9d4bdd8f1f944c8b6aa6372cd0e36afe52b8aa05f061f0615fe4"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab2",
+      "source": "周卓江\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab2.md",
+      "target": "按人分类\\周卓江\\lab2\\AI人工贡献识别工具\\教师贡献复核报告_lab2.md",
+      "sha256": "3d8a98738f155fc1c00839faa3ea098cd99ef38942b239bb395336753c8d2ced"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab3",
+      "source": "周卓江\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab3.md",
+      "target": "按人分类\\周卓江\\lab3\\AI人工贡献识别工具\\教师贡献复核报告_lab3.md",
+      "sha256": "2451bbf71548338c9914bfb29f045e77b6868c0de08ee48dac2003a0915c6444"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab4",
+      "source": "周卓江\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab4.md",
+      "target": "按人分类\\周卓江\\lab4\\AI人工贡献识别工具\\教师贡献复核报告_lab4.md",
+      "sha256": "4ef7d4542071950c707026875b16e2eeb47a6bff40fcbcf4694eecaea30f8af6"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab5",
+      "source": "周卓江\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab5.md",
+      "target": "按人分类\\周卓江\\lab5\\AI人工贡献识别工具\\教师贡献复核报告_lab5.md",
+      "sha256": "3738e822d6c91cc8fb3aa7fedc9efb452066d53562c6a64009bb28eff54320f2"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab6",
+      "source": "周卓江\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab6.md",
+      "target": "按人分类\\周卓江\\lab6\\AI人工贡献识别工具\\教师贡献复核报告_lab6.md",
+      "sha256": "57f3cfc362f9aff23c6c765dfe4579dde5bfbb727feea7c78d4250cf847a19dd"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab7",
+      "source": "周卓江\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab7.md",
+      "target": "按人分类\\周卓江\\lab7\\AI人工贡献识别工具\\教师贡献复核报告_lab7.md",
+      "sha256": "e997b02981bda7d814b95c0614aec305d6f623531a0696ef7f4e8f25f6fc9d05"
+    },
+    {
+      "student": "周卓江",
+      "lab": "lab8",
+      "source": "周卓江\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab8.md",
+      "target": "按人分类\\周卓江\\lab8\\AI人工贡献识别工具\\教师贡献复核报告_lab8.md",
+      "sha256": "5ac101fc57c29ce7cd188c978fd2c9c0f193c60d7a249572f7268b9b7adf7eb6"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab0",
+      "source": "戴炜\\AI人工贡献识别\\assessment\\assessment_lab0.json",
+      "target": "按人分类\\戴炜\\lab0\\AI人工贡献识别工具\\assessment_lab0.json",
+      "sha256": "255fc178c1f4ddf39b773cb145598dc1b220e6d0f97e6ba6a25916fb4351d99a"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab1",
+      "source": "戴炜\\AI人工贡献识别\\assessment\\assessment_lab1.json",
+      "target": "按人分类\\戴炜\\lab1\\AI人工贡献识别工具\\assessment_lab1.json",
+      "sha256": "b37f73a33d10b7acdaccbf0fc0960b8c7642c0bc82242df821c466c840a0cfa9"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab2",
+      "source": "戴炜\\AI人工贡献识别\\assessment\\assessment_lab2.json",
+      "target": "按人分类\\戴炜\\lab2\\AI人工贡献识别工具\\assessment_lab2.json",
+      "sha256": "831d1714132c6869702284be4e9d51eee8417074061c71f0d0d86ae616ca059d"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab3",
+      "source": "戴炜\\AI人工贡献识别\\assessment\\assessment_lab3.json",
+      "target": "按人分类\\戴炜\\lab3\\AI人工贡献识别工具\\assessment_lab3.json",
+      "sha256": "d639aaa6853c40061b0377cce2523dd711118c35454533e6b7ba0ae3693f3292"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab4",
+      "source": "戴炜\\AI人工贡献识别\\assessment\\assessment_lab4.json",
+      "target": "按人分类\\戴炜\\lab4\\AI人工贡献识别工具\\assessment_lab4.json",
+      "sha256": "b7c6e32825912e847f567dff44fa507f6ab634b84fcccbc0cb0763bf70ad69c7"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab5",
+      "source": "戴炜\\AI人工贡献识别\\assessment\\assessment_lab5.json",
+      "target": "按人分类\\戴炜\\lab5\\AI人工贡献识别工具\\assessment_lab5.json",
+      "sha256": "bbfbdfee6e8f4981127c9f504829acf76fdf633fe7ee0d5425fc389d93f096ab"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab6",
+      "source": "戴炜\\AI人工贡献识别\\assessment\\assessment_lab6.json",
+      "target": "按人分类\\戴炜\\lab6\\AI人工贡献识别工具\\assessment_lab6.json",
+      "sha256": "3f99e12d93bd568739961c814ffe4dd152a523a8e8d9d8a480d5cb618ee3fb83"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab7",
+      "source": "戴炜\\AI人工贡献识别\\assessment\\assessment_lab7.json",
+      "target": "按人分类\\戴炜\\lab7\\AI人工贡献识别工具\\assessment_lab7.json",
+      "sha256": "8f579b391157936a54807adea90a6eb64db8c299b0650fb7f2719869e61dc41c"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab8",
+      "source": "戴炜\\AI人工贡献识别\\assessment\\assessment_lab8.json",
+      "target": "按人分类\\戴炜\\lab8\\AI人工贡献识别工具\\assessment_lab8.json",
+      "sha256": "552b1c2db890a924bc315db2829f0d4b506395615d6f7f15e47101150b055766"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab0",
+      "source": "戴炜\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab0.md",
+      "target": "按人分类\\戴炜\\lab0\\AI人工贡献识别工具\\完整贡献识别报告_lab0.md",
+      "sha256": "3c83b31e6d9cc8aa3ad58cd7918969b52e90ca3604ddf625c3af3c954fea28ea"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab1",
+      "source": "戴炜\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab1.md",
+      "target": "按人分类\\戴炜\\lab1\\AI人工贡献识别工具\\完整贡献识别报告_lab1.md",
+      "sha256": "ce4ddf2f0f6007a1721f64170d8b55bb1fed4e1257256b25f3d5426c6c8a88fd"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab2",
+      "source": "戴炜\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab2.md",
+      "target": "按人分类\\戴炜\\lab2\\AI人工贡献识别工具\\完整贡献识别报告_lab2.md",
+      "sha256": "80c0496b63b3ab9dcb42f7b841b56a9cdc4852a588342047f325e3954fd387da"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab3",
+      "source": "戴炜\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab3.md",
+      "target": "按人分类\\戴炜\\lab3\\AI人工贡献识别工具\\完整贡献识别报告_lab3.md",
+      "sha256": "e48d0f91ee2772d4462f3474ba0b8c4750a416290c44d4af1bb375002226c4d1"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab4",
+      "source": "戴炜\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab4.md",
+      "target": "按人分类\\戴炜\\lab4\\AI人工贡献识别工具\\完整贡献识别报告_lab4.md",
+      "sha256": "670f6aff801c50dc5237842925bb4075532103eeec793488e3a01b97e7717d22"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab5",
+      "source": "戴炜\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab5.md",
+      "target": "按人分类\\戴炜\\lab5\\AI人工贡献识别工具\\完整贡献识别报告_lab5.md",
+      "sha256": "79b1783bed59ee7c47fee4041e80601724d5dd10f9c63e8412dddadcf04863a8"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab6",
+      "source": "戴炜\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab6.md",
+      "target": "按人分类\\戴炜\\lab6\\AI人工贡献识别工具\\完整贡献识别报告_lab6.md",
+      "sha256": "1638a7e5e06200f3a9543a72506066040e9547143f3dd6dc0d3ffc49805fb592"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab7",
+      "source": "戴炜\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab7.md",
+      "target": "按人分类\\戴炜\\lab7\\AI人工贡献识别工具\\完整贡献识别报告_lab7.md",
+      "sha256": "96f8956b6c454f23c0271835774a78f4da844da8df1e93eaded52887613a73e2"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab8",
+      "source": "戴炜\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab8.md",
+      "target": "按人分类\\戴炜\\lab8\\AI人工贡献识别工具\\完整贡献识别报告_lab8.md",
+      "sha256": "04316abe9e244108cc5a593eb68302b9d2a12fbe627d8e66213a141802b591c1"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab0",
+      "source": "戴炜\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab0.md",
+      "target": "按人分类\\戴炜\\lab0\\AI人工贡献识别工具\\教师贡献复核报告_lab0.md",
+      "sha256": "b1b6f0d08759cf55afb95c39c994d069095d49b300b382cbb404e65a998cf4e2"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab1",
+      "source": "戴炜\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab1.md",
+      "target": "按人分类\\戴炜\\lab1\\AI人工贡献识别工具\\教师贡献复核报告_lab1.md",
+      "sha256": "47b92b30f49fc811dfe9b0ad377674e80af6b5185f2eee819c8d3827cce0c94b"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab2",
+      "source": "戴炜\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab2.md",
+      "target": "按人分类\\戴炜\\lab2\\AI人工贡献识别工具\\教师贡献复核报告_lab2.md",
+      "sha256": "850efc890cfe10517ee5b3da7d44ca7381eb088ebad9a52ee98c6f090ab22432"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab3",
+      "source": "戴炜\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab3.md",
+      "target": "按人分类\\戴炜\\lab3\\AI人工贡献识别工具\\教师贡献复核报告_lab3.md",
+      "sha256": "da6d44af906fd89c17ed1c504ed727826e5fd909af3a812191e17c4abfe71fda"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab4",
+      "source": "戴炜\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab4.md",
+      "target": "按人分类\\戴炜\\lab4\\AI人工贡献识别工具\\教师贡献复核报告_lab4.md",
+      "sha256": "c31b1b609c920aba3acbed1793d6530ef1d063ee00dfe615f190db64bd799825"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab5",
+      "source": "戴炜\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab5.md",
+      "target": "按人分类\\戴炜\\lab5\\AI人工贡献识别工具\\教师贡献复核报告_lab5.md",
+      "sha256": "0d1e1031ba5b3bf4e4eb48e4032c0e73bce78157775af69c50462af71c5c8c90"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab6",
+      "source": "戴炜\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab6.md",
+      "target": "按人分类\\戴炜\\lab6\\AI人工贡献识别工具\\教师贡献复核报告_lab6.md",
+      "sha256": "9601e1885cc6a51370264fe9d485c8192c8c71a54777d2d22c5ec0bc6f4c07dd"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab7",
+      "source": "戴炜\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab7.md",
+      "target": "按人分类\\戴炜\\lab7\\AI人工贡献识别工具\\教师贡献复核报告_lab7.md",
+      "sha256": "59d26a09a54c3d629a44ccb95b72834571960e6662f68aa7875d9f95b449c560"
+    },
+    {
+      "student": "戴炜",
+      "lab": "lab8",
+      "source": "戴炜\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab8.md",
+      "target": "按人分类\\戴炜\\lab8\\AI人工贡献识别工具\\教师贡献复核报告_lab8.md",
+      "sha256": "d2a24267b4e22521aa5b10a671b699586900aace78dd71d4620ff94e60d8ae9c"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab0",
+      "source": "李兆卓\\AI人工贡献识别\\assessment\\assessment_lab0.json",
+      "target": "按人分类\\李兆卓\\lab0\\AI人工贡献识别工具\\assessment_lab0.json",
+      "sha256": "39ee68a9e31c8c6c476d5d6cde2ef70b984d720bc8255b1ce18496c646c64189"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab1",
+      "source": "李兆卓\\AI人工贡献识别\\assessment\\assessment_lab1.json",
+      "target": "按人分类\\李兆卓\\lab1\\AI人工贡献识别工具\\assessment_lab1.json",
+      "sha256": "da90bf5d89bd2ffe51b9faf19cbd3f1b5561541f1fa5bc3d0ccba8f667b3ac68"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab2",
+      "source": "李兆卓\\AI人工贡献识别\\assessment\\assessment_lab2.json",
+      "target": "按人分类\\李兆卓\\lab2\\AI人工贡献识别工具\\assessment_lab2.json",
+      "sha256": "4183387255344bc8b198103908905d0caa20592bee0cbacd6c86d70b2b3e37fb"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab3",
+      "source": "李兆卓\\AI人工贡献识别\\assessment\\assessment_lab3.json",
+      "target": "按人分类\\李兆卓\\lab3\\AI人工贡献识别工具\\assessment_lab3.json",
+      "sha256": "45c47fc0b7d8bb02671e3d5c46ef6e3e19ed0c4e56f4270a0cebff19566465d8"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab4",
+      "source": "李兆卓\\AI人工贡献识别\\assessment\\assessment_lab4.json",
+      "target": "按人分类\\李兆卓\\lab4\\AI人工贡献识别工具\\assessment_lab4.json",
+      "sha256": "48a0200d990dc6220ce2385bf26a8908dce8d499c68079a9dbcbf16f5d4fcec5"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab5",
+      "source": "李兆卓\\AI人工贡献识别\\assessment\\assessment_lab5.json",
+      "target": "按人分类\\李兆卓\\lab5\\AI人工贡献识别工具\\assessment_lab5.json",
+      "sha256": "8fb471f1cc008d05616e49be258cc793fa7ea859708555f0ab9db3293c6e0e6c"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab6",
+      "source": "李兆卓\\AI人工贡献识别\\assessment\\assessment_lab6.json",
+      "target": "按人分类\\李兆卓\\lab6\\AI人工贡献识别工具\\assessment_lab6.json",
+      "sha256": "908f19f69faf15561b9197030ac34368ce2130acadd1af68394051dfbe5c8084"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab7",
+      "source": "李兆卓\\AI人工贡献识别\\assessment\\assessment_lab7.json",
+      "target": "按人分类\\李兆卓\\lab7\\AI人工贡献识别工具\\assessment_lab7.json",
+      "sha256": "f13e78f95180b75cefb0bfce160523d6a07d5c0f2d3dc20d3d60031caf51db89"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab8",
+      "source": "李兆卓\\AI人工贡献识别\\assessment\\assessment_lab8.json",
+      "target": "按人分类\\李兆卓\\lab8\\AI人工贡献识别工具\\assessment_lab8.json",
+      "sha256": "34df20c9ffd0d4703d4a456904f7c8a499207d6d7070194322285d9d6fefd6d0"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab0",
+      "source": "李兆卓\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab0.md",
+      "target": "按人分类\\李兆卓\\lab0\\AI人工贡献识别工具\\完整贡献识别报告_lab0.md",
+      "sha256": "6068d88fa72088f9f7c27c19478a7f65e72349e6bfbaec9d0494c82187893dd5"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab1",
+      "source": "李兆卓\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab1.md",
+      "target": "按人分类\\李兆卓\\lab1\\AI人工贡献识别工具\\完整贡献识别报告_lab1.md",
+      "sha256": "db93b4528f51d079b54808df07768670d494566a474c1fc19ba2bb32c6005ce1"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab2",
+      "source": "李兆卓\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab2.md",
+      "target": "按人分类\\李兆卓\\lab2\\AI人工贡献识别工具\\完整贡献识别报告_lab2.md",
+      "sha256": "a44cf2c5ff6458c8f3a292f10a79faff5be16cdddd2375d42959351cc0bce6a5"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab3",
+      "source": "李兆卓\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab3.md",
+      "target": "按人分类\\李兆卓\\lab3\\AI人工贡献识别工具\\完整贡献识别报告_lab3.md",
+      "sha256": "64f9c8e9b5d580ecf66c4118bea6a04845498f41e1c025ec17a22def7cf25c54"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab4",
+      "source": "李兆卓\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab4.md",
+      "target": "按人分类\\李兆卓\\lab4\\AI人工贡献识别工具\\完整贡献识别报告_lab4.md",
+      "sha256": "9fd383dc1df442223ce2906d76f6718c3cc84b64dadc86f6c58e38bf3980d984"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab5",
+      "source": "李兆卓\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab5.md",
+      "target": "按人分类\\李兆卓\\lab5\\AI人工贡献识别工具\\完整贡献识别报告_lab5.md",
+      "sha256": "96d5eee21df659b743f499ef5665f2ffeb614495d49a66aac14779c84c25d86a"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab6",
+      "source": "李兆卓\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab6.md",
+      "target": "按人分类\\李兆卓\\lab6\\AI人工贡献识别工具\\完整贡献识别报告_lab6.md",
+      "sha256": "e22b5d958c52ada91c51fe4baa3f86b36fb9dba5ad9f69ccafed6693d552e5e5"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab7",
+      "source": "李兆卓\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab7.md",
+      "target": "按人分类\\李兆卓\\lab7\\AI人工贡献识别工具\\完整贡献识别报告_lab7.md",
+      "sha256": "ea4d58507e492e32e062ec845130bad5441b44ed24f8ddb4508b324b7ab74a60"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab8",
+      "source": "李兆卓\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab8.md",
+      "target": "按人分类\\李兆卓\\lab8\\AI人工贡献识别工具\\完整贡献识别报告_lab8.md",
+      "sha256": "e4335527e3849d320c651d20ac5b521a236405078d09c424251f79e90a617206"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab0",
+      "source": "李兆卓\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab0.md",
+      "target": "按人分类\\李兆卓\\lab0\\AI人工贡献识别工具\\教师贡献复核报告_lab0.md",
+      "sha256": "a2e1f23684421c2cf4c6ae4a7a65bcf9ca147163bd082eae2361593bf4a72d9a"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab1",
+      "source": "李兆卓\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab1.md",
+      "target": "按人分类\\李兆卓\\lab1\\AI人工贡献识别工具\\教师贡献复核报告_lab1.md",
+      "sha256": "14781677d7fddc14c6ff9e2e4555a0732cf0cb0069a4b904d998ede47ed3807b"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab2",
+      "source": "李兆卓\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab2.md",
+      "target": "按人分类\\李兆卓\\lab2\\AI人工贡献识别工具\\教师贡献复核报告_lab2.md",
+      "sha256": "e6d37fb35ec3ef8a4a46307eb09b135f815175c8ccf1aaea97b25486d021dc50"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab3",
+      "source": "李兆卓\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab3.md",
+      "target": "按人分类\\李兆卓\\lab3\\AI人工贡献识别工具\\教师贡献复核报告_lab3.md",
+      "sha256": "cf833049096484db65093f1c82b196943aa5f686dd60d8da3c9afcf7fc56e7a9"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab4",
+      "source": "李兆卓\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab4.md",
+      "target": "按人分类\\李兆卓\\lab4\\AI人工贡献识别工具\\教师贡献复核报告_lab4.md",
+      "sha256": "5f7f22983e2f4c3d011350b0c57258d9fb116e0eb4825b6c25c1cae60486123d"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab5",
+      "source": "李兆卓\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab5.md",
+      "target": "按人分类\\李兆卓\\lab5\\AI人工贡献识别工具\\教师贡献复核报告_lab5.md",
+      "sha256": "ae1e812a54757eae05e176184ffa7baf71661553700a28d34ad7c5264d932b49"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab6",
+      "source": "李兆卓\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab6.md",
+      "target": "按人分类\\李兆卓\\lab6\\AI人工贡献识别工具\\教师贡献复核报告_lab6.md",
+      "sha256": "92b3e9d2137e871ee0dd36fff1e7779b20e7978a67db21f293be1fa6c00f7aae"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab7",
+      "source": "李兆卓\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab7.md",
+      "target": "按人分类\\李兆卓\\lab7\\AI人工贡献识别工具\\教师贡献复核报告_lab7.md",
+      "sha256": "62f6c7e61bc64d39dd39cb51fd6680bd8974d14996f649a42b93ba673775f940"
+    },
+    {
+      "student": "李兆卓",
+      "lab": "lab8",
+      "source": "李兆卓\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab8.md",
+      "target": "按人分类\\李兆卓\\lab8\\AI人工贡献识别工具\\教师贡献复核报告_lab8.md",
+      "sha256": "e9d8fd7b05473b06e99e20ce862f8251bed181130529ef56974e340165772029"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab0",
+      "source": "杨涵清\\AI人工贡献识别\\assessment\\assessment_lab0.json",
+      "target": "按人分类\\杨涵清\\lab0\\AI人工贡献识别工具\\assessment_lab0.json",
+      "sha256": "b8a2b3d90abb5266ccc2c42fa9664398ebdb4af1c54a6459cc715e5a9b566792"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab1",
+      "source": "杨涵清\\AI人工贡献识别\\assessment\\assessment_lab1.json",
+      "target": "按人分类\\杨涵清\\lab1\\AI人工贡献识别工具\\assessment_lab1.json",
+      "sha256": "974b5f9c4849228495cbffc02bc10fa8ddd1295622383f381dabb98d78d1b37e"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab2",
+      "source": "杨涵清\\AI人工贡献识别\\assessment\\assessment_lab2.json",
+      "target": "按人分类\\杨涵清\\lab2\\AI人工贡献识别工具\\assessment_lab2.json",
+      "sha256": "81f26a2f6eb9f732c2b9a0504f909f8b4e00452e94f984c3e584b706240134e6"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab3",
+      "source": "杨涵清\\AI人工贡献识别\\assessment\\assessment_lab3.json",
+      "target": "按人分类\\杨涵清\\lab3\\AI人工贡献识别工具\\assessment_lab3.json",
+      "sha256": "5682c373623b7a58958ba62aaa09091c5674048594f78882b576f16b6b243d3a"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab4",
+      "source": "杨涵清\\AI人工贡献识别\\assessment\\assessment_lab4.json",
+      "target": "按人分类\\杨涵清\\lab4\\AI人工贡献识别工具\\assessment_lab4.json",
+      "sha256": "44e9be7eb57f52f0b33e8e9b72e46935cf9636bae00a206e861f27bf51089b7a"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab5",
+      "source": "杨涵清\\AI人工贡献识别\\assessment\\assessment_lab5.json",
+      "target": "按人分类\\杨涵清\\lab5\\AI人工贡献识别工具\\assessment_lab5.json",
+      "sha256": "9088d621d968eb66d6c1bfb984f00a394e8b7ae7d7120dd4dc5121810ce6a8a3"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab6",
+      "source": "杨涵清\\AI人工贡献识别\\assessment\\assessment_lab6.json",
+      "target": "按人分类\\杨涵清\\lab6\\AI人工贡献识别工具\\assessment_lab6.json",
+      "sha256": "f925ed42792247f5c5edf9d945688d46d9837d487b355e191e41a7f138ac2956"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab7",
+      "source": "杨涵清\\AI人工贡献识别\\assessment\\assessment_lab7.json",
+      "target": "按人分类\\杨涵清\\lab7\\AI人工贡献识别工具\\assessment_lab7.json",
+      "sha256": "ad9432c569a58eea74790eab90e1c84b150923c5231dbf96c1452243749c1f25"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab8",
+      "source": "杨涵清\\AI人工贡献识别\\assessment\\assessment_lab8.json",
+      "target": "按人分类\\杨涵清\\lab8\\AI人工贡献识别工具\\assessment_lab8.json",
+      "sha256": "8255c422c151f720b2e003f24e9082b66c10bd6dd5312cee0226dc9744ae0989"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab0",
+      "source": "杨涵清\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab0.md",
+      "target": "按人分类\\杨涵清\\lab0\\AI人工贡献识别工具\\完整贡献识别报告_lab0.md",
+      "sha256": "6ef72f3aa4b6ff79602029298f032b26c62b2ff7e7b4f4d9137d2ee068fb327e"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab1",
+      "source": "杨涵清\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab1.md",
+      "target": "按人分类\\杨涵清\\lab1\\AI人工贡献识别工具\\完整贡献识别报告_lab1.md",
+      "sha256": "00ff6aa73adb9016338e91a2e5a378cb5f810d4603cb72f4949166ac7a311a4f"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab2",
+      "source": "杨涵清\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab2.md",
+      "target": "按人分类\\杨涵清\\lab2\\AI人工贡献识别工具\\完整贡献识别报告_lab2.md",
+      "sha256": "325280f041a794d8977864a8a81efa972ed61a3d808ff5abed3797d58f9d1241"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab3",
+      "source": "杨涵清\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab3.md",
+      "target": "按人分类\\杨涵清\\lab3\\AI人工贡献识别工具\\完整贡献识别报告_lab3.md",
+      "sha256": "3b49880fdae81f45abc195c41ab6db23e2549df121e2ba22602cf2fd8e15a0cd"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab4",
+      "source": "杨涵清\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab4.md",
+      "target": "按人分类\\杨涵清\\lab4\\AI人工贡献识别工具\\完整贡献识别报告_lab4.md",
+      "sha256": "55b574e38027a0043b3ef6c42013ca2615370838e65544f061106790d9a1557b"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab5",
+      "source": "杨涵清\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab5.md",
+      "target": "按人分类\\杨涵清\\lab5\\AI人工贡献识别工具\\完整贡献识别报告_lab5.md",
+      "sha256": "5ee983f5ae6b5b8b0ed853ba42b958c333bd7c501900f40ea160f905498b855d"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab6",
+      "source": "杨涵清\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab6.md",
+      "target": "按人分类\\杨涵清\\lab6\\AI人工贡献识别工具\\完整贡献识别报告_lab6.md",
+      "sha256": "2a8a65c898eaa60bd5db6668824ecf870ae5cb8f1568de36bcd30ee56df74238"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab7",
+      "source": "杨涵清\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab7.md",
+      "target": "按人分类\\杨涵清\\lab7\\AI人工贡献识别工具\\完整贡献识别报告_lab7.md",
+      "sha256": "d4060a2ba9bd0f1a94a2f83c361c25d026e67a0e66ce0c5b5d0a3c9242df2c9e"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab8",
+      "source": "杨涵清\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab8.md",
+      "target": "按人分类\\杨涵清\\lab8\\AI人工贡献识别工具\\完整贡献识别报告_lab8.md",
+      "sha256": "18363596483e6d605305ee93d38b8f3fc7fb7e54bfd75a4364a894c65c654a07"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab0",
+      "source": "杨涵清\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab0.md",
+      "target": "按人分类\\杨涵清\\lab0\\AI人工贡献识别工具\\教师贡献复核报告_lab0.md",
+      "sha256": "0b9f53526c3f547d90ac6441a39ef62a0960b4cdf52cab6206e15e0c35df4716"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab1",
+      "source": "杨涵清\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab1.md",
+      "target": "按人分类\\杨涵清\\lab1\\AI人工贡献识别工具\\教师贡献复核报告_lab1.md",
+      "sha256": "ab25cffa030a41ffc3c7a8fc290ba2f505a2f5bd84d500f53b5ff37fb58a89f1"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab2",
+      "source": "杨涵清\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab2.md",
+      "target": "按人分类\\杨涵清\\lab2\\AI人工贡献识别工具\\教师贡献复核报告_lab2.md",
+      "sha256": "a6a61649e9e2592e127009c315a1560540c89ddcfeea50eb8eca3b66981a5190"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab3",
+      "source": "杨涵清\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab3.md",
+      "target": "按人分类\\杨涵清\\lab3\\AI人工贡献识别工具\\教师贡献复核报告_lab3.md",
+      "sha256": "1a6d72c1ea1cd0123be2d6ae38fc78ad31388f9c9dcfbf3f7528343c07cd5157"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab4",
+      "source": "杨涵清\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab4.md",
+      "target": "按人分类\\杨涵清\\lab4\\AI人工贡献识别工具\\教师贡献复核报告_lab4.md",
+      "sha256": "00fe30201974dc3d38536e148267e5b7ec2bd2d6fb50445f410e84de6d04837c"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab5",
+      "source": "杨涵清\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab5.md",
+      "target": "按人分类\\杨涵清\\lab5\\AI人工贡献识别工具\\教师贡献复核报告_lab5.md",
+      "sha256": "82da3f8712bcc41ac0855b6bde95fac640e32a2b5f13db2b85a0f086042a4e10"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab6",
+      "source": "杨涵清\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab6.md",
+      "target": "按人分类\\杨涵清\\lab6\\AI人工贡献识别工具\\教师贡献复核报告_lab6.md",
+      "sha256": "61113a3e2212d87cac6db8935746353ec322d06be328ced6db4a3dbb180443ce"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab7",
+      "source": "杨涵清\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab7.md",
+      "target": "按人分类\\杨涵清\\lab7\\AI人工贡献识别工具\\教师贡献复核报告_lab7.md",
+      "sha256": "5c6a7e59fe1c83f328ee7812f633803a44ffdfdb92cab9c72b2a626e3602ae18"
+    },
+    {
+      "student": "杨涵清",
+      "lab": "lab8",
+      "source": "杨涵清\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab8.md",
+      "target": "按人分类\\杨涵清\\lab8\\AI人工贡献识别工具\\教师贡献复核报告_lab8.md",
+      "sha256": "5feb0a03929ab5d1baf35dce151a8e7cec8912118b4f8b9250256b81ca4ed5fb"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab0",
+      "source": "高龙徽\\AI人工贡献识别\\assessment\\assessment_lab0.json",
+      "target": "按人分类\\高龙徽\\lab0\\AI人工贡献识别工具\\assessment_lab0.json",
+      "sha256": "13300b205231268b0afec47d52565aa01df7d3aa794358bed622b7a408f3954d"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab1",
+      "source": "高龙徽\\AI人工贡献识别\\assessment\\assessment_lab1.json",
+      "target": "按人分类\\高龙徽\\lab1\\AI人工贡献识别工具\\assessment_lab1.json",
+      "sha256": "86a55669aa4b6eec5a524c92bf7adfa150b73bb24101acda47c128dd990b4e2f"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab2",
+      "source": "高龙徽\\AI人工贡献识别\\assessment\\assessment_lab2.json",
+      "target": "按人分类\\高龙徽\\lab2\\AI人工贡献识别工具\\assessment_lab2.json",
+      "sha256": "6c81e8b990d8581cd4f5b6d1c567a2944ada3d161cb6408a8df135077110364f"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab3",
+      "source": "高龙徽\\AI人工贡献识别\\assessment\\assessment_lab3.json",
+      "target": "按人分类\\高龙徽\\lab3\\AI人工贡献识别工具\\assessment_lab3.json",
+      "sha256": "280ab0455658aa5489c5f8c019bea5b4a8bb29680e15e7a1b51cc624b8124318"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab4",
+      "source": "高龙徽\\AI人工贡献识别\\assessment\\assessment_lab4.json",
+      "target": "按人分类\\高龙徽\\lab4\\AI人工贡献识别工具\\assessment_lab4.json",
+      "sha256": "86d67c5233b404c2c68e3068b45d105b46840e59cb1d87e0c54446054e33877d"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab5",
+      "source": "高龙徽\\AI人工贡献识别\\assessment\\assessment_lab5.json",
+      "target": "按人分类\\高龙徽\\lab5\\AI人工贡献识别工具\\assessment_lab5.json",
+      "sha256": "8475afb1708e21ab3155761e48f6308532b99045d0357c22897591979ea84a39"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab6",
+      "source": "高龙徽\\AI人工贡献识别\\assessment\\assessment_lab6.json",
+      "target": "按人分类\\高龙徽\\lab6\\AI人工贡献识别工具\\assessment_lab6.json",
+      "sha256": "96fa820c88594523c9808e06809abd8948deb637bf47b61b4ccbce23836d2a4b"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab7",
+      "source": "高龙徽\\AI人工贡献识别\\assessment\\assessment_lab7.json",
+      "target": "按人分类\\高龙徽\\lab7\\AI人工贡献识别工具\\assessment_lab7.json",
+      "sha256": "6d949659b9e2e3575a2519b60d288c2d1e7f55622ae7866af81a7e6018ec1cce"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab8",
+      "source": "高龙徽\\AI人工贡献识别\\assessment\\assessment_lab8.json",
+      "target": "按人分类\\高龙徽\\lab8\\AI人工贡献识别工具\\assessment_lab8.json",
+      "sha256": "73c19627dc8fab44023c035c13f18b44b2df262f929b849f2d5184272ea6e8f5"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab0",
+      "source": "高龙徽\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab0.md",
+      "target": "按人分类\\高龙徽\\lab0\\AI人工贡献识别工具\\完整贡献识别报告_lab0.md",
+      "sha256": "ccce82df5bdd6c07734e30d72f6d96fac83f9fe66630d5d9ba17571f3bfe5c48"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab1",
+      "source": "高龙徽\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab1.md",
+      "target": "按人分类\\高龙徽\\lab1\\AI人工贡献识别工具\\完整贡献识别报告_lab1.md",
+      "sha256": "152a1606b431fb7722db5172c24c1034bab45c284c406f3c018b1bd15a9ff2cc"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab2",
+      "source": "高龙徽\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab2.md",
+      "target": "按人分类\\高龙徽\\lab2\\AI人工贡献识别工具\\完整贡献识别报告_lab2.md",
+      "sha256": "1089fa08fb8fc8414d8c79c1debcabd358bb8a9baa5314ba1922eea74fa3a48b"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab3",
+      "source": "高龙徽\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab3.md",
+      "target": "按人分类\\高龙徽\\lab3\\AI人工贡献识别工具\\完整贡献识别报告_lab3.md",
+      "sha256": "991effc720a5eca6da26ff96c272dc4f3a0d19778e5610fc890f9c46962200c2"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab4",
+      "source": "高龙徽\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab4.md",
+      "target": "按人分类\\高龙徽\\lab4\\AI人工贡献识别工具\\完整贡献识别报告_lab4.md",
+      "sha256": "45780b270cd706fcaf927f81c2f3540e19882dd5b7d3cf2bac55e58b8ca1ce43"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab5",
+      "source": "高龙徽\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab5.md",
+      "target": "按人分类\\高龙徽\\lab5\\AI人工贡献识别工具\\完整贡献识别报告_lab5.md",
+      "sha256": "316327f480ae6aeba7fda0681847531edf449c292b0f51dca8fe55501e95db90"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab6",
+      "source": "高龙徽\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab6.md",
+      "target": "按人分类\\高龙徽\\lab6\\AI人工贡献识别工具\\完整贡献识别报告_lab6.md",
+      "sha256": "5cd51420f53c2d9a701a2c787d86bda87eef1c4648b7f9d42ae12571ee384a51"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab7",
+      "source": "高龙徽\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab7.md",
+      "target": "按人分类\\高龙徽\\lab7\\AI人工贡献识别工具\\完整贡献识别报告_lab7.md",
+      "sha256": "c8c8452bac46add215eb641607524956f940064b1158f5a92585c2efbce46bae"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab8",
+      "source": "高龙徽\\AI人工贡献识别\\完整贡献识别报告\\完整贡献识别报告_lab8.md",
+      "target": "按人分类\\高龙徽\\lab8\\AI人工贡献识别工具\\完整贡献识别报告_lab8.md",
+      "sha256": "3b3f67db77b782c9d396a9fe2ad80714dd3d5c70d5c6e4f2940dd9cefb16f4e5"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab0",
+      "source": "高龙徽\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab0.md",
+      "target": "按人分类\\高龙徽\\lab0\\AI人工贡献识别工具\\教师贡献复核报告_lab0.md",
+      "sha256": "8b4076bbaae571f49c077459f862eb0b994861a3a24b152c2b40b8ac7d44dce7"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab1",
+      "source": "高龙徽\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab1.md",
+      "target": "按人分类\\高龙徽\\lab1\\AI人工贡献识别工具\\教师贡献复核报告_lab1.md",
+      "sha256": "3c9127e3cfcab0649bb9fb948affe47e088fcbc908334c783ac8dbffc2bfd8fb"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab2",
+      "source": "高龙徽\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab2.md",
+      "target": "按人分类\\高龙徽\\lab2\\AI人工贡献识别工具\\教师贡献复核报告_lab2.md",
+      "sha256": "0703b16b76dee24244df090b742ce08118f6b303128aa8406ffb93a9996a2889"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab3",
+      "source": "高龙徽\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab3.md",
+      "target": "按人分类\\高龙徽\\lab3\\AI人工贡献识别工具\\教师贡献复核报告_lab3.md",
+      "sha256": "d691d69ded15c862e2f152d361773c01dd0537589f13199216e990d4db7b9347"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab4",
+      "source": "高龙徽\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab4.md",
+      "target": "按人分类\\高龙徽\\lab4\\AI人工贡献识别工具\\教师贡献复核报告_lab4.md",
+      "sha256": "f27e36248e9e9f8dd5dff2b7f06fdafcb94098e1ccb9be8a98e54c266eb4a440"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab5",
+      "source": "高龙徽\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab5.md",
+      "target": "按人分类\\高龙徽\\lab5\\AI人工贡献识别工具\\教师贡献复核报告_lab5.md",
+      "sha256": "32dbd87a6f19b9ed1a03007fdadffd668c8e4857fc91b080ab0b7b2a3ca99a4d"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab6",
+      "source": "高龙徽\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab6.md",
+      "target": "按人分类\\高龙徽\\lab6\\AI人工贡献识别工具\\教师贡献复核报告_lab6.md",
+      "sha256": "2b5528feb19466d33e11a0d007ab019383d4cdbaa37d392745c7b7dea312952e"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab7",
+      "source": "高龙徽\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab7.md",
+      "target": "按人分类\\高龙徽\\lab7\\AI人工贡献识别工具\\教师贡献复核报告_lab7.md",
+      "sha256": "0a70c22a87c373fcdf4d9551e810a3a29c9f1a5477fbe6d24613c7b727d1de35"
+    },
+    {
+      "student": "高龙徽",
+      "lab": "lab8",
+      "source": "高龙徽\\AI人工贡献识别\\教师贡献复核报告\\教师贡献复核报告_lab8.md",
+      "target": "按人分类\\高龙徽\\lab8\\AI人工贡献识别工具\\教师贡献复核报告_lab8.md",
+      "sha256": "db3bd71e18873d03cb2d5d8a71decbbafb181fc891bb1560c07203ccacca0e36"
+    }
+  ]
+}

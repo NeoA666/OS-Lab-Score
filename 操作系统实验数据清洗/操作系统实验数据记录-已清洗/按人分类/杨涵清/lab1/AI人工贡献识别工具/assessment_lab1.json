@@ -1,0 +1,823 @@
+{
+  "analysis_status": "complete",
+  "contribution_units": [
+    {
+      "alternative_explanation": "该目标可能由 AI 生成并随后由学生简单确认，但材料中未见直接 AI 生成痕迹。",
+      "behavior_roles": {
+        "ai": [],
+        "human": [
+          "human_execution",
+          "human_verification"
+        ]
+      },
+      "confidence": "weak",
+      "evidence_refs": [
+        {
+          "excerpt": "@@ -151,6 +151,12 @@ ifeq ($(platform), k210)\n else\n \t@$(QEMU) $(QEMUOPTS)\n endif\n+# 调试⽤：启动带 gdbstub 的 QEMU（端⼝ 1234），停在起点等 gdb 接管\n+# 另开⼀个终端跑：gdb-multiarch target/kernel -ex 'set arch riscv:rv64' -ex 'target remote localhost:1234'\n+gdb: build\n+\t@echo \"*** QEMU 已在 :1234 等待 gdb，请在另⼀个终端运⾏: ***\"\n+\t@echo \" gdb-multiarch target/kernel -ex 'set arch riscv:rv64' -ex 'target remote localhost:1234'\"\n+\t@$(QEMU) $(QEMUOPTS) -S -s\n \n $U/initcode: $U/initcode.S\n \t$(CC) $(CFLAGS) -march=rv64g -nostdinc -I. -Ikernel -c $U/initcode.S -o $U/initcode.o",
+          "excerpt_redacted": true,
+          "line_end": 44,
+          "line_start": 32,
+          "relative_path": "代码差异报告\\lab1.md",
+          "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+          "source_id": "source:lab1:diff_report",
+          "source_kind": "diff_report"
+        },
+        {
+          "excerpt": "make build\n\n[终端输出]\nriscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/printf.o kernel/printf.c\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/kalloc.o kernel/kalloc.c\nriscv64-unknown…",
+          "excerpt_redacted": true,
+          "line_end": 50,
+          "line_start": 16,
+          "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+          "sha256": "0a41f38067c250585c9b6e9b55a506624ec565c53580b62eb58641f4f2ec6621",
+          "source_id": "source:lab1:timeline",
+          "source_kind": "timeline"
+        }
+      ],
+      "label": "indeterminate",
+      "limitations": [
+        "仅看到编译命令，未直接观察到文件编辑过程。",
+        "无法排除学生在离线编辑后再次 make build 的情况。",
+        "独立 NIM 复核不同意该归属，已按协议降级为无法判断。"
+      ],
+      "scope": {
+        "change_kind": "修改",
+        "file_path": "Makefile",
+        "hunk_id": "hunk:lab1:1",
+        "line_end": 44,
+        "line_start": 32,
+        "source_id": "source:lab1:diff_report"
+      },
+      "summary": "学生在 Makefile 中新增了 gdb 调试目标，包含中文注释说明使用方法。",
+      "unit_id": "hunk:lab1:1",
+      "unit_type": "code_hunk"
+    },
+    {
+      "alternative_explanation": "此改动亦可能来自 AI 建议，但未见 AI 生成证据。",
+      "behavior_roles": {
+        "ai": [],
+        "human": [
+          "human_execution",
+          "human_verification"
+        ]
+      },
+      "confidence": "weak",
+      "evidence_refs": [
+        {
+          "excerpt": "@@ -242,7 +248,7 @@ sdcard: userprogs\n \t@sudo cp README $(dst)/README\n \n clean: \n-\trm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \\\n+\trm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg fs.img\\\n \t*/*.o */*.d */*.asm */*.sym \\\n \t$T/* \\\n \t$U/initcode $U/initcode.out \\",
+          "excerpt_redacted": true,
+          "line_end": 53,
+          "line_start": 45,
+          "relative_path": "代码差异报告\\lab1.md",
+          "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+          "source_id": "source:lab1:diff_report",
+          "source_kind": "diff_report"
+        },
+        {
+          "excerpt": "make build\n\n[终端输出]\nriscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/printf.o kernel/printf.c\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/kalloc.o kernel/kalloc.c\nriscv64-unknown…",
+          "excerpt_redacted": true,
+          "line_end": 50,
+          "line_start": 16,
+          "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+          "sha256": "0a41f38067c250585c9b6e9b55a506624ec565c53580b62eb58641f4f2ec6621",
+          "source_id": "source:lab1:timeline",
+          "source_kind": "timeline"
+        }
+      ],
+      "label": "indeterminate",
+      "limitations": [
+        "同上，缺少编辑过程的直接证据。",
+        "仅凭终端输出无法判断是否为学生自行操作。",
+        "独立 NIM 复核不同意该归属，已按协议降级为无法判断。"
+      ],
+      "scope": {
+        "change_kind": "修改",
+        "file_path": "Makefile",
+        "hunk_id": "hunk:lab1:2",
+        "line_end": 53,
+        "line_start": 45,
+        "source_id": "source:lab1:diff_report"
+      },
+      "summary": "在 Makefile 的 clean 目标中添加了 fs.img 到删除列表。",
+      "unit_id": "hunk:lab1:2",
+      "unit_type": "code_hunk"
+    },
+    {
+      "alternative_explanation": "该数值可能由 AI 推荐，但学生亦可能自行查表后修改。",
+      "behavior_roles": {
+        "ai": [],
+        "human": [
+          "human_execution",
+          "human_verification"
+        ]
+      },
+      "confidence": "weak",
+      "evidence_refs": [
+        {
+          "excerpt": "@@ -56,6 +56,5 @@\n //   - 你选的号和已有 syscall 冲突了吗？\n //   - syscalls[] 用这个号做下标会越界吗？\n // ───────────────────────────────────────────────────────────\n-#define SYS_halt   0   // ← 占位。学生：思考后改成未占用号\n-\n+#define SYS_halt   27\n #endif",
+          "excerpt_redacted": true,
+          "line_end": 70,
+          "line_start": 63,
+          "relative_path": "代码差异报告\\lab1.md",
+          "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+          "source_id": "source:lab1:diff_report",
+          "source_kind": "diff_report"
+        },
+        {
+          "excerpt": "make build\n\n[终端输出]\nriscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/printf.o kernel/printf.c\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/kalloc.o kernel/kalloc.c\nriscv64-unknown…",
+          "excerpt_redacted": true,
+          "line_end": 50,
+          "line_start": 16,
+          "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+          "sha256": "0a41f38067c250585c9b6e9b55a506624ec565c53580b62eb58641f4f2ec6621",
+          "source_id": "source:lab1:timeline",
+          "source_kind": "timeline"
+        }
+      ],
+      "label": "indeterminate",
+      "limitations": [
+        "未见学生查阅资料或编辑该文件的直接记录。",
+        "仅凭 diff 无法区分 AI 建议与人工决策。",
+        "独立 NIM 复核不同意该归属，已按协议降级为无法判断。"
+      ],
+      "scope": {
+        "change_kind": "修改",
+        "file_path": "kernel/include/sysnum.h",
+        "hunk_id": "hunk:lab1:3",
+        "line_end": 70,
+        "line_start": 63,
+        "source_id": "source:lab1:diff_report"
+      },
+      "summary": "将 SYS_halt 从占位符 0 改为实际系统调用号 27。",
+      "unit_id": "hunk:lab1:3",
+      "unit_type": "code_hunk"
+    },
+    {
+      "alternative_explanation": "此行插入可能由 AI 自动补全，但学生亦可手动添加。",
+      "behavior_roles": {
+        "ai": [],
+        "human": [
+          "human_execution",
+          "human_verification"
+        ]
+      },
+      "confidence": "weak",
+      "evidence_refs": [
+        {
+          "excerpt": "@@ -145,6 +146,8 @@ static uint64 (*syscalls[])(void) = {\n   [SYS_trace]       sys_trace,\n   [SYS_sysinfo]     sys_sysinfo,\n   [SYS_rename]      sys_rename,\n+  [SYS_halt]        sys_halt,\n+\n   // ═══════════════════════════════════════════════════════════════\n   // 【AI-CHECKPOINT ③】syscall.c syscalls[] dispatch（主线·教学）\n   // ────────────────────────────────────────────────────────────────",
+          "excerpt_redacted": true,
+          "line_end": 88,
+          "line_start": 80,
+          "relative_path": "代码差异报告\\lab1.md",
+          "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+          "source_id": "source:lab1:diff_report",
+          "source_kind": "diff_report"
+        },
+        {
+          "excerpt": "make build\n\n[终端输出]\nriscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/printf.o kernel/printf.c\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/kalloc.o kernel/kalloc.c\nriscv64-unknown…",
+          "excerpt_redacted": true,
+          "line_end": 50,
+          "line_start": 16,
+          "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+          "sha256": "0a41f38067c250585c9b6e9b55a506624ec565c53580b62eb58641f4f2ec6621",
+          "source_id": "source:lab1:timeline",
+          "source_kind": "timeline"
+        }
+      ],
+      "label": "indeterminate",
+      "limitations": [
+        "缺少编辑过程的直接证据。",
+        "终端仅显示 make build，未显示编辑命令。",
+        "独立 NIM 复核不同意该归属，已按协议降级为无法判断。"
+      ],
+      "scope": {
+        "change_kind": "修改",
+        "file_path": "kernel/syscall.c",
+        "hunk_id": "hunk:lab1:4",
+        "line_end": 88,
+        "line_start": 80,
+        "source_id": "source:lab1:diff_report"
+      },
+      "summary": "在 syscall.c 的 syscalls[] 分发表中增加 [SYS_halt] 条目。",
+      "unit_id": "hunk:lab1:4",
+      "unit_type": "code_hunk"
+    },
+    {
+      "alternative_explanation": "同上，可能为 AI 建议或学生手动添加。",
+      "behavior_roles": {
+        "ai": [],
+        "human": [
+          "human_execution",
+          "human_verification"
+        ]
+      },
+      "confidence": "weak",
+      "evidence_refs": [
+        {
+          "excerpt": "@@ -199,6 +202,8 @@ static char *sysnames[] = {\n   [SYS_trace]       \"trace\",\n   [SYS_sysinfo]     \"sysinfo\",\n   [SYS_rename]      \"rename\",\n+  [SYS_halt]        \"halt\",\n+\n };\n \n void",
+          "excerpt_redacted": true,
+          "line_end": 97,
+          "line_start": 89,
+          "relative_path": "代码差异报告\\lab1.md",
+          "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+          "source_id": "source:lab1:diff_report",
+          "source_kind": "diff_report"
+        },
+        {
+          "excerpt": "make build\n\n[终端输出]\nriscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/printf.o kernel/printf.c\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/kalloc.o kernel/kalloc.c\nriscv64-unknown…",
+          "excerpt_redacted": true,
+          "line_end": 50,
+          "line_start": 16,
+          "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+          "sha256": "0a41f38067c250585c9b6e9b55a506624ec565c53580b62eb58641f4f2ec6621",
+          "source_id": "source:lab1:timeline",
+          "source_kind": "timeline"
+        }
+      ],
+      "label": "indeterminate",
+      "limitations": [
+        "未见学生编辑该文件的直接记录。",
+        "仅凭终端输出无法确定输入方式。",
+        "独立 NIM 复核不同意该归属，已按协议降级为无法判断。"
+      ],
+      "scope": {
+        "change_kind": "修改",
+        "file_path": "kernel/syscall.c",
+        "hunk_id": "hunk:lab1:5",
+        "line_end": 97,
+        "line_start": 89,
+        "source_id": "source:lab1:diff_report"
+      },
+      "summary": "在 syscall.c 的 sysnames[] 中增加 \"halt\" 字符串。",
+      "unit_id": "hunk:lab1:5",
+      "unit_type": "code_hunk"
+    },
+    {
+      "alternative_explanation": "此实现可能参考了教材或 AI 示例，但学生亦可自行编写。",
+      "behavior_roles": {
+        "ai": [],
+        "human": [
+          "human_execution",
+          "human_verification"
+        ]
+      },
+      "confidence": "weak",
+      "evidence_refs": [
+        {
+          "excerpt": "@@ -185,6 +185,6 @@ sys_trace(void)\n uint64\n sys_halt(void)\n {\n-  // todo（CP④）：通过 SBI 提供的关机封装结束系统\n-  return -1;  // 占位——学生实现后替换为实际关机逻辑\n+sbi_shutdown();\n+  return 0;  \n }",
+          "excerpt_redacted": true,
+          "line_end": 115,
+          "line_start": 107,
+          "relative_path": "代码差异报告\\lab1.md",
+          "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+          "source_id": "source:lab1:diff_report",
+          "source_kind": "diff_report"
+        },
+        {
+          "excerpt": "make build\n\n[终端输出]\nriscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/printf.o kernel/printf.c\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/kalloc.o kernel/kalloc.c\nriscv64-unknown…",
+          "excerpt_redacted": true,
+          "line_end": 50,
+          "line_start": 16,
+          "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+          "sha256": "0a41f38067c250585c9b6e9b55a506624ec565c53580b62eb58641f4f2ec6621",
+          "source_id": "source:lab1:timeline",
+          "source_kind": "timeline"
+        }
+      ],
+      "label": "indeterminate",
+      "limitations": [
+        "缺少直接观察学生编辑 sysproc.c 的证据。",
+        "终端仅显示编译，未显示编辑过程。",
+        "独立 NIM 复核不同意该归属，已按协议降级为无法判断。"
+      ],
+      "scope": {
+        "change_kind": "修改",
+        "file_path": "kernel/sysproc.c",
+        "hunk_id": "hunk:lab1:6",
+        "line_end": 115,
+        "line_start": 107,
+        "source_id": "source:lab1:diff_report"
+      },
+      "summary": "将 sys_halt 的实现从占位返回 -1 替换为实际的 sbi_shutdown() 并返回 0。",
+      "unit_id": "hunk:lab1:6",
+      "unit_type": "code_hunk"
+    },
+    {
+      "alternative_explanation": "此更改也可能是 AI 自动完成的 TODO，但材料未提供 AI 介入证据。",
+      "behavior_roles": {
+        "ai": [],
+        "human": [
+          "human_execution",
+          "human_verification"
+        ]
+      },
+      "confidence": "weak",
+      "evidence_refs": [
+        {
+          "excerpt": "@@ -65,3 +65,4 @@ entry(\"rename\");\n #   - ecall 后的路径能和 syscall.c 的分发表连起来吗？\n # ───────────────────────────────────────────────────────────\n # entry(\"halt\");  // TODO: 学生自行添加此行（CP②）\n+entry(\"halt\");",
+          "excerpt_redacted": true,
+          "line_end": 129,
+          "line_start": 125,
+          "relative_path": "代码差异报告\\lab1.md",
+          "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+          "source_id": "source:lab1:diff_report",
+          "source_kind": "diff_report"
+        },
+        {
+          "excerpt": "make build\n\n[终端输出]\nriscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/printf.o kernel/printf.c\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/kalloc.o kernel/kalloc.c\nriscv64-unknown…",
+          "excerpt_redacted": true,
+          "line_end": 50,
+          "line_start": 16,
+          "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+          "sha256": "0a41f38067c250585c9b6e9b55a506624ec565c53580b62eb58641f4f2ec6621",
+          "source_id": "source:lab1:timeline",
+          "source_kind": "timeline"
+        }
+      ],
+      "label": "indeterminate",
+      "limitations": [
+        "同样缺少编辑过程的直接观察。",
+        "仅凭终端输出无法判断是学生还是 AI 完成的修改。",
+        "独立 NIM 复核不同意该归属，已按协议降级为无法判断。"
+      ],
+      "scope": {
+        "change_kind": "修改",
+        "file_path": "xv6-user/usys.pl",
+        "hunk_id": "hunk:lab1:7",
+        "line_end": 129,
+        "line_start": 125,
+        "source_id": "source:lab1:diff_report"
+      },
+      "summary": "在 usys.pl 中取消注释 entry(\"halt\")，使 halt 系统调用对用户态可见。",
+      "unit_id": "hunk:lab1:7",
+      "unit_type": "code_hunk"
+    }
+  ],
+  "coverage": {
+    "materials": [
+      {
+        "kind": "timeline",
+        "line_count": 1291,
+        "reason": null,
+        "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+        "required": true,
+        "sha256": "0a41f38067c250585c9b6e9b55a506624ec565c53580b62eb58641f4f2ec6621",
+        "source_id": "source:lab1:timeline",
+        "status": "available"
+      },
+      {
+        "kind": "terminal_qa",
+        "line_count": 1447,
+        "reason": null,
+        "relative_path": "终端对话记录\\terminal_qa_report_lab1.md",
+        "required": true,
+        "sha256": "ae9b4ca1a7be52bf641b4c4dfa8196980346f5e0f073ef5d6fa1e13f1c98ffa0",
+        "source_id": "source:lab1:terminal_qa",
+        "status": "available"
+      },
+      {
+        "kind": "command_statistics",
+        "line_count": 28,
+        "reason": null,
+        "relative_path": "终端命令统计\\command_statistics_lab1.md",
+        "required": true,
+        "sha256": "1ccb0797722afd484a778fcd0189098d7ebfb5958e9a97c164b0dd26b765cbca",
+        "source_id": "source:lab1:command_statistics",
+        "status": "available"
+      },
+      {
+        "kind": "diff_report",
+        "line_count": 130,
+        "reason": null,
+        "relative_path": "代码差异报告\\lab1.md",
+        "required": true,
+        "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+        "source_id": "source:lab1:diff_report",
+        "status": "available"
+      }
+    ],
+    "missing_or_limited": [],
+    "status": "complete"
+  },
+  "diff_hunks": [
+    {
+      "change_kind": "修改",
+      "file_path": "Makefile",
+      "hunk_id": "hunk:lab1:1",
+      "line_end": 44,
+      "line_start": 32,
+      "new_line_count": 12,
+      "new_line_start": 151,
+      "old_line_count": 6,
+      "old_line_start": 151,
+      "source_id": "source:lab1:diff_report"
+    },
+    {
+      "change_kind": "修改",
+      "file_path": "Makefile",
+      "hunk_id": "hunk:lab1:2",
+      "line_end": 53,
+      "line_start": 45,
+      "new_line_count": 7,
+      "new_line_start": 248,
+      "old_line_count": 7,
+      "old_line_start": 242,
+      "source_id": "source:lab1:diff_report"
+    },
+    {
+      "change_kind": "修改",
+      "file_path": "kernel/include/sysnum.h",
+      "hunk_id": "hunk:lab1:3",
+      "line_end": 70,
+      "line_start": 63,
+      "new_line_count": 5,
+      "new_line_start": 56,
+      "old_line_count": 6,
+      "old_line_start": 56,
+      "source_id": "source:lab1:diff_report"
+    },
+    {
+      "change_kind": "修改",
+      "file_path": "kernel/syscall.c",
+      "hunk_id": "hunk:lab1:4",
+      "line_end": 88,
+      "line_start": 80,
+      "new_line_count": 8,
+      "new_line_start": 146,
+      "old_line_count": 6,
+      "old_line_start": 145,
+      "source_id": "source:lab1:diff_report"
+    },
+    {
+      "change_kind": "修改",
+      "file_path": "kernel/syscall.c",
+      "hunk_id": "hunk:lab1:5",
+      "line_end": 97,
+      "line_start": 89,
+      "new_line_count": 8,
+      "new_line_start": 202,
+      "old_line_count": 6,
+      "old_line_start": 199,
+      "source_id": "source:lab1:diff_report"
+    },
+    {
+      "change_kind": "修改",
+      "file_path": "kernel/sysproc.c",
+      "hunk_id": "hunk:lab1:6",
+      "line_end": 115,
+      "line_start": 107,
+      "new_line_count": 6,
+      "new_line_start": 185,
+      "old_line_count": 6,
+      "old_line_start": 185,
+      "source_id": "source:lab1:diff_report"
+    },
+    {
+      "change_kind": "修改",
+      "file_path": "xv6-user/usys.pl",
+      "hunk_id": "hunk:lab1:7",
+      "line_end": 129,
+      "line_start": 125,
+      "new_line_count": 4,
+      "new_line_start": 65,
+      "old_line_count": 3,
+      "old_line_start": 65,
+      "source_id": "source:lab1:diff_report"
+    }
+  ],
+  "input_fingerprint": "sha256:b5760ba933f52590c00d585c82c1cc0170aa4f87bf802284c2019c9a290f9e79",
+  "lab": "lab1",
+  "lab_conclusion": {
+    "alternative_explanation": "亦有可能学生在 AI 的建议或自动补全辅助下完成了部分修改，但材料中没有明确的 AI 生成痕迹（如典型的 AI 注释或代码风格），故不能将其判定为 AI 主导。",
+    "confidence": "weak",
+    "evidence_refs": [
+      {
+        "excerpt": "@@ -151,6 +151,12 @@ ifeq ($(platform), k210)\n else\n \t@$(QEMU) $(QEMUOPTS)\n endif\n+# 调试⽤：启动带 gdbstub 的 QEMU（端⼝ 1234），停在起点等 gdb 接管\n+# 另开⼀个终端跑：gdb-multiarch target/kernel -ex 'set arch riscv:rv64' -ex 'target remote localhost:1234'\n+gdb: build\n+\t@echo \"*** QEMU 已在 :1234 等待 gdb，请在另⼀个终端运⾏: ***\"\n+\t@echo \" gdb-multiarch target/kernel -ex 'set arch riscv:rv64' -ex 'target remote localhost:1234'\"\n+\t@$(QEMU) $(QEMUOPTS) -S -s\n \n $U/initcode: $U/initcode.S\n \t$(CC) $(CFLAGS) -march=rv64g -nostdinc -I. -Ikernel -c $U/initcode.S -o $U/initcode.o\n@@ -242,7 +248,7 @@ sdcard: userprogs\n \t@sudo cp README $(ds…",
+        "excerpt_redacted": true,
+        "line_end": 130,
+        "line_start": 32,
+        "relative_path": "代码差异报告\\lab1.md",
+        "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+        "source_id": "source:lab1:diff_report",
+        "source_kind": "diff_report"
+      },
+      {
+        "excerpt": "make build\n\n[终端输出]\nriscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/printf.o kernel/printf.c\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/kalloc.o kernel/kalloc.c\nriscv64-unknown…",
+        "excerpt_redacted": true,
+        "line_end": 50,
+        "line_start": 16,
+        "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+        "sha256": "0a41f38067c250585c9b6e9b55a506624ec565c53580b62eb58641f4f2ec6621",
+        "source_id": "source:lab1:timeline",
+        "source_kind": "timeline"
+      }
+    ],
+    "label": "indeterminate",
+    "limitations": [
+      "缺少直接的文件编辑记录（如编辑器命令、视频或详细日志）。",
+      "仅凭终端构建输出和最终 diff 无法区分人工输入与 AI 辅助输入的细节。",
+      "独立 NIM 复核存在分歧，实验级结论已降级为无法判断。"
+    ],
+    "summary": "独立复核对一个或多个贡献归属存在分歧，当前实验级结论为无法判断。"
+  },
+  "limitations": [
+    "所提供材料仅包括时间线（主要为构建命令）、终端问答（未展示）、命令统计和 diff 报告，缺少实际编辑过程的记录。",
+    "无法从现有材料中确定学生是否使用了 AI 生成代码、自动补全或粘贴操作。",
+    "该结果是课程贡献归属线索，不认定真实作者、手打或粘贴方式、理解程度、诚信、违规或分数。",
+    "独立 NIM 复核存在分歧；相关单元和实验级结论已降级为无法判断。"
+  ],
+  "review": {
+    "disagreement_unit_ids": [
+      "hunk:lab1:1",
+      "hunk:lab1:2",
+      "hunk:lab1:3",
+      "hunk:lab1:4",
+      "hunk:lab1:5",
+      "hunk:lab1:6",
+      "hunk:lab1:7"
+    ],
+    "downgraded_unit_ids": [
+      "hunk:lab1:1",
+      "hunk:lab1:2",
+      "hunk:lab1:3",
+      "hunk:lab1:4",
+      "hunk:lab1:5",
+      "hunk:lab1:6",
+      "hunk:lab1:7"
+    ],
+    "overall_decision": "disagree",
+    "reviewed_unit_ids": [
+      "hunk:lab1:1",
+      "hunk:lab1:2",
+      "hunk:lab1:3",
+      "hunk:lab1:4",
+      "hunk:lab1:5",
+      "hunk:lab1:6",
+      "hunk:lab1:7"
+    ],
+    "status": "disagreed",
+    "summary": "所提供材料仅包含代码差异和编译输出，未见任何直接的人类编辑痕迹（如编辑器命令、修改日志或视频记录），因此无法将初判的人类主导行为证实。",
+    "unit_reviews": [
+      {
+        "decision": "disagree",
+        "evidence_refs": [
+          {
+            "excerpt": "@@ -151,6 +151,12 @@ ifeq ($(platform), k210)\n else\n \t@$(QEMU) $(QEMUOPTS)\n endif\n+# 调试⽤：启动带 gdbstub 的 QEMU（端⼝ 1234），停在起点等 gdb 接管\n+# 另开⼀个终端跑：gdb-multiarch target/kernel -ex 'set arch riscv:rv64' -ex 'target remote localhost:1234'\n+gdb: build\n+\t@echo \"*** QEMU 已在 :1234 等待 gdb，请在另⼀个终端运⾏: ***\"\n+\t@echo \" gdb-multiarch target/kernel -ex 'set arch riscv:rv64' -ex 'target remote localhost:1234'\"\n+\t@$(QEMU) $(QEMUOPTS) -S -s\n \n $U/initcode: $U/initcode.S\n \t$(CC) $(CFLAGS) -march=rv64g -nostdinc -I. -Ikernel -c $U/initcode.S -o $U/initcode.o",
+            "excerpt_redacted": true,
+            "line_end": 44,
+            "line_start": 32,
+            "relative_path": "代码差异报告\\lab1.md",
+            "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+            "source_id": "source:lab1:diff_report",
+            "source_kind": "diff_report"
+          },
+          {
+            "excerpt": "make build\n\n[终端输出]\nriscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/printf.o kernel/printf.c\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/kalloc.o kernel/kalloc.c\nriscv64-unknown…",
+            "excerpt_redacted": true,
+            "line_end": 50,
+            "line_start": 16,
+            "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+            "sha256": "0a41f38067c250585c9b6e9b55a506624ec565c53580b62eb58641f4f2ec6621",
+            "source_id": "source:lab1:timeline",
+            "source_kind": "timeline"
+          }
+        ],
+        "reason": "材料仅展示 make build 输出及最终 diff，未提供任何直接的人类编辑过程证据（如编辑器操作、日志或视频），因此无法支持 human_dominant 结论。",
+        "unit_id": "hunk:lab1:1"
+      },
+      {
+        "decision": "disagree",
+        "evidence_refs": [
+          {
+            "excerpt": "@@ -242,7 +248,7 @@ sdcard: userprogs\n \t@sudo cp README $(dst)/README\n \n clean: \n-\trm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \\\n+\trm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg fs.img\\\n \t*/*.o */*.d */*.asm */*.sym \\\n \t$T/* \\\n \t$U/initcode $U/initcode.out \\",
+            "excerpt_redacted": true,
+            "line_end": 53,
+            "line_start": 45,
+            "relative_path": "代码差异报告\\lab1.md",
+            "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+            "source_id": "source:lab1:diff_report",
+            "source_kind": "diff_report"
+          },
+          {
+            "excerpt": "make build\n\n[终端输出]\nriscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/printf.o kernel/printf.c\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/kalloc.o kernel/kalloc.c\nriscv64-unknown…",
+            "excerpt_redacted": true,
+            "line_end": 50,
+            "line_start": 16,
+            "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+            "sha256": "0a41f38067c250585c9b6e9b55a506624ec565c53580b62eb58641f4f2ec6621",
+            "source_id": "source:lab1:timeline",
+            "source_kind": "timeline"
+          }
+        ],
+        "reason": "材料仅展示 make build 输出及最终 diff，未提供任何直接的人类编辑过程证据（如编辑器操作、日志或视频），因此无法支持 human_dominant 结论。",
+        "unit_id": "hunk:lab1:2"
+      },
+      {
+        "decision": "disagree",
+        "evidence_refs": [
+          {
+            "excerpt": "@@ -56,6 +56,5 @@\n //   - 你选的号和已有 syscall 冲突了吗？\n //   - syscalls[] 用这个号做下标会越界吗？\n // ───────────────────────────────────────────────────────────\n-#define SYS_halt   0   // ← 占位。学生：思考后改成未占用号\n-\n+#define SYS_halt   27\n #endif",
+            "excerpt_redacted": true,
+            "line_end": 70,
+            "line_start": 63,
+            "relative_path": "代码差异报告\\lab1.md",
+            "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+            "source_id": "source:lab1:diff_report",
+            "source_kind": "diff_report"
+          },
+          {
+            "excerpt": "make build\n\n[终端输出]\nriscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/printf.o kernel/printf.c\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/kalloc.o kernel/kalloc.c\nriscv64-unknown…",
+            "excerpt_redacted": true,
+            "line_end": 50,
+            "line_start": 16,
+            "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+            "sha256": "0a41f38067c250585c9b6e9b55a506624ec565c53580b62eb58641f4f2ec6621",
+            "source_id": "source:lab1:timeline",
+            "source_kind": "timeline"
+          }
+        ],
+        "reason": "材料仅展示 make build 输出及最终 diff，未提供任何直接的人类编辑过程证据（如编辑器操作、日志或视频），因此无法支持 human_dominant 结论。",
+        "unit_id": "hunk:lab1:3"
+      },
+      {
+        "decision": "disagree",
+        "evidence_refs": [
+          {
+            "excerpt": "@@ -145,6 +146,8 @@ static uint64 (*syscalls[])(void) = {\n   [SYS_trace]       sys_trace,\n   [SYS_sysinfo]     sys_sysinfo,\n   [SYS_rename]      sys_rename,\n+  [SYS_halt]        sys_halt,\n+\n   // ═══════════════════════════════════════════════════════════════\n   // 【AI-CHECKPOINT ③】syscall.c syscalls[] dispatch（主线·教学）\n   // ────────────────────────────────────────────────────────────────",
+            "excerpt_redacted": true,
+            "line_end": 88,
+            "line_start": 80,
+            "relative_path": "代码差异报告\\lab1.md",
+            "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+            "source_id": "source:lab1:diff_report",
+            "source_kind": "diff_report"
+          },
+          {
+            "excerpt": "make build\n\n[终端输出]\nriscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/printf.o kernel/printf.c\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/kalloc.o kernel/kalloc.c\nriscv64-unknown…",
+            "excerpt_redacted": true,
+            "line_end": 50,
+            "line_start": 16,
+            "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+            "sha256": "0a41f38067c250585c9b6e9b55a506624ec565c53580b62eb58641f4f2ec6621",
+            "source_id": "source:lab1:timeline",
+            "source_kind": "timeline"
+          }
+        ],
+        "reason": "材料仅展示 make build 输出及最终 diff，未提供任何直接的人类编辑过程证据（如编辑器操作、日志或视频），因此无法支持 human_dominant 结论。",
+        "unit_id": "hunk:lab1:4"
+      },
+      {
+        "decision": "disagree",
+        "evidence_refs": [
+          {
+            "excerpt": "@@ -199,6 +202,8 @@ static char *sysnames[] = {\n   [SYS_trace]       \"trace\",\n   [SYS_sysinfo]     \"sysinfo\",\n   [SYS_rename]      \"rename\",\n+  [SYS_halt]        \"halt\",\n+\n };\n \n void",
+            "excerpt_redacted": true,
+            "line_end": 97,
+            "line_start": 89,
+            "relative_path": "代码差异报告\\lab1.md",
+            "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+            "source_id": "source:lab1:diff_report",
+            "source_kind": "diff_report"
+          },
+          {
+            "excerpt": "make build\n\n[终端输出]\nriscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/printf.o kernel/printf.c\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/kalloc.o kernel/kalloc.c\nriscv64-unknown…",
+            "excerpt_redacted": true,
+            "line_end": 50,
+            "line_start": 16,
+            "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+            "sha256": "0a41f38067c250585c9b6e9b55a506624ec565c53580b62eb58641f4f2ec6621",
+            "source_id": "source:lab1:timeline",
+            "source_kind": "timeline"
+          }
+        ],
+        "reason": "材料仅展示 make build 输出及最终 diff，未提供任何直接的人类编辑过程证据（如编辑器操作、日志或视频），因此无法支持 human_dominant 结论。",
+        "unit_id": "hunk:lab1:5"
+      },
+      {
+        "decision": "disagree",
+        "evidence_refs": [
+          {
+            "excerpt": "@@ -185,6 +185,6 @@ sys_trace(void)\n uint64\n sys_halt(void)\n {\n-  // todo（CP④）：通过 SBI 提供的关机封装结束系统\n-  return -1;  // 占位——学生实现后替换为实际关机逻辑\n+sbi_shutdown();\n+  return 0;  \n }",
+            "excerpt_redacted": true,
+            "line_end": 115,
+            "line_start": 107,
+            "relative_path": "代码差异报告\\lab1.md",
+            "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+            "source_id": "source:lab1:diff_report",
+            "source_kind": "diff_report"
+          },
+          {
+            "excerpt": "make build\n\n[终端输出]\nriscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/printf.o kernel/printf.c\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/kalloc.o kernel/kalloc.c\nriscv64-unknown…",
+            "excerpt_redacted": true,
+            "line_end": 50,
+            "line_start": 16,
+            "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+            "sha256": "0a41f38067c250585c9b6e9b55a506624ec565c53580b62eb58641f4f2ec6621",
+            "source_id": "source:lab1:timeline",
+            "source_kind": "timeline"
+          }
+        ],
+        "reason": "材料仅展示 make build 输出及最终 diff，未提供任何直接的人类编辑过程证据（如编辑器操作、日志或视频），因此无法支持 human_dominant 结论。",
+        "unit_id": "hunk:lab1:6"
+      },
+      {
+        "decision": "disagree",
+        "evidence_refs": [
+          {
+            "excerpt": "@@ -65,3 +65,4 @@ entry(\"rename\");\n #   - ecall 后的路径能和 syscall.c 的分发表连起来吗？\n # ───────────────────────────────────────────────────────────\n # entry(\"halt\");  // TODO: 学生自行添加此行（CP②）\n+entry(\"halt\");",
+            "excerpt_redacted": true,
+            "line_end": 129,
+            "line_start": 125,
+            "relative_path": "代码差异报告\\lab1.md",
+            "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+            "source_id": "source:lab1:diff_report",
+            "source_kind": "diff_report"
+          },
+          {
+            "excerpt": "make build\n\n[终端输出]\nriscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/printf.o kernel/printf.c\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib\n -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/kalloc.o kernel/kalloc.c\nriscv64-unknown…",
+            "excerpt_redacted": true,
+            "line_end": 50,
+            "line_start": 16,
+            "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+            "sha256": "0a41f38067c250585c9b6e9b55a506624ec565c53580b62eb58641f4f2ec6621",
+            "source_id": "source:lab1:timeline",
+            "source_kind": "timeline"
+          }
+        ],
+        "reason": "材料仅展示 make build 输出及最终 diff，未提供任何直接的人类编辑过程证据（如编辑器操作、日志或视频），因此无法支持 human_dominant 结论。",
+        "unit_id": "hunk:lab1:7"
+      }
+    ]
+  },
+  "run_metadata": {
+    "completed_at": "2026-09-19T05:09:02.708768+00:00",
+    "controlled_read_protocol_version": "contribution-read-material-v3",
+    "primary_attempts": 1,
+    "primary_model": "nvidia/nemotron-3-super-120b-a12b",
+    "primary_read_count": 2,
+    "primary_repaired": false,
+    "primary_request_id": null,
+    "primary_usage": null,
+    "prompt_version": "contribution-attribution-v3-nim-semantic-primary-v2",
+    "review_attempts": 1,
+    "review_model": "nvidia/nemotron-3-super-120b-a12b",
+    "review_prompt_version": "contribution-attribution-v3-nim-independent-review-v2",
+    "review_request_id": null,
+    "review_usage": null,
+    "reviewer_read_count": 2,
+    "reviewer_repaired": false,
+    "tool_version": "3.1.1",
+    "validator_version": "contribution-assessment-validator-v4"
+  },
+  "schema_version": "ai-human-contribution-assessment/v3",
+  "source_manifest": [
+    {
+      "availability": "available",
+      "kind": "timeline",
+      "line_count": 1291,
+      "reason": null,
+      "relative_path": "简洁实验过程时间线\\timeline_lab1.md",
+      "required": true,
+      "sha256": "0a41f38067c250585c9b6e9b55a506624ec565c53580b62eb58641f4f2ec6621",
+      "source_id": "source:lab1:timeline"
+    },
+    {
+      "availability": "available",
+      "kind": "terminal_qa",
+      "line_count": 1447,
+      "reason": null,
+      "relative_path": "终端对话记录\\terminal_qa_report_lab1.md",
+      "required": true,
+      "sha256": "ae9b4ca1a7be52bf641b4c4dfa8196980346f5e0f073ef5d6fa1e13f1c98ffa0",
+      "source_id": "source:lab1:terminal_qa"
+    },
+    {
+      "availability": "available",
+      "kind": "command_statistics",
+      "line_count": 28,
+      "reason": null,
+      "relative_path": "终端命令统计\\command_statistics_lab1.md",
+      "required": true,
+      "sha256": "1ccb0797722afd484a778fcd0189098d7ebfb5958e9a97c164b0dd26b765cbca",
+      "source_id": "source:lab1:command_statistics"
+    },
+    {
+      "availability": "available",
+      "kind": "diff_report",
+      "line_count": 130,
+      "reason": null,
+      "relative_path": "代码差异报告\\lab1.md",
+      "required": true,
+      "sha256": "2913d065f15085ae7e531a290177adde62a9c5a3e15713572da42280928fbf97",
+      "source_id": "source:lab1:diff_report"
+    }
+  ],
+  "student": {
+    "directory_name": "杨涵清",
+    "display_name": "杨涵清",
+    "student_id": null
+  },
+  "teacher_actions": [
+    "建议补充提供编辑过程的记录（如编辑器日志、视频或详细的终端输入输出），以便更准确地区分人工和 AI 的贡献。",
+    "在后续实验中可要求学生提交带有时间戳的编辑快照或使用包含回放功能的编辑环境，以增加过程证据的可获取性。"
+  ]
+}

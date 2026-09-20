@@ -1,0 +1,41 @@
+{
+  "tool": "replay_term_qa.timeline",
+  "source": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080111-李兆卓-20260909-1215",
+  "schema_version": 1,
+  "status": "complete",
+  "artifacts": [
+    "lab0/实验过程清洗工具/实验过程时间线.json",
+    "lab0/实验过程清洗工具/实验过程时间线.md",
+    "lab1/实验过程清洗工具/实验过程时间线.json",
+    "lab1/实验过程清洗工具/实验过程时间线.md",
+    "其他/实验过程清洗工具/实验过程时间线.json",
+    "其他/实验过程清洗工具/实验过程时间线.md"
+  ],
+  "cache_format_version": 2,
+  "input_fingerprint": "84abfd56c290bdea5082831a68118d069c97778c6c4168011a3df0dec678c251",
+  "processor_signature": "adc891a34957853b641bc29b64f3f94d56c4e6b584285f47ef16b49538042f1b",
+  "summary": {
+    "statistics": {
+      "events": 47,
+      "absolute_time_events": 47,
+      "relative_time_only_events": 0,
+      "missing_time_events": 0,
+      "uncertain_events": 0,
+      "errors": 1,
+      "by_type": {
+        "shell_command_observed": 47
+      },
+      "recordings": 21,
+      "recording_failures": 0,
+      "processing_failures": 0
+    }
+  },
+  "artifact_sha256": {
+    "lab0/实验过程清洗工具/实验过程时间线.json": "c34ba9bad068e384dc41db7473bb26e5b3ac14b6d47ee4da18d2cb5e0edbfc11",
+    "lab0/实验过程清洗工具/实验过程时间线.md": "e728682e06d8dfb7e2907c7f5d1aacb2aa63fbd83739672643353707ca464b19",
+    "lab1/实验过程清洗工具/实验过程时间线.json": "ceff3d26ab9e974848773e5230b528b7e21a44dd31db23d88001fa7c5a33c633",
+    "lab1/实验过程清洗工具/实验过程时间线.md": "fc6b9c40fba3341d4963130e287a4cfe7ae0649215525f6264fababc5cb98dc0",
+    "其他/实验过程清洗工具/实验过程时间线.json": "a206fd35b128b0aa24339698621c8ba881be207e6d6fc93ad2657e4f1cb8aca8",
+    "其他/实验过程清洗工具/实验过程时间线.md": "8b32c443f7b88a20007130139aa7fb8151b0b2d0158f7225036843b587760cba"
+  }
+}

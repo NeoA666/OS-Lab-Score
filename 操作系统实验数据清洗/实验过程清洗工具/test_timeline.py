@@ -210,7 +210,7 @@ class TimelineCliTests(unittest.TestCase):
 
     def test_timeline_only_does_not_rebuild_existing_reports(self):
         self.assertEqual(self.run_app(), 0)
-        student_out = self.output / "测试"
+        student_out = self.output / "按人分类" / "测试"
         old = {k: v for k, v in self.hashes(student_out).items()
                if "实验过程时间线" not in k and k != ".timeline_manifest.json"}
         timeline_files = sorted(str(p.relative_to(student_out)) for p in student_out.rglob("*")
@@ -225,14 +225,14 @@ class TimelineCliTests(unittest.TestCase):
 
     def test_no_timeline_preserves_timeline_and_rerun_is_idempotent(self):
         self.assertEqual(self.run_app(), 0)
-        student_out = self.output / "测试"
+        student_out = self.output / "按人分类" / "测试"
         before = self.hashes(student_out)
-        before_block = app.existing_timeline_readme_block(self.output / "README.md")
+        before_block = app.existing_timeline_readme_block(self.output / "汇总报告" / "实验过程清洗汇总.md")
         self.assertIsNotNone(before_block)
         self.assertEqual(self.run_app("--no-timeline"), 0)
         after_no = self.hashes(student_out)
         self.assertEqual(before, after_no)
-        self.assertEqual(before_block, app.existing_timeline_readme_block(self.output / "README.md"))
+        self.assertEqual(before_block, app.existing_timeline_readme_block(self.output / "汇总报告" / "实验过程清洗汇总.md"))
         self.assertEqual(self.run_app(), 0)
         self.assertEqual(after_no, self.hashes(student_out))
         manifests = list(student_out.rglob(".timeline_manifest.json"))
@@ -249,8 +249,8 @@ class TimelineCliTests(unittest.TestCase):
 
     def test_different_source_gets_distinct_timeline_owner(self):
         self.assertEqual(self.run_app("--timeline-only"), 0)
-        student_out = self.output / "测试"
-        timeline_dir = student_out / "实验过程时间线"
+        student_out = self.output / "按人分类" / "测试"
+        timeline_dir = student_out / ".实验过程清洗工具"
         other = self.input / "456-测试-20260910-2222"
         write_recording(other / "term", chunks=[PROMPT0 + "echo other\r\n"], timing=True)
         self.assertEqual(self.run_app("--timeline-only", "--student", "456"), 0)
@@ -284,8 +284,8 @@ class TimelineCliTests(unittest.TestCase):
     def test_junction_output_is_not_used_for_student_reports(self):
         external = self.root / "external"
         external.mkdir()
-        self.output.mkdir()
-        junction = self.output / "测试"
+        (self.output / "按人分类").mkdir(parents=True)
+        junction = self.output / "按人分类" / "测试"
         created = subprocess.run(
             ["cmd", "/d", "/c", "mklink", "/J", str(junction), str(external)],
             stdout=subprocess.DEVNULL,
@@ -297,7 +297,7 @@ class TimelineCliTests(unittest.TestCase):
         try:
             self.assertEqual(self.run_app("--no-timeline", "--overwrite"), 0)
             self.assertEqual(list(external.iterdir()), [])
-            safe_output = self.output / "测试-123-20260910-2221"
+            safe_output = self.output / "按人分类" / "测试-123-20260910-2221"
             self.assertTrue((safe_output / app.OWNER_FILE).is_file())
         finally:
             subprocess.run(["cmd", "/d", "/c", "rmdir", str(junction)],

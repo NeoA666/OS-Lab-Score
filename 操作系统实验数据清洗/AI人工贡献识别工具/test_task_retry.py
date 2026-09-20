@@ -99,18 +99,18 @@ class _TaskTestCase(unittest.TestCase):
         path.write_text(body, encoding="utf-8")
 
     def _write_lab0(self, *, with_timeline: bool = True) -> None:
-        student = self.root / self.student
+        student = self.root / "按人分类" / self.student / "lab0"
         if with_timeline:
             self._write(
-                student / SIMPLE_TIMELINE_DIRECTORY / "timeline_lab0.md",
+                student / SIMPLE_TIMELINE_DIRECTORY / "简洁实验过程时间线.md",
                 "line one\nline two\nline three\nline four\n",
             )
         self._write(
-            student / TERMINAL_QA_DIRECTORY / "terminal_qa_report_lab0.md",
+            student / TERMINAL_QA_DIRECTORY / "终端对话记录.md",
             "Q\nA\n",
         )
         self._write(
-            student / COMMAND_STATISTICS_DIRECTORY / "command_statistics_lab0.md",
+            student / COMMAND_STATISTICS_DIRECTORY / "终端命令统计.md",
             "cmd\n1\n",
         )
 
@@ -364,7 +364,7 @@ class RedactionRegressionTests(_TaskTestCase):
 
     def _student_blob(self) -> str:
         parts = []
-        for path in (self.root / self.student).rglob("*"):
+        for path in (self.root / "按人分类" / self.student).rglob("*"):
             if path.is_file():
                 parts.append(path.read_text(encoding="utf-8", errors="replace"))
         return "\n".join(parts)

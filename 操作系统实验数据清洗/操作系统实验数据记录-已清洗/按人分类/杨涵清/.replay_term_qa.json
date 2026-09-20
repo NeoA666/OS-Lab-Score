@@ -1,0 +1,68 @@
+{
+  "tool": "replay_term_qa",
+  "source": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260917-1729",
+  "layout": "dual-view-v2",
+  "status": "complete",
+  "reports": [
+    "lab0/实验过程清洗工具/Claude对话记录.md",
+    "lab0/实验过程清洗工具/完整终端转写记录.md",
+    "lab0/实验过程清洗工具/终端命令统计.md",
+    "lab0/实验过程清洗工具/终端对话记录.md",
+    "lab1/实验过程清洗工具/Claude对话记录.md",
+    "lab1/实验过程清洗工具/完整终端转写记录.md",
+    "lab1/实验过程清洗工具/终端命令统计.md",
+    "lab1/实验过程清洗工具/终端对话记录.md",
+    "其他/实验过程清洗工具/Claude对话记录.md",
+    "其他/实验过程清洗工具/完整终端转写记录.md",
+    "其他/实验过程清洗工具/终端命令统计.md",
+    "其他/实验过程清洗工具/终端对话记录.md"
+  ],
+  "cache_format_version": 2,
+  "input_fingerprint": "d0e10d463d9dfa38ac3ccb042790cb8708e412a00fec3aa5515d88f30580210b",
+  "processor_signature": "5e4c651d9d62e236783bbfc45c2833d1ea8100747985ec0512d86b37c99875a4",
+  "summary": {
+    "recordings": 46,
+    "commands": 121,
+    "claude_sessions": 5,
+    "turns": 54,
+    "replay_failed": 0,
+    "labs": {
+      "lab0": {
+        "recordings": 14,
+        "commands": 59,
+        "claude_sessions": 1,
+        "turns": 15,
+        "replay_failed": 0
+      },
+      "lab1": {
+        "recordings": 5,
+        "commands": 22,
+        "claude_sessions": 0,
+        "turns": 0,
+        "replay_failed": 0
+      },
+      "other": {
+        "recordings": 30,
+        "commands": 40,
+        "claude_sessions": 4,
+        "turns": 39,
+        "replay_failed": 0
+      }
+    },
+    "errors": []
+  },
+  "artifact_sha256": {
+    "lab0/实验过程清洗工具/Claude对话记录.md": "a8feaf093dc0ae1f1d6fdeb6ed6e50bc22e4b0855838d0769649308d6c4336a7",
+    "lab0/实验过程清洗工具/完整终端转写记录.md": "0a054311bfd7f9d5d3b48c7f8a121d9e10cd07a353d4905eb7a84622df275dab",
+    "lab0/实验过程清洗工具/终端命令统计.md": "d196b61f4c3d77a918057a9887a29de250e216e14c4bb359d1021a4dc71e6103",
+    "lab0/实验过程清洗工具/终端对话记录.md": "a739ff6e08973e388d18ae7d2761b7d1b6053eb1a9a767055ff84625535341ff",
+    "lab1/实验过程清洗工具/Claude对话记录.md": "ead8c4c7ead7f5ed0e91073ff42409705495d0755eddfd5258a0d27dbea8b3aa",
+    "lab1/实验过程清洗工具/完整终端转写记录.md": "ef2b65713c16566c3457d670e4bd81fd63c6cec6dd51432237222d4b38a519a9",
+    "lab1/实验过程清洗工具/终端命令统计.md": "1ccb0797722afd484a778fcd0189098d7ebfb5958e9a97c164b0dd26b765cbca",
+    "lab1/实验过程清洗工具/终端对话记录.md": "ae9b4ca1a7be52bf641b4c4dfa8196980346f5e0f073ef5d6fa1e13f1c98ffa0",
+    "其他/实验过程清洗工具/Claude对话记录.md": "664d8a105091c5508ec1710665602b0acfa4ecf8a516cab777c434eee2411357",
+    "其他/实验过程清洗工具/完整终端转写记录.md": "76d25d4e0c0500f60ecb204f267fcb5b6248155970eed3cd5d54a228b91b7c9b",
+    "其他/实验过程清洗工具/终端命令统计.md": "03462b1c9fa496567c9718b84639d3f64d452f6df571fecd6b067dbd60ad5f72",
+    "其他/实验过程清洗工具/终端对话记录.md": "c03d9ba061f2b2b260df3228fe61e64b327b8cd90e7c6cba4f094f857a13517e"
+  }
+}

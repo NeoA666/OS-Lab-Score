@@ -1,0 +1,154 @@
+{
+  "analysis_status": "insufficient_data",
+  "contribution_units": [],
+  "coverage": {
+    "materials": [
+      {
+        "kind": "timeline",
+        "line_count": null,
+        "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+        "relative_path": "简洁实验过程时间线\\timeline_lab7.md",
+        "required": true,
+        "sha256": null,
+        "source_id": "source:lab7:timeline",
+        "status": "missing"
+      },
+      {
+        "kind": "terminal_qa",
+        "line_count": null,
+        "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+        "relative_path": "终端对话记录\\terminal_qa_report_lab7.md",
+        "required": true,
+        "sha256": null,
+        "source_id": "source:lab7:terminal_qa",
+        "status": "missing"
+      },
+      {
+        "kind": "command_statistics",
+        "line_count": null,
+        "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+        "relative_path": "终端命令统计\\command_statistics_lab7.md",
+        "required": true,
+        "sha256": null,
+        "source_id": "source:lab7:command_statistics",
+        "status": "missing"
+      },
+      {
+        "kind": "diff_report",
+        "line_count": 45,
+        "reason": null,
+        "relative_path": "代码差异报告\\lab7.md",
+        "required": true,
+        "sha256": "451b383d06deb88e9d314aa04c1449ad56539eb4370334e9e72176c1d3943f3e",
+        "source_id": "source:lab7:diff_report",
+        "status": "available"
+      }
+    ],
+    "missing_or_limited": [
+      "source:lab7:timeline: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+      "source:lab7:terminal_qa: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+      "source:lab7:command_statistics: 未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI"
+    ],
+    "status": "insufficient"
+  },
+  "diff_hunks": [
+    {
+      "change_kind": "修改",
+      "file_path": "Makefile",
+      "hunk_id": "hunk:lab7:1",
+      "line_end": 44,
+      "line_start": 32,
+      "new_line_count": 12,
+      "new_line_start": 151,
+      "old_line_count": 6,
+      "old_line_start": 151,
+      "source_id": "source:lab7:diff_report"
+    }
+  ],
+  "errors": [],
+  "input_fingerprint": "sha256:ad1df1d618e48da519628067888dbfc51d8d0bfbc544e9e9a71938a7ea36b249",
+  "lab": "lab7",
+  "lab_conclusion": {
+    "alternative_explanation": "资料缺失不表示未使用 AI、未进行人工操作或没有代码变化。",
+    "confidence": "weak",
+    "evidence_refs": [],
+    "label": "indeterminate",
+    "limitations": [
+      "缺少必需的已清洗材料：source:lab7:timeline（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）；source:lab7:terminal_qa（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）；source:lab7:command_statistics（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）"
+    ],
+    "summary": "当前 Lab 缺少必需的已清洗过程或代码材料，未进行 AI/人工贡献归属。"
+  },
+  "limitations": [
+    "缺少必需的已清洗材料：source:lab7:timeline（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）；source:lab7:terminal_qa（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）；source:lab7:command_statistics（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）",
+    "资料缺失只能限制结论，不能用于推断 AI 使用、人工贡献、诚信、违规或分数。"
+  ],
+  "review": {
+    "disagreement_unit_ids": [],
+    "downgraded_unit_ids": [],
+    "overall_decision": null,
+    "reviewed_unit_ids": [],
+    "status": "not_run",
+    "summary": "资料不足，未调用主分析或独立复核模型。",
+    "unit_reviews": []
+  },
+  "run_metadata": {
+    "completed_at": "2026-09-18T17:42:13.014213+00:00",
+    "controlled_read_protocol_version": "contribution-read-material-v3",
+    "host_insufficient_version": "contribution-host-insufficient-v3",
+    "prompt_version": "contribution-attribution-v3-nim-semantic-primary-v2",
+    "review_prompt_version": "contribution-attribution-v3-nim-independent-review-v2",
+    "tool_version": "3.1.1",
+    "validator_version": "contribution-assessment-validator-v4"
+  },
+  "schema_version": "ai-human-contribution-assessment/v3",
+  "source_manifest": [
+    {
+      "availability": "missing",
+      "kind": "timeline",
+      "line_count": null,
+      "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+      "relative_path": "简洁实验过程时间线\\timeline_lab7.md",
+      "required": true,
+      "sha256": null,
+      "source_id": "source:lab7:timeline"
+    },
+    {
+      "availability": "missing",
+      "kind": "terminal_qa",
+      "line_count": null,
+      "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+      "relative_path": "终端对话记录\\terminal_qa_report_lab7.md",
+      "required": true,
+      "sha256": null,
+      "source_id": "source:lab7:terminal_qa"
+    },
+    {
+      "availability": "missing",
+      "kind": "command_statistics",
+      "line_count": null,
+      "reason": "未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI",
+      "relative_path": "终端命令统计\\command_statistics_lab7.md",
+      "required": true,
+      "sha256": null,
+      "source_id": "source:lab7:command_statistics"
+    },
+    {
+      "availability": "available",
+      "kind": "diff_report",
+      "line_count": 45,
+      "reason": null,
+      "relative_path": "代码差异报告\\lab7.md",
+      "required": true,
+      "sha256": "451b383d06deb88e9d314aa04c1449ad56539eb4370334e9e72176c1d3943f3e",
+      "source_id": "source:lab7:diff_report"
+    }
+  ],
+  "student": {
+    "directory_name": "杨涵清",
+    "display_name": "杨涵清",
+    "student_id": null
+  },
+  "teacher_actions": [
+    "补充当前 Lab 的指定已清洗材料后再运行贡献识别。"
+  ]
+}

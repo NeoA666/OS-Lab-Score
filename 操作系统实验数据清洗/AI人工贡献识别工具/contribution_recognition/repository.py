@@ -25,12 +25,13 @@ from .models import (
     TaskReference,
 )
 from .redaction import REDACTED, redact_sensitive_text
+from output_layout import PERSON_VIEW, PROCESS_TOOL, DIFF_TOOL
 
 
-SIMPLE_TIMELINE_DIRECTORY = "简洁实验过程时间线"
-TERMINAL_QA_DIRECTORY = "终端对话记录"
-COMMAND_STATISTICS_DIRECTORY = "终端命令统计"
-DIFF_DIRECTORY = "代码差异报告"
+SIMPLE_TIMELINE_DIRECTORY = PROCESS_TOOL
+TERMINAL_QA_DIRECTORY = PROCESS_TOOL
+COMMAND_STATISTICS_DIRECTORY = PROCESS_TOOL
+DIFF_DIRECTORY = DIFF_TOOL
 
 # A request is intentionally bounded so an agent cannot turn the controlled
 # reader into a full-corpus export. Larger material is read in cited chunks.
@@ -56,20 +57,15 @@ class _SourceSpec:
     filename_suffix: str
 
     def filename(self, lab: str) -> str:
-        return f"{self.filename_prefix}{lab}{self.filename_suffix}"
+        return f"{self.filename_prefix}{self.filename_suffix}"
 
-    @property
-    def filename_re(self) -> re.Pattern[str]:
-        return re.compile(
-            rf"^{re.escape(self.filename_prefix)}(?P<lab>lab[0-8]){re.escape(self.filename_suffix)}$"
-        )
 
 
 _SOURCE_SPECS: tuple[_SourceSpec, ...] = (
-    _SourceSpec("timeline", SIMPLE_TIMELINE_DIRECTORY, "timeline_", ".md"),
-    _SourceSpec("terminal_qa", TERMINAL_QA_DIRECTORY, "terminal_qa_report_", ".md"),
-    _SourceSpec("command_statistics", COMMAND_STATISTICS_DIRECTORY, "command_statistics_", ".md"),
-    _SourceSpec("diff_report", DIFF_DIRECTORY, "", ".md"),
+    _SourceSpec("timeline", SIMPLE_TIMELINE_DIRECTORY, "简洁实验过程时间线", ".md"),
+    _SourceSpec("terminal_qa", TERMINAL_QA_DIRECTORY, "终端对话记录", ".md"),
+    _SourceSpec("command_statistics", COMMAND_STATISTICS_DIRECTORY, "终端命令统计", ".md"),
+    _SourceSpec("diff_report", DIFF_DIRECTORY, "代码差异报告", ".md"),
 )
 _SOURCE_BY_KIND = {spec.kind: spec for spec in _SOURCE_SPECS}
 
@@ -181,12 +177,15 @@ class ContributionRepository:
 
     def _student_dirs(self) -> list[Path]:
         result: list[Path] = []
-        for candidate in sorted(self.cleaned_root.iterdir(), key=lambda path: path.name):
+        person_root = self._safe_child(self.cleaned_root, PERSON_VIEW)
+        if not person_root.is_dir():
+            return result
+        for candidate in sorted(person_root.iterdir(), key=lambda path: path.name):
             if not candidate.is_dir() or _is_link_like(candidate):
                 continue
             if any(
-                (candidate / spec.directory).is_dir() and not _is_link_like(candidate / spec.directory)
-                for spec in _SOURCE_SPECS
+                (candidate / f"lab{number}" / spec.directory).is_dir()
+                for number in range(9) for spec in _SOURCE_SPECS
             ):
                 result.append(candidate.resolve())
         return result
@@ -206,7 +205,7 @@ class ContributionRepository:
         selector = self._validate_student_selector(
             reference.directory_name if isinstance(reference, StudentReference) else reference
         )
-        candidate = self._safe_child(self.cleaned_root, selector)
+        candidate = self._safe_child(self.cleaned_root, PERSON_VIEW, selector)
         if not candidate.is_dir() or _is_link_like(candidate):
             raise DataAccessError(f"未找到学生目录：{selector}")
         return StudentReference(candidate.name, display_name=candidate.name), candidate
@@ -220,32 +219,26 @@ class ContributionRepository:
         return tuple(values)
 
     def _source_path(self, student_dir: Path, lab: str, spec: _SourceSpec) -> Path:
-        directory = self._safe_child(student_dir, spec.directory)
+        directory = self._safe_child(student_dir, lab, spec.directory)
         return self._safe_child(directory, spec.filename(lab))
 
     @staticmethod
     def _relative_source_path(lab: str, spec: _SourceSpec) -> str:
-        return str(Path(spec.directory) / spec.filename(lab))
+        return str(Path(lab) / spec.directory / spec.filename(lab))
 
     def _discover_paths(self, student_dir: Path) -> dict[str, dict[SourceKind, Path]]:
         """Return the union of existing source files without reading their text."""
 
         result: dict[str, dict[SourceKind, Path]] = {}
-        for spec in _SOURCE_SPECS:
-            try:
-                directory = self._safe_child(student_dir, spec.directory)
-            except DataAccessError:
-                continue
-            if not directory.is_dir() or _is_link_like(directory):
-                continue
-            name_re = spec.filename_re
-            for path in sorted(directory.iterdir(), key=lambda item: item.name):
-                if _is_link_like(path) or not path.is_file():
+        for number in range(9):
+            lab = f"lab{number}"
+            for spec in _SOURCE_SPECS:
+                try:
+                    path = self._source_path(student_dir, lab, spec)
+                except DataAccessError:
                     continue
-                matched = name_re.fullmatch(path.name)
-                if not matched:
+                if not path.is_file():
                     continue
-                lab = matched.group("lab")
                 # Lab0 deliberately has no code-diff input in v2.
                 if lab == "lab0" and spec.kind == "diff_report":
                     continue
@@ -267,7 +260,7 @@ class ContributionRepository:
             else None
         )
         selected = (
-            [(item, self._safe_child(self.cleaned_root, item.directory_name)) for item in self._all_students()]
+            [(item, self._safe_child(self.cleaned_root, PERSON_VIEW, item.directory_name)) for item in self._all_students()]
             if requested_students is None
             else [self._resolve_student(item) for item in requested_students]
         )

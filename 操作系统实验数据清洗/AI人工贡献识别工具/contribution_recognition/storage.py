@@ -14,17 +14,14 @@ from typing import Any, Iterable, Mapping
 
 from . import TOOL_VERSION
 from .redaction import redact_sensitive_text, redact_sensitive_value
+from output_layout import AI_TOOL, PERSON_VIEW, tool_paths, paired_paths, pair_matches, write_bytes_pair, unlink_pair
 
 
 V3_SCHEMA_VERSION = "ai-human-contribution-assessment/v3"
 MANIFEST_SCHEMA_VERSION = "ai-human-contribution-manifest/v3"
 MANIFEST_NAME = ".contribution_manifest.json"
-ANALYSIS_DIRECTORY = "AI人工贡献识别"
-ASSESSMENT_ARTIFACT_DIRECTORY = "assessment"
-FULL_REPORT_ARTIFACT_DIRECTORY = "完整贡献识别报告"
-TEACHER_REPORT_ARTIFACT_DIRECTORY = "教师贡献复核报告"
-SUMMARY_DIRECTORY = "AI人工贡献识别汇总"
-LOG_DIRECTORY = "AI人工贡献识别运行日志"
+SUMMARY_DIRECTORY = "汇总报告"
+LOG_DIRECTORY = "运行日志"
 REPORT_TEMPLATE_VERSION = "6"
 
 _ANALYSIS_STATUSES = frozenset({"complete", "insufficient_data", "failed"})
@@ -108,7 +105,11 @@ def atomic_write_bundle(values: Mapping[Path, str]) -> None:
     temporary_files: list[tuple[Path, Path]] = []
     try:
         for path, text in values.items():
-            temporary_files.append((_write_temporary_text(path, text), path))
+            for target in paired_paths(path):
+                # Use the shared target checks, including junction protection.
+                from output_layout import _validate_target
+                _validate_target(target)
+                temporary_files.append((_write_temporary_text(target, text), target))
         for temporary, path in temporary_files:
             os.replace(temporary, path)
     finally:
@@ -438,64 +439,22 @@ class ContributionStorage:
         self.cleaned_root = cleaned_root.resolve()
 
     def student_directory(self, student_directory: str) -> Path:
-        candidate = (self.cleaned_root / student_directory).resolve()
+        tool_paths(self.cleaned_root, student_directory, "lab0", AI_TOOL)
+        candidate = (self.cleaned_root / PERSON_VIEW / student_directory).resolve()
         try:
             candidate.relative_to(self.cleaned_root)
         except ValueError as error:
             raise ValueError("学生目录越过了已清洗根目录") from error
         return candidate
 
-    def analysis_directory(self, student_directory: str) -> Path:
-        return self.student_directory(student_directory) / ANALYSIS_DIRECTORY
-
     def assessment_path(self, student_directory: str, lab: str) -> Path:
-        return (
-            self.analysis_directory(student_directory)
-            / ASSESSMENT_ARTIFACT_DIRECTORY
-            / f"assessment_{lab}.json"
-        )
+        return tool_paths(self.cleaned_root, student_directory, lab, AI_TOOL)[0] / f"assessment_{lab}.json"
 
     def full_report_path(self, student_directory: str, lab: str) -> Path:
-        return (
-            self.analysis_directory(student_directory)
-            / FULL_REPORT_ARTIFACT_DIRECTORY
-            / f"完整贡献识别报告_{lab}.md"
-        )
+        return tool_paths(self.cleaned_root, student_directory, lab, AI_TOOL)[0] / f"完整贡献识别报告_{lab}.md"
 
     def teacher_report_path(self, student_directory: str, lab: str) -> Path:
-        return (
-            self.analysis_directory(student_directory)
-            / TEACHER_REPORT_ARTIFACT_DIRECTORY
-            / f"教师贡献复核报告_{lab}.md"
-        )
-
-    def _legacy_assessment_path(self, student_directory: str, lab: str) -> Path:
-        return self.analysis_directory(student_directory) / f"assessment_{lab}.json"
-
-    def _legacy_full_report_path(self, student_directory: str, lab: str) -> Path:
-        return self.analysis_directory(student_directory) / f"完整贡献识别报告_{lab}.md"
-
-    def _legacy_teacher_report_path(self, student_directory: str, lab: str) -> Path:
-        return self.analysis_directory(student_directory) / f"教师贡献复核报告_{lab}.md"
-
-    def migrate_legacy_artifacts(self, student_directory: str, lab: str) -> None:
-        """Move flat v3 artifacts into the categorized layout without reanalysis.
-
-        The manifest stores content hashes rather than output paths, so a
-        same-filesystem rename preserves a valid cache entry. Existing files
-        in the new layout always win to avoid overwriting a newer artifact.
-        """
-
-        pairs = (
-            (self._legacy_assessment_path(student_directory, lab), self.assessment_path(student_directory, lab)),
-            (self._legacy_full_report_path(student_directory, lab), self.full_report_path(student_directory, lab)),
-            (self._legacy_teacher_report_path(student_directory, lab), self.teacher_report_path(student_directory, lab)),
-        )
-        for legacy_path, categorized_path in pairs:
-            if not legacy_path.is_file() or categorized_path.exists():
-                continue
-            categorized_path.parent.mkdir(parents=True, exist_ok=True)
-            os.replace(legacy_path, categorized_path)
+        return tool_paths(self.cleaned_root, student_directory, lab, AI_TOOL)[0] / f"教师贡献复核报告_{lab}.md"
 
     def report_path(self, student_directory: str, lab: str) -> Path:
         """Compatibility alias for the teacher-facing report path."""
@@ -503,7 +462,8 @@ class ContributionStorage:
         return self.teacher_report_path(student_directory, lab)
 
     def manifest_path(self, student_directory: str) -> Path:
-        return self.analysis_directory(student_directory) / MANIFEST_NAME
+        self.student_directory(student_directory)
+        return self.cleaned_root / LOG_DIRECTORY / AI_TOOL / student_directory / MANIFEST_NAME
 
     def load_manifest(self, student_directory: str) -> dict[str, Any]:
         path = self.manifest_path(student_directory)
@@ -521,9 +481,19 @@ class ContributionStorage:
         return value
 
     def cache_entry(self, student_directory: str, lab: str) -> dict[str, Any] | None:
-        self.migrate_legacy_artifacts(student_directory, lab)
         entry = self.load_manifest(student_directory).get("labs", {}).get(lab)
-        return entry if isinstance(entry, dict) else None
+        if isinstance(entry, dict):
+            # A valid canonical artifact can repair a missing/stale mirror locally.
+            for path, key in ((self.assessment_path(student_directory, lab), "assessment_sha256"),
+                              (self.full_report_path(student_directory, lab), "full_report_sha256"),
+                              (self.teacher_report_path(student_directory, lab), "teacher_report_sha256")):
+                if not pair_matches(path):
+                    for candidate in paired_paths(path):
+                        if candidate.is_file() and entry.get(key) == file_sha256(candidate):
+                            write_bytes_pair(path, candidate.read_bytes())
+                            break
+            return entry
+        return None
 
     def cache_hit(self, student_directory: str, lab: str, assessment_fingerprint: str) -> bool:
         entry = self.cache_entry(student_directory, lab)
@@ -607,7 +577,6 @@ class ContributionStorage:
 
         safe_assessment = sanitize_assessment_for_output(assessment)
         validate_v3_assessment(safe_assessment)
-        self.migrate_legacy_artifacts(student_directory, lab)
         assessment_path = self.assessment_path(student_directory, lab)
         full_path = self.full_report_path(student_directory, lab)
         teacher_path = self.teacher_report_path(student_directory, lab)
@@ -621,6 +590,7 @@ class ContributionStorage:
         self._write_manifest_entry(
             student_directory, lab, safe_assessment, assessment_fingerprint, render_fingerprint
         )
+        unlink_pair(assessment_path.parent / "历史结果说明.md")
         return assessment_path, full_path, teacher_path
 
     def write_reports_only(
@@ -687,7 +657,6 @@ class ContributionStorage:
     ) -> Path:
         """Re-render v3 reports and return the teacher-facing report path."""
 
-        self.migrate_legacy_artifacts(student_directory, lab)
         path = self.assessment_path(student_directory, lab)
         try:
             assessment = json.loads(path.read_text(encoding="utf-8"))
@@ -709,7 +678,7 @@ class ContributionStorage:
 
     def write_run_log(self, student_directory: str, lab: str, records: Iterable[dict[str, Any]]) -> Path:
         stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S.%fZ")
-        path = self.cleaned_root / LOG_DIRECTORY / student_directory / lab / "runs" / f"{stamp}.jsonl"
+        path = self.cleaned_root / LOG_DIRECTORY / AI_TOOL / student_directory / lab / "runs" / f"{stamp}.jsonl"
         lines = [
             json.dumps(redact_sensitive_value(_strip_disallowed_output_fields(record)), ensure_ascii=False, sort_keys=True)
             for record in records
@@ -718,7 +687,7 @@ class ContributionStorage:
         return path
 
     def write_batch_summary(self, batch_id: str, summary: dict[str, Any]) -> Path:
-        path = self.cleaned_root / LOG_DIRECTORY / "batches" / batch_id / "summary.json"
+        path = self.cleaned_root / LOG_DIRECTORY / AI_TOOL / "batches" / batch_id / "summary.json"
         atomic_write_json(path, redact_sensitive_value(_strip_disallowed_output_fields(summary)))
         return path
 
@@ -730,8 +699,8 @@ class ContributionStorage:
 
     def write_overview(self, rows: list[dict[str, Any]]) -> tuple[Path, Path]:
         directory = self.cleaned_root / SUMMARY_DIRECTORY
-        markdown_path = directory / "总览.md"
-        csv_path = directory / "总览.csv"
+        markdown_path = directory / "AI人工贡献识别_总览.md"
+        csv_path = directory / "AI人工贡献识别_总览.csv"
         headers = ["学生目录", "Lab", "分析状态", "执行状态", "总体贡献画像", "置信度", "复核状态", "资料覆盖", "说明"]
         markdown = ["# AI/人工贡献识别总览", "", "| " + " | ".join(headers) + " |", "| --- | --- | --- | --- | --- | --- | --- | --- | --- |"]
         csv_rows = [headers]

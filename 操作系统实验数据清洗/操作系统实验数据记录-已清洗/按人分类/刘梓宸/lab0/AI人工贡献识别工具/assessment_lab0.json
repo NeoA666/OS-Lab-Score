@@ -1,0 +1,268 @@
+{
+  "analysis_status": "complete",
+  "contribution_units": [
+    {
+      "alternative_explanation": "No AI involvement is visible in the logs; any prior AI use would be outside the recorded session.",
+      "behavior_roles": {
+        "ai": [],
+        "human": [
+          "human_execution",
+          "human_verification"
+        ]
+      },
+      "confidence": "strong",
+      "evidence_refs": [
+        {
+          "excerpt": "# 简洁实验过程时间线\n\n- 学号：2306010113\n- 姓名：刘梓宸\n- 实验分类：lab0\n\n## 过程\n\n### 录像时间：2026-09-11T21:03:13.980+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nmake clean\n\n[终端输出]\nrm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \\\n*/*.o */*.d */*.asm */*.sym \\\ntarget/* \\\nxv6-user/initcode xv6-user/initcode.out \\\nkernel/kernel \\\n.gdbinit \\\nxv6-user/usys.S \\\nxv6-user/_init xv6-user/_sh xv6-user/_cat xv6-user/_echo xv6-user/_grep xv6-user/_ls xv6-user/_kill xv6-user/_mkdir xv6-user/_xargs xv6-user/_sleep xv6-user/_find xv6-user/_rm xv6-user/_wc xv6-user/_test xv6-user/_usertests xv6-user/_strace xv6-user/_mv\n```\n\n### 录像时…",
+          "excerpt_redacted": true,
+          "line_end": 50,
+          "line_start": 1,
+          "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
+          "sha256": "94f29eb383ca415756756c410125a68922362adb6c86e8a59844e3fe9bda2181",
+          "source_id": "source:lab0:timeline",
+          "source_kind": "timeline"
+        },
+        {
+          "excerpt": "# 终端会话问答对与命令频次报告\n\n- 学号：2306010113\n- 姓名：刘梓宸\n- 数据采集时间：2026-09-11 20:46\n- 原始时间标识：20260911-2046\n- 原始数据目录：2306010113-刘梓宸-20260911-2046\n- 终端录像数量：1\n\n- 实验分类：lab0\n\n- Shell 命令执行总次数：9\n- 不同 Shell 命令数量：8\n- 包含 Shell 命令的终端会话数：1\n- 无 Shell 命令的终端会话数：0\n- Shell 提取失败会话数：0\n\nQ 为 shell 提示符下输入的完整命令，A 为命令输出。每条命令输出最多保留 400 行。\n\n## 一、问答对集合\n\n### 问答 2 · 录像 20260911T204037-63059\n\n- 开始时间：未知\n- 相对时间：320.2s\n- 命令执行目录：\\~/桌面/xv6-ai-labs-km-无答案/lab0\n\n**Q（命令）：**\n\n```text\nmake clean\n```\n\n**A（输出）：**\n\n```text\nrm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \\\n*/*.o */*.d */*.asm */*.sym \\\ntarget/* \\\nxv6-user/initcode xv6-user/initcode.o…",
+          "excerpt_redacted": true,
+          "line_end": 200,
+          "line_start": 1,
+          "relative_path": "终端对话记录\\terminal_qa_report_lab0.md",
+          "sha256": "a4003a6cb2a5d0c1f456b3f5c6c79530869f86b73afddd850ed5445cc4b8c02e",
+          "source_id": "source:lab0:terminal_qa",
+          "source_kind": "terminal_qa"
+        }
+      ],
+      "label": "human_dominant",
+      "limitations": [
+        "Only terminal command logs are available; internal reasoning or off-screen activities are not captured.",
+        "The logs do not show editor usage or potential AI-generated code that was typed elsewhere."
+      ],
+      "scope": {
+        "line_end": 50,
+        "line_start": 1,
+        "source_id": "source:lab0:timeline"
+      },
+      "summary": "The student executed 'make clean' and 'make build' commands to compile xv6 as part of lab0 setup.",
+      "unit_id": "unit-lab0-1",
+      "unit_type": "process_segment"
+    }
+  ],
+  "coverage": {
+    "materials": [
+      {
+        "kind": "timeline",
+        "line_count": 513,
+        "reason": null,
+        "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
+        "required": true,
+        "sha256": "94f29eb383ca415756756c410125a68922362adb6c86e8a59844e3fe9bda2181",
+        "source_id": "source:lab0:timeline",
+        "status": "available"
+      },
+      {
+        "kind": "terminal_qa",
+        "line_count": 587,
+        "reason": null,
+        "relative_path": "终端对话记录\\terminal_qa_report_lab0.md",
+        "required": true,
+        "sha256": "a4003a6cb2a5d0c1f456b3f5c6c79530869f86b73afddd850ed5445cc4b8c02e",
+        "source_id": "source:lab0:terminal_qa",
+        "status": "available"
+      },
+      {
+        "kind": "command_statistics",
+        "line_count": 24,
+        "reason": null,
+        "relative_path": "终端命令统计\\command_statistics_lab0.md",
+        "required": true,
+        "sha256": "3b6282e709911d3eb4c93da3b251b08c27f32a8cd0de791238adb197fc66c077",
+        "source_id": "source:lab0:command_statistics",
+        "status": "available"
+      },
+      {
+        "kind": "diff_report",
+        "line_count": null,
+        "reason": "lab0 的贡献识别仅评估实验过程材料，不使用代码差异报告",
+        "relative_path": null,
+        "required": false,
+        "sha256": null,
+        "source_id": "source:lab0:diff_report",
+        "status": "not_applicable"
+      }
+    ],
+    "missing_or_limited": [],
+    "status": "complete"
+  },
+  "diff_hunks": [],
+  "input_fingerprint": "sha256:1cfec3f95649daa2d30634a89606c37c6a1b87fa998f20b6735eb225a30c0c2a",
+  "lab": "lab0",
+  "lab_conclusion": {
+    "alternative_explanation": "There is no evidence of AI assistance in the provided logs; any such assistance would have occurred outside the recorded timeframe.",
+    "confidence": "strong",
+    "evidence_refs": [
+      {
+        "excerpt": "# 简洁实验过程时间线\n\n- 学号：2306010113\n- 姓名：刘梓宸\n- 实验分类：lab0\n\n## 过程\n\n### 录像时间：2026-09-11T21:03:13.980+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nmake clean\n\n[终端输出]\nrm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \\\n*/*.o */*.d */*.asm */*.sym \\\ntarget/* \\\nxv6-user/initcode xv6-user/initcode.out \\\nkernel/kernel \\\n.gdbinit \\\nxv6-user/usys.S \\\nxv6-user/_init xv6-user/_sh xv6-user/_cat xv6-user/_echo xv6-user/_grep xv6-user/_ls xv6-user/_kill xv6-user/_mkdir xv6-user/_xargs xv6-user/_sleep xv6-user/_find xv6-user/_rm xv6-user/_wc xv6-user/_test xv6-user/_usertests xv6-user/_strace xv6-user/_mv\n```\n\n### 录像时…",
+        "excerpt_redacted": true,
+        "line_end": 50,
+        "line_start": 1,
+        "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
+        "sha256": "94f29eb383ca415756756c410125a68922362adb6c86e8a59844e3fe9bda2181",
+        "source_id": "source:lab0:timeline",
+        "source_kind": "timeline"
+      },
+      {
+        "excerpt": "# 终端会话问答对与命令频次报告\n\n- 学号：2306010113\n- 姓名：刘梓宸\n- 数据采集时间：2026-09-11 20:46\n- 原始时间标识：20260911-2046\n- 原始数据目录：2306010113-刘梓宸-20260911-2046\n- 终端录像数量：1\n\n- 实验分类：lab0\n\n- Shell 命令执行总次数：9\n- 不同 Shell 命令数量：8\n- 包含 Shell 命令的终端会话数：1\n- 无 Shell 命令的终端会话数：0\n- Shell 提取失败会话数：0\n\nQ 为 shell 提示符下输入的完整命令，A 为命令输出。每条命令输出最多保留 400 行。\n\n## 一、问答对集合\n\n### 问答 2 · 录像 20260911T204037-63059\n\n- 开始时间：未知\n- 相对时间：320.2s\n- 命令执行目录：\\~/桌面/xv6-ai-labs-km-无答案/lab0\n\n**Q（命令）：**\n\n```text\nmake clean\n```\n\n**A（输出）：**\n\n```text\nrm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \\\n*/*.o */*.d */*.asm */*.sym \\\ntarget/* \\\nxv6-user/initcode xv6-user/initcode.o…",
+        "excerpt_redacted": true,
+        "line_end": 200,
+        "line_start": 1,
+        "relative_path": "终端对话记录\\terminal_qa_report_lab0.md",
+        "sha256": "a4003a6cb2a5d0c1f456b3f5c6c79530869f86b73afddd850ed5445cc4b8c02e",
+        "source_id": "source:lab0:terminal_qa",
+        "source_kind": "terminal_qa"
+      }
+    ],
+    "label": "human_dominant",
+    "limitations": [
+      "Assessment limited to recorded commands and outputs; cannot rule out unseen AI use.",
+      "No access to edit histories, clipboard, or external tool usage."
+    ],
+    "summary": "The observable actions are manual build commands with compiler output, indicating student-led execution."
+  },
+  "limitations": [
+    "Only terminal command logs are available; internal reasoning or off-screen activities are not captured.",
+    "The logs do not show editor usage or potential AI-generated code that was typed elsewhere.",
+    "该结果是课程贡献归属线索，不认定真实作者、手打或粘贴方式、理解程度、诚信、违规或分数。"
+  ],
+  "review": {
+    "disagreement_unit_ids": [],
+    "downgraded_unit_ids": [],
+    "overall_decision": "agree",
+    "reviewed_unit_ids": [
+      "unit-lab0-1"
+    ],
+    "status": "agreed",
+    "summary": "The observable actions are manual build commands with compiler output, indicating student-led execution without AI assistance.",
+    "unit_reviews": [
+      {
+        "decision": "agree",
+        "evidence_refs": [
+          {
+            "excerpt": "```text\nmake clean\n\n[终端输出]\nrm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \\\n*/*.o */*.d */*.asm */*.sym \\\ntarget/* \\\nxv6-user/initcode xv6-user/initcode.out \\\nkernel/kernel \\\n.gdbinit \\\nxv6-user/usys.S \\\nxv6-user/_init xv6-user/_sh xv6-user/_cat xv6-user/_echo xv6-user/_grep xv6-user/_ls xv6-user/_kill xv6-user/_mkdir xv6-user/_xargs xv6-user/_sleep xv6-user/_find xv6-user/_rm xv6-user/_wc xv6-user/_test xv6-user/_usertests xv6-user/_strace xv6-user/_mv",
+            "excerpt_redacted": true,
+            "line_end": 26,
+            "line_start": 15,
+            "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
+            "sha256": "94f29eb383ca415756756c410125a68922362adb6c86e8a59844e3fe9bda2181",
+            "source_id": "source:lab0:timeline",
+            "source_kind": "timeline"
+          },
+          {
+            "excerpt": "```text\nmake build\n\n[终端输出]\nriscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/printf.o kernel/printf.c\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/kalloc.o kernel/kalloc.c\nriscv64-u…",
+            "excerpt_redacted": true,
+            "line_end": 50,
+            "line_start": 35,
+            "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
+            "sha256": "94f29eb383ca415756756c410125a68922362adb6c86e8a59844e3fe9bda2181",
+            "source_id": "source:lab0:timeline",
+            "source_kind": "timeline"
+          },
+          {
+            "excerpt": "```text\nmake clean\n```\n\n**A（输出）：**\n\n```text\nrm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \\\n*/*.o */*.d */*.asm */*.sym \\\ntarget/* \\\nxv6-user/initcode xv6-user/initcode.out \\\nkernel/kernel \\\n.gdbinit \\\nxv6-user/usys.S \\\nxv6-user/_init xv6-user/_sh xv6-user/_cat xv6-user/_echo xv6-user/_grep xv6-user/_ls xv6-user/_kill xv6-user/_mkdir xv6-user/_xargs xv6-user/_sleep xv6-user/_find xv6-user/_rm xv6-user/_wc xv6-user/_test xv6-user/_usertests xv6-user/_strace xv6-user/_mv\n```",
+            "excerpt_redacted": true,
+            "line_end": 45,
+            "line_start": 30,
+            "relative_path": "终端对话记录\\terminal_qa_report_lab0.md",
+            "sha256": "a4003a6cb2a5d0c1f456b3f5c6c79530869f86b73afddd850ed5445cc4b8c02e",
+            "source_id": "source:lab0:terminal_qa",
+            "source_kind": "terminal_qa"
+          },
+          {
+            "excerpt": "```text\nmake build\n```\n\n**A（输出）：**\n\n```text\nriscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/printf.o kernel/printf.c\nriscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/kalloc.o kernel/k…",
+            "excerpt_redacted": true,
+            "line_end": 200,
+            "line_start": 55,
+            "relative_path": "终端对话记录\\terminal_qa_report_lab0.md",
+            "sha256": "a4003a6cb2a5d0c1f456b3f5c6c79530869f86b73afddd850ed5445cc4b8c02e",
+            "source_id": "source:lab0:terminal_qa",
+            "source_kind": "terminal_qa"
+          }
+        ],
+        "reason": "The provided materials show only manual execution of 'make clean' and 'make build' commands with corresponding compiler output; no evidence of AI involvement is present in the logs.",
+        "unit_id": "unit-lab0-1"
+      }
+    ]
+  },
+  "run_metadata": {
+    "completed_at": "2026-09-19T04:57:37.998442+00:00",
+    "controlled_read_protocol_version": "contribution-read-material-v3",
+    "primary_attempts": 1,
+    "primary_model": "nvidia/nemotron-3-super-120b-a12b",
+    "primary_read_count": 4,
+    "primary_repaired": true,
+    "primary_request_id": null,
+    "primary_usage": null,
+    "prompt_version": "contribution-attribution-v3-nim-semantic-primary-v2",
+    "review_attempts": 1,
+    "review_model": "nvidia/nemotron-3-super-120b-a12b",
+    "review_prompt_version": "contribution-attribution-v3-nim-independent-review-v2",
+    "review_request_id": null,
+    "review_usage": null,
+    "reviewer_read_count": 2,
+    "reviewer_repaired": false,
+    "tool_version": "3.1.1",
+    "validator_version": "contribution-assessment-validator-v4"
+  },
+  "schema_version": "ai-human-contribution-assessment/v3",
+  "source_manifest": [
+    {
+      "availability": "available",
+      "kind": "timeline",
+      "line_count": 513,
+      "reason": null,
+      "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
+      "required": true,
+      "sha256": "94f29eb383ca415756756c410125a68922362adb6c86e8a59844e3fe9bda2181",
+      "source_id": "source:lab0:timeline"
+    },
+    {
+      "availability": "available",
+      "kind": "terminal_qa",
+      "line_count": 587,
+      "reason": null,
+      "relative_path": "终端对话记录\\terminal_qa_report_lab0.md",
+      "required": true,
+      "sha256": "a4003a6cb2a5d0c1f456b3f5c6c79530869f86b73afddd850ed5445cc4b8c02e",
+      "source_id": "source:lab0:terminal_qa"
+    },
+    {
+      "availability": "available",
+      "kind": "command_statistics",
+      "line_count": 24,
+      "reason": null,
+      "relative_path": "终端命令统计\\command_statistics_lab0.md",
+      "required": true,
+      "sha256": "3b6282e709911d3eb4c93da3b251b08c27f32a8cd0de791238adb197fc66c077",
+      "source_id": "source:lab0:command_statistics"
+    },
+    {
+      "availability": "not_applicable",
+      "kind": "diff_report",
+      "line_count": null,
+      "reason": "lab0 的贡献识别仅评估实验过程材料，不使用代码差异报告",
+      "relative_path": null,
+      "required": false,
+      "sha256": null,
+      "source_id": "source:lab0:diff_report"
+    }
+  ],
+  "student": {
+    "directory_name": "刘梓宸",
+    "display_name": "刘梓宸",
+    "student_id": null
+  },
+  "teacher_actions": [
+    "Ask students to explicitly disclose any AI tool use in lab submissions.",
+    "Provide a simple log template for students to record AI interactions during labs."
+  ]
+}

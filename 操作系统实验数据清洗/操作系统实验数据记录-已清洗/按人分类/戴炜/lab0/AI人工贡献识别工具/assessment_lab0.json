@@ -1,0 +1,279 @@
+{
+  "analysis_status": "complete",
+  "contribution_units": [
+    {
+      "alternative_explanation": "尽管材料未显示 AI 介入，但有可能学生在未录制的环境中使用了 AI 建议，然而现有记录仅展示人工操作。",
+      "behavior_roles": {
+        "ai": [],
+        "human": [
+          "human_execution",
+          "human_debugging",
+          "human_verification"
+        ]
+      },
+      "confidence": "strong",
+      "evidence_refs": [
+        {
+          "excerpt": "# 简洁实验过程时间线\n\n- 学号：2406080102\n- 姓名：戴炜\n- 实验分类：lab0\n\n## 过程\n\n### 录像时间：2026-09-03T17:31:50.856+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nmake run\n\n[终端输出]\nmake: 警告：文件“target/kernel”的修改时间在未来 27355 秒后\nqemu-system-riscv64: -drive file=fs.img,if=none,format=raw,id=x0: Could not open 'fs.img': No such file or directory\nmake: *** [Makefile:152：run] 错误 1\n```\n\n### 录像时间：2026-09-03T17:32:38.616+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nmake ru\n\n[终端输出]\nmake: *** 没有规则可制作目标“ru”。 停止。\n```\n\n### 录像时间：2026-09-03T17:32:41.880+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nmake run\n\n[终端输出]\nmake: 警告：文件“target/kerne…",
+          "excerpt_redacted": true,
+          "line_end": 200,
+          "line_start": 1,
+          "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
+          "sha256": "5bdeacfa74886697118eb83e28941de3b272baa1d2cda2d97685c84831fd5cdc",
+          "source_id": "source:lab0:timeline",
+          "source_kind": "timeline"
+        }
+      ],
+      "label": "human_dominant",
+      "limitations": [
+        "仅能观察到记录的命令交互，未看到代码编辑或思考过程。"
+      ],
+      "scope": {
+        "line_end": 200,
+        "line_start": 1,
+        "source_id": "source:lab0:timeline"
+      },
+      "summary": "学生通过手动输入 shell 命令进行实验，包括编译、运行、调试、清理等步骤，出现打字错误（make ru）并通过 sudo 输入密码完成文件系统创建，随后观察 QEMU 启动并尝试退出。全程无 AI 生成或建议的痕迹。",
+      "unit_id": "cu1",
+      "unit_type": "process_segment"
+    }
+  ],
+  "coverage": {
+    "materials": [
+      {
+        "kind": "timeline",
+        "line_count": 2784,
+        "reason": null,
+        "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
+        "required": true,
+        "sha256": "5bdeacfa74886697118eb83e28941de3b272baa1d2cda2d97685c84831fd5cdc",
+        "source_id": "source:lab0:timeline",
+        "status": "available"
+      },
+      {
+        "kind": "terminal_qa",
+        "line_count": 3070,
+        "reason": null,
+        "relative_path": "终端对话记录\\terminal_qa_report_lab0.md",
+        "required": true,
+        "sha256": "239545c0e2450ac46013d0eeebb176d42cc0bf68a6821b868e27d0500e4f3000",
+        "source_id": "source:lab0:terminal_qa",
+        "status": "available"
+      },
+      {
+        "kind": "command_statistics",
+        "line_count": 25,
+        "reason": null,
+        "relative_path": "终端命令统计\\command_statistics_lab0.md",
+        "required": true,
+        "sha256": "b616daf211ae6c752995910f6edbdda585e32edaa823a965c9d27730b269eadf",
+        "source_id": "source:lab0:command_statistics",
+        "status": "available"
+      },
+      {
+        "kind": "diff_report",
+        "line_count": null,
+        "reason": "lab0 的贡献识别仅评估实验过程材料，不使用代码差异报告",
+        "relative_path": null,
+        "required": false,
+        "sha256": null,
+        "source_id": "source:lab0:diff_report",
+        "status": "not_applicable"
+      }
+    ],
+    "missing_or_limited": [],
+    "status": "complete"
+  },
+  "diff_hunks": [],
+  "input_fingerprint": "sha256:b3a5a9dd619038f66ab8731c6ac1662a53a55f64463c229d5f54cd124ddf1bbe",
+  "lab": "lab0",
+  "lab_conclusion": {
+    "alternative_explanation": "学生可能在未被记录的步骤中使用了 AI 辅助，但现有材料未提供支持该假设的线索。",
+    "confidence": "strong",
+    "evidence_refs": [
+      {
+        "excerpt": "# 简洁实验过程时间线\n\n- 学号：2406080102\n- 姓名：戴炜\n- 实验分类：lab0\n\n## 过程\n\n### 录像时间：2026-09-03T17:31:50.856+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nmake run\n\n[终端输出]\nmake: 警告：文件“target/kernel”的修改时间在未来 27355 秒后\nqemu-system-riscv64: -drive file=fs.img,if=none,format=raw,id=x0: Could not open 'fs.img': No such file or directory\nmake: *** [Makefile:152：run] 错误 1\n```\n\n### 录像时间：2026-09-03T17:32:38.616+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nmake ru\n\n[终端输出]\nmake: *** 没有规则可制作目标“ru”。 停止。\n```\n\n### 录像时间：2026-09-03T17:32:41.880+08:00（北京时间）\n\n- 录像类型：Shell 命令\n\n- 内容：\n\n```text\nmake run\n\n[终端输出]\nmake: 警告：文件“target/kerne…",
+        "excerpt_redacted": true,
+        "line_end": 200,
+        "line_start": 1,
+        "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
+        "sha256": "5bdeacfa74886697118eb83e28941de3b272baa1d2cda2d97685c84831fd5cdc",
+        "source_id": "source:lab0:timeline",
+        "source_kind": "timeline"
+      }
+    ],
+    "label": "human_dominant",
+    "limitations": [
+      "仅依赖命令交互记录，无法了解学生的内部思考或代码编写细节。",
+      "材料未包含编辑器或文件内容，因此无法判断代码是否由 AI 生成后人工修改。"
+    ],
+    "summary": "时间线显示学生全程通过手动命令操作实验环境，包括编译、文件系统创建、QEMU 启动及调试尝试，未出现任何 AI 生成代码或建议的证据。"
+  },
+  "limitations": [
+    "材料仅包含时间线、终端问答和命令统计，未提供代码差异或编辑过程。",
+    "无法从记录中区分学生是否在离线使用 AI 生成的代码片段。",
+    "该结果是课程贡献归属线索，不认定真实作者、手打或粘贴方式、理解程度、诚信、违规或分数。"
+  ],
+  "review": {
+    "disagreement_unit_ids": [],
+    "downgraded_unit_ids": [],
+    "overall_decision": "agree",
+    "reviewed_unit_ids": [
+      "cu1"
+    ],
+    "status": "agreed",
+    "summary": "The provided timeline contains only human-performed shell commands and outputs, with no traces of AI involvement. The primary assessment's label of human_dominant is therefore correct.",
+    "unit_reviews": [
+      {
+        "decision": "agree",
+        "evidence_refs": [
+          {
+            "excerpt": "```text\nmake run\n\n[终端输出]\nmake: 警告：文件“target/kernel”的修改时间在未来 27355 秒后\nqemu-system-riscv64: -drive file=fs.img,if=none,format=raw,id=x0: Could not open 'fs.img': No such file or directory\nmake: *** [Makefile:152：run] 错误 1\n```",
+            "excerpt_redacted": true,
+            "line_end": 22,
+            "line_start": 15,
+            "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
+            "sha256": "5bdeacfa74886697118eb83e28941de3b272baa1d2cda2d97685c84831fd5cdc",
+            "source_id": "source:lab0:timeline",
+            "source_kind": "timeline"
+          },
+          {
+            "excerpt": "```text\nmake ru\n\n[终端输出]\nmake: *** 没有规则可制作目标“ru”。 停止。",
+            "excerpt_redacted": true,
+            "line_end": 34,
+            "line_start": 30,
+            "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
+            "sha256": "5bdeacfa74886697118eb83e28941de3b272baa1d2cda2d97685c84831fd5cdc",
+            "source_id": "source:lab0:timeline",
+            "source_kind": "timeline"
+          },
+          {
+            "excerpt": "make run\n\n[终端输出]\nmake: 警告：文件“target/kernel”的修改时间在未来 27304 秒后\nmaking fs image...\n输入了 512+0 块记录\n输出了 512+0 块记录\n268435456 字节 (268 MB, 256 MiB) 已复制，0.361707 s，742 MB/s\nmkfs.fat 4.2 (2021-01-31)\n[sudo] ailab-os 的密码：\n对不起，请重试。\n[sudo] ailab-os 的密码：",
+            "excerpt_redacted": true,
+            "line_end": 55,
+            "line_start": 44,
+            "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
+            "sha256": "5bdeacfa74886697118eb83e28941de3b272baa1d2cda2d97685c84831fd5cdc",
+            "source_id": "source:lab0:timeline",
+            "source_kind": "timeline"
+          },
+          {
+            "excerpt": "```text\nmake gdb\n\n[终端输出]\nmake: 警告：文件“target/kernel”的修改时间在未来 27253 秒后\n*** QEMU 已在 :1234 等待 gdb，请在另⼀个终端运⾏: ***\n gdb-multiarch target/kernel -ex 'set arch riscv:rv64' -ex 'target remote localhost:1234'\nqemu-system-riscv64: -device virtio-blk-device,drive=x0,bus=virtio-mmio-bus.0: Failed to get \"write\" lock\nIs another process using the image [fs.img]?\nmake: *** [Makefile:159：gdb] 错误 1\n```",
+            "excerpt_redacted": true,
+            "line_end": 150,
+            "line_start": 140,
+            "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
+            "sha256": "5bdeacfa74886697118eb83e28941de3b272baa1d2cda2d97685c84831fd5cdc",
+            "source_id": "source:lab0:timeline",
+            "source_kind": "timeline"
+          },
+          {
+            "excerpt": "make gdb\n\n[终端输出]\nmake: 警告：文件“target/kernel”的修改时间在未来 27219 秒后\n[sudo] ailab-os 的密码：\n*** QEMU 已在 :1234 等待 gdb，请在另⼀个终端运⾏: ***\n gdb-multiarch target/kernel -ex 'set arch riscv:rv64' -ex 'target remote localhost:1234'\nqemu-system-riscv64: -device virtio-blk-device,drive=x0,bus=virtio-mmio-bus.0: Failed to get \"write\" lock\nIs another process using the image [fs.img]?\nmake: *** [Makefile:159：gdb] 错误 1\n```",
+            "excerpt_redacted": true,
+            "line_end": 169,
+            "line_start": 159,
+            "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
+            "sha256": "5bdeacfa74886697118eb83e28941de3b272baa1d2cda2d97685c84831fd5cdc",
+            "source_id": "source:lab0:timeline",
+            "source_kind": "timeline"
+          },
+          {
+            "excerpt": "make fs\n```",
+            "excerpt_redacted": true,
+            "line_end": 179,
+            "line_start": 178,
+            "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
+            "sha256": "5bdeacfa74886697118eb83e28941de3b272baa1d2cda2d97685c84831fd5cdc",
+            "source_id": "source:lab0:timeline",
+            "source_kind": "timeline"
+          },
+          {
+            "excerpt": "make clean\n\n[终端输出]\nrm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \\\n*/*.o */*.d */*.asm */*.sym \\\ntarget/* \\\nxv6-user/initcode xv6-user/initcode.out \\\nkernel/kernel \\\n.gdbinit \\\nxv6-user/usys.S \\\nxv6-user/_init xv6-user/_sh xv6-user/_cat xv6-user/_echo xv6-user/_grep xv6-user/_ls xv6-user/_kill xv6-user/_mkdir xv6-user/_xargs xv6-user/_sleep xv6-user/_fi\nnd xv6-user/_rm xv6-user/_wc xv6-user/_test xv6-user/_usertests xv6-user/_strace xv6-user/_mv\n```",
+            "excerpt_redacted": true,
+            "line_end": 200,
+            "line_start": 188,
+            "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
+            "sha256": "5bdeacfa74886697118eb83e28941de3b272baa1d2cda2d97685c84831fd5cdc",
+            "source_id": "source:lab0:timeline",
+            "source_kind": "timeline"
+          }
+        ],
+        "reason": "The timeline shows only manual shell command execution (e.g., 'make run', 'make ru', 'make gdb', 'make fs', 'make clean') with corresponding terminal output and no indication of AI-generated code, suggestions, or automation. All observed actions are consistent with human execution, debugging, and verification.",
+        "unit_id": "cu1"
+      }
+    ]
+  },
+  "run_metadata": {
+    "completed_at": "2026-09-19T04:59:11.293224+00:00",
+    "controlled_read_protocol_version": "contribution-read-material-v3",
+    "primary_attempts": 1,
+    "primary_model": "nvidia/nemotron-3-super-120b-a12b",
+    "primary_read_count": 1,
+    "primary_repaired": false,
+    "primary_request_id": null,
+    "primary_usage": null,
+    "prompt_version": "contribution-attribution-v3-nim-semantic-primary-v2",
+    "review_attempts": 1,
+    "review_model": "nvidia/nemotron-3-super-120b-a12b",
+    "review_prompt_version": "contribution-attribution-v3-nim-independent-review-v2",
+    "review_request_id": null,
+    "review_usage": null,
+    "reviewer_read_count": 1,
+    "reviewer_repaired": false,
+    "tool_version": "3.1.1",
+    "validator_version": "contribution-assessment-validator-v4"
+  },
+  "schema_version": "ai-human-contribution-assessment/v3",
+  "source_manifest": [
+    {
+      "availability": "available",
+      "kind": "timeline",
+      "line_count": 2784,
+      "reason": null,
+      "relative_path": "简洁实验过程时间线\\timeline_lab0.md",
+      "required": true,
+      "sha256": "5bdeacfa74886697118eb83e28941de3b272baa1d2cda2d97685c84831fd5cdc",
+      "source_id": "source:lab0:timeline"
+    },
+    {
+      "availability": "available",
+      "kind": "terminal_qa",
+      "line_count": 3070,
+      "reason": null,
+      "relative_path": "终端对话记录\\terminal_qa_report_lab0.md",
+      "required": true,
+      "sha256": "239545c0e2450ac46013d0eeebb176d42cc0bf68a6821b868e27d0500e4f3000",
+      "source_id": "source:lab0:terminal_qa"
+    },
+    {
+      "availability": "available",
+      "kind": "command_statistics",
+      "line_count": 25,
+      "reason": null,
+      "relative_path": "终端命令统计\\command_statistics_lab0.md",
+      "required": true,
+      "sha256": "b616daf211ae6c752995910f6edbdda585e32edaa823a965c9d27730b269eadf",
+      "source_id": "source:lab0:command_statistics"
+    },
+    {
+      "availability": "not_applicable",
+      "kind": "diff_report",
+      "line_count": null,
+      "reason": "lab0 的贡献识别仅评估实验过程材料，不使用代码差异报告",
+      "relative_path": null,
+      "required": false,
+      "sha256": null,
+      "source_id": "source:lab0:diff_report"
+    }
+  ],
+  "student": {
+    "directory_name": "戴炜",
+    "display_name": "戴炜",
+    "student_id": null
+  },
+  "teacher_actions": [
+    "建议在后续实验中加入代码快照或编辑记录，以便更好地观察 AI 使用情况。",
+    "鼓励学生使用版本控制（如 Git）并提交提交日志，以便追踪代码变化来源。",
+    "可提供明确的 AI 使用指南和记录模板，帮助学生自我报告 AI 辅助情况。"
+  ]
+}
