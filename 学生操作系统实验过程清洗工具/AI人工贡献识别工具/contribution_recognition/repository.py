@@ -225,7 +225,7 @@ class ContributionRepository:
 
     @staticmethod
     def _relative_source_path(lab: str, spec: _SourceSpec) -> str:
-        return str(Path(spec.directory) / spec.filename(lab))
+        return (Path(spec.directory) / spec.filename(lab)).as_posix()
 
     def _discover_paths(self, student_dir: Path) -> dict[str, dict[SourceKind, Path]]:
         """Return the union of existing source files without reading their text."""
@@ -280,7 +280,7 @@ class ContributionRepository:
                     continue
                 def relative(kind: SourceKind) -> str | None:
                     path = paths.get(kind)
-                    return str(path.relative_to(student_dir)) if path is not None else None
+                    return path.relative_to(student_dir).as_posix() if path is not None else None
 
                 tasks.append(
                     TaskReference(
