@@ -1,0 +1,21 @@
+==== labtracker 终端转录 ====
+录像: 20260914T192120-5531.out.gz   时长: 0分23秒   原始大小: 710B
+==================================================
+
+-- [开始] --
+ai
+lab-os@ai
+lab-os-VMw
+are-Virt
+ual-Platform:~/桌面$  node --version node --version
+v24.18.0
+
+-- [0分21秒] --
+ailab
+-os@ailab
+-os-VMware-Virtual-Platform:~/桌面$ npm --versionnpm --version
+11.16.0
+
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面$ 
+exit
+

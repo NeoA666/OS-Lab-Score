@@ -1,0 +1,49 @@
+==== labtracker 终端转录 ====
+录像: 20260917T174837-14906.out.gz   时长: 55分56秒   原始大小: 3044B
+==================================================
+-- [开始] --
+wsj@wsj-VMware-Virtual-Platform:~$ 
+-- [0分03秒] --
+c
+-- [0分06秒] --
+d
+
+-- [0分13秒] --
+666;vte.shell.preexec!
+-- [0分16秒] --
+wsj@wsj-VMware-Virtual-Platform:~$ 
+-- [0分21秒] --
+c
+-- [0分25秒] --
+d
+
+-- [0分56秒] --
+'/home/wsj/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1' 
+-- [1分15秒] --
+
+-- [1分33秒] --
+'/home/wsj/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1' 
+
+-- [50分37秒] --
+666;vte.shell.preexec!
+-- [51分07秒] --
+wsj@wsj-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1$ 
+-- [51分39秒] --
+wsj@wsj-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1$ 
+-- [52分10秒] --
+wsj@wsj-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1$ 
+-- [52分42秒] --
+wsj@wsj-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1$ 
+-- [53分14秒] --
+wsj@wsj-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1$ 
+-- [53分46秒] --
+wsj@wsj-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1$ 
+-- [54分19秒] --
+e
+
+-- [54分51秒] --
+666;vte.shell.preexec!
+
+-- [55分56秒] --
+bash: /home/wsj/.npm-global/bin/claude: 权限不够
+wsj@wsj-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1$ 

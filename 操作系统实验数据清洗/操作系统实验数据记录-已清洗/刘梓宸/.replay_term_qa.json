@@ -1,0 +1,53 @@
+{
+  "tool": "replay_term_qa",
+  "source": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2306010113-刘梓宸-20260911-2046",
+  "layout": "by-lab-v1",
+  "status": "complete",
+  "reports": [
+    "claude对话/claude_qa_clean_lab0.md",
+    "claude对话/claude_qa_clean_other.md",
+    "完整终端转写记录/full_terminal_transcript_lab0.md",
+    "完整终端转写记录/full_terminal_transcript_other.md",
+    "终端命令统计/command_statistics_lab0.md",
+    "终端命令统计/command_statistics_other.md",
+    "终端对话记录/terminal_qa_report_lab0.md",
+    "终端对话记录/terminal_qa_report_other.md"
+  ],
+  "cache_format_version": 2,
+  "input_fingerprint": "84d4091f5e38ed2d8fcda9d0aa24655d78fa8acdfb83059fd762539722181164",
+  "processor_signature": "6a613b91290b4a52d5d6c74b11a5302eb7e1958bd530af409b0f248a91eaa36f",
+  "summary": {
+    "recordings": 1,
+    "commands": 10,
+    "claude_sessions": 0,
+    "turns": 0,
+    "replay_failed": 0,
+    "labs": {
+      "lab0": {
+        "recordings": 1,
+        "commands": 9,
+        "claude_sessions": 0,
+        "turns": 0,
+        "replay_failed": 0
+      },
+      "other": {
+        "recordings": 1,
+        "commands": 1,
+        "claude_sessions": 0,
+        "turns": 0,
+        "replay_failed": 0
+      }
+    },
+    "errors": []
+  },
+  "artifact_sha256": {
+    "claude对话/claude_qa_clean_lab0.md": "4aad0076325d92631757d474fb20353765c3659e3852c158e35c9c833815ce83",
+    "claude对话/claude_qa_clean_other.md": "36b0d9219eaa3eeb27bd6e9fa2a2fb482daa966666e896ae3b05b39d8d588d41",
+    "完整终端转写记录/full_terminal_transcript_lab0.md": "af35287ca8d057cc864f4fac7d619b9d70bbcd060a7c659ec57e43b2b2b26e66",
+    "完整终端转写记录/full_terminal_transcript_other.md": "7b7e4a1fce2d110ba3b4db117aa45631e16bfedcf19ffd12976cbea293cd39ac",
+    "终端命令统计/command_statistics_lab0.md": "3b6282e709911d3eb4c93da3b251b08c27f32a8cd0de791238adb197fc66c077",
+    "终端命令统计/command_statistics_other.md": "c740ec68fab15c57d50d6ad58d79b7296f1badc0d2ec8add0a6f5e10b4bc28bc",
+    "终端对话记录/terminal_qa_report_lab0.md": "a4003a6cb2a5d0c1f456b3f5c6c79530869f86b73afddd850ed5445cc4b8c02e",
+    "终端对话记录/terminal_qa_report_other.md": "87fa743b1ba550bb5caa9c3a1195f3b027f288701f59a8eca7908ad7df2c29fc"
+  }
+}

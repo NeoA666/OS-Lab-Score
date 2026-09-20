@@ -1,0 +1,55 @@
+==== labtracker 终端转录 ====
+录像: 20260912T204658-5816.out.gz   时长: 3分13秒   原始大小: 2500B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform
+:~$ submit
+dirname: 无效的选项 -- h
+请尝试执行 "dirname --help" 来获取更多信息。
+/home/ailab-os/.local/bin/submit: 行 114
+: /tmp/labt-submit.NYEQIU/claude/-home-ailab-os/150743c0-675d-4e96-8ecb-0a7eeed7b641.jsonl
+.gz: 没有那个文件或目录
+dirname: 无效的选项 -- h
+请尝试执行 "dirname --help" 来获取更多信息。
+/home/ailab-os/.local/bin/submit: 行 114
+: /tmp/labt-submit.NYEQIU/claud
+e/-home-ailab-os/5267cc29-e051-4ee7-b30a-d3af06aa6fae.jsonl
+.gz: 没有那个文件或目录
+dirname: 无效的选项 -- h
+请尝试执行 "dirname --help" 来获取更多信息。
+/home/ailab-os/.local/bin/submit: 行 114
+: /tmp/labt-submit.NYEQIU/claud
+e/-home-ailab-os/5e5928a2-2cdc-4a1d-beee-6dfb7d676149.jsonl
+.gz: 没有那个文件或目录
+dirname: 无效的选项 -- h
+请尝试执行 "dirname --help" 来获取更多信息。
+/home/ailab-os/.local/bin/submit: 行 114
+: /tmp/labt-submit.NYEQIU/claude/-home-ailab-os/5f2fafe6-c333-4be7-bca9-afffa2695fea.jsonl.gz: 没有那个文件或目录
+dirname: 无效的选项 -- h
+请尝试执行 "dirname --help" 来获取更多信息。
+/home/ailab-os/.local/bin/submit: 行 114
+: /tmp/labt-submit.NYEQIU/claud
+e/-home-ailab-os/d2142a9a-cc54-48f1-910e-e0808c8a10d8.jsonl
+.gz: 没有那个文件或目录
+dirname: 无效的选项 -- h
+请尝试执行 "dirname --help" 来获取更多信息。
+/home/ailab-os/.local/bin/submit: 行 114
+: /tmp/labt-submit.NYEQIU/claud
+e/-home-ailab-os/eb044764-03f6-4f79-84eb-f1303e4a141a.jsonl
+.gz: 没有那个文件或目录
+dirname: 无效的选项 -- h
+请尝试执行 "dirname --help" 来获取更多信息。
+/home/ailab-os/.local/bin/submit: 行 114: /tmp/labt-submit.NYEQ
+IU/claude/-home-ailab-os----xv6-ai-labs-km-lab0/b3a3ffe0-3d8f-46f3-aa0a-2a499cc4f131.jsonl
+.gz: 没有那个文件或目录
+dirname: 无效的选项 -- h
+请尝试执行 "dirname --help" 来获取更多信息。
+/home/ailab-os/.local/bin/submit: 行 114: /tmp/labt-submit.NYEQ
+-- [1分21秒] --
+IU/claude/-home-ailab-os----xv6-ai-labs-km-lab0/c77f26ce-519b-4333-ae91-90bf12e2e881.jsonl.gz: 没有那个文件或目录
+
+-- [3分13秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

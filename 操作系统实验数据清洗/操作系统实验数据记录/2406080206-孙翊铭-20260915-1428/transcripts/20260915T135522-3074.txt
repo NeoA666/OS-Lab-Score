@@ -1,0 +1,33 @@
+==== labtracker 终端转录 ====
+录像: 20260915T135522-3074.out.gz   时长: 0分35秒   原始大小: 1881B
+==================================================
+
+-- [开始] --
+ai
+lab-os@ailab-os-VMware-V
+irtual-Platform
+:~/桌面/xv6-ai-labs-km/lab0$ claude
+78 ▐▛███▜▌ClaudeCodev2.1.221
+▝▜█████▛▘deepseek-v4-pro·APIUsageBilling
+ ▘▘▝▝~/桌面/xv6-ai-labs-km/lab0
+
+────────────────────────────────────────────────────────────────────────────────
+❯  
+────────────────────────────────────────────────────────────────────────────────
+⏸manualmodeon
+·?
+for
+
+-- [0分23秒] --
+shortcuts·←foragents
+-- [0分34秒] --
+●
+high·/effort
+
+>0q
+
+
+Press Ctrl-D againto exit
+
+⏸ manual mode on ·? for shortcuts · ← for agents
+

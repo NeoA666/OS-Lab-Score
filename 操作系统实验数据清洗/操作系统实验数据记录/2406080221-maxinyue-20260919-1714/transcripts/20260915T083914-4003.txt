@@ -1,0 +1,1140 @@
+==== labtracker 终端转录 ====
+录像: 20260915T083914-4003.out.gz   时长: 33分45秒   原始大小: 17095B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-V
+irtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ qemu-system-riscv64 --version
+
+qemu-system-riscv64 --version
+
+QEMU emula
+tor vers
+ion 8.2.2 (Debian 1:8.2.2+ds-0ubuntu1.18)
+Copyright (c) 2003-2023 Fabrice Bellard and the QEMU Project developers
+
+-- [0分41秒] --
+ailab-os@ailab-os-VMware-Virtual
+-Platform:~/桌面/xv6-ai-labs-km/lab0$ S riscv64-unknown-elf-gcc --version
+
+ riscv64-unknown-elf-gcc --version
+
+S：未找到命令
+
+-- [1分08秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$  ls /opt
+
+ ls /opt
+
+-- [1分22秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:
+~/桌面/xv6-ai-labs
+-km/lab0$ opt
+找不到命令 “opt”，但可以通过以下软件包安装它：
+sudo apt install llvm
+
+-- [1分33秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$
+ ls
+20260901-环境搭建手册.md  CLAUDE.md  kernel  Makefile  
+README.md  xv6-user
+实验指导.md               fs.img     linker  README    target
+
+-- [2分11秒] --
+ailab-os@ailab-os-VMware-V
+irtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ ls/opt
+bash: ls/opt: 没有那个文件或目录
+
+-- [2分35秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ ls /opt
+
+-- [3分12秒] --
+ailab-os@a
+i
+-- [3分16秒] --
+lab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$  ls /usr/local
+
+ ls /usr/local
+
+bin  etc  
+game
+s  include  lib  man  sbin  share  src
+
+-- [4分13秒] --
+ailab-os@ailab-os-VMware-
+Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$   ls /usr/bin | grep riscv
+
+  ls /usr/bin | grep riscv
+
+qemu-system-riscv32
+qemu-system-riscv64
+riscv64-linux-gnu-addr2line
+riscv64-linux-gnu-ar
+riscv64-linux-gnu-as
+riscv64-linux-gnu-c++filt
+riscv64-linux-gnu-cpp
+riscv64-linux-gnu-cpp-13
+riscv64-linux-gnu-elfedit
+riscv64-linux-gnu-gcc
+riscv64-linux-gnu-gcc-13
+riscv64-linux-gnu-gcc-ar
+riscv64-linux-gnu-gcc-ar-13
+riscv64-linux-gnu-gcc-nm
+riscv64-linux-gnu-gcc-nm-13
+riscv64-linux-gnu-gcc-ranlib
+riscv64-linux-gnu-gcc-ranlib-13
+riscv64-linux-gnu-gcov
+riscv64-linux-gnu-gcov-13
+riscv64-linux-gnu-gcov-dump
+riscv64-linux-gnu-gcov-dump-13
+riscv64-linux-gnu-gcov-tool
+riscv64-linux-gnu-gcov-tool-13
+riscv64-linux-gnu-gprof
+riscv64-linux-gnu-ld
+riscv64-linux-gnu-ld.bfd
+riscv64-linux-gnu-lto-dump
+riscv64-linux-gnu-lto-dump-13
+riscv64-linux-gnu-nm
+riscv64-linux-gnu-objcopy
+riscv64-linux-gnu-objdump
+riscv64-linux-gnu-ranlib
+riscv64-linux-gnu-readelf
+riscv64-linux-gnu-size
+riscv64-linux-gnu-strings
+riscv64-linux-gnu-strip
+riscv64-unknown-elf-addr2line
+riscv64-unknown-elf-ar
+riscv64-unknown-elf-as
+riscv64-unknown-elf-c++
+riscv64-unknown-elf-c++filt
+riscv64-unknown-elf-cpp
+riscv64-unknown-elf-elfedit
+riscv64-unknown-elf-g++
+riscv64-unknown-elf-gcc
+riscv64-unknown-elf-gcc-13.2.0
+riscv64-unknown-elf-gcc-ar
+riscv64-unknown-elf-gcc-nm
+riscv64-unknown-elf-gcc-ranlib
+riscv64-unknown-elf-gcov
+riscv64-unknown-elf-gcov-dump
+riscv64-unknown-elf-gcov-tool
+riscv64-unknown-elf-gprof
+riscv64-unknown-elf-ld
+riscv64-unknown-elf-ld.bfd
+riscv64-unknown-elf-lto-dump
+riscv64-unknown-elf-nm
+riscv64-unknown-elf-objcopy
+riscv64-unknown-elf-objdump
+riscv64-unknown-elf-ranlib
+riscv64-unknown-elf-readelf
+
+riscv
+64-unknown-elf-size
+riscv64-unknown-elf-strings
+riscv64-unknown-elf-strip
+
+-- [4分55秒] --
+ailab-os@ailab-os-VMware-Virtu
+a
+l-Platform:~/桌面/xv6-ai-labs-km/lab0$  riscv64-unknown-elf-gcc --version
+
+ riscv64-unknown-elf-gcc --version
+
+riscv64-unknown-elf-gcc (13.2.0-11ubuntu1+12) 13.2.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+This is free software; see the 
+source f
+or copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+-- [5分19秒] --
+ailab-os
+@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$  make build
+
+ make build
+
+make: 对“build”无需做任何事。
+
+-- [5分45秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$   make run 
+
+  make run 
+
+O
+p
+e
+n
+S
+B
+I
+
+v
+1
+.
+3
+
+_
+_
+_
+_
+
+_
+_
+_
+_
+_
+
+_
+_
+_
+_
+
+_
+____
+
+/
+
+_
+_
+
+\
+
+ /
+
+__
+_
+_|
+
+ _
+
+\_
+
+_
+|
+
+ |
+
+|  |
+ |
+_ __ 
+
+___ 
+_ 
+__ | (
+_
+_
+_ | 
+|_)
+ |
+|
+ |
+
+|
+ |
+
+|
+ | '_
+ \
+ / 
+_
+
+\ 
+'
+_ 
+\
+ \_
+_
+_ \
+|
+
+ _
+
+< 
+|
+ |
+
+|
+
+|
+_
+_
+|
+
+|
+
+|
+_
+)
+
+|
+
+_
+_
+/
+
+|
+
+|
+
+|
+_
+_
+_
+_
+)
+
+|
+
+|
+_
+) || |_
+
+\
+_
+_
+_
+_
+/
+|
+
+.
+_
+_/ \___|_| |_|_____/|___/_____|
+        | |
+        |_|
+
+Platform Name
+
+ :
+
+r
+isc
+v
+-vi
+rt
+io
+,q
+e
+mu
+
+P
+l
+at
+f
+o
+rm
+
+F
+e
+at
+u
+r
+e
+s 
+
+     :
+ mede
+l
+e
+g
+
+P
+l
+a
+tf
+or
+m 
+HA
+RT
+
+C
+ou
+n
+t
+
+:
+ 2
+
+P
+la
+t
+f
+o
+rm
+
+I
+P
+I D
+ev
+ic
+e 
+
+ :
+
+a
+cl
+i
+nt
+-msw
+i
+
+P
+l
+at
+fo
+rm
+
+Ti
+m
+er
+
+D
+ev
+i
+c
+e 
+
+:
+
+ac
+l
+i
+nt
+-m
+ti
+me
+r 
+@ 1
+00
+0
+0
+00
+0
+H
+z
+
+P
+l
+at
+f
+o
+rm
+
+C
+on
+s
+o
+le
+
+D
+ev
+i
+c
+e  
+ :
+ u
+ar
+t
+8
+25
+0
+
+P
+l
+a
+t
+f
+o
+r
+m
+
+H
+S
+M
+ D
+e
+v
+ic
+e
+
+: 
+---
+
+P
+la
+t
+f
+o
+rm
+
+P
+MU
+ D
+e
+v
+ic
+e
+
+: 
+---
+P
+lat
+f
+orm
+
+R
+eb
+o
+o
+t 
+D
+e
+vi
+c
+e
+
+: 
+sif
+i
+ve_
+te
+s
+t
+
+P
+l
+atform Shut
+down Device  : sifive_test
+Platform Suspend Device   : ---
+Platform CPPC Device      : ---
+Firmware Base             : 0x80000000
+Firmware Size             : 332 KB
+Firmware RW Offset        : 0x40000
+Firmware RW Size          : 76 KB
+Firmware Heap Offset      : 0x4a000
+Firmware Heap Size        : 36 KB (total), 2 KB (reserved), 9 KB (used), 24
+
+K
+B (free)
+Firmware
+ S
+c
+r
+a
+t
+c
+h
+
+S
+i
+z
+e 
+    : 4096 B (total), 760 B (used), 3336 B (free)
+Runtime SBI Versi
+o
+n
+
+:
+
+1
+.
+0
+
+D
+o
+m
+a
+i
+n
+0
+
+N
+a
+m
+e
+
+:
+
+r
+o
+o
+t
+
+D
+o
+m
+a
+i
+n
+0
+
+B
+o
+ot
+
+HA
+RT
+
+:
+
+0
+
+D
+om
+ain0
+ HARTs             : 0*,1*
+Domain0 Region00          : 0x0000000002000000-0x000000000200ffff M: (I,R,W) S/U: ()
+Domain0 Region01          : 0x0000000080040000-0x000000008005ffff M: (R,W) S/U: ()
+Domain0 Region02          : 0x0000000080000000-0x000000008003ffff M: (R,X) S/U: ()
+Domain0 Region03          : 0x0000000000000000-0xffffffffffffffff M: (R,W,X) S/U: (R,W,X)
+Domain0 Next Address      : 0x0000000080200000
+Domain0 Next Arg1         : 0x0000000087e00000
+Domain0 Next Mode         : S-mode
+Domain0 SysReset          : yes
+Domain0 SysSuspend        : yes
+
+Boot HART ID              : 0
+Boot HART Domain          : root
+Boot HART Priv Version    : v1.12
+Boot HART Base ISA        : rv64imafdch
+Boot HART ISA Extensions  : time,sstc
+Boot HART PMP Count       : 16
+Boot HART PMP Granularity : 4
+Boot HART PMP Address Bits: 54
+Boot HA
+R
+T
+ MHPM
+ C
+ou
+nt
+
+:
+
+1
+6
+
+B
+o
+o
+t
+
+H
+A
+R
+T
+
+M
+I
+D
+E
+L
+E
+G
+
+ :
+
+0x
+0
+00
+0
+00
+0
+00
+0
+00
+1
+6
+6
+6
+
+B
+o
+o
+t 
+H
+AR
+T
+ M
+E
+D
+E
+L
+E
+G
+
+:
+
+0
+x
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+f
+0
+b
+5
+0
+9
+
+(`
+-
+.
+
+           (`-.                     
+
+ .
+-
+')   
+
+(
+'
+-
+.
+
+ _   .-
+'
+)
+
+ ( O
+O
+
+).   
+
+_
+(
+O
+O
+
+)
+_
+
+         .(  OO)
+    _(
+  OO)
+  (
+ '.
+( 
+OO )_ 
+
+(_/.  \_)-. 
+,
+-
+-(_/   ,. \  ,--.                (_)---\_)  (,----
+-
+-.  ,--.   ,
+-
+-.) ,--. ,--.  
+ \  `.'  /  \   \   
+/(
+__/ 
+/  .' 
+      .-')     ' 
+ .-.  '   |  
+.---'  
+|  
+ `.'   
+|  | 
+ | | 
+ |   
+
+\     
+/\   \   \
+ /   /
+ .  /
+ -. 
+
+  _(  OO)   ,|  | |  |
+
+|
+
+|
+
+     |
+
+  |
+  |  | | .
+-'
+)
+
+\   
+\ |    \   
+' 
+  /, |
+ .-.  '  (,
+-
+-----.
+ (
+_|
+  | |  |  (|  '--.   |  |'.'|  |  |  |_|( OO )
+  .'
+
+\_)    \     /__)' \  |  |  '------'   |  |
+
+| 
+
+|   |  .--'   |  |   |  |  |  | | `-' /
+ /
+  .
+'.  \      \   /    \  `'  /    
+          '  '-'  '-. |  `---. 
+ |  |   |  | ('  '-'
+(_
+.-'
+'--'   '--'      `-'      `----'                `-----'--' `----
+--'  `--' 
+  `-
+-'   
+`----
+-
+'
+
+h
+art
+ 0 
+e
+n
+ter
+ m
+a
+in()
+...
+
+ke
+r
+n
+el
+_e
+nd
+: 
+0
+x0
+0
+000
+000
+8
+0
+2
+280
+00
+,
+
+ph
+ysto
+p
+: 0x
+0000
+0
+00080
+6
+000
+00
+
+ki
+ni
+t
+kv
+min
+it
+
+k
+vm
+ini
+th
+a
+rt
+t
+im
+e
+rini
+t
+
+t
+rapin
+it
+ha
+rt
+
+pro
+cinit
+plicinit
+plicini
+thart
+virtio_disk_init
+binit
+fileinit
+userinit
+hart 0 init done
+[fat32_init] enter!
+[FAT32 init]byts_per_sec: 512
+[FAT32 init
+]
+r
+o
+o
+t
+_
+c
+lu
+s
+:
+
+2
+
+[
+F
+A
+T
+3
+2
+
+i
+n
+i
+t
+]s
+e
+c
+_
+p
+e
+r
+_
+-- [6分28秒] --
+c
+l
+u
+s:
+
+1
+
+[F
+AT32 
+i
+n
+i
+t
+]
+f
+at
+_
+c
+n
+t
+:
+
+2
+
+[
+FAT32 in
+i
+t]
+f
+a
+t
+_
+s
+z
+:
+
+4
+0
+3
+3
+
+[
+F
+A
+T3
+2
+ i
+n
+i
+t]
+fi
+rs
+t
+_
+d
+a
+t
+a_
+s
+ec
+:
+
+80
+9
+8
+
+i
+ni
+t
+:
+ s
+ta
+r
+ting sh
+-> / $ ls
+bin                              DIR 	0
+README                           FILE	2059
+cat  
+
+F
+I
+L
+E
+
+2
+1
+9
+2
+8
+
+e
+c
+h
+o
+
+F
+I
+L
+E
+
+2
+0
+8
+7
+2
+
+f
+ind                             FILE	23080
+grep                             FILE	24432
+init                             FILE	21528
+kill                             FILE	20760
+ls                               FILE	23080
+m
+k
+d
+i
+r
+
+F
+I
+L
+E
+
+2
+0
+8
+5
+6
+
+m
+v
+
+F
+I
+L
+E
+
+2
+2
+6
+4
+0
+
+r
+m
+
+F
+I
+L
+E
+
+2
+0
+8
+4
+0
+
+s
+h
+
+                          FILE	43344
+sleep         
+                   FILE	20832
+strace                           FILE	21200
+test           
+
+                FILE	20712
+use
+rtests      
+
+-- [7分05秒] --
+           FILE	117
+016
+wc                               FILE	22712
+xargs                            FILE	22520
+-> / $ QEMU: Terminated
+
+-- [14分57秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ ^[[2
+-- [15分05秒] --
+00~ 
+**QEM
+U `-m
+achin
+e vir
+t` �
+��拟的是什么硬件？** 提示：查阅 QEMU 文档中 `virt` 的内存布局和外设。~
+
+-- [15分16秒] --
+ grep -n "machine virt" Makefile
+
+ grep -n "machine virt" Makefile
+
+132:QEMUOPTS = -machine virt -kernel $T/kernel -m 128M -nographic
+
+-- [15分20秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ ^C
+
+-- [26分43秒] --
+ailab-os@ailab-os-VMware-Vir
+tual-Platform:~/桌面/xv6-ai-labs-km/lab0$   grep -n "TOOLPREFIX" Makefile
+
+  grep
+ -n "TOOLPREFIX" Makefile
+
+68:
+TOOLPREFIX := riscv64-linux-gnu-
+69:
+# TOOLPREFIX	:= riscv64-linux-gnu-
+70
+:CC = $(TOOLPREFIX)gcc
+71:AS = $(TOOLPREFIX)gas
+72:LD = $(TOOLPREFIX)ld
+73:OBJCO
+PY = $(
+TOOLPREFIX)objcopy
+74:OBJDUMP = $(TOOLPREFIX)objdump
+
+-- [29分52秒] --
+ailab-os@ailab-os-VMwa
+re-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$   grep -n "bios" Makefile
+
+grep -n "bios" Makefile
+
+137:QEMUOPTS += -bios default
+
+-- [33分45秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ 
+exit
+

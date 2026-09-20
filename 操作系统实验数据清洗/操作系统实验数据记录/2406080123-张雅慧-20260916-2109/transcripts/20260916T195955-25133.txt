@@ -1,0 +1,26 @@
+==== labtracker 终端转录 ====
+录像: 20260916T195955-25133.out.gz   时长: 5分33秒   原始大小: 1074B
+==================================================
+
+-- [开始] --
+ailab-os@ailab
+-o
+-- [0分11秒] --
+s-VMware-Vi
+rtual-Platform:
+~/桌面/xv6-ai-labs-km/lab1$ ^[[200~cp kernel/include/sysnum.h ./sysnum.h.bak~
+cp：未找到命令
+
+-- [0分25秒] --
+ailab-os@ailab-os-VMware-Virtual-P
+-- [0分30秒] --
+ailab-o
+s@
+ailab-os-
+VMware-V
+irtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ cp kernel/include/sysnum.h ./sysnum.h.bak
+
+-- [5分33秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ 
+exit
+

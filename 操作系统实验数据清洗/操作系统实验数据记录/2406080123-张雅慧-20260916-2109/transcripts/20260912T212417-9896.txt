@@ -1,0 +1,31 @@
+==== labtracker 终端转录 ====
+录像: 20260912T212417-9896.out.gz   时长: 0分47秒   原始大小: 845B
+==================================================
+
+-- [开始] --
+ailab-os
+-- [0分14秒] --
+@
+a
+i
+l
+a
+b
+-
+-- [0分17秒] --
+o
+-- [0分20秒] --
+s-VMware-Vi
+rtual-Platform:~/桌面/20101200-zhaoxia-实验提交-20260
+903-1759.tar./labs/lab0$ make run
+
+qemu-system-riscv64: -drive file=fs
+.img,if=none,format=raw,id=x0: Could not open 'fs.img': No such file or directory
+make: *** [Makefile:152：run] 错误 1
+ailab-os
+-- [0分47秒] --
+@ailab-os-VMware-
+Virtual-Platform:~/桌面/20101200-zhaoxia-实验提交-20260
+903-1759.tar./labs/lab0$ 
+exit
+

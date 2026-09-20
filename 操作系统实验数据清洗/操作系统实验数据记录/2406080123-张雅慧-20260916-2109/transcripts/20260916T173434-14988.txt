@@ -1,0 +1,182 @@
+==== labtracker 终端转录 ====
+录像: 20260916T173434-14988.out.gz   时长: 48分48秒   原始大小: 8616B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ make build 
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=med
+any -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU -c -o xv6-user/usys.o xv6-user/usys.S
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o x
+v6-user/_
+init xv6-user/
+init.o xv6-user/ulib.o xv6-user/usys.o x
+v6
+-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning:
+ xv6-user/_init has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_init > xv6-us
+er/init.asm
+riscv64-unknown-elf-objdump -t xv6-user/_init | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/init.sym
+riscv64-unknown-elf-ld -z max-page-size=4
+096 -N -e main -Ttext 0 
+-o xv6-user/_sh xv6-user/sh.o xv6-user/ulib.o xv6-user/usys.o x
+v6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: wa
+rning: xv6-user/_sh has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_sh > 
+xv6-user/sh.asm
+riscv64-unknown-elf-objdump -t xv6-user/_sh | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/sh.sym
+riscv64-unknown-elf-ld -z max-page-size=409
+6 -N -e main -Ttext 0 -o
+ xv6-user
+/_cat xv6-user/cat.o xv6-user/ulib.o xv6-user/usys.o 
+xv
+6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warni
+ng: xv6-user/_cat has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_cat > xv6
+-user/cat.asm
+riscv64-unknown-elf-objdump -t xv6-user/_cat | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/cat.sym
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o xv6-user/_echo xv6-user/echo.o xv6-user/ulib.o xv6-user/usys.o xv6
+-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning:
+ xv6-user/_echo has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_echo > xv6-us
+er/echo.asm
+riscv64-unknown-elf-objdump -t xv6-user/_echo | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/echo.sym
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o x
+v6-user/_
+grep xv6-user/
+grep.o xv6-user/ulib.o xv6-user/usys.o x
+v6
+-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning:
+ xv6-user/_grep has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_grep > xv6-us
+er/grep.asm
+riscv64-unknown-elf-objdump -t xv6-user/_grep | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/grep.sym
+riscv64-unknown-elf-ld -z max-page-size=4
+096 -N -e main -Ttext 0 
+-o xv6-user/_ls xv6-user/ls.o xv6-user/ulib.o xv6-user/usys.o x
+v6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: wa
+rning: xv6-user/_ls has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_ls > 
+xv6-user/ls.asm
+riscv64-unknown-elf-objdump -t xv6-user/_ls | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/ls.sym
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o xv6-user/_kill xv6-user/kill.o xv6-user/ulib.o xv6-user/usys.o xv6
+-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning:
+ xv6-user/_kill has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_kill > xv6-us
+er/kill.asm
+riscv64-unknown-elf-objdump -t xv6-user/_kill | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/kill.sym
+riscv64-unknown-elf-ld -z max-page-size=4096 -N
+ -e main -Ttext 0 -o xv6
+-user/_mk
+dir xv6-user/mk
+dir.o xv6-user/ulib.o xv6-user/usys.o xv
+6-
+user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv
+6-user/_mkdir has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_mkdir > xv6-user/
+mkdir.asm
+riscv64-unknown-elf-objdump -t xv6-user/_mkdir | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/mkdir.sym
+riscv64-unknown-elf-ld -z max-page-size=4096 -N
+ -e main -Ttext 0 -o xv6-user/_xargs xv6-user/xargs.o xv6-user/ulib.o xv6-user/usys.o xv6-
+user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv
+6-user/_xargs has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_xargs > xv6-user/
+xargs.asm
+riscv64-unknown-elf-objdump -t xv6-user/_xargs | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/xargs.sym
+riscv64-unknown-elf-ld -z max-page-size=4096 -N
+ -e main -Ttext 0 -o xv6
+-user/_sl
+eep xv6-user/sl
+eep.o xv6-user/ulib.o xv6-user/usys.o xv
+6-
+user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv
+6-user/_sleep has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_sleep > xv6-user/
+sleep.asm
+riscv64-unknown-elf-objdump -t xv6-user/_sleep | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/sleep.sym
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o x
+v6-user/_
+find xv6-user/
+find.o xv6-user/ulib.o xv6-user/usys.o x
+v6
+-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning:
+ xv6-user/_find has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_find > xv6-us
+er/find.asm
+riscv64-unknown-elf-objdump -t xv6-user/_find | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/find.sym
+riscv64-unknown-elf-ld -z max-page-size=4
+096 -N -e main -Ttext 0 -o xv6-user/_rm xv6-user/rm.o xv6-user/ulib.o xv6-user/usys.o x
+v6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: wa
+rning: xv6-user/_rm has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_rm > 
+xv6-user/rm.asm
+riscv64-unknown-elf-objdump -t xv6-user/_rm | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/rm.sym
+riscv64-unknown-elf-ld -z max-page-size=4
+096 -N -e main -Ttext 0 -o xv6-user/_wc xv6-user/wc.o xv6-user/ulib.o xv6-user/usys.o x
+v6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: wa
+rning: xv6-user/_wc has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_wc > 
+xv6-user/wc.asm
+riscv64-unknown-elf-objdump -t xv6-user/_wc | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/wc.sym
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o x
+v6-user/_test xv6-user/test.o xv6-user/ulib.o xv6-user/usys.o xv6
+-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning:
+ xv6-user/_test has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_test > xv6-us
+er/test.asm
+riscv64-unknown-elf-objdump -t xv6-user/_test | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/test.sym
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main
+ -Ttext 0 -o xv6-user/_usertests xv6-user/usertests.o xv6-user/ulib.o xv6-user/usys.o xv6-user
+/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv6-user/_user
+tests has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_usertests > xv6-user/usertests.as
+m
+riscv64-unknown-elf-objdump -t xv6-user/_usertests | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/usertests.sym
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -
+e main -Ttext 0 -o xv6-u
+ser/_strace xv6-user/strace.o xv6-user/ulib.o xv6-user/usys.o xv6-u
+ser/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv6-u
+ser/_strace has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_strace > xv6-user/str
+ace.asm
+riscv64-unknown-elf-objdump -t xv6-user/_strace | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/strace.sym
+riscv64-unknown-elf-ld -z max-page-size=4
+096 -N -e main -Ttext 0 -o xv6-user/_mv xv6-user/mv.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: wa
+rning: xv6-user/_mv has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_mv > 
+xv6-user/mv.asm
+riscv64-unknown-elf-objdump -t xv6-user/_mv | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/mv.sym
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o xv6-user/_halt xv6-user/halt.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning:
+ xv6-user/_halt has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_halt > xv6-us
+er/halt.asm
+riscv64-unknown-elf-objdump -t xv6-user/_halt | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/halt.sym
+
+-- [48分48秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ 
+exit
+

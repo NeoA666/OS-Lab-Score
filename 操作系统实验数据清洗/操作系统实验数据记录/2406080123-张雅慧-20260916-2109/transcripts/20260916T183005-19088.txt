@@ -1,0 +1,37 @@
+==== labtracker 终端转录 ====
+录像: 20260916T183005-19088.out.gz   时长: 4分51秒   原始大小: 2676B
+==================================================
+
+-- [开始] --
+ailab-
+sys_halt" kernel/
+kernel/syscall.c:119:extern uint64 sys_halt(void);
+kernel/syscall.c:
+173:  // [SYS_halt]        sys_halt,  // TODO: 学生自行添加此行（CP③）
+kernel/sysproc.c:160:// 【AI-CHECKPOINT ④】sys_halt 实现调 sbi_shutdown（主�
+�·教学）
+kernel/sysproc.c
+:186:sys_halt(void)
+grep: kernel/sysproc.o: 匹配到二进制文件
+
+-- [1分26秒] --
+ailab-os@ailab-os-VMware
+-- [1分36秒] --
+-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ grep -rn "sys_halt" kernel/
+
+-- [1分48秒] --
+SYS
+kernel/sy
+scall.c:148:  [SYS_halt]        SYS_halt
+kernel/syscall.c:158:  // ▌Q2(开放) 如果 syscalls[] 没加 [SYS_halt]，但用户调了 halt()，会怎样？
+kernel/syscall.c:173:  // [SYS_halt]        sys_halt,  // TODO: 学生自行添加此行（CP③）
+kernel/include/sysnum.h:31:#define SYS_halt        27
+kernel/include/sysnum.h:34:// 【AI-CHECKPOINT ①】SYS_halt 编号（主线·教学）
+kernel/include/sy
+snum.h
+:41:// ▌Q1(单选) SYS_halt 应该填什么号？
+
+-- [4分51秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ 
+exit
+

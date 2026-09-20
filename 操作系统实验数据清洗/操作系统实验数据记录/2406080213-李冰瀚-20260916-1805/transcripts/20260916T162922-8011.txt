@@ -1,0 +1,48 @@
+==== labtracker 终端转录 ====
+录像: 20260916T162922-8011.out.gz   时长: 0分36秒   原始大小: 1685B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+
+-- [0分09秒] --
+ailab-os@ailab-o
+s-VMware-Virtual-Platform:~$ ^[[200~cd ~/桌面/xv6-ai-labs-km/lab1
+cd：未找到命令
+
+ailab-os@ailab-os-VMwar
+e-Virtual-Platform:~$ make clean
+make: *** 没有规则可制作目标“clean”。 停止。
+
+ailab-os@ailab-os-VMware-Virtual-Platfo
+rm:
+~$ make build 2>&1 | tail -20
+make: *** 没有规则可制作目标“build”。 停止。
+
+ailab-os@ailab-os
+-VMware-
+Virtual-Platform:~$ make fs
+make: *** 没有规则可制作目标“fs”。 停止。
+
+ailab-os
+-- [0分18秒] --
+@a
+ilab-os-VMware-Virtual-Pla
+tform:~$ su
+-- [0分24秒] --
+do
+ chown $USER:$USER fs.img
+
+[sudo] ailab-os 的�
+��
+��： 
+
+对不起，请重试。
+[sudo] ailab-os 的密码： 
+chown: 无法访问 'fs.img': 没有那个文件或目录
+
+-- [0分36秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

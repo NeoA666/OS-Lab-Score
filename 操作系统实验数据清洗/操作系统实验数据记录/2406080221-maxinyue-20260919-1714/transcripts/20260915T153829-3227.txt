@@ -1,0 +1,797 @@
+==== labtracker 终端转录 ====
+录像: 20260915T153829-3227.out.gz   时长: 3分38秒   原始大小: 46894B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform
+ailab-os@ailab-os-VM
+ware-Virt
+ual-Platform:~
+
+-- [0分16秒] --
+$ sudo apt update &
+& su
+do apt install open-vm-tools open-vm-tools-
+desk
+top fuse -y
+[sudo] ailab-os 的密码： 
+0% [�
+获取:1 http://security.ubuntu.com/ubuntu 
+noble-security InRelease [126 kB]
+0% [正在连接 deb.nodesource.com] [1 InReleas
+0% [正在连接 deb.nodesource.com] [1 InReleas
+0% [正在连接 deb.nodesource.com] [正在连�
+0% [正在连接 deb.nodesource.com] [正在连�
+-- [0分20秒] --
+获取:2 https://packages.microsoft.com/repo
+s/code stable InRelease [3,590 B]
+0% [已连接到 deb.nodesource.com (104.20.4
+5.190)] [正在等待报头] [2 In
+0% [已连接到 deb.nodesource.com (104.20.45.190)] [正在等待报头]
+
+0% [正在等
+获取:4 https://packages.microsoft.com/repos/code sta
+ble/main amd64 Packages [29.5 kB]
+命中:5 https://deb.nodesource.com/node_24.x nodistro InRelease
+
+0% [正在等待报头] [正在连接 secu
+0% [4 Packages store 0 B] [正在等待报头
+] [正在连接 security.ubuntu.co
+0% [正在等待报头] [正在连�
+0% [正在等待报头] [正在连接 security.ubuntu.com (91.189.91.81)]
+获取:6 http://security.ubuntu.com/ubuntu nob
+le-security/main amd64 Packages [1,007 kB]
+
+0%
+0%
+0% [正在等待报头] [
+0% [正在连接 mirrors.tuna.tsinghua.edu.cn] [
+-- [0分23秒] --
+0% [正在连接 mirrors.tuna.tsinghua.edu.cn] [
+0% [正在连接 mirrors.tuna.tsinghua.edu.cn
+] [正在等待报头] [6 Packages
+0% [正在连接 mirrors.tuna.tsingh
+0% [6 Packages store 0 B] [正在连接 mirrors.
+获取:8 http://security.ubuntu.com/ubuntu noble-secu
+rity/main Translation-en [213 kB]
+0% [正在连接 mirrors.tuna.tsinghua.edu.cn] [正在等待报头] [8 Translat
+0% [正在连接 mirrors.tuna.ts
+ingh
+0% [8 Translation-en store 0 B] [正在连�
+� mi
+获取:9 http://security.ubuntu.com/ubuntu noble-securit
+y/main amd64 Components [46.4 kB]
+0% [正在连接 mirrors.tuna.tsinghua.edu.c
+n] [
+0% [正在连接 mirrors.tuna.tsinghua.edu.c
+n] [
+0% [9 Components-amd64 store 0 B] [正在连
+接 
+0% [正在连接 mirrors.tuna.tsinghua.e
+获取:10 http://security.ubuntu.com/ubuntu noble-security/u
+niverse amd64 Packages [1,207 kB]
+0% [正在连接 mirrors.tuna.tsinghua.edu.cn (101.6.15.130)] [正在等待报�
+命中:3 http://mirrors.tuna.tsing
+hua.edu.cn/ubuntu noble InRelease
+0% [正在等待报头] [10 Packages 1,141 k
+B/1,
+0% [正在等待报头] [正在等待报头]
+ [10
+0% [正在等待报头] [正在等待报头] 
+                     118 kB/s 2秒
+0% [10 Packages store 0 B] [正在等待报头] [正在等待报头]
+获取:7 http://mirrors.tuna.tsinghua.edu.cn/ubun
+tu noble-updates InRelease [126 kB]
+0% [7 InRelease 12.6 kB/126 kB 10%] [正在等
+获取:12 http://security.ubuntu.com/ubuntu noble-security/universe Translation-en [242 kB]
+
+0% [7 InRelease 15.4 kB/126 kB 12%] [12
+ Tra
+0% [7 InRelease 36.9 kB/126 kB 29%]             
+0% [12 Translation-en store 0 B] [7 InRelease 38
+-- [0分26秒] --
+获取:13 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [76.3 kB]
+
+0% [7 InRelease 67.0 kB/126 kB 53%]                               118 kB/s 0秒
+0% [13 Components-amd64 store 0 B] [
+0% [7 InRelease 68.4 kB/126 kB 54%]             
+0% [执行中]                                  
+获取:11 http://mirrors.tuna.tsinghua.edu.cn/ubuntu n
+oble-backports InRelease [126 kB]
+0% [11 InRelease 2,530 B/126 kB 2%]             
+0% [执行中]                                  
+获取:14 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updat
+es/main amd64 Packages [1,263 kB]
+54% [14 Packages 5,392 B/1,263 kB 0%]           
+57% [14 Packages 245 kB/1,263 kB 19%]           
+获取:15 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main Translation-en [292 kB]
+69% [15 Translation-en 86.2 kB/292 kB 29%]                        578 kB/s 4秒
+69% [14 Packages store 0 B] [15 Tra
+-- [0分29秒] --
+获取:16 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updat
+es/main amd64 Components [181 kB]
+72% [16 Components-amd64 139 kB/181 kB 77%]                       578 kB/s 4秒
+72% [15 Translation-en store 0 B] [16 Comp
+73% [15 Translation-en store 0 B]                                 578 kB/s 4秒
+获取:17 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/u
+niverse amd64 Packages [1,691 kB]
+73% [15 Translation-en store 0 B] [17 Packag
+es 0
+75% [17 Packages 212 kB/1,691 kB 13%]                             578 kB/s 3秒
+76% [16 Components-amd64 store 0 B] [1
+78% [17 Packages 443 kB/1,691 kB 26%]           
+85% [17 Packages 1,090 kB/1,691 kB 64%]         
+获取:18 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/universe Translation-en [339 kB]
+92% [18 Translation-en 53.3 kB/339 kB 16%]                        578 kB/s 1秒
+92% [17 Packages store 0 B] [18 Tra
+获取:19 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/u
+niverse amd64 Components [388 kB]
+96% [19 Components-amd64 41.9 kB/388 kB 11%]                      578 kB/s 0秒
+97% [18 Translation-en store 0 B] [19 
+Comp
+99% [19 Components-amd64 381 kB/388 kB 9
+8%]                       578 kB/s 0秒
+获取:20 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/mu
+ltiverse amd64 Components [940 B]
+99% [执行中]                         
+                          578 kB/s 0秒
+获取:21 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-backports/main amd64 Components [5,772 B]
+
+获取:22 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-backports/universe amd64 Components [12.6 kB]
+100% [22 Components-amd64 12.6 kB/12.6 kB 100%] 
+100% [19 Components-amd64 store 0 B] [22 Compone
+100% [22 Components-amd64 12.6 kB/12.6 kB 10
+100% [21 Components-amd64 store 0 B] [22 Compone
+100% [22 Components-amd64 12.6 kB/12.6 kB 100%] 
+100% [22 Components-amd64 12.6 kB/12.6 kB 100%] 
+100% [执行中]                            
+
+100% [执行中]                                                  578 kB/s 0秒
+
+-- [0分37秒] --
+已下载 7,376 kB，耗时
+ 15秒 (498 kB/s)
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件包列
+正在读�
+��软件包列表... 完成
+正在分析软�
+正在分析软�
+正在分析软件
+正在分�
+�软件包的依赖关系树... 完成
+
+正在
+读取状态信息... 完成
+有 
+140 个软件包可以升级。请执行 ‘apt list --upgradable’ 来查看
+它们。
+正在读�
+��软件包列表... 完成
+正在分析软件
+正在分析软件包的
+正在分析软件包的依
+正在分�
+�软件包的依赖关系树... 完成
+
+正在读取状态信息... 完成
+有一些软件包无法被安装。如果您用的是 unstable 发行版，这也许是
+因为系统无法达到您要求的状态造成的。该版本中可能会有一些您需要的软件
+�
+��
+尚未被创建或是它们已被从新到(Inco
+ming)目录移出。
+�
+��列信息可能会对解决问题有所帮助：
+
+下列软件包有未满足的依赖关系：
+ fuse3 : 破坏: fuse
+E: 
+无法修正错误，因为您要求某些软件包保持现状，就是它们破坏了软件包间的依赖关系。
+
+-- [1分11秒] --
+ailab-os@ailab-os-VMware-Virtual-Platfor
+ailab-os@ailab-
+os-VMware
+-Virtual-Platform
+:
+~$ sudo apt update && sudo apt install open-vm-tools open-vm-tools-desktop -y
+
+命中:1 https://packages.micro
+soft.com/repos/code stable InRelease
+
+0% [正在等待报�
+0% [正在等待报头] [正在等待报头] [正在等待报头]
+
+0% [正在等待报头] [正在等待�
+命中:3 http://security.ubuntu.co
+m/ubuntu noble-security InRelease
+0% [正在连接 mirrors.tuna.tsinghua.edu.cn (1
+0% [正在连接 mirrors.tuna.tsinghua.edu.cn (1
+命中:5 https://deb.nodesource.com/node_24.x nodistro InRelease
+
+0%
+0% [正在等待报头]
+命中:2 http://mirrors.tu
+-- [1分14秒] --
+na.tsinghua.edu.cn/ubuntu noble InRelease
+0% [�
+��在等待报头]
+命中:4 http://mir
+rors.tuna.tsinghua.edu.cn/ubuntu noble-updates InRelease
+命
+中:6 http://mirrors.tuna.tsinghua.edu.cn/
+ubuntu noble-backports InRelease
+
+0% [�
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件包列
+正在读�
+��软件包列表... 完成
+正在分析软�
+正在分析软件
+正在分析软件包的依
+正在分�
+�软件包的依赖关系树... 完成
+
+正在
+读取状态信息... 完成
+有 
+140 个软件包可以升级。请执行 ‘apt list --upgradable’ 来查�
+��
+它们。
+正在读�
+��软件包列表... 完成
+正在分析软件
+正在分析软件包的依
+正在分�
+�软件包的依赖关系树... 完成
+
+正在�
+正在读取状态信息... 完成
+下列软件包是自动安装的并且现在不需要了：
+  gyp handlebars javascript-common libjs-async libjs-events libjs-inherits
+  libjs-is-typedarray libjs-prettify libjs-regenerate libjs-source-map
+  libjs-sprintf-js l
+ibjs-typedarray-to-buffer libssl-dev libuv1-dev
+  node-abbrev node-ampproject-remapping node-ansi-escapes node-ansi-regex
+
+ node-ansi-styles node-aproba node-are-we-there-yet node-argparse node-arrify
+
+ node-async node-async-each node-auto-bind
+  node-babel-plugin-add-module
+-exports node-babel7-runtime node-balanced-match
+  node-base64-js node-
+binary-extensions node-brace-expansion node-busboy
+  node-camelcase node-canius
+e-lite node-chownr node-chrome-trace-event
+  node-ci-info node-cjs-module-l
+exer node-cli-boxes node-cli-cursor node-clone
+  node-clone-dee
+p node-collection-visit node-color-convert node-color-name
+  node-co
+lors node-commander node-commondir node-concat-stream
+  node-c
+onsole-control-strings node-convert-source-map node-core-js
+  node-core-js-
+pure node-core-util-is node-data-uri-to-buffer
+  node-decompress-response nod
+e-deep-is node-defaults node-define-property
+  node-delegates node-dep
+d node-diff node-electron-to-chromium node-encoding
+  node-end-of-stream node-err-code node-error-ex node-es-module-lexer
+  node-escape-string
+-regexp node-eslint-utils node-eslint-visitor-keys
+  node-esquery nod
+e-estraverse node-esutils node-events node-fancy-log
+  node-fa
+st-deep-equal node-fast-levenshtein node-fetch node-find-up
+  node-flatte
+d node-for-in node-for-own node-foreground-child
+  node-fs-readdir-recursive node-fs-write-stream-atomic node-fs.realpath
+  node-function-bind node-functional-red-black-tree node-get-caller-file
+  node-get-stream n
+ode-get-value node-glob node-globals node-got
+  node-graceful-fs node-growl nod
+e-has-flag node-has-unicode node-has-value
+  node-has-values node-hosted-git-info node-iconv-lite node-ieee754 node-iferr
+  node-imurmurhash node-inden
+t-string node-inflight node-inherits node-ini
+  node-interpret node-ip 
+node-ip-regex node-is-arrayish node-is-binary-path
+  node-is-buffer node-
+is-descriptor node-is-extendable node-is-extglob
+  node-is-path-cwd node-is
+-plain-obj node-is-plain-object node-is-stream
+  node-is-typedarray node-is-windows node-isarray node-isexe node-isobject
+  node-js-tokens node-jse
+sc node-json-buffer node-json-parse-better-errors
+  node-json-schema nod
+e-json-schema-traverse node-json-stable-stringify
+  node-jsonify node-jsonpa
+rse node-kind-of node-levn node-loader-runner
+  node-locate-path node-lodash-packages node-log-driver node-lowercase-keys
+  node-lru-cache node-map-visit node-memfs node-merge-stream
+  node-mimic-response node-minimatch node-minimist node-minipass
+  node-mixin-deep node-mute-stream node-n3 node-negotiator node-neo-async
+  node-npm-run-path node-object-inspect node-object-visit node-once
+  node-optimist node-optionator node-osenv node-p-cancelable node-p-limit
+  node-p-locate node-p-map node-pascalcase node-path-dirname node-path-exists
+  node-path-is-absolute node-path-is-inside node-path-type node-pify
+  node-pkg-dir node-postcss-value-parser node-prelude-ls
+  node-process-nextick-args node-promise-inflight node-promise-retry
+  node-promzard node-prr node-pump node-punycode node-quick-lru
+  node-randombytes node-read node-readable-stream node-rechoir node-regenerate
+  node-regenerate-unicode-properties node-regenerator-runtime
+  node-regenerator-transform node-regexpp node-regjsgen node-repeat-string
+  node-require-directory node-require-from-string node-resolve
+  node-resolve-cwd node-resolve-from node-restore-cursor node-resumer
+  node-retry node-run-queue node-safe-buffer node-sellside-emitter
+  node-serialize-javascript node-set-blocking node-set-immediate-shim
+  node-shebang-command node-shebang-regex node-shell-quote node-signal-exit
+  node-slash node-slice-ansi node-source-list-map node-source-map
+  node-source-map-support node-spdx-correct node-spdx-exceptions
+  node-spdx-expression-parse node-spdx-license-ids node-sprintf-js node-ssri
+  node-stack-utils node-string-decoder node-strip-bom node-strip-json-comments
+  node-supports-color node-tapable node-terser node-text-table node-through
+  node-time-stamp node-to-fast-properties node-tslib node-type-check
+  node-typedarray node-typedarray-to-buffer node-undici
+  node-unicode-canonical-property-names-ecmascript
+  node-unicode-match-property-value-ecmascript
+  node-unicode-property-aliases-ecmascript node-unique-filename
+  node-unset-value node-uri-js node-util-deprecate node-uuid node-v8flags
+  node-validate-npm-pac
+kage-license node-wcwidth.js node-webpack-sources
+  node-wordwrap node-wrappy
+ node-write-file-
+atomic node-xtend node-y18n
+  node-yallist node-yaml
+�
+�用'sudo apt autoremove'来卸�
+��它(它们)。
+建议安装：
+  op
+-- [1分17秒] --
+en-vm-tools-containerinfo open-vm-tools-salt-minion
+下列软件包将被升级：
+  open-vm-tools open-vm-tools-deskto
+p
+升级了 2 个软件包，新安装了 0 个软件包，要卸载 0 个软件
+包，有 138 个软
+件�
+��未被升级。
+需�
+�下载 859 kB 的归档
+。
+解压缩后将会�
+��出 2,048 B 的空间�
+��
+0% [执行中]
+-- [1分20秒] --
+0% [执�
+0% [正在连接 
+cn.archive.ubuntu.com (2403:2c80:5::6)]
+获取:1 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 open-vm-tools-desktop amd64 2:13.0.10-0ubuntu0.24.04.1 [136 
+kB]
+
+4% [1 open-vm-tools-desktop 42.
+6 kB/136 kB 31%]
+获取:2 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble-u
+-- [1分24秒] --
+pdates/main amd64 open-vm-tools amd64 2:13.0.10-0ubuntu0.24.04.1 [723 kB]
+23% [2 o
+42% [2 open-vm-tools 213 kB/723 kB 29%]         
+100% [执行中]                                                 54.8 kB/s 0秒
+
+已下载 859 kB，耗时 7秒 (118 kB/s)
+
+(正在读取数据库 ... 35%
+(正在读取数据库 ... 40%
+(正在读取数据库 ... 45%
+(正在读取数据库 ... 50%
+(正在读取数据库 ... 55%
+(正在读取数据库 ... 60%
+(正在读取数据库 ... 65%
+(正在读取数据库 ... 70%
+(正在读取数据库 ... 75%
+(正在读取数据库
+(正在读取数据库 ... 系统当前共�
+��装有 234197 个文件和目录。)
+准备解压 .../open-vm-tools-desktop_2%3a13.0.10-0ubuntu0.24.04.1_amd6
+4.deb  ...
+7进度：[  0%] [......................................................
+........] 87进度：[ 11%] [######............................................
+............] 
+8正在解压 open-vm-tools-desktop (2:13.0.10-0ubuntu0.24.04.1) 并覆盖 (2:13.0.0-2~ubuntu0.24.04.1) ...
+7进度：[ 22%] [#############.....
+-- [1分27秒] --
+............................................
+] 
+8准备解压 .../open-vm-tools_2%3a13.0.10-0ubuntu0.24.04.1_amd64.deb  ...
+7进度：[ 33%] [####################......................
+....................] 
+8正在解压 open-vm-tools (2:13.0.10-0ubuntu0.24.04.1) 并覆盖 (2:13.0.0-2~ubuntu0.24.04.1) ...
+7进度：[ 44%] [###
+########################...................................] 
+8正在设置 open-vm-tools (2:13.0.10-0ubuntu0.24.04.1) ...
+7进度：[ 56
+%] [##################################....................
+........] 87进度：[ 67%] [###########
+##############################.....................] 
+8正在设置 open-vm-tools-desktop (2:13.0.10-0ubuntu0.24.04.1) ...
+7进度：[ 78%] [################################################......
+........] 87进度：[ 89%] [######
+#################################################.......] 
+
+-- [1分33秒] --
+8正在处理用于 libc-bin (2.39-0ubuntu8.9) 的触发器 ...
+正在处理用于 man-db (2.12.0-4build2) 的触发器 ...
+
+78
+-- [3分03秒] --
+ailab-os@ailab-os-VMware-Virtual-Platfor
+ailab-os@ailab-
+os-VMware
+-Virtual-Platform:
+~$ sudo apt update && sudo apt install open-vm-tools open-vm-tools-desktop -y
+
+命中:1 http://security.ubuntu.co
+m/ubuntu noble-security InRelease
+0% [正在等待报头] [正在等待报头] [已连接到 packages.microsoft.c
+命中:2 https://deb.nodesource.com/node_24.x nodistro InRelease
+
+0% [正在等待报头] [已连接到 packages
+0% [正在连接 mirrors.tuna.tsinghua.edu.cn] [
+0% [正在连接 mirrors.tuna.tsinghua.edu.cn (101.6.15.130)] [正在等待报�
+0% [正在等待报头] [已连接�
+� packages.microsoft.com (13.107.246.74)]
+命中:3 http://mirrors.tuna.
+tsinghua.edu.cn/ubuntu noble InRelease
+
+0% [正在等待报头] [正在�
+0% [正在等待报头] 
+命中:6 https://packag
+es.microsoft.com/repos/code stable InRelease
+�
+��中:4 http://mirrors.tuna.tsing
+hua.edu.cn/ubuntu noble-updates I
+nRelease
+命
+中:5 http://mirrors.tuna
+.tsinghua.edu.cn/
+-- [3分06秒] --
+ubuntu noble-backports InRelease
+
+0% [�
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软
+正在读取软�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件�
+正在读取软件包列
+正在读�
+��软件包列表... 完成
+正在分析软�
+正在分析软�
+正在分析软件
+正在分�
+�软件包的依赖关系树... 完成
+
+正在
+读取状态信息... 完成
+有 
+138 个软件包可以升级。请执行 ‘apt list --upgradable’ 来查看
+它们。
+正在读�
+��软件包列表... 完成
+正在分析软件
+正在分析软件包�
+��
+正在分析软件包的依
+正在分�
+�软件包的依赖关系树... 完�
+��
+
+正在读�
+正在读取状态信息... 完成
+open-vm-tools �
+�经是最新版 (2:13.0.10-0ubuntu0.24.04.1)。
+open-vm-tool
+s-desktop 已经是最新版 (2:13.0.10-0ubuntu0.24.04.1)。
+下列软件�
+�是自动安装的并且现在不需要了：
+  gyp handlebars javascr
+ipt-common libjs-async libjs-events libjs-inherits
+  libjs-is-typeda
+rray libjs-prettify libjs-regenerate libjs-source-map
+  libjs-sprintf-js l
+ibjs-typedarray-to-buffer libssl-dev libuv1-dev
+  node-abbrev node-ampproject-r
+emapping node-ansi-escapes node-ansi-regex
+
+ node-ansi-styles node-aproba node-are-we-there-yet node-argparse node-arrify
+
+ node-async node-async-each node-auto-bind
+  node-babel-plugin-add-module
+-exports node-babel7-runtime node-balanced-match
+  node-base64-js node-
+binary-extensions node-brace-expansion node-busboy
+  node-camelcase node-canius
+e-lite node-chownr node-chrome-trace-event
+  node-ci-info node-cjs-module-l
+exer node-cli-boxes node-cli-cursor node-clone
+  node-clone-dee
+p node-collection-visit node-color-convert node-color-name
+  node-co
+lors node-commander node-commondir node-concat-stream
+  node-c
+onsole-control-strings node-convert-source-map node-core-js
+  node-core-js-
+pure node-core-util-is node-data-uri-to-buffer
+  node-decompress-response nod
+e-deep-is node-defaults node-define-property
+  node-delegates node-dep
+d node-diff node-electron-to-chromium node-encoding
+  node-end-of-strea
+m node-err-code node-error-ex node-es-module-lexer
+  node-escape-string-regexp node-eslint-utils node-eslint-visitor-keys
+  node-esquery node-estraverse node-esutils node-events node-fancy-log
+  node-fast-deep-equal node-fast-levenshtein node-fetch node-find-up
+  node-flatted node-for-in node-for-own node-foreground-child
+  node-fs-readdir-recursive node-fs-write-stream-atomic node-fs.realpath
+  node-function-
+bind node-functional-red-black-tree node-get-caller-file
+  node-get-stream n
+ode-get-value node-glob node-globals node-got
+  node-graceful-fs node-growl node-has-flag node-has-unicode node-has-value
+  node-has-values node-hosted-git-info node-iconv-lite node-ieee754 node-iferr
+  node-imurmurhash node-indent-string node-inflight node-inherits node-ini
+  node-interpret node-ip node-ip-regex node-is-arrayish node-is-binary-path
+  node-is-buffer node-
+is-descriptor node-is-extendable node-is-extglob
+  node-is-path-cwd node-is-plain-obj node-is-plain-object node-is-stream
+  node-is-typedarray node-is
+-windows node-isarray node-isexe node-isobject
+  node-js-tokens node-jse
+sc node-json-buffer node-json-parse-better-errors
+  node-json-schema nod
+e-json-schema-traverse node-json-stable-stringify
+  node-jsonify node-jsonparse node-kind-of node-levn node-loader-runner
+  node-locate-p
+ath node-lodash-packages node-log-driver node-lowercase-keys
+  node-lru-cache node-map-visit node-memfs node-merge-stream
+  node-mimic-response node-minimatch node-minimist node-minipass
+  node-mixin-deep node-mute-stream node-n3 node-negotiator node-neo-async
+  node-npm-run-path node-object-inspect node-object-visit node-once
+  node-optimist node-optionator node-osenv node-p-cancelable node-p-limit
+  node-p-locate node-p-map node-pascalcase node-path-dirname node-path-exists
+  node-path-is-absolute node-path-is-inside node-path-type node-pify
+  node-pkg-dir node-postcss-value-parser node-prelude-ls
+  node-process-nextick-args node-promise-inflight node-promise-retry
+  node-promzard node-prr node-pump node-punycode node-quick-lru
+  node-randombytes node-read node-readable-stream node-rechoir node-regenerate
+  node-regenerate-unicode-properties node-regenerator-runtime
+  node-regenerator-transform node-regexpp node-regjsgen node-repeat-string
+  node-require-directory node-require-from-string node-resolve
+  node-resolve-cwd node-resolve-from node-restore-cursor node-resumer
+  node-retry node-run-queue node-safe-buffer node-sellside-emitter
+  node-serialize-javascript node-set-blocking node-set-immediate-shim
+  node-shebang-command node-shebang-regex node-shell-quote node-signal-exit
+  node-sl
+ash node-slice-ansi node-source-list-map node-source-map
+  node-source-map-support node-spdx-correct node-spdx-exceptions
+  node-spdx-expression-parse node-
+spdx-license-ids node-sprintf-js node-ssri
+  node-stack-utils node-string-de
+coder node-strip-bom node-strip-json-comments
+  node-supports-color node-tapable node-terser node-text-table node-through
+  node-time-stamp node-to-fast-properties node-tslib node-type-check
+  node-typedarray node-typedarray-to-buffer node-undici
+  node-unicode-canonical-property-names-ecmascript
+  node-unicode-match-property-value-ecmascript
+  node-unicode-property-aliases-ecmascript node-unique-filename
+  node-unset-value node-uri-js node-util-deprecate node-uuid node-v8flags
+  node-validate-npm-package-license node-wcwidth.js node-webpack-sources
+  node-wordwrap node-wrappy
+ node-write-file-atomic node-xtend node-y18n
+  node-yallist node-yaml
+使用'sudo apt autoremove'来卸载它(它们)�
+�
+升�
+�了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 138 个软件包未被升级。
+
+-- [3分15秒] --
+ailab-os@ailab-os-VMware-Virtual-Platfor
+ailab-os@ailab-o
+s-VM
+-- [3分19秒] --
+ware
+-Vir
+tual
+-Pla
+tfor
+m
+:
+
+~
+
+$ s
+udo 
+apt 
+upda
+te &
+& su
+do a
+pt i
+nsta
+ll 
+o
+pen-
+vm-t
+ools
+ ope
+n-vm
+-too
+ls-d
+eskt
+op -
+
+-- [3分31秒] --
+ailab-os@ailab-o
+s-VM
+ware
+-Vir
+tual
+-Pla
+tfor
+m
+:
+
+~
+
+$ s
+udo 
+apt 
+upda
+te &
+& su
+do a
+pt i
+nsta
+ll 
+o
+pen-
+vm-t
+ools
+ ope
+n-vm
+-too
+ls-d
+eskt
+op -
+
+-- [3分38秒] --
+reboot
+
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

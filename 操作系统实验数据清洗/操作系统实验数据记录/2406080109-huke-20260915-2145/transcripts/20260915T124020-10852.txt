@@ -1,0 +1,5203 @@
+==== labtracker 终端转录 ====
+录像: 20260915T124020-10852.out.gz   时长: 22分34秒   原始大小: 75899B
+==================================================
+-- [开始] --
+Script s
+tarted on 2026-09-15 12:40:20+08:00 [COMMAND="bash" TERM="xterm-256color" TTY="/dev/pts/10" COLUMNS="80" LINES="24"]
+
+-- [0分19秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:
+-- [0分24秒] --
+~/桌面/xv6-ai-labs-km/lab0$ sudo apt update
+ailab-os@ailab-
+os-V
+Mwar
+e-Vi
+rtua
+l-Pl
+atfo
+rm
+:
+
+~/�
+�面
+/xv6
+-ai-
+labs
+-km/
+lab0
+
+$ s
+udo 
+apt 
+upda
+te
+
+sud
+o ap
+t in
+stal
+l docker.io -
+
+-- [0分38秒] --
+ai-labs
+ls: 无法访问 '/home/ailab-os//xv6-ai-labs': 没有那个文件或目录
+
+-- [2分55秒] --
+ai
+lab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ 绿色ls !~
+公
+共  视频  文档  音乐  clash               labtracker
+
+模板  图片  下载  桌面  claude_code_env.sh  snap
+
+-- [4分46秒] --
+ail
+ab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ 绿色ls ~/桌面
+20101200-zhaoxia-实验提交-20260903-1759.tar.gz         xv6-ai-labs-km
+201
+01200-zhaoxia-实验提交-20260903-1759.tar.gz.sha256  xv6-k210-原版参考
+提交实验.desktop
+
+-- [5分55秒] --
+ail
+ab-os@ailab-os-VMware-Virtual-Platform
+:~/桌面/xv6-ai-la
+bs
+-km/lab0
+i0-labs
+ls: 无法访问 '/home/ailab-os/xv6-ai-labs': 没有那个文件或目录
+
+-- [6分26秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-
+i-labs-km
+ls: 无法访问 '/home/ailab-os/xv6-ai-labs-km': 没有那个文件或目录
+
+-- [6分52秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ ls !/zhuom 
+
+-- [7分09秒] --
+xv6-ai-labs-km
+bash: !/桌面/xv6: event not found
+
+-- [7分37秒] --
+ailab-os@ailab-os-VMwa
+-- [7分45秒] --
+re-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ ls !/桌面/xv6-ai-labs-km
+
+-- [7分54秒] --
+ls !
+/桌
+面/xv6-ai-labs-km
+
+-- [8分25秒] --
+xv6-ai-labs-km
+lab0  lab1  lab2
+  lab3  lab4  lab5  lab6  lab7  lab8  level.conf
+
+-- [8分32秒] --
+ail
+ab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ ^C
+
+-- [10分42秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ ls
+20260901-环境搭建手册.md  CLAUDE.md  kernel  Makefile 
+ README.md  xv6-user
+实验指导.md               fs.img     linker  README    target
+
+-- [10分49秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ ls /bin
+'['                                   networkctl
+ aa-enabled     
+                      networkd-dispatcher
+ aa-exec                              newgrp
+ aa-features-abi                      ngettext
+ aconnect                             nice
+ acpidbg
+                              nisdomainname
+ add-apt-repository                   nl
+ addpart                              nm
+ addr2lin
+e                            nm-applet
+ airscan-discover                     nmcli
+ alsabat                              nm-connection-editor
+ alsaloop                             nm-online
+ alsamixer                            nmtui
+ alsatplg     
+                        nmtui-connect
+ alsaucm                              nmtui-edit
+ amidi                                nmtui-hostname
+ amix
+er                               node
+ apg                                  nodejs
+ apgbfm
+                               nohup
+ aplay                                notify-send
+ aplaymidi                            npm
+ apport-bug                           nproc
+ apport-cli                           npx
+ apport-collect                       nroff
+ apport-unpack                        nsenter
+ appres                               nslookup
+ appstre
+amcli                         nstat
+ apropos                              nsupdate
+ apt                                  ntfs-3g
+ apt-add-repository                   ntfs-3g.probe
+ apt-cache
+                            ntfscat
+ apt-cdrom                            ntfscluster
+ apt-config
+                           ntfscmp
+ aptdcon                              ntfsdecrypt
+ apt-extracttemplates                 ntfsfallocate
+ apt-ftparchive                       ntfsfix
+ apt-get                              ntfsinfo
+ apt-key
+                              ntfsls
+ apt-mark                             ntfsmove
+ apt-sortpkgs                         ntfsrecover
+ ar            
+                       ntfssecaudit
+ arch                                 ntfstruncate
+ arecord                              ntfsusermap
+ arecordmidi                          ntfswipe
+ arm2hpdl                             numactl
+ as                                   numastat
+ aseqdump                             numfmt
+ aseqnet                              nvidia-detector
+ aspell                               oakdecode
+ aspell-import                        obexctl
+ atobm                                objcopy
+ awk                                  objdump
+ axfer                                oclock
+ b2sum                                od
+ baobab                               oem-getlogs
+ base32                               on_ac_power
+ base64                               oomctl
+ basename                             open
+ basenc                               openssl
+ bash                                 openvt
+ bashbug                              opldecode
+ bc                                   orca
+ bdftopcf                             orca-dm-wrapper
+ bdftruncate                          os-prober
+ bitmap                               p11-kit
+ bluemoon                             pager
+ bluetoothctl                         paperconf
+ bluetooth-sendto                     partx
+ bmtoa                                passwd
+ boltctl                              paste
+ bpftrace                             patch
+ bpftr
+ace-aotrt                       pathchk
+ brltty                               pdb3
+ brltty-atb                           pdb3.12
+ brltty-clip                          pdf2dsc
+ brltty-ctb                           pdf2ps
+ brltty-hid
+                           pdfattach
+ brltty-ktb                           pdfdetach
+ brltty-lscm
+ds                        pdffonts
+ brltty-morse                         pdfimages
+ brltty-trtxt                         pdfinfo
+ brltty-ttb
+                           pdfseparate
+ brltty-tune                          pdfsig
+ broadwayd
+                            pdftocairo
+ browse                               pdftohtml
+ btattach
+                             pdftoppm
+ btmgmt                               pdftops
+ btmon  
+                              pdftotext
+ bunzip2                              pdfunite
+ busctl                               peekfd
+ busybox                              perf
+ bwrap
+                                perl
+ bzcat                                perl5.38.2
+ bzcmp                                perl5.38-x86_64-linux-gnu
+ bzdiff                               perlbug
+ bzegrep 
+                             perldoc
+ bzexe                                perli11ndoc
+ bzfgrep                              perlivp
+ bzgrep
+                               perlthanks
+ bzip2                                pf2afm
+ bzip2re
+cover                         pfbtopfa
+ bzless                               pgrep
+ b
+zmore                               pic
+ c++                                  pico
+ c89
+                                  piconv
+ c89-gcc                              pidof
+ c99                                  pidstat
+ c99-gcc
+                              pidwait
+ calibrate_ppa                        pinentry
+ canberra-gtk-play   
+                 pinentry-curses
+ cancel                               pinentry-gnome3
+ captoinfo
+                            pinentry-x11
+ cat                                  ping
+ catm
+an                               ping4
+ cc                                   ping6
+ cd-create-profile                    pinky
+ cd-fix-profile
+                       pipewire
+ cd-iccdump                           pipewire-aes67
+ cd-it8          
+                     pipewire-avb
+ c++filt                              pipewire-pulse
+ chacl
+                                pkaction
+ chage                                pkcheck
+ chard
+et                              pkcon
+ chardetect                           pkexec
+ chattr                               pkill
+ chcon
+                                pkmon
+ check-language-support               pkttyagent
+ chf
+n                                 pl2pm
+ chgrp                                pldd
+ chmod
+                                plog
+ choom                                plymouth
+ chown
+                                pmap
+ chrt                                 pnm2ppa
+ chsh 
+                                pod2html
+ chvt                                 pod2man
+ cifsiostat                           pod2text
+ ciptool  
+                            pod2usage
+ ckbcomp                              podchecker
+ c
+ksum                                poff
+ claude                               pon
+ clear     
+                           POST
+ clear_console                        powerprofilesctl
+ cloud-id                             ppdc
+ cloud
+-init                           ppdhtml
+ cloud-init-per                       ppdi
+ cmp
+                                  ppdmerge
+ code                                 ppdpo
+ codepage                             pphs
+ co
+l                                  pr
+ colcrt                               precat
+ colormgr                             preconv
+ colrm
+                                preunzip
+ column                               prezip
+ comm    
+                             prezip-bin
+ corelist                             printafm
+ corepack     
+                        printenv
+ cp                                   printer-profile
+ cpan
+                                 printf
+ cpan5.38-x86_64-linux-gnu            prlimit
+ cpi
+o                                 pro
+ cpp                                  procan
+ cpp-13                               prove
+ cpupower                             prtstat
+ c_re
+hash                             ps
+ crontab                              ps2ascii
+ csplit
+                               ps2epsi
+ ctstat                               ps2pdf
+ cupstestpp
+d                          ps2pdf12
+ curl                                 ps2pdf13
+ cut   
+                               ps2pdf14
+ cvt                                  ps2pdfwr
+ cvtsudoers                           ps2ps
+ dash                                 ps2ps2
+ date                                 ps2txt
+ dbus-cleanup-sockets                 psfaddtable
+ dbus-daemon                          psfgettable
+ dbus-monitor
+                         psfstriptable
+ dbus-run-session                     psfxtable
+ dbus-send                            psicc
+ dbus-update-activation-environment   pslog
+ dbus-uuidg
+en                         pstree
+ dbxtool                              pstree.x11
+ dc                                   ptar
+ dconf 
+                               ptardiff
+ dd                                   ptargrep
+ dds
+tdecode                           ptx
+ deallocvt                            pw-cat
+ debconf
+                              pw-cli
+ debconf-apt-progress                 pw-config
+ debconf-communicate                  pwd
+ debconf-co
+pydb                       pw-dot
+ debconf-escape                       pw-dsdplay
+ debco
+nf-set-selections               pw-dump
+ debconf-show                         pwdx
+ debian-distro-info                   pw-encplay
+ deb-systemd-helper                   pw-link
+ deb-systemd-invo
+ke                   pw-loopback
+ delpart                              pw-metadata
+ delv                                 pw-mididump
+ desktop-file-edit                    pw-midiplay
+ desktop-file-install                 pw-midirecord
+ desktop-file-validate                pw-mon
+ df      
+                             pw-play
+ dh_bash-completion                   pw-profiler
+ dh_installxmlcatalogs                pw-record
+ dh_perl_openssl                      pw-reserve
+ diff
+                                 pw-top
+ diff3                                py3clean
+ dig                                  py3compile
+ dir     
+                             py3versions
+ dircolors                            pybabel
+ dirmngr                              pybabel-python3
+ dirmngr-client                       pydoc3
+ dirname                              pydoc3.12
+ distro-info                          pygettext3
+ dmesg                                pygettext3.12
+ dnsdomainname    
+                    pygmentize
+ domainname                           pyserial-miniterm
+ do-release-upgrade                   pyserial-ports
+ dpkg   
+                              python3
+ dpkg-architecture                    python3.12
+ dpkg-buildapi                        pzstd
+ dpkg-buil
+dflags                      qemu-img
+ dpkg-buildpackage                    qemu-io
+ dpkg-buildtree                       qemu-nbd
+ dpkg-checkbuilddeps    
+              qemu-pr-helper
+ dpkg-deb                             qemu-storage-daemon
+ dpkg-distaddfile                     qemu-system-alpha
+ dpkg-divert                          qemu-system-avr
+ dpkg-genbuildinfo                    qemu-system-cris
+ dpkg-genchanges                      qemu-system-hppa
+ dpkg-gencontrol                      qemu-system-loong64
+ dpkg-gensymbols              
+        qemu-system-loongarch64
+ dpkg-maintscript-helper              qemu-system-m68k
+ dpkg-mergechangelogs                 qemu-system-microblaze
+ dpkg-name                            qemu-system-microblazeel
+ dpkg-parsechangelog    
+              qemu-system-nios2
+ dpkg-query                           qemu-system-or1k
+ dpkg-realpath                        qemu-system-riscv32
+ dpkg-scanpackages      
+              qemu-system-riscv64
+ dpkg-scansources   
+                  qemu-system-rx
+ dpkg-shlibdeps                       qemu-system-sh4
+ dpkg-source                          qemu-system-sh4eb
+ dpkg-split                           qemu-system-tricore
+ dpkg-statoverride                    qemu-system-xtensa
+ dpkg-trigger    
+                     qemu-system-xtensaeb
+ dpkg-vendor                          qmicli
+ driverless                           qmi-firmware-update
+ driverless-fax                       qmi-network
+ du                                   qpdldecode
+ dumpkeys                             quirks-handler
+ dvipdf                               ranlib
+ dwp                                  rbash
+ eatmydata                            rctest
+ ec2me
+tadata                          rdma
+ echo                                 readelf
+ ed                                   readlink
+ editor                               realpath
+ editres                              red
+ egrep                                rename.ul
+ eject                                rendercheck
+ elfed
+it                              renice
+ enc2xs                               reset
+ encguess                             resizecons
+ enchant-2                            resizepart
+ enchant-lsmod-2                      resolvectl
+ env                                  rev
+ envsubst                             rfcomm
+ eog                                  rgrep
+ eps2eps                              riscv64-unknown-elf-addr2line
+ eqn                                  riscv64-unknown-elf-ar
+ esc-m                                riscv64-unknown-elf-as
+ eutp                                 riscv64-unknown-elf-c++
+ evince                               riscv64-unknown-elf-c++filt
+ evince-previewer                     riscv64-unknown-elf-cpp
+ evince-thumbnailer                   riscv64-unknown-elf-elfedit
+ ex                                   riscv64-unknown-elf-g++
+ expand                               riscv64-unknown-elf-gcc
+ expiry                               riscv64-unknown-elf-gcc-13.2.0
+ expr                                 riscv64-unknown-elf-gcc-ar
+ factor                               riscv64-unknown-elf-gcc-nm
+ faillog                              riscv64-unknown-elf-gcc-ranlib
+ faked-sysv                           riscv64-unknown-elf-gcov
+ faked-tcp                            riscv64-unknown-elf-gcov-dump
+ fakeroot                             riscv64-unknown-elf-gcov-tool
+ fakeroot-sysv                        riscv64-unknown-elf-gprof
+ fakeroot-tcp                         riscv64-unknown-elf-ld
+ fallocate                            riscv64-unknown-elf-ld.bfd
+ false                                riscv64-unknown-elf-lto-dump
+ fc-cache                             riscv64-unknown-elf-nm
+ fc-cat                               riscv64-unknown-elf-objcopy
+ fc-conflist                          riscv64-unknown-elf-objdump
+ fcitx5                               riscv64-unknown-elf-ranlib
+ fcitx5-config-qt                     riscv64-unknown-elf-readelf
+ fcitx5-configtool                    riscv64-unknown-elf-size
+ fcitx5-diagnose                      riscv64-unknown-elf-strings
+ fcitx5-gtk2-immodule-probing         riscv64-unknown-elf-strip
+ fcitx5-gtk3-immodule-probing         rm
+ fcitx5-gtk4-immodule-probing         rmdir
+ fcitx5-migrator                      rnano
+ fcitx5-qt5-immodule-probing          routel
+ fcitx5-qt6-immodule-probing          rpcgen
+ fcitx5-remote                        rrsync
+ fc-list                              rstart
+ fc-match                             rstartd
+ fc-pattern                           rsync
+ fc-query                             rsync-ssl
+ fc-scan                              rtla
+ fc-validate                          rtstat
+ fgconsole                            runcon
+ fgrep                                run-parts
+ filan                                
+run-with-aspell
+ file                                 rview
+ file2brl                             rygel
+ find                                 sadf
+ findmnt                              sane-find-scanner
+ firefox                              sar
+ flock                                sar.sysstat
+ fmt                                  savelog
+ fold                                 sbattach
+ fonttosfnt                           sbkeysync
+ foo2ddst                             sbsiglist
+ foo2ddst-wrapper                     sbsign
+ foo2hbpl2                            sbvarsign
+ foo2hbpl2-wrapper                    sbverify
+ foo2hiperc                           scalar
+ foo2hiperc-wrapper                   scanimage
+ foo2hp                               scel2org5
+ foo2hp2600-wrapper                   scp
+ foo2lava                             scp-dbus-service
+ foo2lava-wrapper                     screendump
+ foo2oak                              script
+ foo2oak-wrapper                      scriptlive
+ foo2qpdl                             scriptreplay
+ foo2qpdl-wrapper                     sdiff
+ foo2slx                              sdptool
+ foo2slx-wrapper                      seahorse
+ foo2xqx                              sed
+ foo2xqx-wrapper                      select-default-iwrap
+ foo2zjs                              select-editor
+ foo2zjs-icc2ps                       sensible-browser
+ foo2zjs-pstops                       sensible-editor
+ foo2zjs-wrapper                      sensible-pager
+ foomatic-rip                         sensible-terminal
+ fprintd-delete                       seq
+ fprintd-enroll                       session-migration
+ fprintd-list                         sessreg
+ fprintd-verify                       setarch
+ free                                 setfacl
+ ftp                                  setfont
+ funzip                               setkeycodes
+ fuser                                setleds
+ fusermount                           setlogcons
+ fusermount3                          setmetamode
+ fwupdmgr                             setpci
+ fwupdtool                            setpriv
+ g++                                  setsid
+ g++-13                               setterm
+ gamemoded                            setupcon
+ gamma4scanimage                      setxkbmap
+ gapplication                         sftp
+ gatttool                             sg
+ gcalccmd                             sh
+ gcc                                  sha1sum
+ gcc-13                               sha224sum
+ gcc-ar                               sha256sum
+ gcc-ar-13                            sha384sum
+ gcc-nm                               sha512sum
+
+gcc-nm-13                            shasum
+ gcc-ranlib                           showconsolefont
+ gcc-ranlib-13                        showkey
+ gcore                                showrgb
+ gcov                                 shred
+ gcov-13                              shuf
+ gcov-dump                            size
+ gcov-dump-13                         skill
+ gcov-tool                            slabtop
+ gcov-tool-13                         sleep
+ gcr-viewer                           slogin
+ gcr-viewer-gtk4                      slxdecode
+ gdb                                  smproxy
+ gdb-add-index                        snap
+ gdb-multiarch                        snapctl
+ gdbtui                               snapfuse
+ gdbus                                snice
+ gdk-pixbuf-csource                   socat
+ gdk-pixbuf-pixdata                   socat1
+ gdk-pixbuf-thumbnailer               socat-broker.sh
+ gdm-config                           socat-chain.sh
+ gdmflexiserver                       socat-mux.sh
+ gdm-screenshot                       soelim
+ gencat                               software-properties-gtk
+ geqn                                 sort
+ GET                                  sotruss
+ getconf                              spa-acp-tool
+ getent                               spa-inspect
+ getfacl                              spa-json-dump
+ getkeycodes                          spa-monitor
+ getopt                               spa-resample
+ gettext                              spd-conf
+ gettext.sh                           spd-say
+ ghostscript                          spdsend
+ ginstall-info                        speaker-test
+ gio                                  speech-dispatcher
+ gio-querymodules                     spice-vdagent
+ gipddecode                           splain
+ git                                  split
+ git-receive-pack                     splitfont
+ git-shell                            sprof
+ git-upload-archive                   sqfscat
+ git-upload-pack                      sqfstar
+ gjs                                  ss
+ gjs-console                          ssh
+ gkbd-keyboard-display                ssh-add
+ glib-compile-schemas                 ssh-agent
+ gmake                                ssh-argv0
+ gnome-calculator                     ssh-copy-id
+ gnome-characters                     ssh-import-id
+ gnome-clocks                         ssh-import-id-gh
+ gnome-control-center                 ssh-import-id-lp
+ gnome-disk-image-mounter             ssh-keygen
+ gnome-disks            
+              ssh-keyscan
+ gnome-extensions                     sss_ssh_authorizedkeys
+ gnome-font-viewer                    sss_ssh_knownhostsproxy
+ gnom
+e-help                           startx
+ gnome-keyring                        stat
+ gnome-key
+ring-3                      static-sh
+ gnome-keyring-daemon                 stdbuf
+ gnome-language-s
+elector              strace
+ gnome-logs     
+                      strace-log-merge
+ gnome-powe
+r-statistics               streamzip
+ gnome-session                        strings
+ gno
+me-session-inhibit                strip
+ gnome-session-properties             stty
+
+gnome-session-quit                   su
+ gnome-shell                          sudo
+ gnome-shell-
+extension-tool           sudoedit
+ gnome-shell-test-tool                sudoreplay
+ gnome-system-monitor                 sum
+ gnome-termi
+nal                       switcherooctl
+ gnome-terminal.real                  sync
+ gnome-term
+inal.wrapper               systemctl
+ gnome-text-editor                    systemd
+ gnome-thumbnail-font                 systemd-ac-power
+ gnome-www-browser        
+            systemd-analyze
+ gold                                 systemd-ask-password
+ gp-archive   
+                        systemd-cat
+ gpasswd                              systemd-cgls
+ gp-collect-app                       systemd-cgtop
+ gp-display-html   
+                   systemd-confext
+ gp-display-src                       systemd-creds
+ gp-display-text            
+          systemd-cryptenroll
+ gpg                                  systemd-cryptsetup
+ gpg-agent                            systemd-delta
+ gpgconf                
+              systemd-detect-virt
+ gpg-connect-agent                    systemd-escape
+ gpgparsemail                         systemd-firstboot
+ gpgsm          
+                      systemd-hwdb
+ gpgsplit                             systemd-id128
+ gpgtar                       
+        systemd-inhibit
+ gpgv                                 systemd-machine-id-setup
+ gpg-wks-client                       systemd-mount
+ gpic            
+                     systemd-notify
+ gprof                                systemd-path
+ gprofng        
+                      systemd-repart
+ gpu-manager                          systemd-run
+ grdctl                               systemd-socket-activate
+ grep                    
+             systemd-stdio-bridge
+ gresource                            systemd-sysext
+ groff                 
+               systemd-sysusers
+ grog                                 systemd-tmpfiles
+ grops                                systemd-tty-ask-password-agent
+ grotty  
+                             systemd-umount
+ groups                               tabs
+ g
+rowpart                             tac
+ grub-editenv                         tail
+ grub-file                            tapestat
+ grub
+-fstest                          tar
+ grub-glue-efi                        taskset
+ gr
+ub-kbdcomp                         tbl
+ grub-menulst2cfg                     tclsh
+ grub-mkfont                          tclsh8.6
+ grub-m
+kimage                         tcpdump
+ grub-mklayout                        tecla
+ gru
+b-mknetdir                        tee
+ grub-mkpasswd-pbkdf2                 telnet
+ grub-m
+krelpath                       tempfile
+ grub-mkrescue                        test
+ gru
+b-mkstandalone                    tic
+ grub-mount                           tificc
+ grub-ntldr-img                       time
+ grub-render-
+label                    timedatectl
+ grub-script-check                    timeout
+ grub
+-syslinux2cfg                    tload
+ gs                                   tnftp
+
+gsbj                                 toe
+ gsdj                                 top
+ gsd
+j500                              touch
+ gsettings                            tput
+ gslj                                 tr
+ gslp    
+                             trace-cmd
+ gsnd                                 tracepath
+ gst-device-monito
+r-1.0               tracker3
+ gst-discoverer-1.0                   tracker3-daemon
+ gst-inspect-1.0       
+               tracker3-endpoint
+ gst-launch-1.0       
+                tracker3-export
+ gst-play-1.0                         tracker3-extract
+ gstreamer-codec-install              tracker3-help
+ gst-stats-1.0                        tracker3-import
+ gst-tester-1.0                       tracker3-index
+ gst-typefind-1.0                     tracker3-info
+ gtbl                                 tracker3-reset
+ gted                                 tracker3-search
+ gtf                                  tracker3-sparql
+ gtk4-broadwayd                       tracker3-sql
+ gtk4-builder-tool                    tracker3-status
+ gtk4-encode-symbolic-svg             tracker3-tag
+ gtk4-launch                          transicc
+ gtk4-path-tool                       transset
+ gtk4-query-settings                  troff
+ gtk4-rendernode-tool                 true
+ gtk4-update-icon-cache               truncate
+ gtk-builder-tool                     trust
+ gtk-encode-symbolic-svg              tset
+ gtk-launch                           tsort
+ gtk-query-settings                   tty
+ gtk-update-icon-cache                turbostat
+ gunzip                               tzselect
+ gyp                                  ua
+ gzexe                                ubuntu-advantage
+ gzip                                 ubuntu-bug
+ h2ph                                 ubuntu-distro-info
+ h2xs                                 ubuntu-drivers
+ handlebars                           ubuntu-report
+ hardlink                             ubuntu-security-status
+ hbpldecode                           ucf
+ hciattach                            ucfq
+ hciconfig                            ucfr
+ hcitool                              uclampset
+ hd                                   ucs2any
+ head                                 udevadm
+ HEAD                                 udisksctl
+ heif-thumbnailer                     ul
+ helpztags                            umax_pp
+ hex2hcd                              umount
+ hexdump                              uname
+ hipercdecode                         unattended-upgrade
+ host                                 unattended-upgrades
+ hostid                               uncompress
+ hostname                             unexpand
+ hostnamectl                          unicode_start
+ hp-align                             unicode_stop
+ hp-check                             uniq
+ hp-clean                             unity-scope-loader
+ hp-colorcal                          unlink
+ hp-config_usb_printer                unlzma
+ hp-doctor                            unmkinitramfs
+ hp-firmware                          unshare
+ hp-info                              unsquashfs
+ hp-levels                            unxz
+ hp-logcapture                        unzip
+
+ hp-makeuri                           unzipsfx
+ hp-pkservice                         unzstd
+ hp-plugin                            update-alternatives
+ hp-plugin-ubuntu                     update-desktop-database
+ hp-probe                             update-manager
+ hp-query                             update-mime-database
+ hp-scan                              update-notifier
+ hp-setup                             upower
+ hp-testpage                          uptime
+ hp-timedate                          usb-devices
+ hwe-support-status                   usbhid-dump
+ i386                                 usbip
+ ibus                                 usbipd
+ ibus-daemon                          usb_printerid
+ ibus-setup                           usbreset
+ ibus-table-createdb                  users
+ iceauth                              utmpdump
+ ico                                  uuidgen
+ iconv                                uuidparse
+ id                                   varlinkctl
+ iecset                               vcs-run
+ ijs_pxljr                            vdir
+ im-config                            VGAuthService
+ im-launch                            vi
+ inetutils-telnet                     view
+ info                                 viewres
+ infobrowser                          vim.tiny
+ infocmp                              vmhgfs-fuse
+ infotocap                            vmstat
+ inputattach                          vm-support
+ install                              vmtoolsd
+ install-info                         vmware-alias-import
+ instmodsh                            vmware-checkvm
+ intel-virtual-output                 vmwarectrl
+ ionice                               vmware-hgfsclient
+ iostat                               vmware-namespace-cmd
+ ip                                   vmware-rpctool
+ ipcmk                                vmware-toolbox-cmd
+ ipcrm                                vmware-user
+ ipcs                                 vmware-user-suid-wrapper
+ ippfind                              vmware-vgauth-cmd
+ ipptool                              vmware-vmblock-fuse
+ iptables-xml                         vmware-xferlogs
+ ischroot                             vmwgfxctrl
+ isdv4-serial-debugger                vstp
+ isdv4-serial-inputattach             w
+ ispell-wrapper                       wall
+ join                                 watch
+ journalctl                           watchgnupg
+ jpgicc                               wc
+ jq                                   wdctl
+ js                                   wget
+ jsesc                                whatis
+ jsondiff                             whereis
+ jsonpatch                            which
+ json-patch-js
+ondiff                  which.debianutils
+ jsonpointer                          whiptail
+ json_pp                              who
+ jsonschema                           whoami
+ kbdinfo                              whoopsie
+ kbd-layout-viewer5                   whoopsie-preferences
+ kbd_mode                             wireplumber
+ kbxutil                              word-list-compress
+ kernel-install                       wpa_passphrase
+ kerneloops-submit                    wpctl
+ kill                                 wpexec
+ killall                              write
+ kmod                                 X
+ kmodsign                             X11
+ l2ping                               x11perf
+ l2test                               x11perfcomp
+ laptop-detect                        x86_64
+ last                                 x86_64-linux-gnu-addr2line
+ lastb                                x86_64-linux-gnu-ar
+ lastlog                              x86_64-linux-gnu-as
+ lavadecode                           x86_64-linux-gnu-c++filt
+ lcf                                  x86_64-linux-gnu-cpp
+ ld                                   x86_64-linux-gnu-cpp-13
+ ldapadd                              x86_64-linux-gnu-dwp
+ ldapcompare                          x86_64-linux-gnu-elfedit
+ ldapdelete                           x86_64-linux-gnu-g++
+ ldapexop                             x86_64-linux-gnu-g++-13
+ ldapmodify                           x86_64-linux-gnu-gcc
+ ldapmodrdn                           x86_64-linux-gnu-gcc-13
+ ldappasswd                           x86_64-linux-gnu-gcc-ar
+ ldapsearch                           x86_64-linux-gnu-gcc-ar-13
+ ldapurl                              x86_64-linux-gnu-gcc-nm
+ ldapwhoami                           x86_64-linux-gnu-gcc-nm-13
+ ld.bfd                               x86_64-linux-gnu-gcc-ranlib
+ ldd                                  x86_64-linux-gnu-gcc-ranlib-13
+ ld.gold                              x86_64-linux-gnu-gcov
+ ld.so                                x86_64-linux-gnu-gcov-13
+ less                                 x86_64-linux-gnu-gcov-dump
+ lessecho                             x86_64-linux-gnu-gcov-dump-13
+ lessfile                             x86_64-linux-gnu-gcov-tool
+ lesskey                              x86_64-linux-gnu-gcov-tool-13
+ lesspipe                             x86_64-linux-gnu-gold
+ lexgrog                              x86_64-linux-gnu-gp-archive
+ libime_history                       x86_64-linux-gnu-gp-collect-app
+ libime_migrate_fcitx4_pinyin         x86_64-linux-gnu-gp-display-html
+ libime_migrate_fcitx4_table          x86_64-linux-gnu-gp-display-src
+ libime_pinyindict                    x86_64-linux-gnu-gp-display-text
+ libime_prediction                    x86_64-linux-gnu-gprof
+ libime_slm_build_binary              x86_64-linux-gnu-gprofng
+ libime_tabledict            
+         x86_64-linux-gnu-ld
+ libnetcfg                            x86_64-linux-gnu-ld.bfd
+ link                                 x86_64-linux-gnu-ld.gold
+ linkicc                              x86_64-linux-gnu-lto-dump
+ linux32                              x86_64-linux-gnu-lto-dump-13
+ linux64                              x86_64-linux-gnu-nm
+ linux-boot-prober                    x86_64-linux-gnu-objcopy
+ linux-check-removal                  x86_64-linux-gnu-objdump
+ linux-update-symlinks                x86_64-linux-gnu-ranlib
+ linux-version                        x86_64-linux-gnu-readelf
+ listres                              x86_64-linux-gnu-size
+ ln                                   x86_64-linux-gnu-strings
+ lnstat                               x86_64-linux-gnu-strip
+ loadkeys                             x86_energy_perf_policy
+ loadunimap                           xargs
+ locale                               xauth
+ locale-check                         xbiff
+ localectl                            xbrlapi
+ localedef                            xcalc
+ logger                               xclipboard
+ login                                xclock
+ loginctl                             xcmsdb
+ logname                              xconsole
+ look                                 xcursorgen
+ lowntfs-3g                           xcutsel
+ lp                                   xdg-dbus-proxy
+ lpoptions                            xdg-desktop-icon
+ lpq                                  xdg-desktop-menu
+ lpr                                  xdg-email
+ lprm                                 xdg-icon-resource
+ lpstat                               xdg-mime
+ ls                                   xdg-open
+ lsattr                               xdg-screensaver
+ lsblk         
+                       xdg-settings
+ lsb_release                          xdg-user-dir
+ lscpu                             
+   xdg-user-dirs-gtk-update
+ lshw                                 xdg-user-dirs-update
+ lsinitramf
+s                          xditview
+ lsipc                                xdpyinfo
+ lslocks
+                              xdriinfo
+ lslogins                             xedit
+ lsm
+em                                Xephyr
+ lsmod                                xev
+ ls
+ns                                 xeyes
+ lsof                                 xfd
+ lspci
+                                xfontsel
+ lspgpot                              xgamma
+ ls
+power                              xgc
+ lsusb                                xhost
+ lto-dump                             xinit
+ lto-dump-13                          xinput
+ lwp-download                         xkbbell
+ lwp-dump                             xkbcomp
+ lwp-mirror                           xkbevd
+ lwp-request                          xkbprint
+ lzcat                                xkbvleds
+ lzcmp                                xkbwatch
+ lzdiff                               xkeystone
+ lzegrep                              xkill
+ lzfgrep                              xload
+ lzgrep                               xlogo
+ lzless                               xlsatoms
+ lzma                                 xlsclients
+ lzmainfo                             xlsfonts
+ lzmore                               xmag
+ m17n-db                              xman
+ m2300w                               xmessage
+ m2300w-wrapper                       xmodmap
+ m2400w                               xmore
+ make                                 Xorg
+ make-first-existing-target           xprop
+ man                                  xqxdecode
+ mandb                                xrandr
+ manpath                              xrdb
+ man-recode                           xrefresh
+ mapscrn                              x-session-manager
+ markdown-it                          xset
+ mawk                                 xsetmode
+ mbimcli                              xsetpointer
+ mbim-network                         xsetroot
+ mcookie                              xsetwacom
+ md5sum                               xsm
+ md5sum.textutils                     xstdcmap
+ mdig                                 xsubpp
+ memhog                               x-terminal-emulator
+ memusage                             xvidtune
+ memusagestat                         xvinfo
+ mesa-overlay-control.py              Xwayland
+ mesg                                 xwd
+ migratepages                         xwininfo
+ migrate-pubring-from-classic-gpg     xwud
+ migspeed                             x-www-browser
+ mimeopen                             xxd
+ mimetype                             xz
+ min12xxw                             xzcat
+ mkdir                                xzcmp
+ mkfifo                               xzdiff
+ mkfontdir                            xzegrep
+ mkfontscale                          xzfgrep
+ mk_modmap                            xzgrep
+ mknod                                xzless
+ mksquashfs                           xzmore
+ mktemp                               yelp
+ mmcli                                yes
+ monitor-sensor                       ypdomainname
+
+more                                 zcat
+ mount                                zcmp
+ mountpoint                           zdiff
+ mousetweaks                          zdump
+ mpris-
+proxy                          zegrep
+ mpstat                               zenity
+ mscompress                           zfgrep
+ msexpand                             zforce
+ mt                                   zgrep
+ mt-gnu                               zip
+ mtr                                  zipcloak
+ mtrace                               zipdetails
+ mtr-packet                           zipgrep
+ mv                                   zipinfo
+ namei                                zipnote
+ nano                                 zipsplit
+ nautilus                             zjsdecode
+ nautilus-autorun-software            zless
+ nautilus-sendto                      zmore
+ nawk                                 znew
+ nc                                   zstd
+ nc.openbsd                           zstdcat
+ neqn                                 zstdgrep
+ netaddr
+                              zstdless
+ netcat                               zstdmt
+
+-- [11分01秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ cat README 
+xv6 is a re-implementation of Dennis Ritchie's and Ken Thompson's Unix
+Version 6 (v6).  xv6 loosely follows the structure and style of v6,
+but is implemented for a modern RISC-V multiprocessor using ANSI C.
+
+ACKNOWLEDGMENTS
+
+xv6 is inspired by John Lions's Commentary on UNIX 6th Edition (Peer
+to Peer Communications; ISBN: 1-57398-013-7; 1st edition (June 14,
+2000)). See also https://pdos.csail.mit.edu/6.828/, which
+provides pointers to on-line resources for v6.
+
+The following people have made contributions: Russ Cox (context switching,
+locking), Cliff Frey (MP), Xiao Yu (MP), Nickolai Zeldovich, and Austin
+Clements.
+
+We are also grateful for the bug reports and patches contributed by
+Silas Boyd-Wickizer, Anton Burtsev, Dan Cross, Cody Cutler, Mike CAT,
+Tej Chajed, Asami Doi, eyalz800, , Nelson Elhage, Saar Ettinger, Alice
+Ferrazzi, Nathaniel Filardo, Peter Froehlich, Yakir Goaron,Shivam
+Handa, Bryan Henry, jaichenhengjie, Jim Huang, Alexander Kapshuk,
+Anders Kaseorg, kehao95, Wolfgang Keller, Jonathan Kimmitt, Eddie
+Kohler, Austin Liew, Imbar Marinescu, Yandong Mao, Matan Shabtay,
+Hitoshi Mitake, Carmi Merimovich, Mark Morrissey, mtasm, Joel Nider,
+Greg Price, Ayan Shafqat, Eldar Sehayek, Yongming Shen, Fumiya
+Shigemitsu, Takahiro, Cam Tenny, tyfkda, Rafael Ubal, Warren Toomey,
+Stephen Tu, Pablo Ventura, Xi Wang, Keiichi Watanabe, Nicolas
+Wolovick, wxdao, Grant Wu, Jindong Zhang, Icenowy Zheng, and Zou Chang
+Wei.
+
+The code in the files that constitute xv6 is
+Copyright 2006-2020 Frans Kaashoek, Robert Morris, and Russ Cox.
+
+ERROR REPORTS
+
+Please send errors and suggestions to Frans Kaashoek and Robert Morris
+(kaashoek,rtm@mit.edu). The main purpose of xv6 is as a teaching
+operating system for MIT's 6.S081, so we are more interested in
+simplifications and clarifications than new features.
+
+BUILDING AND RUNNING XV6
+
+You will need a RISC-V "newlib" tool chain from
+https://github.com/riscv/riscv-gnu-toolchain
+, and qe
+mu compiled for
+riscv64-softmmu. Once they are installed, and in your shell
+search path, you can run "make qemu".
+
+-- [12分02秒] --
+ailab-os@ailab-os-VMwa
+-- [12分06秒] --
+re
+-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ make sffs
+[sudo] ailab-os 的密码： 
+
+-- [12分20秒] --
+ai
+l
+a
+b
+-
+o
+s
+@a
+i
+l
+a
+b
+-
+os
+-
+V
+M
+w
+a
+r
+e
+-
+V
+i
+rtual-Platform:~/桌面/xv6-ai-labs-k
+m
+/l
+a
+b0$ make run
+
+OpenSBI v1.3
+   ____                    _____ ____ __
+_
+_
+_
+
+/
+
+_
+_
+
+\
+
+ / 
+_
+_
+_
+_
+|
+
+ _
+
+\
+_
+
+_|
+
+| 
+|
+
+|
+ |
+_ 
+__
+
+__
+_
+ _
+
+__ | 
+(_
+__
+
+|
+
+|
+_
+)
+
+|
+|
+
+|
+
+| |  | | '_ \ / _ \ '_ \ \___ \|  _ < | |
+
+|
+
+|
+_
+_
+|
+
+|
+
+|
+_
+)
+
+|
+
+_
+_/
+
+|
+ |
+ |
+_
+__
+_)
+ |
+
+|
+_
+)
+
+|
+|
+
+|
+_
+
+\
+_
+_
+_
+_
+/
+|
+
+.
+_
+_
+/
+
+\
+_
+_
+_
+|
+_
+| 
+|
+_
+|
+_
+_
+_
+__
+/
+|
+__
+_
+/_
+_
+_
+__
+|
+
+|
+
+|
+
+ |_
+|
+
+Pl
+a
+t
+f
+o
+r
+m
+
+Na
+me
+
+ :
+
+r
+i
+sc
+v
+-v
+i
+r
+t
+i
+o
+,
+q
+e
+mu
+
+P
+la
+t
+f
+o
+r
+m F
+e
+a
+t
+ur
+e
+s
+
+:
+
+me
+de
+l
+e
+g
+
+P
+l
+a
+t
+fo
+r
+m
+ H
+A
+R
+T
+
+Co
+u
+n
+t
+
+:
+ 2
+
+P
+l
+a
+t
+f
+o
+r
+m IPI D
+e
+v
+ic
+e
+
+:
+
+a
+c
+li
+n
+t
+-
+m
+s
+w
+i
+
+P
+l
+a
+tf
+o
+r
+m
+
+T
+i
+m
+e
+r
+
+D
+e
+v
+i
+c
+e 
+
+:
+
+a
+c
+l
+i
+n
+t
+-
+m
+t
+im
+e
+r
+
+@
+
+1
+0
+0
+0
+0
+0
+0
+0
+H
+z
+
+Platform Console Device   : uart
+82
+5
+0
+
+P
+l
+at
+f
+or
+m
+ H
+S
+M
+
+D
+e
+v
+i
+c
+e
+
+ :
+
+-
+-
+-
+
+P
+l
+a
+t
+f
+o
+rm
+ P
+M
+U
+
+D
+e
+v
+ic
+e
+
+ :
+ -
+-
+-
+
+P
+la
+t
+f
+o
+r
+m
+ R
+e
+b
+o
+o
+t 
+D
+e
+v
+i
+c
+e
+
+ : 
+s
+i
+f
+i
+v
+e
+_
+t
+e
+s
+t
+
+P
+l
+at
+f
+o
+r
+m
+ Shutd
+o
+w
+n
+
+D
+e
+v
+i
+ce
+
+:
+
+s
+i
+f
+i
+v
+e
+_
+t
+e
+s
+t
+
+P
+l
+a
+tfo
+r
+m
+
+S
+u
+s
+pe
+nd
+
+D
+e
+vi
+c
+e
+
+:
+
+-
+-
+-
+
+P
+l
+a
+tfo
+rm
+ C
+P
+P
+C
+
+D
+e
+v
+i
+ce
+
+:
+
+-
+-
+-
+
+Fi
+r
+m
+ware 
+B
+a
+s
+e
+
+ :
+
+0
+x8
+0
+0
+0
+0
+0
+00
+
+F
+i
+r
+m
+w
+a
+r
+e
+
+S
+i
+z
+e
+
+:
+
+3
+3
+2
+
+K
+B
+
+F
+i
+r
+mw
+a
+r
+e
+
+R
+W
+
+O
+f
+f
+s
+et
+
+ : 
+0x4
+0
+0
+0
+0
+
+Fir
+mwar
+e
+
+R
+W
+
+Si
+z
+e
+
+: 76
+ K
+B
+
+F
+i
+r
+m
+w
+a
+r
+e
+
+He
+a
+p
+
+O
+f
+fs
+et   
+
+:
+
+0
+x
+4a
+0
+0
+0
+
+F
+i
+r
+m
+w
+are
+ He
+ap
+
+S
+i
+z
+e 
+
+:
+
+36
+ KB
+
+(
+to
+t
+a
+l
+),
+
+2
+
+KB (rese
+rv
+e
+d)
+,
+ 9
+ K
+B
+
+(used),
+ 2
+4
+
+K
+B
+
+(
+f
+r
+e
+e
+)
+
+F
+i
+r
+m
+w
+a
+r
+e
+
+S
+cr
+a
+t
+c
+h
+
+S
+i
+ze
+
+:
+
+4
+09
+6 B
+
+(t
+o
+t
+a
+l
+)
+,
+ 7
+6
+0
+
+B
+
+(
+us
+e
+d
+)
+,
+
+3
+3
+3
+6
+
+B
+
+(
+f
+re
+e
+)
+
+R
+u
+n
+t
+i
+m
+e 
+S
+B
+I 
+V
+er
+s
+i
+o
+n
+
+:
+
+1
+.
+0
+
+D
+o
+m
+a
+i
+n
+0
+
+N
+a
+me
+
+:
+
+r
+o
+ot
+
+Do
+ma
+i
+n0
+
+B
+o
+o
+t
+
+H
+A
+R
+T
+
+:
+
+0
+
+Do
+m
+a
+i
+n
+0 
+H
+A
+R
+T
+s
+
+:
+
+0
+*
+,
+1
+*
+
+D
+o
+m
+ai
+n
+0
+
+Regi
+on
+0
+0 
+
+:
+
+0
+x
+00
+0
+00
+00
+0
+0
+2
+0
+0
+0
+0
+0
+0-
+0
+x0
+0
+0
+0
+0
+0
+0
+0
+02
+0
+0f
+fff
+
+M
+: 
+(
+I
+,
+R
+,W
+)
+
+S
+/
+U
+:
+ (
+)
+
+D
+o
+ma
+i
+n
+0
+
+R
+e
+g
+i
+o
+n0
+1
+
+: 
+0
+x
+0
+0
+0
+0
+0
+0
+0
+0
+80040000
+-
+0
+x0
+0
+0
+00
+0
+008
+0
+0
+5
+f
+f
+f
+f 
+M
+: 
+(
+R,
+W)
+
+S/
+U
+:
+
+(
+)
+
+D
+o
+m
+a
+i
+n0
+
+R
+egi
+o
+n
+02
+
+:
+
+0
+x
+0
+0
+0
+0
+00
+0
+0
+8
+0
+0
+00
+0
+0
+0
+-0
+x
+000
+0
+0
+00
+0
+8
+0
+0
+3
+f
+ff
+f
+
+M: 
+(R
+,
+X
+)
+
+S
+/U
+:
+
+(
+)
+
+D
+o
+m
+a
+in0
+ R
+e
+gi
+o
+n
+03
+
+:
+
+0x
+0
+0
+00
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+-
+0x
+f
+f
+f
+f
+f
+f
+f
+f
+f
+f
+f
+f
+f
+f
+ff
+
+M
+:
+
+(
+R,
+W
+,
+X
+)
+
+S
+/U
+:
+
+(
+R
+,
+W
+,
+X)
+
+Do
+m
+a
+i
+n
+0
+
+Ne
+x
+t
+ A
+d
+d
+re
+ss
+
+: 
+0
+x
+0
+0
+00000080
+2000
+00
+
+D
+o
+m
+a
+in
+0 
+N
+ext 
+Arg
+1
+
+    :
+ 0x
+00
+0
+0
+0
+0
+0
+0
+8
+7
+e
+0
+00
+00
+
+D
+o
+ma
+in
+0
+ N
+ex
+t Mode        
+ : 
+S
+-
+mode
+Domain0 SysReset          : yes
+
+Domain0 SysSuspend        :
+
+ye
+s
+
+B
+o
+o
+t
+
+H
+A
+RT 
+I
+D
+
+:
+
+0
+
+B
+o
+o
+t
+
+H
+AR
+T 
+D
+o
+m
+a
+i
+n
+
+: 
+ro
+o
+t
+
+B
+o
+o
+t
+ H
+A
+R
+T
+
+P
+r
+i
+v
+
+V
+er
+s
+i
+o
+n
+
+: v1.12
+Boot 
+HART Base ISA        : rv64imafdch
+
+B
+o
+o
+t
+
+HA
+R
+T
+
+I
+SA
+
+E
+xt
+en
+s
+i
+o
+n
+s
+
+:
+ t
+i
+m
+e
+,
+s
+s
+t
+c
+
+B
+o
+o
+t
+ H
+A
+R
+T
+
+P
+M
+P
+
+C
+o
+u
+n
+t
+
+: 
+1
+6
+
+B
+o
+o
+t 
+H
+A
+RT
+
+P
+M
+P
+
+G
+r
+a
+n
+u
+l
+ar
+i
+t
+y
+
+:
+
+4
+
+B
+o
+o
+t
+
+H
+AR
+T
+
+P
+M
+P
+
+A
+d
+d
+r
+e
+s
+s
+
+B
+i
+ts: 54
+
+B
+o
+o
+t
+ H
+A
+R
+T
+
+M
+H
+P
+M
+
+C
+o
+u
+n
+t
+
+:
+
+1
+6
+
+B
+oo
+t 
+HA
+RT
+
+M
+I
+D
+E
+L
+E
+G
+
+:
+
+0
+x
+0
+0
+0
+00
+00
+00
+00
+0
+1
+666
+
+B
+o
+ot
+
+H
+A
+R
+T
+
+M
+E
+DE
+LE
+G
+
+: 
+0x
+00
+00
+00
+00
+0
+0
+f
+0
+b
+5
+0
+9
+
+(`
+-.
+
+ (
+`-
+. 
+
+.-
+')
+
+ (
+'
+-.
+
+_ 
+
+.-
+'
+)
+
+ (
+ O
+O
+ )
+.
+
+ _
+(
+O
+O 
+ )
+_ 
+
+ .
+( 
+
+OO)
+
+_(
+
+O
+O
+)
+
+( 
+'.
+( 
+OO
+
+)
+_ 
+
+(
+_
+/
+.
+
+ \
+_)
+-.
+ ,
+--
+(_
+/ 
+
+,
+.
+
+\
+
+ ,
+--
+. 
+
+(
+_)
+-
+-
+-
+\
+_
+)
+
+(,
+--
+--
+--
+. 
+
+,
+--
+.
+
+,
+--
+.)
+ ,
+--
+.
+
+,
+-
+-
+.
+
+ \  `
+.
+'
+
+ /
+
+\
+
+\ 
+
+/(
+__
+/ 
+/
+
+.'
+
+ .
+-'
+) 
+
+ '
+
+.
+-
+.
+
+'
+
+ |
+
+.
+-
+-
+-
+'  
+|
+
+`
+.
+'
+
+|
+
+ |
+
+|
+ |
+
+| 
+
+ \
+
+/\
+
+ \
+
+ \
+
+/
+
+ /
+ .
+
+ /
+ -
+. 
+
+ _
+( 
+ O
+O)
+
+,|
+
+| 
+|
+
+| 
+
+|
+
+| 
+
+|
+
+ |
+
+|
+
+| 
+|
+ .
+-
+'
+)
+
+\
+
+\ 
+| 
+
+\ 
+
+'
+
+ /
+, 
+|
+
+.
+-
+.
+
+'
+
+(,
+-
+--
+--
+-.
+ (
+_
+| 
+ |
+
+|
+
+|
+  (|  '--. 
+
+|
+
+|
+'.
+'|
+
+|
+
+| 
+
+|_
+|(
+ O
+O 
+)
+
+.'
+
+\
+_)
+
+\
+
+    /__)' \  |  |  '------'   |  
+| 
+| 
+
+|
+
+ |
+
+.-
+-'
+
+|
+
+|
+
+|
+
+|
+
+| 
+ |
+ |
+ `
+-'
+ /
+
+/ 
+ .
+'.
+
+\
+
+\ 
+
+/ 
+
+\
+
+`
+'
+
+/
+
+ '
+
+'-'
+
+'
+-
+.
+
+|
+
+`--
+-
+.
+
+| 
+
+|
+
+|
+
+|
+
+(
+' 
+ '
+-'(
+_
+.
+-
+'
+
+'
+-
+-
+'
+
+'
+-
+-
+'
+
+`
+-
+'
+
+`-
+--
+-'
+
+ `
+-
+-
+--
+-'-
+-
+' 
+`-
+--
+-
+-
+-
+'
+
+`
+-
+-'
+
+`-
+-'
+
+ `
+-
+--
+-
+-
+'
+
+h
+a
+rt
+ 0 
+e
+n
+t
+e
+r
+
+m
+a
+i
+n
+(
+)..
+.
+
+k
+e
+r
+n
+e
+l_
+e
+n
+d
+:
+
+0
+x0
+000
+0
+0
+0
+0
+8
+02
+26
+00
+0,
+ p
+h
+y
+s
+t
+o
+p
+:
+
+0
+x
+0
+0
+0
+0
+00
+008
+0
+6
+0
+0
+0
+0
+0
+
+k
+i
+ni
+t
+
+k
+vm
+in
+i
+t
+
+kvm
+i
+ni
+th
+ar
+t
+
+t
+im
+er
+in
+i
+t
+
+t
+r
+a
+p
+i
+n
+i
+t
+h
+a
+r
+t
+
+pr
+o
+c
+i
+n
+i
+t
+
+p
+l
+i
+c
+i
+n
+i
+t
+
+p
+l
+i
+c
+i
+n
+it
+h
+a
+rt
+
+v
+ir
+ti
+o_
+di
+sk
+_
+i
+n
+i
+t
+
+b
+in
+it
+
+f
+il
+ei
+n
+i
+t
+
+us
+e
+r
+i
+n
+i
+t
+
+h
+ar
+t 0
+ i
+ni
+t 
+do
+ne
+
+[
+fa
+t3
+2_
+in
+it]
+
+e
+n
+te
+r!
+
+[
+F
+A
+T
+3
+2
+
+i
+n
+it
+]b
+y
+ts
+_
+p
+er
+_s
+ec
+: 
+51
+2
+
+[F
+AT
+32
+ i
+n
+i
+t
+]
+ro
+o
+t
+_cl
+u
+s
+:
+
+2
+
+[FAT
+3
+2
+
+init]
+s
+ec_per
+-- [13分07秒] --
+_
+c
+l
+u
+s
+:
+
+1
+
+-- [13分12秒] --
+[F
+A
+T
+3
+2
+
+i
+n
+i
+t
+]
+f
+a
+t_
+c
+n
+t
+: 2
+[FAT32 init]fat
+_
+s
+z
+: 
+4
+0
+3
+3
+
+[F
+AT
+32
+
+i
+nit]first_data_sec: 8098
+init: starting s
+h
+
+-
+>
+
+/ 
+$
+
+m
+a
+ke
+
+-- [13分19秒] --
+b
+u
+i
+l
+-- [13分24秒] --
+d
+
+[e
+xe
+c
+]
+
+m
+a
+k
+e
+
+n
+o
+t
+
+f
+o
+u
+n
+d
+
+[exec] reach bad
+[e
+x
+e
+c
+]
+
+/
+b
+i
+n
+/
+m
+a
+k
+e
+
+n
+o
+t
+
+f
+o
+u
+n
+d
+
+[e
+x
+e
+c] 
+r
+ea
+ch
+ bad
+exec make failed
+->
+
+/
+
+$
+
+m
+a
+-- [13分34秒] --
+k
+e
+ fs
+
+[exec] 
+m
+a
+ke not foun
+d
+
+[
+e
+xe
+c
+]
+
+r
+e
+a
+c
+h
+
+ba
+d
+
+[
+e
+x
+e
+c
+]
+ /bin
+/
+m
+a
+ke n
+o
+t
+
+f
+o
+und
+[
+e
+x
+e
+c
+]
+
+r
+e
+a
+ch
+ bad
+
+e
+x
+e
+c
+
+m
+a
+k
+e failed
+-> / $
+
+l
+s
+
+bin     
+
+D
+I
+R
+
+0
+
+R
+E
+A
+D
+M
+E
+
+F
+I
+L
+E
+
+2
+0
+5
+9
+
+c
+a
+t
+
+F
+I
+L
+E
+
+2
+2
+1
+5
+2
+
+e
+c
+h
+o
+
+F
+I
+L
+E
+
+2
+1
+0
+8
+8
+
+f
+i
+n
+d
+
+F
+I
+L
+E
+
+2
+3
+2
+8
+8
+
+g
+r
+e
+p
+
+F
+I
+L
+E
+
+2
+4
+68
+0
+
+init            
+
+F
+I
+L
+E
+
+2
+1
+7
+6
+0
+
+k
+i
+l
+l
+
+F
+I
+L
+E
+
+2
+0
+9
+7
+6
+
+l
+s
+
+F
+I
+L
+E
+
+2
+3
+3
+0
+4
+
+m
+k
+d
+i
+r
+
+F
+I
+L
+E
+
+2
+1
+0
+7
+2
+
+m
+v
+
+F
+I
+L
+E
+
+2
+2
+8
+7
+2
+
+r
+m
+
+    FILE	21064
+sh      
+
+F
+I
+L
+E
+	43696
+s
+l
+e
+e
+p
+
+F
+I
+L
+E
+
+2
+1
+0
+4
+8
+
+s
+t
+r
+a
+c
+e
+
+F
+I
+L
+E
+
+2
+1
+4
+2
+4
+
+t
+e
+s
+t
+
+F
+I
+L
+E
+
+2
+0
+9
+2
+0
+
+u
+s
+e
+r
+t
+e
+s
+t
+s
+
+-- [13分48秒] --
+  F
+I
+L
+E
+
+1
+17496
+
+w
+c
+
+F
+I
+LE
+
+2
+2936
+xargs                            FILE	22752
+-> / $ cat README
+xv6 is
+ a re-im
+pl
+ementation of Dennis Ritchie's and Ken Thompson's Unix
+Version 
+6
+
+(
+v6
+). 
+ xv
+6 
+lo
+o
+s
+e
+ly
+ f
+o
+l
+l
+o
+ws
+
+th
+e
+
+s
+t
+r
+u
+c
+t
+u
+re
+ a
+nd
+ s
+ty
+le
+ o
+f 
+v6
+,
+
+b
+u
+t i
+s
+
+i
+m
+p
+le
+me
+nt
+ed
+ f
+or
+
+a
+
+m
+o
+d
+e
+rn
+ R
+IS
+C-
+V m
+u
+l
+t
+i
+pr
+oc
+e
+s
+so
+r
+ u
+s
+i
+ng
+
+A
+N
+SI
+
+C
+.
+
+A
+CK
+NO
+WL
+ED
+G
+ME
+N
+T
+S
+
+x
+v
+6
+ i
+s 
+in
+sp
+ir
+ed 
+b
+y 
+Jo
+hn
+ L
+i
+o
+n
+s'
+s 
+Co
+mm
+en
+ta
+r
+y
+
+on
+
+UN
+IX
+ 6
+th
+ E
+di
+t
+io
+n 
+(P
+ee
+r
+
+t
+o P
+e
+e
+r
+
+C
+om
+mu
+ni
+c
+a
+t
+i
+o
+n
+s
+;
+
+I
+SB
+N
+:
+
+1
+-5
+73
+98
+-0
+13
+-7
+;
+ 1
+st
+ e
+dit
+i
+on
+ (
+Ju
+n
+e
+
+1
+4,
+
+2
+00
+0)
+)
+.
+
+S
+e
+e 
+a
+l
+s
+o 
+ht
+tp
+s:
+//
+pd
+os
+.c
+s
+a
+i
+l
+.
+m
+i
+t
+.
+e
+d
+u/
+6.
+82
+8/
+, 
+w
+h
+i
+c
+h
+
+p
+r
+ov
+i
+de
+s 
+po
+i
+nt
+er
+s 
+to
+ o
+n-
+li
+ne
+ r
+e
+so
+ur
+ce
+s 
+fo
+r 
+v6
+.
+
+T
+he
+ f
+o
+ll
+ow
+in
+g
+ p
+e
+o
+p
+l
+e
+
+h
+a
+ve 
+m
+a
+de
+ c
+o
+n
+t
+rib
+u
+ti
+o
+n
+s
+: 
+Ru
+ss
+ C
+ox
+
+(
+c
+on
+te
+x
+t
+
+s
+w
+it
+ch
+in
+g
+,
+
+lo
+ck
+in
+g)
+, 
+C
+l
+iff
+
+F
+r
+e
+y
+
+(M
+P
+)
+,
+ X
+ia
+o
+ Yu
+ (
+MP
+)
+,
+
+N
+ic
+k
+o
+la
+i
+ Z
+el
+do
+vi
+ch
+, 
+an
+d 
+A
+u
+s
+t
+i
+n
+
+Cl
+e
+me
+n
+t
+s
+.
+
+W
+e
+
+a
+re
+
+a
+l
+s
+o 
+gr
+ate
+f
+ul
+
+fo
+r 
+t
+h
+e
+
+b
+u
+g 
+r
+ep
+or
+ts
+
+a
+n
+d 
+pa
+t
+ch
+es
+
+co
+nt
+ri
+bu
+te
+d 
+by
+
+S
+il
+a
+s
+
+Bo
+yd
+-W
+i
+c
+k
+i
+ze
+r, 
+An
+to
+n 
+Bu
+r
+t
+s
+e
+v
+, 
+D
+an
+
+C
+ro
+ss
+,
+
+Co
+dy
+ C
+ut
+le
+r,
+ M
+ik
+e 
+C
+A
+T,
+
+T
+e
+j 
+C
+ha
+je
+d,
+ A
+sam
+i
+
+Do
+i,
+ e
+ya
+lz
+80
+0,
+
+,
+
+N
+el
+so
+n 
+E
+l
+h
+ag
+e,
+ S
+aa
+r 
+Et
+ti
+ng
+er
+,
+
+A
+li
+ce
+
+F
+e
+rr
+az
+z
+i
+,
+ Na
+th
+a
+n
+i
+el
+
+F
+i
+l
+ar
+do
+, 
+Pe
+te
+r 
+Fr
+oe
+hl
+ic
+h
+, 
+Ya
+ki
+r 
+G
+o
+a
+r
+on
+,S
+h
+i
+v
+a
+m
+
+H
+an
+d
+a,
+
+B
+r
+ya
+n
+
+He
+nr
+y,
+ j
+a
+i
+ch
+e
+n
+h
+en
+gj
+ie
+, 
+J
+i
+m
+
+H
+u
+a
+ng
+, 
+A
+l
+e
+x
+a
+n
+de
+r 
+K
+a
+p
+sh
+uk
+,
+
+An
+de
+rs
+
+Ka
+seo
+rg
+, 
+ke
+ha
+o9
+5,
+ W
+o
+l
+f
+g
+a
+n
+g 
+K
+el
+le
+r
+,
+
+J
+on
+ath
+a
+n
+
+Ki
+mm
+it
+t
+,
+
+E
+d
+d
+ie
+
+Ko
+hl
+er
+,
+
+Au
+st
+in
+
+L
+i
+e
+w
+, 
+Im
+ba
+r
+
+M
+ar
+in
+es
+cu
+,
+
+Y
+an
+do
+n
+g 
+M
+ao
+, 
+Ma
+t
+an
+ S
+ha
+bt
+a
+y,
+
+Hi
+t
+o
+s
+hi 
+M
+it
+a
+k
+e,
+ C
+ar
+mi
+
+M
+e
+r
+i
+m
+ov
+ich, Mar
+k
+
+M
+o
+rr
+is
+se
+y,
+
+m
+ta
+s
+m
+,
+ J
+o
+e
+l 
+N
+id
+er
+,
+
+G
+r
+e
+g 
+Pr
+i
+c
+e,
+
+A
+y
+a
+n 
+Sh
+af
+qa
+t,
+ E
+l
+d
+ar
+
+S
+e
+h
+a
+y
+e
+k
+,
+
+Y
+o
+n
+g
+m
+i
+n
+g
+
+S
+h
+e
+n
+,
+ Fu
+m
+i
+ya
+
+S
+h
+i
+g
+e
+mi
+tsu
+,
+ T
+ak
+ah
+i
+r
+o
+,
+ C
+a
+m
+
+Te
+n
+n
+y
+,
+
+t
+yf
+k
+d
+a
+,
+
+R
+a
+f
+a
+e
+l
+
+U
+ba
+l,
+
+W
+ar
+re
+n 
+To
+om
+ey
+,
+
+St
+ep
+he
+n 
+Tu
+, 
+P
+a
+bl
+o V
+e
+nt
+u
+r
+a
+,
+
+X
+i
+
+W
+a
+ng
+,
+
+K
+e
+i
+ic
+hi
+
+Wa
+ta
+na
+b
+e
+,
+
+N
+ic
+ol
+as
+
+W
+ol
+ovi
+c
+k
+,
+
+wx
+da
+o,
+ G
+r
+a
+n
+t
+
+Wu
+,
+
+J
+i
+n
+d
+o
+n
+g
+
+Zh
+an
+g
+,
+
+I
+c
+e
+n
+o
+wy
+ Z
+he
+n
+g
+, 
+a
+n
+d
+
+Z
+o
+u
+
+C
+h
+a
+n
+g
+
+We
+i
+.
+
+T
+h
+e
+
+c
+o
+de
+
+in
+ t
+h
+e
+ f
+il
+e
+s
+
+th
+at
+
+c
+o
+n
+s
+t
+i
+tu
+t
+e 
+xv
+6 
+is
+
+Co
+p
+y
+ri
+gh
+t
+ 2
+00
+6
+-2
+0
+2
+0
+
+F
+r
+a
+ns
+ K
+aa
+s
+h
+o
+e
+k
+,
+ R
+ob
+e
+r
+t 
+Mo
+rr
+is
+,
+ a
+n
+d
+
+R
+u
+s
+s
+
+C
+o
+x
+.
+
+E
+R
+RO
+R 
+RE
+PO
+RT
+S
+
+P
+l
+ea
+s
+e 
+se
+n
+d
+
+e
+rr
+o
+r
+s
+
+a
+n
+d
+
+s
+u
+g
+g
+es
+t
+i
+on
+s
+ t
+o 
+F
+rans K
+aa
+s
+h
+oe
+k
+
+an
+d 
+Ro
+be
+rt
+ M
+o
+rr
+i
+s
+
+(
+k
+a
+a
+sh
+oek
+,r
+t
+m
+@
+mi
+t
+.
+e
+d
+u)
+.
+
+T
+he
+ m
+ai
+n 
+pu
+r
+p
+o
+s
+e
+
+of
+ x
+v
+6
+
+is
+ a
+s
+
+a
+
+t
+e
+a
+c
+hi
+ng
+
+o
+p
+e
+ra
+t
+i
+n
+g
+
+s
+y
+st
+em
+ f
+or
+ M
+IT
+'
+s 
+6
+.S
+0
+81
+, 
+s
+o
+
+we
+ a
+re
+ m
+o
+r
+e
+
+in
+t
+e
+r
+e
+s
+t
+e
+d
+
+in
+
+s
+im
+pl
+if
+i
+c
+a
+t
+ion
+s
+ a
+n
+d 
+cl
+ar
+if
+ic
+a
+t
+i
+on
+s 
+th
+an
+
+n
+e
+w
+
+f
+e
+a
+t
+u
+r
+es
+.
+
+BU
+IL
+DI
+NG
+ A
+ND
+ R
+U
+N
+N
+I
+N
+G
+
+XV6
+
+Y
+o
+u
+
+wi
+ll
+ n
+ee
+d 
+a 
+RI
+SC
+-V "ne
+w
+l
+ib
+" 
+to
+o
+l 
+ch
+a
+i
+n
+
+fr
+om
+
+h
+tt
+ps
+://
+gi
+t
+h
+u
+b
+.c
+o
+m
+/
+ri
+sc
+v
+/
+r
+i
+s
+c
+v
+-g
+nu
+-
+t
+o
+o
+l
+c
+h
+a
+i
+n
+,
+ a
+n
+d
+
+q
+e
+mu
+
+-- [14分30秒] --
+co
+m
+-- [14分54秒] --
+p
+i
+l
+ed
+
+f
+o
+-- [16分01秒] --
+r
+
+r
+i
+s
+c
+v6
+4-s
+o
+f
+t
+mmu. Once they are installed, and in your shel
+l
+
+s
+e
+a
+r
+c
+h
+
+p
+a
+t
+h
+,
+
+y
+o
+u can run "make qe
+mu".
+-> 
+/
+
+$ h 
+
+
+
+
+
+
+
+
+L
+S
+
+l
+s
+
+[ex
+ec]
+
+
+
+-- [16分14秒] --
+
+
+
+
+
+l
+s
+ no
+t 
+f
+o
+u
+n
+d
+
+[
+ex
+e
+c
+]
+ r
+e
+a
+c
+h 
+b
+a
+d
+
+[
+ex
+e
+c
+]
+
+/
+b
+i
+n
+/
+
+
+
+
+ls n
+o
+t
+
+f
+o
+u
+nd
+
+[
+e
+x
+e
+c]
+
+r
+e
+a
+c
+h
+
+b
+a
+d
+
+ex
+e
+c
+
+
+
+
+
+
+
+
+
+l
+s
+
+f
+a
+i
+l
+e
+d
+
+->
+
+/
+
+$ 
+l
+s
+
+/b
+i
+n
+
+.
+
+DI
+R
+
+0
+
+.
+.
+
+D
+IR
+
+	0
+
+c
+a
+t 
+
+F
+I
+L
+E	
+2
+2
+1
+5
+2
+
+ec
+ho
+
+ F
+I
+L
+E
+
+2
+1
+0
+88
+
+f
+i
+n
+d
+
+F
+I
+L
+E
+
+23
+2
+8
+8
+
+g
+re
+p
+
+F
+I
+L
+E
+	2
+4
+6
+8
+0
+
+i
+n
+it
+
+F
+I
+L
+E	
+2
+17
+6
+0
+
+k
+i
+l
+l
+
+F
+I
+LE
+
+2
+0
+9
+7
+6
+
+l
+s
+
+F
+I
+L
+E
+
+23
+3
+0
+4
+
+m
+k
+d
+i
+r
+
+F
+I
+L
+E	
+2
+10
+7
+2
+
+m
+v
+
+F
+IL
+E
+	2
+2
+8
+7
+2
+
+rm           
+
+F
+IL
+E
+	2
+1
+06
+4
+
+sh
+
+F
+I
+L
+E
+	4
+3
+6
+9
+6
+
+s
+l
+e
+e
+p
+
+F
+I
+L
+E
+
+2
+1
+0
+4
+8
+
+s
+t
+ra
+c
+e
+
+F
+IL
+E
+
+2
+14
+2
+4
+
+t
+es
+t
+
+    FILE
+
+2
+0
+9
+20
+
+u
+s
+e
+r
+t
+es
+t
+s
+
+-- [18分00秒] --
+F
+I
+L
+E
+
+1
+1
+7
+4
+9
+6
+
+w
+c
+
+F
+I
+L
+E
+	22936
+xargs                   
+
+FI
+L
+E
+
+2
+2
+7
+5
+-- [22分34秒] --
+2
+-> / $ [exec]  not found
+[exec
+] reach bad
+[exec] /bin/ not found
+[exec] reach bad
+exec  failed
+-> / $ make: *** [Makefile:152: run] 已杀死
+
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ 

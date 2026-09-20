@@ -1,0 +1,248 @@
+==== labtracker 终端转录 ====
+录像: 20260916T104858-3542.out.gz   时长: 5分35秒   原始大小: 10414B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform
+-- [0分20秒] --
+ailab-os@ailab-os
+-- [0分31秒] --
+-VMware-Virtual-Platform:~$ ! sudo cp /etc/fstab /etc/fstab.bak && sudo sed -i '
+11,12c\.host:/  /mnt/hgfs  fuse.vmhgfs-fuse  allow_other,defaults,uid=1000,gid=1
+-- [0分44秒] --
+000,nofail  0  0' fuse.vmhgfs-fuse  allow_other,defaults,uid
+=1000,gid=1000,nofail  0  0' /etc/fstab && sudo systemctl daemon-reload && sudo system
+-- [0分56秒] --
+ctl restart
+/etc/fstab && sudo systemctl daemon-reload && sudo systemctl restart mnt-hgfs.mount && ls -la /mnt/hgf
+s
+
+-- [1分00秒] --
+mnt-hgfs.mount && ls -la /mnt/hgfs
+[sudo] ailab-os 的密码： 
+
+-- [2分33秒] --
+ailab-os@ailab-os-VMware-Virtual-Platfor
+m:~$ ! sudo bash -c 'cp -a /etc/fstab /etc/fstab.bak.orig; cp /tmp/fstab.new
+  /etc/fstab; systemctl daemon-reload; systemctl restart mnt-hgfs.mount; echo
+
+  "--- 挂载参数 ---"; grep hgfs /proc/mounts; echo "--- 目录内容 ---"; ls -la
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ! sudo bash -c 'cp -a /etc/fstab /etc/fstab.bak.orig; cp /tmp/fstab.new
+  /etc/fstab; systemctl daemon-reload; systemctl restart mnt-hgfs.m
+ount; echo
+  "--- 挂载参数 ---"; grep hgfs /proc/mounts; echo "--- 目录内容 ---"; ls -la
+  /mnt/hgfs'
+
+cp: 在 '/tmp/fstab.new' 后�
+��
+少要操作的目标文件
+请尝试执行 "cp --h
+elp" 来获取更多信息。
+bash: 行 2: /etc/fstab: 权限不够
+
+bash:
+ 行 3: --- 挂载参�
+�� ---: 未�
+��到命令
+vmhgfs-fuse /mnt/hgfs fuse.vmhgfs-fuse rw,r
+elatime,user_id=0,group_id=0 0 0
+--- 目录内容 ---
+总计 148
+drwxr-x--- 24 ailab-os ailab-os  4096  9月 16 10:
+50 .
+drwxr-xr-x  3 root     root      4096  7月  4 17:14 ..
+
+drwxr-xr-x  2 ailab-os ailab-os  4096  7月  4 17:29 公共
+
+drwxr-xr-x  2 ailab-os ailab-os  4096  7月  4 17:29 模板
+
+drwxr-xr-x  2 ailab-os ailab-os  4096  7月  4 17:29 视频
+
+drwxr-xr-x  3 ailab-os ailab-os  4096  9月  9 11:40 图片
+
+drwxr-xr-x  2 ailab-os ailab-os  4096  7月  4 17:29 文档
+drwxr-xr-x  2 ailab-os ailab-os  4096  7月  4 20:27 下载
+drwxr-xr-x  2 ail
+ab-os ailab-os  4096  7月  4 17:29 音乐
+lrwxrwxrwx  1 ail
+ab-os ailab-os     9  9月 16 10:40 主机共享 -> /mnt/hgfs
+drwxr
+-xr-x  4 ailab-os ailab-os  4096  9月 16 10:08 桌面
+-rw------- 
+ 1 ailab-os ailab-os  4636  9月 16 10:48 .bash_history
+-rw-r--r--  1 ailab-os ailab-os   220  3月 31  2024 .bash_logout
+-rw-r--r--  1 ailab-os ailab-os  3974  9月  3 09:43 .bashr
+c
+drwx------ 13 ailab-os ailab-os  4096  7月  4 21:42 .cache
+
+drwxrwxr-x  2 ailab-os ailab-os  4096  7月  4 22:07 clash
+drwxrwxr-x 
+11 ailab-os ailab-os  4096  9月 16 10:50 .claude
+-rwxr-xr-x  1 ailab-os ailab-os 10049  8月  4 21:32 claude_code_env.sh
+-rw-r
+w-r--  1 ailab-os ailab-os 16244  9月 16 10:50 .claude.json
+drwx------ 20 ailab-os ailab-os  4096  9月  3 17:37 .config
+drwxrwxr
+-x  3 ailab-os ailab-os  4096  7月  4 19:12 .finalshell
+drwxrwx
+r-x  4 ailab-os ailab-os  4096  9月  3 11:54 .labtracker
+dr
+wxrwxr-x  4 ailab-os ailab-os  4096  9月  3 11:59 labtracker
+drwx------
+  5 ailab-os ailab-os  4096  9月  3 09:56 .local
+-rw-------  1 ailab-os ailab-os     2  7月  4 19:05 .node_repl_his
+tory
+drwxrwxr-x  4 ailab-os ailab-os  4096  7月  4 19:11 .npm
+
+drwxrwxr-x  2 ailab-os ailab-os  4096  7月  4 19:07 .nvm
+
+-rw-r--r--  1 ailab-os ailab-os   807  3月 31  2024 .pro
+file
+drwx------  6 ailab-os ailab-os  4096  7月  4 20:29 snap
+drwx------  2 a
+ilab-os ailab-os  4096  7月  4 17:30 .ssh
+-rw-r--r--  1 ailab-os ailab-os     0  7月  4 17:34 .sudo_as_admin_successful
+drwxrwx
+r-x  4 ailab-os ailab-os  4096  7月  4 2
+0:34 .vs
+code
+drwxrwxr-x  3 ailab-os ailab-os  4096  7月  4 20:33 .vscode-shared
+bash: 行 4: /mnt/hgfs: 是一个目录
+
+-- [3分04秒] --
+ailab-os@ailab-os-VMware-Virtual-Platfor
+m:~$ ! sudo bash -c 'cp -a /etc/fstab /etc/fstab.bak.orig; cp /tmp/fstab.new
+  /etc/fstab; systemctl daemon-reload; systemctl restart mnt-hgfs.mount; echo
+
+-- [3分07秒] --
+  "--- 挂载参数 ---"; grep hgfs /proc/mounts; echo "--- 目录内容 ---"; ls -la
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ! sudo bash -c 'cp -a /etc/fstab /etc/fstab.bak.orig; cp /tmp/fstab.new
+  /etc/fstab; systemctl daemon-reload; systemctl restart 
+m
+n
+t
+-
+h
+g
+f
+s
+.
+m
+o
+unt; echo
+  "--- 挂载参数 ---"; grep hgfs /proc/mounts; echo "--- 目录内容 ---"; ls -la
+  /mnt/hgfs'
+
+-- [3分15秒] --
+ /etc/fstab; systemctl daemon-relo
+ad; systemc /etc/fstab; systemctl daemon-r
+elo
+-- [3分18秒] --
+a
+d; systemctw /etc/fstab; systemctl daemon-r
+elo
+ad; systemct/etc/fstab; systemctl daemon-relo
+-- [3分27秒] --
+ad;
+ sy
+ste
+mct
+
+-- [3分33秒] --
+"--- 挂载参数 ---"; grep hgfs /proc/mounts; echo "目录内容 ---"; ls -la                      
+
+-- [3分41秒] --
+/mnt/hgfs'
+
+-- [3分46秒] --
+/mn
+t/h
+gfs
+'
+
+ /mnt/hgfs'
+
+cp: 在 '/tmp/fstab.new/etc/fstab' 后缺少要操作的
+目标文件
+请尝试执行 "cp --help" 来获取更多信息。
+bash: 行 1: echo--- 挂载参�
+�� ---: 未
+找到命令
+vmhgfs-fuse /mnt/hgfs fuse.vmhgfs-fuse rw,relatime,user_id=0,group_id=0 0 0
+--- 目录内容 ---
+总计 17
+dr-xr-xr-x 1 root root 4192  9月 16 10:52 .
+
+drwxr-xr-x 3 root root 4096  9月 16 10:33 ..
+drwxrwxrwx 1 root root 8192  9月 16 10:26 智能24-操作系统-虚拟机
+
+-- [5分18秒] --
+ailab-os@ailab-os-VMware-Vir
+tual-Platform:~$ ! 
+sudo /tmp/fix-hgfs.sh
+! sudo /tmp/fix-hgfs.sh
+===== 1. 修改�
+��的共享条目 =====
+11:.hos
+t:/  /mnt/hgfs  fuse.vmhgfs-fuse  
+备份已存在, 保
+留不动 -> /etc/fstab.bak.orig
+
+===== 2. 生成新 f
+stab =====
+/tmp/fi
+x-hgfs.sh: 行 28: /tmp/fstab.new: 权限不够
+/tmp/fix-hgfs.sh: 行 29: /tmp/fstab.new: 权限不够
+--- 新内容 ---
+     1	# /etc/fstab: static file system information.
+     2	#
+     3	# Use 'blkid' to print the universally unique identifier for a
+     4	# device; this may be used with UUID= as a more robust way to name devices
+     5	# that works even if disks are added and removed. See fstab(5).
+     6	#
+     7	# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+     8	# / was on /dev/sda2 during curtin installation
+     9	/dev/disk/by-uuid/80518c8f-a066-4fd2-b3b1-7f77c8f738eb / ext4 defaults 0 1
+    10	/s
+wap.img	none	swap	sw	0	0
+    11	.host:/  /
+mnt/hgfs  fuse.vmhgfs-fuse  allow_other,defaults,uid=1000,gid=1000,nofail  0  0
+已写入 /etc/fstab
+
+--- 修改后 ---
+1
+1:
+.host:/  /mnt/hgfs  fuse.vmhgfs-fuse  allow_other,default
+s,uid=1000,gid=1000,nofail  0  0
+
+===== 3. 重新挂载 =====
+
+===== 4. 结果验证 
+=====
+--- 实际挂载�
+��数 ---
+vmhgfs-fuse /mnt/hgfs fuse.vmhgfs-fuse rw,relatime,user_id=0,group_id=0,allow_other 0 0
+
+--- 目录内容 ---
+总计 17
+dr-xr-xr-x 1 ailab-os ailab-os 4192  9月 16 10:54 .
+drwxr-xr-x 3 ro
+ot
+     root     4096  9月 16 10:33 ..
+drwxrwxrwx 1 ai
+lab-os ailab-os 8192  9月 16 10:26 智能24-操作系统-虚拟机
+
+--- 以普通用户 ailab-os 身份访问测试 ---
+总计 17
+dr-xr-xr-x 1 ailab-os ailab-os 4192  9月 16 10:54 .
+drwxr-xr-x 3 ro
+ot     root     4096  9月 16 10:33 ..
+drwxrwxrwx 1 ailab-os ai
+lab-os 8192  9月 16 10:26 智能24-操作系统-虚拟机
+
+>>> 成功: 普通用户现在可以访问共享文件夹了
+
+-- [5分35秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

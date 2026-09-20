@@ -1,0 +1,102 @@
+==== labtracker 终端转录 ====
+录像: 20260916T162959-8335.out.gz   时长: 10分55秒   原始大小: 4962B
+==================================================
+-- [开始] --
+Script s
+tarted on 2026-09-16 16:29:59+08:00 [COMMAND="bash" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+
+-- [0分05秒] --
+ail
+ab-os@ailab-os-VMware-Virtual-Platform
+:~
+$ cd ~/桌面/xv6-ai-labs-km/lab1
+
+make clea
+n
+make build 2>&1 | tail -20
+make fs
+sudo chown $USER:$USER fs.img
+make run
+ailab-os@ailab
+-os-VMware-Virtual-Platform:~$ cd ~/桌面/x
+v6-ai-labs-km/lab1
+make clean
+make build 2>&1 |
+ tail -20
+make fs
+sudo chow
+n $USER:$USE
+R fs.img
+make run
+rm -f *.tex *
+.dvi *.idx *.aux 
+*.log *.ind 
+*.ilg \
+*/*.o */*.
+d */*.asm */*.sym \
+target/* \
+xv6-user/initcode xv6-user/initcode.out \
+kernel/kernel \
+.gdbinit \
+xv6-user/usys.S \
+xv6-user/_init xv6-user/_sh xv6-user/_cat xv6-user/_echo xv6-user/_grep xv6-user/_ls xv6-user/_kill xv6-user/_mkdir xv6-user/_xargs xv6-user/_sleep
+-- [0分08秒] --
+ xv6-user/_find xv6-user/_rm xv6-user/_wc xv6-user/_test xv6-user/_usertests xv6-user/_strace xv6-user/_mv xv6-user/_halt 
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_usertests xv6-user/usertests.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv6-user/_usertests has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_usertests > xv6-user/usertests.asm
+riscv64-unknown-elf-objdump -t xv6-user/_usertests | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/usertests.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/strace.o xv6-user/strace.c
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_strace xv6-user/strace.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv6-user/_strace has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_strace > xv6-user/strace.asm
+riscv64-unknown-elf-objdump -t xv6-user/_strace | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/strace.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/mv.o xv6-user/mv.c
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_mv xv6-user/mv.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv6-user/_mv has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_mv > xv6-user/mv.asm
+riscv64-unknown-elf-objdump -t xv6-user/_mv | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/mv.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g
+ -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/halt.o xv6-user/halt.c
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_halt xv6-user/halt.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv6-user/_halt has a LOAD segment with RWX permissions
+riscv64-unknown-elf-ld: xv6-user/halt.o: in function `main':
+/home/ailab-os/桌面/xv6-ai-labs
+-km/lab1/xv6-user/halt.c:10:(.text+0x8): undefined reference to `halt'
+make: *** [Makefile:173：xv6-user/_halt] 错误 1
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o x
+v6-user/_
+halt xv6-user/
+halt.o xv6-user/ulib.o xv6-user/usys.o x
+v6
+-user/printf.o xv6-use
+r/
+umalloc.o
+risc
+v64-unknown-elf-ld: warning: xv6-user/_halt has a LOAD segment with RWX permissions
+riscv64-unknown-elf-ld: xv6-user/halt.o: in
+ function `main':
+/home/ailab-os/桌面/xv6-ai-labs
+-km/lab1/xv6-user/halt.c:10:(
+-- [0分13秒] --
+.t
+ext+0x8
+): undefined reference to `halt'
+make: *** [Makefil
+e:173：xv6-user/_halt] 错误 1
+[sudo] ailab-os 的密码： 
+chown: 无法访问 'fs.img': 没有那个文件或目录
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o xv6-user/_halt xv6-user/halt.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv6-user/_halt has a LOAD segment with RWX permissions
+riscv64-unknown-elf-ld: xv6-user/halt.o: in
+ function `main':
+/home/ailab-os/桌面/xv6-ai-labs
+-km/lab1/xv6-user/halt.c:10:(.text+0x8): undefined reference to `halt'
+make: *** [Makefile:173：xv6-user/_halt] 错误 1
+
+-- [10分55秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ 
+exit
+

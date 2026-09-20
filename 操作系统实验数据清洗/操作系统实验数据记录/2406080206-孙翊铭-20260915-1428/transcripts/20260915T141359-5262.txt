@@ -1,0 +1,14 @@
+==== labtracker 终端转录 ====
+录像: 20260915T141359-5262.out.gz   时长: 1分14秒   原始大小: 699B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform
+:~/桌面$ ls ~/桌面/xv6-ai-labs-kmls ~/桌面/xv6-ai-labs-km
+lab0  lab1  lab2
+  lab3  lab4  lab5  lab6  lab7  lab8  level.conf
+
+-- [1分14秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面$ 
+exit
+

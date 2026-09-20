@@ -1,0 +1,1722 @@
+==== labtracker 终端转录 ====
+录像: 20260920T144554-19073.out.gz   时长: 10分19秒   原始大小: 14106B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platfor
+m:~$ makecd /home/ailab-os/桌面/xv6-ai-labs-km/lab1
+
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ /home/ailab-os/桌面/xv6-ai-labs-km/lab1
+
+-- [0分21秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ make build 
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany 
+-ffreest
+anding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/syscall.o kernel/syscall.c
+
+-- [0分24秒] --
+ailab-os@aila
+b-
+os-VMwar
+e-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ make fs
+[sudo] ailab-os 的密码： 
+
+-- [0分31秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ make run
+qemu-system-riscv64: -device 
+virtio-blk-device,drive=x0,bus=virtio-mmi
+o-bus.0: Failed to get "write" lock
+Is another process using the image [fs.img]?
+make: *** [Makefile:152：run] 错误 1
+
+-- [0分50秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ ^C
+
+-- [2分07秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:
+~/桌面/xv6-ai-labs-km/lab1$ ps aux | grep [q]emu-system-riscv64
+ailab-os@ailab-os
+-V
+Mware-Vir
+tual-Platform:~/桌面/xv6-ai-labs-km/lab1$ ps aux | grep [q]emu-system-riscv64
+  lsof fs.img
+ailab-os   13371  0.0  1.2 1079160 48236 pts/3   Sl+  14:13   0:00 qemu-system-riscv64 -machine virt -kernel target/kernel -m 128M -nographic -smp 
+2 -bios default -drive file=fs.img,if=none,format=raw,id=x0 -device virtio-blk-device,drive=x0,bus=virtio-mmio-bus.0 -s -S
+ailab-os   17992  0.1  1.3 1118228 54172 pts/7   Sl+  14:29   0:02 qemu-system-riscv64 -machine virt -kernel target/kernel -m 128M -nographic
+ -smp 2 -bios default -drive file=fs.img,if=none,format=raw,id=x0 -device virtio-blk-device,drive=x0,bus=virtio-mmio-bus.0
+COMMAND     
+PID     
+USER   FD   TYPE DEVICE  SIZE/OFF   NODE NAME
+qemu-syst 17992 ailab-os    8u   REG    8,2 268435456 920918 fs.img
+
+-- [2分16秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ make run
+qemu-system-riscv64: -device 
+virtio-blk-device,drive=x0,bus=virtio-mmi
+o-bus.0: Failed to get "write" lock
+Is another process using the image [fs.img]?
+make: *** [Makefile:152：run] 错误 1
+
+-- [2分33秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1
+$ grep fs.img /proc/mounts      # 有输出就是还挂着
+  sudo umount /mnt
+
+grep f
+s.img /proc/mounts      # 有输出就是还挂着
+  sudo umount /mnt
+
+umount: /mnt: not mounted.
+
+-- [2分44秒] --
+ailab-os@ailab-os-VMware-Virtual-Pl
+atform
+:~/桌面/xv6-ai-labs-km/lab1$ make build 
+make: 对“build”无需做任何事。
+
+-- [2分47秒] --
+a
+i
+l
+a
+b
+-
+o
+s
+@
+a
+i
+la
+b-os-VMwa
+re-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ ,alemake fs
+
+-- [2分52秒] --
+ailab
+-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ make run
+qemu-system-riscv64: -device 
+virtio-blk-device,drive=x0,bus=virtio-mmi
+o-bus.0: Failed to get "write" lock
+Is another process using the image [fs.img]?
+make: *** [Makefile:152：run] 错误 1
+
+-- [3分17秒] --
+ailab-os@ailab-os-VMware-Virtua
+l-Platform:~/桌面
+/xv6-ai-labs-km/lab1$ ps aux | grep [q]emu-system-riscv64
+ailab-os@ailab-os-VMware-V
+irtual-Plat
+form:~/桌面/xv6-ai-labs-km/lab1$ ps aux | grep [q]emu-system-riscv64
+  lsof fs.img         
+ailab-os   13371  0.0  1.2 1079160 48236 pts/3   Sl+  14:13   0:00 qemu-system-riscv64 -machine virt -kernel target/kernel -m 128M -nographic -smp 2 -bios default -drive file=fs.img,if=none,format=raw,id=x0 -device virtio-blk-device,drive=x0,bus=virtio-mmio-bus.0 -s -S
+ailab-os   17992  0.1  1.3 1118228 54172 pts/7   Sl+  14:29   0:02 qemu-system-riscv64 -machine virt -kernel target/kernel -m 128M -nographic
+ -smp 2 -bios default -drive file=fs.img,if=none,format=raw,id=x0 -device virtio-blk-device,drive=x0,bus=virtio-mmio-bus.0
+COMMAND     
+PID     
+USER   FD   TYPE DEVICE  SIZE/OFF   NODE NAME
+qemu-syst 17992 ailab-os    8u   REG    8,2 268435456 920918 fs.img
+
+-- [3分26秒] --
+ailab-os@ailab-os-VMware-Virtual-Plat
+form:~/桌面/xv6-ai-labs-km/lab1$ kill PID
+bash: kill: PID: 参数必须是进程或任务 ID
+
+-- [3分48秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ kill 17992 
+
+-- [3分53秒] --
+a
+i
+l
+a
+b
+-
+o
+s
+@
+a
+i
+la
+b
+-
+o
+s
+-
+V
+M
+w
+a
+r
+e
+-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1
+$
+
+m
+a
+k
+e
+
+b
+u
+
+r
+u
+n
+
+O
+p
+e
+n
+S
+B
+I
+
+v
+1
+.
+3
+
+_
+_
+_
+_
+
+_
+_
+_
+_
+_
+
+_
+_
+_
+_
+
+_
+_
+_
+_
+_
+
+/
+
+_
+_
+
+\
+
+/
+
+_
+_
+_
+_
+|
+
+_
+
+\
+_
+
+_
+|
+
+|
+
+|
+
+|
+
+|
+_
+ _
+_
+
+_
+_
+_
+
+_
+
+_
+_
+
+|
+
+(
+_
+_
+_
+
+|
+
+|
+_
+)
+
+|
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
+'
+_
+ \
+
+/
+
+_ \ '_ \ \___ \|  _ < | |
+
+|
+
+|
+_
+_
+|
+
+|
+
+|
+_
+)
+
+|
+
+_
+_
+/
+
+|
+
+|
+
+|
+_
+_
+_
+_
+)
+
+|
+
+|
+_
+)
+
+|
+|
+
+|
+_
+
+\
+_
+_
+_
+_
+/
+|
+
+.
+_
+_
+/
+
+\
+_
+_
+_
+|
+_
+|
+
+|
+_
+|
+_
+_
+_
+_
+_
+/
+|
+_
+_
+_
+
+/
+__
+_
+_
+_
+|
+
+|
+
+|
+
+|
+_|
+
+Platform Name             : riscv-vir
+t
+i
+o
+,
+q
+e
+m
+u
+
+P
+la
+t
+f
+o
+r
+m
+
+F
+e
+at
+u
+re
+s
+
+ :
+ m
+e
+d
+e
+l
+e
+g
+
+P
+l
+a
+t
+f
+or
+m 
+HA
+R
+T
+
+Co
+un
+t
+
+ :
+
+2
+
+P
+l
+at
+f
+or
+m 
+I
+PI
+ D
+e
+v
+i
+c
+e
+
+ :
+
+ac
+l
+in
+t
+-m
+s
+wi
+
+P
+la
+t
+for
+m
+
+T
+i
+me
+r D
+e
+v
+ic
+e 
+
+: 
+a
+c
+li
+n
+t-
+m
+ti
+me
+r
+
+@
+
+1
+0
+00
+0
+00
+0
+H
+z
+Platform
+ C
+on
+s
+o
+le
+
+D
+ev
+i
+c
+e   : uart8250
+Platfo
+rm HSM Device    
+
+ : 
+-
+-
+-
+
+P
+l
+a
+t
+f
+or
+m 
+P
+MU
+
+D
+e
+v
+i
+c
+e
+
+: 
+-
+-
+-
+
+P
+l
+a
+t
+f
+or
+m
+
+R
+e
+b
+oot De
+v
+i
+c
+e
+
+: 
+s
+i
+f
+iv
+e
+_
+t
+e
+s
+t
+
+P
+l
+a
+t
+fo
+r
+m
+
+S
+h
+ut
+d
+o
+w
+n
+
+D
+e
+v
+ic
+e
+
+ :
+
+s
+i
+f
+i
+v
+e_test
+
+Platform Suspend Device   : ---
+Platform CPPC Device      : ---
+Firmware Base       
+
+: 
+0
+x
+8
+0
+0
+0
+0
+0
+0
+0
+
+F
+i
+rm
+w
+a
+r
+e
+
+S
+i
+ze
+
+:
+
+3
+3
+2
+
+K
+B
+
+Firmware RW Offset        : 0x40000
+Firmware
+ R
+W 
+S
+i
+z
+e
+
+ :
+
+7
+6
+
+K
+B
+
+Fir
+m
+w
+a
+re Hea
+p
+
+O
+f
+f
+se
+t
+
+: 
+0
+x4
+a0
+0
+0
+
+F
+i
+r
+m
+ware Heap Size        : 36
+ K
+B 
+(
+t
+ot
+a
+l
+)
+,
+
+2
+
+K
+B
+
+(
+r
+e
+s
+e
+r
+ve
+d
+)
+,
+
+9
+
+K
+B
+ (
+u
+s
+ed
+),
+
+24 
+K
+B
+
+(
+f
+r
+e
+e
+)
+
+F
+i
+rm
+wa
+r
+e 
+S
+cr
+at
+c
+h 
+Si
+z
+e  
+
+:
+
+40
+9
+6 
+B
+ (
+to
+t
+al
+),
+
+76
+0 
+B
+ (
+u
+sed
+)
+,
+ 3
+3
+36
+
+B 
+(
+fr
+ee
+)
+
+R
+un
+t
+im
+e
+ S
+B
+I
+
+V
+e
+rsi
+on       : 1.0
+
+Domain0 Name              : root
+Domain0 Boot HAR
+T 
+
+:
+
+0
+
+D
+o
+m
+a
+in
+0
+ H
+A
+R
+Ts
+
+: 
+0
+*,
+1
+*
+
+D
+o
+ma
+i
+n0
+
+Re
+g
+io
+n
+00
+
+:
+ 0
+x
+00
+0
+0
+00
+0
+0
+0
+20
+0
+0
+00
+0
+-0x
+00
+0
+0
+00
+0
+0
+02
+0
+0f
+f
+ff
+
+M:
+
+(I
+,
+R,
+W
+) 
+S/
+U
+:
+ (
+)
+
+D
+o
+ma
+i
+n
+0 
+R
+eg
+io
+n
+01
+
+: 
+0
+x0
+0
+0
+0
+0
+0
+0
+0
+80
+0
+40
+0
+00-
+0
+x
+0
+0
+0
+0
+00
+0
+08
+0
+05
+f
+ff
+f
+ M
+:
+ (
+R
+,W
+)
+ S
+/
+U:
+
+()
+
+D
+om
+a
+in
+0
+ R
+e
+g
+i
+o
+n
+0
+2
+          : 0x0
+000000080000000-0x000000008003ffff M: (R,X)
+ S/U: ()
+Domain0 Regio
+n03          : 0x0000000000000000-0xf
+ff
+f
+ff
+f
+f
+ff
+f
+f
+f
+f
+f
+f 
+M
+: 
+(
+R
+,
+W
+,
+X
+)
+
+S
+/U
+:
+
+(
+R
+,
+W
+,
+X)
+
+D
+o
+m
+a
+in
+0
+
+N
+ex
+t Address      : 0x0000000080200000
+Domain0 Next Arg1      
+   : 0x0000000087e00000
+Domain0 Next Mode   
+
+:
+
+S
+-
+m
+o
+d
+e
+
+D
+o
+m
+a
+i
+n
+0
+
+S
+y
+s
+R
+es
+e
+t
+
+:
+
+y
+e
+s
+
+D
+om
+a
+i
+n0
+
+S
+y
+sS
+u
+s
+pe
+n
+d
+
+:
+
+yes
+
+Boot HART ID              : 0
+Boot HART Domain      
+
+:
+ r
+o
+o
+t
+
+B
+o
+o
+t
+
+H
+A
+R
+T
+
+P
+r
+i
+v
+
+V
+e
+r
+s
+i
+on    : v1.12
+Boot HART Base ISA        : rv64imafdch
+Boot HART ISA Extensions  : time,sstc
+Boot HART PMP Count
+
+:
+
+1
+6
+
+B
+o
+o
+t
+ H
+A
+R
+T
+
+P
+M
+P
+
+G
+r
+a
+n
+u
+la
+rit
+y
+
+:
+
+4
+
+B
+o
+o
+t
+
+H
+A
+R
+T
+
+P
+M
+P
+
+A
+d
+d
+r
+e
+s
+s
+
+B
+i
+t
+s
+:
+
+5
+4
+
+Bo
+o
+t
+ HA
+R
+T
+
+M
+H
+PM
+
+C
+o
+u
+n
+t
+
+ :
+ 1
+6
+
+B
+o
+o
+t
+
+H
+AR
+T 
+MI
+DE
+LE
+G 
+
+: 
+0x
+00
+00
+00
+00
+00
+00
+16
+66
+
+B
+oo
+t 
+H
+A
+R
+T
+
+M
+E
+D
+E
+L
+EG
+
+ :
+ 0
+x0
+00
+00
+00
+00
+0f
+0b
+509
+
+(
+`
+-
+.
+
+(`
+-.
+
+ .
+-'
+) 
+
+('
+-.
+
+_ 
+
+.-
+')
+
+( 
+OO
+ )
+. 
+
+ _
+(O
+O 
+ )
+_ 
+
+ .
+( 
+ O
+O) 
+
+_
+(
+
+OO
+) 
+ (
+ '
+.(
+ O
+O 
+)_
+
+(_
+/.
+
+\_
+)-
+. 
+,-
+-(
+_/
+
+ ,
+. 
+\ 
+ ,
+--
+. 
+
+   (_)---\_)  
+(,------.  ,--.   ,--
+.) ,--. ,--.  
+ \  `.'  /  \   \   /(__/ /  .'       .-') 
+    '  .-.  '   |  .---'  |   `.'   | 
+
+|  | |  |   
+  \     /
+\ 
+
+\ 
+
+\ 
+/
+
+/
+
+.
+
+/
+
+-
+.
+
+_
+(
+
+O
+O
+) 
+
+,
+|
+
+| 
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
+.
+-
+'
+)
+
+\
+
+\
+
+|
+
+\ 
+
+'
+
+/
+,
+
+|
+
+.
+-.
+
+' 
+ (
+,-
+-
+-
+-
+-
+-
+.
+ (
+_|
+
+|
+
+|
+
+ |
+
+(|
+
+'-
+-
+.
+
+ |
+
+|
+'
+.'
+|  |  |  |_|( OO )
+  .'    \_)    \     /__)' \  |  |  '------'   | 
+
+|
+
+|
+
+|
+
+|
+
+.
+-
+-
+'
+
+|
+
+|
+
+ |
+
+|
+
+|
+
+|
+
+|
+
+`
+-
+'
+
+/
+
+/
+
+ .
+'.
+
+\
+
+ \
+
+/
+
+\
+
+`'
+
+/ 
+
+   '  '-'  '-. 
+|
+
+`
+--
+-
+.
+
+|  |   |  | (' 
+
+'
+-
+'
+(
+_
+.
+-
+'
+
+'
+-
+-
+'
+
+ '
+--
+'
+
+-- [3分57秒] --
+`
+-
+'  
+    `----'                `-----'--' `------'  `--'   `--'
+   `----
+-
+'
+
+h
+ar
+t
+
+0
+ i
+n
+i
+t
+ d
+o
+n
+e
+
+init: starting sh
+->
+ / $ halt
+
+u
+sertrap
+-- [4分06秒] --
+(
+-- [9分23秒] --
+)
+:
+
+u
+nex
+pect
+e
+d
+ s
+c
+a
+u
+s
+e
+
+0
+x
+0
+0
+00
+0
+0
+0
+0
+0
+0
+0
+-- [9分41秒] --
+00
+0
+0
+f
+
+p
+i
+d=3
+
+h
+a
+l
+t
+
+ s
+e
+p
+c
+=
+0
+-- [9分48秒] --
+x
+0
+-- [9分52秒] --
+0
+00
+0
+0
+0
+000
+0
+0
+0
+0
+2
+0
+
+s
+t
+v
+a
+l
+=
+0
+x
+f
+f
+f
+f
+f
+f
+ff
+f
+f
+f
+f
+f
+f
+f
+-- [9分56秒] --
+f
+-> / $ halt
+
+exec halt failed
+-> / $ make run
+exec make failed
+-> / $ x
+exec x failed
+-> / $ QEMU: Terminated
+
+-- [10分00秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ make run
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany 
+-ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/sysproc.o kernel/sysproc.c
+
+OpenSBI v1.3
+   ____                    _____ ____ _____
+  / __ \                  / ____|  _ \_   _|
+ | |  | |_ __   ___ _ __ | (___ | |_) || |
+ | |  | | '_ \ / _ \ '_ \ \___ \|  _ < | |
+
+ | |__|
+ | |_) 
+|  __/ | | 
+|
+_
+___) | 
+|
+_) 
+|
+| 
+|
+_
+
+\
+____/| .__/ \___|_| |_|_____/|___/_____|
+        | |
+        |_|
+
+Platform Name             : riscv-virtio,qemu
+Platform Features         : medeleg
+Platform HART Count       : 2
+Platform IPI Device       : aclint-mswi
+Platform Timer Device     : aclint-mtimer @ 10000000Hz
+Platform Console Device   : uart8250
+Platform HSM Device       : ---
+Platform PMU Device       : ---
+Platform Reboot Device    : sifive_test
+Platform Shutdown Device  : sifive_test
+Platform Suspend Device   : ---
+Platform CPPC Device      : ---
+Firmware Base             : 0x80000000
+Firmware Size             : 332 KB
+Firmware RW Offset        : 0x40000
+Firmware RW Size          : 76 KB
+Firmware Heap Offset      : 0x4a000
+Firmware Heap Size        : 36 KB (total), 2 KB (reserved), 9 KB (used), 24 KB (free)
+Firmware Scratch Size     : 4096 B (total), 760 B (used), 3336 B (free)
+Runtime SBI Version       : 1.0
+
+Domain0 Name              : root
+Domain0 Boot HART         : 1
+Domain0 HARTs             : 0*,1*
+Domain0 Region00          : 0x0000000002000000-0x000000000200ffff M: (I,R,W) S/U: ()
+Domain0 Region01          : 0x0000000080040000-0x000000008005ffff M: (R,W) S/U: ()
+Domain0 Region02          : 0x0000000080000000-0x000000008003ffff M: (R,X) S/U: ()
+Domain0 Region03          : 0x0000000000000000-0xffffffffffffffff M: (R,W,X) S/U: (R,W,X)
+Domain0 Next Address      : 0x0000000080200000
+
+Domai
+n0 N
+ex
+t
+
+A
+r
+g
+1
+
+:
+
+0x
+000000
+00
+87
+e
+0
+0
+0
+00
+
+Do
+m
+a
+i
+n0
+
+N
+e
+xt
+
+M
+od
+e
+         : S-mode
+Domain0 SysReset          : yes
+Domain0 SysSuspend        : yes
+
+Boot HART ID              : 1
+Boot HART Domain          : root
+Boot HART Priv Version    : v1.12
+Boot HART Base ISA        : rv64imafdch
+Boot HART ISA Extensions  : time,sstc
+Boot HART PMP Count       : 16
+Boot HART PMP Granularity : 4
+Boot HART PMP Address Bits: 54
+Boot HART MHPM Count      : 16
+Boot HART MIDELEG         : 0x0000000000001666
+Boot HART MEDELEG         : 0x0000000000f0b509
+  (`-.            (`-.                            .-')       ('-.    _   .-')
+ ( OO ).        _(OO  )_                        .(  OO)    _(  OO)  ( '.( OO )_ 
+(_/.  \_)-. ,--(_/   ,. \  ,--.                (_)---\_)  (,------.  ,--.   ,--.) ,--. ,--.  
+ \  `.'  /  \   \   /(__/ /  .'       .-')     '  .-.  '   |  .---'  |   `.'   |  |  | |  |   
+  \     /\   \   \ /   / .  / -.    _(  OO)   ,|  | |  |   |  |      |    
+     |  |  | | .-')
+   \   \ |    \   '   /, | .-.  '  (,------. (_|  | |  |  (|  '--.   |  |'.'|  |  |  |_|( OO )
+  .'    \_)    \     /__)' \  |  |  '------'   |  | |  |   |  .--'   |  |   |  |  |  | | `-' /
+ /  .'.  \      \   /    \  `'  /              '  '-'  '-. |  `
+--
+-. 
+ |
+
+ |
+
+|
+
+|
+
+(
+' 
+
+'-'(
+_
+.
+-'
+'--'  
+ '
+-
+-'    
+
+`
+-- [10分03秒] --
+-
+'
+
+`--
+-
+-
+-- [10分06秒] --
+'
+
+              `-----'--' `------'  `--'   `--'   `-----'
+hart 1 init done
+init: starting sh
+-> / $ hailt   lt
+
+-- [10分19秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ 
+exit
+

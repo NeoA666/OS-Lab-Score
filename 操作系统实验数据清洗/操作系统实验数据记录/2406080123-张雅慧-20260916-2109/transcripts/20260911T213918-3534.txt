@@ -1,0 +1,11 @@
+==== labtracker 终端转录 ====
+录像: 20260911T213918-3534.out.gz   时长: 0分06秒   原始大小: 269B
+==================================================
+-- [开始] --
+Script s
+tarted on 2026-09-11 21:39:18+08:00 [COMMAND="bash" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+
+-- [0分06秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

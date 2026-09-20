@@ -1,0 +1,54 @@
+==== labtracker 终端转录 ====
+录像: 20260916T180405-22701.out.gz   时长: 6小时59分29秒   原始大小: 1644B
+==================================================
+-- [开始] --
+wangfugui@wangfugui-VMware-Virtual-Platform:~$ 
+-- [0分06秒] --
+cd /home/wangfugui/桌面/xv6-ai-labs-km/lab1
+
+-- [0分13秒] --
+grep -n "unknown sys call" kernel/syscall.c
+-- [0分20秒] --
+wangfugui@wangfugui-VMware-Virtual-Platform:~$ cd /home/wangfugui/桌面/xv6-ai-labs-km/lab1
+
+-- [0分28秒] --
+grep -n "unknown sys call" kernel/syscall.c
+
+-- [0分36秒] --
+218:    printf("pid %d %s: unknown sys call %d\n",
+
+-- [0分44秒] --
+wangfugui@wangfugui-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ 
+-- [22分43秒] --
+m
+-- [44分41秒] --
+a
+-- [1小时6分41秒] --
+k
+-- [1小时28分40秒] --
+e
+
+-- [2小时12分40秒] --
+r
+-- [2小时34分40秒] --
+u
+-- [2小时56分41秒] --
+n 
+
+-- [4小时2分43秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/syscall.o kernel/syscall.c
+
+-- [4小时24分44秒] --
+qemu-system-riscv64: -device virtio-blk-device,drive=x0,bus=virtio-mmio-bus.0: Failed to get "write" lock
+Is another process using the image [fs.img]?
+
+-- [4小时46分45秒] --
+make: *** [Makefile:152：run] 错误 1
+
+-- [5小时8分46秒] --
+wangfugui@wangfugui-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ 
+-- [5小时30分55秒] --
+^C
+
+-- [6小时59分29秒] --
+wangfugui@wangfugui-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ 

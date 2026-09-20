@@ -1,0 +1,28 @@
+==== labtracker 终端转录 ====
+录像: 20260909T101140-14357.out.gz   时长: 15分15秒   原始大小: 899B
+==================================================
+-- [开始] --
+Script s
+tarted on 2026-09-09 10:11:40+08:00 [COMMAND="bash" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+
+-- [0分12秒] --
+ailab-os@ailab-os-VMwar
+e-Virtual-Platform:~$ make build
+make: *** 没有规则可制作目标“build”。 停止。
+
+-- [0分28秒] --
+ailab-os@ailab-os-VMwar
+e-Virtua
+l-Platform:~$ make clean
+make: *** 没有规则可制作目标“clean”。 停止。
+
+-- [5分30秒] --
+ailab-os@ailab-os
+-VMware-
+Virtual-Platform:~$ make fs
+make: *** 没有规则可制作目标“fs”。 停止。
+
+-- [15分15秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

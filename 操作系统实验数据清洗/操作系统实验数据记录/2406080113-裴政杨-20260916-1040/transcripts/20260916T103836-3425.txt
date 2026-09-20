@@ -1,0 +1,7 @@
+==== labtracker 终端转录 ====
+录像: 20260916T103836-3425.out.gz   时长: 0分00秒   原始大小: 199B
+==================================================
+-- [开始] --
+COMMAND="bash" <not executed on terminal>]
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+

@@ -1,0 +1,12 @@
+==== labtracker 终端转录 ====
+录像: 20260912T205823-7365.out.gz   时长: 0分08秒   原始大小: 477B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-V
+Mware-Virtual-Platform:~$ make run
+make: *** 没有规则可制作目标“run”。 停止。
+
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

@@ -1,0 +1,1546 @@
+==== labtracker 终端转录 ====
+录像: 20260905T094918-5341.out.gz   时长: 0分32秒   原始大小: 4170B
+==================================================
+-- [开始] --
+脚本启动于 2026-09-05 09:49:18+00:00 [COMMAND="bash" TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="80" LINES="24"
+-- [0分04秒] --
+]
+
+ub
+u
+nt
+u
+@
+cg
+
+:
+
+~
+/D
+e
+skt
+o
+p/
+xv6
+-
+ai
+-la
+bs
+-k
+m/
+la
+b0
+
+$
+ m
+ak
+e 
+fs
+
+r
+un
+
+Op
+enS
+BI 
+v
+1
+.3
+
+ _
+__
+_ 
+
+__
+__
+_
+ _
+__
+_ 
+__
+__
+_
+
+ /
+ __
+
+\ 
+
+/ 
+__
+__
+| 
+ _
+ \_  
+ _
+|
+
+| | 
+
+| |
+_ _
+_  
+ __
+_ _
+
+__ | (
+___
+ | |
+_) 
+||
+ |
+
+ | 
+|  
+| |
+ '
+_ 
+\ / _
+ \
+ '_ 
+\ \
+_
+__ 
+\|
+
+_ 
+< |
+ |
+
+ |
+ |_
+_| | |
+_) | 
+ __
+/ 
+| |
+ |_
+__
+_) 
+| |
+_) 
+|| 
+|_
+
+\_
+___/
+|
+ .__
+/ \
+_
+__|
+_
+| |
+_|_
+__
+__
+/|
+___
+/_
+___
+_|
+
+  | |
+
+|_|
+
+P
+la
+tfo
+rm 
+Nam
+e  
+
+ :
+ ri
+scv-v
+irt
+io,q
+em
+u
+
+P
+lat
+fo
+r
+m F
+ea
+tur
+es 
+
+ :
+ m
+edel
+eg
+
+Pl
+atf
+or
+m 
+HART
+ C
+ou
+nt
+
+: 
+2
+
+P
+la
+tf
+orm
+
+I
+PI D
+ev
+ic
+e  
+
+: 
+acl
+i
+nt-m
+swi
+
+Pl
+at
+fo
+rm
+ Tim
+e
+r 
+De
+vi
+ce
+
+:
+ ac
+l
+in
+t-mt
+im
+e
+r 
+@ 
+10
+000
+00
+0H
+z
+
+Pl
+at
+for
+m
+ Co
+nso
+le
+ D
+e
+vic
+e 
+  :
+ ua
+rt8
+25
+0
+
+P
+la
+tf
+orm
+ H
+S
+M De
+vic
+e 
+
+  :
+
+--
+-
+
+P
+la
+tfor
+m 
+PM
+U 
+De
+vi
+ce
+
+: --
+-
+
+Pl
+a
+tfo
+r
+m 
+Re
+b
+oo
+t 
+De
+vi
+ce
+
+: 
+si
+fi
+ve
+_t
+es
+t
+
+P
+la
+tf
+or
+m 
+Sh
+ut
+dow
+n 
+Dev
+ic
+e 
+ :
+ s
+ifi
+ve
+_t
+est
+P
+l
+at
+fo
+rm
+ S
+uspe
+nd
+ D
+evi
+ce 
+  : 
+-
+--
+
+P
+l
+atf
+or
+m
+ CP
+PC 
+D
+ev
+ic
+e 
+
+ : 
+---
+
+Fi
+rm
+wa
+re 
+Ba
+se 
+
+ :
+ 0x
+8000
+0
+000
+
+F
+i
+rmw
+a
+re
+ S
+iz
+e  
+
+ :
+ 33
+2 KB
+
+F
+i
+rm
+wa
+re
+ R
+W 
+Offs
+e
+t
+
+ : 
+0
+x40
+0
+00
+
+Fir
+mw
+ar
+e R
+W
+ Siz
+e
+
+  :
+ 7
+6 
+KB
+
+Firm
+ware
+ H
+eap
+ O
+ff
+se
+t  
+
+: 
+0x4
+a0
+00
+
+Firmw
+ar
+e 
+Hea
+p
+ S
+iz
+e
+
+: 
+36
+ KB
+ (
+t
+o
+tal
+), 
+2 K
+B 
+(r
+ese
+rv
+ed
+),
+ 9
+ KB
+ (
+us
+ed)
+, 2
+4 K
+B 
+(fr
+e
+e)
+
+F
+ir
+m
+wa
+re
+ S
+cra
+t
+ch
+ Si
+ze
+
+ :
+ 40
+9
+6 B
+ (
+t
+ot
+al
+), 
+76
+0 
+B 
+(u
+se
+d)
+, 
+33
+3
+6 
+B 
+(fr
+e
+e)
+
+R
+u
+nti
+me
+ S
+B
+I 
+Ve
+r
+sio
+n 
+
+: 
+1.
+0
+
+Dom
+ain
+0 Name 
+
+: r
+oo
+t
+
+Do
+ma
+in
+0 
+Bo
+ot
+ H
+A
+RT
+
+ :
+
+0
+
+D
+omai
+n0
+ H
+A
+RT
+s  
+
+: 0
+*
+,1
+*
+
+D
+o
+mai
+n0
+ R
+eg
+io
+n0
+0  
+
+: 
+0x
+00
+00
+00
+00
+02
+0
+000
+0
+0-0
+x0
+000
+000
+0
+02
+00f
+ff
+f M
+: 
+(
+I,R,
+W
+) 
+S/U
+: 
+(
+)
+
+D
+om
+ai
+n0 
+Re
+gi
+o
+n01
+
+ :
+ 0
+x0
+00
+0
+0000
+80
+04
+00
+00
+-0
+x00
+0
+000
+0
+08
+0
+05
+ff
+ff
+ M:
+ (
+R,
+W)
+ S/
+U:
+ (
+)
+
+Do
+ma
+in
+0 
+Re
+gi
+on
+02 
+
+  :
+ 0
+x0
+00
+00
+00
+0
+80
+00
+00
+0
+0-
+0x
+00
+00
+00
+00
+8
+00
+3f
+f
+ff
+ M: 
+(R
+,X
+) 
+S/U
+: 
+()
+
+D
+oma
+in
+0 
+Reg
+io
+n0
+3 
+
+:
+ 0x
+00
+00
+0
+00
+0000
+00
+00
+0-0
+xf
+ff
+ff
+fff
+ff
+fff
+f
+ff 
+M:
+ (
+R,
+W,
+X
+) 
+S
+/U
+: (
+R
+,W,
+X)
+
+D
+om
+a
+in0 
+Nex
+t 
+Add
+re
+ss  
+
+  :
+
+0x
+00
+00
+000
+08
+02
+0
+00
+00
+
+Domai
+n0
+ Next
+ Ar
+g1 
+
+ : 0
+x00
+000
+0008
+7e00
+000
+
+Dom
+ain
+0 Nex
+t M
+ode 
+
+  :
+ S-
+mode
+
+Doma
+in0 
+S
+ysRe
+s
+et
+
+ :
+ y
+es
+
+Do
+main
+0 
+Sy
+sS
+us
+pend
+
+ : y
+es
+
+B
+oo
+t 
+HAR
+T 
+ID
+
+ :
+ 0
+
+Bo
+ot 
+HAR
+T 
+Dom
+ai
+n  
+
+ : 
+r
+oo
+t
+
+B
+oot
+
+HAR
+T P
+ri
+v
+ Ve
+rsi
+o
+n 
+
+ : v
+1.
+12
+
+Bo
+o
+t H
+AR
+T
+ Ba
+s
+e 
+IS
+A  
+
+ :
+ rv
+64
+i
+ma
+fd
+ch
+
+B
+oo
+t 
+HAR
+T 
+I
+SA
+ Ex
+ten
+si
+on
+s  
+: t
+i
+me
+,ss
+tc
+
+Bo
+ot 
+H
+ART
+ PM
+P 
+Co
+un
+t 
+
+ :
+ 16
+
+Bo
+ot
+ H
+AR
+T 
+P
+MP 
+Gr
+an
+ul
+ar
+ity
+ : 
+4
+
+B
+oo
+t 
+HA
+RT
+ PM
+P 
+Add
+re
+ss B
+it
+s
+: 
+54
+
+Bo
+ot
+ H
+ART
+
+M
+HP
+M 
+C
+ou
+n
+t 
+
+ :
+
+1
+6
+
+Bo
+o
+t 
+H
+A
+RT
+ M
+I
+D
+EL
+E
+G
+
+:
+ 0
+x
+00
+0
+0
+00
+0
+00
+0
+0
+01
+6
+66
+
+B
+o
+o
+t
+
+HA
+R
+T 
+ME
+D
+E
+L
+EG
+
+:
+ 0
+x
+0
+000
+0
+00
+00
+0
+f0
+b
+50
+9
+
+ (
+`
+-
+. 
+
+(
+`
+-
+. 
+
+ .
+-'
+)
+
+ (
+'
+-
+.
+
+ _
+
+ .
+-
+'
+)
+
+(
+
+OO
+ )
+.
+
+ _
+(
+OO
+
+ )
+_
+
+.(
+
+O
+O)
+
+_
+(
+
+O
+O)
+
+ (
+
+'
+.
+(
+ O
+O
+
+)
+_ 
+
+(
+_
+/.
+
+\
+_)
+-.
+
+,
+--
+(_
+/
+
+,.
+
+\
+
+,
+-
+-.
+
+(
+_)
+-
+-
+-
+\
+_
+) 
+
+(
+,
+-
+--
+--
+-
+.
+
+,-
+-.
+
+,
+--
+.
+)
+
+,
+--
+.
+
+,
+--
+.
+
+\
+
+`.
+'
+
+ /
+
+\
+
+\ 
+
+ /
+(
+_
+_/
+ /
+
+.
+'
+
+.-
+'
+)
+
+' 
+
+.-
+.
+
+' 
+
+ |
+
+ .
+--
+-
+'
+
+ | 
+
+ `
+.
+'
+
+ |
+
+ |
+
+| 
+|
+
+ |
+
+ \
+
+/
+\
+
+\
+
+ \
+
+/ 
+
+ /
+
+. 
+
+/
+ -
+.
+
+_
+(
+
+ O
+O
+)
+
+,
+|
+
+|
+ |
+
+|
+
+|
+
+|
+
+  | 
+
+|
+
+ |
+
+|
+
+|
+ .
+-
+'
+)
+
+ \
+
+\
+ |
+
+\
+
+'
+
+ /
+,
+
+|
+ .
+-.
+
+'
+
+ (
+,
+-
+--
+-
+-
+-.
+
+(_
+| 
+
+|
+
+|
+
+|
+
+ (
+|
+
+'
+--
+.
+
+ |
+
+|'
+.
+'|
+
+|
+
+|
+
+|_
+|
+( 
+O
+O
+ )
+
+.
+'
+
+\
+_
+) 
+
+\ 
+
+/_
+_
+)'
+
+\ 
+
+|
+
+| 
+ '
+-
+-
+-
+--
+-
+' 
+
+| 
+ |
+
+|
+
+|
+
+|
+
+.
+--
+'
+
+| 
+
+| 
+
+ |
+
+|
+
+| 
+ |
+
+|
+
+`
+-
+' 
+/
+
+ /
+
+.
+'
+. 
+
+\
+
+\
+
+/
+
+\
+
+`
+'
+
+/
+
+' 
+ '
+-
+' 
+
+'
+-
+.
+ |
+
+`
+--
+-.
+
+|
+
+|
+
+ |
+
+| 
+('
+
+ '
+-'(
+_.-
+'
+
+'-
+-'
+
+'
+-
+-
+'
+
+  `
+-'
+
+`-
+-
+-
+-' 
+
+ `
+---
+--
+'--'
+ `
+--
+-
+---
+' 
+ `
+--
+' 
+
+`
+--
+' 
+
+`
+---
+--'
+
+ha
+r
+t 
+0 e
+n
+te
+r 
+ma
+i
+n
+()
+..
+.
+
+ke
+rne
+l_
+end
+: 0
+x0
+00
+00
+00
+08
+022
+60
+00
+, 
+ph
+ys
+t
+op
+: 
+0
+x0
+00
+00
+000
+8
+0
+6
+0
+0
+0
+0
+0
+
+k
+i
+n
+i
+t
+
+k
+vm
+i
+n
+i
+t
+
+k
+v
+m
+i
+ni
+t
+h
+a
+r
+t
+
+p
+r
+o
+c
+i
+n
+i
+t
+
+vi
+r
+t
+i
+o_
+d
+i
+s
+k
+_
+i
+n
+it
+
+b
+ini
+t
+
+f
+i
+l
+ei
+n
+i
+t
+
+us
+e
+r
+in
+i
+t
+
+h
+a
+r
+t
+ 0
+
+i
+n
+i
+t
+
+d
+o
+ne
+
+p
+a
+n
+i
+c
+:
+
+i
+n
+i
+t
+ e
+x
+i
+tin
+-- [0分13秒] --
+g
+backtrace:
+0x
+0000000080200180
+0x00000000802022de
+0x00000000802031de
+0x0000000080203008
+0x00000000802029fc
+QEMU: Terminated
+
+-- [0分20秒] --
+ubuntu@cg:
+~/Desktop/xv6-ai-labs-km
+-- [0分23秒] --
+/l
+ab0$ make runfs
+[sud
+o] ubuntu 的密码： 
+对不起，请
+重试�
+�
+[sudo] ubuntu 的密码： 
+ubuntu 未出现在 sudoers 文件中。
+make: *** [Makefile:229：fs] 错误 1
+
+-- [0分32秒] --
+ubuntu@cg:~/Desktop/xv6-ai-labs-km/lab0$ 
+exit
+

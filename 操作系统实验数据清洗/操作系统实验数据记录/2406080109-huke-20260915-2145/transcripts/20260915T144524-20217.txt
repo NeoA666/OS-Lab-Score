@@ -1,0 +1,44 @@
+==== labtracker 终端转录 ====
+录像: 20260915T144524-20217.out.gz   时长: 0分17秒   原始大小: 23838B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/.claude/projects$ #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+生成 Claude Code 会话浏览器 SPA。
+输出：
+  projects/index.html              # 浏览器主页（放根目录，双击即用）
+  projects/_chatbrowser_data/
+    index.js                       # 全量导航索引（轻量）
+    <项目>/<相对路径>.js            # 每个 session/ag
+ent 的消息数据，按需加载
+    <项目>/__memory__/<file>.js     # 记忆文件
+"""
+import json, os, html, re
+from pathlib import Path
+
+ROOT = Path(_
+_f
+ile__).resolve().parent  # 识别脚本所在目录作为扫描根（放哪扫哪） 
+
+DATA = ROOT / "_chatbrowser_data"
+
+# 清理旧数据
+if DATA.exists():
+    import shutil
+    shutil.rmtree(DATA)
+        'Read': 
+                ts1 = ts
+息，前文被自动摘要）<details><summary>压缩元数据</summary><pre class="code
+})
+for
+    for jf in
+.content{flex:1;overflow-y:auto;pa
+    html+
+      else if(
+print(f'   数据: {DATA} ({dsz//102
+-- [0分17秒] --
+4
+print(f'   �
+print(f'   双击 index.html 即可使用')

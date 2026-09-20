@@ -1,0 +1,3237 @@
+==== labtracker 终端转录 ====
+录像: 20260914T214730-7815.out.gz   时长: 30分20秒   原始大小: 66490B
+==================================================
+
+-- [开始] --
+a
+ilab-os@a
+ilab-os-
+VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ uname -muname -m
+x86_64
+
+-- [9分20秒] --
+ailab-os@ailab-os-VMwar
+e-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ iscv64-linux-gnu-gcc --version
+
+a
+i
+l
+a
+b
+-
+o
+s
+@
+a
+i
+l
+a
+b
+-
+o
+s-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ iscv64-linux-gnu-gcc --version
+
+-- [9分25秒] --
+riscv64-linu
+
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ 
+
+找不
+到命�
+� “riscv64-linux-gnu-gcc”，但可以通过以下软件包安装它：
+sudo apt install gcc-riscv64-linux-gnu
+
+-- [9分49秒] --
+ailab-os@ailab-os-VMware-Virtua
+ailab-
+os@ailab-
+os-VMware-Virtual-Platform
+
+-- [9分53秒] --
+:~/桌面/xv6-ai-labs-km/la
+b0$ sudo apt install gcc-riscv64-linux-gnu
+[sudo] ailab-os 的�
+��码： 
+正在读取软件包列表... 0%
+正在读�
+��软件包列表... 完成
+正在分析软�
+正在分析软件
+正在分析软件包的依
+正在分�
+�软件包的依赖关系树... 完�
+��
+
+正在�
+正在读取状态信息... 完成
+下列软件�
+�是自动安装的并且现在不需要了：
+  gyp handlebars javascr
+ipt-common libjs-async libjs-events libjs-inherits
+  libjs-is-typeda
+rray libjs-prettify libjs-regenerate libjs-source-map
+  libjs-sprintf-js l
+ibjs-typedarray-to-buffer libssl-dev libuv1-dev
+  node-abbrev node-ampproject-r
+emapping node-ansi-escapes node-ansi-regex
+
+ node-ansi-styles node-aproba node-are-we-there-yet node-argparse node-arrify
+
+ node-async node-async-each node-auto-bind
+  node-babel-plugin-add-module
+-exports node-babel7-runtime node-balanced-match
+  node-base64-js node-
+binary-extensions node-brace-expansion node-busboy
+  node-camelcase node-canius
+e-lite node-chownr node-chrome-trace-event
+  node-ci-info node-cjs-module-l
+exer node-cli-boxes node-cli-cursor node-clone
+  node-clone-deep node-collection-visit node-color-convert node-color-name
+  node-colors node-commander node-commondir node-concat-stream
+  node-c
+onsole-control-strings node-convert-source-map node-core-js
+  node-core-js-pure node-core-util-is node-data-uri-to-buffer
+  node-decompress-response node-deep-is node-defaults node-define-property
+  node-delegates node-dep
+d node-diff node-electron-to-chromium node-encoding
+  node-end-of-stream node-err-code node-error-ex node-es-module-lexer
+  node-escape-string
+-regexp node-eslint-utils node-eslint-visitor-keys
+  node-esquery node-estraverse node-esutils node-events node-fancy-log
+  node-fast-deep-equal node-fast-levenshtein node-fetch node-find-up
+  node-flatte
+d node-for-in node-for-own node-foreground-child
+  node-fs-readdir-recursive node-fs-write-stream-atomic node-fs.realpath
+  node-function-
+bind node-functional-red-black-tree node-get-caller-file
+  node-get-stream node-get-value node-glob node-globals node-got
+  node-graceful-fs node-growl nod
+e-has-flag node-has-unicode node-has-value
+  node-has-values node-hosted-git-info node-iconv-lite node-ieee754 node-iferr
+  node-imurmurhash node-inden
+t-string node-inflight node-inherits node-ini
+  node-interpret node-ip node-ip-regex node-is-arrayish node-is-binary-path
+  node-is-buffer node-is-descriptor node-is-extendable node-is-extglob
+  node-is-path-cwd node-is
+-plain-obj node-is-plain-object node-is-stream
+  node-is-typedarray node-is-windows node-isarray node-isexe node-isobject
+  node-js-tokens node-jsesc node-json-buffer node-json-parse-better-errors
+  node-json-schema node-json-schema-traverse node-json-stable-stringify
+  node-jsonify node-jsonpa
+rse node-kind-of node-levn node-loader-runner
+  node-locate-path node-lodash-packages node-log-driver node-lowercase-keys
+  no
+de-lru-cache node-map-visit node-memfs node-merge-stream
+  node-mimic-response node-minimatch node-minimist node-minipass
+  node-mixin-deep node-mute-stream node-n3 node-negotiator node-neo-async
+  node-npm-run-path 
+node-object-inspect node-object-visit node-once
+  node-optimist node-optionator node-osenv node-p-cancelable node-p-limit
+  node-p-locate node-p-map node-pascalcase node-path-dirname node-path-exists
+  no
+de-path-is-absolute node-path-is-inside node-path-type node-pify
+  no
+de-pkg-dir node-postcss-value-parser node-prelude-ls
+  node-process-nextick-args node-promise-inflight node-promise-retry
+  node-promzard node-prr node-pump node-punycode node-quick-lru
+  node-randombytes 
+node-read node-readable-stream node-rechoir node-regenerate
+  node-regenerate-unicode-properties node-regenerator-runtime
+  node-regenerat
+or-transform node-regexpp node-regjsgen node-repeat-string
+  node-require-directory node-require-from-string node-resolve
+  node-resolve-cwd node-resolve-from node-restore-cursor node-resumer
+  node-retry no
+de-run-queue node-safe-buffer node-sellside-emitter
+  node-serialize-javascript node-set-blocking node-set-immediate-shim
+  node-shebang-command node-shebang-regex node-shell-quote node-signal-exit
+  node-
+slash node-slice-ansi node-source-list-map node-source-map
+  node-source-map-su
+pport node-spdx-correct node-spdx-exceptions
+  node-spdx-expression-parse node-spdx-license-ids node-sprintf-js node-ssri
+  node-stack-utils node-string-de
+coder node-strip-bom node-strip-json-comments
+  node-supports-color node-tapable node-terser node-text-table node-through
+  node-time-stamp node-to-fast-properties node-tslib no
+de-type-check
+  node-typedarray node-typedarray-to-buffer node-undici
+  node-unicode-canonical-property-names-ecmascript
+  node-unicode-match-property-value-ecmascript
+  node-unicode-p
+roperty-aliases-ecmascript node-unique-filename
+  node-unset-value node-uri-js node-util-deprecate node-uuid node-v8flags
+  node-validate-npm-package-license node-wcwidth.
+js node-webpack-sources
+  node-wordwrap node-wrappy
+ node-write-file-atomic node-xtend 
+node-y18n
+  node-yallist node-yaml
+使用'sudo apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  binutils-riscv64-linux-gnu cpp-13-riscv64-linux-gnu cpp-riscv64-linux-gnu
+  gcc-13-cross-base g
+cc-13-riscv64-linux-gnu gcc-13-riscv64-linux-gnu-base
+  gcc-14-cross-base 
+libasan8-riscv64-cross libatomic1-riscv64-cross
+  libc6-dev-riscv64-cro
+ss libc6-riscv64-cross libgcc-13-dev-riscv64-cross
+
+  libgcc-s1-riscv64-cross libgom
+p1-riscv64-cross 
+libitm1-riscv64-cross
+  libstdc++6-riscv64-cross libubsan1-riscv64-cross
+  linux-libc-dev-riscv64-cross
+建议安装：
+  binut
+ils-doc gcc-13-locales cpp-13-doc cpp-doc
+ gcc-13-doc autoconf automake
+  libtool flex bison gdb-riscv64-linux-gnu gcc
+-doc
+下列【新】软件包将被安装：
+  binutils-riscv64-linux-gnu 
+cpp-13-riscv64-linux-gnu cpp-riscv64-linux-gnu
+  gcc-13-cross-bas
+e gcc-13-riscv64-linux-gnu gcc-13-riscv64-linux-gnu-base
+  gcc-14-cross
+-base gcc-riscv64-linux-gnu libasan8-riscv64-cross
+  libatomic1-riscv64-cross libc6-dev-riscv64-cross libc6-riscv64-cross
+  libgcc-13-dev-riscv64-cros
+s libgcc-s1-riscv64-cross libgom
+p1-riscv64-cross
+  libitm1-riscv64-cross libstdc++6-riscv64-cross libubsan1-riscv64-cross
+  linux-libc-dev-riscv64-cross
+
+升级了 0 个软件包，新安装了 19 个软件包，要卸载 0 个软件包，有 152 个软件包未被升�
+-- [9分57秒] --
+�
+�
+�
+需要下载 40.4
+ MB 
+的归档。
+解压缩后会消耗 137 MB 的额
+外空间。
+您希望继续执行吗？ [Y/n] y
+
+0% [正在连接 
+0% [正在连接 cn.archive.ub
+-- [10分00秒] --
+0% [正在连接 c
+n.archive.ubuntu.com (45.125.0
+.6)]
+
+获取:1 http:/
+/mirrors.tuna.tsinghua.edu.cn/ubuntu noble-updates/main amd64 binutils-riscv64-linux
+-gnu amd64 2.42-4ubuntu2.10 [1,425 kB]
+0% [1 binutils-riscv64-linux-gnu 14.0 kB/1,425 kB 1%] [正在等待报头]
+
+0% [1 binutils-riscv
+获取:2 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-riscv64-linux-gnu-base amd64 13.3.0-6ubuntu2~24.04.1cross1 [51.8 kB]
+获取:3 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 cpp-13-riscv64-linux-gnu amd64 13.3.0-6ubuntu2~24.04.1cross1 [10.0 MB]
+5% [3 cpp-13-riscv64-linux-gnu 94.8 kB/10.0 MB 1%] [正在等待报头]
+5% [3 cpp-13-riscv64-linux-gnu 103 kB/10.0 MB 1%]
+5% [3 cpp-13-riscv64-linux-gnu 103 kB/10.0 MB 1%]
+9% [3 cpp-13-riscv64-linux-gnu 2,126 kB/10.0 MB 21%]
+获取:4 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble/main
+ amd64 cpp-riscv64-linux-gnu amd64 4:13.2.0-7ubuntu1 [5,3
+28 B]
+26
+% [4 cpp-riscv64-linu
+获取:5 http://cn.archive
+.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-cross-base all 13.3.0-6ubuntu2~24.04.1cross1 [46.5 kB]
+获取:6 
+http://cn.archive.ubuntu.com/ubuntu noble-updates/main 
+amd64 gcc-14-cross-base all 14.2.0-4ubuntu2~24.04.1cross1 [46.1 kB]
+获取:7 http://mirrors.tuna.tsinghua.edu.cn/ubuntu no
+ble/
+-- [10分03秒] --
+main amd64 libc6-riscv64-cross all 2.39-0ubuntu8cross1
+ [1,244 kB]
+获取:8 http://cn.archive.ubuntu.com/ubuntu nobl
+e-updates/main amd64 libgc
+c-s1-riscv64-cross all 14.2.0-4ubuntu2~24.04.1cross1 [63.0 kB]
+获取:9 http
+://cn.archive.ubuntu.com/ubuntu noble-updates/main amd
+64 libgomp1-riscv64-cross all 14.2.0-4ubuntu2~24.04.1cross1 [114 kB]
+
+34% [9 libg
+获取:10 http
+://cn.archive.ubuntu.com/ubuntu noble-updates/main 
+amd6
+4 libitm1-riscv64-cross all 14.2.0-4ubuntu2~24.04.1c
+ross1 [32.5 kB]
+
+35% [10 libit
+获取:11 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libatomic1
+-riscv64-cross all 14.2.0-4ubuntu2~24.04.1cross1 [9,606 B]
+36% [11 li
+bato
+mic1-riscv64-cros
+获取:12 http
+://cn.archive.ubuntu.com/ubuntu noble-updates/main amd6
+4 libasan8-riscv64-cross all 14.2.0-4ubuntu2~24.04.1
+cross1 [568 kB]
+获取:13 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libstdc
+++6-riscv64-cross all 14.2.0-4ubuntu2~24.04.1cross1 [751 kB
+]
+获取:14 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libu
+bsan1-riscv64-cross all 14.2.0-4ubuntu2~24.04.1cross1 [229 kB]
+获取:15 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgcc-13-dev-riscv64-cross all 13.3.0-
+6ubuntu2~24.04.1cross1 [1,712 kB]
+获取:16 http://cn.archive.ubuntu.com/ubuntu noble-updates/main amd64 gcc-13-riscv64-linux-gnu amd64 13.3.0
+-6ubuntu2~24.04.1cross1 [19.3 MB]
+48% [16 gcc-13-riscv64-linux-gnu 140 kB/19.3
+ MB 
+54% [16 gcc-13-riscv64-linux-gnu 3,227 kB/19.3 M
+61% [16 gcc-13-riscv64-linux-gnu 6,334 kB/19.3 M
+67% [16 gcc-13-riscv64-linux-gnu 9,410 kB/19.3 M
+73% [16 gcc-13-riscv64-linux-gnu 12.4 MB/19.3 MB
+-- [10分07秒] --
+79% [16 gcc-13-riscv64-linux-gnu 15.5 MB/19.3 MB
+87% [执行中]                         
+获取:17 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble/main amd64 gcc-riscv64-linux-gnu 
+amd64 4:13.2.0-7ubuntu1 [1,212 B]
+获取:18 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble/main amd64 linux-libc-dev-riscv64-c
+ross
+ all 6.8.0-25.25cross1 [1,370 kB]
+89% [18 linux-libc-dev-riscv64-cross 176 kB/1,37
+92% [正在等待报头]                
+获取:19 http://mirrors.tuna.tsinghua.edu.cn/ubuntu noble/main amd64 libc6-dev-riscv64-cro
+ss a
+ll 2.39-0ubuntu8cross1 [3,501 kB]
+92% [19 libc6-dev-riscv64-cross 15.1 kB/3,501 kB
+98% [19 libc6-dev-riscv64-cross 3,116 kB/3,5
+01 k
+100% [执行中]                        
+                        2,399 kB/s 0秒
+
+已下载 40.4 MB，耗时 10秒
+ (4,007 kB/s)
+
+7
+8正在选中未选择的软件
+包 binutils-riscv64-linux-gnu�
+��
+(正在读取数据库 ... 5%
+(正在读取数据库 ... 
+(正在读取数据库 ... 20%
+(正在读取数据库 ... 
+(正在读取数据库 ... 35%
+(正在读取数据库 ... 40%
+(正在读取数据库 ... 
+45%
+(正在读取数据库 ... 50%
+(正在读取数据库 ... 55%
+(正在读取数据库 ... 60%
+(正在读取数据库 ... 65%
+(正在读取数据库 ... 70%
+
+(正在读取数据库 ... 75%
+(正在读取数据库
+(正在读取数据库 ... 系统当前共安装有 231351 个文件和目录。)
+
+准备解压 .../00-binutils-riscv64-linux-gnu_2.42-4ubuntu2.10_am
+d6
+4.deb  ...
+7进度：[  0%] [....................................................
+..
+........] 87进度：[  1%] [......
+........................................................] 
+
+8正在解压 binutils-riscv64-linux-gnu (2.42-4ubuntu2.10) ...
+7进度：[  3%] [#...............
+..............................................] 
+
+8正在选中未选择的软件包 gcc-13-riscv64-linux-gnu-base:amd64。
+准备解压 .../01-gcc-13-riscv64-linux-gnu-base_13.3.0-6ubuntu2~24.04.1cross1_amd64.deb  ...
+7进度：[  4%] [##..........................
+..................................] 
+8正在解压 gcc-13-riscv64-linux-gnu-base:amd64 (13.3.0-6ubuntu2~24.04.1cross1) ...
+7进度：[  5%] [###..
+.........................................................] 
+
+8正在选中未选择的软件包 cpp-13-riscv64-linux-gnu。
+准备解压 .../02-cpp-13-riscv64-linux-gnu_13.3.0-6ubuntu2~24.04.1cross1_amd64.deb  ...
+7进度：[  6%] [####.............
+.............................................] 
+8正在解压 cpp-13-riscv64-linux-gnu (13.3.0-6ubuntu2~24.04.1cross1) ...
+7进度：[  8%] [##
+-- [10分10秒] --
+##..........................................................] 
+
+8正在选中未选择的软件包 cpp-riscv64-linux-gnu。
+准备解压 .../03-cpp-riscv64-linux-gnu_4%3a13.2.0-7ubuntu1_amd64.deb  ...
+7进度：[  9%] [##
+###.........................................................] 
+8正在解压 cpp-riscv64-linux-gnu (4:13.2.0-7ubuntu1) ...
+7进度：[ 10%]
+ [######........................................................] 
+8正在选中未选择的软件包 gcc-13-cross-base。
+准备解压 .../04-gcc-13-cross-base_13.3.0-6ubuntu2~24.04.1cross1_all.deb  ...
+7进度：[ 12%] [#######...
+....................................................] 
+8正在解压 gcc-13-cross-base (13.3.0-6ubuntu2~24.04.1cross1) ...
+7进度：[ 13%]
+ [########......................................................] 
+8正在选中未选择的软件包 gcc-14-cross-base。
+准备解压 .../05-gcc-14-cross-base_14.2.0-4ubuntu2~24.04.1cross1_all.deb  ...
+7进度：[ 14%] [########..
+....................................................] 
+8正在解压 gcc-14-cross-base (14.2.0-4ubuntu2~24.04.1cross1) ...
+7进度：[ 16%] [
+#########.....................................................] 
+
+8正在选中未选择的软件包 libc6-riscv64-cross。
+准备解压 .../06-libc6-riscv64-cross_2.39-0ubuntu8cross1_all.deb  ...
+7进度：[ 17%] [##
+########....................................................] 
+8正在解压 libc6-riscv64-cross (2.39-0ubuntu8cross1) ...
+7进度：[ 18%] [####
+#######...................................................] 
+
+8正在选中未选择的软件包 libgcc-s1-riscv64-cross。
+准备解压 .../07-libgcc-s1-riscv64-cross_14.2.0-4ubuntu2~24.04.1cross1_all.deb  ...
+7进度：[ 19%] [############....
+............................................
+..] 
+8正在解压 libgcc-s1-riscv64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+7进度：[ 21%] [###
+#########..................................................] 
+
+8正在选中未选择的软件包 libgomp1-riscv64-cross。
+准备解压 .../08-libgomp1-riscv64-cross_14.2.0-4ubuntu2~24.04.1cross1_all.deb  ...
+7进度：[ 22%] [#############..
+...............................................] 
+8正在解压 libgomp1-riscv64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+7进度：[ 23%] [##
+############................................................] 
+
+8正在选中未选择的软件包 libitm1-riscv64-cross。
+准备解压 .../09-libitm1-riscv64-cross_14.2.0-4ubuntu2~24.04.1cross1_all.deb  ...
+7进度：[ 25%] [##############
+#...............................................] 
+8正在解压 libitm1-riscv64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+7进度：[ 26%] [#####
+###########..............................................] 
+
+8正在选中未选择的软件包 libatomic1-riscv64-cross。
+准备解压 .../10-libatomic1-riscv64-cross_14.2.0-4ubuntu2~24.04.1cross1_all.deb  ...
+7进度：[ 27%] [################.
+.............................................] 
+8正在解压 libatomic1-riscv64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+7进度：[ 29%] [###
+##############.............................................] 
+
+8正在选中未选择的软件包 libasan8-riscv64-cross。
+准备解压 .../11-libasan8-riscv64-cross_14.2.0-4ubuntu2~24.04.1cross1_all.deb  ...
+7进度：[ 30%] [###############
+###............................................] 
+8正在解压 libasan8-riscv64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+7进度：[ 31%] [#####
+##############...........................................] 
+
+8正在选中未选择的软件包 libstdc++6-riscv64-cross。
+准备解压 .../12-libstdc++6-riscv64-cross_14.2.0-4ubuntu2~24.04.1cross1_all.deb  ...
+7进度：[ 32%] [#################
+###.........................................
+.] 
+
+8正在解压 libstdc++6-riscv64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+7进度：[ 34%] [####
+################..........................................] 
+
+8正在选中未选择的软件包 libubsan1-riscv64-cross。
+准备解压 .../13-libubsan1-riscv64-cross_14.2.0-4ubuntu2~24.04.1cross1_all.deb  ...
+7进度：[ 35%] [################
+#####.........................................] 
+8正在解压 libubsan1-riscv64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+7进度：[ 36%] [########
+##############........................................] 
+
+8正在选中未选择的软件包 libgcc-13-dev-riscv64-cross。
+准备解压 .../14-libgcc-13-dev-riscv64-cross_13.3.0-6ubuntu2~24.04.1cross1_all.deb  ...
+7进度：[ 38%] [####################
+###.......................................] 
+8正在解压 libgcc-13-dev-riscv64-cross (13.3.0-6ubuntu2~24.04.1cross1) ...
+7进度：[ 39%] [#####
+###################......................................] 
+
+8正在选中未选择的软件包 gcc-13-riscv64-linux-gnu。
+准备解压 .../15-gcc-13-riscv64-linux-gnu_13.3.0-6ubuntu2~24.04.1cross1_amd64.deb  ...
+7进度：[ 40%] [#################
+#######......................................] 
+8正在解压 gcc-13-riscv64-linux-gnu (13.3.0-6ubuntu2~24.04.1cross1) ...
+7进度：[ 42%] [##
+#######################.....................................] 
+
+8正在选中未选择的软件包 gcc-riscv64-linux-gnu。
+准备解压 .../16-gcc-riscv64-linux-gnu_4%3a13.2.0-7ubuntu1_amd64.deb  ...
+7进度：[ 43%] [##
+########################....................
+................] 
+
+8正在解压 gcc-riscv64-linux-gnu (4:13.2.0-7ubuntu1) ...
+7进度：[ 44%] [#########
+##################...................................] 
+
+8正在选中未选择的软件包 linux-libc-dev-riscv64-cross。
+准备解压 .../17-linux-libc-dev-riscv64-cross_6.8.0-25.25cross1_all.deb  ...
+7进度：[ 45%] [#########
+###################..................................] 
+8正在解压 linux-libc-dev-riscv64-cross (6.8.0-25.25cross1) ...
+7进度：[ 47%] [####
+########################..................................] 
+
+8正在选中未选择的软件包 libc6-dev-riscv64-cross。
+准备解压 .../18-libc6-dev-riscv64-cross_2.39-0ubuntu8cross1_all.deb  ...
+7进度：[ 48%] [######
+-- [10分13秒] --
+#######################.................................] 
+
+8正在解压 libc6-dev-riscv64-cross (2.39-0ubuntu8cross1) ...
+7进度：[ 49%] [############################
+##................................] 
+8正在设置 gcc-13-riscv64-linux-gnu-base:amd64 (13.3.0-6ubuntu2~24.04.1cross1) ...
+7进度：[ 51%] [###############################.......................
+........] 87进度：[ 52%] [#################
+###############..............................] 
+
+8正在设置 cpp-13-riscv64-linux-gnu (13.3.0-6ubuntu2~24.04.1cross1) ...
+7进度：[ 53%] [#################################.....................
+........] 87进度：[ 55%] [######
+###########################.............................] 
+8正在设置 binutils-riscv64-linux-gnu (2.42-4ubuntu2.10) ...
+7进度：[ 56%] [##################################....................
+........] 
+8正在设置 gcc-14-cross-base (14.2.0-4ubuntu2~24.04.1cross1) ...
+7进度：[ 57%] [###################################...................
+........] 87进度：[ 58%] [####################################..................
+........] 87进度：[ 60%] [##########
+###########################.........................] 
+8正在设置 gcc-13-cross-base (13.3.0-6ubuntu2~24.04.1cross1) ...
+7进度：[ 61%] [#####################################.................
+........] 87进度：[ 62%] [#########
+#############################........................] 
+8正在设置 linux-libc-dev-riscv64-cross (6.8.0-25.25cross1) ...
+7进度：[ 64
+%] [#######################################.............
+..........] 87进度：[ 65%] [##
+######################################......................] 8正在设置 libc6-riscv64-cross (2.39-0ubuntu8cross1) ...
+7进度：[ 66%] [#########################################.............
+........] 87进度：[ 68%] [###############
+##########################.....................] 
+8正在设置 libgomp1-riscv64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+7进度：[ 69
+%] [##########################################..........
+..........] 87进度：[ 70%] [#################
+##########################...................] 8正在设置 libatomic1-riscv64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+7进度：[ 71%] [############################################..........
+........] 87进度：[ 73%] [##
+###########################################.
+................] 
+8正在设置 cpp-riscv64-linux-gnu (4:13.2.0-7ubuntu1) ...
+7进度：[ 74
+%] [#############################################.................] 87进度：[ 75%] [##############
+################################............
+....] 
+8正在设置 libitm1-riscv64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+7进度：[ 77%] [###############################################.......
+........] 87进度：[ 78%] [################################################..............] 
+8正在设置 libgcc-s1-riscv64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+7进度：[ 79%] [#################################################.....
+........] 87进度：[ 81%] [#################################################.............] 
+8正在设置 libc6-dev-riscv64-cross (2.39-0ubuntu8cross1) ...
+7进度：[ 82%] [##################################################............] 87进度：[ 83%] [###############
+####################################...........] 
+8正在设置 libasan8-riscv64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+7进度：[ 84%] [####################################################..........] 87进度：[ 86%] [#################
+####################################.........] 
+8正在设置 libstdc++6-riscv64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+7进度：[ 87%] [#####################################################.
+........] 87进度：[ 88%] [################
+######################################........] 
+8正在设置 libubsan1-riscv64-cross (14.2.0-4ubuntu2~24.04.1cross1) ...
+7进度：[ 90%] [######################################################
+#.......] 87进度：[ 91%] [####################
+####################################......] 
+8正在设置 libgcc-13-dev-riscv64-cross (13.3.0-6ubuntu2~24.04.1cross1) ...
+7进度：[ 92%] [#########################################################.....] 87进度：[ 94%] [#################
+########################################.....] 
+8正在设置 gcc-13-riscv64-linux-gnu (13.3.0-6ubuntu2~24.04.1cross1) ...
+7进度：[ 95%] [######################################################
+####....] 87进度：[ 96%] [##
+#########################################################...] 
+8正在设置 gcc-riscv64-linux-gnu (4:13.2.0-7ubuntu1) ...
+7进度：[ 97%] [######################################################
+######..] 87进度：[ 99%] [###
+-- [10分17秒] --
+##########################################################.] 
+
+8正在处理用于 man-db (2.12.0-4build2) 的触发器 ...
+正在处理用于 libc-bin (2.39-0ubuntu8.8) 的触发器 ...
+
+78
+-- [11分15秒] --
+ailab-os@ailab-os-VMware-
+Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ riscv64-unknown-elf-ld --version
+ailab-os@
+ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ riscv64-unknown-elf-ld --version
+GNU ld (2.42-1ubuntu1+6) 2.42
+Copyright (C) 2024 Free Software Foundation, Inc.
+This program is free software; you may redistribute it under the terms o
+f
+the GNU General Public License version 3 or (at your option) a later version.
+This program has absolutely no warranty.
+
+-- [11分31秒] --
+ailab-os@ailab-os-VMware-V
+a
+ilab-os@a
+ilab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ riscv64-unknown-elf-gcc --version
+riscv64-unknown-elf-gcc (13.2.0-11ubuntu1+12) 13.2.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+This is free software; see the 
+source f
+or copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+-- [17分21秒] --
+ailab-os@ailab-os-VMwa
+ailab-
+os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ qemu-system-riscv64 --version
+QEMU emula
+tor vers
+ion 8.2.2 (Debian 1:8.2.2+ds-0ubuntu1.17)
+Copyright (c) 2003-2023 Fabrice Bellard and the QEMU Project developers
+
+-- [17分57秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ make clean 
+
+make clean 
+rm -f fs.img
+rm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \
+*/*.o */*.d */*.asm */*.sym \
+target/* \
+xv6-user/initcode xv6-user/initcode.out \
+kernel/kernel \
+.gdbinit \
+xv6-user/usys.S \
+xv6-user/_init xv6-user/_sh xv6-user/_cat xv6-user/_echo xv6-user/_grep xv6-user/_ls xv6-user/_kill xv6-user/_mkdir xv6-user/_xargs 
+xv6-user
+/_sleep xv6-user/_find xv6-user/_rm xv6-user/_wc xv6-user/_test xv6-user/_usertests xv6-user/_strace xv6-user/_mv 
+
+-- [18分05秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ make build 
+
+make build 
+riscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffrees
+tanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/printf.o kernel/printf.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffrees
+tanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/kalloc.o kernel/kalloc.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/intr.o kernel/intr.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestand
+ing -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/spinlock.o kernel/spinlock.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffrees
+tanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/string.o kernel/string.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/main.o kernel/main.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany
+ -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/vm.o kernel/vm.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-prot
+ector -DDEBUG  -D QEMU   -c -o kernel/proc.o kernel/proc.c
+riscv64-unknow
+n-elf-gcc    -c -o kernel/swtch.o kernel/swtch.S
+riscv64-unknown-elf-gcc    -c -o kernel/trampoline.o kernel/trampoline.S
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/trap.o kernel/trap.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreesta
+nding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/syscall.o kernel/syscall.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreesta
+nding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/sysproc.o kernel/sysproc.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -
+ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/bio.o kernel/bio.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestandin
+g -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/sleeplock.o kernel/sleeplock.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/file.o kernel/file.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/pipe.o kernel/pipe.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/exec.o kernel/exec.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreesta
+nding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG 
+ -D QEMU   -c -o kernel/sysfile.o kernel/sysfile.c
+riscv64-unknown-elf-gcc    -c -o kernel/kernelvec.o kernel/kernelvec.S
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffre
+estanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/timer.o kernel/timer.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/disk.o kernel/disk.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffre
+estanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/fat32.o kernel/fat32.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/plic.o kernel/plic.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreesta
+nding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/console.o kernel/console.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -f
+no-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/virtio_disk.o kernel/virtio_disk.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -
+I. -fno-stack-protector -DDEBUG  -D QEMU -march=rv64g -nostdinc -I. -Ikernel -c xv6-user/initcode.S -o xv6-user/
+initcode.o
+riscv64-unkn
+own-elf-ld -z max-page-size=40
+96 -N -e start -Ttext 0 -o xv6-user/init
+co
+de.out xv6-user/initcode.o
+riscv64-unknown-elf-ld: warning: xv6-user/initcode.out
+ has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objcopy -S -O 
+binary xv6-user/initcode.out xv6-user/initcode
+riscv64-unknown-elf-objdump -S xv6-user/initcode.o > xv6-user/initcode.asm
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffrees
+tanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/ulib.o xv6-user/ulib.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffre
+estanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU -c -o xv6-user/usys.o xv6-user/usys.S
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestand
+ing -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/printf.o xv6-user/printf.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestandin
+g -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/umalloc.o xv6-user/umalloc.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffrees
+tanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/init.o xv6-user/init.c
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o x
+v6-user/_init xv6-user/init.o xv6-user/ulib.o xv6-user/usys.o xv6
+-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning:
+-- [18分08秒] --
+ xv6-user/_init has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_init > xv6-us
+er/init.asm
+riscv64-unknown-elf-objdump -t xv6-user/_init | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/init.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protec
+tor -DDEBUG  -D QEMU   -c -o xv6-user/sh.o xv6-user/sh.c
+xv6-user/sh.c: In function 'runcmd':
+xv6-user/sh.c:157:1: warning: infinite recursion detected [-Winfinite-recursion]
+  157 | runcmd(struct cmd *cmd)
+      | ^~~~~~
+xv6-user/sh.c:205:5: n
+ote: recursive call
+  205 |     runcmd(rcmd->cmd);
+      |     ^~~~~~~~~~~~~~~~~
+xv6-user/sh.c:225:7: note: recursive call
+  225 |       runcmd(pcmd->left);
+      |       ^~~~~~~~~~~~~~~~~~
+xv6-user/sh.c:232:7: note: recursive call
+  232 |       runcmd(pcmd->right);
+      |       ^~~~~~~~~~~~~~~~~~~
+xv6-user/sh.c:211:7: note: recursive call
+  211 |       runcmd(lcmd->left);
+      |       ^~~~~~~~~~~~~~~~~~
+xv6-user/sh.c:213:5: note: recursive call
+  213 |     runcmd(lcmd->right);
+      |     ^~~~~~~~~~~~~~~~~~~
+xv6-user/sh.c:243:7: note:
+ recursive call
+  243 |       runcmd(bcmd->cmd);
+      |       ^~~~~~~~~~~~~~~~~
+riscv64-unknown-elf-ld -z max-page-size=4
+096 -N -e main -Ttext 0 -o xv6-us
+er/_sh xv6-user/sh.o xv6-user/ulib.o xv6-user/usys.o x
+v6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: wa
+rning: xv6-user/_sh has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_sh > 
+xv6-user/sh.asm
+riscv64-unknown-elf-objdump -t xv6-user/_sh | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/sh.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffre
+estanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/cat.o xv6-user/cat.c
+riscv64-unknown-elf-ld -z max-page-size=409
+6 -N -e main -Ttext 0 -o xv6-user/_cat xv6-user/cat.o xv6-user/ulib.o xv6-user/usys.o xv
+6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warni
+ng: xv6-user/_cat has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_cat > xv6
+-user/cat.asm
+riscv64-unknown-elf-objdump -t xv6-user/_cat | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/cat.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffrees
+tanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/echo.o xv6-user/echo.c
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o xv6-user/_echo xv6-user/
+echo.o xv6-user/ulib.o xv6-user/usys.o xv6
+-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning:
+ xv6-user/_echo has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_echo > xv6-us
+er/echo.asm
+riscv64-unknown-elf-objdump -t xv6-user/_echo | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/echo.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffrees
+tanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/grep.o xv6-user/grep.c
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o x
+v6-user/_
+grep xv6-user/
+grep.o xv6-user/ulib.o xv6-user/usys.o x
+v6
+-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning:
+ xv6-user/_grep has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_grep > xv6-us
+er/grep.asm
+riscv64-unknown-elf-objdump -t xv6-user/_grep | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/grep.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/ls.o xv6-user/ls.c
+riscv64-unknown-elf-ld -z max-page-size=4
+096 -N -e main -Ttext 0 
+-o xv6-user/_ls xv6-user/ls.o xv6-user/ulib.o xv6-user/usys.o
+ x
+v6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: wa
+rning: xv6-user/_ls has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_ls > 
+xv6-user/ls.asm
+riscv64-unknown-elf-objdump -t xv6-user/_ls | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/ls.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffrees
+tanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/kill.o xv6-user/kill.c
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o xv6-user/_kill xv6-user/kill.o xv6-user/ulib.o xv6-user/usys.o x
+v6
+-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning:
+ xv6-user/_kill has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_kill > xv6-us
+er/kill.asm
+riscv64-unknown-elf-objdump -t xv6-user/_kill | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/kill.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreesta
+nding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/mkdir.o xv6-user/mkdir.c
+riscv64-unknown-elf-ld -z max-page-size=4096 -N
+ -e main -Ttext 0 -o xv6
+-user/_mk
+dir xv6-user/mk
+dir.o xv6-user/ulib.o xv6-user/usys.o xv
+6-
+user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv
+6-user/_mkdir has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_mkdir > xv6-user/
+mkdir.asm
+riscv64-unknown-elf-objdump -t xv6-user/_mkdir | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/mkdir.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreesta
+nding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/xargs.o xv6-user/xargs.c
+riscv64-unknown-elf-ld -z max-page-size=4096 -N
+ -e main -Ttext 0 -o xv6
+-user/_xa
+rgs xv6-user/xa
+rgs.o xv6-user/ulib.o xv6-user/usys.o xv
+6-
+user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv
+6-user/_xargs has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_xargs > xv6-user/
+xargs.asm
+riscv64-unknown-elf-objdump -t xv6-user/_xargs | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/xargs.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreesta
+nding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/sleep.o xv6-user/sleep.c
+riscv64-unknown-elf-ld -z max-page-size=4096 -N
+ -e main -Ttext 0 -o xv6
+-user/_sleep xv6-user/sl
+eep.o xv6-user/ulib.o xv6-user/usys.o xv6-
+user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv
+6-user/_sleep has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_sleep > xv6-user/
+sleep.asm
+riscv64-unknown-elf-objdump -t xv6-user/_sleep | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/sleep.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffrees
+tanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/find.o xv6-user/find.c
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o x
+v6-user/_
+find xv6-user/find.o xv6-user/ulib.o xv6-user/usys.o xv6
+-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning:
+ xv6-user/_find has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_find > xv6-us
+er/find.asm
+riscv64-unknown-elf-objdump -t xv6-user/_find | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/find.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/rm.o xv6-user/rm.c
+riscv64-unknown-elf-ld -z max-page-size=4
+096 -N -e main -Ttext 0 
+-o xv6-us
+er/_rm xv6-u
+ser/rm.o xv6-user/ulib.o xv6-user/usys.o
+ x
+v6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: wa
+rning: xv6-user/_rm has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_rm > 
+xv6-user/rm.asm
+riscv64-unknown-elf-objdump -t xv6-user/_rm | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/rm.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/wc.o xv6-user/wc.c
+riscv64-unknown-elf-ld -z max-page-size=4
+096 -N -e main -Ttext 0 
+-o xv6-us
+er/_wc xv6-u
+ser/wc.o xv6-user/ulib.o xv6-user/usys.o
+ x
+v6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: wa
+rning: xv6-user/_wc has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_wc > 
+xv6-user/wc.asm
+riscv64-unknown-elf-objdump -t xv6-user/_wc | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/wc.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffrees
+tanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/test.o xv6-user/test.c
+riscv64-unknown-elf-ld -z max-page-size=4096 
+-N -e main -Ttext 0 -o xv6-user/_
+test xv6-user/test.o xv6-user/ulib.o xv6-user/usys.o x
+v6
+-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning:
+ xv6-user/_test has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_test > xv6-us
+er/test.asm
+riscv64-unknown-elf-objdump -t xv6-user/_test | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/test.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -f
+no-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/usertests.o xv6-user/usertests.c
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main
+ -Ttext 0 -o xv6-user/_usertests xv6-user/usertests.
+o xv6-user/ulib.o xv6-user/usys.o xv6-user
+/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv6-user/_user
+tests has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_usertests > xv6-user/usertests.as
+m
+riscv64-unknown-elf-objdump -t xv6-user/_usertests | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/usertests.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestand
+ing -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/strace.o xv6-user/strace.c
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -
+e main -Ttext 0 -o xv6-user/_strace xv6-user/strace.o xv6-user/ulib.o xv6-user/usys.o xv6-u
+ser/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv6-u
+ser/_strace has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_strace > xv6-user/str
+ace.asm
+riscv64-unknown-elf-objdump -t xv6-user/_strace | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/strace.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ff
+reestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/mv.o xv6-user/mv.c
+riscv64-unknown-elf-ld -z max-page-size=4
+096 -N -e main -Ttext 0 
+-o xv6-us
+er/_mv xv6-u
+ser/mv.o xv6-user/ulib.o xv6-user/usys.o
+ x
+v6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: wa
+rning: xv6-user/_mv has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_mv > 
+xv6-user
+/mv.asm
+riscv64-unknown-elf-objdump -t xv6-user/_mv | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/mv.sym
+
+-- [20分45秒] --
+ailab-os@
+ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ mkfs.vfat --help
+
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/
+xv6-ai-labs-km/lab0$ mkfs.vfat --help
+mkfs.fat 4.2 (2021-01-31)
+Usage: mkfs.vfat [OPTIONS] TARGET [BLOCKS]
+Create FAT filesystem in TARGET, which ca
+n be a block device or file. Use only
+up to BLOCKS 1024 byte blocks if spec
+ified. With the -C option, file TARGET will be
+created with a siz
+e of 1024 bytes times BLOCKS, which must be specified.
+
+Options:
+  -a              Disable alignment of data structures
+  -A       
+       Toggle Atari variant of the filesystem
+  -b SECTOR       Select SECTOR
+ as location of the FAT32 backup boot sector
+  -c              Check device for bad blocks before creating the filesystem
+  -C    
+          Create file TARGET then create filesystem in it
+  -D NUMBER       Write BIOS drive number NUMBER to
+ boot sector
+  -f COUNT        Create COUNT file allocation tables
+  -F SIZE         Select FAT size SIZE (12, 16 or 32)
+  -
+g GEOM         Select disk geometry: heads/sectors_per_track
+  -h NUMBE
+R       Write hidden sectors NUMBER to boot sector
+
+  -i VOLID        Set volume ID to VOLID (a 32 bit hex
+adecimal number)
+  -I              Ignore and disable safety checks
+  -l FILENAME     Read bad blocks list from FILENAME
+  -m FILENAME     Repl
+ace default error message in boot block with contents of FILENAME
+  -M TYPE       
+  Set media type in boot sector to TYPE
+  --mbr[=y|n|a]   Fill (fake) 
+MBR table with one partition which spans whole disk
+  -n LABEL      
+  Set volume name to LABEL (up to 11 characters long)
+  --codepage=N    use D
+OS codepage N to encode label (default: 850)
+  -r COUNT        Make room for at least COUNT entries in the root directory
+  -R 
+COUNT        Set minimal number of reserved sectors to COUNT
+  -s COUNT        Set number of sectors per cluster to
+ COUNT
+  -S SIZE         Select a sector size of SIZE (a power of two, at 
+least 512)
+  -v              Verbose execution
+  --variant=TYPE  Select var
+iant TYPE of filesystem (standard or Atari)
+
+  --invariant     Use constants for 
+randomly generated or time based values
+  --offset
+=SECTOR Write the filesystem at a specific sector into the device file.
+  --help          Show this help message and exit
+
+-- [20分59秒] --
+ailab-o
+s@ailab-os-VMware-Vi
+rtual-Platform:~/桌面/xv6-ai-labs-km/la
+b0$ make fsmake fs
+making fs image...
+
+输入了 512+0 块记录
+
+输出�
+� 512+0 块记录
+268435456 字节 (268 MB, 256 MiB) 已复制，0.400993 s，669 MB/s
+mkfs.fat 4.2 (2021-01-31)
+
+-- [21分22秒] --
+ailab-
+os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ ls -lh fs.img
+
+ailab-os@ailab-os-VMware-Virtual-Platform:
+~/
+桌面/xv6-ai-labs-km/lab0$ ls -lh fs.img
+-rw-rw-r-- 1 ailab-os ailab-os 256M  9月 14 22:08 fs.img
+
+-- [25分19秒] --
+a
+ilab-os@a
+i
+lab-os-VMwar
+e
+-Virtua
+l-Platform
+:~/
+�
+��面/xv6-ai-
+labs-km/lab0
+
+$ make run
+
+make run
+
+OpenS
+BI v1.
+3
+   ____           
+         _____ ___
+_
+ _____
+
+/ __ \   
+               / ____|  _ \_   
+_|
+ | |  | |_ __   _
+__ _ __ | (___ | |_) || |
+ | |  | | '_ \ / _ \ '_ \ \___ \|  _ < | |
+
+|
+
+|
+_
+_
+|
+
+|
+
+|
+_
+)
+ |  __/ | | |____) 
+|
+
+|
+_
+)
+
+||
+
+|
+_
+
+\
+_
+_
+_
+_
+/
+|
+ .
+__
+/
+
+\
+_
+_
+_
+|
+_
+|
+
+|_
+|
+_
+_
+_
+_
+_/|
+_
+_
+_
+/
+__
+_
+_
+_
+|
+
+|
+
+|
+
+ |
+_|
+
+P
+l
+a
+t
+f
+o
+r
+m
+ N
+a
+m
+e
+
+:
+
+r
+i
+s
+c
+v
+-
+vi
+r
+tio,qemu
+Platform Fea
+t
+u
+re
+s
+
+: medel
+e
+g
+
+Platform HART Count
+
+:
+ 2
+Pla
+t
+f
+or
+m
+ I
+PI Device     
+  :
+ aclint-mswi
+Platform Time
+r D
+ev
+i
+c
+e
+
+:
+ aclint
+-
+m
+t
+i
+mer @ 100
+00
+0
+00
+H
+z
+
+Platform Console Dev
+i
+c
+e
+
+:
+
+u
+a
+r
+t
+8250
+Pla
+tf
+or
+m
+
+HSM Devi
+c
+e
+
+    : ---
+Plat
+f
+o
+rm
+
+P
+MU Devic
+e
+
+     : ---
+Platf
+or
+m 
+Re
+bo
+o
+t 
+De
+vi
+c
+e
+
+: sifive_te
+s
+t
+
+P
+latform Shutdo
+w
+n
+
+D
+e
+v
+i
+c
+e  : sif
+iv
+e
+_tes
+t
+
+P
+l
+a
+t
+f
+o
+r
+m
+
+S
+u
+s
+p
+e
+n
+d
+
+D
+e
+v
+ic
+e
+
+ :
+
+-
+-
+-
+
+P
+l
+at
+f
+o
+r
+m
+
+CP
+P
+C
+
+D
+e
+vi
+ce
+
+:
+
+-
+-
+-
+
+F
+i
+r
+m
+w
+a
+r
+e
+
+B
+a
+s
+e
+
+: 
+0
+x
+8
+0
+00
+0
+0
+0
+0
+
+F
+i
+r
+m
+w
+a
+re
+
+S
+iz
+e 
+
+: 332
+
+K
+B
+Fir
+m
+w
+a
+re RW
+
+O
+ffset 
+
+     : 0x40000
+
+Fi
+rm
+wa
+r
+e 
+R
+W 
+Si
+z
+e 
+
+  : 76 KB
+
+Fi
+r
+m
+w
+are Heap Offse
+t 
+
+:
+ 0x4a00
+0
+
+Firmw
+a
+r
+e 
+He
+ap
+ Size   
+
+: 3
+6
+ KB (tot
+a
+l
+)
+, 2 KB
+
+(
+reserved), 9 KB (u
+sed), 24 KB (free)
+
+F
+i
+rm
+ware Scra
+t
+c
+h
+
+Size    
+
+:
+
+4
+096
+ B (total), 760 B (use
+d)
+, 
+3
+3
+3
+6
+
+B
+ (
+free)
+Runti
+m
+e
+
+S
+B
+I
+
+Version    
+
+:
+
+1.
+0
+
+Domain0 N
+a
+me
+
+:
+ root
+Domain0
+ Bo
+ot HART         : 0
+Do
+m
+a
+i
+n
+0 HARTs             :
+ 0*,1*
+Domain0 Region00          : 0x0000000002000000-0x000000000200ffff M: (I,R,W) S/U: ()
+Domain0 Region01         
+ : 0
+x
+0
+0
+0
+0000080
+0
+4
+0
+0
+00-0x0
+0
+0000008005ff
+ff
+ M: (R,W
+)
+
+S
+/
+U
+: ()
+Domain0 Reg
+i
+o
+n
+0
+2
+
+ :
+ 0x
+0000000080000000-
+0
+x
+00
+00
+0
+0
+00
+8
+0
+03f
+ff
+f M: (R,X) S/U: 
+()
+Domain0 Region03      
+
+: 0x0
+0
+0
+00000
+0
+0
+0
+0000
+0
+-
+0xfffff
+f
+f
+fffffff
+ff M: (R,
+W
+,
+X)
+
+S
+/U: (R,W,X)
+
+D
+o
+ma
+i
+n0 Nex
+t
+
+A
+d
+dress      : 0x
+00
+00
+0
+0
+0
+08
+0
+200000
+Domai
+n
+0
+
+N
+e
+x
+t
+ Arg1  
+
+     : 0x000000
+0087e00000
+Domain0 Next
+ Mod
+e
+
+: S-mode
+Domain0 
+S
+y
+s
+R
+es
+e
+t
+
+     : 
+y
+e
+s
+
+Dom
+a
+i
+n0 Sys
+S
+u
+spend 
+
+   : yes
+
+Boot HART ID      
+
+:
+ 0
+Bo
+o
+t
+
+HA
+R
+T Doma
+i
+n
+
+         : roo
+t
+
+B
+o
+o
+t
+ HART Priv Ver
+s
+io
+n    : v1.12
+
+B
+oot HART Base ISA        
+: 
+rv
+6
+4
+i
+mafd
+c
+h
+Boot HART 
+I
+S
+A 
+Ex
+te
+n
+s
+ions
+
+: time,s
+s
+t
+c
+
+Boot HART PMP
+
+C
+o
+u
+n
+t
+
+     : 1
+6
+
+Boot 
+H
+A
+RT PMP Granularit
+y
+
+:
+
+4
+
+Boot HAR
+T
+
+P
+M
+P
+ Address Bits
+: 
+54
+Boot HA
+R
+T MHPM Count  
+    : 16
+
+B
+o
+ot HART MIDELEG         :
+ 0
+x
+0
+00
+0
+0
+000
+00
+00
+1
+66
+6
+
+B
+o
+o
+t 
+H
+A
+R
+T MEDEL
+E
+G
+
+:
+
+0
+x0000000000f0b
+5
+0
+9
+  (`-.  
+
+      (`-.               
+
+       .-'
+)
+
+   ('-.
+
+_  
+ .
+-
+')
+
+(
+ OO ). 
+
+ _(OO  )
+_
+
+       .(  
+OO) 
+   _(
+
+ OO)  ( '.
+(
+ O
+O )_
+
+(_/.  
+\
+_
+)
+-
+.
+
+,-
+-
+(_
+/   ,. \ 
+
+,
+-
+-.          
+
+(
+_)---\_) 
+
+(
+,
+-
+-----.  ,--.   
+,
+-
+-
+.
+)
+
+,--. ,--.  
+
+\ 
+
+`
+.'
+
+/
+
+\   \   /(__/ /
+
+.
+'
+
+.-
+')
+
+ '  .-. 
+
+'
+
+ |  .---'  |   `
+.'
+
+|
+
+|
+  | | 
+
+|
+
+  \    
+ /
+\
+
+ \   \ /   /
+
+.
+
+/ -.
+
+   _(  OO)   ,
+| 
+
+|
+
+|  |   |  |      |      
+
+|
+  |  | | .-')
+
+\
+
+\
+ |
+    \
+
+  '   
+/
+, | .
+-
+.
+
+'
+  (,-----
+-
+.
+
+(_|
+
+| |  |  (|  '
+--. 
+  | 
+
+|'.'|  |  |  |_|( OO 
+)
+
+  .'    \_)    \ 
+
+/
+_
+_
+)
+'
+ \  |  |  '---
+-
+-
+-
+' 
+
+|  | |  |
+
+|
+  .--'
+
+|
+
+|
+   |  |  | 
+
+|
+
+|
+ `-' /
+ /  .'.  \      \
+
+/
+
+\
+
+`'  /          
+    '  '-'
+  '-. |  
+`--
+-
+.
+
+|  |   
+|
+
+|
+ ('  '-'(_
+.
+-
+'
+
+'
+--'   '--
+'
+
+   `-'      `-
+--
+-'
+
+`
+--
+--
+-
+'-
+-
+'
+
+`-----
+-
+'
+
+`--'   `--
+'
+
+`-----'
+
+h
+a
+rt 0 
+en
+t
+er 
+m
+ain()...
+
+kernel
+_e
+n
+d
+:
+ 0x00000
+0
+0
+080226000, ph
+ystop: 0x00
+00
+00
+00806000
+0
+0
+
+kinit
+kvminit
+
+k
+vm
+i
+n
+i
+t
+h
+art
+time
+ri
+ni
+t
+
+t
+r
+a
+pini
+t
+h
+art
+p
+ro
+c
+i
+ni
+t
+
+plicinit
+pl
+i
+c
+i
+n
+i
+t
+h
+a
+r
+t
+
+virtio_disk_init
+
+b
+init
+fileinit
+us
+er
+in
+i
+t
+
+h
+art 0 init 
+d
+o
+n
+e
+
+[fat32_
+i
+n
+it]
+
+enter!
+
+[FAT32 init]b
+y
+t
+s_
+p
+er_sec: 
+5
+1
+2
+
+[FAT32 i
+n
+it]root_clu
+s: 2
+[
+FAT32 
+i
+n
+i
+t
+]s
+e
+c
+_
+p
+e
+r
+_
+-- [27分07秒] --
+c
+l
+us: 
+1
+
+[
+F
+AT32
+
+i
+n
+it]
+-- [27分14秒] --
+f
+a
+t
+_c
+n
+t:
+
+-- [27分17秒] --
+2
+
+[
+F
+A
+-- [27分32秒] --
+T
+3
+2
+ i
+n
+i
+t
+]
+f
+at
+_sz: 
+4033
+
+[FAT
+32
+ init]f
+irst_data
+_s
+ec
+: 
+8098
+
+ini
+t:
+
+s
+t
+a
+r
+t
+i
+n
+g 
+s
+h
+
+-> / $ x ax  ax  ls
+
+[
+e
+x
+e
+c
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+l
+s
+
+n
+o
+t
+
+fo
+u
+n
+d
+
+[
+-- [27分44秒] --
+e
+x
+ec
+]
+
+r
+e
+ach
+
+b
+a
+d
+
+[
+ex
+e
+c
+]
+
+/
+b
+i
+n
+/
+
+
+
+
+
+
+
+
+
+
+
+
+l
+s
+ no
+t
+
+f
+ou
+n
+d
+
+[
+e
+x
+e
+c
+]
+
+r
+e
+a
+c
+h
+
+b
+a
+d
+
+e
+x
+e
+c
+
+
+
+
+
+
+
+ls
+
+f
+a
+i
+le
+d
+
+-
+>
+ /
+
+$
+
+l
+s /bin
+
+.
+
+D
+I
+R 
+
+0
+
+.
+.
+
+D
+I
+R
+
+0
+
+c
+a
+t
+
+F
+I
+L
+E
+
+2
+2
+1
+5
+2
+
+e
+c
+h
+o
+
+F
+I
+L
+E
+
+2
+1
+0
+8
+8
+
+f
+i
+n
+d
+
+F
+I
+L
+E
+
+2
+3
+28
+8
+
+gr
+e
+p 
+
+ F
+I
+L
+E	
+2
+4
+6
+80
+
+i
+n
+i
+t 
+
+F
+I
+L
+E
+	2
+1
+7
+6
+0
+
+k
+i
+l
+l
+
+F
+IL
+E
+
+2
+09
+7
+6
+
+l
+s 
+
+F
+I
+L
+E	
+2
+3
+3
+0
+4
+
+m
+kd
+i
+r
+
+ F
+I
+L
+E
+
+2
+10
+7
+2
+
+m
+v
+
+ F
+I
+L
+E
+	2
+2
+8
+72
+
+r
+m 
+
+F
+IL
+E
+
+21
+0
+6
+4
+
+s
+h 
+
+F
+I
+LE
+
+4
+3
+6
+96
+
+s
+l
+e
+ep
+
+F
+IL
+E
+
+21
+0
+4
+8
+
+s
+t
+r
+a
+c
+e 
+
+F
+I
+LE
+
+2
+14
+2
+4
+
+t
+e
+s
+t
+
+FI
+L
+E
+	2
+09
+2
+0
+
+u
+s
+e
+rt
+e
+s
+t
+s
+
+-- [27分52秒] --
+ FI
+L
+E	
+11
+749
+6
+
+w
+c  
+
+  F
+ILE
+
+2
+2
+9
+3
+6
+
+x
+a
+r
+g
+s
+
+ FI
+LE	2
+27
+5
+2
+
+-> 
+/ 
+$
+ c
+at
+ RE
+AD
+M
+E
+
+x
+v
+6
+ i
+s a 
+re
+-im
+ple
+me
+n
+t
+a
+ti
+on
+
+of
+
+D
+e
+n
+n
+i
+s
+
+R
+i
+t
+c
+hi
+e
+'
+s
+
+a
+n
+d
+ K
+e
+n 
+T
+h
+o
+m
+p
+so
+n
+'
+s
+
+U
+n
+ix
+
+V
+er
+s
+i
+o
+n
+
+6 
+(v
+6)
+.  
+xv
+6
+
+l
+oo
+s
+e
+l
+y
+
+f
+o
+l
+l
+o
+ws 
+t
+he
+
+st
+ru
+ct
+ur
+e
+
+a
+n
+d
+ s
+t
+y
+l
+e
+
+of
+
+v
+6
+,
+
+b
+ut
+
+i
+s
+
+i
+m
+p
+l
+e
+m
+e
+n
+t
+e
+d
+
+f
+o
+r
+
+a
+
+m
+od
+e
+r
+n
+
+RI
+S
+C-
+V
+
+mu
+l
+ti
+p
+r
+o
+c
+es
+s
+o
+r
+ u
+s
+i
+n
+g
+
+A
+N
+S
+I
+
+C
+.
+
+A
+C
+K
+N
+O
+W
+L
+E
+D
+G
+M
+E
+N
+T
+S
+
+x
+v
+6
+
+i
+s
+
+in
+s
+p
+i
+r
+e
+d 
+b
+y
+
+John Lions's Com
+me
+ntary 
+on UN
+IX 6th
+ Edit
+ion (P
+eer
+
+to Pee
+r Com
+municat
+ions; ISBN: 1-57398-013-7; 1st edition (June 14,
+2000)). Se
+e 
+a
+lso
+
+https
+://pdos.csa
+i
+l.mi
+t.edu/
+6.828/,
+ wh
+i
+ch
+
+provid
+es pointer
+s to on
+-line 
+resourc
+es for
+ v6.
+
+The fol
+low
+ing 
+people ha
+ve mad
+e c
+on
+tri
+butions: 
+Russ C
+ox (c
+ontex
+t switch
+ing,
+
+locki
+ng),
+ Cliff F
+rey (MP
+), Xiao
+ Yu (MP)
+, Nickol
+ai Z
+eldo
+vich
+,
+ an
+d Austi
+n
+Cleme
+nts
+.
+
+We a
+re al
+so grat
+eful fo
+r the
+ bug 
+repo
+rts and 
+p
+atch
+es con
+tribu
+ted b
+y
+Sila
+s Boyd
+-Wick
+izer, A
+nt
+on Bu
+rtsev, Da
+n C
+ross, 
+Cody Cutl
+er, Mik
+e CA
+T,
+Tej C
+hajed, A
+sami 
+Doi,
+ eyal
+z800,
+ ,
+ Nelson
+ Elhage,
+ Saar E
+tting
+er, 
+Alice
+
+Ferraz
+zi, Nat
+hani
+el F
+ilardo, P
+eter
+ Froeh
+lich, Y
+akir
+ Go
+aron,Shi
+va
+m
+Ha
+n
+da, 
+Bryan 
+Hen
+ry, ja
+ichenhengj
+ie,
+ Jim Huang
+, Alexa
+nder 
+Kapshuk,
+Anders Kaseorg, keh
+a
+o9
+5
+, 
+Wo
+lfg
+an
+g Kel
+ler,
+ Jonat
+han Kimmi
+tt, Eddie
+
+Kohler
+, Au
+stin Liew, I
+mbar
+ Marin
+escu, Y
+a
+nd
+ong Ma
+o
+, 
+Matan Shab
+tay,
+
+Hitoshi M
+itake, Car
+mi 
+Meri
+movich
+,
+ M
+a
+rk Morriss
+e
+y, m
+tasm,
+ Joel 
+N
+i
+d
+er,
+
+Gre
+g Pric
+e, Ayan
+
+Shafqat, Eld
+ar Sehayek, Yon
+gm
+in
+g Shen, Fumi
+ya
+Sh
+igemi
+tsu, Taka
+hiro, Ca
+m Tenny, tyfkda, Rafael Ubal, Warre
+n T
+oomey,
+
+Stephen 
+Tu, Pa
+blo Ventu
+ra, 
+Xi Wa
+ng, Keiichi 
+Watan
+ab
+e, N
+icolas
+W
+olovick
+, 
+wxdao, G
+ran
+t Wu, J
+indon
+g Z
+ha
+n
+g,
+ Icenow
+y
+
+Z
+h
+eng,
+
+a
+n
+d
+ Zou C
+hang
+
+Wei.
+
+The cod
+e in the
+ fil
+es th
+at cons
+titute
+ xv6 is
+C
+op
+yr
+ight
+
+2006-
+2020 Fr
+ans Kaa
+shoek
+, Robert 
+Morris, 
+a
+nd Ru
+ss C
+o
+x
+.
+
+ER
+ROR 
+REPOR
+TS
+
+Plea
+se send
+ errors 
+and su
+ggest
+ions
+ to Fran
+s Kaa
+shoek
+ and 
+Robert M
+orris
+
+(ka
+ashoek,rt
+m@mit
+.edu
+). Th
+e main 
+purpose
+ of x
+v6 is as
+ a 
+teac
+hing
+op
+erat
+in
+g sys
+tem for M
+IT's 6
+.S081
+, so 
+we a
+re 
+more i
+nterest
+ed in
+
+simpl
+ific
+ations 
+and cla
+rificati
+ons th
+an ne
+w featur
+es.
+
+BUILD
+ING AN
+D RUNNIN
+G XV6
+
+You w
+il
+l need a
+ RISC-V
+ "newli
+b" tool 
+chain f
+rom
+
+http
+s://gi
+thub.c
+om/r
+iscv/r
+iscv-gnu
+-
+to
+olch
+ain, an
+d
+ q
+em
+u 
+-- [29分42秒] --
+c
+o
+mp
+i
+le
+d 
+f
+or
+
+r
+is
+c
+-- [30分04秒] --
+v6
+4
+-s
+oftm
+mu
+.
+
+On
+c
+e
+
+t
+hey
+ a
+r
+e 
+i
+n
+s
+ta
+ll
+e
+d
+,
+
+a
+n
+d
+
+i
+n
+
+yo
+-- [30分09秒] --
+u
+r
+
+s
+h
+ell
+
+s
+e
+a
+rc
+h
+-- [30分13秒] --
+ p
+a
+-- [30分20秒] --
+t
+h, you can run
+ "m
+ake qe
+m
+u
+"
+.
+-> / $ 
+
+
+x
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+x
+=
+
+
+[
+e
+xec]
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+n
+ot
+
+found
+
+[e
+xec]
+ rea
+ch 
+b
+a
+d
+
+[
+e
+x
+e
+c]
+ /
+b
+in
+/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+n
+ot
+ found
+[exec] reach bad
+exec  failed
+-> / $ 

@@ -7,26 +7,22 @@ import json
 import os
 import re
 import stat
-import sys
 import tempfile
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import quote
 
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from output_layout import PROCESS_TOOL, mirror_path, write_text_pair, unlink_pair
-
-TIMELINE_DIRECTORY = ".实验过程清洗工具"
+TIMELINE_DIRECTORY = "实验过程时间线"
 TIMELINE_MANIFEST = ".timeline_manifest.json"
 TIMELINE_TOOL = "replay_term_qa.timeline"
 TIMELINE_SCHEMA_VERSION = 1
-TIMELINE_CACHE_FORMAT_VERSION = 2
+TIMELINE_CACHE_FORMAT_VERSION = 1
 LAB_KEYS = tuple(f"lab{i}" for i in range(9)) + ("other",)
 README_BLOCK_START = "<!-- replay_term_qa:timeline:start -->"
 README_BLOCK_END = "<!-- replay_term_qa:timeline:end -->"
 _ARTIFACT_RE = re.compile(
-    rf"^(lab[0-8]|其他)/{PROCESS_TOOL}/实验过程时间线\.(json|md)$"
+    rf"^{re.escape(TIMELINE_DIRECTORY)}/timeline_(?:lab[0-8]|other)\.(?:json|md)$"
 )
 
 
@@ -59,12 +55,22 @@ def has_link_component(path):
 
 
 def _atomic_write(path, text):
-    write_text_pair(path, text)
-
-
-def timeline_paths(lab):
-    folder = Path("其他" if lab == "other" else lab) / PROCESS_TOOL
-    return folder / "实验过程时间线.json", folder / "实验过程时间线.md"
+    path = Path(path)
+    if has_link_component(path):
+        raise ValueError(f"拒绝覆盖符号链接：{path}")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w", encoding="utf-8", newline="\n", dir=path.parent,
+            prefix=".timeline-", suffix=".tmp", delete=False,
+        ) as stream:
+            temporary = Path(stream.name)
+            stream.write(text)
+        os.replace(temporary, path)
+    finally:
+        if temporary and temporary.exists():
+            temporary.unlink()
 
 
 def _stream_sha256(path):
@@ -103,14 +109,13 @@ def _recoverable_invalid_manifest_artifacts(output, source):
     artifacts = []
     json_labs = set()
     markdown_labs = set()
-    for candidate in sorted(output.glob("*/" + PROCESS_TOOL + "/实验过程时间线.*")):
-        match = _ARTIFACT_RE.fullmatch(candidate.relative_to(output).as_posix())
+    for candidate in sorted(timeline_dir.iterdir(), key=lambda path: path.name):
+        match = re.fullmatch(r"timeline_(lab[0-8]|other)\.(json|md)", candidate.name)
         if not match:
             continue
         if is_link_like(candidate) or not candidate.is_file():
             return None
         lab, extension = match.groups()
-        lab = "other" if lab == "其他" else lab
         if extension == "json":
             try:
                 document = json.loads(candidate.read_text(encoding="utf-8"))
@@ -126,7 +131,7 @@ def _recoverable_invalid_manifest_artifacts(output, source):
             json_labs.add(lab)
         else:
             markdown_labs.add(lab)
-        artifacts.append(candidate.relative_to(output).as_posix())
+        artifacts.append((Path(TIMELINE_DIRECTORY) / candidate.name).as_posix())
     if not json_labs or not markdown_labs.issubset(json_labs):
         return None
     return artifacts
@@ -170,8 +175,8 @@ def _timeline_artifacts_are_complete(output, artifacts):
     grouped = {}
     for relative in artifacts:
         path = Path(relative)
-        match = _ARTIFACT_RE.fullmatch(path.as_posix())
-        if not match:
+        match = re.fullmatch(r"timeline_(lab[0-8]|other)\.(json|md)", path.name)
+        if not match or path.parent.as_posix() != TIMELINE_DIRECTORY:
             return False
         grouped.setdefault(match.group(1), set()).add(match.group(2))
     return bool(grouped) and all(kinds == {"json", "md"} for kinds in grouped.values())
@@ -185,8 +190,7 @@ def _timeline_artifact_hashes_are_valid(output, artifacts, hashes):
         if not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest):
             return False
         try:
-            other = mirror_path(Path(output) / relative)
-            if _stream_sha256(Path(output) / relative) != digest or (other is not None and (has_link_component(other) or not other.is_file() or _stream_sha256(other) != digest)):
+            if _stream_sha256(Path(output) / relative) != digest:
                 return False
         except OSError:
             return False
@@ -298,12 +302,11 @@ def _remove_registered_artifacts(output, artifacts, keep=()):
             not isinstance(relative, str)
             or not _ARTIFACT_RE.fullmatch(relative)
             or relative in keep
-            or has_link_component(output / relative)
-            or ((output / relative).exists() and not (output / relative).is_file())
+            or not _timeline_artifact_is_valid(output, relative)
         ):
             continue
         target = output / Path(relative)
-        unlink_pair(target)
+        target.unlink()
         removed.append(relative)
     return removed
 
@@ -428,7 +431,9 @@ def _source_link(path, label, info):
     if not path:
         return "未知"
     try:
-        return f"[{label}]({Path(path).resolve().as_uri()})"
+        base = Path(info["output"]) / TIMELINE_DIRECTORY
+        relative = Path(os.path.relpath(Path(path), base)).as_posix()
+        return f"[{label}]({quote(relative)})"
     except (OSError, ValueError, TypeError):
         return _markdown_text(path)
 
@@ -631,7 +636,8 @@ def write_student_timeline(info, result, incremental=None):
             "events": events,
             "errors": errors,
         }
-        json_relative, md_relative = timeline_paths(lab)
+        json_relative = Path(TIMELINE_DIRECTORY) / f"timeline_{lab}.json"
+        md_relative = Path(TIMELINE_DIRECTORY) / f"timeline_{lab}.md"
         _atomic_write(output / json_relative, json.dumps(document, ensure_ascii=False, indent=2) + "\n")
         _atomic_write(output / md_relative, _render_markdown(info, lab, events, stats, errors))
         wanted.extend((json_relative.as_posix(), md_relative.as_posix()))
@@ -720,7 +726,7 @@ def update_readme_timeline_block(readme_path, timeline_results):
     block = [
         README_BLOCK_START,
         "## 实验过程时间线", "",
-        "两种分类视图的每个 Lab、学生叶子下，`实验过程清洗工具/` 提供 `实验过程时间线.json`、`实验过程时间线.md` 与 `简洁实验过程时间线.md`。Shell 命令、Claude 用户问题与 Claude 回复分别作为事件，并保留录像、终端、工作目录、相对时间、原始定位和不确定性说明。", "",
+        "每名学生的 `实验过程时间线/` 按 lab 提供对应的 JSON 规范数据和 Markdown 阅读版。Shell 命令、Claude 用户问题与 Claude 回复分别作为事件，并保留录像、终端、工作目录、相对时间、原始定位和不确定性说明。", "",
         "时间线中的时间是文本在终端画面中的可观察显示时间，不代表精确提交、执行开始、模型生成开始或回复完成时间。同一 lab 内跨终端排序使用带时区的绝对时间；相同或接近的时间不证明严格先后。", "",
         "录像起始时钟只有秒级精度；显示到毫秒仅用于保留 timing 相对偏移，不代表绝对时间具有毫秒精度。Claude 回复最终正文完整可见时间可能晚于下一轮问题，它不是回复完成时间。", "",
         "JSON 中 `observed_at` 为带时区的显示时间，`elapsed_seconds` 为原录像累计偏移；`source.observation` 保留原 timing 行号、变化画面编号和解压字节区间（零基、左闭右开）。画面编号不等于 timing 行号，观察帧的位置也不代表正文全部字符都来自这一帧。`final_text_first_observed_at` 仅记录最终回复正文首次完整可见时间。无法确定的值保留为 null，原因见 `uncertainty`。", "",

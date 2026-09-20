@@ -1,0 +1,28 @@
+==== labtracker 终端转录 ====
+录像: 20260919T161039-4465.out.gz   时长: 1分07秒   原始大小: 1093B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtu
+al
+-Platform
+:~/桌面/xv6-ai-lab
+s-km/lab0
+$ ^[[200~riscv64-unknown-elf-gcc -O1 -c hello.c -o hello_rv.o~
+riscv64-unknown-elf-gcc：未找到命令
+
+-- [0分10秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:
+~/桌面/xv6-ai-lab
+s-km/lab0$ riscv64-unknown-elf-gcc -O1
+ -c hello.c
+ -o hello_rv.oriscv64-unknown-elf-gcc -O1 -c hello.c -o hello_r
+v.o
+cc1: fatal error: hello.c: No such file or directory
+compilation terminated.
+
+-- [1分07秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-lab
+s-km/lab0$ 
+exit
+

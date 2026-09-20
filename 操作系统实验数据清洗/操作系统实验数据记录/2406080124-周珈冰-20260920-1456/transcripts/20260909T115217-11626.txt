@@ -1,0 +1,101 @@
+==== labtracker 终端转录 ====
+录像: 20260909T115217-11626.out.gz   时长: 2分14秒   原始大小: 2064B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-
+os-VMware-Virtual-Platform:~/.claude$ ^[[200~ping api.deepseek.com
+ping：未找到命令
+
+-- [0分10秒] --
+ailab
+-os@ailab-os-VMware-Virtual-Platform:~/.claude$ curl -v https://api.deepseek.com/anthropic~
+
+* Could not resolve host: api.deepseek.com
+* Closing connection
+curl: (6) Could not resolve host: api.deepseek.com
+
+-- [1分29秒] --
+ailab-os@ailab-os-VMware-Virtu
+al-Platform:~/.claude$ ping api.deepseek.com
+curl -v https://api.deepseek.com/anthropic
+ailab-os@ail
+ab
+-os-VMwar
+e-Virtual-Platform:~/.claude$ ping api.de
+epseek.com
+curl -v https://api.deepseek.com/
+anthropic
+p
+i
+n
+g
+:
+
+a
+p
+i
+.
+d
+e
+ep
+see
+k.c
+om:
+ �
+��
+�解
+析
+�
+��
+�暂
+�
+��
+��
+��误
+* Could not resolve host: api.deepseek.com
+* Closing connection
+curl: (6) Could not resolve host: api.deepseek.com
+
+-- [1分38秒] --
+ailab-os@ailab-os-VMware-Virtu
+al-Platform:~/.claude$ ping api.deepseek.com
+ailab-os@ail
+ab-os-VMwar
+e-Virt
+ual-Platform:~/.claude$ ping api.de
+ep
+seek.com
+curl -v https://api.deepseek.co
+m/
+anthropic
+
+p
+i
+n
+g
+:
+ a
+pi.
+de
+epseek
+.co
+m
+: 域�
+���
+�
+�析�
+��
+��暂
+时
+性�
+��误
+*
+ Could not resolve host: api.deepseek.com
+* Closing connection
+curl: (6) Could not resolve host: api.deepseek.com
+
+-- [2分14秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/.claude$ 
+exit
+

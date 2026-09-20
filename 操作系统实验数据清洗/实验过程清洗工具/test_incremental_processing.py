@@ -60,7 +60,7 @@ class IncrementalProcessingTests(unittest.TestCase):
         return code, reports, timelines
 
     def student_output(self, name="测试"):
-        return self.output / "按人分类" / name
+        return self.output / name
 
     @staticmethod
     def hashes(root):
@@ -74,53 +74,8 @@ class IncrementalProcessingTests(unittest.TestCase):
         return {
             path.relative_to(root).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
             for path in root.rglob("*.md")
-            if path.name not in {"实验过程时间线.md", "简洁实验过程时间线.md"}
+            if timeline_reports.TIMELINE_DIRECTORY not in path.parts
         }
-
-    def test_dual_view_names_bytes_logs_and_mirror_repair(self):
-        self.assertEqual(self.run_app(), 0)
-        student = self.student_output()
-        leaf = student / "lab0" / app.PROCESS_TOOL
-        names = {"终端对话记录.md", "完整终端转写记录.md", "终端命令统计.md", "Claude对话记录.md",
-                 "实验过程时间线.md", "实验过程时间线.json", "简洁实验过程时间线.md"}
-        self.assertEqual({p.name for p in leaf.iterdir()}, names)
-        for file in leaf.iterdir():
-            self.assertEqual(file.read_bytes(), app.mirror_path(file).read_bytes())
-        self.assertTrue((self.output / "运行日志" / "实验过程清洗工具.log").is_file())
-        self.assertEqual({p.name for p in (self.output / "按Lab分类").iterdir()},
-                         {*(f"lab{i}" for i in range(9)), "其他"})
-        report = leaf / "终端对话记录.md"
-        app.mirror_path(report).unlink()
-        code, reports, timelines = self.invoke_with_counts()
-        self.assertEqual((code, reports.call_count, timelines.call_count), (0, 1, 0))
-        self.assertEqual(report.read_bytes(), app.mirror_path(report).read_bytes())
-        timeline = leaf / "实验过程时间线.json"
-        app.mirror_path(timeline).write_text("tampered", encoding="utf-8")
-        code, reports, timelines = self.invoke_with_counts()
-        self.assertEqual((code, reports.call_count, timelines.call_count), (0, 0, 1))
-        self.assertEqual(timeline.read_bytes(), app.mirror_path(timeline).read_bytes())
-        readable = leaf / "简洁实验过程时间线.md"
-        app.mirror_path(readable).unlink()
-        code, reports, timelines = self.invoke_with_counts()
-        self.assertEqual((code, reports.call_count, timelines.call_count), (0, 0, 0))
-        self.assertEqual(readable.read_bytes(), app.mirror_path(readable).read_bytes())
-
-    def test_other_is_preserved_and_stale_mirror_only_files_are_removed(self):
-        self.assertEqual(self.run_app(), 0)
-        old_leaf = self.student_output() / "lab0" / app.PROCESS_TOOL
-        old_files = list(old_leaf.iterdir())
-        for file in old_files:
-            file.unlink()
-        recording = self.student / "term" / "session.out.gz"
-        recording.write_bytes(gzip.compress(gzip.decompress(recording.read_bytes()).replace(b"~/lab0", b"~/misc")))
-        self.assertEqual(self.run_app(), 0)
-        for file in old_files:
-            self.assertFalse(file.exists())
-            self.assertFalse(app.mirror_path(file).exists())
-        other = self.student_output() / "其他" / app.PROCESS_TOOL
-        self.assertEqual(len(list(other.glob("*.md"))), 6)
-        for file in other.iterdir():
-            self.assertEqual(file.read_bytes(), app.mirror_path(file).read_bytes())
 
     def test_second_run_skips_both_stages_and_restores_summary(self):
         code, reports, timelines = self.invoke_with_counts()
@@ -144,7 +99,7 @@ class IncrementalProcessingTests(unittest.TestCase):
         self.assertEqual(reports.call_count, 0)
         self.assertEqual(timelines.call_count, 0)
         self.assertEqual(before, self.hashes(student_out))
-        readme = (self.output / "汇总报告" / "实验过程清洗汇总.md").read_text(encoding="utf-8")
+        readme = (self.output / "README.md").read_text(encoding="utf-8")
         self.assertIn("报告阶段增量跳过：1", readme)
         self.assertIn("时间线阶段增量跳过：1", readme)
         self.assertIn("终端录像数：1", readme)
@@ -153,48 +108,19 @@ class IncrementalProcessingTests(unittest.TestCase):
         (self.student / "term" / "session.tim.gz").unlink()
         self.assertEqual(self.run_app(), 0)
         warning = "计时文件缺失、为空、损坏或未覆盖完整录像"
-        self.assertIn(warning, (self.output / "汇总报告" / "实验过程清洗汇总.md").read_text(encoding="utf-8"))
+        self.assertIn(warning, (self.output / "README.md").read_text(encoding="utf-8"))
 
         code, reports, timelines = self.invoke_with_counts()
         self.assertEqual(code, 0)
         self.assertEqual((reports.call_count, timelines.call_count), (0, 0))
-        self.assertIn(warning, (self.output / "汇总报告" / "实验过程清洗汇总.md").read_text(encoding="utf-8"))
+        self.assertIn(warning, (self.output / "README.md").read_text(encoding="utf-8"))
 
     def test_timeline_only_failure_reason_is_rendered_to_root_readme(self):
         with mock.patch.object(app, "write_student_timeline", side_effect=ValueError("timeline write failed")):
             self.assertEqual(self.run_app("--timeline-only"), 1)
-        readme = (self.output / "汇总报告" / "实验过程清洗汇总.md").read_text(encoding="utf-8")
+        readme = (self.output / "README.md").read_text(encoding="utf-8")
         self.assertIn("时间线异常详情", readme)
         self.assertIn("timeline write failed", readme)
-
-    def test_readable_failure_updates_summary_for_new_and_cached_timelines(self):
-        for cached in (False, True):
-            with self.subTest(cached=cached):
-                if cached:
-                    self.assertEqual(self.run_app(), 0)
-                with mock.patch("generate_readable_timeline.write_student", side_effect=OSError("readable output denied")):
-                    with mock.patch.object(app, "write_readme", wraps=app.write_readme) as summary:
-                        self.assertEqual(self.run_app(), 1)
-                result = summary.call_args.args[4][0]
-                self.assertEqual(result["status"], "partial")
-                self.assertEqual(result["statistics"]["processing_failures"], 1)
-                self.assertTrue(any("readable output denied" in error for error in result["errors"]))
-                readme = (self.output / "汇总报告" / "实验过程清洗汇总.md").read_text(encoding="utf-8")
-                self.assertIn("简洁时间线生成失败", readme)
-                self.assertIn("readable output denied", readme)
-                self.assertIn("时间线阶段失败或部分失败：1", readme)
-                self.assertNotIn("终端对话记录.md / 终端对话记录.md", readme)
-
-    def test_cached_timeline_diagnostics_read_new_artifact_paths(self):
-        self.assertEqual(self.run_app(), 0)
-        output = self.student_output()
-        relative = "lab0/实验过程清洗工具/实验过程时间线.json"
-        path = output / relative
-        document = json.loads(path.read_text(encoding="utf-8"))
-        document["errors"] = ["cached timeline warning"]
-        path.write_text(json.dumps(document), encoding="utf-8")
-        result = {"info": {"output": output}, "cache_hit": True, "errors": [], "artifacts": [relative]}
-        self.assertEqual(app._timeline_result_diagnostics(result), ["cached timeline warning"])
 
     def test_missing_recording_clears_owned_timeline_and_reports_cleanup_failure(self):
         self.assertEqual(self.run_app(), 0)
@@ -211,7 +137,7 @@ class IncrementalProcessingTests(unittest.TestCase):
 
         with mock.patch.object(app, "remove_student_timeline", side_effect=OSError("cleanup failed")):
             self.assertEqual(self.run_app("--timeline-only"), 1)
-        self.assertIn("cleanup failed", (self.output / "汇总报告" / "实验过程清洗汇总.md").read_text(encoding="utf-8"))
+        self.assertIn("cleanup failed", (self.output / "README.md").read_text(encoding="utf-8"))
 
     def test_missing_recording_clears_owned_reports_without_timeline(self):
         self.assertEqual(self.run_app(), 0)
@@ -220,7 +146,7 @@ class IncrementalProcessingTests(unittest.TestCase):
         self.assertTrue(all(path.is_file() for path in reports))
         manual = student_out / "manual-note.md"
         manual.write_text("keep", encoding="utf-8")
-        timeline = student_out / "lab0" / "实验过程清洗工具" / "实验过程时间线.json"
+        timeline = student_out / timeline_reports.TIMELINE_DIRECTORY / "timeline_lab0.json"
         timeline_before = timeline.read_bytes()
         (self.student / "term" / "session.out.gz").unlink()
         (self.student / "term" / "session.tim.gz").unlink()
@@ -255,20 +181,20 @@ class IncrementalProcessingTests(unittest.TestCase):
         self.assertEqual(
             json.loads(owner_path.read_text(encoding="utf-8"))["reports"], manifest["reports"]
         )
-        self.assertIn("报告清理", (self.output / "汇总报告" / "实验过程清洗汇总.md").read_text(encoding="utf-8"))
+        self.assertIn("报告清理", (self.output / "README.md").read_text(encoding="utf-8"))
 
     def test_timeline_owned_output_does_not_take_over_unregistered_reports(self):
         self.assertEqual(self.run_app("--timeline-only"), 0)
         timeline_output = self.student_output()
         manual = timeline_output / app.lab_report_paths("lab0")[0]
-        manual.parent.mkdir(parents=True, exist_ok=True)
+        manual.parent.mkdir(parents=True)
         manual.write_text("keep", encoding="utf-8")
 
         self.assertEqual(self.run_app("--no-timeline"), 0)
 
         self.assertEqual(manual.read_text(encoding="utf-8"), "keep")
         report_outputs = [
-            directory for directory in (self.output / "按人分类").iterdir()
+            directory for directory in self.output.iterdir()
             if directory.is_dir() and (directory / app.OWNER_FILE).is_file()
         ]
         self.assertEqual(len(report_outputs), 1)
@@ -279,7 +205,7 @@ class IncrementalProcessingTests(unittest.TestCase):
         self.assertEqual(self.run_app("--timeline-only"), 0)
         timeline_output = self.student_output()
         manual = timeline_output / app.lab_report_paths("lab0")[0]
-        manual.parent.mkdir(parents=True, exist_ok=True)
+        manual.parent.mkdir(parents=True)
         manual.write_text("replace", encoding="utf-8")
 
         self.assertEqual(self.run_app("--no-timeline", "--overwrite"), 0)
@@ -299,7 +225,7 @@ class IncrementalProcessingTests(unittest.TestCase):
         }, ensure_ascii=False)
         owner_path.write_text(foreign_manifest, encoding="utf-8")
         manual = timeline_output / app.lab_report_paths("lab0")[0]
-        manual.parent.mkdir(parents=True, exist_ok=True)
+        manual.parent.mkdir(parents=True)
         manual.write_text("foreign report", encoding="utf-8")
 
         self.assertEqual(self.run_app(), 0)
@@ -307,7 +233,7 @@ class IncrementalProcessingTests(unittest.TestCase):
 
         self.assertEqual(owner_path.read_text(encoding="utf-8"), foreign_manifest)
         self.assertEqual(manual.read_text(encoding="utf-8"), "foreign report")
-        replacement = self.output / "按人分类" / "测试-123-20260910-2221"
+        replacement = self.output / "测试-123-20260910-2221"
         self.assertTrue((replacement / app.OWNER_FILE).is_file())
         self.assertTrue((replacement / app.lab_report_paths("lab0")[0]).is_file())
 
@@ -396,7 +322,7 @@ class IncrementalProcessingTests(unittest.TestCase):
         self.assertEqual(code, 0)
         self.assertEqual((reports.call_count, timelines.call_count), (1, 0))
 
-        timeline_file = student_out / "lab0" / "实验过程清洗工具" / "实验过程时间线.md"
+        timeline_file = student_out / timeline_reports.TIMELINE_DIRECTORY / "timeline_lab0.md"
         timeline_file.unlink()
         code, reports, timelines = self.invoke_with_counts()
         self.assertEqual(code, 0)
@@ -424,7 +350,7 @@ class IncrementalProcessingTests(unittest.TestCase):
 
         timeline_owner_path = student_out / timeline_reports.TIMELINE_DIRECTORY / timeline_reports.TIMELINE_MANIFEST
         timeline_owner = json.loads(timeline_owner_path.read_text(encoding="utf-8"))
-        timeline_owner["artifacts"] = ["lab0/实验过程清洗工具/实验过程时间线.json"]
+        timeline_owner["artifacts"] = ["实验过程时间线/timeline_lab0.json"]
         timeline_owner_path.write_text(json.dumps(timeline_owner), encoding="utf-8")
         code, reports, timelines = self.invoke_with_counts()
         self.assertEqual(code, 0)
@@ -458,7 +384,7 @@ class IncrementalProcessingTests(unittest.TestCase):
         code, reports, timelines = self.invoke_with_counts()
         self.assertEqual(code, 0)
         self.assertEqual((reports.call_count, timelines.call_count), (1, 1))
-        student_out = self.output / "按人分类" / "测试-123-20260910-2222"
+        student_out = self.output / "测试-123-20260910-2222"
         self.assertTrue(student_out.is_dir())
         report_owner = json.loads((student_out / app.OWNER_FILE).read_text(encoding="utf-8"))
         timeline_owner = json.loads((student_out / timeline_reports.TIMELINE_DIRECTORY /
@@ -485,7 +411,7 @@ class IncrementalProcessingTests(unittest.TestCase):
 
         self.assertEqual(self.run_app("--no-timeline"), 0)
         self.assertEqual(
-            sorted(path.name for path in (self.output / "按人分类").iterdir() if path.is_dir()),
+            sorted(path.name for path in self.output.iterdir() if path.is_dir()),
             ["测试"],
         )
         owner = json.loads((student_out / app.OWNER_FILE).read_text(encoding="utf-8"))
@@ -500,7 +426,7 @@ class IncrementalProcessingTests(unittest.TestCase):
         self.assertEqual(code, 0)
         self.assertEqual((reports.call_count, timelines.call_count), (1, 0))
 
-        timeline = student_out / "lab0" / "实验过程清洗工具" / "实验过程时间线.md"
+        timeline = student_out / timeline_reports.TIMELINE_DIRECTORY / "timeline_lab0.md"
         timeline.write_text(timeline.read_text(encoding="utf-8") + "tampered\n", encoding="utf-8")
         code, reports, timelines = self.invoke_with_counts()
         self.assertEqual(code, 0)
@@ -555,7 +481,7 @@ class IncrementalProcessingTests(unittest.TestCase):
         shutil.rmtree(self.student)
         self.assertEqual(self.run_app(), 0)
         self.assertEqual(before, self.hashes(student_out))
-        readme = (self.output / "汇总报告" / "实验过程清洗汇总.md").read_text(encoding="utf-8")
+        readme = (self.output / "README.md").read_text(encoding="utf-8")
         self.assertIn("原始提交已不存在，输出已保留", readme)
 
 

@@ -1,0 +1,12 @@
+==== labtracker 终端转录 ====
+录像: 20260912T201831-2866.out.gz   时长: 1分20秒   原始大小: 454B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ labt-register
+labt-register：未找到命令
+
+-- [1分20秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

@@ -1,0 +1,1027 @@
+==== labtracker 终端转录 ====
+录像: 20260911T220936-6460.out.gz   时长: 14分30秒   原始大小: 5836B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Pl
+atform:~$ 马克make run
+make: *** 没有规则可制作目标“run”。 停止。
+
+-- [7分07秒] --
+a
+i
+-- [7分10秒] --
+l
+a
+b
+-
+-- [7分15秒] --
+o
+s
+@
+-- [7分39秒] --
+a
+-- [7分42秒] --
+i
+l
+a
+b
+-- [7分53秒] --
+-os-VMware-
+Virtual-Platform:~$ cd`~/zhuomian
+
+桌面/xv6-ai-labs-km/lab0
+bash: cd~/桌面/xv6-ai-labs-km/lab0: 没有那个文件或目录
+
+-- [8分11秒] --
+ailab-os@ailab-os-V
+Mware-Vi
+rtual-Platform:~$ make run
+make: *** 没有规则可制作目标“run”。 停止。
+
+-- [11分47秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ cd ~/zhu桌面/xv6-ai-labs-km/lab0
+
+-- [12分00秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ make run
+
+OpenSBI v1.3
+   ____                    _____ ____ _
+____
+
+ / __ \                  / ____|  _ \_   _|
+ | |  | |_ __   ___ _ __ | (___ | |_) || |
+ | |  | | '_ \ / _ \ '_ \ \___ \|  _ < | |
+
+ | 
+|__| |
+
+|
+_)
+
+|
+  __/ | 
+|
+
+|_
+__
+_
+) |
+ |
+_
+) 
+||
+
+|_
+
+\
+__
+_
+_
+/
+|
+
+.
+__
+/ \
+__
+_
+|_
+|
+ |
+_|
+_
+__
+__
+/
+|
+_
+__/
+__
+_
+__
+|
+
+ |
+ |
+
+|_|
+
+P
+la
+t
+f
+o
+r
+m
+ Na
+me
+
+: 
+ris
+cv
+-vi
+r
+tio
+,q
+emu
+
+Platform Features    
+
+ :
+
+me
+de
+l
+eg
+
+P
+l
+at
+f
+or
+m H
+AR
+T
+
+C
+ount
+
+:
+
+2
+
+Pl
+a
+t
+f
+o
+r
+m
+
+I
+P
+I
+ D
+e
+vi
+ce
+
+: 
+ac
+li
+nt
+-m
+sw
+i
+
+Pl
+at
+fo
+r
+m T
+im
+er 
+De
+v
+i
+c
+e 
+
+: a
+cl
+in
+t
+-mt
+i
+me
+r
+ @
+ 1
+0
+00
+0
+0
+00
+Hz
+
+Pl
+a
+tfo
+rm
+ Co
+n
+sole Devi
+c
+e  
+
+: u
+ar
+t
+8
+2
+5
+0
+
+Pl
+at
+fo
+rm
+
+HSM
+
+Dev
+ic
+e 
+
+ : 
+-
+--
+
+Pl
+a
+tf
+or
+m
+ PM
+U De
+vi
+ce
+
+    : 
+-
+--
+
+Pl
+a
+t
+f
+o
+r
+m 
+Re
+bo
+ot
+ D
+e
+vic
+e 
+
+ : 
+s
+ifi
+ve
+_
+t
+es
+t
+
+P
+l
+a
+t
+f
+or
+m
+ Sh
+ut
+dow
+n 
+De
+v
+ic
+e 
+ :
+
+si
+fi
+v
+e
+_t
+es
+t
+
+Pl
+a
+t
+for
+m 
+S
+u
+sp
+e
+n
+d
+ D
+e
+vic
+e
+   : -
+-
+-
+
+P
+l
+a
+t
+f
+o
+r
+m
+
+C
+P
+PC
+ D
+e
+vi
+ce
+
+:
+ -
+-
+-
+
+Fi
+r
+m
+w
+a
+r
+e
+
+B
+a
+s
+e
+
+          : 0x80000000
+Firmware Size             : 332 KB
+Firmware RW Offset        : 0x40000
+Firmware RW Size          : 76 KB
+Firmware Heap Offset      : 0x4a000
+Firmware Heap Size        : 36 KB (total), 2 KB (reserved), 9 KB (used), 24
+
+K
+B
+
+(
+f
+r
+e
+e
+)
+
+F
+i
+r
+m
+w
+a
+r
+e
+
+S
+c
+r
+a
+t
+c
+h
+
+S
+i
+z
+e 
+
+:
+
+4
+0
+9
+6
+
+B
+
+(
+t
+o
+t
+a
+l
+)
+,
+
+7
+6
+0
+
+B
+
+(u
+se
+d
+)
+,
+
+3
+3
+3
+6
+
+B
+
+(
+f
+r
+e
+e
+)
+
+R
+u
+n
+t
+i
+m
+e
+
+S
+B
+I
+
+V
+e
+rs
+i
+o
+n
+
+:
+
+1
+.
+0
+
+D
+o
+m
+a
+i
+n
+0
+
+N
+a
+m
+e
+
+:
+
+r
+o
+o
+t
+
+D
+o
+m
+a
+i
+n
+0
+
+B
+o
+o
+t
+
+H
+A
+R
+T
+
+:
+
+0
+
+D
+o
+main0 HARTs             : 0*,1*
+Domain0 Region00          : 0x000
+00
+0
+0
+0
+0
+2
+0
+0
+0
+0
+0
+0
+-0
+x
+0
+0
+0
+0
+0
+0
+0
+0
+0
+2
+0
+0
+f
+f
+f
+f
+
+M
+:
+
+(
+I
+,
+R
+,
+W
+)
+
+S
+/
+U
+:
+
+(
+)
+
+D
+o
+m
+a
+i
+n
+0
+
+R
+e
+g
+i
+o
+n
+0
+1
+
+     : 0x00
+00000
+0
+8
+0
+0
+40000-0x000000008005ffff M: (R,W) S/U: ()
+Domain0 Region02          : 0x0000000080000000-0x000000008003ffff M: (R,X) S/U: ()
+Domain0 Region03          : 0x0000000000000000-0xffffffffffffffff M: (R,W,X) S/U: (R,W,X)
+Domain0 Next Address      : 0x0000000080200000
+Domain0 Next Arg1         : 0x0000000087e00000
+Domain0 Next Mode         : S-mode
+Domain0 SysReset          : yes
+Domain0 SysSuspend        : yes
+
+Boot HART ID              : 0
+Boot HART Domain          : root
+Boot HART Priv Version    : v1.12
+Boot HART Base ISA        : rv64imafdch
+Boot HART ISA Extensions  : time,sstc
+Boot HART PMP Count       : 16
+Boot HART PMP Granularity : 4
+Boot HART PMP Address Bits: 54
+Boot HART MHPM Count      : 16
+Boot HART MIDELEG         : 0x0000000000001666
+Boot 
+H
+ART MEDELEG         : 0x0000000000f0b509
+  (`-.            (`-.                            .-')       ('-.    _   .-')
+ ( OO ).        _(OO  )_                        .(  OO)    _(  OO)  ( '.( OO )_ 
+(_/.  \_)-. ,--(_/   ,. \  ,--.                (_)---\_)  (,------.  ,--.   ,--.) ,--. ,--.  
+ \  `.'  /  \   \   /(__/ /  .
+'
+
+.
+-
+'
+)
+
+'
+
+.
+-
+.
+
+'
+
+|
+
+.
+-
+--'  |   `.'   |
+
+|
+
+|
+
+|
+
+|
+
+\
+
+/
+\
+
+\
+
+\
+
+/
+
+/
+
+.
+
+/
+
+-
+.
+
+_
+(
+
+O
+O
+)
+
+,
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
+.
+-
+'
+)
+
+\
+
+\
+
+|
+
+\
+
+'
+
+/
+,
+
+|
+
+.
+-
+.
+
+'
+
+(
+,
+-
+-
+-
+-
+-
+-
+.
+
+(
+_
+|
+
+|
+
+|
+
+|
+
+ (|  '--.   |  |
+'.'|  |  |  |_|( OO )
+
+  .' 
+
+\_) 
+
+\
+
+/
+_
+_
+)
+'
+
+\
+
+|
+
+|
+
+'
+-
+-
+-
+-
+-
+-
+'
+
+|
+
+|
+ |  |   |  .--'   |  |   |  |  |  | | `-' /
+ /  .'.  \      \   /    \  `'  /              '  '-'  '-. |  `---.  |  |   |  | ('  '-'(_
+.
+-
+'
+
+'
+-
+-
+'
+
+'
+-
+-
+'
+
+`
+-
+'
+
+`
+-
+-
+-
+-
+'
+
+`
+-
+-
+-
+-
+-
+'-
+-
+'
+
+`
+-
+-
+--
+--'  `--' 
+  `--'   `-----'
+hart 0 enter main()...
+kernel_end: 0x0000000080226000, phystop: 0x0000000080600000
+kinit
+kv
+minit
+kvminithart
+timerinit
+trapinithart
+pro
+cinit
+plicinit
+plicinithart
+virtio_disk_i
+nit
+binit
+fileinit
+userinit
+hart 0 init done
+[fat32_init] enter!
+
+[FAT32 init]byts_per_sec: 512
+
+[F
+A
+T
+3
+2
+
+i
+n
+i
+t
+]
+r
+oot_clu
+s: 2
+[
+FAT32 init]s
+e
+c_per_
+-- [13分50秒] --
+c
+l
+u
+s
+:
+
+-- [13分55秒] --
+1
+
+-- [14分06秒] --
+[FA
+T
+32 init]fat_cnt: 2
+[FAT32 init]fat_sz: 4033
+[FAT32 init]first_data_sec: 8098
+init: starting sh
+-> / $ make b
+-- [14分16秒] --
+u
+i
+ld
+
+[exec] make not found
+
+[exec] reach bad
+[exec] /bin/make not found
+
+[
+e
+x
+e
+c
+]
+
+r
+e
+a
+c
+h 
+b
+a
+d
+
+e
+x
+e
+c
+
+m
+a
+k
+e
+
+f
+a
+i
+l
+ed
+-> / $ ls
+bin      
+
+                  DIR 	0
+
+R
+E
+A
+D
+M
+E
+
+F
+I
+L
+E
+
+2
+0
+5
+9
+
+c
+a
+t
+
+F
+I
+L
+E
+
+2
+2
+1
+5
+2
+
+e
+c
+h
+o
+
+F
+I
+L
+E
+
+2
+1
+0
+8
+8
+
+f
+i
+n
+d
+
+F
+I
+L
+E
+
+2
+3
+2
+8
+8
+
+g
+r
+e
+p
+
+          FILE	24680
+
+i
+n
+i
+t
+
+             F
+I
+L
+E	21760
+
+kill     
+
+                       FILE	20976
+ls                               FILE	23304
+mkdir                            FILE	21072
+mv                               FILE	22872
+rm                               FILE	21064
+sh                               FILE	43696
+sleep                            FILE	21048
+strace                           FILE	21424
+test                             FILE	20920
+
+usertests      
+
+-- [14分30秒] --
+F
+I
+L
+E
+
+1
+1
+7
+49
+6
+
+wc 
+                              FILE	22936
+xargs                            FILE	22752
+-> / $ init: starting sh
+-> / $ 

@@ -1,0 +1,4083 @@
+==== labtracker 终端转录 ====
+录像: 20260916T160410-3252.out.gz   时长: 25分10秒   原始大小: 27937B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+
+-- [1分04秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ cd ~/zhu桌面/xv6-ai-labs-km/lab0
+
+-- [2分21秒] --
+a
+ilab
+-
+o
+-- [2分25秒] --
+s
+@
+a
+i
+-- [2分28秒] --
+lab-os-VMwa
+f-gcc --vssersion
+riscv64-unknown-elf-gcc (13.2.0-11ubuntu1+12) 13.2.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+This is free software; see the 
+source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+-- [3分03秒] --
+ailab-os
+4 --version
+QEMU emula
+tor version 8.2.2 (Debian 1:8.2.2+ds-0ubuntu1.17)
+Copyright (c) 2003-2023 Fabrice Bellard and the QEMU Project developers
+
+-- [3分25秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/
+xv6-ai-labs-km/lab0$ mkfs.vfat --help
+mkfs.fat 4.2 (2021-01-31)
+Usage: mkfs.vfat [OPTIONS] TARGET [BLOCKS]
+Create FAT filesystem in TARGET, which can be a block device or file. Use only
+up to BLOCKS 1024 byte blocks if specified. With the -C option, file TARGET will be
+created with a size of 1024 bytes times BLOCKS, which must be specified.
+
+Options:
+  -a              Disable alignment of data structures
+  -A              Toggle Atari variant of the filesystem
+  -b SECTOR       Select SECTOR as location of the FAT32 backup boot sector
+  -c              Check device for bad blocks before creating the filesystem
+  -C              Create file TARGET then create filesystem in it
+  -D NUMBER       Write BIOS drive number NUMBER to boot sector
+  -f COUNT        Create COUNT file allocation tables
+  -F SIZE         Select FAT size SIZE (12, 16 or 32)
+  -g GEOM         Select disk geometry: heads/sectors_per_track
+  -h NUMBER       Write hidden sectors NUMBER to boot sector
+  -i VOLID        Set volume ID to VOLID (a 32 bit hexadecimal number)
+  -I              Ignore and disable safety checks
+  -l FILENAME     Read bad blocks list from FILENAME
+  -m FILENAME     Replace default error message in boot block with contents of FILENAME
+  -M TYPE         Set media type in boot sector to TYPE
+  --mbr[=y|n|a]   Fill (fake) MBR table with one partition which spans whole disk
+  -n LABEL        Set volume name to LABEL (up to 11 characters long)
+  --codepage=N    use DOS codepage N to encode label (default: 850)
+  -r COUNT        Make room for at least COUNT entries in the root directory
+  -R COUNT        Set minimal number of reserved sectors to COUNT
+  -s COUNT        Set number of sectors per cluster to COUNT
+  -S SIZE         Select a sector size of SIZE (a power of two, at least 512)
+  -v              Verbose execution
+  --variant=TYPE  Select variant TYPE of filesystem (standard or Atari)
+
+  --invariant     Use constants for randomly generated or time based values
+  --offset
+=SECTOR Write the filesystem at a specific sector into the device file.
+  --help          Show this help message and exit
+
+-- [3分56秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ make build
+
+-- [4分06秒] --
+ailab-os@ailab-os-
+-- [4分14秒] --
+VM
+ware-Virtual-Platfor
+m:~/桌面/xv6-ai-labs-km/lab0$ sudo make fs
+[sudo] ailab-os 的密码： 
+making fs image...
+输入了 512+0 块记录
+
+输出了 512+0 块记录
+268435456 字节 (268 MB, 256 MiB) 已复制，0.80631 s，333 MB/s
+mkfs.fat 4.2 (2021-01-31)
+
+-- [4分24秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ make run
+
+qemu-system-riscv64: -device virtio-blk-
+device,drive=x0,bus=virtio-mmio-bus.0: Could not open 'fs.img': Permission denied
+make: *** [Makefile:152：run] 错误 1
+
+-- [4分54秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ 
+
+-- [7分23秒] --
+a
+ilab
+-os@
+ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ ^[[200~ls -lh target/~
+
+-- [7分38秒] --
+ls -lh target/ls -lh target/
+总计 904K
+-rwxrwxr-x 1 ailab-os ailab-os 245K  9月 16 16:08 kernel
+-r
+w-rw-r-- 1 ailab-os ailab-os 645K  9月 16 16:08 kernel.asm
+-rw-rw-r-- 1 ailab-os ailab-os 7.6K  9月 16 16:08 kernel.sym
+
+-- [9分04秒] --
+ailab-os@ailab-os-VMware-Vi
+rtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ 
+cd ~/桌面/xv6-ai-labs-km/lab0
+sudo chown $USER:$USER fs.img
+ls -lh fs.img
+ailab-os@ailab-os-VMware-Virtual-Platform:~
+/桌面/xv6-ai-labs-km/lab0$ cd ~/桌面/xv6-ai-labs-k
+m/lab0
+
+sudo chown $USER:$USER fs.img
+ls -lh fs.img
+-rw-r--r-- 1 ailab-os ailab-os 256M  9月 16 16:08 fs.img
+
+-- [9分23秒] --
+ail
+ab
+-
+os
+@a
+il
+ab
+-o
+s-V
+Mw
+a
+r
+e-
+V
+i
+r
+tu
+a
+l-
+P
+la
+t
+f
+o
+rm
+
+:
+
+~/
+桌
+�
+�/xv6-ai-
+labs-km
+/l
+ab0
+
+$ m
+ak
+e
+ r
+un
+
+Op
+en
+S
+BI
+
+v
+1
+.3
+
+__
+_
+_
+
+ _
+_
+__
+_
+
+__
+__ 
+____
+_
+
+/ _
+_
+ \
+
+/
+
+_
+_
+_
+_
+|
+  _ \_  
+ _
+|
+
+|
+
+|
+
+|
+
+|
+_
+ _
+_
+
+ ___
+
+_
+
+_
+_
+
+|
+
+(
+_
+_
+_
+
+|
+
+|
+_
+)
+
+|
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
+'
+_
+ \
+
+/
+
+_
+
+\
+
+'
+_
+
+\
+
+\_
+_
+_
+
+\
+|
+
+_
+
+<
+
+|
+ |
+
+|
+ |__| 
+|
+
+|
+_
+)
+
+|
+
+_
+_
+/
+
+|
+ | 
+|
+_
+_
+_
+_
+)
+
+|
+
+|
+_
+)
+
+|
+| 
+|
+_
+
+\
+_
+_
+_
+_
+/
+|
+
+.
+_
+_
+/
+
+\
+_
+_
+_
+|
+_
+|
+
+|
+_
+|
+_
+_
+_
+_
+_/|___/_____|
+        | |
+        |_|
+
+Platform Name             : riscv-virtio,qemu
+Platform Features         : medeleg
+Platform HART Count       : 2
+Platform IPI Device       : aclint-mswi
+Platform Timer Device     : aclint-mtimer @ 10000000Hz
+Platform Console Device   : uart8250
+Platform HSM Device       : ---
+Platform PMU Device       : ---
+Platform Reboot Device    : sifive_test
+Platform Shutdown Device  : sifive_test
+Platform Suspend Device   : ---
+Platform CPPC Device      : ---
+Firmware Base             : 0x80000000
+Firmware Size            
+
+:
+
+3
+3
+2
+
+K
+B
+
+F
+i
+r
+m
+w
+a
+r
+e
+
+R
+W
+
+O
+f
+f
+s
+e
+t
+
+:
+
+0
+x
+4
+0
+0
+0
+0
+
+F
+i
+r
+m
+w
+a
+r
+e
+
+R
+W
+
+S
+i
+z
+e
+
+:
+
+7
+6
+
+K
+B
+
+Fi
+r
+m
+w
+a
+r
+e
+
+H
+e
+a
+p
+
+O
+f
+f
+s
+e
+t
+
+:
+
+0
+x
+4
+a
+0
+0
+0
+
+F
+i
+r
+m
+w
+a
+r
+e
+
+H
+e
+a
+p
+
+S
+i
+z
+e
+
+:
+
+3
+6
+
+K
+B
+
+(
+t
+ot
+a
+l
+)
+,
+
+2
+
+K
+B
+
+(
+r
+e
+s
+e
+r
+v
+e
+d
+)
+,
+
+9
+ KB
+
+(
+u
+s
+e
+d
+),
+
+24
+
+K
+B
+
+(
+f
+r
+e
+e
+)
+
+F
+i
+r
+m
+w
+a
+r
+e
+
+S
+c
+r
+a
+t
+c
+h
+
+S
+i
+z
+e 
+
+:
+
+4
+0
+9
+6
+
+B
+
+(
+t
+o
+t
+a
+l
+)
+,
+
+7
+6
+0
+
+B
+
+(
+u
+se
+d
+)
+,
+
+3
+3
+3
+6
+
+B
+
+(
+f
+r
+e
+e
+)
+
+R
+u
+n
+t
+i
+m
+e
+
+S
+B
+I
+
+V
+e
+rs
+i
+o
+n
+
+:
+
+1
+.
+0
+
+D
+o
+m
+a
+i
+n
+0
+
+N
+a
+m
+e
+
+:
+
+r
+o
+o
+t
+
+D
+o
+m
+a
+i
+n
+0
+
+B
+o
+o
+t
+
+H
+A
+R
+T
+
+:
+
+1
+
+D
+o
+m
+a
+i
+n
+0
+
+H
+A
+R
+T
+s
+
+:
+
+0
+*
+,
+1
+*
+
+D
+o
+m
+a
+i
+n
+0
+
+R
+e
+g
+i
+o
+n
+0
+0
+
+:
+
+0
+x
+0
+0
+0
+0
+0
+0
+0
+0
+0
+2
+0
+0
+0
+0
+0
+0
+-0
+x
+0
+0
+0
+0
+0
+0
+0
+0
+0
+2
+0
+0
+f
+f
+f
+f
+
+M
+:
+
+(
+I
+,
+R
+,
+W
+)
+
+S
+/
+U
+:
+
+(
+)
+
+D
+o
+m
+a
+i
+n
+0
+
+R
+e
+g
+i
+o
+n
+0
+1
+
+:
+
+0
+x
+0
+0
+0
+0
+0
+0
+0
+0
+8
+0
+0
+4
+0
+0
+00
+-
+0
+x
+0
+0
+0
+0
+0
+0
+0
+0
+8
+0
+0
+5
+f
+f
+f
+f
+
+M
+:
+
+(
+R
+,W) S/U: ()
+Domain0 Region02          : 0x0000000080000000-0x000000008003ffff M: (R,X) S/U: ()
+Domain0 Region03          : 0x0000000000000000-0xffffffffffffffff M: (R,W,X) S/U: (R,W,X)
+Domain0 Next Address      : 0x0000000080200000
+Domain0 Next Arg1         : 0x000
+0
+0
+0
+0
+0
+8
+7
+e
+0
+0
+0
+0
+0
+
+D
+o
+m
+a
+i
+n
+0
+
+N
+e
+x
+t
+
+M
+od
+e
+
+:
+
+S
+-
+m
+o
+d
+e
+
+D
+o
+m
+a
+i
+n
+0
+
+S
+y
+s
+R
+es
+e
+t
+
+:
+
+y
+e
+s
+
+D
+o
+m
+a
+i
+n
+0
+
+S
+y
+s
+S
+u
+s
+pe
+n
+d
+
+:
+
+y
+e
+s
+
+B
+o
+o
+t
+
+H
+A
+R
+T
+
+I
+D
+
+:
+
+1
+
+B
+o
+o
+t
+
+H
+A
+RT Domain          : r
+o
+o
+t
+
+B
+o
+ot HART Priv Version    : v1.12
+Boot HART Base ISA        : rv64imafdch
+Boot HART ISA Extensions  : time,sstc
+Boot HART PMP Count       : 16
+Boot HART PMP Granularity : 4
+Boot HART PMP Address Bits: 54
+Boot HART MHPM Count      : 16
+Boot HART MIDELEG         : 0x0000000000001666
+Boot HART ME
+D
+E
+LEG
+
+: 0x000000
+0
+0
+00f
+0b
+5
+09
+
+(
+`
+-
+.
+
+ (
+`
+-.
+
+          .-')  
+
+   (
+'-.
+
+ _ 
+
+.-
+'
+)
+
+ ( 
+OO
+
+).
+
+_(
+OO
+
+ )_        
+
+ .
+(
+
+OO)
+
+_(
+
+OO
+)
+
+ (
+
+'
+.
+(
+
+OO
+ )
+_
+
+(_/.  \_)-. ,--(
+_
+/ 
+  ,
+.
+
+\ 
+
+,
+-
+-
+. 
+               (_)---\_)  (,------.  ,--.   
+,--.) ,--. ,-
+-
+.
+
+\
+
+`
+.'
+
+ /
+
+ \   \  
+
+/(
+_
+_
+/
+
+/
+
+.
+' 
+
+.
+-
+')
+
+'
+
+.-
+.
+
+ '
+
+|
+
+ .---'  | 
+
+`.
+'
+
+|
+
+|
+
+|
+ |
+
+ |
+
+  \  
+
+/\   \   \ /   / .  / -.    _(
+
+OO
+)
+
+,|  | |  |   | 
+ |      |       
+  |  |  |
+
+|
+ .
+-
+')
+
+   \   \ |    \   '
+
+/
+, |
+ .
+-.  '  (
+,-
+-
+----. (
+_|
+
+| |  |  (|  '--.
+
+  |  |
+'
+.
+'|  |
+
+ |  |_
+|
+(
+
+OO
+ )
+
+.
+' 
+
+\
+_)  
+
+\
+
+/
+__)
+' 
+\
+
+|
+
+|  
+'----
+-
+-'
+
+|
+
+| 
+|
+
+|
+
+|
+
+ .--
+'
+
+| 
+
+|
+
+ |
+
+|
+
+| 
+
+| 
+| `-' /
+ /  .'.  \      \   /    \  `'  /              '  '-'  '-. |  `--
+-
+.  
+|
+
+| 
+
+ |
+
+ |
+
+(' 
+
+'
+-'(_.-'
+'--'   '
+-
+-
+'
+
+-- [10分53秒] --
+`-'      `----'            
+
+`
+-
+-
+-
+-
+-
+'
+-
+-
+'
+ `
+-
+-
+-
+-
+-
+-
+'
+-- [11分01秒] --
+  `
+-
+-'   `--'   `--
+-
+-
+-
+'
+
+-- [12分30秒] --
+ha
+rt 1 in
+it 
+d
+o
+n
+e
+
+i
+nit: sta
+r
+t
+i
+n
+g
+
+s
+-- [12分38秒] --
+h
+
+-- [12分56秒] --
+->
+ /
+ $ 
+-
+>
+
+/
+
+$
+
+l
+s
+
+-
+> / 
+$ c
+-- [14分41秒] --
+a
+t
+
+RE
+-- [15分11秒] --
+ADMEopen / failed
+
+-> / $ 
+open / failed
+-> / $ -> / $ ls
+open / failed
+-> / $ ls
+exec ls failed
+-> / $ x QEMU: Terminated
+
+-- [15分29秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:
+~/桌面/xv6-ai-labs-km/lab0$ cd ~/桌 面/xv6-ai-labs-km/lab0
+ailab-os@ailab-os-VMware-Vir
+tual-Platform:~/桌面/xv6-ai-labs-km/lab0
+$ cd ~/桌 面/xv6-ai-labs-km/lab0
+ls -lh fs.img
+-rw-r--r-- 1 ailab-os ailab-os 256M  9月 16 16:08 fs.img
+
+-- [16分05秒] --
+ailab-os@a
+-- [16分09秒] --
+ilab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ ls -lh fs.img
+
+ls -lh fs.img
+
+-rw-r--r-- 1 ailab-os ailab-os 256M  9月 16 16:08 fs.img
+
+-- [16分34秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ cd ~/桌 面/xv6-ai-labs-km/lab0
+sudo mkdir -p /mnt/fstest
+sudo mount -o loo
+p fs.img /mnt/fstest
+ls -la /mnt/fstest
+ls -la /mnt/fstest/bin
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ cd ~/桌 面/xv6-ai-labs-km/lab0
+sudo mkdir -p /mnt/fstes
+t
+sudo mount -o loop fs.img /mnt/fstest
+ls -la /mnt/fstest
+ls -la /mnt/fstest/bin
+sudo umount /mnt/fstest
+总计 495
+drwxr-xr-x 3 root root   1536  1月  1  1970 .
+drwxr-xr-x 3 root root   4096  9月 16 16:20 ..
+drwxr-xr-x 2 root root   1536  9月 16 16:08 bin
+-rwxr-xr-x 1 root root  22152  9月 16 16:08 cat
+-rwxr-xr-x 1 root root  21088  9月 16 16:08 echo
+-rwxr-xr-x 1 root root  23288  9月 16 16:08 find
+-rwxr-xr-x 1 root root  24680  9月 16 16:08 grep
+-rwxr-xr-x 1 root root  21760  9月 16 16:08 init
+-rwxr-xr-x 1 root root  20976  9月 16 16:08 kill
+-rwxr-xr-x 1 root root  23304  9月 16 16:08 ls
+-rwxr-xr-x 1 root root  21072  9月 16 16:08 mkdir
+-rwxr-xr-x 1 root root  22872  9月 16 16:08 mv
+-rwxr-xr-x 1 root root   2059  9月 16 16:08 README
+-rwxr-xr-x 1 root root  21064  9月 16 16:08 rm
+-rwxr-xr-x 1 root root  43696  9月 16 16:08 sh
+-rwxr-xr-x 1 root root  21048  9月 16 16:08 sleep
+-rwxr-xr-x 1 root root  21424  9月 16 16:08 strace
+-rwxr-xr-x 1 root root  20920  9月 16 16:08 test
+-rwxr-xr-x 1 root root 117496  9月 16 16:08 usertests
+-
+rwxr-xr-x 1 root root  22936  9月 16 16:08 wc
+-rwxr-xr-x 1 root root  22752  9月 16 16:08 xargs
+总计 489
+drwxr-xr-x 2 root root   1536  9月 16 16:08 .
+drwxr-xr-x 3 root root   1536  1月  1  1970 ..
+-rwxr-xr-x 1 root root  22152  9月 16 16:08 cat
+-rwxr-xr-x 1 root root  21088  9月 16 16:08 echo
+-rwxr-xr-x 1 root root  23288  9月 16 16:08 find
+-rwxr-xr-x 1 root root  24680  9月 16 16:08 grep
+-rwxr-xr-x 1 root root  21760  9月 16 16:08 init
+-rwxr-xr-x 1 root root  20976  9月 16 16:08 kill
+-rwxr-xr-x 1 root root  23304  9月 16 16:08 ls
+-rwxr-xr-x 1 root root  21072  9月 16 16:08 mkdir
+-rwxr-xr-x 1 root root  22872  9月 16 16:08 mv
+-rwxr-xr-x 1 root root  21064  9月 16 16:08 rm
+-rwxr-xr-x 1 root root  43696  9月 16 16:08 sh
+-rwxr-xr-x 1 root root  21048  9月 16 16:08 sleep
+-rwxr-xr-x 1 root root  21424  9月 16 16:08 strace
+-rwxr-xr-x 1 root root  20920  9月 16 16:08 test
+-rwxr-xr-x 1 root root 117496  9月 16 16:08 usertests
+-
+rwxr-xr-x 1 root root  22936  9月 16 16:08 wc
+-rwxr-xr-x 1 root root  22752  9月 16 16:08 xargs
+
+-- [18分01秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ cd ~/桌 面/xv6-ai-labs-km/lab0
+
+make clean
+
+make build 2>&1 | tail -30
+sudo make fs
+sudo chown $USER:$USER fs.img
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ cd ~/桌 面/xv6-ai-l
+abs-km/lab0
+
+make clean
+make build 2>&1 | tail -30
+sudo make fs
+sudo chown $USER:$USER fs.img
+make run
+rm -f *.tex *
+.dvi *.idx *.aux *.log *.ind *.ilg \
+*/*.o */*.d */*.asm */*.sym \
+target/* \
+xv6-user/initcode xv6-user/initcode.out \
+kernel/kernel \
+.gdbinit \
+xv6-user/usys.S \
+xv6-user/_init xv6-user/_sh xv6-user/_cat xv6-user/_echo xv6-user/_grep xv6-user/_ls xv6-user/_kill xv6-user/_mkdir xv6-user/_xargs 
+xv6-user/_sleep xv6-user/_find xv6-user/_rm xv6-user/_wc xv6-user/_test xv6-user/_usertests xv6-user/_strace xv6-user/_mv 
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/rm.o xv6-user/rm.c
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_rm xv6-user/rm.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv6-user/_rm has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_rm > xv6-user/rm.asm
+riscv64-unknown-elf-objdump -t xv6-user/_rm | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/rm.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/wc.o xv6-user/wc.c
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_wc xv6-user/wc.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv6-user/_wc has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_wc > xv6-user/wc.asm
+riscv64-unknown-elf-objdump -t xv6-user/_wc | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/wc.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/test.o xv6-user/test.c
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_test xv6-user/test.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv6-user/_test has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_test > xv6-user/test.asm
+riscv64-unknown-elf-objdump -t xv6-user/_test | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/test.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/usertests.o xv6-user/usertests.c
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_usertests xv6-user/usertests.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv6-user/_usertests has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_usertests > xv6-user/usertests.asm
+riscv64-unknown-elf-objdump -t xv6-user/_usertests | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/usertests.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/strace.o xv6-user/strace.c
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_strace xv6-user/strace.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv6-user/_strace has a LOAD segment with RWX permissions
+riscv64-unknown-elf-objdump -S xv6-user/_strace > xv6-user/strace.asm
+riscv64-unknown-elf-objdump -t xv6-user/_strace | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/strace.sym
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/mv.o xv6-user/mv.c
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_mv xv6-user/mv.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+riscv64-unknown-elf-ld: warning: xv6-user/_mv has a LOAD segment with RWX
+ permissions
+riscv64-unknown-elf-objdump -S xv6-user/_mv > 
+-- [18分04秒] --
+xv6-user
+/mv.asm
+riscv64-unknown-elf-objdump -t xv6-user/_mv | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/mv.sym
+
+OpenSBI v1.3
+   ____                    _____ ____ _____
+  / __ \                  / ____|  _ \_   _|
+ | |  | |_ __   ___ _ __ | (___ | |_) || |
+ | |  | | '_ \ / _ \ '_ \ \___ \|  _ < | |
+
+ | 
+|__| | |_
+)
+ |
+
+_
+_
+/
+
+|
+
+|
+
+|
+_
+_
+_
+_
+)
+
+|
+ |
+_)
+
+|
+|
+
+|
+_
+
+\
+__
+_
+_/
+|
+
+.
+_
+_
+/
+
+\
+_
+_
+_
+|
+_
+|
+
+|
+_
+|
+_
+_
+_
+_
+_
+/
+|
+_
+_
+_
+
+/
+__
+_
+_
+_|
+
+|
+
+|
+
+ |
+_|
+
+Platform 
+Nam
+e  
+
+:
+
+r
+i
+s
+c
+v
+-
+vi
+rt
+i
+o,
+q
+e
+m
+u
+
+P
+l
+a
+t
+f
+o
+r
+m
+
+F
+e
+a
+t
+u
+r
+e
+s
+
+:
+
+m
+e
+d
+e
+l
+e
+g
+
+P
+l
+a
+t
+f
+or
+m 
+H
+A
+R
+T
+
+C
+o
+u
+n
+t
+
+: 
+2
+
+P
+l
+a
+t
+f
+o
+rm
+
+I
+P
+I
+ D
+ev
+i
+c
+e
+
+:
+
+a
+c
+l
+i
+n
+t-
+m
+s
+w
+i
+
+Platform Timer Device     : aclint-mtimer @ 10000000Hz
+Platform Console Device   : uart8250
+Platform HSM Devic
+e  
+
+: 
+-
+-
+-
+
+P
+l
+a
+t
+f
+o
+r
+m
+
+P
+M
+U
+
+D
+e
+v
+i
+c
+e
+
+: 
+-
+-
+-
+
+P
+l
+a
+t
+fo
+r
+m
+
+R
+e
+b
+o
+o
+t
+
+D
+e
+v
+i
+c
+e
+
+: 
+si
+f
+i
+v
+e
+_
+t
+e
+s
+t
+
+P
+l
+a
+t
+f
+o
+r
+m
+
+S
+h
+u
+t
+d
+o
+w
+n
+
+D
+e
+v
+i
+c
+e
+  :
+
+s
+ifi
+v
+e
+_
+t
+e
+s
+t
+
+P
+l
+a
+t
+f
+o
+r
+m
+
+S
+u
+s
+p
+e
+n
+d
+
+D
+e
+v
+ic
+e
+
+:
+
+-
+-
+-
+
+P
+l
+a
+t
+f
+o
+r
+m
+
+C
+P
+P
+C
+
+D
+e
+v
+i
+c
+e
+
+:
+
+-
+-
+-
+
+F
+i
+r
+m
+w
+a
+r
+e
+
+B
+a
+s
+e
+
+: 
+0
+x
+8
+0
+0
+0
+0
+0
+0
+0
+
+F
+i
+r
+m
+w
+a
+r
+e
+
+S
+i
+z
+e
+
+   : 332 KB
+Firmware RW Offset        : 0x40000
+Firmware RW Size          : 76 KB
+Firmware Heap Offset      : 0x4a000
+Firmwa
+re
+ H
+e
+ap
+
+S
+i
+z
+e
+
+:
+
+3
+6
+
+K
+B
+
+(
+t
+ot
+a
+l
+)
+,
+
+2
+
+K
+B
+
+(
+r
+e
+s
+e
+r
+v
+e
+d
+)
+,
+
+9
+
+K
+B
+ (
+us
+e
+d
+),
+
+24
+
+K
+B
+
+(
+f
+r
+e
+e
+)
+
+F
+i
+r
+m
+w
+a
+re
+
+S
+c
+r
+a
+t
+c
+h
+
+S
+i
+z
+e 
+
+:
+
+4
+0
+9
+6
+
+B
+
+(
+t
+o
+t
+a
+l
+)
+,
+
+7
+6
+0
+
+B
+
+(
+u
+se
+d
+)
+,
+
+3
+3
+3
+6
+
+B
+
+(
+fr
+e
+e)
+
+R
+u
+n
+t
+i
+m
+e
+
+S
+B
+I
+
+V
+e
+rs
+i
+o
+n
+
+:
+
+1
+.
+0
+
+D
+o
+ma
+i
+n
+0
+
+N
+a
+m
+e
+
+:
+
+r
+o
+o
+t
+
+D
+o
+m
+a
+i
+n
+0
+
+B
+o
+o
+t
+
+H
+A
+R
+T
+
+:
+
+0
+
+D
+o
+m
+a
+i
+n
+0
+
+H
+A
+R
+T
+s
+
+:
+
+0
+*
+,
+1
+*
+
+D
+o
+m
+a
+i
+n
+0
+
+R
+e
+g
+i
+o
+n
+0
+0
+
+:
+
+0
+x
+0
+0
+0
+0
+0
+0
+0
+0
+0
+2
+0
+0
+0
+0
+0
+0
+-0
+x
+0
+0
+0
+0
+0
+0
+0
+0
+0
+2
+0
+0
+f
+f
+f
+f
+
+M
+:
+
+(
+I
+,
+R
+,
+W
+)
+
+S
+/
+U
+:
+
+(
+)
+
+Do
+ma
+i
+n
+0
+
+R
+e
+g
+i
+o
+n
+0
+1
+
+:
+ 0
+x
+0
+0
+0
+0
+0
+0
+0
+0
+8
+0
+0
+4
+0
+0
+00
+-
+0
+x
+0
+0
+0
+0
+0
+0
+0
+0
+8
+0
+05
+f
+ff
+f
+
+M
+:
+
+(
+R
+,
+W
+)
+
+S
+/
+U
+:
+
+(
+)
+
+Do
+m
+a
+i
+n
+0
+
+R
+e
+g
+i
+o
+n
+0
+2
+
+:
+
+0
+x0000000080000000-
+0
+x
+0
+0
+00
+00
+0
+08
+0
+0
+3f
+f
+ff
+
+M:
+
+(R
+,
+X
+)
+
+S
+/
+U
+:
+
+(
+)
+
+D
+o
+m
+a
+i
+n
+0
+
+R
+e
+g
+i
+o
+n
+0
+3 
+
+:
+
+0
+x
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+-
+0
+x
+f
+f
+f
+f
+f
+f
+f
+f
+f
+f
+f
+f
+ff
+f
+f 
+M
+:
+
+(
+R
+,
+W
+,
+X
+)
+
+S
+/
+U
+: (R,W,X
+)
+
+D
+o
+ma
+i
+n0
+
+N
+ex
+t
+
+Ad
+d
+r
+e
+ss
+
+:
+
+0
+x
+0
+0
+0
+0
+0
+0
+0
+0
+8
+0
+2
+0
+0
+00
+0
+
+D
+om
+a
+i
+n
+0
+
+N
+e
+x
+t
+
+A
+r
+g
+1
+
+:
+
+0x
+0
+00
+0
+0
+0
+0
+0
+8
+7
+e
+0
+0
+0
+0
+0
+
+D
+o
+m
+a
+i
+n
+0
+
+N
+e
+x
+t
+
+M
+od
+e 
+
+:
+
+S
+-
+m
+o
+d
+e
+
+D
+o
+m
+a
+i
+n
+0
+
+S
+y
+s
+R
+es
+e
+t
+
+:
+
+y
+e
+s
+
+D
+o
+m
+a
+i
+n
+0
+
+S
+y
+s
+S
+u
+s
+pe
+n
+d
+
+:
+
+y
+e
+s
+
+B
+o
+o
+t
+
+H
+A
+R
+T
+
+I
+D
+
+:
+
+0
+
+Boot HART 
+Do
+main
+
+:
+ r
+oot
+
+B
+o
+o
+t
+
+HA
+R
+T
+
+P
+r
+i
+v
+
+V
+e
+r
+s
+i
+o
+n
+
+ :
+
+v
+1
+.
+1
+2
+
+B
+o
+o
+t
+
+H
+A
+R
+T
+
+B
+a
+s
+e
+
+I
+S
+A
+
+:
+
+r
+v
+6
+4
+i
+m
+a
+f
+d
+c
+h
+
+B
+o
+o
+t
+ H
+A
+R
+T
+
+I
+S
+A 
+E
+x
+t
+e
+n
+s
+i
+o
+n
+s
+
+:
+
+t
+i
+m
+e
+,
+s
+s
+t
+c
+
+B
+o
+o
+t
+
+HA
+R
+T
+
+P
+M
+P
+
+C
+o
+u
+n
+t
+
+:
+
+1
+6
+
+B
+o
+o
+t
+
+H
+A
+R
+T
+
+P
+MP Granulari
+ty
+ : 
+4
+
+Bo
+o
+t
+
+H
+A
+RT
+
+P
+M
+P
+
+A
+d
+d
+r
+e
+s
+s
+
+B
+i
+t
+s
+:
+
+5
+4
+
+Bo
+o
+t 
+HA
+R
+T 
+MHPM
+
+Cou
+nt
+
+: 1
+6
+
+Bo
+o
+t 
+H
+AR
+T M
+IDELE
+G   
+
+ :
+
+0x0
+00
+0
+00
+0
+00
+0
+00
+1
+66
+6
+
+Bo
+o
+t 
+H
+A
+R
+T
+
+M
+E
+D
+E
+L
+E
+G
+
+:
+
+0
+x
+0
+0
+0
+000
+0
+0
+0
+0
+f
+0
+b
+5
+0
+9
+
+(
+`
+-
+.
+
+(
+`
+-
+.
+
+.
+-
+'
+)
+
+(
+'
+-
+.
+
+_
+
+.
+-
+'
+)
+
+(
+
+O
+O
+
+)
+.
+
+_
+(
+O
+O
+
+)
+_
+
+.
+(
+
+O
+O)
+
+_
+(
+
+O
+O)
+
+(
+
+'
+.
+(
+
+O
+O
+
+)
+_
+
+(
+_
+/
+.
+
+\
+_
+)
+-
+.
+
+,
+-
+-
+(
+_
+/
+
+,
+.
+
+\
+
+,
+-
+-
+.
+
+(
+_
+)
+-
+-
+-
+\
+_
+)
+
+(
+,
+-
+-
+-
+-
+-
+-
+.
+
+,
+-
+-
+.
+
+,
+-
+-
+.
+)
+
+,
+-
+-
+.
+
+,
+-
+-
+.
+
+\
+
+ `
+.
+'
+
+/
+
+\
+
+\
+
+/
+(
+_
+_
+/
+
+/
+
+.
+'
+
+.
+-
+'
+)
+
+'
+
+.
+-
+. 
+
+'
+
+|
+
+.
+-
+-
+-
+'
+
+|
+
+`
+.
+'
+
+|
+
+|
+
+|
+
+|
+
+|
+
+\
+
+/
+\
+
+\
+
+  \ 
+/
+
+/
+
+.
+
+/
+
+-
+.
+
+_
+(
+
+O
+O
+)
+
+,
+| 
+
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
+|
+
+.
+-
+'
+)
+
+\  
+
+\
+
+|
+
+\
+
+'
+
+/
+,
+
+|
+
+.
+-
+.
+
+'
+
+(
+,
+--
+-
+-
+-
+-
+.
+
+(
+_
+|
+
+|
+
+|
+
+|
+
+(|
+
+'
+-
+-
+.
+
+ |
+  |
+'
+.
+'
+|
+
+|
+
+|
+
+|
+_
+|
+(
+
+O
+O
+
+)
+
+.
+'
+
+\
+_
+)
+
+\
+
+/
+_
+_
+)
+'
+
+\
+
+|
+
+|
+
+'
+-
+-
+-
+-
+-
+-
+'
+
+ |
+
+|
+ |
+
+|
+
+|
+
+.
+-
+-
+'
+
+|
+
+|
+
+| 
+
+|
+
+|
+
+|
+
+|
+
+`
+-
+'
+
+/
+
+/ 
+
+.
+'
+.
+
+\
+
+\
+
+/
+
+\
+
+`
+'
+
+/
+
+'
+
+'
+-
+'
+
+'
+-
+.
+
+|
+
+`
+--
+-
+.
+
+|
+
+|
+
+|  
+|
+ (
+'
+
+'
+-
+'
+(_
+.
+-'
+
+'
+-
+-
+'
+
+'
+-
+-
+'
+
+`
+-
+'     
+ `--
+--'
+
+`
+-
+-
+--
+-
+'-
+-
+'
+ `
+-
+---
+-
+-
+'
+
+`
+-
+-
+' 
+
+`
+-
+-
+'
+
+`
+-
+-
+--
+-
+'
+
+h
+a
+r
+t
+
+0 
+e
+n
+t
+e
+r
+
+m
+a
+i
+n
+(
+)
+.
+..
+
+k
+ern
+el
+_e
+n
+d
+:
+
+0
+x
+0
+0
+0
+00
+0
+0
+0
+8
+0
+2
+2
+6
+0
+0
+0
+,
+
+ph
+y
+s
+t
+o
+p
+:
+
+0
+x
+0
+0
+0
+0
+0
+0
+0
+0
+80
+6
+0
+0
+0
+0
+0
+
+k
+i
+n
+i
+t
+
+kv
+m
+i
+n
+i
+t
+
+k
+vm
+i
+n
+i
+t
+h
+a
+r
+t
+
+t
+i
+m
+e
+r
+i
+ni
+t
+
+t
+r
+a
+p
+i
+n
+i
+t
+h
+ar
+t
+
+p
+ro
+c
+in
+it
+
+p
+l
+i
+c
+i
+n
+i
+t
+
+p
+l
+i
+c
+i
+n
+i
+t
+h
+a
+r
+t
+
+v
+i
+rt
+i
+o
+_
+d
+i
+s
+k
+_
+i
+n
+i
+t
+
+b
+i
+n
+i
+t
+
+f
+i
+l
+e
+i
+n
+i
+t
+
+u
+s
+e
+r
+i
+n
+i
+t
+
+h
+a
+r
+t 0
+
+i
+n
+i
+t
+
+d
+o
+n
+e
+
+[
+f
+a
+t
+3
+2
+_
+i
+n
+i
+t]
+ e
+n
+t
+e
+r
+!
+
+[
+F
+A
+T
+3
+2
+
+i
+ni
+t
+]
+b
+y
+t
+s_
+p
+e
+r
+_
+s
+e
+c
+:
+
+5
+1
+2
+
+[
+F
+A
+T
+3
+2
+
+i
+n
+i
+t
+]
+r
+o
+o
+t
+_
+c
+lu
+s
+: 2
+[FAT32 init]s
+ec_per_
+-- [19分14秒] --
+c
+l
+us:
+ 1
+
+[
+F
+A
+T
+3
+2
+
+i
+n
+i
+t
+]
+f
+a
+t
+_
+c
+n
+t
+:
+
+2
+
+[FAT32 init]f
+a
+t
+_
+s
+z
+:
+
+4
+0
+3
+3
+
+[FAT32 init]first_data_sec: 8098
+
+i
+ni
+t
+:
+
+st
+a
+r
+t
+in
+g
+ s
+h
+
+-
+>
+
+/
+
+$
+
+l
+s
+
+b
+i
+n
+
+D
+I
+R
+
+0
+
+R
+E
+A
+D
+M
+E
+
+F
+I
+L
+E
+
+2
+05
+9
+
+c
+a
+t
+
+F
+I
+LE
+
+2
+21
+5
+2
+
+e
+c
+h
+o
+
+F
+IL
+E
+
+2
+10
+8
+8
+
+f
+i
+n
+d 
+
+F
+I
+L
+E
+
+2
+3
+2
+8
+8
+
+g
+r
+e
+p
+
+F
+I
+LE	
+2
+4
+6
+8
+0
+
+i
+n
+i
+t
+
+F
+I
+L
+E
+
+2
+1
+7
+6
+0
+
+k
+i
+l
+l
+
+F
+I
+L
+E
+
+2097
+6
+
+l
+s   
+
+FILE	
+2
+3
+3
+0
+4
+
+m
+k
+d
+i
+r
+
+F
+I
+L
+E
+
+2
+1
+0
+7
+2
+
+m
+v
+
+                FILE	22872
+rm                               FILE	21064
+
+s
+h
+
+F
+I
+L
+E
+
+4
+3
+6
+9
+6
+
+s
+l
+e
+e
+p
+
+              FI
+L
+E	21048
+strace         
+
+F
+I
+L
+E
+
+2
+1
+4
+2
+4
+
+t
+e
+s
+t
+
+F
+I
+L
+E
+
+2
+0
+9
+2
+0
+
+u
+s
+e
+r
+t
+e
+s
+t
+s
+
+-- [19分34秒] --
+F
+I
+L
+E
+
+1
+1
+7
+4
+9
+6
+
+w
+c
+
+F
+I
+L
+E
+
+2
+2
+9
+3
+6
+
+x
+a
+r
+g
+s
+
+F
+ILE
+
+2
+2
+7
+5
+2
+
+-> / $ ls /bin
+.                                D
+I
+R
+
+0
+
+.
+.
+
+D
+I
+R
+
+0
+
+c
+a
+t
+
+F
+I
+L
+E
+
+2
+2
+1
+5
+2
+
+e
+c
+h
+o
+
+F
+I
+L
+E
+
+2
+1
+0
+8
+8
+
+f
+i
+n
+d
+
+       FILE	23288
+grep                             FILE	24680
+init          
+
+F
+I
+L
+E
+
+2
+1
+7
+6
+0
+
+k
+i
+l
+l
+
+F
+I
+L
+E
+
+2
+0
+9
+7
+6
+
+l
+s
+
+F
+I
+L
+E
+
+2
+3
+3
+0
+4
+
+m
+k
+d
+i
+r
+
+F
+I
+L
+E
+
+2
+1
+0
+7
+2
+
+m
+v
+
+F
+I
+L
+E
+
+2
+2
+8
+7
+2
+
+r
+m
+
+                   FILE	21064
+s
+h
+
+                           FILE	43696
+sleep                            FILE	21048
+
+s
+t
+r
+a
+c
+e
+
+                 FILE	2142
+4
+
+t
+e
+s
+t
+
+F
+IL
+E
+
+2
+0
+9
+2
+0
+
+u
+s
+e
+r
+t
+es
+t
+s
+
+-- [20分16秒] --
+FI
+L
+E	
+1
+1
+7
+4
+96
+
+-- [20分21秒] --
+w
+c
+
+F
+I
+L
+E
+
+2
+2
+9
+3
+6
+
+x
+a
+r
+g
+s
+
+FI
+L
+E
+
+2
+2
+7
+5
+2
+
+-
+>
+
+/
+
+$
+
+c
+a
+t
+
+RE
+D
+A
+M
+E
+
+E
+A
+D
+M
+E
+
+x
+v
+6
+
+i
+s
+
+a
+
+r
+e
+-
+i
+m
+p
+l
+e
+me
+n
+t
+a
+t
+i
+o
+n
+ of Dennis Ritchie's and Ken Thompson's Unix
+Version 6 (v6).  xv6 loosely follows the structure and style of v6,
+but is implemented for a modern RISC-V multiprocessor using ANSI C.
+
+ACKNOWLEDGMENTS
+
+xv6 is inspired by John Lions's Commentary on UNIX 6th Edition (Peer
+to Peer Communications; ISBN: 1-57398-013-7; 1st edition (June 14,
+2000)). See also https://pdos.csail.mit.edu/6.828/, which
+provides pointers to on-line resources for v6.
+
+The following people have made contributions: Russ Cox (context switching,
+locking), Cliff Frey (MP), Xiao Yu (MP), Nickolai Zeldovich, and Austin
+Clements.
+
+We are also grateful for the bug reports and patches contributed by
+Silas Boyd-Wickizer, Anton Burtsev, Dan Cross, Cody Cutler, Mike CAT,
+Tej Chajed, Asami Doi, eyalz800, , Nelson Elhage, Saar Ettinger, Alice
+Ferrazzi, Nathaniel Filardo, Peter Froehlich, Yakir Goaron,Shivam
+Handa, Bryan Henry, jaichenhengjie, Jim Huang, Alexander Kapshuk,
+Anders Kaseorg, kehao95, Wolfgang Keller, Jonathan Kimmitt, Eddie
+Kohler, Austin Liew, Imbar Marinescu, Yandong Mao, Matan Shabtay,
+Hitoshi Mitake, Carmi Merimovich, Mark Morrissey, mtasm, Joel Nider,
+Greg Price, Ayan Shafqat, Eldar Sehayek, Yongming Shen, Fumiya
+Shigemitsu, Takahiro, Cam Tenny, tyfkda, Rafael Ubal, Warren Toomey,
+Stephen Tu, Pablo Ventura, Xi Wang, Keiichi Watanabe, Nicolas
+Wolovick, wxdao, Grant Wu, Jindong Zhang, Icenowy Zheng, and Zou Chang
+Wei.
+
+The code in the files that constitute xv6 is
+Copyright 2006-2020 Frans Kaashoek, Robert Morris, and Russ Cox.
+
+ERROR REPORTS
+
+Please send errors and suggestions to Frans Kaashoek and Robert Morris
+(kaashoek,rtm@mit.edu). The main purpose of xv6 is as a teaching
+operating system for MIT's 6.S081, so we are more interested in
+simplifications and clarifications than new features.
+
+BUILDING AND RUNNING XV6
+
+You will need a RISC-V "newli
+b" tool chain from
+https://github.com/riscv/riscv-gnu-toolchain, and qemu 
+-- [22分13秒] --
+c
+o
+mp
+i
+-- [22分18秒] --
+led for
+riscv64-softmmu. Once they are installed, and in your
+-- [22分23秒] --
+ shell
+s
+-- [22分27秒] --
+earch path, you can
+ run "make qemu".
+-> / $ x QEMU 8.2.2 monitor - type 'help' for more information
+(qemu) 
+(qemu) QEMU: Terminated
+
+-- [25分10秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ 
+exit
+

@@ -1,0 +1,2283 @@
+==== labtracker 终端转录 ====
+录像: 20260915T141517-5492.out.gz   时长: 11分07秒   原始大小: 8478B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ make build 
+
+make build 
+make: 对“build”无需做任何事。
+
+-- [1分23秒] --
+ailab-os@a
+ilab-os-VMwa
+re-Vir
+tual-Platform:~/桌面/xv6-ai-labs-km/lab0$ make runmake run
+
+OpenSBI v1.3
+   ____                    _____ ____ _____
+  / __ \                  / ____|  _ \_   _|
+ | |  | |_ __   ___ _ __ | (___ | |_) || |
+ | |  | | '_ \ / _ \ '_ \ \___ \|  _ < | |
+
+ |
+ |__| | |_) |  __/ | |
+ |_
+___) 
+| |
+_) |
+| |_
+
+\____/| .__/ \___|_| |_|___
+__/|
+___/__
+___
+|
+
+ | |
+
+   |_|
+
+Pl
+atfor
+m
+ N
+a
+me 
+
+    : 
+ri
+scv-vi
+rt
+i
+o,
+qe
+mu
+P
+la
+tform
+ Fea
+tures 
+
+   : 
+me
+de
+leg
+
+P
+l
+atfor
+m 
+HART C
+o
+u
+n
+t
+
+   : 2
+
+Platfo
+rm
+ IPI
+ D
+ev
+ice   
+
+ : ac
+lint
+-mswi
+
+Platfo
+rm 
+Timer
+ D
+ev
+i
+ce   
+  : acl
+in
+t-mti
+me
+r 
+@ 1000
+00
+0
+0
+H
+z
+
+Pla
+t
+form 
+Cons
+ole De
+vice
+   : 
+uart82
+5
+0
+
+Plat
+f
+or
+m HSM
+ De
+vi
+ce    
+   : 
+--
+-
+
+Pla
+tform 
+PM
+U Dev
+ic
+e 
+
+  : 
+--
+-
+
+Pl
+atfor
+m
+ R
+eboo
+t De
+vi
+ce
+    : 
+s
+if
+ive_t
+es
+t
+Pl
+a
+tform
+ S
+h
+ut
+d
+own D
+ev
+i
+ce  :
+
+si
+five_
+test
+Platform Sus
+pend D
+ev
+ice 
+  :
+ ---
+
+Pl
+atform C
+P
+PC D
+e
+vi
+ce   
+
+  :
+ --
+-
+F
+irmw
+are B
+ase
+
+ : 
+0x
+800000
+00
+
+Firm
+wa
+r
+e
+ Size
+
+ :
+ 332 KB
+Firmware RW Offset   
+
+ :
+
+0x
+4
+00
+0
+0
+
+F
+ir
+mwar
+e 
+RW 
+Siz
+e 
+
+: 
+76
+ KB
+
+Fi
+rm
+ware H
+e
+ap O
+ffset 
+
+  : 0
+x4
+a
+00
+0
+F
+i
+rmw
+are H
+eap Si
+ze
+
+ : 36
+ KB (
+tot
+al
+), 2 
+KB
+ (res
+e
+rv
+ed), 
+9 
+KB (u
+sed),
+ 24
+ KB (free)
+Firmware Scratch S
+ize 
+    : 4096 
+B (
+t
+o
+t
+al), 76
+0 B
+ (use
+d
+), 333
+6
+ B (f
+ree)
+
+R
+untim
+e 
+S
+B
+I 
+Vers
+ion       : 1.0
+
+Domain
+0 Na
+me        
+
+  : ro
+ot
+
+Domai
+n0
+ Boo
+t 
+HA
+RT 
+
+: 
+0
+
+D
+omain
+0 
+HARTs
+
+  : 0*
+,1*
+
+Dom
+a
+in0 
+Region
+00
+
+      :
+ 0x
+00
+00
+000002
+0
+00000-0
+x0000
+0
+0
+0
+0020
+0fff
+f M: 
+(I,R,W)
+ S/U
+: ()
+
+Dom
+ain0 Re
+gi
+on01  
+
+     :
+ 0
+x00
+0000
+00800
+4
+00
+00
+-0
+x00
+00
+0000800
+5f
+f
+ff
+ M: (
+R,W)
+ S/U:
+ (
+)
+D
+om
+ai
+n0 Reg
+i
+on0
+2   
+
+    :
+ 0x000
+0000
+080000
+00
+0
+-
+0x
+00
+0000
+0080
+03ff
+ff M
+: (R
+,X
+) S/
+U: (
+)
+
+Dom
+ain0
+ Regi
+on
+0
+3 
+
+: 0x000000000000000
+0-0xffffff
+ff
+f
+f
+ff
+ff
+ff M: 
+(
+R,
+W
+,
+X)
+ S/U:
+ (R,
+W,X)
+
+Do
+ma
+in0 Nex
+t
+ Addr
+ess
+
+ :
+
+0x000
+00
+0
+00
+8020
+0000
+
+D
+om
+a
+in
+0 Ne
+xt
+ Arg
+1   
+
+ :
+ 0x
+000
+0000087e00000
+Domain0 Next Mod
+e         : S-
+mo
+de
+
+Domain0 SysReset          : yes
+Domain0 SysSuspend        : yes
+
+Boot HART ID              : 0
+Boot HART Domain          : root
+Boot HART Priv Version    : v1.12
+Boot HART Base ISA        : rv64imafdch
+Boot HART ISA Extensions  : time,sstc
+Boot HART PMP Count       : 16
+Boot HART PMP Granularity : 4
+Boot HART PMP Address Bits: 54
+Boot HA
+R
+T 
+MH
+P
+M
+
+C
+o
+u
+n
+t
+
+: 
+1
+6
+
+B
+o
+o
+t
+ H
+A
+R
+T
+
+M
+I
+DEL
+E
+G
+
+:
+ 0
+x0
+0
+0
+0
+0
+0
+0
+0
+0
+00
+01
+6
+6
+6
+
+B
+o
+o
+t 
+HART MEDELEG         
+: 0x0
+0
+0
+0
+0
+00000f
+0b
+5
+0
+9
+
+(`
+-
+.
+
+       (`-.                            .-')       ('-.    _   .-')
+ ( OO ).        _
+(OO  )
+_ 
+
+.(
+  OO)
+
+_
+(
+  OO)
+
+ (
+ '
+.( O
+O
+ )_
+
+(_/
+.
+
+ \_
+)
+-.
+ ,-
+-(
+_/
+   ,
+. 
+\
+
+ ,-
+-
+. 
+
+ (_
+)-
+-
+-\_) 
+ (,-
+--
+--
+-
+.
+  ,--.
+
+,--
+.) ,
+-
+-
+. ,-
+-
+.  
+
+ \  
+`
+.'  
+/ 
+ \
+
+\  
+ /(
+_
+_/ 
+/ 
+ .' 
+
+.-')
+
+'
+
+.-.
+
+' 
+
+ | 
+
+.---
+'
+  | 
+
+ `.'
+
+ |  
+|  
+| | 
+ |  
+
+\
+     /\   \   \ /   / .  / -.    _( 
+ OO) 
+  ,|  | |
+
+|
+
+ |  
+|  
+
+| 
+
+ | 
+ |
+
+| 
+| .
+-')
+
+ \ 
+
+\
+
+| 
+
+ \  
+ ' 
+  /
+, 
+| .
+-.
+
+ ' 
+ (,
+----
+-
+-
+. (
+_|  |
+
+| 
+ |  
+(| 
+ '--
+.  
+ |
+  |'.'| 
+ |  |
+
+|_
+|( 
+OO
+ )
+
+.' 
+
+  \_) 
+   \
+
+   /_
+_
+)' \
+  |
+  | 
+
+'-
+-
+----
+' 
+  | 
+ |
+ | 
+ |
+   | 
+ .-
+-'   
+| 
+ |
+   | 
+ |  
+|  |
+ | 
+`
+-' /
+
+ /
+  .'
+. 
+
+\
+
+  \ 
+
+/  
+  \ 
+ `
+'
+  /
+
+ ' 
+ '-'
+
+ '-.
+ |  
+`--
+-
+.
+  |  |   |  | ('  '-'(_
+.-'
+'--'   '--'      `-' 
+     `---
+-'   
+
+`-
+---
+-'-
+-'
+ `-
+---
+--'  `--' 
+
+`--' 
+
+`
+----
+-'
+hart 0 
+en
+ter
+
+main
+()...
+
+k
+ernel_e
+nd: 0x00000000
+80226000,
+ ph
+ystop: 0x0000000080
+6000
+00
+
+kinit
+kv
+minit
+kvminithart
+timerini
+t
+trapinithart
+pro
+c
+init
+
+plic
+in
+it
+
+p
+l
+icin
+i
+t
+har
+t
+
+v
+i
+rt
+io_d
+i
+sk
+_
+init
+
+bi
+ni
+t
+
+fil
+ei
+n
+it
+
+u
+s
+e
+rinit
+
+har
+t 0
+ ini
+t 
+d
+on
+e
+[f
+a
+t
+3
+2_ini
+t]
+
+en
+t
+er!
+
+[
+F
+AT3
+2 in
+i
+t
+]b
+y
+ts_
+p
+er_s
+e
+c
+: 51
+2
+
+[FA
+T3
+2 ini
+t
+]
+r
+o
+o
+t_c
+lu
+s: 2
+[FAT32 init]s
+ec_per_
+-- [4分42秒] --
+c
+l
+u
+s:
+
+1
+
+[
+F
+A
+T
+3
+2
+
+i
+n
+i
+t
+]
+f
+a
+t
+_
+c
+n
+t
+:
+
+2
+
+[
+F
+A
+T
+3
+2
+
+i
+n
+i
+t]
+f
+a
+t
+_
+s
+z
+:
+
+4
+0
+3
+3
+
+[
+F
+A
+T
+3
+2
+
+i
+n
+i
+t
+]
+f
+i
+r
+s
+t
+_
+d
+a
+t
+a
+_
+s
+e
+c
+:
+
+80
+9
+8
+
+i
+n
+i
+t
+:
+
+s
+t
+a
+r
+t
+i
+n
+g
+
+s
+h
+
+-
+>
+
+/
+
+$
+
+l
+s
+
+b
+i
+n
+
+                          DIR 	0
+README                          
+
+F
+I
+L
+E
+
+2
+0
+5
+9
+
+c
+a
+t
+
+F
+I
+L
+E
+
+2
+2
+1
+5
+2
+
+e
+c
+h
+o
+
+F
+I
+L
+E
+
+2
+1
+0
+8
+8
+
+f
+i
+n
+d
+
+                           FILE	23288
+grep     
+
+F
+I
+L
+E
+
+2
+4
+6
+8
+0
+
+i
+n
+i
+t
+
+F
+I
+L
+E
+
+2
+1
+7
+6
+0
+
+k
+i
+l
+l
+
+F
+I
+L
+E
+
+2
+0
+9
+7
+6
+
+l
+s
+
+F
+I
+L
+E
+
+2
+3
+3
+0
+4
+
+m
+k
+d
+i
+r
+
+F
+I
+L
+E
+
+2
+1
+0
+7
+2
+
+m
+v
+
+        FILE	22872
+
+r
+m
+
+F
+I
+L
+E
+
+2
+1
+0
+6
+4
+
+s
+h
+
+F
+I
+L
+E
+
+4
+3
+6
+9
+6
+
+s
+l
+e
+e
+p
+
+F
+I
+L
+E
+
+2
+1
+0
+4
+8
+
+s
+t
+r
+a
+c
+e
+
+F
+I
+L
+E
+
+2
+1
+4
+2
+4
+
+t
+e
+s
+t
+
+             FILE
+
+2
+0
+9
+2
+0
+
+u
+s
+e
+r
+t
+e
+s
+t
+s
+
+-- [8分01秒] --
+FI
+LE	11
+7
+49
+6
+
+wc 
+
+-- [8分21秒] --
+F
+I
+L
+E	
+2
+2
+9
+3
+6
+
+x
+a
+r
+g
+s
+
+-- [8分44秒] --
+    FILE	22752
+-> / $ echo h
+el
+l
+o
+
+h
+e
+llo
+
+-
+>
+
+/
+
+$
+
+e
+c
+h
+o
+
+�
+�
+�
+�
+�
+�
+�
+�
+�
+�
+�
+�
+�
+�
+�
+
+�
+�
+�
+�
+�
+�
+�
+�
+�
+�
+��
+�
+�
+�
+
+-
+>
+
+/
+
+$
+
+m
+k
+d
+i
+r
+
+a
+b
+c
+
+-
+>
+
+/
+
+$
+
+l
+s
+
+b
+i
+n
+
+D
+I
+R
+
+0
+
+README                           FILE	2059
+cat      
+
+F
+I
+L
+E
+
+2
+2
+1
+5
+2
+
+e
+c
+h
+o
+
+F
+I
+L
+E
+
+2
+1
+0
+8
+8
+
+f
+i
+n
+d
+
+F
+I
+L
+E
+
+2
+3
+2
+8
+8
+
+g
+r
+e
+p
+
+  FILE	24680
+init                             FILE	2
+1
+7
+6
+0
+kill                             FILE
+
+2
+0
+9
+7
+6
+
+l
+s
+
+F
+I
+L
+E
+
+2
+3
+3
+0
+4
+
+m
+k
+d
+i
+r
+
+F
+I
+L
+E
+
+2
+1
+0
+7
+2
+
+m
+v
+
+              FILE	22872
+rm                          
+
+  FILE	21064
+sh                           
+
+F
+I
+LE
+
+4
+3
+6
+9
+6
+
+s
+l
+e
+e
+p
+
+              FILE	21048
+
+s
+tr
+a
+ce
+
+     FI
+L
+E
+	21
+4
+2
+4
+
+t
+e
+st
+
+F
+I
+L
+E
+
+2
+0
+9
+2
+0
+
+u
+s
+e
+r
+t
+e
+s
+t
+s
+
+F
+I
+L
+E
+
+1
+1
+7
+49
+6
+
+w
+c
+
+-- [11分06秒] --
+   FILE	22936
+xargs                            FILE	22752
+abc                              DIR 	0
+-> / $ cat README
+xv6 is a re-implementation of Dennis Ritchie's and Ken Thompson's Unix
+Version 6 (v6).  xv6 loosely follows the structure and style of v6,
+but
+
+i
+s
+
+i
+mplemen
+t
+e
+d
+
+f
+o
+r
+ a m
+o
+d
+e
+r
+n RISC-V multiprocessor using ANSI C.
+
+ACKNOWLEDGMENTS
+
+xv6 is inspired 
+b
+y
+ J
+o
+h
+n
+
+L
+i
+o
+n
+s
+'
+s
+
+C
+o
+m
+m
+e
+n
+t
+a
+r
+y
+
+on
+
+U
+N
+I
+X
+
+6
+t
+h
+
+E
+d
+i
+t
+i
+o
+n
+
+(
+P
+e
+e
+r
+
+t
+o
+
+Pe
+e
+r
+
+C
+o
+m
+m
+u
+n
+i
+c
+a
+t
+i
+o
+n
+s
+;
+
+I
+S
+B
+N
+: 
+1
+-
+5
+7
+3
+9
+8
+-
+0
+1
+3
+-
+7
+;
+
+1
+s
+t
+
+e
+d
+i
+ti
+o
+n 
+(
+J
+u
+n
+e
+
+1
+4
+,
+
+2
+0
+0
+0
+)
+)
+.
+
+S
+e
+e
+
+a
+l
+s
+o
+
+h
+t
+t
+p
+s
+:
+/
+/
+p
+d
+o
+s
+.
+c
+s
+a
+il.mit.edu/6.828/, which
+provides pointers to on-line resources for v6.
+
+The following people have made contributions: Russ Cox (context switching,
+locking), Clif
+f Frey (MP), Xiao Yu (MP), Nickolai Zeldovich, and Austin
+Clements.
+
+We are also grateful for the bug reports and patches contributed by
+Silas Boyd-Wickizer, Anton Burtsev, Dan Cross, Cody Cutler, Mike CAT,
+Tej Chajed, Asami Doi, eyalz800, , Nelson Elhage, Saar Ettinger, Alice
+Ferrazzi, Nathaniel Filardo, Peter Froehlich, Yakir Goaron,Shivam
+Ha
+nda, Bryan Henry, jaichenhe
+n
+g
+j
+i
+e
+,
+
+J
+i
+m
+
+H
+u
+a
+n
+g
+,
+
+A
+l
+e
+x
+ande
+r
+
+K
+a
+p
+s
+h
+u
+k
+,
+
+A
+n
+d
+e
+r
+s
+
+K
+a
+s
+eo
+r
+g
+,
+
+k
+e
+h
+a
+o
+9
+5
+,
+
+W
+o
+l
+f
+g
+a
+n
+g
+
+K
+e
+l
+l
+e
+r
+,
+
+J
+o
+n
+a
+t
+h
+a
+n
+
+Ki
+m
+m
+i
+t
+t
+,
+
+Ed
+d
+i
+e
+
+K
+oh
+l
+e
+r
+, 
+A
+u
+s
+t
+i
+n 
+L
+ie
+w
+,
+
+I
+m
+b
+a
+r
+
+M
+ar
+i
+n
+e
+s
+c
+u
+,
+
+Y
+a
+nd
+on
+g 
+Ma
+o,
+ M
+at
+an
+
+S
+h
+a
+btay
+,
+
+H
+it
+o
+s
+h
+i
+
+M
+i
+tak
+e
+,
+
+C
+a
+r
+m
+i 
+M
+e
+r
+i
+m
+o
+v
+ic
+h
+,
+
+M
+a
+r
+k
+ M
+o
+r
+r
+i
+s
+s
+e
+y,
+
+m
+t
+a
+s
+m
+,
+ J
+o
+e
+l
+
+N
+i
+de
+r
+,
+
+G
+re
+g
+
+P
+r
+i
+c
+e
+, A
+y
+a
+n
+
+S
+ha
+f
+q
+a
+t
+,
+
+E
+ld
+a
+r
+
+S
+e
+h
+a
+y
+e
+k
+,
+
+Yongming Shen, Fumiya
+Shigemitsu, T
+akahiro,
+ Cam Tenny, tyfkda, Rafael 
+Ubal,
+
+W
+arren Toomey,
+Stephen Tu, Pablo Ventura, Xi 
+W
+an
+g,
+ K
+e
+i
+i
+c
+h
+i
+
+W
+a
+t
+a
+n
+a
+b
+e,
+ N
+ic
+ol
+as
+
+W
+ol
+ovi
+ck
+, 
+wx
+da
+o,
+ G
+ra
+nt
+ W
+u,
+ J
+in
+do
+ng
+ Z
+ha
+ng
+, 
+Ic
+en
+ow
+y 
+Zh
+en
+g,
+ a
+n
+d Zou Chang
+Wei.
+
+Th
+e
+
+c
+o
+d
+e 
+i
+n 
+t
+h
+e
+
+f
+i
+l
+e
+s
+
+t
+h
+a
+t
+
+c
+o
+n
+s
+t
+it
+ut
+e 
+xv
+6 
+is
+
+C
+op
+yr
+ig
+ht
+ 2
+00
+6-
+20
+20
+ F
+ra
+ns
+ K
+aa
+sh
+oe
+k,
+ Ro
+be
+rt
+ M
+or
+ri
+s,
+
+a
+n
+d
+
+R
+u
+ss
+ C
+o
+x.
+
+E
+R
+R
+O
+R 
+RE
+PO
+RT
+S
+
+P
+le
+as
+e 
+se
+nd
+ e
+rro
+rs
+ a
+nd
+ s
+ug
+ge
+st
+io
+ns
+ t
+o 
+Fr
+an
+s 
+Ka
+as
+ho
+ek
+
+a
+n
+d Robe
+r
+t
+
+M
+o
+rr
+is
+
+(
+ka
+as
+ho
+ek,
+rt
+m@
+mi
+t.
+ed
+u)
+. 
+Th
+e 
+ma
+in
+ p
+ur
+po
+se
+ o
+f 
+x
+v
+6
+ i
+s 
+as
+ a
+ t
+ea
+ch
+in
+g
+
+op
+e
+r
+at
+in
+g 
+sy
+st
+em
+ f
+or
+ M
+IT
+'s
+ 6.
+S08
+1,
+ s
+o 
+we
+ a
+re
+ m
+or
+e 
+in
+te
+re
+st
+e
+d
+
+i
+n
+
+s
+i
+mp
+li
+f
+i
+c
+a
+ti
+o
+ns
+
+a
+n
+d
+
+cl
+ar
+if
+ic
+at
+io
+ns
+ t
+ha
+n 
+ne
+w 
+fe
+at
+ur
+es
+.
+
+B
+UI
+LD
+IN
+G 
+AN
+D 
+RU
+NN
+IN
+G 
+XV
+6
+
+Yo
+u 
+wi
+ll
+ n
+ee
+d 
+a 
+RI
+SC
+-V
+ "
+ne
+wl
+ib
+" 
+to
+ol
+ c
+ha
+in
+ f
+ro
+m
+
+ht
+tp
+s:
+//g
+it
+hu
+b
+.c
+o
+m/
+r
+is
+c
+v
+/
+ri
+sc
+v
+-gnu-
+t
+o
+o
+l
+c
+h
+a
+i
+n
+,
+
+an
+d 
+q
+e
+m
+u
+
+compiled for
+riscv64-softmmu. Once they are installed, and in your shell
+search path, you can run "make qemu".
+-> / $ 

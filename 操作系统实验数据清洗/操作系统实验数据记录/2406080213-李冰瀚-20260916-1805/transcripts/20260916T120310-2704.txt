@@ -1,0 +1,27 @@
+==== labtracker 终端转录 ====
+录像: 20260916T120310-2704.out.gz   时长: 13分58秒   原始大小: 1225B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ mkdir -p ~/transfeerr
+
+-- [1分59秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ chmod 700 ~/transfer
+
+-- [6分20秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ^Vls -1 ~/transfer
+ailab-test.txt
+
+-- [6分48秒] --
+ailab-os@a
+ilab-os-VMware-Virtual-Platform:~$ cat ~/transfer/aliilab-test.txt
+hello from windows
+
+-- [8分45秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+
+-- [13分58秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

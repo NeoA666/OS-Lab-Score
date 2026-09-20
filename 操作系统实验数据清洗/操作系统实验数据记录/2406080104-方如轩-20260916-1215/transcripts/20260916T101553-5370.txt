@@ -1,5 +1,0 @@
-==== labtracker 终端转录 ====
-录像: 20260916T101553-5370.out.gz   时长: 0分01秒   原始大小: 140B
-==================================================
--- [开始] --
-mahirolover@mahirolover-VMware-Virtual-Platform:~$ 

@@ -1,0 +1,11 @@
+==== labtracker 终端转录 ====
+录像: 20260909T103152-15927.out.gz   时长: 0分09秒   原始大小: 269B
+==================================================
+-- [开始] --
+Script s
+tarted on 2026-09-09 10:31:52+08:00 [COMMAND="bash" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+
+-- [0分09秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

@@ -1,0 +1,1366 @@
+==== labtracker 终端转录 ====
+录像: 20260914T105858-16593.out.gz   时长: 11分11秒   原始大小: 9478B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ make build 
+
+make build 
+make: 对“build”无需做任何事。
+
+-- [1分01秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ make build 
+
+make build 
+make: 对“build”无需做任何事。
+
+-- [1分06秒] --
+ailab-os@ail
+-- [1分10秒] --
+ab
+-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ make fs
+[sudo] ailab-os 的密码： 
+
+-- [2分22秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ make fs
+
+-- [2分56秒] --
+ailab
+-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ ls -lh fs.img
+ailab-os@ailab-os-VMware-Virtual-Platform:
+~/桌面/xv6-ai-labs-km/lab0$ ls -lh fs.img
+-rw-rw-r-- 1 ailab-os ailab-os 256M  9月 14 11:01 fs.img
+
+-- [3分17秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~
+/桌
+�
+�
+�/xv6-ai-labs-km/lab0$ make run
+
+OpenSBI 
+v1.3
+   ____                    _____ ____ _____
+  / __ \        
+          / ____|  _ \_   _|
+ | |  | |_ __   ___ _ __
+ | (_
+_
+_
+
+| |_) || |
+ | |  | | '_ \ / _ \ '_ \ \___ \|  _ < | |
+
+ | |__| | |_) |  __/ | | |____) | |_)
+ ||
+
+|_
+  \___
+_/| .__/ \___|_| |_|_____/|___
+/_
+____|
+        | |
+        |_|
+
+Platform Name             : riscv-v
+irt
+io,qemu
+Platform Features         : medeleg
+Platform HART Count       : 2
+Platform IPI Device       : aclint-mswi
+Platform Timer Device     : aclint-mtimer @ 10000000Hz
+Platform Console Device   : uart8250
+Platform HSM Device       : ---
+Platform PMU Device       : ---
+Platform Reboot Device    : sifive_test
+Platform Shutdown Device  : sifive_test
+Platform Suspend Device   : ---
+Platform CPPC Device      : ---
+Firmware Base             : 0x80000000
+Firmware Size             : 332 KB
+Firmware RW Offset        : 0x40000
+Firmware RW Size          : 76 KB
+Firmware Heap Offset      : 0x4a000
+Firmware Heap Size        : 36 KB (total), 2 KB (reserved), 9 KB (used), 24 KB (free)
+Firmware Scratch Size     : 4096 B (total), 760 B (used), 3336 B (free)
+Runtime SBI Version       : 1.0
+
+Domain0 Name              : root
+Domain0 Boot HART         : 0
+Domain0 HARTs             : 0*,1*
+Domain0 Region00          : 0x0000000002000000-0x000000000200ffff M: (I,R,W) S/U: ()
+Domain0 Region01          : 0x0000000080040000-0x000000008005ffff M: (R,W) S/U: ()
+Domain0 Region02          : 0x0000000080000000-0x000000008003ffff M: (R,X) S/U: ()
+Domain0 Region03          : 0x0000000000000000-0xffffffffffffffff M: (R,W,X) S/U: (R,W,X)
+Domain0 Next Address      : 0x0000000080200000
+Domain0 Next Arg1         : 0x0000000087e00000
+Domain0 Next Mode    
+     : S-mode
+Domain0 SysReset          : yes
+Domain0 SysSusp
+end
+
+      : 
+y
+es
+
+Boot HART ID            
+
+: 0
+Boot HART Domain 
+
+      : root
+Boot HART Priv 
+V
+ersion    : v1.12
+Boot HART Bas
+e
+
+ISA        : rv64imafdch
+Boot HART ISA Extensions  : time,sstc
+Boot HART PMP Count       : 1
+6
+
+Boot HART PMP Granularity :
+ 4
+
+Boot HART PMP Address Bits: 54
+Boot
+ H
+ART MHPM Coun
+t 
+     : 16
+Boot HA
+R
+T
+ MIDELEG         : 0x0000000000001666
+Boot
+ HA
+RT MEDELEG         : 0x0000000000f0b509
+  (`-.            (`-.                            .-')       ('-.
+
+ _   .-')
+ ( OO ).        _(OO  )_                   
+
+   .(  OO)    _(  OO)  ( '.( OO )_ 
+(_/.  \_)-. ,--(_/   ,. \  ,--.                (_)---\_)  (,------.  ,--.   ,--.) ,--. ,--.  
+ \  `.'  /  \   \   /(__/ /  .'       .-')     '  .-.  '   |  .---'  |   `.'   |  |  | |  |   
+  \     /\   \   \ /   / .  / -.    _(  OO)   ,|  | |  |   |  |      |         |  |  | | .-')
+   \   \ |    \   '   /, | .-
+.
+
+'  (,------. (_|  | |  |  (|  '--.   |  |'.'|  |  |  |_|( OO )
+  .'    \_)    \     /__)' \  |  |  '--
+-
+-
+-
+-'   |  | |  |   |  .--'   |  |   |  |  |  | | `-' /
+ /  .'.  \      \   /    \  `'  /              '  '-'  '-. |  `---.  |  |   |  | ('  '-'(
+_.-'
+'--'   '--'      `-'      `----'                `-----'--' `---
+---'  `--'   `--'   `-----'
+hart 0 enter main()...
+
+k
+er
+ne
+l_
+en
+d:
+ 0x0000000080226000, phystop: 0x00000
+0
+0
+08
+0
+600000
+kinit
+k
+v
+m
+i
+n
+i
+t
+
+kv
+m
+i
+n
+i
+t
+h
+a
+r
+t
+
+t
+i
+m
+e
+r
+in
+i
+t
+
+t
+r
+a
+p
+i
+n
+i
+t
+h
+a
+r
+t
+
+pr
+o
+c
+i
+n
+i
+t
+
+p
+l
+i
+c
+i
+n
+i
+t
+
+p
+l
+i
+c
+i
+n
+i
+t
+h
+a
+rt
+
+v
+i
+r
+t
+i
+o
+_
+d
+i
+s
+k
+_
+i
+n
+i
+t
+
+b
+i
+n
+it
+
+f
+i
+l
+e
+i
+n
+i
+t
+
+u
+s
+e
+r
+i
+n
+i
+t
+
+h
+a
+r
+t 
+0
+
+i
+n
+i
+t
+
+d
+o
+n
+e
+
+[
+f
+a
+t
+3
+2
+_
+i
+n
+it
+]
+
+e
+n
+t
+e
+r
+!
+
+[
+F
+A
+T
+3
+2
+
+i
+n
+i
+t
+]
+b
+y
+ts
+_
+p
+e
+r
+_
+s
+e
+c
+:
+
+5
+1
+2
+
+[
+F
+A
+T
+3
+2
+
+i
+n
+i
+t
+]
+r
+o
+o
+t
+_
+cl
+u
+s
+:
+
+2
+
+[
+F
+A
+T
+3
+2
+
+i
+n
+i
+t]
+s
+ec_per
+-- [3分47秒] --
+_
+c
+l
+u
+s
+: 
+1
+
+[
+F
+A
+T
+3
+-- [3分56秒] --
+2
+ i
+nit
+]
+fat_cnt: 2
+[FAT32 init]fat_sz: 4033
+[FAT32 init]first
+_data_sec: 8098
+init: starting sh
+-> / $ xit
+[exec] xit not found
+
+-- [4分00秒] --
+[
+e
+xec
+]
+
+r
+e
+a
+c
+h
+
+b
+a
+d
+
+[
+e
+x
+e
+c
+]
+
+/
+bi
+n
+/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+x
+i
+t
+
+n
+o
+t
+
+f
+o
+u
+n
+d
+
+[
+exec] reach bad
+exec xit failed
+-> / $
+
+-- [4分04秒] --
+e
+x
+i
+t
+
+[
+e
+x
+-- [4分19秒] --
+e
+c]
+ e
+-- [4分27秒] --
+x
+it 
+n
+o
+t
+
+f
+o
+u
+n
+d
+
+[
+e
+x
+e
+c
+]
+
+r
+e
+a
+c
+h
+
+b
+a
+d
+
+[
+e
+x
+e
+c]
+
+/
+b
+i
+n
+/
+e
+x
+i
+t
+
+n
+o
+t
+
+f
+o
+un
+d
+
+[
+e
+x
+e
+c
+]
+
+r
+e
+a
+c
+h
+
+b
+a
+d
+
+e
+x
+e
+c
+
+e
+x
+i
+t
+
+f
+a
+i
+l
+e
+d
+
+-
+>
+
+/
+
+$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+s
+
+[
+e
+x
+e
+c
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+s
+
+n
+o
+t
+
+f
+o
+un
+-- [4分30秒] --
+d
+
+[exec] reach bad
+[exec] /bin/s not found
+
+[e
+x
+e
+c] 
+r
+e
+a
+c
+h ba
+d
+
+exec 
+
+
+
+
+
+
+
+
+s
+
+f
+a
+iled
+
+->
+
+/
+
+$
+
+l
+s
+
+bin                
+
+DIR 	0
+R
+E
+A
+D
+M
+E
+
+F
+I
+L
+E
+
+2
+0
+5
+9
+
+c
+a
+t
+
+F
+I
+L
+E
+
+2
+2
+1
+5
+2
+
+e
+ch
+o
+
+F
+I
+L
+E
+
+2
+1
+0
+8
+8
+
+f
+i
+n
+d
+
+F
+I
+L
+E
+
+2
+3
+2
+8
+8
+
+g
+r
+e
+p
+
+F
+I
+L
+E
+	2
+4
+6
+8
+0
+
+i
+n
+i
+t
+
+F
+I
+L
+E	
+2
+1
+7
+6
+0
+
+k
+i
+ll
+
+             FILE	20
+9
+7
+6
+
+l
+s
+
+ F
+I
+L
+E
+
+2
+3
+3
+04
+
+m
+k
+d
+i
+r
+
+F
+I
+LE
+
+2
+1
+0
+7
+2
+
+m
+v
+
+F
+I
+L
+E
+
+2
+2
+8
+7
+2
+
+r
+m
+
+F
+I
+L
+E
+
+2
+1
+0
+6
+4
+
+sh
+
+F
+I
+L
+E
+
+4
+3
+6
+9
+6
+
+s
+l
+e
+ep
+
+F
+I
+L
+E
+
+21
+0
+4
+8
+
+st
+r
+a
+c
+e
+
+F
+I
+L
+E
+
+2
+1
+4
+2
+4
+
+t
+e
+st
+
+F
+I
+L
+E
+
+2
+0
+9
+2
+0
+
+u
+s
+e
+r
+t
+es
+t
+s
+
+-- [4分34秒] --
+F
+I
+L
+E
+
+1
+1
+7
+4
+9
+6
+
+w
+c
+
+F
+I
+L
+E
+
+2
+2
+9
+3
+6
+
+x
+a
+r
+g
+s
+
+F
+I
+L
+E
+
+2
+2
+7
+5
+2
+
+-
+>
+
+/
+
+$ 
+l
+s
+/
+b
+i
+n
+
+-- [4分38秒] --
+[
+e
+-- [4分41秒] --
+x
+e
+c
+]
+
+l
+s/b
+i
+n n
+o
+t
+
+f
+o
+u
+n
+d
+
+[
+e
+x
+e
+c
+]
+
+r
+e
+a
+c
+h
+
+b
+a
+d
+
+[
+e
+x
+e
+c
+]
+
+/
+b
+i
+n
+/
+l
+s
+/
+b
+i
+n
+
+n
+o
+t
+
+f
+ound
+[exec] reach bad
+exec l
+s/
+b
+i
+n
+
+f
+a
+i
+l
+e
+d
+
+-
+>
+
+/
+
+$
+
+c
+a
+t
+
+R
+E
+A
+D
+M
+E
+
+x
+v
+6
+
+i
+s
+
+a
+
+r
+e
+-
+i
+m
+p
+l
+em
+e
+n
+t
+a
+t
+i
+o
+n
+
+o
+f
+
+D
+e
+n
+n
+i
+s
+
+R
+i
+t
+c
+h
+i
+e
+'
+s
+
+a
+n
+d
+
+K
+e
+n
+
+T
+h
+o
+m
+p
+s
+o
+n
+'
+s
+
+U
+n
+i
+x
+
+V
+e
+r
+s
+i
+o
+n
+
+6
+
+(
+v
+6
+). 
+ x
+v
+6
+
+l
+o
+o
+s
+e
+l
+y
+
+f
+o
+l
+l
+o
+ws
+
+th
+e
+
+s
+t
+r
+u
+c
+t
+u
+r
+e
+
+a
+n
+d
+
+s
+t
+y
+l
+e
+
+o
+f
+
+v
+6
+,
+
+b
+u
+t
+
+i
+s
+
+i
+m
+p
+l
+e
+m
+e
+n
+t
+e
+d
+
+f
+o
+r
+
+a
+
+m
+o
+d
+e
+r
+n
+
+R
+I
+S
+C
+-
+V
+ m
+u
+l
+tiprocessor using 
+A
+N
+S
+I
+
+C
+.
+
+A
+C
+K
+N
+O
+W
+L
+E
+D
+G
+M
+E
+N
+T
+S
+
+x
+v
+6
+
+i
+s
+
+i
+n
+s
+p
+i
+r
+ed
+
+b
+y
+
+J
+o
+h
+n
+
+L
+i
+o
+n
+s
+'
+s
+
+C
+o
+m
+mentary on UNIX 6th Edition (Peer
+to Peer Communications; ISBN: 1-57398-013-7; 1st
+ e
+d
+it
+i
+on
+
+(
+J
+u
+n
+e
+
+1
+4
+,
+
+2
+0
+0
+0)). See also https://pdos.csail.mit.edu/6.828/, which
+provides pointers to on-line resources for v6.
+
+The following people have made contributions: Russ Cox (context switching,
+locking), Cliff Frey (MP), Xiao Yu (MP), Nickolai Zeldovich, and Austin
+Clements.
+
+We are also grateful for the bug reports and patches contributed by
+Silas Boyd-Wickizer, Anton Burtsev, Dan Cross, Cody Cutler, Mike CAT,
+Tej Chajed, Asami Doi, eyalz800, , Nelson Elhage, Saar Ettinger, Alice
+Ferrazzi, Nathaniel Filardo, Peter Froehlich, Yakir Goaron,Shivam
+Handa, Bryan Henry, jaichenhengjie, Jim Huang, Alexander Kapshuk,
+Anders Kaseor
+g, kehao95
+, Wolfgang Keller, Jonathan Kimmitt, Eddie
+Kohler, Austin Liew, Imbar Marinescu, Yandong Mao, Matan Shabtay,
+Hitoshi Mitake, Carmi Merimovich, Mark Morrissey, mtasm, Joel Nider,
+Greg Price, Ayan Shafqat, Eldar Sehayek, Yongming Shen, Fumiya
+Shigemitsu, Takahiro, Cam Tenny, tyfkda, Rafael Ubal, Warren Toomey,
+Stephen Tu, Pablo Ventura, Xi Wang, Keiichi Watanabe, Nicolas
+Wolovick, wxdao, Grant Wu, Jindong Zhang, Icenowy Zheng, an
+d Zou Chang
+Wei.
+
+The code in the files that constitute xv6 is
+Copyright 2006-2020 Frans Kaashoek, Robert Morris, and Russ Cox.
+
+ERROR REPORTS
+
+Please send errors and suggestions to Frans Kaashoek and Robert Morris
+(kaashoek,rtm@mit.edu). The main purpose of xv6 is as a teaching
+operating system for MIT's 6.S081, so we are more interested in
+simplifications and clarifications than new features.
+
+BUILDING AND RUNNING XV6
+
+You will need a RISC-V "newlib" tool chain from
+https://github.com/riscv/riscv-gnu-toolchain, and qemu
+
+-- [11分11秒] --
+compiled fo
+r
+
+r
+i
+scv
+6
+4
+-
+sof
+t
+mmu. Once they are installed, and in your shell
+search path, you can run "make qemu".
+-> / $ init: starting sh
+-> / $ 

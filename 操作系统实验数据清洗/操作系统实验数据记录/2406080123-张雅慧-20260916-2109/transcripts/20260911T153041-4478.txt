@@ -1,0 +1,13 @@
+==== labtracker 终端转录 ====
+录像: 20260911T153041-4478.out.gz   时长: 1分00秒   原始大小: 519B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~
+$ cd`~/zhuomian/xv6_-ai-labs-km/lab0
+bash: cd~/zhuomian/xv6-ai-labs-km/lab0: 没有那个文件或目录
+
+-- [1分00秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

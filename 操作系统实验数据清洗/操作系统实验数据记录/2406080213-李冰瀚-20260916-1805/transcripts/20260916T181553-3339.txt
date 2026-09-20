@@ -1,0 +1,12 @@
+==== labtracker 终端转录 ====
+录像: 20260916T181553-3339.out.gz   时长: 0分29秒   原始大小: 524B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+
+-- [0分29秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 1
+exit
+

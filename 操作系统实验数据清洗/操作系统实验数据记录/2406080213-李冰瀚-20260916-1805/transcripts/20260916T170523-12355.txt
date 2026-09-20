@@ -1,0 +1,46 @@
+==== labtracker 终端转录 ====
+录像: 20260916T170523-12355.out.gz   时长: 0分07秒   原始大小: 1968B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "",
+    "ANTHROPIC_BASE_URL": "https://open.bigmodel.cn/api/anthropic",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "glm-5.3[1m]",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "glm-5.3[1m]",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "glm-5.3[1m]",
+    "CLAUDE_CODE_ATTRIBUTION_HEADER": "0",
+    "ANTHROPIC_MODEL": "glm-5.3[1m]",
+    "DISABLE_AUTOUPDATER": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "API_TIMEOUT_MS": "3000000"
+  },
+  "model": "opus",
+                                    [ 已读取 16 行 ]
+^G 帮助       ^O 写入       ^W 搜索       ^K 剪切       ^T 执行命
+-- [0分07秒] --
+令   ^C 位置
+^X 离开       ^R 读档       ^\ 替换       ^U 粘贴       ^J 对齐       ^/ 跳行
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "",
+    "ANTHROPIC_BASE_URL": "https://open.bigmodel.cn/api/anthropic",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "glm-5.3[1m]",
+    "ANTHROPIC_DEFAULT_OPUS
+_MODEL": "glm-5.3[1m]",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "glm-5.3[1m]",
+    "CLAUDE_CODE_ATTRIBUTION_HEADER": "0",
+    "ANTHROPIC_MODEL": "glm-5.3[1m]",
+
+    "
+DISABLE_AUTOUPDATER":
+ "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "API_TIMEOUT_MS": "3000000"
+  },
+  "model": "opus",
+                                    [ 已读取 16 行 ]
+^G 帮助       ^O 写入       ^W 搜索       ^K 剪切     
+  ^T 执行命令   ^C 位置
+^X 离开       ^R 读档       ^\ 替换       ^U 粘贴       ^J 对齐       ^/ 跳行
+

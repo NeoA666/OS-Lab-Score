@@ -1,0 +1,1210 @@
+==== labtracker 终端转录 ====
+录像: 20260920T134629-8595.out.gz   时长: 26分47秒   原始大小: 11396B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMwar
+e-Virtual-Platform:~$ make build
+make: *** 没有规则可制作目标“build”。 停止。
+
+-- [0分13秒] --
+ailab-os@ailab-os
+-VMware-
+Virtual-Platform:~$ make fs
+make: *** 没有规则可制作目标“fs”。 停止。
+
+-- [0分23秒] --
+ailab-os@ailab-os-V
+Mware-Vi
+rtual-Platform:~$ make run
+make: *** 没有规则可制作目标“run”。 停止。
+
+-- [0分36秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ^C
+
+-- [3分27秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:
+~$  cd ~/桌面/xv6-k21
+0
+-原版参考
+  make fs      # 造 fs.img（需要 sudo 密码）
+  make run     # 启动 QEMU
+
+ cd
+ ~/桌面
+/xv6-k210-原版参�
+��
+  make fs      # 造 fs.img（需要 sudo 密码）
+  make run     # 启动 QEMU
+
+making fs image...
+
+输入了 512+0 块记录
+
+输出了 512+0 块记录
+2
+-- [3分32秒] --
+68
+4
+3
+5
+4
+5
+6
+
+�
+�
+�
+�
+�
+�
+
+(
+2
+6
+8
+
+M
+B
+,
+
+2
+5
+6
+
+M
+i
+B
+)
+ �
+�
+�
+�
+�
+�
+�
+�
+�
+�
+�
+�
+1
+.
+2
+5
+3
+7
+2
+
+s
+�
+�
+�
+2
+1
+4
+
+M
+B
+/
+s
+
+m
+k
+f
+s
+.
+f
+a
+t
+
+4
+.
+2
+
+(
+2
+0
+2
+1
+-
+0
+1
+-
+3
+1)
+
+[
+s
+u
+d
+o
+] 
+a
+i
+l
+a
+b-
+o
+s
+
+�
+�
+�
+�
+�
+�
+�
+�
+�
+�
+�
+�
+
+[
+ru
+s
+t
+s
+b
+i
+]
+
+R
+u
+s
+t
+S
+B
+I
+
+ve
+rs
+io
+n 
+0
+.
+1
+.
+1
+
+.
+_
+_
+__
+__
+
+ _
+_
+
+_
+_ 
+
+_
+_
+_
+_
+_
+_
+_
+.
+__
+_
+_
+_
+_
+_
+_
+__
+_
+.
+
+_
+_
+_
+_
+_
+_
+_
+.
+.
+_
+_
+_
+_
+_
+_
+
+_
+_
+
+|
+
+_
+
+\
+
+|
+
+ |
+
+|
+
+| 
+
+/
+
+|
+
+|
+
+/
+
+|
+|
+
+_
+
+\
+
+|
+
+|
+
+|
+
+|
+_
+)
+
+ |
+
+ |
+
+| 
+
+|
+
+| 
+
+| 
+
+(
+-
+-
+-
+-
+`-
+-
+-
+|
+
+ |
+-
+-
+-
+-
+`
+| 
+
+(
+-
+-
+--
+`
+|
+
+|
+_)
+
+|
+|  |
+
+|
+
+/
+
+ |  |  |  |    
+\ 
+
+\
+
+|
+
+| 
+
+\
+
+\ 
+
+|
+
+_
+  < |  |
+
+|
+
+|
+\ 
+
+\
+-
+-
+-
+-
+.
+|
+
+`
+-
+-
+'
+
+|.
+--
+-
+-
+)
+
+|
+
+|
+
+|
+
+.-
+-
+-
+-
+)
+
+|
+
+|
+
+|
+_
+)
+
+||
+
+|
+
+|
+
+_
+|
+
+`
+.
+_
+_
+_
+_
+_
+| 
+\
+_
+_
+____/ |_______/   
+    |__|  |_______/    |______/ |__|
+
+[ru
+s
+t
+s
+b
+i
+]
+
+P
+l
+a
+t
+f
+o
+r
+m
+:
+
+Q
+E
+M
+U
+
+(
+V
+e
+r
+s
+i
+o
+n
+
+0
+.
+1
+.
+0
+)
+
+[
+r
+u
+s
+t
+s
+b
+i
+] 
+m
+i
+s
+a
+:
+
+R
+V
+6
+4
+A
+C
+D
+F
+H
+I
+M
+S
+U
+
+[
+r
+u
+s
+t
+s
+b
+i
+]
+
+m
+i
+d
+el
+eg: 
+0x1666
+
+[rustsbi] medeleg: 0xb1ab
+
+[
+r
+u
+s
+t
+s
+b
+i
+-
+d
+t
+b
+]
+
+H
+a
+r
+t
+
+c
+o
+u
+n
+t
+:
+
+c
+l
+u
+s
+t
+e
+r
+0
+
+w
+i
+t
+h
+
+2
+
+c
+o
+r
+e
+s
+
+[
+r
+us
+t
+s
+b
+i
+]
+
+K
+e
+r
+n
+e
+l
+
+e
+n
+t
+r
+y
+:
+
+0
+x
+80
+2
+0
+0
+00
+0
+
+[
+r
+u
+s
+t
+s
+b
+i
+-
+p
+a
+n
+i
+c
+]
+
+h
+a
+r
+t
+
+0
+
+p
+a
+n
+ic
+k
+e
+d
+
+a
+t
+
+'
+U
+n
+h
+a
+n
+d
+l
+e
+d
+
+e
+x
+c
+e
+p
+t
+i
+on
+!
+
+m
+c
+a
+u
+s
+e
+: 
+E
+xc
+e
+p
+t
+i
+o
+n(
+I
+n
+s
+t
+r
+u
+c
+t
+i
+o
+n
+F
+a
+u
+l
+t
+)
+,
+
+m
+ep
+c
+:
+ 0000000080004282, mtval: 0000000000000000, trap frame: 0x801ef828, TrapFrame { ra: 80001be0, t0: 0, t
+1
+: 0, t2: 0, t3: 90, t4: 80, t5: f0, t6: 30, a0: 0, a1: 80600000, a2: a00000800, a3: 801efa98, a4: 0, a5: 1, a6: 800, a7: 0 }', src/mai
+n
+.
+r
+s
+:
+4
+6
+5
+:
+1
+8
+
+[
+r
+u
+s
+t
+s
+bi-panic] system shutdown scheduled due to RustSBI panic
+[rustsbi-panic] hart 0 panicked at 'internal error: entered unreac
+
+-- [3分44秒] --
+ailab-os@ailab-os-VMware-Virtual
+-Platform:~/桌面/xv6-k210-原版参考$ make build
+make: 对“build”无需做任何事。
+
+-- [3分49秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-k210-原版参考$ make fs
+
+-- [3分56秒] --
+ailab
+-os@ai
+l
+ab-os-VMware-Virtual-Platform:~/桌面/xv6-k210-原版参考$ make 润run
+[rustsbi] RustSBI version 0.1.1
+.______       __    __      _______.___________.  _______..______   __
+|   _  \     |  |  |  |    /       |           | /       ||   _  \ |  |
+|  |_)  |    |  |  |  |   |   (----`---|  |----`|   (----`|  |_)  ||  |
+|      /     |  |  |  |    \   \       |  |      \   \    |   _  < |  |
+|  |\  \----.|  `--'  |.----)   |      |  |  .----)   |   |  |_)  ||
+  |
+| _| `._____| 
+\
+__
+_
+_
+_
+_/ |_______/       |
+__|  |____
+___/    |______/ |__|
+
+[ru
+s
+tsbi] Platform: QEMU (Version 0.1.0)
+[rustsbi] 
+m
+isa: RV64ACDFHIMSU
+[rustsbi] mideleg: 0x1666
+[rustsbi] medeleg: 0xb1ab
+[rustsbi-dtb] Hart count: cluster0 with 2 cores
+[rustsbi] Kernel entry: 0x80200000
+[rustsbi-panic] hart 0 panicked at 'Unhandled exception! mcause: Exception(InstructionFault), mepc: 0000000080004282, mtval: 0000000000000000, trap frame: 0x801ef828, TrapFrame { ra: 80001be0, t0: 0, t1: 0, t2: 0, t3: 90, t4: 80, t5: f0, t6: 30, a0: 0, a1: 80600000, a2: a00000800, a3: 801ef
+a98, a4: 0, a5: 1, a6: 800, a7: 0 }', src/main.rs:465:18
+[rustsbi-panic] system shutdown scheduled due to RustSBI panic
+[r
+
+-- [4分10秒] --
+ailab-os@ailab-os-VMw
+are-Virtual-Platform:
+~/桌面/xv6-k210-原版参考$ -> / $ halt-> / $ halt
+bash: /: 是一个目录
+
+-- [4分16秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~
+/桌面/xv6-k210-原版参考$ halt
+Call to Halt failed: Interactive authentication required.
+
+-- [5分18秒] --
+a
+ilab-os@ailab-os-VMware-Virtual-Platform:~/桌
+面/xv6-k210-原版参考$ -》-> / $ halt-> / $ halt
+bash: /: 是一个目录
+
+-- [9分12秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-k210-原版参考$ ^C
+
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-k210-原版参考$ 
+
+-- [9分27秒] --
+a
+ilab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-k210-原版参考$ c
+c：未找到命令
+
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-k210-原版参考$ ^C
+
+-- [9分42秒] --
+ailab-
+os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-k210-原版参考$ ^C
+
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-k210-原版参考$ ^C
+
+-- [10分46秒] --
+ailab-
+os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-k210-原版参考$ ^C
+
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-k210-原版参考$ ^C
+^A
+
+-- [21分18秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-k210-原版参考$ 
+
+-- [21分21秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-k210-原
+版参考$ 
+make build
+make fs   # 仅当 halt 程序路径或名称变化时才需要重新打包
+make run
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-k210-原�
+�参考$ make build
+make fs   # 仅�
+�� halt 程序路径或名称
+-- [21分25秒] --
+�
+�化时才需要重新打包
+make run
+make: 对“build”无需做任何事。
+[sudo] ailab-os 的密码： 
+[rustsbi] RustSBI version 0.1.1
+.______       __    __      _______.___________.  _______..______   __
+|   _  \     |  |  |  |    /       |        
+
+|
+
+/
+       ||   _  \ |  |
+
+|
+
+|
+_
+)
+
+|
+
+ |  |  |  |   |   (----`---|  |----`|   (----`|  |_)  ||  |
+|      /     |  |  |  |    \   \       |  |      \   \    |   _  < |  |
+
+|
+
+|
+\
+
+\
+-
+-
+-
+-
+.
+|
+
+`
+-
+-
+'
+
+|.
+--
+-
+-)   |      |  |  .----)   |   |  |
+_
+)
+
+||
+
+|
+
+|
+
+_
+|
+
+`
+.
+_
+_
+_
+_
+_
+|
+
+\
+_
+_
+_
+_
+_
+_
+/
+
+|_
+_
+_
+_
+_
+_
+_
+/
+
+|
+_
+_
+|
+
+|
+_
+_
+_
+_
+__
+_
+/
+
+|
+_
+_
+_
+_
+_
+_
+/
+
+|
+_
+_
+|
+
+[ru
+s
+t
+s
+b
+i
+]
+
+P
+l
+a
+t
+f
+o
+r
+m
+:
+
+Q
+E
+M
+U
+
+(
+V
+e
+r
+s
+i
+o
+n
+
+0
+.
+1
+.
+0
+)
+
+[
+r
+u
+s
+t
+s
+b
+i
+] 
+m
+i
+s
+a
+:
+
+R
+V6
+4
+A
+C
+D
+F
+H
+I
+M
+S
+U
+
+[
+r
+u
+s
+t
+s
+b
+i
+]
+
+m
+i
+d
+el
+e
+g
+:
+
+0
+x
+1
+6
+6
+6
+
+[
+r
+u
+s
+t
+s
+b
+i]
+
+m
+e
+d
+e
+l
+e
+g: 0
+x
+b
+1
+a
+b
+
+[
+r
+u
+s
+ts
+b
+i
+-
+d
+t
+b
+]
+
+H
+a
+r
+t
+
+c
+o
+u
+n
+t
+:
+
+c
+lust
+e
+r
+0
+
+w
+i
+th
+
+2 
+c
+o
+r
+e
+s
+
+[
+r
+u
+s
+t
+s
+b
+i]
+
+K
+e
+r
+n
+e
+l
+
+e
+n
+t
+r
+y
+:
+
+0
+x
+8
+0
+2
+0
+0
+0
+0
+0
+
+[
+r
+u
+s
+t
+s
+b
+i
+-
+p
+a
+n
+i
+c
+]
+
+h
+a
+r
+t
+
+0
+
+p
+a
+n
+i
+c
+k
+e
+d
+
+a
+t
+
+'
+U
+n
+h
+a
+n
+d
+l
+e
+d
+
+e
+x
+cep
+t
+i
+o
+n
+!
+
+m
+c
+a
+u
+s
+e
+:
+
+E
+x
+c
+e
+p
+t
+i
+o
+n
+(InstructionFault), mepc: 0000000080004282, mtval: 0000000000000000, trap frame: 0x801ef828, TrapFrame { ra: 80001be0, t0: 0, t1: 0, t2: 0, t3: 90, t4: 80, t5: f0, t6: 30, a0: 0, a1: 80600000, a2: a00000800, a3: 801
+efa98, a4: 0, a5: 1, a6: 800, a7: 0 }', src/main.rs:465:18
+[rustsbi-panic] system shutdown scheduled due to RustSBI panic
+
+-- [21分47秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:
+~/桌面/xv6-k210-原版参考$ -> / $ halt-> / $ halt
+bash: /: 是一个目录
+
+-- [22分49秒] --
+a
+ilab-os@
+ailab-os-VMware-Virtual-Platform:~/桌面/xv6-k210-原版参考$ c
+c：未找到命令
+
+-- [22分53秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-k210-原版参考$ ^C
+
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-k210-原版参考$ ^C
+^A
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-k210-原版参考$ ^C
+
+-- [23分05秒] --
+c
+
+-- [26分47秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-k210-原版参考$ qemu-system-riscv64 -machine virt -kernel target/kernel -m 128M -nographic \
+    -smp 2 -bios default \
+    -drive file=fs.img,if
+=none,format=raw,id=x0 \
+    -device virtio-blk-device,drive=x0,bus=virtio-mmio-bus.0 \
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-k210-原版参考$ qemu-system-riscv64 -machine virt -kernel target/kernel -m 128M -nographic \
+    -smp 2 -bios default \
+    -drive fi
+le=fs.img,if=none,format=raw,id=x0 \
+    -device virtio-blk-device,drive=x0,bus=virtio-mmio-bus.0 \
+    -s -S
+

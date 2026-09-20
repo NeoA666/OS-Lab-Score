@@ -1,0 +1,27 @@
+==== labtracker 终端转录 ====
+录像: 20260911T153358-4991.out.gz   时长: 1分41秒   原始大小: 1123B
+==================================================
+-- [开始] --
+Script s
+tarted on 2026-09-11 15:33:58+08:00 [COMMAND="bash" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+
+-- [0分42秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:
+~$ cd`~/Desktop/xv6-ai-labs-km/lab0
+bash: cd~/Desktop/xv6-ai-labs-km/lab0: 没有那个文件或目录
+
+-- [1分17秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ^C
+
+-- [1分30秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ^V^C
+
+-- [1分37秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ^V
+
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+
+-- [1分41秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

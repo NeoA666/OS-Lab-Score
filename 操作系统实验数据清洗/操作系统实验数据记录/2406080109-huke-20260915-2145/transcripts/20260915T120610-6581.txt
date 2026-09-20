@@ -1,0 +1,188 @@
+==== labtracker 终端转录 ====
+录像: 20260915T120610-6581.out.gz   时长: 12分43秒   原始大小: 10164B
+==================================================
+-- [开始] --
+Script s
+tarted on 2026-09-15 12:06:10+08:00 [COMMAND="bash" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+
+-- [0分32秒] --
+ai
+lab-os@a
+ilab-os-
+VMware-V
+irtual-Platform
+:~/桌面/xv6-ai-labs-km/lab0$ claude
+78 ▐▛███▜▌ClaudeCodev2.1.221
+▝▜█████▛▘deepseek-chat·APIUsageBilling
+ ▘▘▝▝~/桌面/xv6-ai-labs-km/lab0
+
+────────────────────────────────────────────────────────────────────────────────
+❯  
+────────────────────────────────────────────────────────────────────────────────
+⏸manualmodeon
+·
+?
+for
+
+-- [0分43秒] --
+shortcuts·←foragents
+-- [0分55秒] --
+●
+high·/effort
+>0q
+
+
+n 
+
+i 
+
+-- [0分59秒] --
+ · ? for shortcuts · ← for agents
+
+-- [1分04秒] --
+你好 
+✢ Whirlpooling… 
+────────────────────────────────────────────────────────────────────────────────
+❯  
+────────────────────────────────────────────────────────────────────────────────
+
+⏸manualmodeon·esctointerrupt·
+←fora
+gents
+·
+
+────────────────────────────────────────────────────────────────────────────────
+❯  
+────────────────────────────────────────────────────────────────────────────────
+
+-- [3分51秒] --
+�
+�manualmodeon·?forshortcuts·←foragents
+
+Press Ctrl-C againto exit
+
+-- [4分02秒] --
+⏸ manual mode on ·? for shortcuts · ← for agents
+
+
+
+Press Ctrl-D again
+to ex
+it
+>4m<u7
+8
+Resume this session with:
+claude --resume 8fc650c2-8d2a-453f-93cf-6582432ccc19
+
+-- [4分25秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ ^[^?curl https://api.deepseek.com/v1/cha
+t/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer sk-xxxx" \
+
+  -d '{
+
+-- [4分30秒] --
+    "model": "deepseek-chat",
+    "messages": [{"role":"user","content":"你好"}]
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ curl https://api.deepseek.com/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer s
+k-xxxx" \
+  -d '{
+    "model": "deepseek-chat",
+    "messages": [{"role":"user","content":"你好"}]
+  }'
+{"error":{"message":"Authenti
+cation Fails, Your api key: ****xxxx is invalid","type":"authentication_error","param":null,"code":"invalid_request_error"}}
+
+-- [6分42秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ ^[[200~curl https://api.deepseek.com/v1/chat/completions \ -H "Content-Type: application/json" \ -H "Authorization: Beare
+r
+
+sk-df9ab476
+-- [6分47秒] --
+802a423185974034dae30b29" \ -d
+ '{ "mod
+el": "deepseek-chat", "messages": [{"role":"user","content":"你好"}] }'~
+curl：未找到命令
+
+-- [8分12秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ ^[[200~curl https://api.deepseek.com/v1/chat/completions -H "Content-Type: application/json" -H "Authorization
+:
+
+Bearer sk-d
+f9ab476802a423185974034dae30b2
+9" -d '{"model":"deepseek-chat","messages":[{"role":"user","content":"你好"}]}'~
+curl：未找到命令
+
+-- [8分31秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform
+ailab-os@ailab-os-V
+Mware-Vir
+tual-Pla
+tf
+-- [8分45秒] --
+orm:~/桌面/xv6-ai-labs-km/lab0
+$ curl https://api.deepseek.com/v1/chat/co
+mpletions
+ \
+
+-- [8分55秒] --
+-H "Con
+tent-Type: application/json" \
+> -H "Authorization: Bearer sk-df9ab4
+76
+-- [9分07秒] --
+-H "Authorizat
+ion: Bearer sk-df9ab476802a423185974034dae30b29" \
+> 
+-d '{
+"model": "deepseek-chat"
+,
+"messages": [{"role":"user","content":"你好"}]
+
+}'-d '{
+"model": "deepseek-chat",
+"messages": [{"role":"user","content":"你好"}]
+}'
+{"id":"bfaf1913-aeff-4fe6-86d1-21847ec9a822","object":"chat.completion","created":1789445719,"model":"deepseek-flash","choices":[{"index":0,"message":{"role":"assistant","content":"你好！很高兴见到你！😊\n\n我是DeepSeek，一个免费的AI助手，随时准备帮你解答问题、聊天或者处理各种任务。无论是学习、工作还是生活中的问题，都可以问我哦！\n\n有什么我可以帮你的吗？"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":5,"completion_tokens":49,"total_tokens":54,"prompt_tokens_details":{"cached_t
+okens":0},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":5},"system_fingerprint":"aeb56401ca74e127821c4f9126dcb669"}
+-- [9分57秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-
+ailab-os@ailab-os-VMware-Virtual-Platform
+:
+~/桌面/xv6-ai-labs-km/lab0$ docker run -d --name oneapi -p 3000:3000 -v ~/oneapi:/data justsong/one-api
+找不到命令 “docker”，但可以通过以下软件包安装它：
+sudo snap install docker         # version 29.6.1, or
+sudo apt  install docker.io      # version 29.1.3-0ubuntu3~24.04.
+2
+sudo apt  install podman-docker  # version 4.9.3+ds1-1ubuntu0.2
+输入 “snap info docker” 以查看更多版本。
+
+-- [11分05秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:
+~/桌面/xv6-ai-labs-km/lab0$ sudo apt update
+ailab-os@aila
+b-
+os-VMware
+-Virtual-Platform:
+
+-- [12分06秒] --
+~/桌面/xv6-ai-labs-km/lab0$ sudo apt update
+su
+-- [12分31秒] --
+do
+ apt install docker.io -y
+[sudo] ailab-os 的
+-- [12分41秒] --
+�
+�码： 
+对不起，请重试
+。
+[sudo] ailab-os 的密�
+�： 
+对不起，请重试。
+[sudo] ailab-os 的密码： 
+sudo: 3 次错误密码尝试
+[sudo] ailab-os 的密码： 

@@ -1,0 +1,709 @@
+==== labtracker 终端转录 ====
+录像: 20260914T230037-5159.out.gz   时长: 1分15秒   原始大小: 64116B
+==================================================
+
+-- [开始] --
+aila
+b-os@ailab-os
+-VMwar
+e-Virtua
+l-Platfo
+rm:~/桌面/xv6-
+esume
+78
+
+·Loadingconversations…
+>0q
+────────────────────────────────────────────────────────────────────────────────
+Resumesession
+╭──────────────────────────────────────────────────────────────────────────╮
+│⌕Search…│
+╰──────────────────────────────────────────────────────────────────────────╯
+
+❯帮忙解答提问的问题
+44minutesago·HEAD·186.9KB
+
+nihao
+1weekago·HEAD·12.4KB
+
+Ctrl+Atoshowall
+projects·Typetosearch·Esctocancel
+
+to search · Esc to cancel
+
+Ctrl+B to only show curren ba
+
+-- [0分44秒] --
+preview · Ctrl+R to rename · Type to search · Esc to cancel
+
+✻Resumingconversation…
+ ▐▛███▜▌   Claude Code v2.1.221
+▝▜█████▛▘deepseek-v4-flash·APIUsageBilling
+ ▘▘▝▝~/桌面/xv6-ai-labs-km/lab0
+
+────────────────────────────────────────────────────────────────────────────────
+❯  
+────────────────────────────────────────────────────────────────────────────────
+
+⏸manualmodeon
+·?forshortcuts·←foragents
+  Thought for 39s, searched for 1 pattern, listed 1 directory (ctrl+o to expand)
+●特权级是CPU硬件给自己划的“权限档位”，它决定当前正在执行的这段代码能不能执行
+某些指令、能不能碰某些寄存器。x86上叫ring0/ring3，RISC-V上叫M/S/U。
+
+为什么必须有它
+
+想象一下：如果用户程序能随手关掉中断、直接改页表、直接写磁盘控制器的寄存器，那
+操作系统就只是个摆设——它拦不住任何人。所以硬件要划一条用户程序跨不过去的线。不
+是靠“大家说好不这么干”，是靠硬件真的不让。
+
+在本实验里的位置
+
+实验指导.md第66–80行讲了三档：
+
+-M-mode（Machine）：最高权限。QEMU上电后先跑的就是它——OpenSBI固件。
+-S-mode（Supervisor）：内核的地盘，xv6-k210跑在这里。
+-U-mode（User）：用户程序的地盘，你之后在shell里敲的ls、echo就跑在这。
+
+顺序是：上电→M-mode的OpenSBI做硬件初始化→跳进S-mode启动xv6
+内核。所以makerun时先刷出来的那段OpenSBIASCIIbanner，是M-mode
+的代码打的，内核banner在它后面。
+
+再挖一层：这条线是怎么“硬”起来的
+
+RISC-V靠两样东西实现它：一组只能在M/S模式访问的CSR（控制状态寄存器，比如
+mstatus、mepc），以及几条特权指令（比如mret）。U-mode
+里执行这些指令不会“没效果”，而是直接触发一个异常，把控制权交回内核。
+
+这就是为什么“从内核跳进用户程序”和“从用户程序回到内核”不能是普通的jump——
+特权级的切换本身要经过硬件的门。
+
+一个小问题留给你：shell里的ls要读磁盘、要往屏幕打印，这些事U-mode
+自己干不了，那它是怎么完成的？
+
+✻Brewedfor8s
+
+❯ 你问的这个问题我不会，你帮我回答一下                                          
+
+Thoughtfor9s,searchedfor1 pattern(ctrl+otoexpand)
+
+●这个问题你答不上来很正常——它其实是三个问题叠在一起：能不能自己干？不能的话还剩
+什么招？这个招叫什么？拆开看就不难了。
+
+第一步：U-mode能不能自己干？不能。
+
+“往屏幕打印”这件事，本质是往UART芯片的寄存器里写数据。UART
+不是什么抽象的东西，它就是一串内存地址——在kernel/include/memlayout.h:40
+里就写着：
+
+#define UART0x10000000L
+
+内核写这个地址，字符就从屏幕出来了。但U-mode的代码够不到这个地址——不是“约定
+不能碰”，是硬件在每次访存时都会检查当前特权级
+，不该碰的直接触发异常。磁盘IO
+同理。
+
+所以ls想打印，它手里根本没有能用的工具。
+
+第二步：那它还剩什么招？
+
+只剩一招：主动举手。用户程序不能越界，但它可以让CPU
+停下来，把控制权交给内核，同时递上一句话：“我想打印这几个字符，麻烦你替我办。”
+
+第三步：这个“举手”叫什么？
+
+RISC-V里这条指令叫ecall（environmentcall）。它做的事就是：把当前特权级从U
+抬到S，跳到内核预先登记好的一个入口。内核在那儿一看——“哦，2
+号请求是打印”——就替它写UART，然后送它回去。
+
+这套“举手→掉进内核→内核代办→返回”的机制，就是系统调用。
+
+---
+一个比喻能帮你记住：ecall就像去银行柜台。你在玻璃外面（U-mode）碰不到钱箱，但
+你可以填单子、按铃（ecall），柜员（S-mode
+内核）在里面替你办。特权级就是那层玻璃——它不靠自觉，靠硬件。
+
+至于内核收到ecall之后具体怎么分流、怎么保存现场再恢复，那是trap
+处理的内容，属于后面lab的范围，lab0不用碰。你现在只要能把“用户程序干不了→
+举手→内核代办”这条因果说顺，就够了。
+
+✻Sautéedfor13s
+
+❯ RISC-V和我的ubantu是同等的操作系统吗？                                        
+
+Thoughtfor5s (ctrl+otoexpand)
+
+●不是同一类东西，谈不上“同等”——它俩根本不在一个层面上。
+
+一句话：Ubuntu和xv6才是同级的（都是操作系统）；RISC-V的同级是
+x86-64（都是�
+��令集）。
+
+RISC-V不是软件，是指令集架构（ISA）。它规定的是一台CPU
+能听懂哪些指令、有哪些寄存器、有什么特权级。它是硬件和软件之间约定的“语言”。
+
+把它竖着摞起来看最清楚：
+
+┌──────────┬────────────┬─────────────────────┐
+│层│你机器上│本实验里│
+├──────────┼────────────┼─────────────────────┤
+│应用程序│浏览器、ls│shell里的命令│
+├──────────┼────────────┼─────────────────────┤
+│操作系统│Ubuntu│xv6-k210│
+├──────────┼────────────┼─────────────────────┤
+│指令集│x86-64│RISC-V│
+├──────────┼────────────┼─────────────────────┤
+│硬件│你的CPU│QEMU假装出来的CPU│
+└──────────┴────────────┴─────────────────────┘
+
+同一行里的才是同类。所以你的问题应该这样问才对：“xv6-k210和Ubuntu
+是同等的操作系统吗？”——是，都是操作系统。而“RISC-V和x86-64
+是同等的指令集吗？”——也是。
+
+一个反证能帮你钉住这个区分：Ubuntu是有riscv64版本的，理论上可以装在一台真
+RISC-V电脑上。但如果Ubuntu真的是“RISC-V
+的同级”，这种说法就不成立了。反过来，“把xv6换成RISC-V”这句话根本说不通。
+
+那QEMU在这里干什么？
+
+你的电脑是x86-64，听不懂RISC-V指令。QEMU的作用就是假装自己是一台RISC-V
+机器——它一条条接收RISC-V指令，在你x86-64的真实CPU上模拟执行。xv6
+跑在里面，完全以为自己在真硬件上。
+
+这就是为什么makerun里必须有QEMU：它补上了“你的机器不是RISC-V”这个缺口。
+
+---
+给你一个小验证：在你自己的终端敲
+
+uname-m
+
+看看你的Ubuntu报出的是什么。那个字符串就是你这台机器的指令集。
+
+✻Churnedfor7s
+
+※recap:You'resettingupthelab0environmentandhavebeenaskingconcept
+questionsaboutprivilegelevelsandRISC-V.Next:run`uname-m`inyour
+terminaltoseeyourmachine'sinstructionset.(disablerecapsin/config)
+
+❯ GCC 13是什么东西                                                              
+
+Thoughtfor6s,searchedfor2 patterns(ctrl+otoexpand)
+
+●Bash(sed-n'60,100p'/home/ailab-os/桌面/xv6-ai-labs-km/lab0/Makefile)
+ ⎿ QEMU=qemu-system-riscv64
+
+ifeq
+($(platform),k210)
+…+37lines(ctrl+otoexpand)
+
+Thoughtfor2s (ctrl+otoexpand)
+
+●GCC是编译器——把C
+源代码翻译成机器能执行的机器码的那个程序。“13”是它的版本号。
+
+在你这台Ubuntu24.04上，sudoaptinstallgcc-riscv64-unknown-elf
+装出来的那个交叉编译器，版本就是GCC13。你跑riscv64-unknown-elf-gcc
+--version，第一行末尾的13.x.x就是它。
+
+它在本实验里的位置
+
+Makefile:68-70这三行：
+
+TOOLPREFIX:=riscv64-unknown-elf-
+CC=$(TOOLPREFIX)gcc
+
+CC就是Makefile里代表编译器的变量。所以每次make
+build，真正在翻译你内核代码的就是这个GCC13。
+
+为什么版本号在这里值得一提
+
+因为编译器不是死的工具，它也在演进。新版本会加入新的检查。GCC13遇到
+xv6-user/sh.c里的runcmd()就会报一句
+-Winfinite-recursion（怀疑是无限递归）。
+
+麻烦在于Makefile:79里有这个：
+
+CFLAGS=-Wall-Werror...
+
+-Werror的意思是“把警告当成错误”。所以一个新版本编译器多出来的警告，会让本该编
+过的旧代码直接编译失败。
+
+仓库已经处理了——同一行后面跟着
+-Wno-error=infinite-recursion，专门给这一条警告开个口子。所以你在makebuild
+里看到这条警告是正常的，它不会中断构建。
+
+---
+顺带提一句你可能会撞上的混淆：gcc--version（不带前缀）报的也是
+GCC，但那是给你x86-64的Ubuntu编译普通程序的，跟xv6
+一点关系都没有。本实验只认带riscv64-unknown-elf-前缀的那个。
+
+✻Cookedfor12s
+
+❯ 现在我想问一下一个能够正常运行的电脑系统都要包含什么                          
+
+Thoughtfor4s (ctrl+otoexpand)
+
+●Bash(sed-n'140,235p'/home/ailab-os/桌面/xv6-ai-labs-km/lab0/实验指导.md)
+ ⎿ 每个文件夹对应的阶段：
+
+-**上电阶段**→`bootloader/`（QEMU用OpenSBI）
+…+92lines(ctrl+otoexpand)
+
+Thoughtfor4s,listed1 directory(ctrl+otoexpand)
+
+●一句话：一台电脑能跑起来，靠的是一条四棒接力——每一棒只做一件事，把下一棒扶起来
+，然后让位。
+
+┌─────┬──────┬────────────────────────────────────────────┬───────────────┐
+│棒│是什│干活的内容│本实验里是谁│
+│次│么│││
+├─────┼──────┼────────────────────────────────────�
+��───────┼───────────────┤
+│1│硬件│CPU取指执行、内存、外设│QEMU假装出来│
+││││的那台机器│
+├─────┼──────┼────────────────────────────────────────────┼───────────────┤
+│2│固件│上电后第一段代码：把硬件初始化到能用，然后│OpenSBI（M-mo│
+│││找到内核跳过去│de）│
+├─────┼──────┼────────────────────────────────────────────┼───────────────┤
+│3│内核│操作系统本体│xv6-k210（S-m│
+││││ode）│
+├─────┼──────┼────────────────────────────────────────────┼───────────────┤
+│4│用户│人和程序干活的地方│init→sh→│
+││态││->/$│
+└─────┴──────┴────────────────────────────────────────────┴───────────────┘
+
+第1棒：真硬件就是CPU、内存、一堆外设芯片。它自己什么都不会，只会听指令。
+
+第2棒：CPU一上电，PC指向一个固定地址，那里躺着固件。固件的活儿很具体——把内
+存控制器、中断控制器这些"开机前必须先摆好"的东西配置好，然后跳到内核入口。你的
+makerun里，-biosdefault让QEMU加载的就是它。
+
+第3棒是重点，因为"操作系统"这个词真正指的是它。内核不管业务，它只提供四种基
+础能力：
+
+-管进程——谁在跑、什么时候换人→proc.c、swtch.S
+-管内存——谁能用哪些内存、怎么隔离→kalloc.c、vm.c
+-管文件——数据怎么存、怎么按名字找→fat32.c、file.c
+-管设备——屏幕、磁盘、时钟怎么用→uart.c、disk.c、plic.c
+
+这四件事就是"操作系统"的全部底子。你在shell
+里敲的每一条命令，往下追都会落到这四组文件之一。
+
+第4棒：内核把init跑起来，init再fork一个
+sh。真正坐在屏幕上等你打字的，是这个sh。
+
+---
+有个很妙的点：这份清单你不用背，makerun 会把它打印出来。
+屏幕上依次出现的三段东西，正好就是第2、3、4棒在自报家门：
+
+OpenSBIv1.0←第2棒：固件说"我干完了"
+xv6-k210...←第3棒：内核说"我起来了"
+->/$←第4棒：shell说"轮到你输入了"
+
+�
+��以->/$
+出现这件事，信息量比它看起来大得多——它意味着从通电到用户态，四棒一棒没掉。
+
+等你跑makerun
+的时候留意一下这三段的先后顺序。有任何一棒看懂了想往下挖，再问我。
+
+✻Bakedfor12s
+
+❯ 那这个编译器和指令集呢？                                                      
+
+Thoughtfor6s (ctrl+otoexpand)
+
+●好问题——你这是在把新东西往刚才那张图上放。但它俩放不上去，因为它们不在那条接力
+链上。
+
+刚才那四棒，全都是运行的时候在场的东西：通电了，它们一棒接一棒地活着。而编译器
+和指令集属于另外两个维度：
+
+-编译器是建造阶段的东西。makebuild的时候它干活，makerun
+的时候它早就退场了。链上跑的不是编译器，是它留下的产物（target/kernel）。
+-指令集根本不是一个"东西"，是一份契约。它是硬件和软件之间的约定：硬件说"我听
+得懂这些指令"，软件说"那我只用这些写"。它没有位置，因为它贯穿整条链。
+
+画成图大概是这样：
+
+【建造期】在你的x86-64Ubuntu上
+C源码──[gcc翻译]──>RISC-V机器码──>target/kernel
+│
+▼
+【运行期】接力链
+硬件──>固件──>内核──>用户态
+（链上每一节，都是用RISC-V指令写的）
+↑
+QEMU站在链外托着第一棒
+——它自己是x86-64程序
+
+所以三者是三件事：编译器是造链的工人，指令集是链子每一节都遵守的规格，四棒接力
+是链子怎么动起来。
+
+---
+再挖一层：编译器其实不是必须的。
+
+指令集那份契约，你可以让编译器替你履行，也可以自己直接写。xv6
+里就有一批文件是手写的汇编：
+
+-kernel/entry_qemu.S——内核第一条指令，给每个hart设栈
+-kernel/swtch.S——进程上下文切换
+-kernel/trampoline.S——用户态陷入内核时换页表
+
+这些地方GCC帮不上忙——因为它们要操作的东西（设栈指针、切页表、ecall
+的具体寄存器约定）是C语言描述不出来的。所以只能人手写。
+
+这就是为什么kernel/目录里.c和.S混着放：能用C说清楚的部分交给
+gcc，说不清楚的部分手写汇编。它们最后都被编译成同一种东西——RISC-V指令。
+
+---
+到这里你手里其实已经有三个可以分开看的东西了：建造期的工具链、贯穿全程的指令集
+契约、运行期的四棒接力。哪个方向想再往下走，你说。
+
+✻Workedfor9s
+
+❯ make build为什么我只用这一句话系统就知道我要装一个什么样子的内核呢？难道内核  
+  只有一种吗？                                                                  
+
+Thoughtfor3s,searchedfor1 pattern(ctr
+l+otoexpand)
+
+●Bash(sed-n'1,60p'Makefile)
+ ⎿ #platform:=k210
+platform:=qemu
+mode:=debug
+…+57lines(ctrl+otoexpand)
+
+Thoughtfor4s (ctrl+otoexpand)
+
+●makebuild什么都不知道。它没有智能，也不会猜——它只是读了一个文件：Makefile。
+所有答案都写在那里。
+
+make这个程序的工作方式很朴素：你去Makefile里找有没有一条叫build
+的规则，找到了就照做。Makefile:108那行就是：
+
+build:$T/kerneluserprogs
+
+意思是"要完成build，先得把target/kernel和用户程序搞出来"。至于
+target/kernel
+怎么来、用什么编译器、编哪些文件——继续往下照抄，一直抄到没有依赖为止。
+
+所以真正回答"要装一个什么样的内核"的，是Makefile，不是make。
+
+---
+至于"内核只有一种吗"——不是。光这个仓库里就有两种。
+
+看Makefile最开头：
+
+#platform:=k210
+platform:=qemu
+mode:=debug
+#mode:=release
+
+注意那两行被# 注释掉的。它们就是证据：有人写过k210和release
+这两种配置，然后手动关掉了。你现在跑的makebuild，用的是qemu+debug。
+
+这个platform不是装饰，它真的在分叉。比如Makefile:9-13：
+
+ifeq($(platform),k210)
+OBJS+=$K/entry_k210.o
+else
+OBJS+=$K/entry_qemu.o
+endif
+
+把platform改成k210，编出来的会是另一个内核：
+
+┌──────────┬────────────────────────────┬───────────────────────────┐
+││platform:=qemu（你现在）│platform:=k210│
+├──────────┼────────────────────────────┼───────────────────────────┤
+│内核入口│entry_qemu.o│entry_k210.o│
+├──────────┼────────────────────────────┼───────────────────────────┤
+│磁盘驱动│virtio_disk.o│sdcard.o+spi.o+dmac.o│
+├──────────┼────────────────────────────┼───────────────────────────┤
+│链接脚本│linker/qemu.ld│linker/k210.ld│
+├─────────�
+�┼────────────────────────────┼───────────────────────────┤
+│固件│OpenSBI│sbi-k210│
+└──────────┴────────────────────────────┴───────────────────────────┘
+
+同一份源代码，一行改动，产出的是两个不同的内核。
+
+---
+再挖一层：这些分叉发生在"编译之前"。
+
+ifeq不是给编译器看的注释，是make
+真的会执行的条件判断。它在决定"要编译哪些文件"的时候就做完了选择。
+
+意味着：k210分支里的sdcard.c、fpioa.c，在你现在这套配置下根本不会被送去编译—
+—不是编了再丢掉，是压根没编。这也解释了为什么实验指导.md里说这些文件"QEMU
+模式下不参与"。
+
+---
+顺带说一句，往大了看：Linux内核有几千个这样的开关（makemenuconfig
+那个满屏的配置界面），同一份源码能编出无数种内核——从手机上的到超算上的。所以"
+内核"从来不是一种东西，是一族。Makefile开头那几行，就是这一族里挑一个的旋钮。
+
+✻Cogitatedfor11s
+
+❯ fs.img这是什么                                                                
+
+Thoughtfor2s (ctrl+otoexpand)
+
+●Bash(sed-n'218,260p'Makefile;echo"===runtarget===";sed-n'143,160p'
+Makefile;echo"===fs.img===";ls-lafs.img)
+ ⎿ #$U/_zombie\
+
+userprogs:$(UPROGS)
+…+59lines(ctrl+otoexpand)
+
+Thoughtfor7s,searchedfor1 pattern(ctrl+otoexpand)
+
+●fs.img是一块虚拟硬盘。
+
+它本身就是一个普通文件，躺在你的lab0目录里：
+
+-rw-rw-r--1ailab-osailab-os2684354569月1422:08fs.img
+
+268435456字节=256MB。但里面的内容不是一个256MB
+的大垃圾堆——里面装着一个完整的、格式化好的文件系统，里面躺着init、sh、README
+这些文件。
+
+为什么必须有它
+
+xv6跑到最后要exec("/init")、要读/sh——这些文件总得存在某个地方。可QEMU
+造出来的那台虚拟机器是空的，没有你的硬盘。所以得给它配一块。
+
+它是怎么做出来的——Makefile的fs目标：
+
+ddif=/dev/zeroof=fs.imgbs=512kcount=512#造一个256MB的全零文件
+mkfs.vfat-F32fs.img#把它格式化成FAT32
+sudomountfs.img/mnt#挂载！
+sudocpREADME/mnt/README#往里拷文件
+forfilein$(ls$U/_*);dosudocp...;done#把编译好的用户程序拷进去
+su
+doumount/mnt#卸载
+
+从"一块空白"到"一个能用的文件系统"，六步。
+
+xv6怎么用它——Makefile:140-141，启动QEMU时把它当磁盘插上去：
+
+QEMUOPTS+=-drivefile=fs.img,if=none,format=raw,id=x0
+QEMUOPTS+=-devicevirtio-blk-device,drive=x0,bus=virtio-mmio-bus.0
+
+fs.img就是QEMU里那台虚拟机的硬盘。xv6里的disk.c、virtio_disk.c
+读的就是它。
+
+---
+挖一层：注意那个mount。
+
+fs.img能被你的Ubuntu直接mount到/mnt——这说明它不是xv6的私有格式，是标准
+FAT32。任何Linux都能读。
+
+你可以自己验证一下，在终端敲：
+
+mkdir-p/tmp/x&&sudomount-oloopfs.img/tmp/x&&ls/tmp/x
+
+（看完sudoumount/tmp/x卸掉。）你会看到/init、/sh就摆在那儿——和xv6里ls
+看到的是同一批文件。
+
+---
+顺带把前面几课串一下：fs.img里那些_sh、_init，是用RISC-V交叉编译器在你
+x86-64的Ubuntu上编出来的RISC-V程序，由一个x86-64的cp拷进一个FAT32
+镜像，最后被QEMU里的RISC-V版xv6读出来执行。
+
+fs.img就是这两个世界之间的交接棒。
+
+✻Cookedfor13s
+
+※recap:你在搭lab0的xv6-k210环境，一边把
+RISC-V、特权级、GCC、Makefile、fs.img
+这些底层概念一个个接上。目前只是问答，还没跑构建。下一步是在你自己终端跑make
+build、makefs、makerun，看能不能出现->/$。(disablerecapsin/config)
+
+❯ SBI是什么                                                                     
+
+Thoughtfor4s (ctrl+otoexpand)
+
+●Bash(grep-rn"sbi_"kernel/xv6-user/--include=*.c--include=*.h
+--include=*.S2>/dev/null|head-20;echo"===SBIdir===";ls
+bootloader/SBI/2>/dev/null;echo…)
+ ⎿ kernel/main.c:65:sbi_send_ipi(&mask);
+kernel/timer.c:31:sbi_set_timer(r_time()+INTERVAL);
+kernel/trap.c:202:intc=sbi_console_getchar();
+…+26lines(ctrl+otoexpand)
+
+Thoughtfor1s (ctrl+otoexpand)
+
+●Bash(lsbootloader/2>&1|head;echo"===sbi.h30-60===";sed-n'30,60p'
+kernel/include/sbi.h)
+ ⎿ ls:无法访问'bootloader/':没有那个文件或目录
+===sbi.h30-60===
+:"memory");\
+…+31lines(ctrl+otoexpand)
+
+Thoughtfor1s (ctrl+otoexpand)
+
+●Bash(sed-n'1,34p'kernel/include/sbi.h)
+ ⎿ /*SPDX-License-Identifier:GPL-2.0-only*/
+/*
+*Copyright(C)2015RegentsoftheUniversityofCalifornia
+…+31lines(ctrl+otoexpand)
+
+Thoughtfor2s (ctrl+otoexpand)
+
+●SBI是M-mode给S-mode开的一个服务窗口。全称SupervisorBinary
+Interface——"Supervisor二进制接口"。
+
+为什么需要这个窗口
+
+接上前面特权级那一课：内核跑在S-mode，可有些事S-mode
+没权限干——配置定时器、让某个hart停下来、关机、直接往控制台吐字符。这些是
+M-mode的地盘。
+
+内核想在S-mode里把机器关掉，它做不到。它只能去敲那扇窗口。
+
+本实验的真实位置
+
+kernel/include/sbi.h。别看它名字带SBI，这个文件其实是窗口的客户端——内核这边用
+来"敲门"的封装。里面每个函数最后都落到同一个宏：
+
+#define SBI_CALL(which,arg0,arg1,arg2,arg3)({\
+registeruintptr_ta7asm("a7")=(uintptr_t)(which);\
+asmvolatile("ecall" \
+ :"+r" (a0)...);\
+a0;\
+})
+
+那个ecall，和你前面学的用户程序举手用的是同一条指令。
+
+再看sbi.h:12-20那几行：
+
+#define SBI_SET_TIMER0
+#define SBI_CONSOLE_PUTCHAR1
+#define SBI_CONSOLE_GETCHAR2
+...
+#define SBI_SHUTDOWN8
+
+这些编号就是窗口的"业务号码"，写在a7里递给M-mode。跟系统调用号是一个套路。
+
+所以kernel/console.c里printf想往屏幕写字，最后走的是sbi_console_putchar()
+→ecall→M-mode的OpenSBI替它写。
+
+---
+挖一层：这是一部楼梯，每层台阶一模一样。
+
+U-mode──ecall──>S-mode用户程序请求内核=系统调用
+S-mode──ecall──>M-mode内核请求固件=SBI调用
+
+同一条指令，同一个套路：把请求编号和参数放进约定好的寄存器，ecall，对面接住，
+办完返回。只是每一层抬高了一档特权级。
+
+这就是为什么它叫"Interface"——和"ABI"（ApplicationBinary
+Interface）一个构词法。它是一份约定，不是一个程序。约定这一头是内核的
+sbi.h，那一头由谁实现都行。
+
+谁实现了它？QEMU自带的OpenSBI。Makefile:137那行-biosdefault就是让QEMU
+把它加载进去。你makerun时最先看到的那段OpenSBI
+banner，就是这扇窗口的营业公告。
+
+---
+一句话收口：SBI就是内核的"系统调用"，只不过调用对象是固件而不是内核。
+
+✻Cogitatedfor15s
+
+────────────────────────────────────�
+��───────────────────────────────────────────
+❯  
+────────────────────────────────────────────────────────────────────────────────
+⏸manualmodeon
+-- [0分54秒] --
+·?forshortcuts·←
+-- [0分58秒] --
+fo
+ragents●high·/effort
+
+/ 
+/add-dir                      Add a new working directory
+/agents(removed)AskClaudetocreate/manage
+subagents,oredit.claude/agents/
+/autocompactSethowfullthecontextgetsbefore
+auto-summarizing
+/backgroundSendthissessiontothebackgroundandfree
+theterminal
+/branchCreateabranchofthecurrentconversationat
+thispoint
+/btwAskaquicksidequestionwithoutinterrupting
+themainconversation
+
+/bugReportabugorshareyourconversation
+/agents                       
+-- [1分01秒] --
+subagents, or edit .claude/agents/
+
+/autoco
+auto-summarizing
+
+/backgr
+the terminal
+
+/bug                          Report abug o s
+cd Move his session to a newwrking drectory
+clearStart a new session with empty context;
+                    previous sesion sayson disk (resumable wit…
+                              previous sesion sayson disk (res
+oloet heprompt bar colorfor this sssion
+/compact                      Fe up context by summarizngth
+/config                       Open settings
+/clear                        Start 
+previous session stays on disk (resumable wit…
+
+/context                      Visualize c
+                              grid
+                              grid
+/copy N for the Nth-latest)
+                              /copy N for the Nh-latest)
+/diff                         View uncommitd canges and per-turn diffs
+/diff                         View uncommit
+efortSet effort levlfor model usage
+/effort     
+-- [1分04秒] --
+exitExitthe CLI
+fasTog
+/feedback                     Send feedback to Anthropic or report a bug
+/diff                         View uncommitted changes and per-turn di
+/effort                       Set effort level for model usage
+
+/effort                       Set eff
+/exit                         Exit the CLI
+
+/focus                        Toggle focus view: just your pro
+                              and rsponse
+session a
+/goal                         Set a goal Claude checks before stopping
+/fast                         Toggle fast mode (Opus 5)
+/feedback                     Send feedback to Anthropic or report a bug
+
+/goal                         St a
+helphow help and available commands
+hoksView ho
+ide Manage IDE integrationsand show status
+keybindingsOpnyurkeyboard shrtcutsf
+loginSign in with you Anthropicaccoun
+login      Sig
+-- [1分08秒] --
+outout from your Anthro
+pic acount
+q 
+
+pwerupDscover Claude Code features through q
+                              interacive lessons
+>4m<u7
+8
+
+Resume this session with:
+claude --resume 0cfbf697-c52a-491f-8882-3a02786afa6d
+
+-- [1分15秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ 
+exit
+

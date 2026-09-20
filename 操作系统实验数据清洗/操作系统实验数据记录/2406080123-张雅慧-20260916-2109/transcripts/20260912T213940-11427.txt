@@ -1,0 +1,24 @@
+==== labtracker 终端转录 ====
+录像: 20260912T213940-11427.out.gz   时长: 1分13秒   原始大小: 969B
+==================================================
+-- [开始] --
+Script s
+tarted on 2026-09-12 21:39:40+08:00 [COMMAND="bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="80" LINES="24"]
+
+-- [0分55秒] --
+ailab-os@ailab-os-VMware-Virtual-Pl
+atform:~/桌面/xv6-ai-labs-km/lab0$ make build 
+make: 对“build”无需做任何事。
+
+-- [1分10秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ make run
+qemu-system-riscv64: -device 
+virtio-blk-device,drive=x0,bus=virtio-mmi
+o-bus.0: Failed to get "write" lock
+Is another process using the image [fs.img]?
+make: *** [Makefile:152：run] 错误 1
+
+-- [1分13秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ 
+exit
+

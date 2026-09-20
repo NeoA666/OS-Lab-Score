@@ -1,0 +1,75 @@
+==== labtracker 终端转录 ====
+录像: 20260912T202725-3848.out.gz   时长: 8分09秒   原始大小: 1701B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ps aux [\| grep daemon.sh
+ailab-o
+s    1613  0.0  0.0  10088  3804 ?        Ss   20:18   0:00 bash /home/ailab-os/.labtracker/bin/daemon
+.sh
+
+ailab-os    3960  0.0  0.0   9448  2456 pts/3    S+   20:28   0:00 grep --color=auto daemon.sh
+
+-- [3分15秒] --
+ailab-
+os@ailab-os-VMware-Virtual-Platform:~$ SSecho "labtracker test ok"
+labtracker test ok
+
+-- [5分35秒] --
+ailab-os@a
+ilab-os-VMware-
+Virtual-Platfor
+-- [5分47秒] --
+m:~
+$ ~/labtracke
+-- [5分51秒] --
+r r
+eplay/ rep
+lay
+
+b 
+-- [5分54秒] --
+rep
+lay
+
+-- [6分07秒] --
+i
+
+r
+e
+p
+l
+a
+y
+
+n
+
+r
+e
+-- [6分10秒] --
+p
+lay/ replay replay/ rep
+-- [6分24秒] --
+lay
+
+rep
+lay
+
+.sh
+
+-- [6分27秒] --
+.labtrac
+ker/bin/replay.sh
+
+# labtracker 录像回放助手（老师/学生都可用来回看终端录像）
+# 用法:
+#   labt-replay <录像> [--speed 倍速] [--cast [输出.cast]]
+#   <录像> 可以是 .out / .out.gz / 不带后缀的基名（如 20260903T0
+94416-10900）
+# 目录缺省 ~/.labtracker/data/term；--cast 不回放，只转 asciinema 网页可播格式。
+set -u
+
+-- [8分09秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

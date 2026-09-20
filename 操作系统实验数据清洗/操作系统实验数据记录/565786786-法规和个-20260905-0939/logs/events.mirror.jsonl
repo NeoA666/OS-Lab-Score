@@ -1,0 +1,27 @@
+{"ts":"2026-09-05T09:20:10+00:00","epoch":1788600010,"type":"anchor","note":"daily","prev":"0000000000000000000000000000000000000000000000000000000000000000"}
+{"ts":"2026-09-05T09:20:11+00:00","epoch":1788600011,"type":"hb","idle_ms":-1,"changed":50,"prev":"cc420e5891a312f75626688ea2af74cd0f7d993552eec8b23d59fe3d398ae9c7"}
+{"ts":"2026-09-05T09:21:11+00:00","epoch":1788600071,"type":"hb","idle_ms":-1,"changed":0,"prev":"0f06793afb39e8dc9e56030dd4ca100efe2c0673cdc603e50f25a0b5d901aa63"}
+{"ts":"2026-09-05T09:22:11+00:00","epoch":1788600131,"type":"hb","idle_ms":-1,"changed":0,"prev":"47ee10558cc87f62441406dd813c27d888f218a8e091f759d51f95cafe8f0d14"}
+{"ts":"2026-09-05T09:23:11+00:00","epoch":1788600191,"type":"hb","idle_ms":-1,"changed":0,"prev":"9fb4fed77740285d1184d93a688ea4170652ba35ed26b0d6af0c3bc28d48ec16"}
+{"ts":"2026-09-05T09:24:11+00:00","epoch":1788600251,"type":"hb","idle_ms":-1,"changed":0,"prev":"f13ec489c3321fb13bc9b07f8177e917f1d20d592c3a225d59a493d6dd94021f"}
+{"ts":"2026-09-05T09:25:11+00:00","epoch":1788600311,"type":"hb","idle_ms":-1,"changed":0,"prev":"5faaa4058c2c3731ab8329c66de88b62a11425b874e68b99f0243cb9a9105832"}
+{"ts":"2026-09-05T09:26:11+00:00","epoch":1788600371,"type":"hb","idle_ms":-1,"changed":0,"prev":"62d178d5ff26fc7c407cf7a3cfe9ec735968658b2542fd3f1c5869796cf787ba"}
+{"ts":"2026-09-05T09:27:12+00:00","epoch":1788600432,"type":"hb","idle_ms":-1,"changed":0,"prev":"3356e24d3b67c74f8cf863f40657ced43baaafb349565c7ae7758f2018906fdb"}
+{"ts":"2026-09-05T09:28:12+00:00","epoch":1788600492,"type":"hb","idle_ms":-1,"changed":0,"prev":"8efc3823686adbcd0eeb2d9985021588bfe9f02abf03993082aaa28b4ed51234"}
+{"ts":"2026-09-05T09:29:12+00:00","epoch":1788600552,"type":"hb","idle_ms":-1,"changed":0,"prev":"27505c4ac21da30066834ffe04dc6d1c09b7c820ced76ebcdeccbf83eb17dd6b"}
+{"ts":"2026-09-05T09:30:12+00:00","epoch":1788600612,"type":"hb","idle_ms":-1,"changed":0,"prev":"8f4a2b7ae6435aa5777ab536e867cc0c25d173126e0c18766ddb9d1982eed77f"}
+{"ts":"2026-09-05T09:31:12+00:00","epoch":1788600672,"type":"hb","idle_ms":-1,"changed":0,"prev":"8838a05a8a2e961fccb0aacdfa05f19f4021f99ada63f2fd0b376df038a68c2e"}
+{"ts":"2026-09-05T09:32:12+00:00","epoch":1788600732,"type":"hb","idle_ms":-1,"changed":0,"prev":"1161ae2f62e0d8125b9a2bdf77244da72a37e5011073566f11afeae0f86d2b93"}
+{"ts":"2026-09-05T09:33:12+00:00","epoch":1788600792,"type":"hb","idle_ms":-1,"changed":0,"prev":"4c062dc5b82e7dd9fc53cd16fa2854ee7061e86db79b00b482e17eae0f0ec971"}
+{"ts":"2026-09-05T09:34:12+00:00","epoch":1788600852,"type":"hb","idle_ms":-1,"changed":0,"prev":"83429c3658ad1d6b6ea76842f3b13650254b4941fc9ddca7caf3bb45a9374406"}
+{"ts":"2026-09-05T09:34:38+00:00","epoch":1788600878,"type":"hb","idle_ms":105496,"changed":0,"prev":"e6de7a9eef36ea1f7d429e42ad327662c709d9fddda01b974fecbc90a323e424"}
+{"ts":"2026-09-05T09:35:38+00:00","epoch":1788600938,"type":"hb","idle_ms":165597,"changed":0,"prev":"5ed4a4977f62067c56a350fe2093fa23d2e4b87e8b73e2d3997f015ae41bf919"}
+{"ts":"2026-09-05T09:36:39+00:00","epoch":1788600999,"type":"hb","idle_ms":225710,"changed":0,"prev":"03e79f793730a500a00a3387c1a6aac86117c90cfe04bd84fc545f4af81ebcfe"}
+{"ts":"2026-09-05T09:37:37+00:00","epoch":1788601057,"type":"id_first_bind","sid":"123456","name":"hhhij积极","prev":"ae46632fa269bd6252d68573383a0584cee6fa9120f88ab7086348f4d06df76a"}
+{"ts":"2026-09-05T09:37:39+00:00","epoch":1788601059,"type":"hb","sid":"123456","name":"hhhij积极","idle_ms":4,"changed":0,"prev":"7d896d893888e24c0f106c170afa6cbf88431324bddd6d72f62f12f8be85c7d0"}
+{"ts":"2026-09-05T09:37:55+00:00","epoch":1788601075,"type":"session_start","sid":"123456","name":"hhhij积极","tty":"/dev/pts/2","term":"xfce4-terminal","shell_pid":3216,"rec":"20260905T093755-2987","prev":"048b4a959541c00075a0870a9711ba7497dc54917dd777d26857550abb733853"}
+{"ts":"2026-09-05T09:38:08+00:00","epoch":1788601088,"type":"cmd","sid":"123456","name":"hhhij积极","cwd":"/home/ubuntu/Desktop/xv6-ai-labs-km/lab0","rc":2,"cmd":"make run","prev":"e63106b4e2d015b3d5f94c3609ec7806730baac7f3c17213dfba987e3da1769d"}
+{"ts":"2026-09-05T09:38:21+00:00","epoch":1788601101,"type":"cmd","sid":"123456","name":"hhhij积极","cwd":"/home/ubuntu/Desktop/xv6-ai-labs-km/lab0","rc":2,"cmd":"make fs","prev":"a261cbe5d908b3bf03e86bc4e2e31318906f65500c2b8bdd51a88ad89e72ec76"}
+{"ts":"2026-09-05T09:38:39+00:00","epoch":1788601119,"type":"hb","sid":"123456","name":"hhhij积极","idle_ms":4277,"changed":50,"prev":"c50aae6facfc83d39df86577fdd92548e0ba8954a010c3eb7debbb691768741a"}
+{"ts":"2026-09-05T09:38:55+00:00","epoch":1788601135,"type":"session_end","sid":"123456","name":"hhhij积极","rec":"20260905T093755-2987","prev":"03c77239f423270c5dd27d1e26a857d84c30e01d18ce1cd646aa47091ff989dc"}
+{"ts":"2026-09-05T09:39:29+00:00","epoch":1788601169,"type":"id_change","sid":"565786786","name":"法规和个","note":"submit时修正","prev":"c7c2153c123621bbb8de7a50885118c934521fd57f12dcb931287c8254bdfa9d"}

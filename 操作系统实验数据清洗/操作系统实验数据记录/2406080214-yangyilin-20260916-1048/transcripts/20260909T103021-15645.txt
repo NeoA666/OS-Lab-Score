@@ -1,0 +1,16 @@
+==== labtracker 终端转录 ====
+录像: 20260909T103021-15645.out.gz   时长: 0分56秒   原始大小: 705B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ cd ~/桌面/xv6-ai-lab-km/lab0
+cd ~
+/桌面/
+xv6-ai-lab-km/lab0
+
+bash: cd: /home/ailab-os/桌面/xv6-ai-lab-km/lab0: 没有那个文件或目录
+
+-- [0分56秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

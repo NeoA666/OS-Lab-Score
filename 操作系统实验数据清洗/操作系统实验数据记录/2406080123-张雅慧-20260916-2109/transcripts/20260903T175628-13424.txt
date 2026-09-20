@@ -1,0 +1,91 @@
+==== labtracker 终端转录 ====
+录像: 20260903T175628-13424.out.gz   时长: 2分30秒   原始大小: 2532B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0
+$ ^Vgdb-multiarch target/kernel -ex 'set arch riscv:rv64' -ex 'target remote local
+host:1234'gdb-multiarch target/kernel -ex 'set arch riscv:rv64' -ex 'target remote localhost:1234'
+GNU gdb (Ubuntu 15.1-1ubuntu1~24.04.1) 15.1
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL versio
+n 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find t
+he GDB manual and other 
+documentation resources online at:
+    <http://www.gnu.org/
+software/gdb/documentation/>.
+
+For help, t
+ype "help".
+Type "apropos word" to search for co
+mmands related to "word"...
+Reading sy
+mbols from target/kernel...
+The targ
+et archi
+tectur
+-- [0分32秒] --
+e
+ i
+s set to 
+"riscv:rv64".
+Remote debugg
+ing using localhost:1234
+0x0000000000001000
+ in ?? ()
+(gdb) l
+19	
+#ifndef QEMU
+20	#include 
+"include/sdcard.h"
+
+2
+1	#include "include/fpioa.h"
+22	#include "include/dmac.h"
+23	#endif
+
+24	
+25	static inline void inithartid(unsigned long hartid) {
+26	  asm 
+volatile
+
+(
+"mv t
+p
+,
+
+%
+0" : : "r" (hartid & 0x1));
+27	}
+28	
+(gdb)
+
+-- [0分36秒] --
+e
+xit
+
+A debugging session is active.
+
+	Inferior 1 [process 1] will be detached.
+
+Quit a
+nyway? (y or n) y]
+
+Detaching from program: /hom
+e/ailab-
+os/桌面/xv6-ai-labs-km/lab0/target/kernel, process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+
+-- [2分30秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ 
+exit
+

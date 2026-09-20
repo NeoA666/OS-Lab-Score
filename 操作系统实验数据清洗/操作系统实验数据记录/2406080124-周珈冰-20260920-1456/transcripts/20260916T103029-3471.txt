@@ -1,0 +1,181 @@
+==== labtracker 终端转录 ====
+录像: 20260916T103029-3471.out.gz   时长: 13分29秒   原始大小: 8837B
+==================================================
+
+-- [开始] --
+ail
+ab-os@ailab-os-VMware-Virtual
+-P
+latform:~$ 
+dudosudo mkdir -p/mnt/hgfs
+
+[sudo] ailab-os 的密码： 
+mkdir: 无效的选项 -- /
+请尝试执行 "mkdir --help" 来获取更多信息。
+
+-- [1分37秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ makdir --help
+用法：mkdir [选项]... 目录...
+若 <目录> 不存在，则创建 <目录>。
+
+长选项的必选参数对于短选项也是必选的。
+  -m, --mode=模式   设置文件模式（格式同 chmod），而不是 a=rwx - umask
+  -p, --parents     需要时创建目标目录的父目录，但即使这些目录已存在
+                    也不视为错误，且其文件模式也不受 -m 选项影响。
+  -v, --verbose     每次创建新目录时，打印一条消息
+  -Z                   将每个创建的目录的 SELinux 安全上下文设置为默认类型
+      --context[=上下文]  类似 -Z，但如果指定了 <上下文>，则将 SELinux
+                            或 SMACK 安全上下文设置为 <上下文>
+      --help        显示此帮助信息并退出
+      --version     显示版本信息并退出
+
+GNU coreutils 在线帮助：<https://www.gnu.org/software/coreutils/>
+请向 <http://translationproject.org/team/zh_CN.html> 报告任何翻译错误
+
+完整
+文档 <https://www.gnu.org/software/coreutils/mkdir>
+或者在本地使用：info '(coreutils) mkdir invocation'
+
+-- [2分28秒] --
+ailab
+-os@ailab-os-VMware-Virtual-Platform
+:~
+
+$ sud
+makdir -p /mnt/hgfs
+mkdir: 无法创建目录 "/mnt/hgfs": 权限不够
+
+-- [2分44秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ sudo mkdir -p /mnt/hgfs
+
+-- [2分52秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ^C
+
+-- [3分05秒] --
+ailab-os@ailab-os-VMware-Vir
+tual-Platform:~$ sudo mkdir -p /mnt/hgfssudo mkdir -p /mnt/hgfs
+
+-- [3分19秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~
+$ sudo mkdir -p /mnt/hgfs
+  sudo vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other -o uid=1000 -o gid=1000
+
+su
+do mkdir -p /mnt/hgfs
+  sudo vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other -o uid=1000 -o gid=1000
+
+-- [4分08秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:
+
+~$ ls /mnt/hgfs/ls /mnt/hgfs/
+智能24-操作系统-虚拟机
+
+-- [4分27秒] --
+ailab-o
+s@ailab-os-VMware-Virtual-Platform:~$ 
+.host:/   /mnt/hgfs   fuse.vmhgfs-fuse
+  allow_other,defaults,uid=1000,gid=1000   0 0
+
+.host:/   /mnt/hgfs   fu
+se.vmhgfs-fuse
+  allow_other,defaults,uid=1000,gid=1000 
+  0 0
+
+bash: .host:/: 没有那个文件或目录
+allow_other,defaults,uid=1000,gid=1000：未找到命令
+
+-- [5分50秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ls /mnt/hgfs/智能24-操作系统-虚拟机 
+
+ls /mnt/hgfs/智能24-操作系统-虚拟机 
+564d2d5f-4196-e3b6-d659-6625d380e3d3.vmem      AILab-OS-0.scoreboard
+564d2d5f-4196-e3b6-d659-6625d380e3d3.vmem.lck  AILab-OS-1.scoreboard
+智能24-OS-disk1.vmdk                           AILab-OS-2.scoreboard
+智能24-OS-disk1.vmdk.lck                       AILab-OS.scoreboard
+智能24-OS-file1.nvram                          vmware-0.log
+智能24-OS.vmsd                                 vmware-1.log
+智能24-OS.vmx                                  vmware-2.log
+智能24-OS.vmxf                      
+           vmware.log
+智能24-OS.vmx.lck                              vmware-vmx.dmp
+
+-- [9分40秒] --
+ailab-os@a
+ilab-os-VMware-Virtual-Platform:~$ decd /mnt/hgfscd /mnt/hgfs
+
+-- [9分46秒] --
+ailab-os@
+ailab-os-VMware-Virtual-Platform:/mnt/hgfs$ ls
+智能24-操作系统-虚拟机
+
+-- [10分07秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:
+/mnt/hgfs$ ln -s /mnt/hgfs ~/主机共享ln -s /mnt/hgfs ~/主机共享
+
+-- [10分49秒] --
+ailab-o
+s@ailab-os-VMware-Virtual-Platform:/mnt/hgfs$ sudo cp /etc/fstab /etc/fstab.bak
+ailab-os@ailab-os-VMware-Virtual-Platform:/mnt/hgfs$ sudo cp /etc/fstab /etc/fstab.bak
+
+-- [11分55秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:/mnt/hgfs$ cd～
+找不到命令 “cd～”，您的意思是：
+  “cde” 命令来自 Debian 软件包 cde (0.1+git9-g551e54d-1.2)
+  “cdi” 命令来自 Debian 软件包 cdo (2.3.0-1)
+  “cdp” 命令来自 Debian 软件包 irpas (0.10-9)
+  “cd5” 命令来自 Debian 软件包 cd5 (0.1-4)
+  “cdo” 命令来自 Debian 软件包 cdo (2.3.0-1)
+  “cdw” 命令来自 Debi
+an 软件包 cdw (0.8.1-3)
+  “cdb” 命令来自 Debian 软件包 tinycdb (0.81-1)
+尝试 sudo apt install <deb name>
+
+-- [12分01秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:/mnt/hgfs$ cd ~
+
+-- [12分14秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:
+~
+$  sudo cp /etc/fstab /etc/fstab.bak sudo cp /etc/fstab /etc/fstab.bak
+
+-- [12分24秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ echo '.host:/  /mnt/hgfs  fuse.vmhg
+fs-fuse  
+  allow_other,defaults,uid=1000,gid=1000,nofail  0  0' | sudo tee -a /etc/fstabec
+ho '.host:/
+  /mnt/hgfs  fuse.vmhgfs-fuse  
+  allow_other,defaults,uid=1000,gid=1000,nofail  0  0' | sudo t
+ee -a /etc/fstab
+.host:/  /mnt/hgfs  fuse.vmhgfs-fuse  
+  allow_other,defaults,uid=1000,gid=1000,nofail  0  0
+
+-- [12分41秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ sudo umount /mnt/hgfs
+  sudo mount -a
+
+sudo umount /mnt/hgfs
+  sudo mount -a
+
+mount: (hi
+nt) you
+r fstab has been modified, but
+ s
+ystemd still uses
+       the old version; use 'systemctl daemon-reload' to
+ reload.
+
+mount: 0: mount point does not exist.
+       dmesg(1) may have more information after failed mount system call.
+
+-- [12分59秒] --
+a
+ilab-os@a
+ilab-os-VMware-Virtual-Platform:~$ mount | grep hgfsmount | grep hgfs
+vm
+hgfs
+-fuse on /mnt/hgfs type fuse.vmhgfs-fuse (rw,relatime,user_id=0,group_id=0)
+
+-- [13分29秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

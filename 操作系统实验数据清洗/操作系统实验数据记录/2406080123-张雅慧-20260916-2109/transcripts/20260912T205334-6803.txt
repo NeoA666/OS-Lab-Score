@@ -1,0 +1,29 @@
+==== labtracker 终端转录 ====
+录像: 20260912T205334-6803.out.gz   时长: 4分44秒   原始大小: 1204B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ makee run
+找不到命令 “makee”，您的意思是：
+  “makeg” 命令来自 Debian 软件包 xutils-dev (1:7.7+6.2)
+  “make” 命令来自 Debian 软件包 make 
+(4.3-4.1build1)
+  “make” 命令来自 Debian 软件包 make-guile (4.3-4.1build1)
+尝试 sudo apt install <deb name>
+
+-- [0分16秒] --
+ailab-os@ailab-os-V
+Mware-Virtual-Platform:~$ make run
+make: *** 没有规则可制作目标“run”。 停止。
+
+-- [0分33秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ qemu
+找不到命令 “qem
+u”，您的意思是：
+  “aqemu” 命令来自 Debian 软件包 aqemu (0.9.2-3)
+尝试 sudo apt install <deb name>
+
+-- [4分44秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

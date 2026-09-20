@@ -1,0 +1,5769 @@
+==== labtracker 终端转录 ====
+录像: 20260914T211407-88540.out.gz   时长: 3142小时19分01秒   原始大小: 45366B
+==================================================
+-- [开始] --
+dragon@dragon-VMware-Virtual-Platform:~$ 
+-- [0分19秒] --
+cd ~/xv6-ai-labs-km-无答案/lab0
+-- [0分43秒] --
+cd ~/xv6-ai-labs-km-无答案/lab0
+
+-- [1分07秒] --
+dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ 
+-- [1分34秒] --
+m
+-- [2分01秒] --
+a
+-- [2分29秒] --
+k
+-- [2分56秒] --
+e
+
+-- [3分54秒] --
+b
+-- [4分23秒] --
+b
+-- [4分53秒] --
+b
+-- [5分23秒] --
+b
+-- [5分53秒] --
+b
+-- [6分23秒] --
+b
+-- [6分53秒] --
+b 
+-- [7分23秒] --
+b
+-- [7分53秒] --
+b
+-- [8分23秒] --
+b
+-- [8分53秒] --
+b
+-- [9分23秒] --
+b
+-- [9分54秒] --
+b
+-- [10分24秒] --
+b
+-- [10分54秒] --
+b
+-- [11分24秒] --
+b
+-- [11分55秒] --
+b
+-- [12分25秒] --
+b
+-- [12分55秒] --
+b
+-- [13分26秒] --
+b
+-- [13分56秒] --
+b
+-- [14分27秒] --
+b
+-- [14分57秒] --
+b
+-- [15分28秒] --
+b
+-- [15分58秒] --
+b
+-- [16分29秒] --
+b
+-- [17分00秒] --
+b
+-- [17分30秒] --
+b
+-- [18分01秒] --
+b
+-- [18分32秒] --
+b
+-- [19分02秒] --
+b
+-- [19分33秒] --
+b
+-- [20分04秒] --
+b
+-- [20分35秒] --
+b
+-- [21分06秒] --
+b
+-- [21分37秒] --
+b
+-- [22分08秒] --
+b
+-- [22分39秒] --
+b
+-- [23分10秒] --
+b
+-- [23分41秒] --
+b
+-- [24分12秒] --
+b
+-- [24分43秒] --
+b
+-- [25分14秒] --
+b
+-- [25分45秒] --
+b
+-- [26分17秒] --
+b
+-- [26分48秒] --
+b
+-- [27分19秒] --
+b
+-- [27分51秒] --
+b
+-- [28分22秒] --
+b
+-- [28分53秒] --
+b
+-- [29分25秒] --
+b
+-- [29分56秒] --
+b
+-- [30分28秒] --
+b
+-- [30分59秒] --
+b
+-- [31分31秒] --
+b
+-- [32分02秒] --
+b
+-- [32分34秒] --
+b
+-- [33分06秒] --
+b
+-- [33分37秒] --
+b
+-- [34分09秒] --
+b
+-- [34分41秒] --
+b
+-- [35分13秒] --
+b
+-- [35分45秒] --
+b
+-- [36分16秒] --
+b
+-- [36分48秒] --
+b
+-- [37分20秒] --
+b
+-- [37分52秒] --
+b
+-- [38分24秒] --
+b
+-- [38分56秒] --
+b
+-- [39分28秒] --
+b
+-- [40分00秒] --
+b
+-- [40分32秒] --
+b
+-- [41分05秒] --
+b
+-- [41分37秒] --
+b
+-- [42分09秒] --
+b
+-- [42分41秒] --
+b
+-- [43分14秒] --
+b
+-- [43分46秒] --
+b
+-- [44分18秒] --
+b
+-- [44分51秒] --
+b
+-- [45分23秒] --
+b
+-- [45分56秒] --
+b
+-- [46分28秒] --
+b
+-- [47分01秒] --
+b
+-- [47分33秒] --
+b
+-- [48分06秒] --
+b
+-- [48分39秒] --
+b 
+-- [49分11秒] --
+b
+-- [49分44秒] --
+b
+-- [50分17秒] --
+b
+-- [50分49秒] --
+b
+-- [51分22秒] --
+b
+-- [51分55秒] --
+b
+-- [52分28秒] --
+b
+-- [53分01秒] --
+b
+-- [53分34秒] --
+b
+-- [54分07秒] --
+b
+-- [54分40秒] --
+b
+-- [55分13秒] --
+b
+-- [55分46秒] --
+b
+-- [56分19秒] --
+b
+-- [56分52秒] --
+b
+-- [57分25秒] --
+b
+-- [57分58秒] --
+b
+-- [58分31秒] --
+b
+-- [59分04秒] --
+b
+-- [59分38秒] --
+b
+-- [1小时0分11秒] --
+b
+-- [1小时0分44秒] --
+b
+-- [1小时1分18秒] --
+b
+-- [1小时1分51秒] --
+b
+-- [1小时2分25秒] --
+b
+-- [1小时2分58秒] --
+b
+-- [1小时3分32秒] --
+b
+-- [1小时4分05秒] --
+b
+-- [1小时4分39秒] --
+b
+-- [1小时5分12秒] --
+b
+-- [1小时5分46秒] --
+b
+-- [1小时6分20秒] --
+b
+-- [1小时6分53秒] --
+b
+-- [1小时7分27秒] --
+b
+-- [1小时8分01秒] --
+b
+-- [1小时8分35秒] --
+b
+-- [1小时9分09秒] --
+b
+-- [1小时9分42秒] --
+b
+-- [1小时10分16秒] --
+b
+-- [1小时10分50秒] --
+b
+-- [1小时11分24秒] --
+b
+-- [1小时11分58秒] --
+b
+-- [1小时12分32秒] --
+b
+-- [1小时13分06秒] --
+b
+-- [1小时13分40秒] --
+b
+-- [1小时14分14秒] --
+b
+-- [1小时14分49秒] --
+b
+-- [1小时15分23秒] --
+b
+-- [1小时15分57秒] --
+b
+-- [1小时16分31秒] --
+b
+-- [1小时17分06秒] --
+b
+-- [1小时17分40秒] --
+b
+-- [1小时18分14秒] --
+b
+-- [1小时18分49秒] --
+b
+-- [1小时19分23秒] --
+b
+-- [1小时19分58秒] --
+b
+-- [1小时20分32秒] --
+b
+-- [1小时21分07秒] --
+b
+-- [1小时21分41秒] --
+b
+-- [1小时22分16秒] --
+b
+-- [1小时22分50秒] --
+b
+-- [1小时23分25秒] --
+b
+-- [1小时24分00秒] --
+b
+-- [1小时24分35秒] --
+b
+-- [1小时25分09秒] --
+b
+-- [1小时25分44秒] --
+b
+-- [1小时26分19秒] --
+b
+-- [1小时26分54秒] --
+b
+-- [1小时27分29秒] --
+b
+-- [1小时28分04秒] --
+b
+-- [1小时28分39秒] --
+b
+-- [1小时29分14秒] --
+b
+-- [1小时29分49秒] --
+b
+-- [1小时30分24秒] --
+b
+-- [1小时30分59秒] --
+b
+-- [1小时31分34秒] --
+b
+-- [1小时32分09秒] --
+b
+-- [1小时32分44秒] --
+b
+-- [1小时33分19秒] --
+b
+-- [1小时33分55秒] --
+b 
+-- [1小时34分30秒] --
+b
+-- [1小时35分05秒] --
+b
+-- [1小时35分41秒] --
+b
+-- [1小时36分16秒] --
+b
+-- [1小时36分52秒] --
+b
+-- [1小时37分27秒] --
+b
+-- [1小时38分03秒] --
+b
+-- [1小时38分38秒] --
+b
+-- [1小时39分14秒] --
+b
+-- [1小时39分49秒] --
+b
+-- [1小时40分25秒] --
+b
+-- [1小时41分01秒] --
+b
+-- [1小时41分36秒] --
+b
+-- [1小时42分12秒] --
+b
+-- [1小时42分48秒] --
+b
+-- [1小时43分24秒] --
+b
+-- [1小时43分59秒] --
+b
+-- [1小时44分35秒] --
+b
+-- [1小时45分11秒] --
+b
+-- [1小时45分47秒] --
+b
+-- [1小时46分23秒] --
+b
+-- [1小时46分59秒] --
+b
+-- [1小时47分35秒] --
+b
+-- [1小时48分11秒] --
+b
+-- [1小时48分47秒] --
+b
+-- [1小时49分24秒] --
+b
+-- [1小时50分00秒] --
+b
+-- [1小时50分36秒] --
+b
+-- [1小时51分12秒] --
+b
+-- [1小时51分48秒] --
+b
+-- [1小时52分25秒] --
+b
+-- [1小时53分01秒] --
+b
+-- [1小时53分37秒] --
+b
+-- [1小时54分14秒] --
+b
+-- [1小时54分50秒] --
+b
+-- [1小时55分27秒] --
+b
+-- [1小时56分03秒] --
+b
+-- [1小时56分40秒] --
+b
+-- [1小时57分16秒] --
+b
+-- [1小时57分53秒] --
+b
+-- [1小时58分29秒] --
+b
+-- [1小时59分06秒] --
+b
+-- [1小时59分43秒] --
+b
+-- [2小时0分19秒] --
+b
+-- [2小时0分56秒] --
+b
+-- [2小时1分33秒] --
+b
+-- [2小时2分10秒] --
+b
+-- [2小时2分47秒] --
+b
+-- [2小时3分23秒] --
+b
+-- [2小时4分00秒] --
+b
+-- [2小时4分37秒] --
+b
+-- [2小时5分14秒] --
+b
+-- [2小时5分51秒] --
+b
+-- [2小时6分28秒] --
+b
+-- [2小时7分05秒] --
+b
+-- [2小时7分42秒] --
+b
+-- [2小时8分19秒] --
+b
+-- [2小时8分57秒] --
+b
+-- [2小时9分34秒] --
+b
+-- [2小时10分11秒] --
+b
+-- [2小时10分48秒] --
+b
+-- [2小时11分26秒] --
+b
+-- [2小时12分03秒] --
+b
+-- [2小时12分40秒] --
+b
+-- [2小时13分18秒] --
+b
+-- [2小时13分55秒] --
+b
+-- [2小时14分33秒] --
+b
+-- [2小时15分10秒] --
+b
+-- [2小时15分48秒] --
+b
+-- [2小时16分25秒] --
+b
+-- [2小时17分03秒] --
+b
+-- [2小时17分40秒] --
+b
+-- [2小时18分18秒] --
+b
+-- [2小时18分56秒] --
+b
+-- [2小时19分34秒] --
+b
+-- [2小时20分11秒] --
+b
+-- [2小时20分49秒] --
+b
+-- [2小时21分27秒] --
+b
+-- [2小时22分05秒] --
+b
+-- [2小时22分43秒] --
+b 
+-- [2小时23分21秒] --
+b
+-- [2小时23分59秒] --
+b
+-- [2小时24分37秒] --
+b
+-- [2小时25分15秒] --
+b
+-- [2小时25分53秒] --
+b
+-- [2小时26分31秒] --
+b
+-- [2小时27分09秒] --
+b
+-- [2小时27分47秒] --
+b
+-- [2小时28分25秒] --
+b
+-- [2小时29分04秒] --
+b
+-- [2小时29分42秒] --
+b
+-- [2小时30分20秒] --
+b
+-- [2小时30分58秒] --
+b
+-- [2小时31分37秒] --
+b
+-- [2小时32分15秒] --
+b
+-- [2小时32分54秒] --
+b
+-- [2小时33分32秒] --
+b
+-- [2小时34分11秒] --
+b
+-- [2小时34分49秒] --
+b
+-- [2小时35分28秒] --
+b
+-- [2小时36分06秒] --
+b
+-- [2小时36分45秒] --
+b
+-- [2小时37分23秒] --
+b
+-- [2小时38分02秒] --
+b
+-- [2小时38分41秒] --
+b
+-- [2小时39分19秒] --
+b
+-- [2小时39分58秒] --
+b
+-- [2小时40分37秒] --
+b
+-- [2小时41分16秒] --
+b
+-- [2小时41分55秒] --
+b
+-- [2小时42分34秒] --
+b
+-- [2小时43分13秒] --
+b
+-- [2小时43分52秒] --
+b
+-- [2小时44分31秒] --
+b
+-- [2小时45分10秒] --
+b
+-- [2小时45分49秒] --
+b
+-- [2小时46分28秒] --
+b
+-- [2小时47分07秒] --
+b
+-- [2小时47分46秒] --
+b
+-- [2小时48分25秒] --
+b
+-- [2小时49分05秒] --
+b
+-- [2小时49分44秒] --
+b
+-- [2小时50分23秒] --
+b
+-- [2小时51分02秒] --
+b
+-- [2小时51分42秒] --
+b
+-- [2小时52分21秒] --
+b
+-- [2小时53分01秒] --
+b
+-- [2小时53分40秒] --
+b
+-- [2小时54分20秒] --
+b
+-- [2小时54分59秒] --
+b
+-- [2小时55分39秒] --
+b
+-- [2小时56分18秒] --
+b
+-- [2小时56分58秒] --
+b
+-- [2小时57分38秒] --
+b
+-- [2小时58分18秒] --
+b
+-- [2小时58分57秒] --
+b
+-- [2小时59分37秒] --
+b
+-- [3小时0分17秒] --
+b
+-- [3小时0分57秒] --
+b
+-- [3小时1分37秒] --
+b
+-- [3小时2分16秒] --
+b
+-- [3小时2分56秒] --
+b
+-- [3小时3分36秒] --
+b
+-- [3小时4分16秒] --
+b
+-- [3小时4分56秒] --
+b
+-- [3小时5分37秒] --
+b
+-- [3小时6分17秒] --
+b
+-- [3小时6分57秒] --
+b
+-- [3小时7分37秒] --
+b
+-- [3小时8分17秒] --
+b
+-- [3小时8分57秒] --
+b
+
+-- [7小时25分48秒] --
+u
+-- [7小时26分44秒] --
+i
+-- [7小时27分41秒] --
+l
+-- [7小时28分37秒] --
+d
+
+-- [7小时30分31秒] --
+找不到命令 “make”，但可以通过以下软件包安装它：
+sudo apt install make        # version 4.3-4.1build1, or
+sudo apt install make-guile  # version 4.3-4.1build1
+
+-- [7小时31分28秒] --
+dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ 
+-- [7小时32分31秒] --
+^C
+
+-- [7小时35分41秒] --
+dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ 
+-- [7小时36分49秒] --
+sudo apt install make
+-- [7小时37分58秒] --
+dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ sudo apt install make
+
+-- [7小时40分14秒] --
+[sudo] dragon 的密码： 
+
+-- [7小时42分41秒] --
+正在读取软件包列表... 0%
+-- [7小时43分54秒] --
+正在读取软件包列表... 100%
+-- [7小时45分07秒] --
+正在读取软件包列表... 完成
+
+-- [7小时46分20秒] --
+正在分析软件包的依赖关系树... 0%
+-- [7小时47分34秒] --
+正在分析软件包的依赖关系树... 50%
+-- [7小时48分47秒] --
+正在分析软件包的依赖关系树... 完成
+正在读取状态信息... 0%
+-- [7小时50分01秒] --
+正在读取状态信息... 完成
+
+-- [7小时51分14秒] --
+下列软件包是自动安装的并且现在不需要了：
+
+-- [7小时52分28秒] --
+  libfwupd2
+使用'sudo apt autoremove'来卸载它(它们)。
+
+-- [7小时53分41秒] --
+建议安装：
+  make-doc
+
+-- [7小时54分55秒] --
+下列【新】软件包将被安装：
+
+-- [7小时56分09秒] --
+  make
+
+-- [7小时57分22秒] --
+升级了 0 个软件包，新安装了 1 个软件包，要卸载 0 个软件包，有 15 个软件包未被升级。
+
+-- [7小时58分36秒] --
+需要下载 180 kB 的归档。
+解压缩后会消耗 414 kB 的额外空间。
+
+-- [7小时59分50秒] --
+0% [执行中]
+-- [8小时1分04秒] --
+获取:1 http://cn.archive.ubuntu.com/ubuntu noble/main amd64 make amd64 4.3-4.1build2 [180 kB]
+0% [1 make 0 B/180 kB 0%]
+-- [8小时2分19秒] --
+100% [执行中]
+-- [8小时3分33秒] --
+已下载 180 kB，耗时 1秒 (252 kB/s)
+
+-- [8小时4分48秒] --
+78
+-- [8小时6分03秒] --
+正在选中未选择的软件包 make。
+(正在读取数据库 ... 
+
+-- [8小时8分33秒] --
+(正在读取数据库 ... 50%
+-- [8小时9分47秒] --
+(正在读取数据库 ... 55%
+
+-- [8小时12分17秒] --
+(正在读取数据库 ... 60%
+
+-- [8小时14分47秒] --
+(正在读取数据库 ... 65%
+
+-- [8小时17分17秒] --
+(正在读取数据库 ... 70%
+-- [8小时18分32秒] --
+(正在读取数据库 ... 75%
+
+-- [8小时21分02秒] --
+(正在读取数据库 ... 80%
+
+-- [8小时23分33秒] --
+(正在读取数据库 ... 
+-- [8小时24分48秒] --
+85%
+-- [8小时26分03秒] --
+(正在读取数据库 ... 90%
+-- [8小时27分18秒] --
+(正在读取数据库 ... 
+-- [8小时28分33秒] --
+95%
+-- [8小时29分49秒] --
+(正在读取数据库 ... 
+-- [8小时31分04秒] --
+(正在读取数据库 ... 系统当前共安装有 178001 个文件和目录。)
+
+-- [8小时32分19秒] --
+准备解压 .../make_4.3-4.1build2_amd64.deb  ...
+7进度：[  0%] [..............................................................] 
+
+-- [8小时34分50秒] --
+87进度：[ 20%]
+-- [8小时36分05秒] --
+ [############..................................................] 
+
+-- [8小时38分35秒] --
+8正在解压 make (4.3-4.1build2) ...
+7进度：[ 40%] [########################......................................] 
+
+-- [8小时41分06秒] --
+8正在设置 make (4.3-4.1build2) ...
+7进度：[ 60%] [#####################################.........................] 
+-- [8小时42分21秒] --
+87进度：[ 80%] [#################################################.............] 
+
+-- [8小时44分53秒] --
+8正在处理用于 man-db (2.12.0-4build2) 的触发器 ...
+
+78
+
+-- [8小时47分27秒] --
+dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ 
+-- [8小时48分58秒] --
+dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ 
+-- [8小时50分33秒] --
+dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$
+
+-- [10小时35分18秒] --
+
+-- [10小时36分55秒] --
+
+-- [10小时38分33秒] --
+
+-- [10小时40分11秒] --
+
+-- [10小时41分49秒] --
+
+-- [10小时43分27秒] --
+
+-- [10小时45分05秒] --
+
+-- [10小时46分42秒] --
+
+-- [10小时48分20秒] --
+
+-- [10小时49分58秒] --
+
+-- [10小时51分41秒] --
+make build
+-- [10小时53分25秒] --
+make build
+
+-- [10小时56分53秒] --
+riscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S
+
+-- [10小时58分37秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/printf.o kernel/printf.c
+
+-- [11小时0分22秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/kalloc.o kernel/kalloc.c
+
+-- [11小时2分06秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/intr.o kernel/intr.c
+
+-- [11小时3分50秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/spinlock.o kernel/spinlock.c
+
+-- [11小时5分34秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/string.o kernel/string.c
+
+-- [11小时7分18秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/main.o kernel/main.c
+
+-- [11小时9分02秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/vm.o kernel/vm.c
+
+-- [11小时10分47秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/proc.o kernel/proc.c
+
+-- [11小时12分31秒] --
+riscv64-unknown-elf-gcc    -c -o kernel/swtch.o kernel/swtch.S
+
+-- [11小时14分16秒] --
+riscv64-unknown-elf-gcc    -c -o kernel/trampoline.o kernel/trampoline.S
+
+-- [11小时16分00秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/trap.o kernel/trap.c
+
+-- [11小时17分44秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/syscall.o kernel/syscall.c
+
+-- [11小时19分29秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/sysproc.o kernel/sysproc.c
+
+-- [11小时21分13秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/bio.o kernel/bio.c
+
+-- [11小时22分58秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/sleeplock.o kernel/sleeplock.c
+
+-- [11小时24分43秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/file.o kernel/file.c
+
+-- [11小时26分27秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/pipe.o kernel/pipe.c
+
+-- [11小时28分12秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/exec.o kernel/exec.c
+
+-- [11小时29分56秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/sysfile.o kernel/sysfile.c
+
+-- [11小时31分41秒] --
+riscv64-unknown-elf-gcc    -c -o kernel/kernelvec.o kernel/kernelvec.S
+
+-- [11小时33分26秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/timer.o kernel/timer.c
+
+-- [11小时35分11秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/disk.o kernel/disk.c
+
+-- [11小时36分55秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/fat32.o kernel/fat32.c
+
+-- [11小时38分40秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/plic.o kernel/plic.c
+
+-- [11小时40分25秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/console.o kernel/console.c
+
+-- [11小时42分10秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/virtio_disk.o kernel/virtio_disk.c
+
+-- [11小时43分55秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU -march=rv64g -nostdinc -I. -Ikernel -c xv6-user/initcode.S -o xv6-user/initcode.o
+
+-- [11小时45分40秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e start -Ttext 0 -o xv6-user/initcode.out xv6-user/initcode.o
+
+-- [11小时47分25秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/initcode.out has a LOAD segment with RWX permissions
+
+-- [11小时49分10秒] --
+riscv64-unknown-elf-objcopy -S -O binary xv6-user/initcode.out xv6-user/initcode
+
+-- [11小时50分55秒] --
+riscv64-unknown-elf-objdump -S xv6-user/initcode.o > xv6-user/initcode.asm
+
+-- [11小时52分40秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/ulib.o xv6-user/ulib.c
+
+-- [11小时54分25秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU -c -o xv6-user/usys.o xv6-user/usys.S
+
+-- [11小时56分10秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/printf.o xv6-user/printf.c
+
+-- [11小时57分55秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/umalloc.o xv6-user/umalloc.c
+
+-- [11小时59分41秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/init.o xv6-user/init.c
+
+-- [12小时1分26秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_init xv6-user/init.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [12小时3分11秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_init
+-- [12小时4分56秒] --
+ has a LOAD segment with RWX permissions
+
+-- [12小时6分41秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_init > xv6-user/init.asm
+
+-- [12小时8分26秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_init | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/init.sym
+
+-- [12小时10分11秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/sh.o xv6-user/sh.c
+
+-- [12小时11分57秒] --
+xv6-user/sh.c: In function 'runcmd':
+xv6-user/sh.c:157:1: warning: infinite recursion detected [-Winfinite-recursion]
+  157 | runcmd(struct cmd *cmd)
+      | ^~~~~~
+
+-- [12小时13分42秒] --
+xv6-user/sh.c:205:5: note: recursive call
+  205 |     runcmd(rcmd->cmd);
+      |     ^~~~~~~~~~~~~~~~~
+
+-- [12小时15分27秒] --
+xv6-user/sh.c:225:7: note: recursive call
+  225 |       runcmd(pcmd->left);
+      |       ^~~~~~~~~~~~~~~~~~
+xv6-user/sh.c:232:7: note: recursive call
+  232 |       runcmd(pcmd->right);
+      |       ^~~~~~~~~~~~~~~~~~~
+xv6-user/sh.c:211:7: note: recursive call
+  211 |       runcmd(lcmd->left);
+      |       ^~~~~~~~~~~~~~~~~~
+xv6-user/sh.c:213:5: note: recursive call
+  213 |     runcmd(lcmd->right);
+      |     ^~~~~~~~~~~~~~~~~~~
+xv6-user/sh.c:243:7: note: recursive call
+  243 |       runcmd(bcmd->cmd);
+      |       ^~~~~~~~~~~~~~~~~
+
+-- [12小时17分12秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_sh xv6-user/sh.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [12小时18分57秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_sh has a LOAD segment with RWX permissions
+
+-- [12小时20分43秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_sh > xv6-user/sh.asm
+
+-- [12小时22分28秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_sh | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/sh.sym
+
+-- [12小时24分13秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/cat.o xv6-user/cat.c
+
+-- [12小时25分58秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_cat xv6-user/cat.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [12小时27分44秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_cat has a LOAD segment with RWX permissions
+
+-- [12小时29分29秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_cat > xv6-user/cat.asm
+
+-- [12小时31分14秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_cat | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/cat.sym
+
+-- [12小时32分59秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/echo.o xv6-user/echo.c
+
+-- [12小时34分45秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_echo xv6-user/echo.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [12小时36分30秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_echo has a LOAD segment with RWX permissions
+
+-- [12小时38分15秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_echo > xv6-user/echo.asm
+
+-- [12小时40分01秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_echo | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/echo.sym
+
+-- [12小时41分46秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/grep.o xv6-user/grep.c
+
+-- [12小时43分31秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_grep xv6-user/grep.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [12小时45分16秒] --
+riscv64-unknown-elf-ld: 
+-- [12小时47分02秒] --
+warning: xv6-user/_grep has a LOAD segment with RWX permissions
+
+-- [12小时48分47秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_grep > xv6-user/grep.asm
+
+-- [12小时50分32秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_grep | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/grep.sym
+
+-- [12小时52分18秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/ls.o xv6-user/ls.c
+
+-- [12小时54分03秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_ls xv6-user/ls.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [12小时55分48秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_ls has a LOAD segment with RWX permissions
+
+-- [12小时57分34秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_ls > xv6-user/ls.asm
+
+-- [12小时59分19秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_ls | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/ls.sym
+
+-- [13小时1分05秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/kill.o xv6-user/kill.c
+
+-- [13小时2分50秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_kill xv6-user/kill.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [13小时4分35秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_kill has a LOAD segment with RWX permissions
+
+-- [13小时6分21秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_kill > xv6-user/kill.asm
+
+-- [13小时8分06秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_kill | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/kill.sym
+
+-- [13小时9分51秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/mkdir.o xv6-user/mkdir.c
+
+-- [13小时11分37秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_mkdir xv6-user/mkdir.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [13小时13分22秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_mkdir has a LOAD segment with RWX permissions
+
+-- [13小时15分08秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_mkdir > xv6-user/mkdir.asm
+
+-- [13小时16分53秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_mkdir | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/mkdir.sym
+
+-- [13小时18分38秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/xargs.o xv6-user/xargs.c
+
+-- [13小时20分24秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_xargs xv6-user/xargs.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [13小时22分09秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_xargs has a LOAD segment with RWX permissions
+
+-- [13小时23分55秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_xargs > xv6-user/xargs.asm
+
+-- [13小时25分40秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_xargs | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/xargs.sym
+
+-- [13小时27分26秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/sleep.o xv6-user/sleep.c
+
+-- [13小时29分11秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_sleep xv6-user/sleep.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [13小时30分56秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_sleep has a LOAD segment with RWX permissions
+
+-- [13小时32分42秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_sleep > xv6-user/sleep.asm
+
+-- [13小时34分27秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_sleep | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/sleep.sym
+
+-- [13小时36分13秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/find.o xv6-user/find.c
+
+-- [13小时37分58秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_find xv6-user/find.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [13小时39分44秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_find has a LOAD segment with RWX permissions
+
+-- [13小时41分29秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_find > xv6-user/find.asm
+
+-- [13小时43分15秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_find | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/find.sym
+
+-- [13小时45分00秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/rm.o xv6-user/rm.c
+
+-- [13小时46分46秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_rm xv6-user/rm.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [13小时48分31秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_rm
+-- [13小时50分17秒] --
+ has a LOAD segment with RWX permissions
+
+-- [13小时52分02秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_rm > xv6-user/rm.asm
+
+-- [13小时53分48秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_rm | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/rm.sym
+
+-- [13小时55分33秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/wc.o xv6-user/wc.c
+
+-- [13小时57分19秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_wc xv6-user/wc.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [13小时59分04秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_wc has a LOAD segment with RWX permissions
+
+-- [14小时0分50秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_wc > xv6-user/wc.asm
+
+-- [14小时2分35秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_wc | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/wc.sym
+
+-- [14小时4分21秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/test.o xv6-user/test.c
+
+-- [14小时6分06秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_test xv6-user/test.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [14小时7分52秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_test has a LOAD segment with RWX permissions
+
+-- [14小时9分38秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_test > xv6-user/test.asm
+
+-- [14小时11分23秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_test | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/test.sym
+
+-- [14小时13分09秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/usertests.o xv6-user/usertests.c
+
+-- [14小时14分55秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_usertests xv6-user/usertests.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [14小时16分40秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_usertests has a LOAD segment with RWX permissions
+
+-- [14小时18分26秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_usertests > xv6-user/usertests.asm
+
+-- [14小时20分12秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_usertests | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/usertests.sym
+
+-- [14小时21分58秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/strace.o xv6-user/strace.c
+
+-- [14小时23分43秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_strace xv6-user/strace.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [14小时25分29秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_strace has a LOAD segment with RWX permissions
+
+-- [14小时27分15秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_strace > xv6-user/strace.asm
+
+-- [14小时29分01秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_strace | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/strace.sym
+
+-- [14小时30分47秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/mv.o xv6-user/mv.c
+
+-- [14小时32分33秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_mv xv6-user/mv.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [14小时34分18秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_mv has a LOAD segment with RWX permissions
+
+-- [14小时36分04秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_mv > xv6-user/mv.asm
+
+-- [14小时37分50秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_mv | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/mv.sym
+
+-- [14小时41分22秒] --
+dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ 
+-- [14小时43分24秒] --
+ls target/
+-- [14小时45分27秒] --
+ls target/
+
+-- [14小时49分33秒] --
+kernel  kernel.asm  kernel.sym
+
+-- [14小时51分36秒] --
+dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ 
+-- [14小时53分43秒] --
+^C
+
+-- [15小时2分09秒] --
+dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ 
+-- [15小时5分53秒] --
+dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ 
+-- [15小时9分38秒] --
+dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ 
+-- [15小时14分23秒] --
+sudo make fs 
+-- [15小时19分08秒] --
+sudo make fs 
+
+-- [15小时28分40秒] --
+making fs image...
+
+-- [15小时33分26秒] --
+输入了 512+0 块记录
+输出了 512+0 块记录
+268435456 字节 (268 MB, 256 MiB) 已复制，0.470309 s，571 MB/s
+
+-- [15小时42分59秒] --
+mkfs.fat 4.2 (2021-01-31)
+
+-- [15小时52分33秒] --
+dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ 
+-- [16小时8分18秒] --
+ls -lh fs.img
+-- [16小时24分05秒] --
+dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ ls -lh fs.img
+
+-- [16小时39分52秒] --
+-rw-r--r-- 1 root root 256M  9月 14 21:18 fs.img
+
+-- [16小时55分39秒] --
+dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ 
+-- [17小时11分38秒] --
+make run
+-- [17小时27分37秒] --
+make run
+
+-- [17小时59分35秒] --
+qemu-system-riscv64:
+-- [18小时15分35秒] --
+ -device virtio-blk-device,drive=x0,bus=virtio-mmio-bus.0: Could not open 'fs.img': Permission denied
+
+-- [18小时31分34秒] --
+make: *** [Makefile:152：run] 错误 1
+
+-- [18小时47分33秒] --
+dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ 
+-- [19小时3分43秒] --
+make run
+-- [19小时21分13秒] --
+make ru
+
+-- [21小时41分15秒] --
+
+-- [21小时58分45秒] --
+
+-- [22小时16分16秒] --
+
+-- [22小时33分46秒] --
+
+-- [22小时51分17秒] --
+
+-- [23小时8分47秒] --
+
+-- [23小时26分19秒] --
+dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ make run
+
+-- [23小时43分54秒] --
+dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ make run
+
+-- [45小时46分18秒] --
+
+-- [46小时3分58秒] --
+
+-- [46小时21分37秒] --
+
+-- [46小时39分16秒] --
+
+-- [46小时56分55秒] --
+
+-- [47小时14分35秒] --
+
+-- [47小时32分14秒] --
+
+-- [47小时49分54秒] --
+
+-- [48小时7分41秒] --
+ls -l fs.img 
+-- [48小时25分29秒] --
+ls -l fs.img 
+
+-- [48小时43分17秒] --
+-rw-r--r-- 1 root root 268435456  9月 14 21:18 fs.img
+
+-- [49小时1分06秒] --
+dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ 
+-- [49小时24分20秒] --
+sudo chown dragon:dragon fs.img
+-- [49小时47分37秒] --
+dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ sudo chown dragon:dragon fs.img
+
+-- [50小时34分12秒] --
+[sudo] dragon 的密码： 
+
+-- [51小时21分02秒] --
+dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ 
+-- [51小时44分40秒] --
+ls -l fs.img 
+-- [52小时8分19秒] --
+ls -l fs.img 
+
+-- [52小时55分36秒] --
+-rw-r--r-- 1 dragon dragon 268435456  9月 14 21:18 fs.img
+
+-- [53小时19分15秒] --
+dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ 
+-- [53小时43分08秒] --
+make run
+-- [54小时7分01秒] --
+make runmake run
+-- [54小时31分00秒] --
+dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ make ru
+
+-- [58小时30分57秒] --
+OpenSBI v1.3
+
+-- [58小时54分58秒] --
+  ____    
+
+-- [59小时42分59秒] --
+              _
+-- [60小时7分00秒] --
+____ ____
+-- [60小时31分00秒] --
+ _____
+
+-- [60小时55分01秒] --
+ / __ 
+-- [61小时19分02秒] --
+\  
+
+-- [62小时31分04秒] --
+      / __
+-- [62小时55分05秒] --
+__| 
+-- [63小时19分06秒] --
+ _
+
+-- [64小时7分07秒] --
+\
+-- [64小时31分08秒] --
+_ 
+
+-- [65小时19分09秒] --
+ _
+-- [65小时43分10秒] --
+|
+
+-- [66小时31分11秒] --
+ |
+-- [66小时55分12秒] --
+ |
+
+-- [67小时43分14秒] --
+|
+
+-- [68小时31分15秒] --
+|_ 
+-- [68小时55分16秒] --
+__
+
+-- [70小时7分18秒] --
+___
+
+-- [70小时55分19秒] --
+_
+-- [71小时19分20秒] --
+ __ |
+-- [71小时43分21秒] --
+ (
+-- [72小时7分22秒] --
+_
+-- [72小时31分22秒] --
+__
+-- [72小时55分23秒] --
+ |
+
+-- [73小时43分25秒] --
+|
+-- [74小时7分25秒] --
+_)
+-- [74小时31分26秒] --
+ |
+-- [74小时55分27秒] --
+|
+-- [75小时19分27秒] --
+ |
+
+-- [76小时31分30秒] --
+| |  | | '
+-- [76小时55分30秒] --
+_ \ / _ \ '_
+-- [77小时19分31秒] --
+ \ \___ \|  _ < | |
+ | |__| | |_) |
+-- [77小时43分32秒] --
+  __/ | | 
+-- [78小时7分33秒] --
+|____) | |_) || |_
+
+-- [78小时31分33秒] --
+  \__
+-- [78小时55分34秒] --
+__/| .__
+-- [79小时19分35秒] --
+/ \___|_|
+-- [79小时43分36秒] --
+ |_|_
+-- [80小时7分36秒] --
+__
+-- [80小时31分37秒] --
+__/|___/
+-- [80小时55分38秒] --
+_
+-- [81小时19分38秒] --
+_
+-- [81小时43分39秒] --
+___
+-- [82小时7分40秒] --
+|
+
+-- [82小时31分41秒] --
+    | |
+
+-- [83小时43分43秒] --
+ |_
+-- [84小时7分44秒] --
+|
+
+-- [84小时31分44秒] --
+P
+-- [84小时55分45秒] --
+l
+-- [85小时19分46秒] --
+a
+-- [85小时43分47秒] --
+t
+-- [86小时7分47秒] --
+f
+-- [86小时31分48秒] --
+o
+-- [86小时55分49秒] --
+r
+-- [87小时19分50秒] --
+m
+
+-- [88小时7分51秒] --
+N
+-- [88小时31分52秒] --
+a
+-- [88小时55分53秒] --
+m
+-- [89小时19分53秒] --
+e
+
+-- [94小时56分04秒] --
+:
+
+-- [95小时44分05秒] --
+r
+-- [96小时8分06秒] --
+i
+-- [96小时32分07秒] --
+s
+-- [96小时56分07秒] --
+c
+-- [97小时20分08秒] --
+v
+-- [97小时44分09秒] --
+-
+-- [98小时8分10秒] --
+v
+-- [98小时32分10秒] --
+i
+-- [98小时56分11秒] --
+r
+-- [99小时20分12秒] --
+t
+-- [99小时44分13秒] --
+io
+-- [100小时8分13秒] --
+,
+-- [100小时32分14秒] --
+qem
+-- [100小时56分15秒] --
+u
+P
+-- [101小时20分16秒] --
+l
+-- [101小时44分16秒] --
+a
+-- [102小时8分17秒] --
+t
+-- [102小时32分18秒] --
+fo
+-- [102小时56分19秒] --
+rm Fea
+-- [103小时20分19秒] --
+tures 
+
+-- [104小时8分21秒] --
+: m
+-- [104小时32分22秒] --
+edeleg
+P
+-- [104小时56分22秒] --
+lat
+-- [105小时20分23秒] --
+fo
+-- [105小时44分24秒] --
+rm HA
+-- [106小时8分25秒] --
+RT Co
+-- [106小时32分25秒] --
+unt
+
+-- [107小时44分28秒] --
+: 2
+
+-- [108小时32分29秒] --
+Platform IPI Device   
+-- [108小时56分30秒] --
+    : aclint-m
+-- [109小时20分31秒] --
+swi
+P
+-- [109小时44分31秒] --
+l
+-- [110小时8分32秒] --
+at
+-- [110小时32分33秒] --
+f
+-- [110小时56分34秒] --
+orm Time
+-- [111小时20分34秒] --
+r Device 
+-- [111小时44分35秒] --
+    : aclin
+-- [112小时8分36秒] --
+t-mtimer @ 1000
+-- [112小时32分37秒] --
+0000Hz
+
+-- [113小时20分38秒] --
+Pl
+-- [113小时44分39秒] --
+a
+-- [114小时8分40秒] --
+tform Conso
+-- [114小时32分40秒] --
+le
+-- [114小时56分41秒] --
+ Devic
+-- [115小时20分42秒] --
+e   : uart825
+-- [115小时44分43秒] --
+0
+P
+-- [116小时8分43秒] --
+latfor
+-- [116小时32分44秒] --
+m HSM
+-- [116小时56分45秒] --
+ Device  
+-- [117小时20分46秒] --
+     : ---
+P
+-- [117小时44分46秒] --
+la
+-- [118小时8分47秒] --
+tfo
+-- [118小时32分48秒] --
+rm
+-- [118小时56分49秒] --
+ PM
+-- [119小时20分49秒] --
+U 
+-- [119小时44分50秒] --
+Devi
+-- [120小时8分51秒] --
+ce  
+
+-- [120小时56分52秒] --
+ : ---
+P
+-- [121小时20分53秒] --
+l
+-- [121小时44分54秒] --
+atfor
+-- [122小时8分55秒] --
+m
+-- [122小时32分55秒] --
+ Reboot
+-- [122小时56分56秒] --
+ Device   
+-- [123小时20分57秒] --
+ : sifive
+-- [123小时44分58秒] --
+_test
+
+-- [124小时8分58秒] --
+P
+-- [124小时32分59秒] --
+latfor
+-- [124小时57分00秒] --
+m Shut
+-- [125小时21分01秒] --
+down D
+-- [125小时45分01秒] --
+evice  : sif
+-- [126小时9分02秒] --
+ive
+-- [126小时33分03秒] --
+_test
+
+-- [126小时57分04秒] --
+P
+-- [127小时21分04秒] --
+lat
+-- [127小时45分05秒] --
+fo
+-- [128小时9分06秒] --
+rm Sus
+-- [128小时33分07秒] --
+pend Devi
+-- [128小时57分07秒] --
+ce 
+-- [129小时21分08秒] --
+  : --
+-- [129小时45分09秒] --
+-
+P
+-- [130小时9分10秒] --
+l
+-- [130小时33分10秒] --
+atf
+-- [130小时57分11秒] --
+orm C
+-- [131小时21分12秒] --
+PPC
+-- [131小时45分13秒] --
+ Device
+-- [132小时9分13秒] --
+      : --
+-- [132小时33分14秒] --
+-
+F
+-- [132小时57分15秒] --
+ir
+-- [133小时21分16秒] --
+m
+-- [133小时45分16秒] --
+war
+-- [134小时9分17秒] --
+e 
+-- [134小时33分18秒] --
+Base
+
+-- [136小时9分21秒] --
+   : 0x
+-- [136小时33分22秒] --
+800000
+-- [136小时57分22秒] --
+00
+F
+-- [137小时21分23秒] --
+ir
+-- [137小时45分24秒] --
+mwa
+-- [138小时9分25秒] --
+re S
+-- [138小时33分25秒] --
+ize      
+-- [138小时57分26秒] --
+       : 
+-- [139小时21分27秒] --
+332 KB
+F
+-- [139小时45分28秒] --
+irm
+-- [140小时9分28秒] --
+ware
+-- [140小时33分29秒] --
+ R
+-- [140小时57分30秒] --
+W
+-- [141小时21分31秒] --
+ O
+-- [141小时45分31秒] --
+ffset 
+
+-- [142小时33分33秒] --
+  :
+-- [142小时57分34秒] --
+ 0x
+-- [143小时21分34秒] --
+400
+-- [143小时45分35秒] --
+00
+F
+-- [144小时9分36秒] --
+ir
+-- [144小时33分37秒] --
+mwa
+-- [144小时57分37秒] --
+re RW Si
+-- [145小时21分38秒] --
+ze          : 76 KB
+F
+-- [145小时45分39秒] --
+ir
+-- [146小时9分40秒] --
+mw
+-- [146小时33分40秒] --
+are Heap O
+-- [146小时57分41秒] --
+ffset    
+-- [147小时21分42秒] --
+  : 0x
+-- [147小时45分43秒] --
+4a000
+F
+-- [148小时9分44秒] --
+i
+-- [148小时33分44秒] --
+r
+-- [148小时57分45秒] --
+mw
+-- [149小时21分46秒] --
+a
+-- [149小时45分47秒] --
+re 
+-- [150小时9分47秒] --
+He
+-- [150小时33分48秒] --
+ap S
+-- [150小时57分49秒] --
+ize  
+-- [151小时21分50秒] --
+      : 
+-- [151小时45分50秒] --
+36 KB 
+-- [152小时9分51秒] --
+(total
+-- [152小时33分52秒] --
+), 2 
+-- [152小时57分53秒] --
+KB (
+-- [153小时21分53秒] --
+reserve
+-- [153小时45分54秒] --
+d), 9 KB (u
+-- [154小时9分55秒] --
+sed)
+-- [154小时33分56秒] --
+, 24 
+-- [154小时57分56秒] --
+KB (free
+-- [155小时21分57秒] --
+)
+F
+-- [155小时45分58秒] --
+ir
+-- [156小时9分59秒] --
+m
+-- [156小时33分59秒] --
+ware 
+-- [156小时58分00秒] --
+Scr
+-- [157小时22分01秒] --
+atch S
+-- [157小时46分02秒] --
+ize   
+-- [158小时10分02秒] --
+  : 
+-- [158小时34分03秒] --
+4096 B (tot
+-- [158小时58分04秒] --
+al), 760 B (u
+-- [159小时22分05秒] --
+sed), 333
+-- [159小时46分05秒] --
+6 
+-- [160小时10分06秒] --
+B (fr
+-- [160小时34分07秒] --
+ee)
+R
+-- [160小时58分08秒] --
+un
+-- [161小时22分08秒] --
+ti
+-- [161小时46分09秒] --
+me SBI Versi
+-- [162小时10分10秒] --
+on
+
+-- [163小时22分12秒] --
+  : 1.0
+
+-- [163小时46分13秒] --
+D
+-- [164小时10分14秒] --
+omain
+-- [164小时34分15秒] --
+0
+-- [164小时58分15秒] --
+ Name         
+-- [165小时22分16秒] --
+     : root
+D
+-- [165小时46分17秒] --
+omain0 B
+-- [166小时10分18秒] --
+oot HART   
+
+-- [166小时58分19秒] --
+ : 0
+D
+-- [167小时22分20秒] --
+oma
+-- [167小时46分21秒] --
+in
+-- [168小时10分21秒] --
+0 HAR
+-- [168小时34分22秒] --
+Ts     
+
+-- [169小时22分24秒] --
+: 0
+-- [169小时46分24秒] --
+*,
+-- [170小时10分25秒] --
+1*
+
+-- [170小时58分27秒] --
+D
+-- [171小时22分27秒] --
+o
+-- [171小时46分28秒] --
+m
+-- [172小时10分29秒] --
+a
+-- [172小时34分30秒] --
+i
+-- [172小时58分30秒] --
+n0 R
+-- [173小时22分31秒] --
+egion0
+-- [173小时46分32秒] --
+0     
+
+-- [174小时34分33秒] --
+: 0x
+-- [174小时58分34秒] --
+0000
+-- [175小时22分35秒] --
+000
+-- [175小时46分36秒] --
+00200
+-- [176小时10分36秒] --
+0000-0x0
+-- [176小时34分37秒] --
+000
+-- [176小时58分38秒] --
+000002
+-- [177小时22分39秒] --
+00ffff 
+-- [177小时46分40秒] --
+M
+-- [178小时10分40秒] --
+:
+
+-- [178小时58分42秒] --
+(I,R,W) S/U: ()
+Domain0 Region
+-- [179小时22分43秒] --
+01        
+-- [179小时46分43秒] --
+  : 0
+-- [180小时10分44秒] --
+x00
+-- [180小时34分45秒] --
+000
+-- [180小时58分46秒] --
+00
+-- [181小时22分46秒] --
+0
+-- [181小时46分47秒] --
+80
+-- [182小时10分48秒] --
+04
+-- [182小时34分49秒] --
+0
+-- [182小时58分49秒] --
+00
+-- [183小时22分50秒] --
+0-
+-- [183小时46分51秒] --
+0x0
+-- [184小时10分52秒] --
+0
+-- [184小时34分52秒] --
+0
+-- [184小时58分53秒] --
+00
+-- [185小时22分54秒] --
+0
+-- [185小时46分55秒] --
+0
+-- [186小时10分55秒] --
+08
+-- [186小时34分56秒] --
+0
+-- [186小时58分57秒] --
+05
+-- [187小时22分58秒] --
+f
+-- [187小时46分59秒] --
+f
+-- [188小时10分59秒] --
+ff
+
+-- [188小时59分01秒] --
+M
+-- [189小时23分02秒] --
+: 
+-- [189小时47分02秒] --
+(R,W)
+-- [190小时11分03秒] --
+ S/
+-- [190小时35分04秒] --
+U
+-- [190小时59分05秒] --
+: 
+-- [191小时23分05秒] --
+(
+-- [191小时47分06秒] --
+)
+
+-- [192小时35分08秒] --
+D
+-- [192小时59分08秒] --
+om
+-- [193小时23分09秒] --
+a
+-- [193小时47分10秒] --
+in
+-- [194小时11分11秒] --
+0 
+-- [194小时35分11秒] --
+R
+-- [194小时59分12秒] --
+eg
+-- [195小时23分13秒] --
+io
+-- [195小时47分14秒] --
+n
+-- [196小时11分14秒] --
+02
+
+-- [198小时35分19秒] --
+     : 0x0000000080000000-0x000000008003ffff M: (R,X) S/U: ()
+Domain0 Region03          : 0x0000000000000000-0xffffffffffffffff M: (R,W,X) S/U: (R,W,X)
+Domain0 Next Address      : 0x0000000080200000
+Domain0 Next Arg1         : 0x0000000087e00000
+Domain0 Next Mode         : S-mode
+Domain0 SysReset          : yes
+Domain0 SysSuspend        : yes
+
+Boot HART ID              : 0
+Boot HART Domain          : root
+Boot HART Priv Version    : v1.12
+
+-- [198小时59分20秒] --
+Bo
+-- [199小时23分21秒] --
+ot
+-- [199小时47分21秒] --
+ HA
+-- [200小时11分22秒] --
+RT
+
+-- [200小时59分24秒] --
+Ba
+-- [201小时23分24秒] --
+s
+-- [201小时47分25秒] --
+e 
+-- [202小时11分26秒] --
+IS
+-- [202小时35分27秒] --
+A 
+
+-- [204小时59分31秒] --
+: 
+-- [205小时23分32秒] --
+r
+-- [205小时47分33秒] --
+v6
+-- [206小时11分34秒] --
+4
+-- [206小时35分34秒] --
+imafdch
+
+-- [206小时59分35秒] --
+Bo
+-- [207小时23分36秒] --
+ot
+-- [207小时47分37秒] --
+ HART ISA Extensions  : time,sstc
+B
+-- [208小时11分37秒] --
+oot HART PMP Count  
+
+-- [208小时59分39秒] --
+   :
+-- [209小时23分40秒] --
+ 16
+B
+-- [209小时47分40秒] --
+oot
+-- [210小时11分41秒] --
+ H
+-- [210小时35分42秒] --
+ART 
+-- [210小时59分43秒] --
+PMP
+-- [211小时23分43秒] --
+ Granul
+-- [211小时47分44秒] --
+ar
+-- [212小时11分45秒] --
+i
+-- [212小时35分46秒] --
+ty : 4
+B
+-- [212小时59分47秒] --
+oot HART PMP A
+-- [213小时23分47秒] --
+ddress Bits:
+-- [213小时47分48秒] --
+ 54
+B
+-- [214小时11分49秒] --
+oot HAR
+-- [214小时35分50秒] --
+T MHPM Co
+-- [214小时59分50秒] --
+unt      
+-- [215小时23分51秒] --
+: 16
+B
+-- [215小时47分52秒] --
+o
+-- [216小时11分53秒] --
+o
+-- [216小时35分53秒] --
+t HART MIDELE
+-- [216小时59分54秒] --
+G        
+-- [217小时23分55秒] --
+ : 0x
+-- [217小时47分56秒] --
+00000000
+-- [218小时11分57秒] --
+00001666
+B
+-- [218小时35分57秒] --
+oo
+-- [218小时59分58秒] --
+t HAR
+-- [219小时23分59秒] --
+T MED
+-- [219小时48分00秒] --
+ELEG 
+
+-- [220小时36分01秒] --
+    :
+-- [221小时0分02秒] --
+ 0x
+-- [221小时24分03秒] --
+000
+-- [221小时48分03秒] --
+000
+-- [222小时12分04秒] --
+0000f0b
+-- [222小时36分05秒] --
+509
+
+-- [223小时48分07秒] --
+(
+-- [224小时12分08秒] --
+`
+-- [224小时36分09秒] --
+-
+-- [225小时0分10秒] --
+.
+
+-- [226小时36分13秒] --
+(
+-- [227小时0分13秒] --
+`
+-- [227小时24分14秒] --
+-.
+
+-- [237小时0分33秒] --
+.
+-- [237小时24分33秒] --
+-')
+
+-- [239小时48分38秒] --
+(
+-- [240小时12分39秒] --
+'
+-- [240小时36分40秒] --
+-
+-- [241小时0分40秒] --
+.
+
+-- [242小时12分43秒] --
+ _
+
+-- [243小时48分46秒] --
+.
+-- [244小时12分47秒] --
+-
+-- [244小时36分47秒] --
+'
+-- [245小时0分48秒] --
+)
+
+-- [246小时36分51秒] --
+( OO ).
+
+-- [248小时12分54秒] --
+   _(OO  )
+-- [248小时36分55秒] --
+_
+
+-- [256小时13分10秒] --
+.
+-- [256小时37分10秒] --
+( 
+
+-- [257小时25分12秒] --
+O
+-- [257小时49分13秒] --
+O
+-- [258小时13分14秒] --
+)
+
+-- [260小时13分17秒] --
+_(
+
+-- [261小时25分20秒] --
+O
+-- [261小时49分20秒] --
+O
+-- [262小时13分21秒] --
+)  
+-- [262小时37分22秒] --
+(
+-- [263小时1分23秒] --
+ '.
+-- [263小时25分24秒] --
+(
+-- [263小时49分24秒] --
+ O
+-- [264小时13分25秒] --
+O
+
+-- [265小时1分27秒] --
+)
+-- [265小时25分27秒] --
+_
+
+-- [267小时1分30秒] --
+(
+-- [267小时25分31秒] --
+_
+-- [267小时49分32秒] --
+/
+-- [268小时13分33秒] --
+.
+
+-- [269小时25分35秒] --
+\
+-- [269小时49分36秒] --
+_)
+-- [270小时13分37秒] --
+-.
+
+-- [271小时1分38秒] --
+,
+-- [271小时25分39秒] --
+-
+-- [271小时49分40秒] --
+-
+-- [272小时13分41秒] --
+(
+-- [272小时37分41秒] --
+_
+-- [273小时1分42秒] --
+/
+
+-- [274小时13分44秒] --
+ ,
+-- [274小时37分45秒] --
+.
+
+-- [275小时25分47秒] --
+\
+
+-- [276小时13分48秒] --
+ ,
+-- [276小时37分49秒] --
+-
+-- [277小时1分50秒] --
+-
+-- [277小时25分51秒] --
+.
+
+-- [283小时26分02秒] --
+(
+-- [283小时50分03秒] --
+_)
+-- [284小时14分04秒] --
+-
+-- [284小时38分04秒] --
+--
+-- [285小时2分05秒] --
+\
+-- [285小时26分06秒] --
+_
+-- [285小时50分07秒] --
+)
+
+-- [286小时38分08秒] --
+ (
+-- [287小时2分09秒] --
+,-
+-- [287小时26分10秒] --
+---
+-- [287小时50分11秒] --
+--.
+
+-- [288小时38分12秒] --
+ ,
+-- [289小时2分13秒] --
+-
+-- [289小时26分14秒] --
+-
+-- [289小时50分15秒] --
+.
+
+-- [291小时26分18秒] --
+,-
+-- [291小时50分18秒] --
+-
+-- [292小时14分19秒] --
+.
+-- [292小时38分20秒] --
+)
+
+-- [293小时26分21秒] --
+,
+-- [293小时50分22秒] --
+-
+-- [294小时14分23秒] --
+-
+-- [294小时38分24秒] --
+.
+-- [295小时2分25秒] --
+ ,-
+-- [295小时26分25秒] --
+-.
+
+-- [297小时50分30秒] --
+\
+
+-- [298小时38分32秒] --
+ `
+-- [299小时2分32秒] --
+.
+-- [299小时26分33秒] --
+'
+
+-- [300小时38分35秒] --
+/
+
+-- [301小时50分38秒] --
+\
+
+-- [303小时26分41秒] --
+\
+
+-- [304小时38分43秒] --
+/(
+-- [305小时2分44秒] --
+_
+-- [305小时26分45秒] --
+_
+-- [305小时50分45秒] --
+/ 
+-- [306小时14分46秒] --
+/
+
+-- [307小时26分49秒] --
+.
+-- [307小时50分49秒] --
+'
+
+-- [311小时2分55秒] --
+.-
+-- [311小时26分56秒] --
+'
+-- [311小时50分57秒] --
+)
+
+-- [313小时2分59秒] --
+ ' 
+
+-- [313小时51分01秒] --
+.
+-- [314小时15分02秒] --
+-
+-- [314小时39分02秒] --
+. 
+
+-- [315小时27分04秒] --
+'
+
+-- [316小时39分06秒] --
+|
+
+-- [317小时51分09秒] --
+.
+-- [318小时15分09秒] --
+-
+-- [318小时39分10秒] --
+--
+-- [319小时3分11秒] --
+'
+
+-- [320小时15分13秒] --
+|
+
+-- [321小时27分16秒] --
+`
+-- [321小时51分16秒] --
+.
+-- [322小时15分17秒] --
+'
+
+-- [323小时51分20秒] --
+|
+
+-- [324小时39分22秒] --
+ |
+
+-- [325小时51分24秒] --
+|
+-- [326小时15分25秒] --
+ |
+
+-- [327小时27分27秒] --
+|
+
+-- [330小时15分33秒] --
+\ 
+
+-- [331小时51分36秒] --
+ /
+-- [332小时15分37秒] --
+\
+
+-- [333小时27分39秒] --
+\ 
+
+-- [334小时15分40秒] --
+ \
+
+-- [335小时3分42秒] --
+/ 
+
+-- [335小时51分44秒] --
+ /
+
+-- [336小时39分45秒] --
+.
+
+-- [337小时27分47秒] --
+ /
+-- [337小时51分47秒] --
+ -
+-- [338小时15分48秒] --
+. 
+
+-- [339小时27分50秒] --
+_(
+
+-- [340小时15分52秒] --
+OO
+-- [340小时39分53秒] --
+) 
+
+-- [341小时27分54秒] --
+ ,
+-- [341小时51分55秒] --
+| 
+-- [342小时15分56秒] --
+ |
+-- [342小时39分57秒] --
+ |
+
+-- [343小时27分58秒] --
+|
+
+-- [344小时16分00秒] --
+ |
+
+-- [345小时4分01秒] --
+| 
+
+-- [346小时16分04秒] --
+ |
+
+-- [348小时40分08秒] --
+| 
+-- [349小时4分09秒] --
+ |
+
+-- [349小时52分11秒] --
+| 
+-- [350小时16分11秒] --
+| 
+-- [350小时40分12秒] --
+.-
+-- [351小时4分13秒] --
+')
+
+-- [352小时40分16秒] --
+ \
+
+-- [353小时28分18秒] --
+  \
+
+-- [354小时16分19秒] --
+| 
+
+-- [355小时4分21秒] --
+ \
+
+-- [355小时52分22秒] --
+ '
+
+-- [356小时40分24秒] --
+ /
+-- [357小时4分25秒] --
+,
+-- [357小时28分25秒] --
+ |
+-- [357小时52分26秒] --
+ .
+-- [358小时16分27秒] --
+-.
+
+-- [359小时4分28秒] --
+' 
+-- [359小时28分29秒] --
+ (
+-- [359小时52分30秒] --
+,-
+-- [360小时16分31秒] --
+--
+-- [360小时40分32秒] --
+-
+-- [361小时4分32秒] --
+--.
+
+-- [361小时52分34秒] --
+(_
+-- [362小时16分35秒] --
+| 
+-- [362小时40分35秒] --
+ |
+-- [363小时4分36秒] --
+ |
+
+-- [363小时52分38秒] --
+|
+-- [364小时16分39秒] --
+  (
+-- [364小时40分39秒] --
+|
+
+-- [365小时28分41秒] --
+'-
+-- [365小时52分42秒] --
+-.
+
+-- [366小时40分43秒] --
+ | 
+-- [367小时4分44秒] --
+ |
+-- [367小时28分45秒] --
+'.
+-- [367小时52分46秒] --
+'|
+
+-- [368小时40分47秒] --
+| 
+-- [369小时4分48秒] --
+ |
+
+-- [369小时52分49秒] --
+|_
+-- [370小时16分50秒] --
+|(
+
+-- [371小时4分52秒] --
+OO 
+-- [371小时28分53秒] --
+)
+
+-- [372小时40分55秒] --
+.
+-- [373小时4分56秒] --
+'  
+
+-- [373小时52分57秒] --
+ \
+-- [374小时16分58秒] --
+_)
+
+-- [375小时29分00秒] --
+\ 
+
+-- [376小时41分03秒] --
+ /_
+-- [377小时5分03秒] --
+_
+-- [377小时29分04秒] --
+)'
+-- [377小时53分05秒] --
+ \
+
+-- [378小时41分07秒] --
+| 
+-- [379小时5分07秒] --
+ | 
+-- [379小时29分08秒] --
+ '
+-- [379小时53分09秒] --
+-
+-- [380小时17分10秒] --
+---
+-- [380小时41分10秒] --
+-
+-- [381小时5分11秒] --
+-'
+
+-- [381小时53分13秒] --
+|
+
+-- [382小时41分14秒] --
+| 
+-- [383小时5分15秒] --
+| 
+-- [383小时29分16秒] --
+ |
+
+-- [384小时17分17秒] --
+ |
+
+-- [385小时5分19秒] --
+.-
+-- [385小时29分20秒] --
+-
+-- [385小时53分20秒] --
+' 
+
+-- [386小时41分22秒] --
+| 
+-- [387小时5分23秒] --
+ |
+
+-- [387小时53分24秒] --
+ |
+
+-- [388小时41分26秒] --
+ |
+
+-- [389小时29分27秒] --
+| 
+-- [389小时53分28秒] --
+ |
+-- [390小时17分29秒] --
+ |
+-- [390小时41分30秒] --
+ `
+-- [391小时5分31秒] --
+-'
+-- [391小时29分31秒] --
+ /
+
+-- [392小时17分33秒] --
+/ 
+
+-- [393小时5分34秒] --
+.'
+-- [393小时29分35秒] --
+.
+
+-- [394小时17分37秒] --
+ \
+
+-- [397小时5分42秒] --
+\
+
+-- [398小时41分45秒] --
+/
+
+-- [400小时17分48秒] --
+\ 
+
+-- [401小时5分50秒] --
+`
+-- [401小时29分51秒] --
+' 
+
+-- [402小时17分52秒] --
+/
+
+-- [408小时18分04秒] --
+'
+
+-- [409小时6分06秒] --
+ '
+-- [409小时30分06秒] --
+-
+-- [409小时54分07秒] --
+'
+
+-- [411小时6分09秒] --
+'
+-- [411小时30分10秒] --
+-
+-- [411小时54分11秒] --
+.
+
+-- [412小时42分13秒] --
+|
+
+-- [413小时54分15秒] --
+`
+-- [414小时18分16秒] --
+-
+-- [414小时42分16秒] --
+-
+-- [415小时6分17秒] --
+-
+-- [415小时30分18秒] --
+.
+
+-- [416小时42分20秒] --
+| 
+-- [417小时6分21秒] --
+ |
+
+-- [418小时18分23秒] --
+|
+
+-- [419小时6分25秒] --
+ |
+
+-- [419小时54分27秒] --
+('
+-- [420小时18分27秒] --
+  '-'(_.-'
+'--'   '--'      `-'      `----'                `-
+-- [420小时42分28秒] --
+-
+-- [421小时6分29秒] --
+--
+-- [421小时30分30秒] --
+-
+-- [421小时54分30秒] --
+'
+-- [422小时18分31秒] --
+-
+-- [422小时42分32秒] --
+-
+-- [423小时6分33秒] --
+'
+
+-- [423小时54分34秒] --
+`
+-- [424小时18分35秒] --
+-
+-- [424小时42分36秒] --
+-
+-- [425小时6分37秒] --
+-
+-- [425小时30分37秒] --
+-
+-- [425小时54分38秒] --
+-
+-- [426小时18分39秒] --
+-
+-- [426小时42分40秒] --
+'
+
+-- [427小时54分42秒] --
+`-
+-- [428小时18分43秒] --
+-'   `--'   `
+-- [428小时42分44秒] --
+-----'
+
+-- [429小时6分44秒] --
+h
+-- [429小时30分45秒] --
+art 0 init done
+
+-- [429小时54分46秒] --
+i
+-- [430小时18分47秒] --
+n
+-- [430小时42分48秒] --
+i
+-- [431小时6分48秒] --
+t
+-- [431小时30分49秒] --
+:
+
+-- [432小时18分51秒] --
+s
+-- [432小时42分52秒] --
+t
+-- [433小时6分52秒] --
+a
+-- [433小时30分53秒] --
+r
+-- [433小时54分54秒] --
+t
+-- [434小时18分55秒] --
+i
+-- [434小时42分56秒] --
+n
+-- [435小时6分56秒] --
+g
+
+-- [435小时54分58秒] --
+s
+-- [436小时18分59秒] --
+h
+
+-- [437小时31分01秒] --
+-> 
+-- [437小时55分02秒] --
+/ 
+-- [438小时19分03秒] --
+$
+
+-- [452小时3分46秒] --
+l
+-- [452小时32分19秒] --
+s
+
+-- [453小时58分01秒] --
+e
+-- [454小时26分34秒] --
+x
+-- [454小时55分08秒] --
+e
+-- [455小时23分42秒] --
+c
+
+-- [459小时40分47秒] --
+ls failed
+
+-- [460小时9分21秒] --
+-
+-- [460小时37分55秒] --
+>
+
+-- [461小时35分03秒] --
+/
+
+-- [462小时32分10秒] --
+$
+
+-- [464小时1分24秒] --
+e
+-- [465小时2分03秒] --
+c
+-- [466小时2分43秒] --
+ho hi
+
+-- [469小时4分45秒] --
+h
+-- [470小时5分26秒] --
+i
+
+-- [473小时7分28秒] --
+-
+-- [474小时8分08秒] --
+>
+
+-- [476小时9分30秒] --
+/
+
+-- [478小时10分51秒] --
+$
+
+-- [480小时12分20秒] --
+cat REA
+-- [481小时13分08秒] --
+D
+-- [482小时13分56秒] --
+M
+-- [483小时14分45秒] --
+E
+
+-- [485小时16分23秒] --
+xv6 is 
+-- [486小时17分12秒] --
+a re-implementation of De
+-- [487小时18分01秒] --
+nnis Ritchie's and Ken Th
+-- [488小时18分50秒] --
+ompson'
+-- [489小时19分39秒] --
+s Uni
+-- [490小时20分28秒] --
+x
+Ver
+-- [491小时21分17秒] --
+sion 6 (v6).  x
+-- [492小时22分06秒] --
+v6 loose
+-- [493小时22分55秒] --
+ly f
+-- [494小时23分44秒] --
+oll
+-- [495小时24分33秒] --
+ows
+-- [496小时25分22秒] --
+ the
+-- [497小时26分11秒] --
+ structure and style of v6,
+
+-- [498小时27分01秒] --
+but
+-- [499小时27分50秒] --
+ is i
+-- [500小时28分39秒] --
+mp
+-- [501小时29分28秒] --
+lemen
+-- [502小时30分17秒] --
+ted f
+-- [503小时31分06秒] --
+or a
+-- [504小时31分55秒] --
+ mo
+-- [505小时32分44秒] --
+dern 
+-- [506小时33分33秒] --
+RISC
+-- [507小时34分22秒] --
+-V m
+-- [508小时35分11秒] --
+ult
+-- [509小时36分00秒] --
+iprocessor 
+-- [510小时36分49秒] --
+usin
+-- [511小时37分38秒] --
+g 
+-- [512小时38分27秒] --
+ANSI
+-- [513小时39分16秒] --
+ C
+-- [514小时40分05秒] --
+.
+
+ACKNOWLED
+-- [515小时40分55秒] --
+GM
+-- [516小时41分44秒] --
+ENTS
+
+-- [518小时43分22秒] --
+xv6
+-- [519小时44分11秒] --
+ is
+-- [520小时45分00秒] --
+ ins
+-- [521小时45分49秒] --
+pired by Joh
+-- [522小时46分38秒] --
+n Lions'
+-- [523小时47分27秒] --
+s Co
+-- [524小时48分16秒] --
+mme
+-- [525小时49分05秒] --
+nta
+-- [526小时49分54秒] --
+ry o
+-- [527小时50分43秒] --
+n U
+-- [528小时51分32秒] --
+NIX 
+-- [529小时52分21秒] --
+6th
+-- [530小时53分10秒] --
+ Edi
+-- [531小时53分59秒] --
+tion (
+-- [532小时54分49秒] --
+Peer
+
+-- [533小时55分38秒] --
+to
+-- [534小时56分27秒] --
+ Pe
+-- [535小时57分16秒] --
+er C
+-- [536小时58分05秒] --
+om
+-- [537小时58分54秒] --
+muni
+-- [538小时59分43秒] --
+cat
+-- [540小时0分32秒] --
+ions
+-- [541小时1分21秒] --
+; I
+-- [542小时2分10秒] --
+SB
+-- [543小时2分59秒] --
+N
+-- [544小时3分48秒] --
+: 
+-- [545小时4分37秒] --
+1-57
+-- [546小时5分26秒] --
+398
+-- [547小时6分15秒] --
+-013
+-- [548小时7分04秒] --
+-7
+-- [549小时7分54秒] --
+; 1st e
+-- [550小时8分43秒] --
+dit
+-- [551小时9分32秒] --
+i
+-- [552小时10分21秒] --
+on (
+-- [553小时11分10秒] --
+Ju
+-- [554小时11分59秒] --
+ne 
+-- [555小时12分48秒] --
+14,
+
+-- [556小时13分37秒] --
+20
+-- [557小时14分26秒] --
+00)). 
+-- [558小时15分15秒] --
+See 
+-- [559小时16分04秒] --
+als
+-- [560小时16分53秒] --
+o ht
+-- [561小时17分42秒] --
+tps:
+-- [562小时18分31秒] --
+//p
+-- [563小时19分20秒] --
+dos.
+-- [564小时20分09秒] --
+csa
+-- [565小时20分59秒] --
+il.m
+-- [566小时21分48秒] --
+it.
+-- [567小时22分37秒] --
+edu/
+-- [568小时23分26秒] --
+6.8
+-- [569小时24分15秒] --
+28/,
+-- [570小时25分04秒] --
+ which
+provides
+-- [571小时25分53秒] --
+ poin
+-- [572小时26分42秒] --
+ters
+-- [573小时27分31秒] --
+ to
+-- [574小时28分20秒] --
+ on-l
+-- [575小时29分09秒] --
+ine 
+-- [576小时29分58秒] --
+res
+-- [577小时30分47秒] --
+ourc
+-- [578小时31分36秒] --
+es 
+-- [579小时32分25秒] --
+for 
+-- [580小时33分14秒] --
+v6.
+
+-- [582小时34分53秒] --
+The 
+-- [583小时35分42秒] --
+fol
+-- [584小时36分31秒] --
+lowi
+-- [585小时37分20秒] --
+ng 
+-- [586小时38分09秒] --
+peop
+-- [587小时38分58秒] --
+le h
+-- [588小时39分47秒] --
+ave
+-- [589小时40分36秒] --
+ ma
+-- [590小时41分25秒] --
+de c
+-- [591小时42分14秒] --
+ont
+-- [592小时43分03秒] --
+ribu
+-- [593小时43分52秒] --
+tio
+-- [594小时44分41秒] --
+ns:
+-- [595小时45分31秒] --
+ Russ Co
+-- [596小时46分20秒] --
+x (con
+-- [597小时47分09秒] --
+te
+-- [598小时47分58秒] --
+xt switc
+-- [599小时48分48秒] --
+hing,
+locking), Cliff Frey (M
+-- [600小时49分37秒] --
+P), Xi
+-- [601小时50分26秒] --
+ao Yu (MP), Nic
+-- [602小时51分15秒] --
+kola
+-- [603小时52分05秒] --
+i Zeldovic
+-- [604小时52分54秒] --
+h, a
+-- [605小时53分43秒] --
+nd 
+-- [606小时54分32秒] --
+Au
+-- [607小时55分22秒] --
+st
+-- [608小时56分11秒] --
+in
+C
+-- [609小时57分00秒] --
+le
+-- [610小时57分49秒] --
+ment
+-- [611小时58分39秒] --
+s.
+
+-- [612小时59分28秒] --
+W
+-- [614小时0分17秒] --
+e are
+-- [615小时1分06秒] --
+ als
+-- [616小时1分56秒] --
+o g
+-- [617小时2分45秒] --
+ra
+-- [618小时3分34秒] --
+t
+-- [619小时4分24秒] --
+eful
+-- [620小时5分13秒] --
+ for
+-- [621小时6分02秒] --
+ t
+-- [622小时6分51秒] --
+he bug
+-- [623小时7分41秒] --
+ rep
+-- [624小时8分30秒] --
+ort
+-- [625小时9分19秒] --
+s and 
+-- [626小时10分08秒] --
+patc
+-- [627小时10分58秒] --
+he
+-- [628小时11分47秒] --
+s co
+-- [629小时12分36秒] --
+ntr
+-- [630小时13分25秒] --
+ibute
+-- [631小时14分15秒] --
+d by
+
+-- [632小时15分04秒] --
+Sila
+-- [633小时15分53秒] --
+s Bo
+-- [634小时16分42秒] --
+yd-Wic
+-- [635小时17分32秒] --
+ki
+-- [636小时18分21秒] --
+zer,
+-- [637小时19分10秒] --
+ A
+-- [638小时19分59秒] --
+nton
+-- [639小时20分49秒] --
+ B
+-- [640小时21分38秒] --
+urtse
+-- [641小时22分27秒] --
+v,
+-- [642小时23分16秒] --
+ Dan C
+-- [643小时24分06秒] --
+ross,
+-- [644小时24分55秒] --
+ Cody
+-- [645小时25分44秒] --
+ C
+-- [646小时26分33秒] --
+utler
+-- [647小时27分23秒] --
+, M
+-- [648小时28分12秒] --
+ik
+-- [649小时29分01秒] --
+e CA
+-- [650小时29分51秒] --
+T,
+
+-- [651小时30分40秒] --
+Te
+-- [652小时31分29秒] --
+j C
+-- [653小时32分18秒] --
+hajed, A
+-- [654小时33分08秒] --
+sam
+-- [655小时33分57秒] --
+i Do
+-- [656小时34分46秒] --
+i, e
+-- [657小时35分35秒] --
+yalz8
+-- [658小时36分25秒] --
+00, , 
+-- [659小时37分14秒] --
+Nel
+-- [660小时38分03秒] --
+son El
+-- [661小时38分52秒] --
+hage,
+-- [662小时39分42秒] --
+ Saar
+-- [663小时40分31秒] --
+ Etti
+-- [664小时41分20秒] --
+nge
+-- [665小时42分09秒] --
+r, A
+-- [666小时42分59秒] --
+lic
+-- [667小时43分48秒] --
+e
+
+-- [668小时44分37秒] --
+Fer
+-- [669小时45分26秒] --
+razz
+-- [670小时46分16秒] --
+i,
+-- [671小时47分05秒] --
+ Nat
+-- [672小时47分54秒] --
+hani
+-- [673小时48分44秒] --
+el
+-- [674小时49分33秒] --
+ F
+-- [675小时50分22秒] --
+ilar
+-- [676小时51分11秒] --
+do, 
+-- [677小时52分01秒] --
+Pet
+-- [678小时52分50秒] --
+er Fro
+-- [679小时53分39秒] --
+ehl
+-- [680小时54分28秒] --
+ich,
+-- [681小时55分18秒] --
+ Ya
+-- [682小时56分07秒] --
+kir 
+-- [683小时56分56秒] --
+Go
+-- [684小时57分45秒] --
+aron
+-- [685小时58分35秒] --
+,Sh
+-- [686小时59分24秒] --
+ivam
+
+-- [688小时0分13秒] --
+H
+-- [689小时1分02秒] --
+anda
+-- [690小时1分52秒] --
+, 
+-- [691小时2分41秒] --
+Brya
+-- [692小时3分30秒] --
+n Henr
+-- [693小时4分20秒] --
+y, ja
+-- [694小时5分09秒] --
+iche
+-- [695小时5分58秒] --
+nhen
+-- [696小时6分47秒] --
+gj
+-- [697小时7分37秒] --
+ie,
+-- [698小时8分26秒] --
+ Jim
+-- [699小时9分15秒] --
+ Hua
+-- [700小时10分04秒] --
+ng, 
+-- [701小时10分54秒] --
+Ale
+-- [702小时11分43秒] --
+xan
+-- [703小时12分32秒] --
+der
+-- [704小时13分21秒] --
+ Kap
+-- [705小时14分11秒] --
+shu
+-- [706小时15分00秒] --
+k,
+
+-- [707小时15分49秒] --
+An
+-- [708小时16分38秒] --
+ders 
+-- [709小时17分28秒] --
+Kas
+-- [710小时18分17秒] --
+eorg, k
+-- [711小时19分06秒] --
+ehao
+-- [712小时19分56秒] --
+95, Wol
+-- [713小时20分45秒] --
+fgan
+-- [714小时21分34秒] --
+g Kell
+-- [715小时22分23秒] --
+er, Jo
+-- [716小时23分13秒] --
+nat
+-- [717小时24分02秒] --
+han
+-- [718小时24分51秒] --
+ Kimm
+-- [719小时25分40秒] --
+itt
+-- [720小时26分30秒] --
+, Edd
+-- [721小时27分19秒] --
+ie
+Kohler, Austin 
+-- [722小时28分08秒] --
+Liew, I
+-- [723小时28分57秒] --
+mbar 
+-- [724小时29分47秒] --
+Mari
+-- [725小时30分36秒] --
+nes
+-- [726小时31分25秒] --
+cu, 
+-- [727小时32分14秒] --
+Yando
+-- [728小时33分04秒] --
+ng
+-- [729小时33分53秒] --
+ Ma
+-- [730小时34分42秒] --
+o, Matan
+-- [731小时35分32秒] --
+ Shab
+-- [732小时36分21秒] --
+ta
+-- [733小时37分10秒] --
+y,
+
+-- [734小时37分59秒] --
+Hito
+-- [735小时38分49秒] --
+shi Mi
+-- [736小时39分38秒] --
+tak
+-- [737小时40分27秒] --
+e,
+-- [738小时41分16秒] --
+ Ca
+-- [739小时42分06秒] --
+rmi 
+-- [740小时42分55秒] --
+Mer
+-- [741小时43分44秒] --
+imovi
+-- [742小时44分33秒] --
+ch, Mar
+-- [743小时45分23秒] --
+k M
+-- [744小时46分12秒] --
+orrisse
+-- [745小时47分01秒] --
+y, m
+-- [746小时47分51秒] --
+tas
+-- [747小时48分40秒] --
+m, J
+-- [748小时49分29秒] --
+oel
+
+-- [750小时51分08秒] --
+Nider
+-- [751小时51分57秒] --
+,
+Gre
+-- [752小时52分46秒] --
+g 
+-- [753小时53分35秒] --
+Pric
+-- [754小时54分25秒] --
+e, A
+-- [755小时55分14秒] --
+ya
+-- [756小时56分03秒] --
+n Sh
+-- [757小时56分52秒] --
+af
+-- [758小时57分42秒] --
+qat,
+-- [759小时58分31秒] --
+ Eld
+-- [760小时59分20秒] --
+ar 
+-- [762小时0分10秒] --
+Seha
+-- [763小时0分59秒] --
+ye
+-- [764小时1分48秒] --
+k, Y
+-- [765小时2分37秒] --
+on
+-- [766小时3分27秒] --
+gming Shen, Fumi
+-- [767小时4分16秒] --
+ya
+
+-- [768小时5分05秒] --
+Shig
+-- [769小时5分54秒] --
+emitsu,
+
+-- [771小时7分33秒] --
+T
+-- [772小时8分22秒] --
+akahiro,
+-- [773小时9分12秒] --
+ Cam 
+-- [774小时10分01秒] --
+Tenn
+-- [775小时10分50秒] --
+y, ty
+-- [776小时11分39秒] --
+fkd
+-- [777小时12分29秒] --
+a, 
+-- [778小时13分18秒] --
+Rafae
+-- [779小时14分07秒] --
+l Ub
+-- [780小时14分56秒] --
+al,
+-- [781小时15分46秒] --
+ Wa
+-- [782小时16分35秒] --
+rre
+-- [783小时17分24秒] --
+n To
+-- [784小时18分13秒] --
+ome
+-- [785小时19分03秒] --
+y,
+S
+-- [786小时19分52秒] --
+teph
+-- [787小时20分41秒] --
+en Tu
+-- [788小时21分31秒] --
+, Pa
+-- [789小时22分20秒] --
+blo
+-- [790小时23分09秒] --
+ Vent
+-- [791小时23分58秒] --
+ura, 
+-- [792小时24分48秒] --
+Xi W
+-- [793小时25分37秒] --
+an
+-- [794小时26分26秒] --
+g, K
+-- [795小时27分15秒] --
+e
+-- [796小时28分05秒] --
+iichi 
+-- [797小时28分54秒] --
+Watana
+-- [798小时29分43秒] --
+be, 
+-- [799小时30分33秒] --
+Nic
+-- [800小时31分22秒] --
+ola
+-- [801小时32分11秒] --
+s
+
+-- [802小时33分00秒] --
+Wolovic
+-- [803小时33分50秒] --
+k, wx
+-- [804小时34分39秒] --
+dao
+-- [805小时35分28秒] --
+, Gr
+-- [806小时36分17秒] --
+an
+-- [807小时37分07秒] --
+t Wu, 
+-- [808小时37分56秒] --
+Ji
+-- [809小时38分45秒] --
+ndon
+-- [810小时39分35秒] --
+g Zh
+-- [811小时40分24秒] --
+ang,
+-- [812小时41分13秒] --
+ I
+-- [813小时42分02秒] --
+cen
+-- [814小时42分52秒] --
+owy
+-- [815小时43分41秒] --
+ Zhe
+-- [816小时44分30秒] --
+ng
+-- [817小时45分19秒] --
+, and 
+-- [818小时46分09秒] --
+Zou
+-- [819小时46分58秒] --
+ Chan
+-- [820小时47分47秒] --
+g
+W
+-- [821小时48分37秒] --
+ei.
+
+-- [822小时49分26秒] --
+T
+-- [823小时50分15秒] --
+he c
+-- [824小时51分04秒] --
+ode
+
+-- [826小时52分43秒] --
+in t
+-- [827小时53分32秒] --
+he fi
+-- [828小时54分21秒] --
+le
+-- [829小时55分11秒] --
+s th
+-- [830小时56分00秒] --
+at co
+-- [831小时56分49秒] --
+nst
+-- [832小时57分39秒] --
+itute 
+-- [833小时58分28秒] --
+xv6
+-- [834小时59分17秒] --
+ is
+C
+-- [836小时0分06秒] --
+opy
+-- [837小时0分56秒] --
+righ
+-- [838小时1分45秒] --
+t 2
+-- [839小时2分34秒] --
+006-
+-- [840小时3分23秒] --
+2020 
+-- [841小时4分13秒] --
+Fran
+-- [842小时5分02秒] --
+s Kaa
+-- [843小时5分51秒] --
+shoek
+-- [844小时6分41秒] --
+, Ro
+-- [845小时7分30秒] --
+be
+-- [846小时8分19秒] --
+rt M
+-- [847小时9分08秒] --
+orr
+-- [848小时9分58秒] --
+is, 
+-- [849小时10分47秒] --
+an
+-- [850小时11分36秒] --
+d 
+-- [851小时12分25秒] --
+Russ Cox
+-- [852小时13分15秒] --
+.
+
+E
+-- [853小时14分04秒] --
+RROR R
+-- [854小时14分53秒] --
+EPO
+-- [855小时15分43秒] --
+RTS
+
+-- [856小时16分32秒] --
+Pl
+-- [857小时17分21秒] --
+eas
+-- [858小时18分10秒] --
+e se
+-- [859小时19分00秒] --
+nd e
+-- [860小时19分49秒] --
+rr
+-- [861小时20分38秒] --
+ors
+-- [862小时21分28秒] --
+ and
+-- [863小时22分17秒] --
+ su
+-- [864小时23分06秒] --
+gg
+-- [865小时23分55秒] --
+es
+-- [866小时24分45秒] --
+tions 
+-- [867小时25分34秒] --
+to
+-- [868小时26分23秒] --
+ Frans
+-- [869小时27分12秒] --
+ K
+-- [870小时28分02秒] --
+aa
+-- [871小时28分51秒] --
+shoek 
+-- [872小时29分40秒] --
+and
+-- [873小时30分30秒] --
+ R
+-- [874小时31分19秒] --
+ober
+-- [875小时32分08秒] --
+t 
+-- [876小时32分57秒] --
+Morri
+-- [877小时33分47秒] --
+s
+(k
+-- [878小时34分36秒] --
+aash
+-- [879小时35分25秒] --
+oek,r
+-- [880小时36分14秒] --
+tm@mi
+-- [881小时37分04秒] --
+t.ed
+-- [882小时37分53秒] --
+u).
+-- [883小时38分42秒] --
+ The
+-- [884小时39分32秒] --
+ mai
+-- [885小时40分21秒] --
+n p
+-- [886小时41分10秒] --
+urpo
+-- [887小时41分59秒] --
+se
+-- [888小时42分49秒] --
+ of x
+-- [889小时43分38秒] --
+v6 
+-- [890小时44分27秒] --
+is 
+-- [891小时45分17秒] --
+as 
+-- [892小时46分06秒] --
+a te
+-- [893小时46分55秒] --
+ac
+-- [894小时47分44秒] --
+hing
+o
+-- [895小时48分34秒] --
+per
+-- [896小时49分23秒] --
+atin
+-- [897小时50分12秒] --
+g s
+-- [898小时51分01秒] --
+yste
+-- [899小时51分51秒] --
+m
+-- [900小时52分40秒] --
+ fo
+-- [901小时53分29秒] --
+r MIT
+-- [902小时54分19秒] --
+'s 6
+-- [903小时55分08秒] --
+.S08
+-- [904小时55分57秒] --
+1, 
+-- [905小时56分46秒] --
+so we
+-- [906小时57分36秒] --
+ are
+-- [907小时58分25秒] --
+ more
+-- [908小时59分14秒] --
+ inte
+-- [910小时0分04秒] --
+res
+-- [911小时0分53秒] --
+ted 
+-- [912小时1分42秒] --
+in
+si
+-- [913小时2分31秒] --
+mpl
+-- [914小时3分21秒] --
+ific
+-- [915小时4分10秒] --
+at
+-- [916小时4分59秒] --
+ions an
+-- [917小时5分49秒] --
+d c
+-- [918小时6分38秒] --
+l
+-- [919小时7分27秒] --
+arifications than new features.
+
+BUILDING AND RUNNING XV6
+
+You will need a RISC-V "newlib" tool chain from
+https://github.com/riscv/riscv-gnu-toolchain, and qemu compiled for
+riscv64-softmmu. Once they are installed, and in your shell
+search path, yo
+-- [920小时8分16秒] --
+u can run "m
+-- [921小时9分06秒] --
+ake qemu"
+-- [922小时9分55秒] --
+.
+
+-- [924小时11分34秒] --
+-
+-- [925小时12分24秒] --
+>
+-- [926小时13分13秒] --
+ / $ 
+-- [927小时15分13秒] --
+
+-- [928小时17分12秒] --
+
+-- [929小时25分43秒] --
+l
+-- [930小时34分14秒] --
+s
+
+-- [931小时42分45秒] --
+e
+-- [932小时51分16秒] --
+xec 
+-- [933小时59分47秒] --
+
+-- [935小时8分17秒] --
+l
+-- [936小时16分48秒] --
+s
+-- [937小时25分19秒] --
+ f
+-- [938小时33分50秒] --
+a
+-- [939小时42分21秒] --
+i
+-- [940小时50分52秒] --
+l
+-- [941小时59分23秒] --
+e
+-- [943小时7分53秒] --
+d
+
+-- [944小时16分24秒] --
+->
+-- [945小时24分55秒] --
+ / $ 
+-- [946小时33分28秒] --
+l
+-- [947小时42分01秒] --
+s
+
+-- [951小时7分40秒] --
+b
+-- [952小时16分13秒] --
+i
+-- [953小时24分46秒] --
+n
+
+-- [988小时49分51秒] --
+D
+-- [989小时58分24秒] --
+I
+-- [991小时6分57秒] --
+R
+
+-- [994小时32分36秒] --
+0
+
+-- [997小时58分15秒] --
+R
+-- [999小时6分48秒] --
+E
+-- [1000小时15分21秒] --
+A
+-- [1001小时23分54秒] --
+D
+-- [1002小时32分27秒] --
+M
+-- [1003小时41分01秒] --
+E
+
+-- [1035小时40分26秒] --
+F
+-- [1036小时48分59秒] --
+I
+-- [1037小时57分32秒] --
+L
+-- [1039小时6分05秒] --
+E
+
+-- [1041小时23分12秒] --
+2
+-- [1042小时31分45秒] --
+0
+-- [1043小时40分18秒] --
+5
+-- [1044小时48分51秒] --
+9
+
+-- [1048小时14分30秒] --
+c
+-- [1049小时23分03秒] --
+a
+-- [1050小时31分36秒] --
+t
+
+-- [1085小时56分41秒] --
+F
+-- [1087小时5分14秒] --
+I
+-- [1088小时13分47秒] --
+L
+-- [1089小时22分20秒] --
+E
+
+-- [1091小时39分26秒] --
+2
+-- [1092小时47分59秒] --
+2
+-- [1093小时56分33秒] --
+1
+-- [1095小时5分06秒] --
+6
+-- [1096小时13分39秒] --
+0
+
+-- [1099小时39分18秒] --
+e
+-- [1100小时47分51秒] --
+c
+-- [1101小时56分24秒] --
+h
+-- [1103小时4分57秒] --
+o
+
+-- [1137小时21分29秒] --
+F
+-- [1138小时30分02秒] --
+I
+-- [1139小时38分35秒] --
+L
+-- [1140小时47分08秒] --
+E
+
+-- [1143小时4分14秒] --
+2
+-- [1144小时12分48秒] --
+1
+-- [1145小时21分21秒] --
+0
+-- [1146小时29分54秒] --
+8
+-- [1147小时38分27秒] --
+8
+
+-- [1148小时47分00秒] --
+f
+-- [1149小时55分33秒] --
+i
+-- [1151小时4分06秒] --
+n
+-- [1152小时12分39秒] --
+d
+
+-- [1181小时54分59秒] --
+    FILE	23288
+grep                             FILE	24680
+init           
+
+-- [1203小时37分27秒] --
+F
+-- [1204小时46分00秒] --
+I
+-- [1205小时54分33秒] --
+L
+-- [1207小时3分06秒] --
+E
+
+-- [1209小时20分13秒] --
+2
+-- [1210小时28分46秒] --
+1
+-- [1211小时37分19秒] --
+7
+-- [1212小时45分52秒] --
+6
+-- [1213小时54分25秒] --
+0
+
+-- [1217小时20分04秒] --
+k
+-- [1218小时28分37秒] --
+i
+-- [1219小时37分10秒] --
+l
+-- [1220小时45分43秒] --
+l
+
+-- [1255小时2分16秒] --
+F
+-- [1256小时10分49秒] --
+I
+-- [1257小时19分22秒] --
+L
+-- [1258小时27分55秒] --
+E
+
+-- [1260小时45分01秒] --
+2
+-- [1261小时53分34秒] --
+0
+-- [1263小时2分07秒] --
+9
+-- [1264小时10分40秒] --
+8
+-- [1265小时19分13秒] --
+4
+
+-- [1267小时36分19秒] --
+l
+-- [1268小时44分53秒] --
+s
+
+-- [1305小时18分31秒] --
+F
+-- [1306小时27分04秒] --
+I
+-- [1307小时35分37秒] --
+L
+-- [1308小时44分10秒] --
+E
+
+-- [1311小时1分16秒] --
+2
+-- [1312小时9分50秒] --
+3
+-- [1313小时18分23秒] --
+3
+-- [1314小时26分56秒] --
+0
+-- [1315小时35分29秒] --
+4
+
+-- [1319小时1分08秒] --
+m
+-- [1320小时9分41秒] --
+k
+-- [1321小时18分14秒] --
+d
+-- [1322小时26分47秒] --
+i
+-- [1323小时35分20秒] --
+r
+
+-- [1356小时43分20秒] --
+F
+-- [1357小时51分53秒] --
+I
+-- [1359小时0分26秒] --
+L
+-- [1360小时8分59秒] --
+E
+
+-- [1362小时26分05秒] --
+2
+-- [1363小时34分38秒] --
+1
+-- [1364小时43分11秒] --
+0
+-- [1365小时51分44秒] --
+7
+-- [1367小时0分17秒] --
+2
+
+-- [1369小时17分24秒] --
+m
+-- [1370小时25分57秒] --
+v
+
+-- [1405小时51分02秒] --
+F
+-- [1406小时59分35秒] --
+I
+-- [1408小时8分08秒] --
+L
+-- [1409小时16分42秒] --
+E
+
+-- [1411小时33分48秒] --
+2
+-- [1412小时42分21秒] --
+2
+-- [1413小时50分54秒] --
+8
+-- [1414小时59分27秒] --
+7
+-- [1416小时8分00秒] --
+2
+
+-- [1418小时25分06秒] --
+r
+-- [1419小时33分39秒] --
+m
+
+-- [1456小时7分18秒] --
+F
+-- [1457小时15分51秒] --
+I
+-- [1458小时24分24秒] --
+L
+-- [1459小时32分57秒] --
+E
+
+-- [1461小时50分04秒] --
+2
+-- [1462小时58分37秒] --
+1
+-- [1464小时7分10秒] --
+0
+-- [1465小时15分43秒] --
+7
+-- [1466小时24分16秒] --
+2
+
+-- [1469小时49分55秒] --
+s
+-- [1470小时58分28秒] --
+h
+
+-- [1507小时32分07秒] --
+F
+-- [1508小时40分40秒] --
+I
+-- [1509小时49分13秒] --
+L
+-- [1510小时57分46秒] --
+E
+
+-- [1513小时14分53秒] --
+4
+-- [1514小时23分26秒] --
+3
+-- [1515小时31分59秒] --
+6
+-- [1516小时40分32秒] --
+9
+-- [1517小时49分05秒] --
+6
+
+-- [1521小时14分44秒] --
+s
+-- [1522小时23分17秒] --
+l
+-- [1523小时31分50秒] --
+e
+-- [1524小时40分23秒] --
+e
+-- [1525小时48分57秒] --
+p
+
+-- [1558小时56分56秒] --
+F
+-- [1560小时5分29秒] --
+I
+-- [1561小时14分02秒] --
+L
+-- [1562小时22分36秒] --
+E
+
+-- [1564小时39分42秒] --
+2
+-- [1565小时48分15秒] --
+1
+-- [1566小时56分48秒] --
+0
+-- [1568小时5分21秒] --
+56
+
+-- [1571小时31分00秒] --
+s
+-- [1572小时39分33秒] --
+t
+-- [1573小时48分07秒] --
+r
+-- [1574小时56分40秒] --
+a
+-- [1576小时5分13秒] --
+c
+-- [1577小时13分46秒] --
+e
+
+-- [1609小时13分12秒] --
+F
+-- [1610小时21分46秒] --
+I
+-- [1611小时30分19秒] --
+L
+-- [1612小时38分52秒] --
+E
+
+-- [1614小时55分58秒] --
+2
+-- [1616小时4分31秒] --
+1
+-- [1617小时13分04秒] --
+4
+-- [1618小时21分37秒] --
+2
+-- [1619小时30分10秒] --
+4
+
+-- [1622小时55分50秒] --
+t
+-- [1624小时4分23秒] --
+e
+-- [1625小时12分56秒] --
+s
+-- [1626小时21分29秒] --
+t
+
+-- [1660小时38分02秒] --
+FILE	20
+-- [1661小时46分35秒] --
+92
+-- [1662小时55分08秒] --
+0
+
+-- [1664小时3分41秒] --
+u
+-- [1665小时12分14秒] --
+s
+-- [1666小时20分47秒] --
+e
+-- [1667小时29分21秒] --
+r
+-- [1668小时37分54秒] --
+t
+-- [1669小时46分27秒] --
+e
+-- [1670小时55分00秒] --
+s
+-- [1672小时3分33秒] --
+t
+-- [1673小时12分06秒] --
+s
+
+-- [1682小时20分31秒] --
+                 FILE	117496
+wc                               FILE	22936
+xargs                            FILE	22752
+
+-- [1683小时29分04秒] --
+-
+-- [1684小时37分37秒] --
+>
+
+-- [1686小时54分43秒] --
+/
+
+-- [1689小时11分49秒] --
+$
+
+-- [1691小时29分15秒] --
+
+-- [1692小时39分12秒] --
+l
+-- [1693小时49分09秒] --
+s /bin
+
+-- [1696小时9分07秒] --
+e
+-- [1697小时19分05秒] --
+xec 
+-- [1698小时29分04秒] --
+l
+-- [1699小时39分03秒] --
+s
+
+-- [1701小时59分00秒] --
+f
+-- [1703小时8分59秒] --
+ai
+-- [1704小时18分58秒] --
+l
+-- [1705小时28分56秒] --
+e
+-- [1706小时38分55秒] --
+d
+
+-- [1708小时58分52秒] --
+-
+-- [1710小时8分51秒] --
+> /
+
+-- [1712小时28分48秒] --
+$ 
+-- [1713小时38分50秒] --
+ls /bi
+-- [1714小时48分52秒] --
+n
+
+-- [1717小时8分58秒] --
+.
+
+-- [1755小时40分33秒] --
+D
+-- [1756小时50分36秒] --
+I
+-- [1758小时0分39秒] --
+R
+
+-- [1760小时20分45秒] --
+0
+
+-- [1762小时40分51秒] --
+.
+-- [1763小时50分54秒] --
+.
+
+-- [1801小时12分26秒] --
+D
+-- [1802小时22分29秒] --
+I
+-- [1803小时32分32秒] --
+R
+
+-- [1807小时2分41秒] --
+0
+
+-- [1810小时32分49秒] --
+c
+-- [1811小时42分52秒] --
+a
+-- [1812小时52分55秒] --
+t
+
+-- [1849小时4分25秒] --
+F
+-- [1850小时14分28秒] --
+I
+-- [1851小时24分31秒] --
+L
+-- [1852小时34分34秒] --
+E
+
+-- [1854小时54分39秒] --
+22160
+echo                             FILE	21088
+find                             FILE	23288
+
+-- [1856小时4分42秒] --
+g
+-- [1857小时14分45秒] --
+r
+-- [1858小时24分48秒] --
+e
+-- [1859小时34分51秒] --
+p
+
+-- [1894小时36分18秒] --
+F
+-- [1895小时46分21秒] --
+I
+-- [1896小时56分24秒] --
+L
+-- [1898小时6分27秒] --
+E
+
+-- [1900小时26分33秒] --
+2
+-- [1901小时36分36秒] --
+4
+-- [1902小时46分38秒] --
+6
+-- [1903小时56分41秒] --
+8
+-- [1905小时6分44秒] --
+0
+
+-- [1908小时36分53秒] --
+i
+-- [1909小时46分56秒] --
+n
+-- [1910小时56分59秒] --
+i
+-- [1912小时7分02秒] --
+t
+
+-- [1947小时8分29秒] --
+F
+-- [1948小时18分32秒] --
+I
+-- [1949小时28分35秒] --
+L
+-- [1950小时38分37秒] --
+E
+
+-- [1952小时58分43秒] --
+2
+-- [1954小时8分46秒] --
+1
+-- [1955小时18分49秒] --
+7
+-- [1956小时28分52秒] --
+6
+-- [1957小时38分55秒] --
+0
+
+-- [1961小时9分04秒] --
+k
+-- [1962小时19分07秒] --
+i
+-- [1963小时29分09秒] --
+l
+-- [1964小时39分12秒] --
+l
+
+-- [1999小时40分40秒] --
+F
+-- [2000小时50分42秒] --
+IL
+-- [2002小时0分45秒] --
+E
+
+-- [2004小时20分51秒] --
+2
+-- [2005小时30分54秒] --
+0
+-- [2006小时40分57秒] --
+9
+-- [2007小时51分00秒] --
+8
+-- [2009小时1分03秒] --
+4
+
+-- [2012小时31分12秒] --
+l
+-- [2013小时41分14秒] --
+s
+
+-- [2051小时2分48秒] --
+F
+-- [2052小时12分50秒] --
+I
+-- [2053小时22分53秒] --
+L
+-- [2054小时32分56秒] --
+E
+
+-- [2056小时53分02秒] --
+2
+-- [2058小时3分05秒] --
+3
+-- [2059小时13分08秒] --
+3
+-- [2060小时23分11秒] --
+0
+-- [2061小时33分14秒] --
+4
+
+-- [2065小时3分22秒] --
+m
+-- [2066小时13分25秒] --
+k
+-- [2067小时23分28秒] --
+dir    
+
+-- [2086小时4分15秒] --
+F
+-- [2087小时14分18秒] --
+I
+-- [2088小时24分21秒] --
+L
+-- [2089小时34分24秒] --
+E
+
+-- [2091小时54分29秒] --
+2
+-- [2093小时4分32秒] --
+1
+-- [2094小时14分35秒] --
+0
+-- [2095小时24分38秒] --
+7
+-- [2096小时34分41秒] --
+2
+
+-- [2100小时4分50秒] --
+m
+-- [2101小时14分53秒] --
+v
+
+-- [2138小时36分26秒] --
+F
+-- [2139小时46分29秒] --
+I
+-- [2140小时56分32秒] --
+L
+-- [2142小时6分35秒] --
+E
+
+-- [2144小时26分41秒] --
+2
+-- [2145小时36分44秒] --
+2
+-- [2146小时46分46秒] --
+8
+-- [2147小时56分49秒] --
+7
+-- [2149小时6分52秒] --
+2
+
+-- [2152小时37分01秒] --
+r
+-- [2153小时47分04秒] --
+m 
+
+-- [2188小时48分31秒] --
+F
+-- [2189小时58分34秒] --
+I
+-- [2191小时8分37秒] --
+L
+-- [2192小时18分40秒] --
+E
+
+-- [2194小时38分46秒] --
+2
+-- [2195小时48分49秒] --
+1
+-- [2196小时58分52秒] --
+0
+-- [2198小时8分55秒] --
+7
+-- [2199小时18分58秒] --
+2
+
+-- [2202小时49分07秒] --
+s
+-- [2203小时59分09秒] --
+h
+
+-- [2233小时10分22秒] --
+  FILE	436
+-- [2234小时20分25秒] --
+9
+-- [2235小时30分28秒] --
+6
+
+-- [2237小时50分34秒] --
+s
+-- [2239小时0分37秒] --
+l
+-- [2240小时10分40秒] --
+e
+-- [2241小时20分43秒] --
+e
+-- [2242小时30分46秒] --
+p
+
+-- [2276小时22分11秒] --
+F
+-- [2277小时32分14秒] --
+I
+-- [2278小时42分16秒] --
+L
+-- [2279小时52分19秒] --
+E
+
+-- [2282小时12分25秒] --
+2
+-- [2283小时22分28秒] --
+1
+-- [2284小时32分31秒] --
+0
+-- [2285小时42分34秒] --
+5
+-- [2286小时52分37秒] --
+6
+
+-- [2290小时22分46秒] --
+s
+-- [2291小时32分49秒] --
+t
+-- [2292小时42分52秒] --
+r
+-- [2293小时52分55秒] --
+a
+-- [2295小时2分57秒] --
+c
+-- [2296小时13分00秒] --
+e
+
+-- [2328小时54分22秒] --
+F
+-- [2330小时4分25秒] --
+I
+-- [2331小时14分28秒] --
+L
+-- [2332小时24分31秒] --
+E
+
+-- [2334小时44分37秒] --
+2
+-- [2335小时54分40秒] --
+1
+-- [2337小时4分43秒] --
+4
+-- [2338小时14分46秒] --
+2
+-- [2339小时24分49秒] --
+4
+
+-- [2342小时54分57秒] --
+t
+-- [2344小时5分00秒] --
+e
+-- [2345小时15分03秒] --
+s
+-- [2346小时25分06秒] --
+t
+
+-- [2381小时26分34秒] --
+F
+-- [2382小时36分37秒] --
+I
+-- [2383小时46分40秒] --
+L
+-- [2384小时56分43秒] --
+E
+
+-- [2387小时16分49秒] --
+2
+-- [2388小时26分52秒] --
+0
+-- [2389小时36分55秒] --
+9
+-- [2390小时46分58秒] --
+2
+-- [2391小时57分00秒] --
+0
+
+-- [2395小时27分09秒] --
+u
+-- [2396小时37分12秒] --
+s
+-- [2397小时47分15秒] --
+e
+-- [2398小时57分18秒] --
+r
+-- [2400小时7分21秒] --
+t
+-- [2401小时17分24秒] --
+e
+-- [2402小时27分27秒] --
+s
+-- [2403小时37分30秒] --
+t
+-- [2404小时47分33秒] --
+s
+
+-- [2433小时58分46秒] --
+F
+-- [2435小时8分49秒] --
+I
+-- [2436小时18分52秒] --
+L
+-- [2437小时28分55秒] --
+E
+
+-- [2439小时49分01秒] --
+117496
+wc     
+
+-- [2465小时30分05秒] --
+F
+-- [2466小时40分08秒] --
+I
+-- [2467小时50分11秒] --
+L
+-- [2469小时0分14秒] --
+E
+-- [2470小时10分17秒] --
+	22
+-- [2471小时20分20秒] --
+936
+
+-- [2472小时30分23秒] --
+xa
+-- [2473小时40分26秒] --
+rg
+-- [2474小时50分29秒] --
+s 
+
+-- [2506小时21分48秒] --
+F
+-- [2507小时31分51秒] --
+I
+-- [2508小时41分54秒] --
+L
+-- [2509小时51分57秒] --
+E
+
+-- [2512小时12分03秒] --
+2
+-- [2513小时22分06秒] --
+2
+-- [2514小时32分08秒] --
+7
+-- [2515小时42分11秒] --
+5
+-- [2516小时52分14秒] --
+2
+
+-- [2520小时22分23秒] --
+-
+-- [2521小时32分26秒] --
+> / $ 
+-- [2522小时42分42秒] --
+c
+-- [2523小时52分57秒] --
+at RE
+-- [2525小时3分12秒] --
+ADME
+
+-- [2527小时23分45秒] --
+x
+-- [2528小时34分01秒] --
+v6 is
+-- [2529小时44分18秒] --
+ a re-implementation of Dennis Ritchi
+-- [2530小时54分34秒] --
+e's and K
+-- [2532小时4分50秒] --
+en Thompson's Unix
+Version 6 (v6).  xv6 loosely follows the structure and style of v6,
+but is implemented for a modern RISC-V multiprocessor using ANSI C.
+
+ACKNOWLEDGMENTS
+
+xv6 is inspired by John Lions's Commentary on UNIX 6th Edition (Peer
+to Peer Communications; ISBN: 1-57398-013-7; 1st edition (June 14,
+2000)). See also https://pdos.csail.mit.edu/6.828/, which
+provides pointers to on-line resources for v6.
+
+The following people have made contributions: Russ Cox (context switching,
+
+-- [2534小时25分23秒] --
+l
+-- [2535小时35分39秒] --
+o
+-- [2536小时45分55秒] --
+c
+-- [2537小时56分11秒] --
+k
+-- [2539小时6分28秒] --
+i
+-- [2540小时16分44秒] --
+n
+-- [2541小时27分00秒] --
+g
+-- [2542小时37分16秒] --
+)
+-- [2543小时47分33秒] --
+,
+
+-- [2546小时8分05秒] --
+C
+-- [2547小时18分22秒] --
+l
+-- [2548小时28分38秒] --
+i
+-- [2549小时38分54秒] --
+f
+-- [2550小时49分10秒] --
+f
+
+-- [2553小时9分43秒] --
+F
+-- [2554小时19分59秒] --
+r
+-- [2555小时30分15秒] --
+e
+-- [2556小时40分32秒] --
+y
+
+-- [2559小时1分04秒] --
+(
+-- [2560小时11分20秒] --
+M
+-- [2561小时21分37秒] --
+P)
+-- [2562小时31分53秒] --
+,
+-- [2563小时42分09秒] --
+ X
+-- [2564小时52分26秒] --
+iao
+-- [2566小时2分42秒] --
+ Yu
+
+-- [2568小时23分14秒] --
+(MP)
+-- [2569小时33分31秒] --
+, N
+-- [2570小时43分47秒] --
+ick
+-- [2571小时54分03秒] --
+ola
+-- [2573小时4分19秒] --
+i Z
+-- [2574小时14分36秒] --
+eld
+-- [2575小时24分52秒] --
+ov
+-- [2576小时35分08秒] --
+ich
+-- [2577小时45分24秒] --
+, a
+-- [2578小时55分41秒] --
+nd
+-- [2580小时5分57秒] --
+ Austin
+
+-- [2581小时16分13秒] --
+Cle
+-- [2582小时26分30秒] --
+men
+-- [2583小时36分46秒] --
+ts.
+
+-- [2585小时57分18秒] --
+We
+-- [2587小时7分35秒] --
+ a
+-- [2588小时17分51秒] --
+re 
+-- [2589小时28分07秒] --
+als
+-- [2590小时38分23秒] --
+o g
+-- [2591小时48分40秒] --
+rateful 
+-- [2592小时58分56秒] --
+for 
+-- [2594小时9分12秒] --
+the
+-- [2595小时19分29秒] --
+ b
+-- [2596小时29分45秒] --
+ug 
+-- [2597小时40分01秒] --
+report
+-- [2598小时50分17秒] --
+s an
+-- [2600小时0分34秒] --
+d p
+-- [2601小时10分50秒] --
+atches
+-- [2602小时21分06秒] --
+ co
+-- [2603小时31分22秒] --
+ntr
+-- [2604小时41分39秒] --
+ib
+-- [2605小时51分55秒] --
+ute
+-- [2607小时2分11秒] --
+d b
+-- [2608小时12分27秒] --
+y
+
+-- [2609小时22分44秒] --
+Si
+-- [2610小时33分00秒] --
+las
+-- [2611小时43分16秒] --
+ Bo
+-- [2612小时53分33秒] --
+yd-
+-- [2614小时3分49秒] --
+Wi
+-- [2615小时14分05秒] --
+cki
+-- [2616小时24分21秒] --
+zer
+-- [2617小时34分38秒] --
+, A
+-- [2618小时44分54秒] --
+nt
+-- [2619小时55分10秒] --
+on 
+-- [2621小时5分26秒] --
+Bu
+-- [2622小时15分43秒] --
+rts
+-- [2623小时25分59秒] --
+ev,
+-- [2624小时36分15秒] --
+ Da
+-- [2625小时46分32秒] --
+n Cros
+-- [2626小时56分48秒] --
+s, 
+-- [2628小时7分04秒] --
+Cod
+-- [2629小时17分20秒] --
+y C
+-- [2630小时27分37秒] --
+utl
+-- [2631小时37分53秒] --
+er
+-- [2632小时48分09秒] --
+, M
+-- [2633小时58分25秒] --
+ike
+-- [2635小时8分42秒] --
+ CA
+-- [2636小时18分58秒] --
+T,
+
+-- [2637小时29分14秒] --
+T
+-- [2638小时39分30秒] --
+ej 
+-- [2639小时49分47秒] --
+Ch
+-- [2641小时0分03秒] --
+aje
+-- [2642小时10分19秒] --
+d, 
+-- [2643小时20分36秒] --
+As
+-- [2644小时30分52秒] --
+ami
+-- [2645小时41分08秒] --
+ Do
+-- [2646小时51分24秒] --
+i, 
+-- [2648小时1分41秒] --
+ey
+-- [2649小时11分57秒] --
+a
+-- [2650小时22分13秒] --
+l
+-- [2651小时32分29秒] --
+z80
+-- [2652小时42分46秒] --
+0
+-- [2653小时53分02秒] --
+, ,
+-- [2655小时3分18秒] --
+ N
+-- [2656小时13分35秒] --
+els
+-- [2657小时23分51秒] --
+on 
+-- [2658小时34分07秒] --
+Elhage,
+-- [2659小时44分23秒] --
+ Sa
+-- [2660小时54分40秒] --
+ar 
+-- [2662小时4分56秒] --
+Ett
+-- [2663小时15分12秒] --
+in
+-- [2664小时25分28秒] --
+ger
+-- [2665小时35分45秒] --
+, A
+-- [2666小时46分01秒] --
+lic
+-- [2667小时56分17秒] --
+e
+
+-- [2669小时6分34秒] --
+Fe
+-- [2670小时16分50秒] --
+rraz
+-- [2671小时27分06秒] --
+zi,
+-- [2672小时37分22秒] --
+ Na
+-- [2673小时47分39秒] --
+than
+-- [2674小时57分55秒] --
+iel
+-- [2676小时8分11秒] --
+ Fi
+-- [2677小时18分27秒] --
+lar
+-- [2678小时28分44秒] --
+do
+-- [2679小时39分00秒] --
+, Peter 
+-- [2680小时49分16秒] --
+Fro
+-- [2681小时59分33秒] --
+ehl
+-- [2683小时9分49秒] --
+ich
+-- [2684小时20分05秒] --
+, 
+-- [2685小时30分21秒] --
+Yak
+-- [2686小时40分38秒] --
+ir
+-- [2687小时50分54秒] --
+ Go
+-- [2689小时1分10秒] --
+ar
+-- [2690小时11分26秒] --
+on,
+-- [2691小时21分43秒] --
+Sh
+-- [2692小时31分59秒] --
+iva
+-- [2693小时42分15秒] --
+m
+
+-- [2694小时52分32秒] --
+Ha
+-- [2696小时2分48秒] --
+nda
+-- [2697小时13分04秒] --
+, 
+-- [2698小时23分20秒] --
+Bry
+-- [2699小时33分37秒] --
+an
+-- [2700小时43分53秒] --
+ He
+-- [2701小时54分09秒] --
+n
+-- [2703小时4分25秒] --
+ry
+-- [2704小时14分42秒] --
+, j
+-- [2705小时24分58秒] --
+aic
+-- [2706小时35分14秒] --
+he
+-- [2707小时45分31秒] --
+nhe
+-- [2708小时55分47秒] --
+ngj
+-- [2710小时6分03秒] --
+ie, Jim Huan
+-- [2711小时16分19秒] --
+g, 
+-- [2712小时26分36秒] --
+Ale
+-- [2713小时36分52秒] --
+xan
+-- [2714小时47分08秒] --
+der
+-- [2715小时57分24秒] --
+ Ka
+-- [2717小时7分41秒] --
+ps
+-- [2718小时17分57秒] --
+huk
+-- [2719小时28分13秒] --
+,
+
+-- [2720小时38分30秒] --
+An
+-- [2721小时48分46秒] --
+der
+-- [2722小时59分02秒] --
+s
+-- [2724小时9分18秒] --
+ Ka
+-- [2725小时19分35秒] --
+seo
+-- [2726小时29分51秒] --
+rg,
+-- [2727小时40分07秒] --
+ ke
+-- [2728小时50分23秒] --
+ha
+-- [2730小时0分40秒] --
+o95
+-- [2731小时10分56秒] --
+, W
+-- [2732小时21分12秒] --
+ol
+-- [2733小时31分29秒] --
+fga
+-- [2734小时41分45秒] --
+ng 
+-- [2735小时52分01秒] --
+Kel
+-- [2737小时2分17秒] --
+ler
+-- [2738小时12分34秒] --
+, J
+-- [2739小时22分50秒] --
+ona
+-- [2740小时33分06秒] --
+th
+-- [2741小时43分23秒] --
+an 
+-- [2742小时53分39秒] --
+Kim
+-- [2744小时3分55秒] --
+mit
+-- [2745小时14分11秒] --
+t
+-- [2746小时24分28秒] --
+,
+
+-- [2748小时45分00秒] --
+E
+-- [2749小时55分16秒] --
+ddi
+-- [2751小时5分33秒] --
+e
+
+-- [2752小时15分49秒] --
+Koh
+-- [2753小时26分05秒] --
+le
+-- [2754小时36分22秒] --
+r, 
+-- [2755小时46分38秒] --
+Au
+-- [2756小时56分54秒] --
+sti
+-- [2758小时7分10秒] --
+n 
+-- [2759小时17分27秒] --
+Lie
+-- [2760小时27分43秒] --
+w,
+-- [2761小时37分59秒] --
+ Im
+-- [2762小时48分15秒] --
+ba
+-- [2763小时58分32秒] --
+r M
+-- [2765小时8分48秒] --
+ar
+-- [2766小时19分04秒] --
+ine
+-- [2767小时29分21秒] --
+sc
+-- [2768小时39分37秒] --
+u, 
+-- [2769小时49分53秒] --
+Yan
+-- [2771小时0分09秒] --
+do
+-- [2772小时10分26秒] --
+ng 
+-- [2773小时20分42秒] --
+Ma
+-- [2774小时30分58秒] --
+o, Matan S
+-- [2775小时41分15秒] --
+habt
+-- [2776小时51分31秒] --
+ay
+-- [2778小时1分47秒] --
+,
+
+-- [2779小时12分03秒] --
+Hit
+-- [2780小时22分20秒] --
+os
+-- [2781小时32分36秒] --
+hi
+-- [2782小时42分52秒] --
+ Mi
+-- [2783小时53分08秒] --
+tak
+-- [2785小时3分25秒] --
+e,
+-- [2786小时13分41秒] --
+ Ca
+-- [2787小时23分57秒] --
+rmi
+-- [2788小时34分14秒] --
+ Me
+-- [2789小时44分30秒] --
+rim
+-- [2790小时54分46秒] --
+ov
+-- [2792小时5分02秒] --
+ich
+-- [2793小时15分19秒] --
+, 
+-- [2794小时25分35秒] --
+Mar
+-- [2795小时35分51秒] --
+k 
+-- [2796小时46分08秒] --
+Morrisse
+-- [2797小时56分24秒] --
+y, 
+-- [2799小时6分40秒] --
+mt
+-- [2800小时16分56秒] --
+asm
+-- [2801小时27分13秒] --
+, 
+-- [2802小时37分29秒] --
+Joe
+-- [2803小时47分45秒] --
+l 
+-- [2804小时58分01秒] --
+Nid
+-- [2806小时8分18秒] --
+er
+-- [2807小时18分34秒] --
+,
+
+-- [2808小时28分50秒] --
+Gr
+-- [2809小时39分07秒] --
+eg 
+-- [2810小时49分23秒] --
+Pr
+-- [2811小时59分39秒] --
+ice
+-- [2813小时9分55秒] --
+, 
+-- [2814小时20分12秒] --
+Aya
+-- [2815小时30分28秒] --
+n 
+-- [2816小时40分44秒] --
+Sha
+-- [2817小时51分01秒] --
+fq
+-- [2819小时1分17秒] --
+at,
+-- [2820小时11分33秒] --
+ E
+-- [2821小时21分49秒] --
+ldar Seh
+-- [2822小时32分06秒] --
+ayek, Yongming Shen, Fum
+-- [2823小时42分22秒] --
+iya
+
+-- [2824小时52分38秒] --
+Shi
+-- [2826小时2分54秒] --
+gem
+-- [2827小时13分11秒] --
+its
+-- [2828小时23分27秒] --
+u, Takah
+-- [2829小时33分43秒] --
+iro
+-- [2830小时44分00秒] --
+, C
+-- [2831小时54分16秒] --
+am
+-- [2833小时4分32秒] --
+ Te
+-- [2834小时14分48秒] --
+nn
+-- [2835小时25分05秒] --
+y, 
+-- [2836小时35分21秒] --
+tyfk
+-- [2837小时45分37秒] --
+da,
+-- [2838小时55分54秒] --
+ Ra
+-- [2840小时6分10秒] --
+fa
+-- [2841小时16分26秒] --
+el
+-- [2842小时26分42秒] --
+ Uba
+-- [2843小时36分59秒] --
+l, Wa
+-- [2844小时47分15秒] --
+rren 
+-- [2845小时57分31秒] --
+Toome
+-- [2847小时7分48秒] --
+y,
+
+-- [2848小时18分04秒] --
+Ste
+-- [2849小时28分20秒] --
+ph
+-- [2850小时38分36秒] --
+en
+-- [2851小时48分53秒] --
+ Tu
+-- [2852小时59分09秒] --
+, P
+-- [2854小时9分25秒] --
+ab
+-- [2855小时19分41秒] --
+lo 
+-- [2856小时29分58秒] --
+Ven
+-- [2857小时40分14秒] --
+tur
+-- [2858小时50分30秒] --
+a, X
+-- [2860小时0分47秒] --
+i Wa
+-- [2861小时11分03秒] --
+ng,
+-- [2862小时21分19秒] --
+ Kei
+-- [2863小时31分35秒] --
+ich
+-- [2864小时41分52秒] --
+i Wa
+-- [2865小时52分08秒] --
+tan
+-- [2867小时2分24秒] --
+abe
+-- [2868小时12分41秒] --
+, N
+-- [2869小时22分57秒] --
+icol
+-- [2870小时33分13秒] --
+as
+
+-- [2871小时43分29秒] --
+Wol
+-- [2872小时53分46秒] --
+ovi
+-- [2874小时4分02秒] --
+ck,
+-- [2875小时14分18秒] --
+ wxd
+-- [2876小时24分35秒] --
+ao, 
+-- [2877小时34分51秒] --
+Gra
+-- [2878小时45分07秒] --
+nt 
+-- [2879小时55分23秒] --
+Wu,
+-- [2881小时5分40秒] --
+ Ji
+-- [2882小时15分56秒] --
+ndon
+-- [2883小时26分12秒] --
+g Z
+-- [2884小时36分29秒] --
+han
+-- [2885小时46分45秒] --
+g, Ic
+-- [2886小时57分01秒] --
+eno
+-- [2888小时7分17秒] --
+wy Z
+-- [2889小时17分34秒] --
+hen
+-- [2890小时27分50秒] --
+g, a
+-- [2891小时38分06秒] --
+nd Z
+-- [2892小时48分23秒] --
+ou 
+-- [2893小时58分39秒] --
+Chan
+-- [2895小时8分55秒] --
+g
+
+-- [2896小时19分11秒] --
+Wei
+-- [2897小时29分28秒] --
+.
+
+-- [2898小时39分44秒] --
+Th
+-- [2899小时50分00秒] --
+e code i
+-- [2901小时0分16秒] --
+n the 
+-- [2902小时10分33秒] --
+file
+-- [2903小时20分49秒] --
+s t
+-- [2904小时31分05秒] --
+ha
+-- [2905小时41分22秒] --
+t constitute xv6 is
+Copyright 2006-2020 Frans Kaashoek,
+-- [2906小时51分38秒] --
+ R
+-- [2908小时1分54秒] --
+obert M
+-- [2909小时12分10秒] --
+o
+-- [2910小时22分27秒] --
+rris,
+
+-- [2912小时42分59秒] --
+a
+-- [2913小时53分16秒] --
+n
+-- [2915小时3分32秒] --
+d
+
+-- [2917小时24分04秒] --
+Russ
+
+-- [2919小时44分37秒] --
+Cox
+-- [2920小时54分53秒] --
+.
+
+-- [2922小时5分10秒] --
+ER
+-- [2923小时15分26秒] --
+RO
+-- [2924小时25分42秒] --
+R R
+-- [2925小时35分58秒] --
+EP
+-- [2926小时46分15秒] --
+ORT
+-- [2927小时56分31秒] --
+S
+
+-- [2930小时17分04秒] --
+Ple
+-- [2931小时27分20秒] --
+as
+-- [2932小时37分36秒] --
+e s
+-- [2933小时47分52秒] --
+en
+-- [2934小时58分09秒] --
+d e
+-- [2936小时8分25秒] --
+rro
+-- [2937小时18分41秒] --
+rs
+-- [2938小时28分58秒] --
+ an
+-- [2939小时39分14秒] --
+d 
+-- [2940小时49分30秒] --
+sug
+-- [2941小时59分46秒] --
+ge
+-- [2943小时10分03秒] --
+stions 
+-- [2944小时20分19秒] --
+to F
+-- [2945小时30分35秒] --
+ra
+-- [2946小时40分52秒] --
+ns
+-- [2947小时51分08秒] --
+ Ka
+-- [2949小时1分24秒] --
+as
+-- [2950小时11分40秒] --
+hoe
+-- [2951小时21分57秒] --
+k a
+-- [2952小时32分13秒] --
+n
+-- [2953小时42分29秒] --
+d Robe
+-- [2954小时52分46秒] --
+rt 
+-- [2956小时3分02秒] --
+Mo
+-- [2957小时13分18秒] --
+rri
+-- [2958小时23分34秒] --
+s
+
+-- [2959小时33分51秒] --
+(k
+-- [2960小时44分07秒] --
+aas
+-- [2961小时54分23秒] --
+ho
+-- [2963小时4分40秒] --
+ek,
+-- [2964小时14分56秒] --
+rtm
+-- [2965小时25分12秒] --
+@mit.edu
+-- [2966小时35分28秒] --
+). The 
+-- [2967小时45分45秒] --
+main pur
+-- [2968小时56分01秒] --
+p
+-- [2970小时6分17秒] --
+ose o
+-- [2971小时16分34秒] --
+f
+-- [2972小时26分50秒] --
+ xv6 i
+-- [2973小时37分06秒] --
+s
+
+-- [2975小时57分39秒] --
+a
+-- [2977小时7分55秒] --
+s 
+-- [2978小时18分11秒] --
+a t
+-- [2979小时28分28秒] --
+ea
+-- [2980小时38分44秒] --
+chi
+-- [2981小时49分00秒] --
+ng
+
+-- [2982小时59分17秒] --
+o
+-- [2984小时9分33秒] --
+per
+-- [2985小时19分49秒] --
+ati
+-- [2986小时30分05秒] --
+ng
+-- [2987小时40分22秒] --
+ sy
+-- [2988小时50分38秒] --
+st
+-- [2990小时0分54秒] --
+em fo
+-- [2991小时11分11秒] --
+r M
+-- [2992小时21分27秒] --
+IT
+-- [2993小时31分43秒] --
+'s 
+-- [2994小时41分59秒] --
+6.
+-- [2995小时52分16秒] --
+S08
+-- [2997小时2分32秒] --
+1,
+-- [2998小时12分48秒] --
+ so
+-- [2999小时23分05秒] --
+ w
+-- [3000小时33分21秒] --
+e 
+-- [3001小时43分37秒] --
+are
+-- [3002小时53分53秒] --
+ m
+-- [3004小时4分10秒] --
+ore
+-- [3005小时14分26秒] --
+ i
+-- [3006小时24分42秒] --
+nte
+-- [3007小时34分59秒] --
+re
+-- [3008小时45分15秒] --
+ste
+-- [3009小时55分31秒] --
+d 
+-- [3011小时5分47秒] --
+in
+
+-- [3012小时16分04秒] --
+si
+-- [3013小时26分20秒] --
+mpl
+-- [3014小时36分36秒] --
+if
+-- [3015小时46分53秒] --
+ica
+-- [3016小时57分09秒] --
+ti
+-- [3018小时7分25秒] --
+ons
+-- [3019小时17分41秒] --
+ an
+-- [3020小时27分58秒] --
+d c
+-- [3021小时38分14秒] --
+lar
+-- [3022小时48分30秒] --
+ifi
+-- [3023小时58分47秒] --
+cat
+-- [3025小时9分03秒] --
+ion
+-- [3026小时19分19秒] --
+s t
+-- [3027小时29分36秒] --
+han 
+-- [3028小时39分52秒] --
+new
+-- [3029小时50分08秒] --
+ fe
+-- [3031小时0分24秒] --
+atur
+-- [3032小时10分41秒] --
+es.
+
+-- [3034小时31分13秒] --
+BUI
+-- [3035小时41分30秒] --
+LDIN
+-- [3036小时51分46秒] --
+G A
+-- [3038小时2分02秒] --
+ND
+-- [3039小时12分18秒] --
+ RU
+-- [3040小时22分35秒] --
+NNI
+-- [3041小时32分51秒] --
+NG X
+-- [3042小时43分07秒] --
+V6
+
+-- [3043小时53分24秒] --
+Y
+-- [3045小时3分40秒] --
+ou w
+-- [3046小时13分56秒] --
+ill
+-- [3047小时24分12秒] --
+ nee
+-- [3048小时34分29秒] --
+d a
+-- [3049小时44分45秒] --
+ RIS
+-- [3050小时55分01秒] --
+C-V
+-- [3052小时5分18秒] --
+ "n
+-- [3053小时15分34秒] --
+ewli
+-- [3054小时25分50秒] --
+b" 
+-- [3055小时36分06秒] --
+too
+-- [3056小时46分23秒] --
+l c
+-- [3057小时56分39秒] --
+hain
+-- [3059小时6分55秒] --
+ fr
+-- [3060小时17分12秒] --
+om
+
+-- [3061小时27分28秒] --
+htt
+-- [3062小时37分44秒] --
+ps:
+-- [3063小时48分01秒] --
+//g
+-- [3064小时58分17秒] --
+ithu
+-- [3066小时8分33秒] --
+b.c
+-- [3067小时18分49秒] --
+om/r
+-- [3068小时29分06秒] --
+isc
+-- [3069小时39分22秒] --
+v/r
+-- [3070小时49分38秒] --
+isc
+-- [3071小时59分55秒] --
+v-g
+-- [3073小时10分11秒] --
+nu-t
+-- [3074小时20分27秒] --
+ool
+-- [3075小时30分43秒] --
+cha
+-- [3076小时41分00秒] --
+in, 
+-- [3077小时51分16秒] --
+and
+-- [3079小时1分32秒] --
+ qe
+-- [3080小时11分49秒] --
+mu 
+-- [3081小时22分05秒] --
+com
+-- [3082小时32分21秒] --
+pil
+-- [3083小时42分38秒] --
+ed f
+-- [3084小时52分54秒] --
+or
+
+-- [3086小时3分10秒] --
+ri
+-- [3087小时13分26秒] --
+scv6
+-- [3088小时23分43秒] --
+4-sof
+-- [3089小时33分59秒] --
+tm
+-- [3090小时44分15秒] --
+mu
+-- [3091小时54分32秒] --
+. O
+-- [3093小时4分48秒] --
+nc
+-- [3094小时15分04秒] --
+e t
+-- [3095小时25分20秒] --
+hey
+-- [3096小时35分37秒] --
+ ar
+-- [3097小时45分53秒] --
+e i
+-- [3098小时56分09秒] --
+nst
+-- [3100小时6分26秒] --
+all
+-- [3101小时16分42秒] --
+ed,
+-- [3102小时26分58秒] --
+ an
+-- [3103小时37分14秒] --
+d i
+-- [3104小时47分31秒] --
+n yo
+-- [3105小时57分47秒] --
+ur 
+-- [3107小时8分03秒] --
+she
+-- [3108小时18分20秒] --
+ll
+
+-- [3109小时28分36秒] --
+sea
+-- [3110小时38分52秒] --
+rch
+-- [3111小时49分09秒] --
+ pa
+-- [3112小时59分25秒] --
+th,
+-- [3114小时9分41秒] --
+ you
+-- [3115小时19分57秒] --
+ ca
+-- [3116小时30分14秒] --
+n r
+-- [3117小时40分30秒] --
+un 
+-- [3118小时50分46秒] --
+"ma
+-- [3120小时1分03秒] --
+k
+-- [3121小时11分19秒] --
+e
+
+-- [3123小时31分51秒] --
+q
+-- [3124小时42分08秒] --
+e
+-- [3125小时52分24秒] --
+m
+-- [3127小时2分40秒] --
+u
+-- [3128小时12分57秒] --
+"
+-- [3129小时23分13秒] --
+.
+
+-- [3132小时54分02秒] --
+-
+-- [3134小时4分18秒] --
+>
+
+-- [3136小时24分51秒] --
+/
+
+-- [3138小时45分23秒] --
+$
+
+-- [3141小时7分20秒] --
+QEMU: Terminated
+
+-- [3142小时19分01秒] --
+dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ 

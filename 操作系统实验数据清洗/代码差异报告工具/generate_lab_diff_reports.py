@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""批量生成 xv6 lab0--lab8 的学生源码差异 Markdown 报告。"""
+"""批量生成 xv6 lab1--lab8 的学生源码差异 Markdown 报告。"""
 
 from __future__ import annotations
 
@@ -11,7 +11,6 @@ import os
 import re
 import shutil
 import stat
-import sys
 import subprocess
 import tempfile
 from dataclasses import dataclass, field
@@ -22,19 +21,14 @@ from urllib.parse import quote
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 CLEANING_DIR = SCRIPT_DIR.parent
-sys.path.insert(0, str(CLEANING_DIR))
-from output_layout import DIFF_TOOL, mirror_path, write_text_pair, unlink_pair, ensure_layout
 DEFAULT_REFERENCE_ROOT = CLEANING_DIR.parent / "xv6-ai-labs-km-无答案"
 DEFAULT_SUBMISSIONS_ROOT = CLEANING_DIR / "操作系统实验数据记录"
 DEFAULT_CLEANED_ROOT = CLEANING_DIR / "操作系统实验数据记录-已清洗"
 
-# 基准仓库与清洗工具都覆盖 lab0--lab8；lab0 同样按“学生 labs/labN
-# 对比基准 labN”的规则纳入比较，而不是被排除在报告范围之外。
-LABS = tuple(f"lab{number}" for number in range(0, 9))
+LABS = tuple(f"lab{number}" for number in range(1, 9))
 OWNER_FILE = ".replay_term_qa.json"
-REPORT_FOLDER = DIFF_TOOL
-REPORT_NAME = "代码差异报告.md"
-SUMMARY_FOLDER = Path("汇总报告") / "代码差异报告汇总"
+REPORT_FOLDER = "代码差异报告"
+SUMMARY_FOLDER = "代码差异报告汇总"
 REPORT_MANIFEST = ".lab_diff_reports.json"
 REPORT_MANIFEST_VERSION = 1
 SOURCE_FOLDERS = frozenset({"kernel", "xv6-user", "linker"})
@@ -44,7 +38,7 @@ VCS_DIRECTORIES = frozenset({".git", ".hg", ".svn"})
 # xv6 的每个 lab Makefile 都通过 `perl xv6-user/usys.pl > xv6-user/usys.S`
 # 生成这个汇编文件；评分应比较其源生成器 usys.pl，而不是构建副产物。
 GENERATED_SOURCE_PATHS = frozenset({"xv6-user/usys.s"})
-REPORT_ARTIFACTS = frozenset({REPORT_NAME})
+REPORT_ARTIFACTS = frozenset(f"{lab}.md" for lab in LABS)
 GIT_EMPTY_PATH = "/dev/null"
 STUDENT_NAME_RE = re.compile(
     r"^(?P<student_id>\d+)-(?P<name>.+?)(?:-实验提交)?-"
@@ -180,7 +174,6 @@ def scan_students(submissions_root: Path, filters: list[str]) -> tuple[list[Stud
 
 def map_cleaned_students(students: list[Student], cleaned_root: Path) -> None:
     """依据现有清洗工具的归属文件，将原始提交精确对应到学生输出目录。"""
-    cleaned_root = cleaned_root / "按人分类"
     by_source = {source_identity(student.source): student for student in students}
     matches: dict[str, list[Path]] = {key: [] for key in by_source if key is not None}
     if not cleaned_root.is_dir():
@@ -437,12 +430,12 @@ def atomic_write(path: Path, text: str) -> None:
             temporary.unlink()
 
 
-def student_report_directory(student: Student, lab: str) -> Path:
+def student_report_directory(student: Student) -> Path:
     """Return the owned report directory only when it remains inside the student output."""
     if student.cleaned is None:
         raise ValueError("学生没有已清洗输出目录")
     cleaned = student.cleaned.resolve()
-    report_dir = student.cleaned / lab / REPORT_FOLDER
+    report_dir = student.cleaned / REPORT_FOLDER
     if is_link_like(report_dir):
         raise ValueError(f"拒绝使用符号链接报告目录：{report_dir}")
     if cleaned not in report_dir.resolve().parents:
@@ -503,37 +496,24 @@ def _declared_report_artifacts(report_dir: Path, manifest: object) -> set[str] |
     return declared
 
 
-def writable_student_report_directory(student: Student, lab: str) -> Path:
+def writable_student_report_directory(student: Student) -> Path:
     """Reject a foreign or malformed manifest before any report is replaced."""
-    report_dir = student_report_directory(student, lab)
-    directories = [report_dir]
-    mirrored = mirror_path(report_dir)
-    if mirrored is not None:
-        directories.append(mirrored)
-    for directory in directories:
-        manifest_path = directory / REPORT_MANIFEST
-        if is_link_like(directory) or is_link_like(manifest_path):
-            raise ValueError(f"报告目录或归属清单是符号链接：{manifest_path}")
-        existing = _read_report_manifest(manifest_path)
-        if manifest_path.exists() and not _report_manifest_owned_by(existing, student):
-            raise ValueError(f"报告目录已有其他来源或无效归属清单：{manifest_path}")
-        declared = _declared_report_artifacts(directory, existing)
-        if manifest_path.exists() and declared is None:
-            raise ValueError(f"报告目录的归属清单产物无效：{manifest_path}")
-
+    report_dir = student_report_directory(student)
+    manifest_path = report_dir / REPORT_MANIFEST
+    if is_link_like(manifest_path):
+        raise ValueError(f"报告目录的归属清单是符号链接：{manifest_path}")
+    existing = _read_report_manifest(manifest_path)
+    if manifest_path.exists() and not _report_manifest_owned_by(existing, student):
+        raise ValueError(f"报告目录已有其他来源或无效归属清单：{manifest_path}")
+    if manifest_path.exists() and _declared_report_artifacts(report_dir, existing) is None:
+        raise ValueError(f"报告目录的归属清单产物无效：{manifest_path}")
     return report_dir
 
 
 def writable_student_report_path(student: Student, lab: str) -> Path:
     """Return a report target without taking over an unregistered same-name file."""
-    report_dir = writable_student_report_directory(student, lab)
-    mirrored = mirror_path(report_dir)
-    if mirrored is not None:
-        mirror_target = mirrored / REPORT_NAME
-        declared = _declared_report_artifacts(mirrored, _read_report_manifest(mirrored / REPORT_MANIFEST))
-        if is_link_like(mirror_target) or (mirror_target.exists() and (not mirror_target.is_file() or REPORT_NAME not in (declared or set()))):
-            raise ValueError(f"报告路径已有未登记内容：{mirror_target}")
-    target = report_dir / REPORT_NAME
+    report_dir = writable_student_report_directory(student)
+    target = report_dir / f"{lab}.md"
     if is_link_like(target):
         raise ValueError(f"报告路径是符号链接：{target}")
     manifest = _read_report_manifest(report_dir / REPORT_MANIFEST)
@@ -549,8 +529,7 @@ def writable_student_report_path(student: Student, lab: str) -> Path:
 def update_student_report_manifest(student: Student, results: list[ReportResult],
                                    selected_labs: frozenset[str]) -> None:
     """Register current reports and remove stale reports only for selected labs."""
-    lab = results[0].lab
-    report_dir = writable_student_report_directory(student, lab)
+    report_dir = writable_student_report_directory(student)
     manifest_path = report_dir / REPORT_MANIFEST
     existing = _read_report_manifest(manifest_path)
     owned = _report_manifest_owned_by(existing, student)
@@ -561,7 +540,7 @@ def update_student_report_manifest(student: Student, results: list[ReportResult]
     if not any(result.report_path is not None or result.status == "跳过" for result in results):
         return
     for result in results:
-        artifact = REPORT_NAME
+        artifact = f"{result.lab}.md"
         if result.lab not in selected_labs:
             continue
         if result.report_path is not None:
@@ -576,13 +555,13 @@ def update_student_report_manifest(student: Student, results: list[ReportResult]
 
     previous_artifacts = declared_artifacts
     for name in previous_artifacts - artifacts:
-        if lab not in selected_labs:
+        if Path(name).stem not in selected_labs:
             continue
         target = _owned_report_artifact(report_dir, name)
         if target is not None and target.is_file():
-            unlink_pair(target)
+            target.unlink()
 
-    write_text_pair(manifest_path, json.dumps({
+    atomic_write(manifest_path, json.dumps({
         "tool": "generate_lab_diff_reports",
         "schema_version": REPORT_MANIFEST_VERSION,
         "source": str(student.source),
@@ -602,34 +581,41 @@ def orphaned_report_results(cleaned_root: Path, labs: tuple[str, ...], filters: 
     if not cleaned_root.is_dir() or is_link_like(cleaned_root):
         return by_lab
 
-    people_root = cleaned_root / "按人分类"
-    if not people_root.is_dir():
-        return by_lab
-    for directory in sorted(people_root.iterdir(), key=lambda path: path.name):
+    for directory in sorted(cleaned_root.iterdir(), key=lambda path: path.name):
         if not directory.is_dir() or is_link_like(directory):
             continue
-        for lab in labs:
-            report_dir = directory / lab / REPORT_FOLDER
-            manifest = _read_report_manifest(report_dir / REPORT_MANIFEST)
-            if not isinstance(manifest, dict) or manifest.get("tool") != "generate_lab_diff_reports":
-                continue
-            source = manifest.get("source")
-            source_key = source_identity(source)
-            if source_key is None or source_key in known_sources:
-                continue
-            student = parse_student_name(source_basename(source))
-            if student is None:
-                student = Student(Path(str(source)), "未知", directory.name, "未知", "未知")
+        report_dir = directory / REPORT_FOLDER
+        if not report_dir.is_dir() or is_link_like(report_dir):
+            continue
+        manifest_path = report_dir / REPORT_MANIFEST
+        manifest = _read_report_manifest(manifest_path)
+        if not isinstance(manifest, dict) or manifest.get("tool") != "generate_lab_diff_reports":
+            continue
+        source = manifest.get("source")
+        source_key = source_identity(source)
+        if source_key is None or source_key in known_sources:
+            continue
+        parsed = parse_student_name(source_basename(source))
+        if parsed is None:
+            student = Student(Path(str(source)), "未知", directory.name, "未知", "未知", directory)
+        else:
+            student = parsed
             student.source = Path(str(source))
             student.cleaned = directory
-            if not student_matches_filters(student, filters):
-                continue
-            artifacts = manifest.get("artifacts")
-            report_path = report_dir / REPORT_NAME
-            if isinstance(artifacts, list) and REPORT_NAME in artifacts and report_path.is_file():
-                by_lab[lab].append(ReportResult(student, lab, "失败",
-                    f"原始提交目录不存在或无法匹配；已保留旧个人报告：{report_path}"))
-
+        if not student_matches_filters(student, filters):
+            continue
+        artifacts = manifest.get("artifacts")
+        if not isinstance(artifacts, list):
+            continue
+        for lab in labs:
+            artifact = f"{lab}.md"
+            report_path = report_dir / artifact
+            if (artifact in artifacts and report_path.is_file()
+                    and not is_link_like(report_path)):
+                by_lab[lab].append(ReportResult(
+                    student, lab, "失败",
+                    f"原始提交目录不存在或无法匹配；已保留旧个人报告：{report_path}"
+                ))
     return by_lab
 
 
@@ -649,10 +635,7 @@ def render_summary(lab: str, summary_path: Path, results: list[ReportResult], sk
     for result in results:
         if result.report_path:
             link = report_link(summary_path, result.report_path)
-            outcome = f"[查看报告（按人分类）]({link})"
-            mirrored = mirror_path(result.report_path)
-            if mirrored is not None:
-                outcome += f" · [按Lab分类]({report_link(summary_path, mirrored)})"
+            outcome = f"[查看报告]({link})"
             if result.message:
                 outcome += "<br>" + markdown_text(result.message)
         else:
@@ -669,10 +652,10 @@ def render_summary(lab: str, summary_path: Path, results: list[ReportResult], sk
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="批量生成 xv6 lab0--lab8 源码差异 Markdown 报告")
+    parser = argparse.ArgumentParser(description="批量生成 xv6 lab1--lab8 源码差异 Markdown 报告")
     selection = parser.add_mutually_exclusive_group(required=True)
     selection.add_argument("--lab", action="append", choices=LABS, help="指定实验；可重复使用")
-    selection.add_argument("--all-labs", action="store_true", help="处理 lab0 至 lab8")
+    selection.add_argument("--all-labs", action="store_true", help="处理 lab1 至 lab8")
     parser.add_argument("--student", action="append", default=[], help="精确筛选学号或姓名；可重复使用")
     parser.add_argument("--reference-root", type=Path, default=DEFAULT_REFERENCE_ROOT)
     parser.add_argument("--submissions-root", type=Path, default=DEFAULT_SUBMISSIONS_ROOT)
@@ -708,8 +691,6 @@ def main(argv: list[str] | None = None) -> int:
         print(f"[失败] 未找到匹配 --student 的原始提交或已登记报告：{', '.join(args.student)}",
               file=os.sys.stderr)
         return 1
-    if not args.dry_run:
-        ensure_layout(cleaned_root)
     all_results: list[ReportResult] = []
     for lab in labs:
         lab_results = [compare_lab(student, lab, reference_root, args.strict_whitespace)
@@ -726,7 +707,7 @@ def main(argv: list[str] | None = None) -> int:
                 continue
             try:
                 report_path = writable_student_report_path(result.student, lab)
-                write_text_pair(report_path, render_student_report(result, reference_root, args.strict_whitespace))
+                atomic_write(report_path, render_student_report(result, reference_root, args.strict_whitespace))
                 result.report_path = report_path
             except (OSError, ValueError) as exc:
                 result.status = "失败"
@@ -741,25 +722,16 @@ def main(argv: list[str] | None = None) -> int:
                 target = student_results[0]
                 target.status = "部分失败" if target.status in {"成功", "部分失败"} else "失败"
                 target.message = f"更新个人报告清单失败：{exc}"
-        summary_path = cleaned_root / SUMMARY_FOLDER / f"代码差异报告汇总-{lab}.md"
+        summary_path = cleaned_root / SUMMARY_FOLDER / f"{lab}.md"
         try:
             atomic_write(summary_path, render_summary(
                 lab, summary_path, lab_results, skipped, args.strict_whitespace
             ))
-            legacy_summary = cleaned_root / "汇总报告" / summary_path.name
-            if (legacy_summary.is_file() and not is_link_like(legacy_summary)
-                    and legacy_summary.read_text(encoding="utf-8").startswith(f"# {lab} 源码差异报告汇总\n")):
-                legacy_summary.unlink()
         except (OSError, ValueError) as exc:
             print(f"[失败] 无法写入汇总报告 {summary_path}：{exc}", file=os.sys.stderr)
             return 1
         print(f"[完成] {lab}：{summary_path}")
 
-    if not args.dry_run:
-        log_path = cleaned_root / "运行日志" / f"代码差异报告工具-{datetime.now().strftime('%Y%m%d-%H%M%S-%f')}.log"
-        atomic_write(log_path, "\n".join(
-            f"{result.lab} {result.student.student_id}-{result.student.name} {result.status} {result.message}"
-            for result in all_results) + "\n")
     return 1 if any(result.status in {"失败", "部分失败"} for result in all_results) else 0
 
 

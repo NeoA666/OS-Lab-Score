@@ -13,7 +13,6 @@ __pycache__/
 .venv/
 venv/
 env/
-.env
 .coverage
 .coverage.*
 htmlcov/
@@ -25,6 +24,3 @@ Thumbs.db
 
 # Local Firecrawl research cache
 .firecrawl/
-
-# Local model credentials — never commit（本地密钥文件，禁止提交）
-操作系统实验数据清洗/AI人工贡献识别工具/*.local

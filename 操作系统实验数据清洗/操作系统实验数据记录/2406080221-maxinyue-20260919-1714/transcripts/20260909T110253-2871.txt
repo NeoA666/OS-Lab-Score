@@ -1,0 +1,725 @@
+==== labtracker 终端转录 ====
+录像: 20260909T110253-2871.out.gz   时长: 12分47秒   原始大小: 7022B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-P
+latform:~$ cd /home/ailab‑os/桌面/xv6‑ai‑labs‑km/lab0
+pwd
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ cd /home/ailab‑os/桌面/xv6‑ai‑labs‑km/lab0
+
+pwd 
+bash: cd: /home/ailab‑os/桌面/xv6‑ai‑labs‑km/lab0: 没有那个文件或目录
+/home/ailab-os
+
+-- [1分09秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ cd ~/桌面
+ls
+
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ cd ~/�
+��面
+ls
+20101200-zhaoxia-实验提交-20260903-1759.tar.gz         xv6-ai-labs-km
+2010
+1200-zha
+oxia-实验提交-20260903-1759.tar.gz.sha256  xv6-k210-原版参考
+提交实验.desktop
+
+-- [1分31秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面$ cd ~/桌面cd ~/桌面
+
+-- [2分04秒] --
+ailab-os@ailab-os-VMware-Vir
+t
+ual-Platform:~/桌面$ cd /home/ailab‑os/桌面/xv6‑ai‑labs‑km/lab0
+
+cd /home/ailab‑os/桌面/xv6‑
+ai‑labs‑km/lab0
+
+bash: cd: /home/ailab‑os/桌面/xv6‑ai‑labs‑km/lab0: 没有那个文件或目录
+
+-- [5分01秒] --
+a
+ilab-os@ail
+ab-os-VMware-Virtual-Platform:~/桌面$ cd xv6-ai-labs-kmxv6-ai-labs-km 
+
+-- [5分25秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km$ cd lab 0
+
+-- [5分35秒] --
+ail
+ab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ make clrun
+
+OpenSBI v1.3
+   ____                    _____ ____ _____
+  / __ \                  / ____|  _ \_   _|
+
+| 
+|
+
+|
+ |
+_
+ _
+_
+
+_
+_
+_
+ _
+
+_
+_
+
+|
+
+(
+_
+_
+_
+
+|
+
+|
+_) 
+|| |
+
+ |
+ |
+  | 
+| '
+_ \ / 
+_ \
+ '
+_ \ 
+\___
+ \|
+  _
+ < | |
+
+ | |__| | |_) |  __/ | | |____) | |_) || |_
+  \____/| .__/ \___|_| |_|_____/|___/_____|
+        | |
+        |_|
+
+Platform Name             : riscv-virtio,qemu
+Platform Features         : medeleg
+Platform HART Count       : 2
+Platform IPI Device       : aclint-mswi
+Platform Timer Device     : aclint-mtimer @ 100
+00000Hz
+Platform Console Device   : uart8250
+Platform HSM Device       : -
+--
+Platform PMU Device       : ---
+Platform Reboot Device    : sifive_test
+Platform Shutdown Device  : sifive_te
+st
+Platform Susp
+e
+nd
+ Dev
+ic
+e  
+ : ---
+Platform CPPC Device      : ---
+Firmwa
+re Base             : 0x80000000
+Firmware 
+Size            
+
+: 332 KB
+Firmware RW Offset        : 0x40000
+Firmware RW Size          : 76 KB
+Firmware Heap Offset      : 0x4a000
+Firmware Heap Size        : 36 KB (total), 2 KB (reserved), 9 KB (used), 24 KB (free)
+Firmware Scratch Size     : 4096 B (total), 760 B (used), 3336 B (free)
+Runtime SBI Version       
+: 1.0
+
+D
+om
+a
+i
+n
+0
+
+N
+a
+me
+
+             : root
+Domain0 Boot HART         : 1
+Domain0 HARTs             : 0*,1*
+Domain0 Region00          : 0x00000
+0000200000
+0-0x000000000200ffff M: (I,R,W) S/U: ()
+Domain0 Region01          : 0x0000000080040000-0x000000008005ffff 
+M
+:
+ (R,W) 
+S/
+U:
+ (
+)
+
+Do
+main0 Region02          : 0x
+0
+0
+00000
+080000000-0x000000008003ffff M: (R,X) S/U: ()
+Domain0 Region03          : 0x0000000000000000-0xff
+f
+fffffffffffff M:
+
+(R
+,W,
+X) S/
+U: 
+(R,W,
+X)
+Domain0 Next Address      : 0x0
+000000080200000
+Domain0 Next Arg1         : 0x0000000087e00000
+Domain0 Next Mode
+
+     : S-mode
+Domain0 SysReset         
+ : yes
+Domain0 SysSuspend        : yes
+
+Boot HAR
+T
+ ID   
+
+       : 1
+Boot HART Domain     
+     : root
+Boot HART Priv Version    : v1.12
+Boot HART Base ISA        : rv64imafdch
+Boot HART ISA Extensions  : time,sstc
+Boot HART PMP Count       : 16
+Boot HART PMP Granularity : 4
+Boot HART PMP Address Bits: 54
+Boot HA
+RT MHPM Count      : 16
+Boot HART MIDELEG         : 0x000000
+0
+00
+0
+0
+0
+1
+66
+6
+
+B
+oo
+t H
+A
+R
+T
+
+M
+EDELEG  
+
+: 0x
+00
+0
+0
+0
+0
+0
+000
+f
+0
+b
+5
+0
+9
+
+ (
+`-
+. 
+
+    (
+`
+-. 
+
+          .-
+'
+)
+       ('-.    _   .-')
+ ( OO ).        _(OO  )_                        .(  OO)    _(  OO)  ( '.
+( OO )_
+
+(
+_/.  \_)-. ,--(_/   ,. \  ,--.    
+            (_)---\_)  (,------.  ,--.   ,--.) ,--. ,--
+.  
+ \  `.'  /  \   \   /(__/ /  .'       .-')     '  .-.  '   |  .---'  |   `.'   |  |  | |  |   
+  \     /\   \   \ /   / .  / -.    _(  OO)   ,|  | |  |   |  |      |         |  |  | | .-')
+   \   \ |    \   '   /, | .-.  '  (,------. (_|  | |  |  (|  '--.   |  |'.'|  |  |  |_|( OO )
+  .'    \_) 
+   \   
+  /__)' \  |  |  '------' 
+  |  | |  |   |  .--'   |  |   |  |  |  | | `-' /
+ /  .'.  \      \   /    \  `'  /             
+ '
+  '-'  '-. |  `---.  |  |   |  | ('  '-'(_
+.-'
+'--'   '--'      `-'      `----'                `-----'--' `------'  `--'   `--'   `-----'
+hart 1 enter main()...
+
+ke
+rnel_end: 0x0000000080228000, ph
+ystop: 0x
+0000000080
+600000
+kinit
+kv
+m
+i
+n
+i
+t
+
+k
+vm
+i
+n
+i
+t
+h
+a
+r
+t
+
+t
+imerini
+t
+
+t
+r
+apinithart
+pro
+c
+i
+n
+i
+t
+
+p
+l
+i
+c
+i
+n
+i
+t
+
+p
+l
+i
+c
+i
+n
+i
+t
+h
+a
+r
+t
+
+v
+i
+r
+t
+i
+o
+_
+d
+i
+s
+k
+_
+i
+n
+i
+t
+
+b
+i
+n
+i
+t
+
+f
+i
+lei
+n
+i
+t
+
+userini
+t
+
+h
+a
+r
+t
+ 1
+
+i
+n
+i
+t
+ d
+o
+n
+e
+
+[
+f
+a
+t
+3
+2
+_
+i
+n
+i
+t]
+
+e
+n
+t
+er!
+
+[
+F
+A
+T
+3
+2
+
+i
+n
+i
+t
+]
+b
+y
+t
+s_
+p
+e
+r
+_
+s
+e
+c
+:
+
+5
+1
+2
+
+[
+F
+A
+T
+3
+2 init]root_clu
+s
+:
+
+2
+
+[
+F
+A
+T32 init]s
+e
+c
+_p
+er_
+-- [6分08秒] --
+c
+l
+us:
+ 1
+
+[
+F
+AT32 init]fat_
+c
+n
+t
+:
+
+2
+
+[
+F
+A
+T
+3
+2
+
+i
+n
+i
+t]
+f
+a
+t
+_
+s
+z
+:
+
+4
+0
+3
+3
+
+[
+F
+A
+T
+3
+2
+
+i
+n
+i
+t
+]
+f
+i
+r
+s
+t
+_
+d
+a
+t
+a
+_
+sec: 8098
+init: starting sh
+-> / $ ls
+bin                   
+
+D
+IR
+
+	0
+
+R
+E
+A
+D
+M
+E
+
+F
+I
+L
+E
+
+2
+0
+59
+
+ca
+t
+
+FI
+L
+E	
+2
+1
+9
+2
+8
+
+e
+c
+h
+o                  
+
+F
+I
+LE
+
+2
+0
+8
+72
+
+f
+i
+n
+d
+
+                FILE	23080
+
+g
+re
+p
+
+FI
+L
+E
+
+24
+4
+3
+2
+
+in
+i
+t 
+
+F
+IL
+E
+
+2
+1
+52
+8
+
+k
+i
+ll
+
+ F
+I
+L
+E	
+2
+0
+7
+6
+0
+
+ls
+
+FI
+L
+E
+
+23080
+
+m
+k
+d
+i
+r 
+
+F
+I
+LE
+
+2
+0
+85
+6
+mv            
+
+F
+I
+L
+E
+
+22
+6
+4
+0
+
+r
+m
+
+F
+I
+L
+E	
+2
+0
+8
+4
+0
+
+s
+h
+
+ F
+I
+L
+E
+
+4
+3
+3
+44
+
+sleep   
+
+F
+I
+L
+E	
+2
+0
+83
+2
+
+s
+t
+r
+a
+c
+e
+
+FI
+L
+E
+	2
+1
+200
+test    
+
+FI
+L
+E
+
+20
+7
+1
+2
+
+u
+se
+r
+t
+e
+s
+t
+s 
+
+-- [12分46秒] --
+          FILE
+
+1
+17
+01
+6
+wc 
+                              FILE	22712
+xargs                            FILE	22520
+-> / $ init: starting sh
+-> / $ 

@@ -1,0 +1,36 @@
+==== labtracker 终端转录 ====
+录像: 20260912T181846-2652.out.gz   时长: 7分13秒   原始大小: 874B
+==================================================
+-- [开始] --
+Script s
+tarted on 2026-09-12 18:18:46+08:00 [COMMAND="bash" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+
+-- [1分20秒] --
+ai
+-- [1分33秒] --
+l
+a
+b
+-
+o
+-- [1分37秒] --
+s@ai
+l
+a
+-- [1分46秒] --
+b-os-VMware
+-Virtual-Platform:~$ ^Vmwaremware-hgfscliebnt
+找不到命令 “mware-hgfsclient”，您的意思是：
+  “vmware-
+hgfsclient” 命令来自 Debian 软件包 open-vm-tools (2:13.0.0-2~ubuntu0.24.04.1)
+尝试 sudo apt install <deb name>
+
+-- [6分30秒] --
+ailab-
+os@ailab-os-VMware-Virtual-Platform:~$ SSlabt-register
+labt-register：未找到命令
+
+-- [7分13秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

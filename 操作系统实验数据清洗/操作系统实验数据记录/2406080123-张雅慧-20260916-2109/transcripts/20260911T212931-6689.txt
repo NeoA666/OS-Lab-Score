@@ -1,0 +1,27 @@
+==== labtracker 终端转录 ====
+录像: 20260911T212931-6689.out.gz   时长: 4分05秒   原始大小: 1006B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+
+-- [3分07秒] --
+a
+i
+l
+-- [3分12秒] --
+a
+-- [3分16秒] --
+b-os@ailab-
+os-VMware-Virtual-Platform:
+~$ find``~name~name"“。".py"
+find~~name.py：未找到命令
+
+-- [3分51秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+
+-- [4分05秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

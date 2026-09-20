@@ -1,0 +1,15 @@
+==== labtracker 终端转录 ====
+录像: 20260909T095605-13266.out.gz   时长: 13分02秒   原始大小: 704B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ls
+公共  �
+�频  文档  音乐  clash               Downloads   snap
+模�
+��  图片  下载  桌面  claude_code_env.sh  labtracker
+
+-- [13分02秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

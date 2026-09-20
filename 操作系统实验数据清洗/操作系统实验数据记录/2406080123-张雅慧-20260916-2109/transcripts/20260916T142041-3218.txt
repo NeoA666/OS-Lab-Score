@@ -1,0 +1,14 @@
+==== labtracker 终端转录 ====
+录像: 20260916T142041-3218.out.gz   时长: 2小时2分53秒   原始大小: 516B
+==================================================
+-- [开始] --
+Script s
+tarted on 2026-09-16 14:20:41+08:00 [COMMAND="bash" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+
+-- [2小时2分43秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ 
+
+-- [2小时2分53秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ 
+exit
+

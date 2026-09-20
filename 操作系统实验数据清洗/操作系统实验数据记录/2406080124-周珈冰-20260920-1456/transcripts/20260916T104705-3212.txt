@@ -1,0 +1,167 @@
+==== labtracker 终端转录 ====
+录像: 20260916T104705-3212.out.gz   时长: 1分51秒   原始大小: 7908B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform
+:~$ ! sudo cp /etc/fstab /etc/fstab.bak && sudo sed -i '11,12c\.host:/  /mnt/hgfs
+  fuse.vmhgfs-fuse  allow_other,defaults,uid=1000,gid=1000,nofail  0  0'
+
+-- [0分06秒] --
+  /etc/fstab && sudo systemctl daemon-reload && sudo systemctl restart
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ! sudo cp /etc/fstab /etc/fsta
+b.bak && sudo sed -i '11,12c\.host:/  /mnt/hgfs
+  fuse.vmhgfs-fuse  allow_other,defaults,uid=1000,gid=1000,no
+f
+a
+i
+l
+
+0
+
+0
+'
+
+/
+e
+t
+c
+/
+f
+s
+t
+a
+b
+
+&
+&
+
+s
+u
+d
+o
+
+systemctl daemon-reload && sudo systemctl restart
+  mnt-hgfs.mount && ls -la /mnt/hgfs
+
+-- [0分13秒] --
+
+
+-- [0分19秒] --
+  fuse.vmhgfs-fuse  allow_other,default
+
+-- [0分25秒] --
+
+
+
+-- [0分29秒] --
+ /etc/fstab && sudo systemctl
+ da
+emo
+n-r
+elo
+ad 
+&& 
+sud
+o s
+yst
+emc
+tl 
+res
+tar
+t  
+
+-- [0分37秒] --
+mnt
+-hg
+fs.
+mou
+nt 
+&& 
+ls 
+-la
+ /m
+nt/
+hgf
+s
+
+-- [0分44秒] --
+
+[sudo] ailab-os 的密码： 
+
+-- [0分50秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ! sudo cp /etc/fstab /etc/fstab.bak && sudo s
+ed -i '11,12c\.host:/  /mnt/hgfs
+  fuse.vmhgfs-fuse  allow_other,defau
+lts,uid=1000,gid=1000,nofail  0  0'
+
+  /etc/fstab && sudo systemctl daemon-reload && sudo systemctl restart
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ! sudo cp /etc/fstab /etc/fstab.bak && sudo sed -i '11,12c\.host:/  /mnt/hgfs
+  fuse.vmhgfs-fuse  allow_other,defaults,uid=1000,gid=1000,nofail  0  0
+'
+  /etc/fstab && sudo systemc
+tl daemon-reload && sudo systemctl
+ restart
+  mnt-hgfs.mount && ls -la /mnt/hgfs
+bash: /etc/fstab: 权限不够
+mnt-hgfs.mount：未找到命令
+
+-- [0分57秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ! sudo cp /etc/fstab /etc/fstab.bak && sudo sed -i '11,12c\.host:/  /mnt/hgfs
+  fuse.vmhgfs-fuse  allow_other,defaults,uid=1000,gid=1000,nofail  0  0'
+
+-- [1分01秒] --
+  /etc/fstab && sudo systemctl daemon-reload && sudo systemctl restart
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ ! sudo cp /etc/fstab /etc/fstab.bak && sudo sed -i '11,12c\.host:/  /mnt/hgfs
+  fuse.vmhgfs-fuse  allow_other,defaults,uid=1000,gid=1000,no
+f
+a
+i
+l
+
+0
+
+0
+'
+
+/
+e
+t
+c
+/
+f
+s
+t
+a
+b
+
+&
+&
+
+s
+u
+d
+o
+ syst
+emctl daemon-reload && sudo systemctl restart
+ mnt-hgfs.m
+
+-- [1分08秒] --
+  /etc/fstab && sudo systemctl daemon-reload && sudo systemctl restart mnt-hgfs.mount && 
+
+/etc/fstab && sudo systemctl daemon-reload && sudo systemctl restart mnt-hgfs.mount && l
+
+-- [1分14秒] --
+fuse.vmhgfs-fuse  allow_other,defaults,uid=1000
+ fuse.vmhgfs-fuse  allow_other,defaults,uid=1000,gid=1000,nofail  0  0' /etc/fstab && sudo systemctl daemon-reload && sudo systemctl restart mnt-hgfs.mount && ls -la /mnt/hgfs
+
+-- [1分19秒] --
+
+
+-- [1分23秒] --
+
+
+-- [1分51秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

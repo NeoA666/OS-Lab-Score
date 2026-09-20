@@ -1,1 +1,0 @@
-{"event": "analysis_skipped_insufficient_material", "input_fingerprint": "sha256:d8a2a6cea12694e1720e949d7974b732404a1b2638e78c3d47926d1c7ea39df2", "reason": "缺少必需的已清洗材料：source:lab6:timeline（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）；source:lab6:terminal_qa（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）；source:lab6:command_statistics（missing：未找到该 Lab 的清洗材料；缺失不能解释为未操作或未使用 AI）"}

@@ -62,11 +62,11 @@ class TimelineReportTests(unittest.TestCase):
     def test_json_markdown_manifest_and_safe_stale_cleanup(self):
         summary = reports.write_student_timeline(self.info, sample_result())
         self.assertEqual(set(summary["labs"]), {"lab0", "lab1"})
-        document = json.loads((self.output / "lab0" / "实验过程清洗工具" / "实验过程时间线.json").read_text(encoding="utf-8"))
+        document = json.loads((self.output / reports.TIMELINE_DIRECTORY / "timeline_lab0.json").read_text(encoding="utf-8"))
         self.assertIn("summary", document)
         self.assertEqual(len(document["events"]), 1)
         self.assertEqual(len(document["recording_details"]), 3)
-        markdown = (self.output / "lab0" / "实验过程清洗工具" / "实验过程时间线.md").read_text(encoding="utf-8")
+        markdown = (self.output / reports.TIMELINE_DIRECTORY / "timeline_lab0.md").read_text(encoding="utf-8")
         self.assertIn("2026-09-10T22:00:00.000+08:00（北京时间）", markdown)
         self.assertIn("关联 Shell 输出", markdown)
         self.assertIn("hello", markdown)
@@ -75,29 +75,29 @@ class TimelineReportTests(unittest.TestCase):
         notes = self.output / reports.TIMELINE_DIRECTORY / "notes.md"
         notes.write_text("keep", encoding="utf-8")
         reports.write_student_timeline(self.info, sample_result(("lab0",)))
-        self.assertFalse((self.output / "lab1" / "实验过程清洗工具" / "实验过程时间线.json").exists())
-        self.assertFalse((self.output / "lab1" / "实验过程清洗工具" / "实验过程时间线.md").exists())
+        self.assertFalse((self.output / reports.TIMELINE_DIRECTORY / "timeline_lab1.json").exists())
+        self.assertFalse((self.output / reports.TIMELINE_DIRECTORY / "timeline_lab1.md").exists())
         self.assertEqual(notes.read_text(encoding="utf-8"), "keep")
 
     def test_partial_rerun_removes_stale_labs_from_manifest_and_readable_view(self):
         reports.write_student_timeline(self.info, sample_result())
         timeline_dir = self.output / reports.TIMELINE_DIRECTORY
-        stale_json = (self.output / "lab1" / "实验过程清洗工具" / "实验过程时间线.json").read_text(encoding="utf-8")
+        stale_json = (timeline_dir / "timeline_lab1.json").read_text(encoding="utf-8")
         partial = sample_result(("lab0",))
         partial["recording_details"].append({"recording_id": "broken", "status": "error"})
 
         summary = reports.write_student_timeline(self.info, partial)
         manifest = json.loads((timeline_dir / reports.TIMELINE_MANIFEST).read_text(encoding="utf-8"))
         self.assertEqual(summary["status"], "partial")
-        self.assertNotIn("lab1/实验过程清洗工具/实验过程时间线.json", manifest["artifacts"])
-        self.assertFalse((self.output / "lab1" / "实验过程清洗工具" / "实验过程时间线.json").exists())
-        self.assertFalse((self.output / "lab1" / "实验过程清洗工具" / "实验过程时间线.md").exists())
+        self.assertNotIn("实验过程时间线/timeline_lab1.json", manifest["artifacts"])
+        self.assertFalse((timeline_dir / "timeline_lab1.json").exists())
+        self.assertFalse((timeline_dir / "timeline_lab1.md").exists())
 
         # A stale physical file must not bypass the producer's current manifest.
-        (self.output / "lab1" / "实验过程清洗工具" / "实验过程时间线.json").write_text(stale_json, encoding="utf-8")
+        (timeline_dir / "timeline_lab1.json").write_text(stale_json, encoding="utf-8")
         written = readable.write_student(self.output)
-        self.assertEqual([path.name for path in written], ["简洁实验过程时间线.md"])
-        self.assertFalse((self.output / "lab1" / "实验过程清洗工具" / "简洁实验过程时间线.md").exists())
+        self.assertEqual([path.name for path in written], ["timeline_lab0.md"])
+        self.assertFalse((self.output / readable.OUTPUT_DIRECTORY / "timeline_lab1.md").exists())
 
     def test_force_rebuild_recovers_same_source_corrupt_manifest_only_with_opt_in(self):
         reports.write_student_timeline(self.info, sample_result(("lab0",)))
@@ -111,7 +111,7 @@ class TimelineReportTests(unittest.TestCase):
         reports.mark_timeline_rebuild(self.info, allow_invalid_manifest_recovery=True)
         building = json.loads(manifest_path.read_text(encoding="utf-8"))
         self.assertEqual(building["status"], "building")
-        self.assertIn("lab0/实验过程清洗工具/实验过程时间线.json", building["artifacts"])
+        self.assertIn("实验过程时间线/timeline_lab0.json", building["artifacts"])
         summary = reports.write_student_timeline(self.info, sample_result(("lab0",)))
         self.assertEqual(summary["status"], "complete")
         self.assertEqual(
@@ -121,8 +121,7 @@ class TimelineReportTests(unittest.TestCase):
     def test_force_rebuild_does_not_claim_corrupt_foreign_artifacts(self):
         directory = self.output / reports.TIMELINE_DIRECTORY
         directory.mkdir(parents=True)
-        (self.output / "lab0" / "实验过程清洗工具").mkdir(parents=True, exist_ok=True)
-        (self.output / "lab0" / "实验过程清洗工具" / "实验过程时间线.json").write_text(json.dumps({
+        (directory / "timeline_lab0.json").write_text(json.dumps({
             "student": {"source": "another-source"}, "lab": "lab0",
         }), encoding="utf-8")
         manifest_path = directory / reports.TIMELINE_MANIFEST
@@ -135,14 +134,14 @@ class TimelineReportTests(unittest.TestCase):
     def test_remove_student_timeline_only_removes_same_source_registered_artifacts(self):
         reports.write_student_timeline(self.info, sample_result(("lab0",)))
         directory = self.output / reports.TIMELINE_DIRECTORY
-        stale_json = (self.output / "lab0" / "实验过程清洗工具" / "实验过程时间线.json").read_text(encoding="utf-8")
+        stale_json = (directory / "timeline_lab0.json").read_text(encoding="utf-8")
         readable_output = readable.write_student(self.output)[0]
         notes = directory / "notes.md"
         notes.write_text("keep", encoding="utf-8")
 
         self.assertTrue(reports.remove_student_timeline(self.info))
-        self.assertFalse((self.output / "lab0" / "实验过程清洗工具" / "实验过程时间线.json").exists())
-        self.assertFalse((self.output / "lab0" / "实验过程清洗工具" / "实验过程时间线.md").exists())
+        self.assertFalse((directory / "timeline_lab0.json").exists())
+        self.assertFalse((directory / "timeline_lab0.md").exists())
         manifest = json.loads((directory / reports.TIMELINE_MANIFEST).read_text(encoding="utf-8"))
         self.assertEqual(manifest["status"], "cleared")
         self.assertEqual(manifest["artifacts"], [])
@@ -150,7 +149,7 @@ class TimelineReportTests(unittest.TestCase):
         self.assertTrue(reports.timeline_owned_by(self.output, self.info["source"]))
 
         # A leftover file outside the cleared manifest cannot revive an old concise view.
-        (self.output / "lab0" / "实验过程清洗工具" / "实验过程时间线.json").write_text(stale_json, encoding="utf-8")
+        (directory / "timeline_lab0.json").write_text(stale_json, encoding="utf-8")
         self.assertEqual(readable.write_student(self.output), [])
         self.assertFalse(readable_output.exists())
 
@@ -160,8 +159,8 @@ class TimelineReportTests(unittest.TestCase):
 
         summary = reports.write_student_timeline(self.info, result)
         self.assertEqual(set(summary["labs"]), {"lab0"})
-        self.assertTrue((self.output / "lab0" / "实验过程清洗工具" / "实验过程时间线.json").exists())
-        self.assertFalse((self.output / "其他" / "实验过程清洗工具" / "实验过程时间线.json").exists())
+        self.assertTrue((self.output / reports.TIMELINE_DIRECTORY / "timeline_lab0.json").exists())
+        self.assertFalse((self.output / reports.TIMELINE_DIRECTORY / "timeline_other.json").exists())
 
     def test_foreign_manifest_is_rejected_before_writing(self):
         directory = self.output / reports.TIMELINE_DIRECTORY
@@ -170,7 +169,7 @@ class TimelineReportTests(unittest.TestCase):
             "tool": reports.TIMELINE_TOOL, "source": "another-source", "artifacts": []}), encoding="utf-8")
         with self.assertRaises(ValueError):
             reports.write_student_timeline(self.info, sample_result(("lab0",)))
-        self.assertFalse((self.output / "lab0" / "实验过程清洗工具" / "实验过程时间线.json").exists())
+        self.assertFalse((directory / "timeline_lab0.json").exists())
 
     def test_windows_reparse_point_is_link_like_without_path_is_junction(self):
         reparse_point = 0x400
@@ -227,8 +226,8 @@ class TimelineReportTests(unittest.TestCase):
             with contextlib.redirect_stdout(io.StringIO()):
                 self.assertEqual(app.main([str(self.source.parent), "-o", str(output_root), "--timeline-only"]), 0)
                 self.assertEqual(app.main([str(self.source.parent), "-o", str(output_root), "--timeline-only"]), 0)
-        self.assertTrue((output_root / "汇总报告" / "实验过程清洗汇总.md").read_text(encoding="utf-8").startswith(app.README_TITLE))
-        student_dirs = [path for path in (output_root / "按人分类").iterdir() if path.is_dir()]
+        self.assertTrue((output_root / "README.md").read_text(encoding="utf-8").startswith(app.README_TITLE))
+        student_dirs = [path for path in output_root.iterdir() if path.is_dir()]
         self.assertEqual([path.name for path in student_dirs], ["学生"])
         self.assertFalse((student_dirs[0] / app.OWNER_FILE).exists())
 

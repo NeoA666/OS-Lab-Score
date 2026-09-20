@@ -1,0 +1,13 @@
+==== labtracker 终端转录 ====
+录像: 20260916T112319-3540.out.gz   时长: 0分26秒   原始大小: 462B
+==================================================
+
+-- [开始] --
+aila
+b-os@ailab-os-VMware-Virtual-Platform:~$ 你砸了咋了
+你咋了：未找到命令
+
+-- [0分26秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "student_id": "123456",
+  "name": "114",
+  "archive_name": "123456-114-实验提交-20260905-0950.tar.gz",
+  "remote_path": "/root/打包文件夹/xv6-submissions/20260905/123456-114-实验提交-20260905-0950.tar.gz",
+  "submission_time": "2026-09-05T17:50:04",
+  "archive_size": 2080135,
+  "archive_sha256": "040646ebd330bc515f298386a03ac889cae0df4adbe59b7034ed83c6ac5de50b",
+  "synced_at": "2026-09-20T09:16:20.784813+00:00"
+}

@@ -1,0 +1,121 @@
+==== labtracker 终端转录 ====
+录像: 20260908T185228-3128.out.gz   时长: 12分12秒   原始大小: 4597B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ cd~
+找不到命令 “cd~”，您的意思是：
+  “cdp” 命令来自 Debian 软件包 irpas (0.10-9)
+  “cdb” 命令来自 Debian 软件包 tinycdb (0.81-1)
+  “cdi” 命令来自 Debian 软件包 cdo (2.3.0-1)
+  “cdo” 命令来自 Debian 软件包 cdo (2.3.0-1)
+  “cd5” 命令来自 Debian 软件包 cd5 (0.1-4)
+  �
+�cde” 命令来自 Debian 软件�
+� cde (0
+.1+git9-g551e54d-1.2)
+  “cdw” 命令来自 Debian 软件包 cdw (0.8.1-3)
+尝试 sudo apt install <deb name>
+
+-- [1分01秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ S
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ S
+-- [1分11秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ S
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ S
+-- [1分19秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ S
+
+-- [1分50秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ Sls
+公共  模板  视频  图片  文档  下载  �
+��乐
+  桌面  clash  claude_code_env.sh  labtracker  snap
+
+-- [3分51秒] --
+a
+ilab
+-
+o
+s
+@
+a
+-- [5分51秒] --
+ilab
+-os-
+VMwa
+re-V
+-- [6分08秒] --
+irt
+ual-
+-- [6分12秒] --
+Platform:~$ cd zhuozhuozhuozhuo桌面/
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ cd 桌面/
+-- [6分19秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ cd 桌面/
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ cd 桌面/
+
+-- [6分26秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ cd 桌面/
+
+-- [6分53秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面$ lsls
+20101200-zhaoxia-实验提交-20260903-1759.tar.gz  20101200-zhaoxia-实验提交-20
+260903-1759.tar.gz.sha256  提交实验.desktop  xv6-ai-labs-km  xv6-k210-原版参考
+
+-- [7分31秒] --
+ailab-o
+s@ailab-os-VMware-Virtual-Platform:~/桌面$ cd xv6
+bash: cd: xv6: 没有那个文件或目录
+
+-- [8分19秒] --
+ailab
+-os@a
+ilab-
+os-VM
+ware-V
+-- [8分22秒] --
+irt
+ual
+-Pl
+atf
+orm
+
+:
+
+~
+/�
+��
+�
+
+$ ^
+[[2
+00~
+-- [8分25秒] --
+cd 
+x
+v
+6‑ai‑la
+bs‑km~
+找不到命令 “~cd”，您的意思是：
+  “hcd” 命令来自 Debian 软件包 hfsutils (3.2.6-15build2)
+  “mcd” 命令来自 Debian 软
+件包 mtools (4.0.43-1)
+  “bcd” 命令来自 Debian 软件包 bsdgames (2.17-30)
+尝试 sudo apt install <deb name>
+
+-- [8分44秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面$ cd xv6‑ai‑labs‑km
+
+cd xv6‑ai‑labs‑km
+
+bash: cd: xv6‑ai‑labs‑km: 没有那个文件或目录
+
+-- [9分00秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面$ 
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面$ 
+
+-- [12分12秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面$ 
+exit
+

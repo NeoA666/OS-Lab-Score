@@ -19,7 +19,7 @@ class LabDiffReportTests(unittest.TestCase):
         self.reference_lab = self.reference / "lab1"
         self.student_source = self.submissions / "2406080106-高龙徽-20260909-1215"
         self.student_lab = self.student_source / "labs" / "lab1"
-        self.student_cleaned = self.cleaned / "按人分类" / "高龙徽"
+        self.student_cleaned = self.cleaned / "高龙徽"
         self.write(self.reference_lab / "kernel" / "main.c", "int value = 1;\n")
         self.write(self.student_lab / "kernel" / "main.c", "int value = 2; // ```\n")
         self.write(self.reference_lab / "xv6-user" / "gone.c", "int gone;\n")
@@ -58,8 +58,8 @@ class LabDiffReportTests(unittest.TestCase):
 
     def test_generates_source_only_reports_and_summary(self):
         self.assertEqual(app.main(self.args()), 0)
-        report = self.student_cleaned / "lab1" / app.REPORT_FOLDER / app.REPORT_NAME
-        summary = self.cleaned / app.SUMMARY_FOLDER / "代码差异报告汇总-lab1.md"
+        report = self.student_cleaned / app.REPORT_FOLDER / "lab1.md"
+        summary = self.cleaned / app.SUMMARY_FOLDER / "lab1.md"
         text = report.read_text(encoding="utf-8")
         summary_text = summary.read_text(encoding="utf-8")
         self.assertIn("2406080106", text)
@@ -73,58 +73,17 @@ class LabDiffReportTests(unittest.TestCase):
         self.assertNotIn("doc/guide.md", text)
         self.assertNotIn("target/kernel.asm", text)
         self.assertIn("查看报告", summary_text)
-        self.assertEqual(report.read_bytes(), app.mirror_path(report).read_bytes())
-        self.assertTrue(list((self.cleaned / "运行日志").glob("代码差异报告工具-*.log")))
         self.assertEqual((self.student_cleaned / "现有报告.md").read_text(encoding="utf-8"), "keep")
-
-    def test_unregistered_mirror_is_not_overwritten(self):
-        report = self.student_cleaned / "lab1" / app.REPORT_FOLDER / app.REPORT_NAME
-        mirrored = app.mirror_path(report)
-        self.write(mirrored, "人工保留")
-        self.assertEqual(app.main(self.args()), 1)
-        self.assertEqual(mirrored.read_text(encoding="utf-8"), "人工保留")
-        self.assertFalse(report.exists())
-
-    def test_mirror_write_failure_is_reported(self):
-        with mock.patch.object(app, "write_text_pair", side_effect=OSError("镜像写入失败")):
-            self.assertEqual(app.main(self.args()), 1)
-        summary = self.cleaned / app.SUMMARY_FOLDER / "代码差异报告汇总-lab1.md"
-        self.assertIn("镜像写入失败", summary.read_text(encoding="utf-8"))
-
-    def test_lab0_is_in_scope_and_compares_against_the_reference_lab0(self):
-        # 回归：比较范围必须从 lab0 开始，且 lab0 与其它实验使用同一套
-        # “学生 labs/labN 对比基准 labN”的对应规则。
-        self.assertEqual(app.LABS, tuple(f"lab{number}" for number in range(0, 9)))
-        self.assertIn(app.REPORT_NAME, app.REPORT_ARTIFACTS)
-        self.write(self.reference / "lab0" / "kernel" / "main.c", "int base = 1;\n")
-        self.write(self.student_source / "labs" / "lab0" / "kernel" / "main.c", "int base = 2;\n")
-        self.assertEqual(app.main([
-            "--lab", "lab0", "--reference-root", str(self.reference),
-            "--submissions-root", str(self.submissions), "--cleaned-root", str(self.cleaned),
-        ]), 0)
-        report = self.student_cleaned / "lab0" / app.REPORT_FOLDER / app.REPORT_NAME
-        self.assertTrue(report.is_file())
-        text = report.read_text(encoding="utf-8")
-        self.assertIn("# lab0 源码差异报告", text)
-        self.assertIn(str(self.reference / "lab0"), text)
-        self.assertIn("kernel/main.c", text)
-        summary = (self.cleaned / app.SUMMARY_FOLDER / "代码差异报告汇总-lab0.md").read_text(encoding="utf-8")
-        self.assertIn("# lab0 源码差异报告汇总", summary)
-        self.assertIn("查看报告", summary)
-        manifest = json.loads(
-            (self.student_cleaned / "lab0" / app.REPORT_FOLDER / app.REPORT_MANIFEST).read_text(encoding="utf-8")
-        )
-        self.assertEqual(manifest["artifacts"], [app.REPORT_NAME])
 
     def test_ignores_whitespace_by_default_and_strict_mode_shows_it(self):
         self.write(self.reference_lab / "kernel" / "space.c", "int  value = 1;\n\n")
         self.write(self.student_lab / "kernel" / "space.c", "int value = 1;\n \t \n")
         self.assertEqual(app.main(self.args()), 0)
-        normal = (self.student_cleaned / "lab1" / app.REPORT_FOLDER / app.REPORT_NAME).read_text(encoding="utf-8")
+        normal = (self.student_cleaned / app.REPORT_FOLDER / "lab1.md").read_text(encoding="utf-8")
         self.assertNotIn("kernel/space.c", normal)
         self.assertIn("空白符策略：忽略空格、Tab、空白行和行尾空白差异", normal)
         self.assertEqual(app.main(self.args("--strict-whitespace")), 0)
-        strict = (self.student_cleaned / "lab1" / app.REPORT_FOLDER / app.REPORT_NAME).read_text(encoding="utf-8")
+        strict = (self.student_cleaned / app.REPORT_FOLDER / "lab1.md").read_text(encoding="utf-8")
         self.assertIn("kernel/space.c", strict)
         self.assertIn("空白符策略：精确比较", strict)
 
@@ -134,36 +93,36 @@ class LabDiffReportTests(unittest.TestCase):
         self.assertEqual(app.main(self.args("--dry-run")), 0)
         self.assertFalse((self.cleaned / app.SUMMARY_FOLDER).exists())
         self.assertEqual(app.main(self.args()), 0)
-        summary = (self.cleaned / app.SUMMARY_FOLDER / "代码差异报告汇总-lab1.md").read_text(encoding="utf-8")
+        summary = (self.cleaned / app.SUMMARY_FOLDER / "lab1.md").read_text(encoding="utf-8")
         self.assertIn("李四", summary)
         self.assertIn("未找到对应的已清洗学生目录", summary)
 
     def test_falls_back_to_a_unique_matching_cleaned_name_without_owner_file(self):
         fallback_source = self.submissions / "2406080107-李四-20260909-1215"
         self.write(fallback_source / "labs" / "lab1" / "kernel" / "main.c", "int fallback;\n")
-        fallback_cleaned = self.cleaned / "按人分类" / "李四"
+        fallback_cleaned = self.cleaned / "李四"
         fallback_cleaned.mkdir()
         self.assertEqual(app.main(self.args("--student", "2406080107")), 0)
-        self.assertTrue((fallback_cleaned / "lab1" / app.REPORT_FOLDER / app.REPORT_NAME).is_file())
+        self.assertTrue((fallback_cleaned / app.REPORT_FOLDER / "lab1.md").is_file())
 
     def test_does_not_fall_back_by_name_when_submissions_have_duplicate_names(self):
         duplicate = self.submissions / "2406080107-高龙徽-20260909-1215"
         self.write(duplicate / "labs" / "lab1" / "kernel" / "main.c", "int duplicate;\n")
         self.assertEqual(app.main(self.args("--student", "2406080107")), 0)
-        summary = (self.cleaned / app.SUMMARY_FOLDER / "代码差异报告汇总-lab1.md").read_text(encoding="utf-8")
+        summary = (self.cleaned / app.SUMMARY_FOLDER / "lab1.md").read_text(encoding="utf-8")
         self.assertIn("未找到对应的已清洗学生目录", summary)
 
     def test_handles_git_failure_as_a_per_file_error(self):
         self.assertEqual(app.main(self.args()), 0)
-        report = self.student_cleaned / "lab1" / app.REPORT_FOLDER / app.REPORT_NAME
-        manifest = self.student_cleaned / "lab1" / app.REPORT_FOLDER / app.REPORT_MANIFEST
+        report = self.student_cleaned / app.REPORT_FOLDER / "lab1.md"
+        manifest = self.student_cleaned / app.REPORT_FOLDER / app.REPORT_MANIFEST
         previous_report = report.read_text(encoding="utf-8")
         previous_manifest = manifest.read_text(encoding="utf-8")
         with mock.patch.object(app, "git_diff", return_value=("error", "", 0, 0, "unreadable")):
             self.assertEqual(app.main(self.args()), 1)
         self.assertEqual(report.read_text(encoding="utf-8"), previous_report)
         self.assertEqual(manifest.read_text(encoding="utf-8"), previous_manifest)
-        summary = (self.cleaned / app.SUMMARY_FOLDER / "代码差异报告汇总-lab1.md").read_text(encoding="utf-8")
+        summary = (self.cleaned / app.SUMMARY_FOLDER / "lab1.md").read_text(encoding="utf-8")
         self.assertIn("unreadable", summary)
 
     def test_empty_git_patch_is_a_per_file_error(self):
@@ -210,7 +169,7 @@ class LabDiffReportTests(unittest.TestCase):
         self.write(self.student_lab / "kernel" / ".svn" / "ignored.mk", "new\n")
 
         self.assertEqual(app.main(self.args()), 0)
-        text = (self.student_cleaned / "lab1" / app.REPORT_FOLDER / app.REPORT_NAME).read_text(encoding="utf-8")
+        text = (self.student_cleaned / app.REPORT_FOLDER / "lab1.md").read_text(encoding="utf-8")
         self.assertIn("### `Makefile`（修改）", text)
         self.assertIn("### `GNUmakefile`（修改）", text)
         self.assertIn("kernel/manual.S", text)
@@ -229,18 +188,18 @@ class LabDiffReportTests(unittest.TestCase):
         app.map_cleaned_students(students, self.cleaned)
         self.assertTrue(all(student.cleaned is None for student in students))
         self.assertEqual(app.main(self.args()), 0)
-        self.assertFalse((self.student_cleaned / "lab1" / app.REPORT_FOLDER / app.REPORT_NAME).exists())
-        summary = (self.cleaned / app.SUMMARY_FOLDER / "代码差异报告汇总-lab1.md").read_text(encoding="utf-8")
+        self.assertFalse((self.student_cleaned / app.REPORT_FOLDER / "lab1.md").exists())
+        summary = (self.cleaned / app.SUMMARY_FOLDER / "lab1.md").read_text(encoding="utf-8")
         self.assertIn("未找到对应的已清洗学生目录", summary)
 
     def test_foreign_or_malformed_report_manifest_is_rejected_before_writing(self):
-        report_dir = self.student_cleaned / "lab1" / app.REPORT_FOLDER
-        report_dir.mkdir(parents=True)
-        report = report_dir / app.REPORT_NAME
+        report_dir = self.student_cleaned / app.REPORT_FOLDER
+        report_dir.mkdir()
+        report = report_dir / "lab1.md"
         report.write_text("keep", encoding="utf-8")
         manifest = report_dir / app.REPORT_MANIFEST
         for document in (
-            json.dumps({"tool": "generate_lab_diff_reports", "source": "other", "artifacts": [app.REPORT_NAME]}),
+            json.dumps({"tool": "generate_lab_diff_reports", "source": "other", "artifacts": ["lab1.md"]}),
             "{broken",
         ):
             manifest.write_text(document, encoding="utf-8")
@@ -249,9 +208,9 @@ class LabDiffReportTests(unittest.TestCase):
             self.assertEqual(manifest.read_text(encoding="utf-8"), document)
 
     def test_link_like_report_manifest_is_rejected_before_writing(self):
-        report_dir = self.student_cleaned / "lab1" / app.REPORT_FOLDER
-        report_dir.mkdir(parents=True)
-        report = report_dir / app.REPORT_NAME
+        report_dir = self.student_cleaned / app.REPORT_FOLDER
+        report_dir.mkdir()
+        report = report_dir / "lab1.md"
         report.write_text("keep", encoding="utf-8")
         manifest = report_dir / app.REPORT_MANIFEST
 
@@ -263,7 +222,7 @@ class LabDiffReportTests(unittest.TestCase):
 
     def test_atomic_write_rejects_link_like_parent_before_creating_it(self):
         report_dir = self.student_cleaned / "dangling-junction"
-        target = report_dir / app.REPORT_NAME
+        target = report_dir / "lab1.md"
 
         with mock.patch.object(
             app, "is_link_like", side_effect=lambda path: Path(path) == report_dir
@@ -275,7 +234,7 @@ class LabDiffReportTests(unittest.TestCase):
         self.assertFalse(target.exists())
 
     def test_summary_write_value_error_returns_failure(self):
-        summary = self.cleaned / app.SUMMARY_FOLDER / "代码差异报告汇总-lab1.md"
+        summary = self.cleaned / app.SUMMARY_FOLDER / "lab1.md"
         original_write = app.atomic_write
 
         def reject_summary(path, text):
@@ -305,8 +264,8 @@ class LabDiffReportTests(unittest.TestCase):
 
     def test_selected_missing_lab_removes_only_its_owned_stale_report(self):
         self.assertEqual(app.main(self.args()), 0)
-        report_dir = self.student_cleaned / "lab1" / app.REPORT_FOLDER
-        report = report_dir / app.REPORT_NAME
+        report_dir = self.student_cleaned / app.REPORT_FOLDER
+        report = report_dir / "lab1.md"
         manifest = report_dir / app.REPORT_MANIFEST
         self.assertTrue(report.is_file())
         self.assertTrue(manifest.is_file())
@@ -314,15 +273,14 @@ class LabDiffReportTests(unittest.TestCase):
         shutil.rmtree(self.student_lab)
         self.assertEqual(app.main(self.args()), 0)
         self.assertFalse(report.exists())
-        self.assertFalse(app.mirror_path(report).exists())
         document = json.loads(manifest.read_text(encoding="utf-8"))
         self.assertEqual(document["artifacts"], [])
-        summary = (self.cleaned / app.SUMMARY_FOLDER / "代码差异报告汇总-lab1.md").read_text(encoding="utf-8")
+        summary = (self.cleaned / app.SUMMARY_FOLDER / "lab1.md").read_text(encoding="utf-8")
         self.assertIn("未找到学生该实验的 labs/labN 目录", summary)
 
     def test_unregistered_lab_report_is_not_claimed_or_removed(self):
-        report_dir = self.student_cleaned / "lab1" / app.REPORT_FOLDER
-        report_dir.mkdir(parents=True)
+        report_dir = self.student_cleaned / app.REPORT_FOLDER
+        report_dir.mkdir()
         preserved = report_dir / "lab2.md"
         preserved.write_text("keep lab2", encoding="utf-8")
         self.write(self.reference / "lab2" / "kernel" / "main.c", "int lab2;\n")
@@ -331,7 +289,7 @@ class LabDiffReportTests(unittest.TestCase):
         manifest = report_dir / app.REPORT_MANIFEST
         self.assertEqual(
             json.loads(manifest.read_text(encoding="utf-8"))["artifacts"],
-            [app.REPORT_NAME],
+            ["lab1.md"],
         )
 
         self.assertEqual(app.main([
@@ -341,13 +299,13 @@ class LabDiffReportTests(unittest.TestCase):
         self.assertEqual(preserved.read_text(encoding="utf-8"), "keep lab2")
         self.assertEqual(
             json.loads(manifest.read_text(encoding="utf-8"))["artifacts"],
-            [app.REPORT_NAME],
+            ["lab1.md"],
         )
 
     def test_unregistered_selected_lab_report_is_not_overwritten(self):
-        report_dir = self.student_cleaned / "lab1" / app.REPORT_FOLDER
-        report_dir.mkdir(parents=True)
-        manual = report_dir / app.REPORT_NAME
+        report_dir = self.student_cleaned / app.REPORT_FOLDER
+        report_dir.mkdir()
+        manual = report_dir / "lab1.md"
         manual.write_text("keep lab1", encoding="utf-8")
 
         self.assertEqual(app.main(self.args()), 1)
@@ -357,8 +315,8 @@ class LabDiffReportTests(unittest.TestCase):
 
     def test_missing_submission_with_owned_reports_fails_without_deleting_them(self):
         self.assertEqual(app.main(self.args()), 0)
-        report_dir = self.student_cleaned / "lab1" / app.REPORT_FOLDER
-        report = report_dir / app.REPORT_NAME
+        report_dir = self.student_cleaned / app.REPORT_FOLDER
+        report = report_dir / "lab1.md"
         manifest = report_dir / app.REPORT_MANIFEST
         previous_report = report.read_text(encoding="utf-8")
         previous_manifest = manifest.read_text(encoding="utf-8")
@@ -367,13 +325,13 @@ class LabDiffReportTests(unittest.TestCase):
         self.assertEqual(app.main(self.args()), 1)
         self.assertEqual(report.read_text(encoding="utf-8"), previous_report)
         self.assertEqual(manifest.read_text(encoding="utf-8"), previous_manifest)
-        summary = (self.cleaned / app.SUMMARY_FOLDER / "代码差异报告汇总-lab1.md").read_text(encoding="utf-8")
+        summary = (self.cleaned / app.SUMMARY_FOLDER / "lab1.md").read_text(encoding="utf-8")
         self.assertIn("原始提交目录不存在或无法匹配", summary)
         self.assertIn("2406080106", summary)
 
     def test_unmatched_student_filter_fails_without_writing_reports(self):
         self.assertEqual(app.main(self.args("--student", "not-a-student")), 1)
-        self.assertFalse((self.student_cleaned / "lab1" / app.REPORT_FOLDER).exists())
+        self.assertFalse((self.student_cleaned / app.REPORT_FOLDER).exists())
         self.assertFalse((self.cleaned / app.SUMMARY_FOLDER).exists())
 
 

@@ -1,0 +1,12 @@
+[Unit]
+Description=labtracker 实验记录心跳（仅在登记期间工作，空闲自动退出）
+
+[Service]
+Type=simple
+ExecStart=%h/.labtracker/bin/daemon.sh
+Restart=no
+# 代理进程由学生的终端自己拉起，绝不属于本服务；停止本服务不影响任何终端
+KillMode=process
+
+[Install]
+WantedBy=default.target

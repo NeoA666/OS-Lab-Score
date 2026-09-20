@@ -61,8 +61,8 @@ class BatchTests(unittest.TestCase):
         (term / 'headerless.tim.gz').write_bytes(gzip.compress(f'0.1 {len(body)}\n'.encode('ascii')))
 
         self.assertEqual(self.run_app(root, output), 0)
-        report = (output / "按人分类" / '无头' / app.lab_report_paths('lab0')[0]).read_text(encoding='utf-8')
-        timeline = json.loads((output / "按人分类" / '无头' / "lab0" / "实验过程清洗工具" / "实验过程时间线.json").read_text(encoding='utf-8'))
+        report = (output / '无头' / app.lab_report_paths('lab0')[0]).read_text(encoding='utf-8')
+        timeline = json.loads((output / '无头' / '实验过程时间线' / 'timeline_lab0.json').read_text(encoding='utf-8'))
         self.assertIn('echo first', report)
         self.assertIn('echo first', [event['content'] for event in timeline['events']])
     def test_plain_bash_prompt_is_extracted_and_classified(self):
@@ -71,8 +71,8 @@ class BatchTests(unittest.TestCase):
         recording(term, chunks=['student@host:~/lab3$ echo ordinary\r\nordinary\r\n'])
 
         self.assertEqual(self.run_app(root, output), 0)
-        report = (output / "按人分类" / '普通提示符' / app.lab_report_paths('lab3')[0]).read_text(encoding='utf-8')
-        timeline = json.loads((output / "按人分类" / '普通提示符' / "lab3" / "实验过程清洗工具" / "实验过程时间线.json").read_text(encoding='utf-8'))
+        report = (output / '普通提示符' / app.lab_report_paths('lab3')[0]).read_text(encoding='utf-8')
+        timeline = json.loads((output / '普通提示符' / '实验过程时间线' / 'timeline_lab3.json').read_text(encoding='utf-8'))
         self.assertIn('echo ordinary', report)
         self.assertIn('echo ordinary', [event['content'] for event in timeline['events']])
 
@@ -84,8 +84,9 @@ class BatchTests(unittest.TestCase):
         recording(term, chunks=chunks)
 
         self.assertEqual(self.run_app(root, output), 0)
-        report = (output / "按人分类" / 'OSC提示符' / app.lab_report_paths('lab2')[0]).read_text(encoding='utf-8')
-        timeline = json.loads((output / "按人分类" / 'OSC提示符' / "lab2" / "实验过程清洗工具" / "实验过程时间线.json").read_text(encoding='utf-8'))
+        report = (output / 'OSC提示符' / app.lab_report_paths('lab2')[0]).read_text(encoding='utf-8')
+        timeline = json.loads((output / 'OSC提示符' / '实验过程时间线' /
+                               'timeline_lab2.json').read_text(encoding='utf-8'))
         self.assertIn('echo OSC_OK', report)
         self.assertIn('echo OSC_OK', [event['content'] for event in timeline['events']])
 
@@ -115,7 +116,8 @@ class BatchTests(unittest.TestCase):
             ['echo colored', 'echo ordinary'],
         )
         self.assertEqual(self.run_app(root, output), 0)
-        timeline = json.loads((output / "按人分类" / '混合提示符' / "lab3" / "实验过程清洗工具" / "实验过程时间线.json").read_text(encoding='utf-8'))
+        timeline = json.loads((output / '混合提示符' / '实验过程时间线' /
+                               'timeline_lab3.json').read_text(encoding='utf-8'))
         self.assertIn('echo ordinary', [event['content'] for event in timeline['events']])
     def test_wide_character_wrap_does_not_insert_a_space(self):
         first = 'a' * 78 + '中'
@@ -127,8 +129,8 @@ class BatchTests(unittest.TestCase):
         tim.write_bytes(gzip.compress(b'0.1 1\n'))
 
         self.assertEqual(self.run_app(root, output), 0)
-        report = (output / "按人分类" / '计时' / app.lab_report_paths('lab0')[0]).read_text(encoding='utf-8')
-        timeline = json.loads((output / "按人分类" / '计时' / "lab0" / "实验过程清洗工具" / "实验过程时间线.json").read_text(encoding='utf-8'))
+        report = (output / '计时' / app.lab_report_paths('lab0')[0]).read_text(encoding='utf-8')
+        timeline = json.loads((output / '计时' / '实验过程时间线' / 'timeline_lab0.json').read_text(encoding='utf-8'))
         shell = next(event for event in timeline['events'] if event['type'] == 'shell_command_observed')
         self.assertIn('- 相对时间：未知', report)
         self.assertIsNone(shell['elapsed_seconds'])
@@ -148,7 +150,7 @@ class BatchTests(unittest.TestCase):
             ):
                 output = self.root / label / f'output-{mode}'
                 self.assertEqual(self.run_app(root, output, *args), 1)
-                target = output / "按人分类" / label
+                target = output / label
                 self.assertFalse(any((target / path).exists() for path in app.lab_report_paths('other')))
                 self.assertFalse((target / '实验过程时间线').exists())
 
@@ -209,44 +211,44 @@ class BatchTests(unittest.TestCase):
         (root / 'unexpected').mkdir()
         snapshots = {p: p.read_bytes() for p in root.rglob('*') if p.is_file()}
         self.assertEqual(self.run_app(root, output), 1)
-        self.assertTrue((output / '汇总报告' / '实验过程清洗汇总.md').exists())
+        self.assertTrue((output / 'README.md').exists())
         for name in ('张伟-123', '张伟-456'):
             for filename in app.lab_report_paths("lab0"):
-                text = (output / "按人分类" / name / filename).read_text(encoding='utf-8')
+                text = (output / name / filename).read_text(encoding='utf-8')
                 self.assertIn('- 学号：', text)
                 self.assertIn('- 姓名：张伟', text)
                 self.assertIn('- 数据采集时间：', text)
-            self.assertFalse((output / "按人分类" / name / 'term_qa_report.md').exists())
-        full = (output / "按人分类" / '张伟-123' / app.lab_report_paths('other')[1]).read_text(encoding='utf-8')
+            self.assertFalse((output / name / 'term_qa_report.md').exists())
+        full = (output / '张伟-123' / app.lab_report_paths('other')[1]).read_text(encoding='utf-8')
         self.assertIn('broken.out.gz', full)
         self.assertIn('- 重放失败数量：1', full)
-        qa = (output / "按人分类" / '张伟-456' / app.lab_report_paths('lab0')[3]).read_text(encoding='utf-8')
+        qa = (output / '张伟-456' / app.lab_report_paths('lab0')[3]).read_text(encoding='utf-8')
         self.assertIn('### Turn 1', qa)
         self.assertIn('## Session 1：', qa)
         self.assertIn('- 对话轮次总数：1', qa)
-        before = {p: p.read_bytes() for p in output.rglob('*.md') if p != output / '汇总报告' / '实验过程清洗汇总.md'}
+        before = {p: p.read_bytes() for p in output.rglob('*.md') if p != output / 'README.md'}
         self.assertEqual(self.run_app(root, output), 1)
-        self.assertEqual(before, {p: p.read_bytes() for p in output.rglob('*.md') if p != output / '汇总报告' / '实验过程清洗汇总.md'})
-        self.assertIn('增量跳过', (output / '汇总报告' / '实验过程清洗汇总.md').read_text(encoding='utf-8'))
+        self.assertEqual(before, {p: p.read_bytes() for p in output.rglob('*.md') if p != output / 'README.md'})
+        self.assertIn('增量跳过', (output / 'README.md').read_text(encoding='utf-8'))
         self.assertEqual(snapshots, {p: p.read_bytes() for p in root.rglob('*') if p.is_file()})
         self.assertEqual(self.run_app(root, output, '--student', '456'), 0)
-        self.assertFalse((output / "按人分类" / '张伟').exists())
+        self.assertFalse((output / '张伟').exists())
     def test_single_unknown_and_existing_collision(self):
         root, output = self.root / 'legacy', self.root / 'output'
         recording(root / 'term')
         self.assertEqual(self.run_app(root, output), 0)
-        self.assertIn('- 学号：未知', (output / "按人分类" / '未知' / app.lab_report_paths('lab0')[0]).read_text(encoding='utf-8'))
+        self.assertIn('- 学号：未知', (output / '未知' / app.lab_report_paths('lab0')[0]).read_text(encoding='utf-8'))
         another = self.root / 'other'
         recording(another / 'term')
         self.assertEqual(self.run_app(another, output, '--overwrite'), 0)
-        owners = [json.loads(p.read_text(encoding='utf-8'))['source'] for p in (output / '按人分类').glob('*/.replay_term_qa.json')]
+        owners = [json.loads(p.read_text(encoding='utf-8'))['source'] for p in output.glob('*/.replay_term_qa.json')]
         self.assertEqual(len(set(owners)), 2)
     def test_duplicate_capture_and_portable_names(self):
         root, output = self.root / 'input', self.root / 'output'
         for name in ('123-Anne-Marie-20260911-2046', '123-Anne-Marie-20260911-2046-1', '456-anne-marie-20260911-2046'):
             recording(root / name / 'term')
         self.assertEqual(self.run_app(root, output), 0)
-        dirs = [p.name.casefold() for p in (output / "按人分类").iterdir() if p.is_dir()]
+        dirs = [p.name.casefold() for p in output.iterdir() if p.is_dir()]
         self.assertEqual(len(set(dirs)), 3)
         self.assertNotEqual(app.safe_component('a:b'), app.safe_component('a?b'))
     def test_student_failure_continues(self):
@@ -260,8 +262,8 @@ class BatchTests(unittest.TestCase):
             return original(info)
         with mock.patch.object(app, 'process_student', side_effect=process):
             self.assertEqual(self.run_app(root, output), 1)
-        self.assertTrue((output / "按人分类" / 'B' / app.lab_report_paths('lab0')[3]).is_file())
-        readme = (output / '汇总报告' / '实验过程清洗汇总.md').read_text(encoding='utf-8')
+        self.assertTrue((output / 'B' / app.lab_report_paths('lab0')[3]).is_file())
+        readme = (output / 'README.md').read_text(encoding='utf-8')
         self.assertIn('模拟学生级读取失败', readme)
         self.assertIn('123-A-20260911-2046', readme)
     def test_atomic_failure_preserves_previous_file(self):
@@ -315,7 +317,7 @@ class BatchTests(unittest.TestCase):
         recording(term, chunks=chunks)
         with contextlib.redirect_stdout(io.StringIO()):
             info = app.parse_student_name(term.parent.name)
-            info.update(source=str(term.parent.resolve()), output=output / "按人分类" / '学生')
+            info.update(source=str(term.parent.resolve()), output=output / '学生')
             result = app.process_student(info)
         self.assertEqual(result['status'], '成功')
         self.assertEqual(result['recordings'], 1)
@@ -368,7 +370,7 @@ class BatchTests(unittest.TestCase):
         chunks=[PROMPT+'echo ZERO\r\nZERO\r\n',
                 PROMPT.replace('lab0','lab8')+'echo EIGHT\r\nEIGHT\r\n']
         recording(student/'term',chunks=chunks,timing=False)
-        target=output/'按人分类'/'学生'
+        target=output/'学生'
         target.mkdir(parents=True)
         for name in app.REPORT_NAMES:
             (target/name).write_text('old generated report',encoding='utf-8')

@@ -1,0 +1,15 @@
+==== labtracker 终端转录 ====
+录像: 20260915T171254-9271.out.gz   时长: 40分57秒   原始大小: 566B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-
+-- [0分13秒] --
+Vi
+rtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ m!m make fs
+[sudo] ailab-os 的密码： 
+
+-- [40分57秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ 
+exit
+

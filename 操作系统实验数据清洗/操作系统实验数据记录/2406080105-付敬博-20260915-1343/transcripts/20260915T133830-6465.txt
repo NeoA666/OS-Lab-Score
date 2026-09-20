@@ -1,0 +1,1168 @@
+==== labtracker 终端转录 ====
+录像: 20260915T133830-6465.out.gz   时长: 7小时7分15秒   原始大小: 25848B
+==================================================
+-- [开始] --
+fu@fu-VMware-Virtual-Platform:~/xv6/xv6-ai-labs-km-无答案/lab0$ 
+-- [0分05秒] --
+m
+-- [0分10秒] --
+a
+-- [0分14秒] --
+k
+-- [0分19秒] --
+e
+
+-- [0分29秒] --
+b
+-- [0分35秒] --
+u
+-- [0分41秒] --
+i
+-- [0分48秒] --
+l
+-- [0分54秒] --
+d
+
+-- [1分01秒] --
+666;vte.shell.preexec!
+
+-- [1分23秒] --
+riscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/printf.o kernel/printf.c
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/kalloc.o kernel/kalloc.c
+
+-- [1分31秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/intr.o kernel/intr.c
+
+-- [1分39秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/spinlock.o kernel/spinlock.c
+
+-- [1分47秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/string.o kernel/string.c
+
+-- [1分55秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/main.o kernel/main.c
+
+-- [2分03秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/vm.o kernel/vm.c
+
+-- [2分12秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/proc.o kernel/proc.c
+
+-- [2分22秒] --
+riscv64-unknown-elf-gcc    -c -o kernel/swtch.o kernel/swtch.S
+
+-- [2分31秒] --
+riscv64-unknown-elf-gcc    -c -o kernel/trampoline.o kernel/trampoline.S
+
+-- [2分41秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/trap.o kernel/trap.c
+
+-- [2分50秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/syscall.o kernel/syscall.c
+
+-- [3分00秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/sysproc.o kernel/sysproc.c
+
+-- [3分10秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/bio.o kernel/bio.c
+
+-- [3分21秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/sleeplock.o kernel/sleeplock.c
+
+-- [3分31秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/file.o kernel/file.c
+
+-- [3分42秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/pipe.o kernel/pipe.c
+
+-- [3分53秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/exec.o kernel/exec.c
+
+-- [4分04秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/sysfile.o kernel/sysfile.c
+
+-- [4分15秒] --
+riscv64-unknown-elf-gcc    -c -o kernel/kernelvec.o kernel/kernelvec.S
+
+-- [4分27秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/timer.o kernel/timer.c
+
+-- [4分38秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/disk.o kernel/disk.c
+
+-- [4分50秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/fat32.o kernel/fat32.c
+
+-- [5分03秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/plic.o kernel/plic.c
+
+-- [5分15秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/console.o kernel/console.c
+
+-- [5分28秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/virtio_disk.o kernel/virtio_disk.c
+
+-- [5分41秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU -march=rv64g -nostdinc -I. -Ikernel -c xv6-user/initcode.S -o xv6-user/initcode.o
+
+-- [5分54秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e start -Ttext 0 -o xv6-user/initcode.out xv6-user/initcode.o
+
+-- [6分07秒] --
+riscv64-unknown-elf-ld: warning: 
+-- [6分21秒] --
+xv6-user/initcode.out has a LOAD segment with RWX permissions
+
+-- [6分34秒] --
+riscv64-unknown-elf-objcopy -S -O binary xv6-user/initcode.out xv6-user/initcode
+
+-- [6分47秒] --
+riscv64-unknown-elf-objdump -S xv6-user/initcode.o > xv6-user/initcode.asm
+
+-- [7分00秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/ulib.o xv6-user/ulib.c
+
+-- [7分14秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU -c -o xv6-user/usys.o xv6-user/usys.S
+
+-- [7分28秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/printf.o xv6-user/printf.c
+
+-- [7分42秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/umalloc.o xv6-user/umalloc.c
+
+-- [7分56秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/init.o xv6-user/init.c
+
+-- [8分10秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_init xv6-user/init.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [8分25秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_init has a LOAD segment with RWX permissions
+
+-- [8分39秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_init > xv6-user/init.asm
+
+-- [8分53秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_init | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/init.sym
+
+-- [9分08秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/sh.o xv6-user/sh.c
+
+-- [9分22秒] --
+xv6-user/sh.c: In function 'runcmd':
+xv6-user/sh.c:157:1: warning: infinite recursion detected [-Winfinite-recursion]
+  157 | runcmd(struct cmd *cmd)
+      | ^~~~~~
+
+-- [9分37秒] --
+xv6-user/sh.c:205:5: note: recursive call
+  205 |     runcmd(rcmd->cmd);
+      |     ^~~~~~~~~~~~~~~~~
+xv6-user/sh.c:225:7: note: recursive call
+  225 |       runcmd(pcmd->left);
+      |       ^~~~~~~~~~~~~~~~~~
+xv6-user/sh.c:232:7: note: recursive call
+  232 |       runcmd(pcmd->right);
+      |       ^~~~~~~~~~~~~~~~~~~
+xv6-user/sh.c:211:7: note: recursive call
+  211 |       runcmd(lcmd->left);
+      |       ^~~~~~~~~~~~~~~~~~
+xv6-user/sh.c:213:5: note: recursive call
+  213 |     runcmd(lcmd->right);
+      |     ^~~~~~~~~~~~~~~~~~~
+xv6-user/sh.c:243:7: note: recursive call
+  243 |       runcmd(bcmd->cmd);
+      |       ^~~~~~~~~~~~~~~~~
+
+-- [9分51秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_sh xv6-user/sh.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [10分06秒] --
+riscv64-unknown-elf-ld: warning: 
+-- [10分21秒] --
+xv6-user/_sh has a LOAD segment with RWX permissions
+
+-- [10分36秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_sh > xv6-user/sh.asm
+
+-- [10分51秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_sh | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/sh.sym
+
+-- [11分06秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/cat.o xv6-user/cat.c
+
+-- [11分21秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_cat xv6-user/cat.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [11分36秒] --
+riscv64-unknown-elf-ld: warning: 
+-- [11分51秒] --
+xv6-user/_cat
+-- [12分06秒] --
+ has a LOAD segment with RWX permissions
+
+-- [12分21秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_cat > xv6-user/cat.asm
+
+-- [12分36秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_cat | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/cat.sym
+
+-- [12分51秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/echo.o xv6-user/echo.c
+
+-- [13分07秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_echo xv6-user/echo.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [13分22秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_echo has a LOAD segment with RWX permissions
+
+-- [13分37秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_echo > xv6-user/echo.asm
+
+-- [13分53秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_echo | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/echo.sym
+
+-- [14分08秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/grep.o xv6-user/grep.c
+
+-- [14分24秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_grep xv6-user/grep.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [14分39秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_grep has a LOAD segment with RWX permissions
+
+-- [14分55秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_grep > xv6-user/grep.asm
+
+-- [15分10秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_grep | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/grep.sym
+
+-- [15分26秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/ls.o xv6-user/ls.c
+
+-- [15分42秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_ls xv6-user/ls.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [15分58秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_ls has a LOAD segment with RWX permissions
+
+-- [16分14秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_ls > xv6-user/ls.asm
+
+-- [16分29秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_ls | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/ls.sym
+
+-- [16分45秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/kill.o xv6-user/kill.c
+
+-- [17分01秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_kill xv6-user/kill.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [17分17秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_kill has a LOAD segment with RWX permissions
+
+-- [17分33秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_kill > xv6-user/kill.asm
+
+-- [17分49秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_kill | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/kill.sym
+
+-- [18分06秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/mkdir.o xv6-user/mkdir.c
+
+-- [18分22秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_mkdir xv6-user/mkdir.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [18分38秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_mkdir has a LOAD segment with RWX permissions
+
+-- [18分54秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_mkdir > xv6-user/mkdir.asm
+
+-- [19分11秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_mkdir | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/mkdir.sym
+
+-- [19分27秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/xargs.o xv6-user/xargs.c
+
+-- [19分43秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_xargs xv6-user/xargs.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [20分00秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_xargs has a LOAD segment with RWX permissions
+
+-- [20分16秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_xargs > xv6-user/xargs.asm
+
+-- [20分33秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_xargs | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/xargs.sym
+
+-- [20分49秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/sleep.o xv6-user/sleep.c
+
+-- [21分06秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_sleep xv6-user/sleep.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [21分23秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_sleep has a LOAD segment with RWX permissions
+
+-- [21分39秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_sleep > xv6-user/sleep.asm
+
+-- [21分56秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_sleep | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/sleep.sym
+
+-- [22分13秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/find.o xv6-user/find.c
+
+-- [22分30秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_find xv6-user/find.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [22分47秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_find has a LOAD segment with RWX permissions
+
+-- [23分04秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_find > xv6-user/find.asm
+
+-- [23分21秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_find | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/find.sym
+
+-- [23分38秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/rm.o xv6-user/rm.c
+
+-- [23分55秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_rm xv6-user/rm.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [24分12秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_rm has a LOAD segment with RWX permissions
+
+-- [24分29秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_rm > xv6-user/rm.asm
+
+-- [24分46秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_rm | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/rm.sym
+
+-- [25分03秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/wc.o xv6-user/wc.c
+
+-- [25分21秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_wc xv6-user/wc.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [25分38秒] --
+riscv64-unknown-elf-ld: warning: 
+-- [25分56秒] --
+xv6-user/_wc has a LOAD segment with RWX permissions
+
+-- [26分30秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_wc > xv6-user/wc.asm
+
+-- [26分48秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_wc | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/wc.sym
+
+-- [27分05秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/test.o xv6-user/test.c
+
+-- [27分23秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_test xv6-user/test.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [27分40秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_test has a LOAD segment with RWX permissions
+
+-- [27分58秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_test > xv6-user/test.asm
+
+-- [28分16秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_test | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/test.sym
+
+-- [28分33秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/usertests.o xv6-user/usertests.c
+
+-- [28分52秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_usertests xv6-user/usertests.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [29分11秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_usertests has a LOAD segment with RWX permissions
+
+-- [29分30秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_usertests > xv6-user/usertests.asm
+
+-- [29分48秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_usertests | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/usertests.sym
+
+-- [30分07秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/strace.o xv6-user/strace.c
+
+-- [30分26秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_strace xv6-user/strace.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [30分45秒] --
+riscv64-unknown-elf-ld: warning: xv6-user/_strace has a LOAD segment with RWX permissions
+
+-- [31分04秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_strace > xv6-user/strace.asm
+
+-- [31分23秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_strace | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/strace.sym
+
+-- [31分42秒] --
+riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/mv.o xv6-user/mv.c
+
+-- [32分01秒] --
+riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_mv xv6-user/mv.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o
+
+-- [32分20秒] --
+riscv64-unknown-elf-ld: warning: 
+-- [32分39秒] --
+xv6-user/_mv
+-- [32分59秒] --
+ has a LOAD segment with RWX permissions
+
+-- [33分18秒] --
+riscv64-unknown-elf-objdump -S xv6-user/_mv > xv6-user/mv.asm
+
+-- [33分37秒] --
+riscv64-unknown-elf-objdump -t xv6-user/_mv | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/mv.sym
+
+-- [33分57秒] --
+fu@fu-VMware-Virtual-Platform:~/xv6/xv6-ai-labs-km-无答案/lab0$ 
+-- [34分34秒] --
+m
+-- [35分11秒] --
+a
+-- [35分48秒] --
+k
+-- [36分26秒] --
+e
+
+-- [37分43秒] --
+f
+-- [38分22秒] --
+s
+
+-- [39分01秒] --
+666;vte.shell.preexec!
+
+-- [52分20秒] --
+making fs image...
+512+0 records in
+512+0 records out
+268435456 bytes (268 MB, 256 MiB) copied, 1.07668 s, 249 MB/s
+mkfs.fat 4.2 (2021-01-31)
+[sudo: authenticate] 密码： ***********           
+
+-- [53分11秒] --
+fu@fu-VMware-Virtual-Platform:~/xv6/xv6-ai-labs-km-无答案/lab0$ 
+-- [54分06秒] --
+m
+-- [55分02秒] --
+a
+-- [55分57秒] --
+k
+-- [56分53秒] --
+e
+
+-- [58分45秒] --
+r
+-- [59分42秒] --
+u
+-- [1小时0分39秒] --
+n
+
+-- [1小时1分37秒] --
+666;vte.shell.preexec!
+
+-- [1小时51分14秒] --
+OpenSBI v1.8
+   ____                    _____ ____ _____
+  / __ \                  / ____|  _ \_   _|
+ | |  | |_ __   ___ _ __ | (___ | |_) || |
+ | |  | | '_ \ / _ \ '_ \ \___ \|  _ < | |
+ | |__| | |_) |  __/ | | |____) | |_) || |_
+  \____/| .__/ \___|_| |_|_____/|____/_____|
+        | |
+        |_|
+
+Platform Name               : riscv-virtio,qemu
+Platform Features           : medeleg
+Platform HART Count         : 2
+Platform HART Protection    : pmp
+Platform IPI Device         : ac
+-- [1小时52分12秒] --
+lint-mswi
+P
+-- [1小时53分11秒] --
+l
+-- [1小时54分09秒] --
+a
+-- [1小时55分07秒] --
+tform Timer Device       : 
+-- [1小时56分06秒] --
+aclint-
+-- [1小时57分04秒] --
+mtimer @ 10000000Hz
+P
+-- [1小时58分03秒] --
+latform Console De
+-- [1小时59分01秒] --
+vice     : uar
+-- [2小时0分00秒] --
+t8250
+P
+-- [2小时0分58秒] --
+latf
+-- [2小时1分56秒] --
+orm HSM Devi
+-- [2小时2分55秒] --
+ce         : ---
+
+-- [2小时3分53秒] --
+P
+-- [2小时4分52秒] --
+latform PMU Device         : ---
+P
+-- [2小时5分50秒] --
+latform Reboot Device      : syscon-reboot
+Platform Shutdown Device    : syscon-poweroff
+Platform Suspend Device     : ---
+Platform CPPC Device        : ---
+Firmware Base
+
+-- [2小时7分47秒] --
+              : 
+-- [2小时8分45秒] --
+0x80000000
+F
+-- [2小时9分44秒] --
+irmw
+-- [2小时10分42秒] --
+are Si
+-- [2小时11分41秒] --
+ze            
+-- [2小时12分39秒] --
+   : 333 KB
+F
+-- [2小时13分37秒] --
+irmware
+-- [2小时14分36秒] --
+ RW Offset     
+-- [2小时15分34秒] --
+     : 0x
+-- [2小时16分33秒] --
+4
+-- [2小时17分31秒] --
+0000
+F
+-- [2小时18分30秒] --
+irmware RW Siz
+-- [2小时19分28秒] --
+e         
+-- [2小时20分26秒] --
+   : 7
+-- [2小时21分25秒] --
+7 KB
+F
+-- [2小时22分23秒] --
+irmware Heap 
+-- [2小时23分22秒] --
+Offset      
+-- [2小时24分20秒] --
+  : 0x490
+-- [2小时25分18秒] --
+00
+F
+-- [2小时26分17秒] --
+i
+-- [2小时27分15秒] --
+rmware He
+-- [2小时28分14秒] --
+ap
+-- [2小时29分12秒] --
+ Size      
+-- [2小时30分11秒] --
+    : 41 KB (t
+-- [2小时31分09秒] --
+otal), 0 K
+-- [2小时32分07秒] --
+B (reser
+-- [2小时33分06秒] --
+ved), 12 KB (u
+-- [2小时34分04秒] --
+sed), 27 KB 
+-- [2小时35分03秒] --
+(free)
+F
+-- [2小时36分01秒] --
+ir
+-- [2小时37分00秒] --
+mware Scratch Size       : 4096 B (total), 1464 B (used), 2632 B (free)
+Runtime SBI Version       
+-- [2小时37分58秒] --
+  : 3.0
+S
+-- [2小时38分57秒] --
+ta
+-- [2小时39分55秒] --
+nd
+-- [2小时40分53秒] --
+ard SBI Extensions   
+-- [2小时41分52秒] --
+  : ipi,pmu
+-- [2小时42分50秒] --
+,srst,sse,hs
+-- [2小时43分49秒] --
+m,rfnc,fwf
+-- [2小时44分47秒] --
+t,time,base,
+-- [2小时45分46秒] --
+legacy,dbc
+-- [2小时46分44秒] --
+n,dbtr
+E
+-- [2小时47分42秒] --
+xp
+-- [2小时48分41秒] --
+er
+-- [2小时49分39秒] --
+imental S
+-- [2小时50分38秒] --
+BI Extension
+-- [2小时51分36秒] --
+s 
+-- [2小时52分35秒] --
+: none
+
+-- [2小时53分33秒] --
+D
+-- [2小时54分32秒] --
+omain
+-- [2小时55分30秒] --
+0
+-- [2小时56分28秒] --
+ Name        
+-- [2小时57分27秒] --
+        : root
+Domain0 Boot HART           : 0
+Domain0 HARTs    
+-- [2小时58分25秒] --
+           : 0
+-- [2小时59分24秒] --
+*,
+-- [3小时0分22秒] --
+1*
+
+-- [3小时1分21秒] --
+D
+-- [3小时2分19秒] --
+o
+-- [3小时3分18秒] --
+ma
+-- [3小时4分16秒] --
+in
+-- [3小时5分14秒] --
+0 Region00  
+-- [3小时6分13秒] --
+          : 
+-- [3小时7分11秒] --
+0x000000008004
+-- [3小时8分10秒] --
+0000-0
+-- [3小时9分08秒] --
+x00000000800
+-- [3小时10分07秒] --
+5ffff M: (
+-- [3小时11分05秒] --
+F,
+-- [3小时12分04秒] --
+R,W
+-- [3小时13分02秒] --
+) S/
+-- [3小时14分00秒] --
+U: ()
+
+-- [3小时14分59秒] --
+Domain0 Region
+-- [3小时15分57秒] --
+01           
+-- [3小时16分56秒] --
+ : 0x0000000080
+-- [3小时17分54秒] --
+000000-0x000000008003ffff M: (F,R,X) S/U: ()
+Domain0 Region02            : 0x000000
+-- [3小时18分53秒] --
+000010000
+-- [3小时19分51秒] --
+0-
+-- [3小时20分50秒] --
+0x0000000000100f
+-- [3小时21分48秒] --
+ff M: (I,
+-- [3小时22分47秒] --
+R,W) S/U: (R,W)
+
+-- [3小时23分45秒] --
+Domain0 Region03  
+-- [3小时24分43秒] --
+          : 0
+-- [3小时25分42秒] --
+x00000000100
+-- [3小时26分40秒] --
+00000-0x0000
+-- [3小时27分39秒] --
+000010000fff M: (I,R,W) S/U: (R,W)
+Domain0 Region04 
+
+-- [3小时29分36秒] --
+          : 0x000000000
+-- [3小时30分34秒] --
+2000000-0x000000
+-- [3小时31分33秒] --
+000200ffff M:
+-- [3小时32分31秒] --
+ (I,R,
+-- [3小时33分30秒] --
+W) S
+-- [3小时34分28秒] --
+/U: ()
+
+-- [3小时35分27秒] --
+Domain0 Reg
+-- [3小时36分25秒] --
+ion05        
+-- [3小时37分24秒] --
+    : 0x0000
+-- [3小时38分22秒] --
+00000c400000-0x000000000c5fffff M: (I,R,W) S/U
+-- [3小时39分20秒] --
+: (R,W)
+
+-- [3小时40分19秒] --
+Domain0 Regi
+-- [3小时41分17秒] --
+on06 
+-- [3小时42分16秒] --
+           : 
+-- [3小时43分14秒] --
+0x000000000c
+-- [3小时44分13秒] --
+000000-0x000
+-- [3小时45分11秒] --
+000000c3fffff M: (
+-- [3小时46分10秒] --
+I,R,W) S/U: (
+-- [3小时47分08秒] --
+R,W)
+D
+-- [3小时48分07秒] --
+omain0 Reg
+-- [3小时49分05秒] --
+ion07    
+-- [3小时50分04秒] --
+        : 0x00
+-- [3小时51分02秒] --
+00000000000000-
+-- [3小时52分01秒] --
+0xffffffffffffff
+-- [3小时52分59秒] --
+ff M: (
+-- [3小时53分58秒] --
+) S
+-- [3小时54分56秒] --
+/U
+-- [3小时55分54秒] --
+: (R,W,X
+-- [3小时56分53秒] --
+)
+Do
+-- [3小时57分51秒] --
+main0 Next Ad
+-- [3小时58分50秒] --
+dr
+-- [3小时59分48秒] --
+es
+-- [4小时0分47秒] --
+s 
+-- [4小时1分45秒] --
+       : 0x000000008020000
+-- [4小时2分44秒] --
+0
+Domain0 Next Arg
+-- [4小时3分42秒] --
+1           : 0x0
+-- [4小时4分41秒] --
+000000087e0
+-- [4小时5分39秒] --
+0000
+Doma
+-- [4小时6分38秒] --
+in0 Next Mode   
+-- [4小时7分36秒] --
+        : S
+-- [4小时8分35秒] --
+-mode
+D
+-- [4小时9分33秒] --
+o
+-- [4小时10分32秒] --
+main0 SysReset  
+-- [4小时11分30秒] --
+          : yes
+
+-- [4小时12分29秒] --
+Dom
+-- [4小时13分27秒] --
+ain0 SysSuspend  
+-- [4小时14分26秒] --
+        : ye
+-- [4小时15分24秒] --
+s
+
+B
+-- [4小时16分23秒] --
+oot H
+-- [4小时17分21秒] --
+AR
+-- [4小时18分20秒] --
+T 
+-- [4小时19分18秒] --
+ID           
+-- [4小时20分17秒] --
+     : 0
+B
+-- [4小时21分15秒] --
+oot HAR
+-- [4小时22分14秒] --
+T
+
+-- [4小时24分11秒] --
+D
+-- [4小时25分09秒] --
+o
+-- [4小时26分08秒] --
+m
+-- [4小时27分06秒] --
+ai
+-- [4小时28分05秒] --
+n       
+
+-- [4小时30分02秒] --
+   : root
+B
+-- [4小时31分00秒] --
+o
+-- [4小时31分59秒] --
+o
+-- [4小时32分57秒] --
+t
+-- [4小时33分55秒] --
+ HART Pr
+-- [4小时34分54秒] --
+iv
+-- [4小时35分52秒] --
+ Versio
+-- [4小时36分51秒] --
+n      : v1.12
+B
+-- [4小时37分49秒] --
+o
+-- [4小时38分48秒] --
+o
+-- [4小时39分46秒] --
+t
+-- [4小时40分45秒] --
+ HART Base ISA          : rv
+-- [4小时41分43秒] --
+6
+-- [4小时42分42秒] --
+4imafdch
+B
+-- [4小时43分40秒] --
+oot H
+-- [4小时44分39秒] --
+ART ISA E
+-- [4小时45分37秒] --
+x
+-- [4小时46分36秒] --
+tensions    : s
+-- [4小时47分35秒] --
+stc,zicntr,zihpm,z
+-- [4小时48分33秒] --
+icboz,zicbom
+-- [4小时49分32秒] --
+,sdtrig,sva
+-- [4小时50分30秒] --
+du
+B
+-- [4小时51分29秒] --
+oot HART PMP Count         : 
+-- [4小时52分27秒] --
+16
+Bo
+-- [4小时53分26秒] --
+ot HART PM
+-- [4小时54分24秒] --
+P Granularity
+-- [4小时55分23秒] --
+   : 2 bits
+Boot HART PMP Address Bits  : 54
+Boot HART MHPM Info         : 16 (0x0007fff8)
+Boot HART Debug Triggers    : 2 triggers
+
+-- [4小时56分21秒] --
+B
+-- [4小时57分20秒] --
+o
+-- [4小时58分18秒] --
+o
+-- [4小时59分17秒] --
+t HART MIDELEG           : 0x0000000000001666
+Boot HAR
+-- [5小时0分15秒] --
+T MEDELEG     
+-- [5小时1分14秒] --
+      : 0x000000
+-- [5小时2分12秒] --
+0000f4b509
+
+-- [5小时5分08秒] --
+(
+-- [5小时6分06秒] --
+`-
+-- [5小时7分05秒] --
+.
+-- [5小时8分03秒] --
+            (`-.                            .-')       ('-
+-- [5小时9分02秒] --
+.    _
+-- [5小时10分00秒] --
+   .-')
+
+-- [5小时10分59秒] --
+(
+-- [5小时11分57秒] --
+ O
+-- [5小时12分56秒] --
+O
+
+-- [5小时14分53秒] --
+)
+-- [5小时15分52秒] --
+.      
+-- [5小时16分50秒] --
+  _(O
+-- [5小时17分49秒] --
+O  )_ 
+
+-- [5小时20分44秒] --
+       .( 
+-- [5小时21分43秒] --
+ OO)  
+-- [5小时22分41秒] --
+  _(
+
+-- [5小时24分38秒] --
+ OO)  ( 
+-- [5小时25分37秒] --
+'.( OO )
+-- [5小时26分35秒] --
+_ 
+(
+-- [5小时27分34秒] --
+_/. 
+-- [5小时28分32秒] --
+ \_)-. ,--(_/   ,. \ 
+-- [5小时29分31秒] --
+ ,--.  
+
+-- [5小时31分28秒] --
+      (_)
+-- [5小时32分27秒] --
+--
+-- [5小时33分25秒] --
+-\_)  (
+-- [5小时34分24秒] --
+,------.  ,--
+-- [5小时35分22秒] --
+.   ,--.) ,--.
+-- [5小时36分21秒] --
+ ,--.  
+
+-- [5小时37分19秒] --
+\  `.' 
+-- [5小时38分18秒] --
+ /  \  
+-- [5小时39分16秒] --
+ \ 
+-- [5小时40分15秒] --
+  /(__
+-- [5小时41分13秒] --
+/ /  .'       .-') 
+-- [5小时42分12秒] --
+    '  
+-- [5小时43分11秒] --
+.-.  '  
+-- [5小时44分09秒] --
+ |  .---'  |   `.'   |  |
+-- [5小时45分08秒] --
+  | |
+-- [5小时46分06秒] --
+  |   
+
+-- [5小时47分05秒] --
+ \   
+-- [5小时48分03秒] --
+  /\   \
+-- [5小时49分02秒] --
+   \ / 
+-- [5小时50分00秒] --
+  / . 
+-- [5小时50分59秒] --
+ / -.    
+-- [5小时51分58秒] --
+_(  OO)
+-- [5小时52分56秒] --
+   ,|
+-- [5小时53分55秒] --
+  |
+-- [5小时54分53秒] --
+ |  |  
+-- [5小时55分52秒] --
+ |  | 
+
+-- [5小时57分49秒] --
+    | 
+
+-- [6小时2分42秒] --
+|  |  | |
+-- [6小时3分40秒] --
+ .-')
+
+-- [6小时4分39秒] --
+   \ 
+-- [6小时5分37秒] --
+  \ | 
+-- [6小时6分36秒] --
+   \   '
+-- [6小时7分34秒] --
+   /, | .-.  
+-- [6小时8分33秒] --
+'  (,--
+-- [6小时9分31秒] --
+----. 
+-- [6小时10分30秒] --
+(_|  | |  |  (|  '--.   |  |'.'|  |  |  |_|( OO )
+
+-- [6小时12分27秒] --
+.'   
+-- [6小时13分26秒] --
+ \_)    \
+-- [6小时14分24秒] --
+     /_
+-- [6小时15分23秒] --
+_)' \ 
+-- [6小时16分21秒] --
+ |  |  
+-- [6小时17分20秒] --
+'-----
+-- [6小时18分19秒] --
+-'   |  |
+-- [6小时19分17秒] --
+ |  |  
+-- [6小时20分16秒] --
+ |  .--
+-- [6小时21分14秒] --
+'   |  
+-- [6小时22分13秒] --
+|   | 
+-- [6小时23分11秒] --
+ |  |  | | `-' /
+
+-- [6小时24分10秒] --
+ /  
+-- [6小时25分09秒] --
+.'.  \   
+-- [6小时26分07秒] --
+   \   
+-- [6小时27分06秒] --
+/    
+-- [6小时28分04秒] --
+\  `' 
+-- [6小时29分03秒] --
+ /    
+
+-- [6小时31分00秒] --
+     ' 
+-- [6小时31分58秒] --
+ '-'  '-. |  `---.  |  |   |  | ('  '-'(_.-'
+'--'   '--
+-- [6小时32分57秒] --
+'      
+-- [6小时33分56秒] --
+`-
+-- [6小时34分54秒] --
+'    
+-- [6小时35分53秒] --
+  `----
+-- [6小时36分51秒] --
+'      
+-- [6小时37分50秒] --
+          `----
+-- [6小时38分49秒] --
+-'--' `----
+-- [6小时39分47秒] --
+--'  `-
+-- [6小时40分46秒] --
+-
+-- [6小时41分44秒] --
+'   `
+-- [6小时42分43秒] --
+--'   `
+-- [6小时43分41秒] --
+-----'
+
+-- [6小时44分40秒] --
+h
+-- [6小时45分39秒] --
+a
+-- [6小时46分37秒] --
+r
+-- [6小时47分36秒] --
+t
+-- [6小时48分35秒] --
+ 0 
+-- [6小时49分33秒] --
+init done
+
+-- [6小时51分31秒] --
+i
+-- [6小时52分30秒] --
+n
+-- [6小时53分29秒] --
+i
+-- [6小时54分28秒] --
+t
+-- [6小时55分27秒] --
+:
+-- [6小时56分26秒] --
+ s
+-- [6小时57分25秒] --
+ta
+-- [6小时58分24秒] --
+rti
+-- [6小时59分23秒] --
+ng
+-- [7小时0分22秒] --
+ s
+-- [7小时1分21秒] --
+h
+
+-- [7小时3分19秒] --
+-
+-- [7小时4分18秒] --
+>
+
+-- [7小时6分16秒] --
+/ 
+-- [7小时7分15秒] --
+$ 

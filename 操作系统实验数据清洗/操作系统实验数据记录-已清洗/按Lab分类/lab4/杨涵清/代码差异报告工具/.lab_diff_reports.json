@@ -1,8 +1,0 @@
-{
-  "tool": "generate_lab_diff_reports",
-  "schema_version": 1,
-  "source": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录\\2406080118-杨涵清-20260917-1729",
-  "artifacts": [
-    "代码差异报告.md"
-  ]
-}

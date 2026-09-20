@@ -1,0 +1,14 @@
+==== labtracker 终端转录 ====
+录像: 20260911T153205-4727.out.gz   时长: 0分30秒   原始大小: 465B
+==================================================
+
+-- [开始] --
+ailab-o
+s@ailab-
+os-VMware-Virtual-Platform:~$ ;'make biulild'
+make build：未找到命令
+
+-- [0分30秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

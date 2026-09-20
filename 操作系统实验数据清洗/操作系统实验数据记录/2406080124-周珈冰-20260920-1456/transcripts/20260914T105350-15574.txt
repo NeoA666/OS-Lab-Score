@@ -1,0 +1,100 @@
+==== labtracker 终端转录 ====
+录像: 20260914T105350-15574.out.gz   时长: 17分50秒   原始大小: 3898B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platfor
+m:~$ ^[[200~riscv64-unknown-elf-gcc --version~
+riscv64-unknown-elf-gcc：未找到命令
+
+-- [0分13秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform
+:
+~
+$ riscv64-unknown-elf-gcc --versionriscv64-unknown-elf-gcc --version
+riscv64-unknown-elf-gcc (13.2.0-11ubuntu1+12) 13.2.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+This is free software; see the
+ source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+-- [0分39秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform
+:~$ qemu-system-riscv64 --version
+qemu-system-riscv64 --version
+QEMU emul
+ator version 8.2.2 (Debian 1:8.2.2+ds-0ubuntu1.17)
+Copyright (c) 2003-2023 Fabrice Bellard and the QEMU Project developers
+
+-- [1分06秒] --
+ailab-os@ailab-o
+s-VMware
+~
+cd：未找到命令
+
+ailab-os@ailab-os-VMware-Virtua
+l-Platform:~$ cd /path/to/xv6-ai-labs/lab0
+cd /path/to/xv6-ai-labs/lab0
+bash: cd: /path/to/xv6-ai-labs/lab0: 没有那个文件或目录
+
+-- [1分21秒] --
+a
+ilab-os@ailab-os-VMware-Virtual-Platform:~$ cd lab0
+bash: cd: lab0: 没有那个文件或目录
+
+-- [1分54秒] --
+ailab-os@ailab-os-VMware-Vir
+tual-Platform:~$ cd /桌面/xv6-ai-labs/lab0
+
+cd /桌面/xv6-ai-labs/lab0
+bash: cd: /桌面/xv6-ai-labs/lab0: 没有那个文件或目录
+
+-- [2分48秒] --
+ailab-os@aila
+b-os-VMw
+are-Virtual-Platform:~$ ^[[200~cd /桌面/xv6-ai-labs/lab0~
+cd：未找到命令
+
+-- [2分51秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ cd /桌面/xv6-ai-labs/lab0
+
+cd /桌面/xv6-ai-labs/lab0
+bash: cd: /桌面/xv6-ai-labs/lab0: 没有那个文件或目录
+
+-- [3分50秒] --
+ailab-os@ailab-os-VMware-Vir
+tual-Plat
+form:~$ cd /桌面/xv6-ai-labs/lab0
+cd /桌面/xv6-ai-labs/lab0
+bash: cd: /桌面/xv6-ai-labs/lab0: 没有那个文件或目录
+
+-- [4分02秒] --
+ailab-os@ailab-os-VMware-Virt
+ual-
+Plat
+form
+
+-- [4分06秒] --
+:
+
+-- [4分11秒] --
+~$ 
+cd /桌面/xv6-ai-labs/lab0cd /
+桌面/xv6-ai-labs/lab-km/lab0
+bash: cd: /桌面/xv6-ai-labs-km/lab0: 没有那个文件或目录
+
+-- [4分32秒] --
+ailab-os@ailab-os-VMware-Vi
+rtual-Pl
+atform:~$ cd /zhuo桌面
+bash: cd: /桌面: 没有那个文件或目录
+
+-- [4分41秒] --
+ailab-os@ailab-os-V
+Mware-Virtual-Platform:~$ cd /主文件夹
+bash: cd: /主文件夹: 没有那个文件或目录
+
+-- [17分50秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

@@ -1,0 +1,72 @@
+==== labtracker 终端转录 ====
+录像: 20260916T184527-20331.out.gz   时长: 2分22秒   原始大小: 1783B
+==================================================
+
+-- [开始] --
+a
+i
+l
+a
+b
+-
+o
+s
+@ai
+lab-o
+s-VMw
+-- [0分35秒] --
+are
+-Vi
+rtu
+al-
+Pla
+tfo
+rm
+
+:
+
+-- [0分44秒] --
+~
+/
+�
+�
+�
+�
+-- [0分48秒] --
+�
+�
+/
+-- [0分52秒] --
+x
+v
+6
+-
+a
+-- [0分55秒] --
+i
+-
+l
+-- [0分58秒] --
+a
+b
+-- [1分02秒] --
+s
+-km/lab1
+tstic inline"a kernel/include/sbi.h
+43:static inline void sbi_console_putchar(int ch)
+48:static inline int sbi_console_getchar(void)
+53:static inline void sbi_set_timer(uint64 stime_value)
+58:static inline void sbi_shutdown(void)
+63:static inline void sbi_clear_ipi(void)
+68:static inline void sbi_send_ipi(const unsigned long *hart_mask)
+73:static inline void sbi_remote_fence_i(const unsigned long *hart_mask)
+78:static inline void sbi_remote_sfence_vma(const unsigned long *hart_mask,
+85:static inline void sbi_remote_sfence_vma_asid(const unsigned long *hart_mask,
+93:static inline void sbi_set_extern_inter
+rupt(unsigned long func_pointer) {
+98:static inline void sbi_set_mie(void) {
+
+-- [2分22秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab1$ 
+exit
+

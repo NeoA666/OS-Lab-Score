@@ -1,0 +1,15 @@
+==== labtracker 终端转录 ====
+录像: 20260915T205856-4443.out.gz   时长: 0分15秒   原始大小: 512B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform:
+~$
+ codex
+找不到命令 “codex”，但可以通过以下软件包安装它：
+sudo snap install codex
+
+-- [0分15秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

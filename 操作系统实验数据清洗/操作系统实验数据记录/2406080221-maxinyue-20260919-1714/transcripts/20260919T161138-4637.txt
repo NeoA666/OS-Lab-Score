@@ -1,0 +1,1265 @@
+==== labtracker 终端转录 ====
+录像: 20260919T161138-4637.out.gz   时长: 50分20秒   原始大小: 60819B
+==================================================
+
+-- [开始] --
+ailab-os@ailab
+-os-VMwa
+re-Virtual-Platform:~/桌面/xv6-ai-labs-km$ ^[[200~cd /tmp
+cd：未找到命令
+
+a
+il
+ab-os@ailab-os-VMware-Virtual-P
+la
+tform
+:
+
+~/桌面/xv6-ai-labs-
+km
+$ ca
+t > hell
+o.
+c
+ <
+<'EOF'
+
+> int add3
+(int a, in
+t b, int c) {
+
+-- [0分18秒] --
+>     retu
+rn a + b + c;
+
+> }
+> EOF~
+> 
+
+> 
+> 
+cd /tmp
+cat > 
+-- [0分22秒] --
+hello.c <<'EOF'
+
+int add3(int a, int b, int c) {
+    return a + b + c;
+}
+EOF
+cd /tmp
+cat > hello.c <<'EOF'
+int add3(int a, int b, int c) {
+    return a + b + c;
+}
+EOF
+
+-- [0分28秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km$ cd /tmp
+cat > 
+hello.c <<'EOF'
+int add3(int a, int b, int c) {
+    return a + b + c;
+}
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-
+labs-km$ cd /tmp
+cat > hello.c <<'EOF'
+int add3(int a, int b, int c) {
+    return a + b + c;
+}
+EOF
+
+-- [0分40秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:/tmp$ 
+ailab-os@ailab-os-VMware-Virtual-Platform:/tmp$ 
+
+-- [0分43秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:/tmp$ cd /tmp
+cat > 
+hello.c <<'EOF'
+int add3(int a, int b, int c) {
+    return a + b + c;
+}
+ailab-os@ailab-os-VMware-Virtual-Platform:
+/tmp$ cd /tmp
+cat > hello.c <<'EOF'
+int add3(int a, int b, int c) {
+    return a + b + c;
+}
+EOF
+
+ailab-os@ailab-os-VMware-Virtual-Platform:/tmp$ 
+-- [0分47秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:/tmp$ 
+ailab-os@ailab-os-VMware-Virtual-Platform:/tmp$ 
+ailab-os@ailab-os-VMware-Virtual-Platform:/tmp$ 
+-- [1分00秒] --
+ail
+ab
+-os@ailab
+-os-VMware-Virtual-Platform:/tmp
+$ ^[[20
+0~riscv64-unknown-elf-gcc -O1 -c hello.c -o hello_rv.o~
+riscv64-unknown-elf-gcc：未找到命令
+
+-- [1分04秒] --
+ailab-os@ailab-os-VMw
+ailab
+-os@ailab-os-VMware-Virtual-Platform:/tmp$ riscv64-unknown-elf-gcc -O1 -c hello.c -o hello_rv.o
+
+-- [1分16秒] --
+ailab-os@a
+ilab-os-VMware-Virtual-Platform:/tmp$ riscv64-unknown-elf-objdump -d hello_rv.o
+ailab-os@ailab-os-VMware-Virtual-Platform:/tmp$ riscv64-unknown-elf-objdump -d hello_rv.o
+
+hello_rv.o:     file format elf64-littleriscv
+
+Disassembly of section .text:
+
+0000000000000000 <
+add3>:
+
+   0:	9d2d                	addw	a0,a0,a1
+   2:	9d31                	addw	a0,a0,a2
+   4:	8082                	ret
+
+-- [10分08秒] --
+ailab-os@ailab-o
+s-VMware-Virtual-Platform:/tmp$
+ ^[[200~
+riscv64-unknown-elf-gcc -O1 -march=rv64ima -c hello.c -o
+riscv64-unknown-elf-gcc：未找到命令
+
+ailab-o
+s@ailab-
+os-VMware-Virtual-Platform:/tmp$   hello_rv_full.o
+
+hello_rv_full.o：未找到命令
+
+ai
+lab-os@ailab-os-VMware-Virtual-Platform:/tmp$ ~
+bash: /home/ailab-os: 是一个目录
+
+-- [10分12秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:/tm
+p$ riscv64-unknown-elf-gcc -O1 -march=rv64ima -c hello.c -o
+  hello_rv_full.o
+
+-- [10分18秒] --
+riscv64-unknown-elf-gcc -O1 -march=rv64ima -c hello.c -o
+ hello_rv_full.o
+
+c
+c1:
+ error: requested ABI requires '-march' to subsume the 'D' extension
+
+-- [10分44秒] --
+ailab-os@ailab-os-VMware-
+ailab-os@
+ailab-os-VMware-Virtual-Platform:/tmp$ riscv64-unknown-elf-gcc -O1 -march=rv64ima -c hel
+lo.c -o
+riscv64-unknown-elf-gcc: error: missing filename after '-o'
+
+-- [11分54秒] --
+ailab-os@ailab-os-VMwa
+re-Virtual-Platform:/tmp$ riscv64-unknown-elf-gcc -O1 -march=rv64ima -c hello.c
+ailab-
+os@ailab-os-VMware-Virtual-Platform:/tmp$ riscv64-unknown-elf-gcc -O1 -march=rv64ima -c hello.c
+c
+c1:
+ error: requested ABI requires '-march' to subsume the 'D' extension
+
+-- [12分16秒] --
+ailab-os@ailab-os-VMware-Vi
+rtual-Platform:/tmp
+$ riscv64-unknown-elf-gcc -O1 -march=rv64ima -c hello.c \
+      -o hello_rv_full.o
+
+-- [12分24秒] --
+r
+iscv6
+4-unknown-elf-gcc -O1 -march=rv64ima -c hello.c \
+      -o hello_rv_full.o
+-o hello_rv_full.
+o
+
+c
+c1: error: requested ABI requires '-march' to subsume the 'D' extension
+
+-- [12分34秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:/tmp
+$ riscv64-unknown-elf-gcc -O1 -march=rv64ima -c hello.c \
+      -o hello_rv_full.o
+
+-- [12分40秒] --
+r
+iscv6
+4-unknown-elf-gcc -O1 -march=rv64ima -c hello.c \
+-o hello_rv_full.
+o
+
+-- [13分41秒] --
+1riscv64-unknown
+-
+elf-gcc -O1 -march=rv64ima -c hello.c -o
+  hello_rv_full.o
+-march=r
+v64ima -c hello.c \-o
+
+-- [13分45秒] --
+h
+e
+l
+l
+o_r
+v_f
+ull
+.o
+
+
+ri
+scv
+64-
+unk
+now
+n-e
+lf-
+gcc
+ -O
+1 -
+mar
+ch=
+rv6
+4im
+a -
+c h
+ell
+o.c
+ -o
+
+  h
+ell
+o_r
+v_f
+ull
+.o
+
+
+
+
+
+-- [13分48秒] --
+
+
+-- [13分52秒] --
+ -march=rv64ima -c hello.c \-o hello_rv_full.o
+
+-- [13分57秒] --
+c
+c1: error: requested ABI requires '-march' to subsume the 'D' extension
+
+-- [14分03秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:/tmp$ ^C
+
+-- [14分48秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:/tmp$ 
+riscv64-unknown-elf-gcc -O1 -march=rv64ima -mabi=lp64 -c
+  hello.c -o hello_rv_full.o
+
+riscv64-unknown-elf-gcc -O1 -march=rv64ima -c hello.c \-o hello_rv_full.o
+
+-- [14分56秒] --
+mabi=lp64
+
+-
+c
+
+h
+e
+l
+l
+o
+.
+c
+
+-
+o
+
+-- [14分59秒] --
+h
+e
+l
+l
+o
+_
+r
+v_ful
+l.o
+
+-- [15分02秒] --
+hello.c -o hello_rv_full.o
+
+-- [15分28秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:/tmp$ objdump -d hello_rv_full.o
+
+ailab-os@ailab-os-VMware-Virtual
+-Platform
+:/tmp$ objdump -d hello_rv_full
+.o 
+
+hello_rv_full.o：     文件格式 elf64-little
+
+objdump: can't disassemble for architecture UNKNOWN!
+
+-- [17分47秒] --
+ailab-os@ailab-os-V
+Mware-Virtual-Platform:/tmp$ riscv64-unknown-elf-objdump -d hello_rv_full.o
+
+riscv64-unknown-elf-objdump -d hello_rv_full.o
+
+hello_rv_full.o:     file format elf64-littleriscv
+
+Disassembly of section .text:
+
+000000000000
+0000 <add3>:
+   0:	00b5053b          	addw	a0,a0,a1
+   4:	00c5053b          	addw	a0,a0,a2
+   8:	00008067          	ret
+
+-- [25分59秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:/tmp$ -march=rv64ima -mabi=lp64
+
+ailab-os@aila
+b-os-VMw
+are-Virtual-Platform:/tmp$ -march=rv64ima -mabi=lp64 
+-march=rv64ima：未找到命令
+
+-- [26分42秒] --
+ailab-os@ailab-os-VMware-Vir
+tual-Platform:/tmp$ 
+
+riscv64-unknown-elf-gcc -O1 -march=rv64ima -mabi=lp64 -c
+  hello.c -o hello_rv_full.o
+
+-march=rv64ima -mabi=lp64 
+
+ailab-os@ailab-os-VMware-Virtual
+-- [26分45秒] --
+-Platform:/tmp$ riscv64-unknown-elf-gcc -O1 -march=rv64ima -mabi=lp64
+
+-
+c
+
+h
+e
+l
+l
+o
+.
+c
+
+-
+o
+
+h
+e
+l
+l
+o
+_
+-- [26分48秒] --
+r
+v_ful
+l.o
+
+hello.c -o hello_rv_full.o
+
+-- [28分31秒] --
+ailab-os@ailab-os-VMware-Virtu
+al-Platform:/tmp$ riscv64-unknown-elf-objdump -d 
+  hello_rv_full.o
+
+-- [28分35秒] --
+a
+i
+l
+a
+b
+-
+o
+s
+@ailab-os-VMware-Virtual
+-Platform:
+/tmp$ riscv64-unknown-elf-objdump -d 
+  hello_rv_full.ohello_rv_
+-- [28分38秒] --
+full.o
+hello_rv_full.o
+
+hello_rv_full.o:     file format elf64-littleriscv
+
+Disassembly of section .text:
+
+000000000000
+0000 <add3>:
+   0:	00b5053b          	addw	a0,a0,a1
+   4:	00c5053b          	addw	a0,a0,a2
+   8:	00008067          	ret
+
+-- [31分36秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:/tmp$ cat hello.c
+
+cat hello.c
+
+int add3(int a, int b, int c) {
+    return a + b + c;
+}
+
+-- [33分58秒] --
+ailab-
+os@ailab-os-VMware-Virtual-Platform:/tmp
+$ 
+nan
+o hello.cnan
+o hello.c
+
+==[ 正在读取... ]
+
+已读取 3 行 ]
+  GNU nano 7.2       
+            hello.c          
+
+^G 帮助
+^O 写入
+^W 搜索
+^K 剪切
+^T 执行命�
+^X
+ 离
+开^R 读档^\ 替换^U 粘贴
+int
+ a
+dd3(int
+
+-- [34分02秒] --
+ a, i
+nt
+ b, 
+int c) {
+
+return
+ a + b + c;
+}
+
+a
+
+d
+
+-- [34分05秒] --
+d
+3
+
+(
+
+*it
+
+tl a, in
+t b, int c) {a a, int b, 
+i
+n a, in
+-- [34分10秒] --
+t
+ b, 
+in
+t
+ c) {
+
+g a,
+
+int b, int c) {
+
+o a, in
+t b, int c) {n a, int b, i
+-- [34分14秒] --
+nt c) {
+
+long
+ a, i
+nt b, 
+int c) {
+
+ a
+,
+
+-- [34分17秒] --
+in
+
+l b, int
+ c
+) {
+
+o b, int c) {
+n b, 
+int c) {
+
+long b,
+ int
+
+ c) {
+-- [34分20秒] --
+  b, 
+
+int
+ c)
+ {
+
+ b
+,
+
+intc) {
+
+-- [34分23秒] --
+c) {
+
+c
+) {
+
+c) {
+
+c) {
+ c) {
+
+lc) {
+-- [34分35秒] --
+oc) {
+n
+c) {
+
+gc) {
+
+l
+ong
+
+ c) {
+
+-- [34分39秒] --
+in
+l add3(long a, long  b, 
+long
+ c)
+lo add3(long a, long  b, lo
+ng
+ c) {
+lo
+long add3(long a, long  b, lon
+-- [34分43秒] --
+g c) {  add3(long a, long  b, long c) {    M-D DOS 格式     M-A 追加         M-B 备份文件C 取消    M-M Mac 格式     M-P 插入到开头   ^T �
+-- [34分55秒] --
+要写入的文件名: hell
+o.c                                                [ 正在写入... ] 已写入 3 行 ]^O 写入      ^W 搜索      ^K 剪切      ^T 执行命令X 离开
+^R
+ �
+�档      ^
+\ 替换      ^U
+ �
+>
+
+-- [35分11秒] --
+ai
+lab-
+os@a
+ilab
+-os-
+VMwa
+re-V
+irtu
+al-Pl
+a
+-- [35分18秒] --
+tform:/
+tmp$ ^[[200~cat h
+ello.c~
+
+
+cat hello.ccat hello.c
+long  add3(long a, long  b, long c) {
+    return a + b + c;
+}
+
+-- [35分49秒] --
+ailab-os@ailab-os-VMware-Vir
+tual-Platform:/tmp$ 
+riscv64-unknown-elf-gcc -O1 -march=rv6
+-- [35分52秒] --
+4ima -mabi=lp64 -c
+  hello.c -o hello_rv_full.o
+
+  riscv64-unknown-elf-objdump -d hello_rv_full.oriscv64-unknown
+-
+e
+l
+f
+-
+g
+c
+c
+
+-
+O
+1
+
+-
+m
+a
+r
+c
+h
+=
+r
+v
+6
+4
+i
+m
+a
+
+-
+m
+a
+b
+i
+=
+l
+p
+6
+4
+
+-- [35分56秒] --
+-
+c
+
+ hell
+o.c -
+o hello_rv_full.o
+  riscv64-unknown-elf-objdump -d hello_rv_full.o
+-- [35分59秒] --
+riscv64-unknown-elf-objdump -d hello_rv_full.o
+
+r
+i
+s
+c
+v
+6
+4
+-
+u
+n
+k
+n
+o
+w
+n
+-
+e
+l
+f-objdump -d hello_rv_full.o
+-- [36分02秒] --
+hello.c -o hello_rv_full.o riscv64-unknown
+hello.c -o hello_rv_full.o riscv64-unknown-elf-objdump -d hello_rv_fu
+ll.o
+ hello.c -o hello_rv_f
+ull.o
+ riscv
+6
+
+riscv64-unknown-elf-gcc: error: missing argument to '-d'
+riscv64-unknown-elf-gcc: 
+
+fatal error: input file 'hello_rv_full.o' is the same as output file
+compilation terminated.
+
+-- [36分40秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:/tmp$  riscv64-unknown-elf-gcc -O1 -march=rv64ima -ma
+bi=lp64 -c
+  hello.c -o hello_rv_full.o && riscv64-unknown-elf-objdump
+  -d hello_rv_full.o
+
+ riscv64-unknown-elf-
+gcc -O1 -march=rv64ima -mabi=lp64 -c
+  hello.c -o hello_rv_fu
+l
+l
+.
+o
+
+&
+&
+
+-- [36分43秒] --
+r
+i
+s
+c
+v
+6
+4
+-
+u
+n
+k
+-- [36分46秒] --
+now
+n-elf
+-objd
+ump
+  -d hello_rv_full.o
+-d hello_rv_full.o
+ -d hello_rv_full.o
+
+-- [36分53秒] --
+hello.c -o hello_rv_full.o && riscv64-unknown-el
+hello.c -o hello_rv_full.o && riscv64-unknown-elf-objdump -d hello_rv_full.o
+
+ hello.c -o hello_rv_ful
+l.o && ri
+
+hello_rv_full.o:     file format elf64-littleriscv
+
+Disassembly of section .text:
+
+0000000000
+000000 <
+add3>:
+   0:	00b50533          	add	a0,a0,a1
+   4:	00c50533          	add	a0,a0,a2
+   8:	00008067          	ret
+
+-- [50分00秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:/tmp$ ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-lab
+s-km/lab0$ make build
+riscv64-linux-gnu-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S
+riscv64-linux-gnu-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/printf.o kernel/printf.c
+riscv64-linux-gnu-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/kalloc.o kernel/kalloc.c
+riscv64-linux-gnu-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o kernel/intr.o kernel/intr.c
+ -fno-omit-frame-pointer -ggdb -g -MD -ffreesta
+;
+riscv64-linux-gnu-objdump -t xv6-user/_ls | sed '1,/SYM
+riscv64-linux-gnu-gcc -Wall -Werro
+riscv64-linux-gnu-objdump -S xv6-user/_mv > xv6-user/mv.asm
+riscv64-linux-gnu-objdump -S xv6-user/_mv
+ >
+ xv6-user
+s/ .* / /; /^$/d' > x
+v6-user/mv.sym
+bash: ailab-os@ailab-
+os-VMware-Virtual-Platform:~/桌面/xv6-ai-lab: 没有那个文件或目录
+bash: s-km/lab0$: 没�
+��那个文件或目录
+
+cc1: fatal error: kernel/entry_qemu.S: 没有那个文件或目录
+compilation terminate
+d.
+cc1: fatal error: kernel/printf.c: 没有那个文件或目录
+compilation terminate
+d.
+cc1: fatal error: kernel/kalloc.c: 没有那个文件或目录
+compilation termina
+ted.
+cc1: fatal error: kernel/intr.c: 没有那个文件或目录
+compilation terminated.
+
+cc1: fatal error: kernel/spinlock.c: 没有那个文件或目录
+compilation terminate
+d.
+cc1: fatal error: kernel/string.c: 没有那个文件或目录
+compilation termina
+ted.
+cc1: fatal error: kernel/main.c: 没有那个文件或目录
+compilation termi
+nated.
+cc1: fatal error: kernel/vm.c: 没有那个文件或目录
+compilation termina
+ted.
+cc1: fatal error: kernel/proc.c: 没有那个文件或目录
+compilation terminat
+ed.
+cc1: fatal error: kernel/swtch.S: 没有那个文件或目录
+compilation terminated.
+
+cc1: fatal error: kernel/trampoline.S: 没有那个文件或目录
+compilation termina
+ted.
+cc1: fatal error: kernel/trap.c: 没有那个文件或目录
+compilation terminated
+.
+cc1: fatal error: kernel/syscall.c: 没有那个文件或目录
+compilation terminated
+.
+cc1: fatal error: kernel/sysproc.c: 没有那个文件或目录
+compilation termin
+ated.
+cc1: fatal error: kernel/bio.c: 没有那个文件或目录
+compilation terminated.
+
+cc1: fatal error: kernel/sleeplock.c: 没有那个文件或目录
+compilation termina
+ted.
+cc1: fatal error: kernel/file.c: 没有那个文件或目录
+compilation termina
+ted.
+cc1: fatal error: kernel/pipe.c: 没有那个文件或目录
+compilation termina
+ted.
+cc1: fatal error: kernel/exec.c: 没有那个文件或目录
+compilation terminated
+.
+cc1: fatal error: kernel/sysfile.c: 没有那个文件或目录
+compilation terminated.
+
+cc1: fatal error: kernel/kernelvec.S: 没有那个文件或目录
+compilation terminat
+ed.
+cc1: fatal error: kernel/timer.c: 没有那个文件或目录
+compilation termina
+ted.
+cc1: fatal error: kernel/disk.c: 没有那个文件或目录
+compilation terminat
+ed.
+cc1: fatal error: kernel/fat32.c: 没有那个文件或目录
+compilation termina
+ted.
+cc1: fatal error: kernel/plic.c: 没有那个文件或目录
+compilation terminated
+.
+cc1: fatal error: kernel/console.c: 没有那个文件或目录
+compilation terminated.
+
+cc1: fatal error: kernel/virtio_disk.c: 没有那个文件或目录
+compilation terminated.
+
+cc1: fatal error: xv6-user/initcode.S: 没有那个文件或目录
+
+compilation terminated.
+riscv64-linux-gnu-ld: cannot open output file xv6-user/initcode.out: 没有那个文件或目录
+找不到命令 “riscv64-linux-gnu-ld:”，您的意思是：
+  “riscv64-linux
+-gnu-ld” 命令来自 Debian 软件包 binutils-riscv64-linux
+-g
+nu (2.42-4ubuntu2.10)
+尝试 sudo apt install <deb name>
+
+riscv64-linux-gnu-objcopy: xv6-user/initcode.out：无此文件
+bash: xv6-user/initcode.asm: 
+没有那个文件或目�
+��
+cc1: fatal error: xv6-user/ulib.c: 没有那个文件或目�
+��
+compilation terminate
+d.
+cc1: fatal error: xv6-user/usys.S: 没有那个文件或目录
+
+compilation terminated.
+
+cc1: fatal error: xv6-user/printf.c: 没有那个文件或目录
+
+compilation terminated.
+
+cc1: fatal error: xv6-user/umalloc.c: 没有那个文件或目�
+��
+compilation terminate
+d.
+cc1:
+ fatal error:
+ xv6-use
+r/
+init.c: 没有那个文件�
+��
+目录
+compilation terminated.
+riscv64-linux-gnu-ld: cannot open output file xv6-user/_init: 没有那个文件或目录
+找不到命令 “riscv64-linux-gnu-ld:”，您的意思是：
+  “riscv64-linux
+-gnu-ld” 命令来自 Debian 软件包 binutils-risc
+v64-linux-gnu (2.42-4ubuntu2.10)
+尝试 sudo apt inst
+all <deb name>
+bash: xv6-user/init.asm: 没有那个文�
+-- [50分03秒] --
+�或目录
+bash: xv6-user/init.sym: 没有那个文件或目录
+riscv64-linux-gnu-objdump: xv6-user/_init：无此�
+�件
+cc1: fatal error: 
+xv6-user/sh.c: 没有那个文件或目录
+compilati
+on terminated.
+bash: xv6-user/sh.c:: 没有那个文件�
+��目录
+bash: xv6-user/sh.c:157:1:: 没有那个�
+�件或目录
+bash: 未预期的记号 "struct" 附近�
+�语法错误
+bash: 未预期的记号 "|" 附近有语
+法错误
+bash: xv6-user/sh.c:205:5:: 没有那个�
+��件或目录
+bash: 未预期的记号 "rcmd-" 附近�
+�语法错误
+bash: 未预期的记号 "|" 附近有语
+法错误
+bash: xv6-user/sh.c:225:7:: 没有那个�
+��件或目录
+bash: 未预期的记号 "pcmd-" 附近�
+�语法错误
+bash: 未预期的记号 "|" 附近有语
+法错误
+bash: xv6-user/sh.c:232:7:: 没有那个�
+��件或目录
+bash: 未预期的记号 "pcmd-" 附近�
+�语法错误
+bash: 未预期的记号 "|" 附近有语
+法错误
+bash: xv6-user/sh.c:211:7:: 没有那个�
+��件或目录
+bash: 未预期的记号 "lcmd-" 附近�
+�语法错误
+bash: 未预期的记号 "|" 附近有语
+法错误
+bash: xv6-user/sh.c:213:5:: 没有那个�
+��件或目录
+bash: 未预期的记号 "lcmd-" 附近�
+�语法错误
+bash: 未预期的记号 "|" 附近有语
+法错误
+bash: xv6-user/sh.c:243:7:: 没有那个�
+��件或目录
+bash
+: 未预期的记号 "bcmd
+-" 附近有
+�
+�法错误
+bash: 未预期
+�
+�记号 "|" 附近有语法错误
+riscv64-linux-gnu-ld: cannot open output file xv6-user/_sh: 没有那个文件或目录
+找不到命令 “riscv64-linux-gnu-ld:”，您的意思是：
+  “riscv64-linux
+-gnu-ld” 命令来自 Debian 软件包 binutils-ri
+scv64-linux-gnu (2.42-4ubuntu2.10)
+尝试 sudo apt 
+install <deb name>
+bash: xv6-user/sh.asm: 没有那�
+��
+��件或目录
+bash: xv6-user/sh.sym: 没有那个文件或目录
+riscv64-linux-gnu-objdump:
+ xv6-user/_sh：无此文
+件
+cc1:
+ fatal error: xv6-user/cat.c: 没有那个文件
+�
+�目录
+compilation terminated.
+riscv64-linux-gnu-ld: cannot open output file xv6-user/_cat: 没有那个文件或目录
+找不到命令 “riscv64-linux-gnu-ld:”，您的意思是：
+  “riscv64-linux
+-gnu-ld” 命令来自 Debian 软件包 binutils-ris
+cv64-linux-gnu (2.42-4ubuntu2.10)
+尝试 sudo apt in
+stall <deb name>
+bash: xv6-user/cat.asm: 没有那个文
+件或目录
+bash: xv6-user/cat.sym: 没有那个文件或目录
+riscv64-linux-gnu-objdump: xv6-user/_cat：无此文�
+��
+cc1: fatal error: xv6-user/
+echo.c: 没有那个文件或
+目录
+compilation terminated.
+riscv64-linux-gnu-ld: cannot open output file xv6-user/_echo: 没有那个文件或目录
+找不到命令 “riscv64-linux-gnu-ld:”，您的意思是：
+  “riscv64-linux
+-gnu-ld” 命令来自 Debian 软件包 binutils-risc
+v64-linux-gnu (2.42-4ubuntu2.10)
+尝试 sudo apt inst
+all <deb name>
+bash: xv6-user/echo.asm: 没有那个文�
+�或目录
+bash: xv6-user/echo.sym: 没有那个文件或目录
+riscv64-linux-gnu-objdump: xv6-user/_echo：无此文�
+��
+cc1:
+ fatal error:
+ xv6-use
+r/
+grep.c: 没有那个文件�
+��
+目录
+compilation terminated.
+riscv64-linux-gnu-ld: cannot open output file xv6-user/_grep: 没有那个文件或目录
+找不到命令 “riscv64-linux-gnu-ld:”，您的意思是：
+  “riscv64-linux
+-gnu-ld” 命令来自 Debian 软件包 binutils-risc
+v64-linux-gnu (2.42-4ubuntu2.10)
+尝试 sudo apt inst
+all <deb name>
+bash: xv6-user/grep.asm: 没有那个文�
+�或目录
+bash: xv6-user/grep.sym: 没有那个文件或目录
+riscv64-linux-gnu-objdump: xv6-user/_grep：无此�
+�件
+cc1: fatal error: xv6-u
+ser/ls.c: 没有那个文件�
+��目录
+compilation terminated.
+riscv64-linux-gnu-ld: cannot open output file xv6-user/_ls: 没有那个文件或目录
+找不到命令 “riscv64-linux-gnu-ld:”，您的意思是：
+  “riscv64-linux
+-gnu-ld” 命令来自 Debian 软件包 binutils-ri
+scv64-linux-gnu (2.42-4ubuntu2.10)
+尝试 sudo apt 
+install <deb name>
+bash: xv6-user/ls.asm: 没有那个�
+��件或目录
+bash: xv6-user/ls.sym: 没有那个文件或目录
+riscv64-linux-gnu-objdump: xv6-user/_ls：无此文�
+��
+cc1: fatal error:
+ xv6-user/kill.c: 没有那个文件�
+��
+目录
+compilation terminated.
+riscv64-linux-gnu-ld: cannot open output file xv6-user/_kill: 没有那个文件或目录
+找不到命令 “riscv64-linux-gnu-ld:”，您的意思是：
+  “riscv64-linux
+-gnu-ld” 命令来自 Debian 软件包 binutils-risc
+v64-linux-gnu (2.42-4ubuntu2.10)
+尝试 sudo apt inst
+all <deb name>
+bash: xv6-user/kill.asm: 没有那个文�
+�或目录
+bash: xv6-user/kill.sym: 没有那个文件或目录
+riscv64-linux-gnu-objdump: xv6-user/_kill：无此文�
+�
+cc1:
+ fatal error: 
+xv6-user/
+mk
+dir.c: 没有那个文件�
+��
+��录
+compilation terminated.
+riscv64-linux-gnu-ld: cannot open 
+output file xv6-user/_mkdir: 没有那个文件或目录
+找不到命令 “riscv64-linux-gnu-ld:”，�
+�的意思是：
+  “riscv64-linux
+-gnu-ld” 命令来自 Debian 软件包 binutils-riscv
+64-linux-gnu (2.42-4ubuntu2.10)
+尝试 sudo apt instal
+l <deb name>
+bash: xv6-use
+r/mkdir.asm: 没有那个文�
+��
+��目录
+bash: xv6-user/mkdir.sym: 没有那个文件或目录
+riscv64-linux-gnu-objdump: xv6-
+user/_mkdir：无此文�
+�
+cc1:
+ fatal error: 
+xv6-user/
+xa
+rgs.c: 没有那个文件�
+��
+��录
+compilation terminated.
+riscv64-linux-gnu-ld: cannot open output file xv6-user/_xargs: 没有那个文件或目录
+找不到命令 “riscv64-linux-gnu-ld:”，您的意思是：
+  “riscv64-linux
+-gnu-ld” 命令来自 Debian 软件包 binutils-riscv
+64-linux-gnu (2.42-4ubuntu2.10)
+尝试 sudo apt instal
+l <deb name>
+bash: xv6-user/xargs.asm: 没有那个文�
+��
+��目录
+bash: xv6-user/xargs.sym: 没有那个文件或目录
+riscv64-linux-gnu-objdump: xv6-user/_xargs：无此文�
+�
+cc1: fatal error: 
+xv6-user/sleep.c: 没有那个文件或�
+��录
+compilation terminated.
+riscv64-linux-gnu-ld: cannot open 
+output file xv6-user/_sleep: 没有那个文件或目录
+找不到命令 “riscv64-linux-gnu-ld:”，您的意思是：
+  “riscv64-linux
+-gnu-ld” 命令来自 Debian 软件包 binutils-riscv
+64-linux-gnu (2.42-4ubuntu2.10)
+尝试 sudo apt instal
+l <deb name>
+bash: xv6-use
+r/sleep.asm: 没有那个文�
+��
+��目录
+bash: xv6-user/sleep.sym: 没有那个文件或目录
+riscv64-linux-gnu-objdump: xv6
+-user/_sleep：无此文�
+��
+cc1:
+ fatal error:
+ xv6-use
+r/
+find.c: 没有那个文件�
+��
+目录
+compilation terminated.
+riscv64-linux-gnu-ld: cannot op
+en
+ output file xv6-user/_find: 没有那个文件或目录
+找不到命令 “riscv64-linux-gnu-ld:”，�
+�的意思是：
+  “riscv64-linux
+-gnu-ld” 命令来自 Debian 软件包 binutils-risc
+v64-linux-gnu (2.42-4ubuntu2.10)
+尝试 sudo apt inst
+all <deb name>
+bash: xv6-u
+ser/find.asm: 没有那个文
+�
+�或目录
+bash: xv6-user/find.sym: 没有那个文件或目录
+riscv64-linux-gnu-objdump: 
+xv6-user/_find：无此�
+�件
+cc1:
+ fatal error: xv6
+-u
+ser/rm.c: 没有那个文�
+��
+��目录
+compilation terminated.
+riscv64-linux-gnu-ld: cannot op
+en output file xv6-user/_rm: 没有那个文件或目录
+找不到命令 “riscv64-linux-gnu-ld:”，�
+�的意思是：
+  “riscv64-linux
+-gnu-ld” 命令来自 Debian 软件包 binutils-ri
+scv64-linux-gnu (2.42-4ubuntu2.10)
+尝试 sudo apt 
+install <deb name>
+bash: x
+v6-user/rm.asm: 没有那�
+��
+��件或目录
+bash: xv6-user/rm.sym: 没有那个文件或目录
+riscv64-linux-gnu-objdump
+: xv6-user/_rm：无此�
+�件
+cc1:
+ fatal erro
+r: xv6
+-u
+ser/wc.c: 没有那个文�
+��
+-- [50分06秒] --
+��目录
+compilation terminated.
+riscv64-linux-gnu-ld: cannot op
+en output file xv6-user/_wc: 没有那个文件或目录
+找不到命令 “riscv64-linux-gnu-ld:”，您的意思是：
+  “riscv64-linux
+-gnu-ld” 命令来自 Debian 软件包 binutils-ri
+scv64-linux-gnu (2.42-4ubuntu2.10)
+尝试 sudo apt 
+install <deb name>
+bash: x
+v6-user/wc.asm: 没有那�
+��
+��件或目录
+bash: xv6-user/wc.sym: 没有那个文件或目录
+riscv64-linux-gnu-objdump: 
+xv6-user/_wc：无此文�
+��
+cc1:
+ fatal error:
+ xv6-user/test.c: 没有那个文件或
+目录
+compilation terminated.
+riscv64-linux-gnu-ld: cannot open
+ output file xv6-user/_test: 没有那个文件或目录
+找不到命令 “riscv64-linux-gnu-ld:”，您的意思是：
+  “riscv64-linux
+-gnu-ld” 命令来自 Debian 软件包 binutils-risc
+v64-linux-gnu (2.42-4ubuntu2.10)
+尝试 sudo apt inst
+all <deb name>
+bash: xv6-user/test.asm: 没有那个文�
+�或目录
+bash: xv6-user/test.sym: 没有那个文件或目录
+riscv64-linux-gnu-objdump: xv6-user/_test：无此文件
+
+cc1: fatal error: xv6-user/usertests.
+c: 没有那个文件或目�
+�
+compilation terminated.
+riscv64-linux-gnu-ld: cannot open output file xv6-user/_usertests: 没有那个文件或目录
+找不到命令 “riscv64-linux-gnu-ld:”，您的意思是：
+  “riscv64-linux
+-gnu-ld” 命令来自 Debian 软件包 binutils-riscv64-l
+inux-gnu (2.42-4ubuntu2.10)
+尝试 sudo apt install <deb n
+ame>
+bash: xv6-user/usertests.asm: 没有那个文件或目录
+
+bash: xv6-user/usertests.sym: 没有那个文件或目录
+riscv64-linux-gnu-objdump: xv6-user/_usertests：无此文件
+
+cc1:
+ fatal error: 
+xv6-user/st
+ra
+ce.c: 没有那个文件或
+�
+�录
+compilation terminated.
+riscv64-linux-gnu-ld: cannot open o
+utput file xv6-user/_strace: 没有那个文件或目录
+找不到命令 “riscv64-linux-gnu-ld:”，�
+�的意思是：
+  “riscv64-linux
+-gnu-ld” 命令来自 Debian 软件包 binutils-riscv6
+4-linux-gnu (2.42-4ubuntu2.10)
+尝试 sudo apt install 
+<deb name>
+bash: xv6-user/strace.asm: 没有那个文件�
+��
+目录
+bash: xv6-user/strace.sym: 没有那个文件或目录
+riscv64-linux-gnu-objdump: xv
+6-user/_strace：无此�
+�件
+cc1: fatal erro
+r: xv6-user/mv.c: 没有那个文�
+��
+��目录
+compilation terminated.
+riscv64-linux-gnu-ld: cannot open output file xv6-user/_mv: 没有那个文件或目录
+找不到命令 “riscv64-linux-gnu-ld:”，您的意思是：
+  “riscv64-linux
+-gnu-ld” 命令来自 Debian 软件包 binutils-ri
+scv64-linux-gnu (2.42-4ubuntu2.10)
+尝试 sudo apt 
+install <deb name>
+bash: xv6-user/mv.asm: 没有那个�
+��件或目录
+bash: xv6-user/mv.sym: 没有那个文件或目录
+riscv64-linux-gnu-objdump: xv6-user/_mv：无此文件
+
+-- [50分20秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:/tmp$ 
+exit
+

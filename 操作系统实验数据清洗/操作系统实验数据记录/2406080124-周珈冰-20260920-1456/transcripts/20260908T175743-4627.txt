@@ -1,0 +1,22 @@
+==== labtracker 终端转录 ====
+录像: 20260908T175743-4627.out.gz   时长: 0分14秒   原始大小: 999B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform
+ailab-os@ailab-o
+s-
+VMware-Vi
+rtual-Platform:~$ curl -O "https://kuafuai.art/claude_code_env.sh" && bash ./claude_code_env.sh
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 D
+l
+oad  Upload   Total   Spent    Left  Speed
+
+ 0     0
+    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: kuafuai.art
+
+-- [0分14秒] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ 
+exit
+

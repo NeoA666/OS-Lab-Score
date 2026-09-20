@@ -1,0 +1,28 @@
+==== labtracker 终端转录 ====
+录像: 20260915T121946-8075.out.gz   时长: 1分50秒   原始大小: 667B
+==================================================
+-- [开始] --
+Script s
+tarted on 2026-09-15 12:19:46+08:00 [COMMAND="bash" TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="80" LINES="24"]
+
+-- [0分17秒] --
+ailab-os@ailab-os-VMwar
+-- [1分05秒] --
+e-
+Virtual-Platform:~/桌面/xv6-ai-labs-km/l
+-- [1分50秒] --
+ab
+0
+pdate
+
+[s
+udo] ailab-os 的密码
+�
+� 
+对�
+��起，请重试。
+[sudo] ailab-os 的密码： 
+sudo: no password was provided
+sudo: 1 次错误密码尝试
+
+ailab-os@ailab-os-VMware-Virtual-Platform:~/桌面/xv6-ai-labs-km/lab0$ 

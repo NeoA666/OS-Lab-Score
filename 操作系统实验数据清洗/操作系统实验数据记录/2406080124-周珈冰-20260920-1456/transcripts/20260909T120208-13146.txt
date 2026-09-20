@@ -1,0 +1,63 @@
+==== labtracker 终端转录 ====
+录像: 20260909T120208-13146.out.gz   时长: 0分34秒   原始大小: 7215B
+==================================================
+
+-- [开始] --
+ailab-os@ailab-os-VMware-Virtual-Platform:~$ claude
+78
+────────────────────────────────────────────────────────────────────────────────
+Accessingworkspace:
+
+/home/ailab-os
+
+Quicksafetycheck:Isthisaprojectyoucreatedoroneyoutrust?(Likeyour
+owncode,awell-knownopensourceproject,orworkfromyourteam).Ifnot,
+takeamomenttoreviewwhat'sinthisfolderfirst.
+
+ClaudeCode'llbeabletoread,edit,andexecutefileshere.
+
+Security guide
+
+❯1.Yes,Itrustthisfolder
+2.
+No,
+exit
+
+Entertoconfirm·Esctocancel
+
+>0q
+Yes, I trust this folder✔
+
+────────────────────────────────────────────────────────────────────────────────
+⏸ manual mode on · ? for shortcuts · ← for agents● high · /effort
+h 
+
+-- [0分06秒] --
+i 
+
+✽ Roosting… 
+────────────────────────────────────────────────────────────────────────────────
+❯  
+────────────────────────────────────────────────────────────────────────────────
+⏸manualmodeon
+·esctointerrupt·←foragents●high·/effort
+
+✻oi
+
+✻ Baked for 0s
+────────────────────────────────────────────────────────────────────────────────
+❯  
+────────────────────────────────────────────────────────────────────────────────
+⏸manualmodeon
+-- [0分14秒] --
+·?forshortcuts·←
+-- [0分33秒] --
+f
+oragents●high·/effort
+
+
+
+Press Ctrl-D againto exit
+
+⏸ manual mode on ·? for shortcuts · ← for agents
+
