@@ -34,7 +34,6 @@ MAX_SOURCE_LINES_PER_CALL = 220
 MAX_EXCERPT_CHARS = 600
 DEFAULT_DATA_ROOT = (
     Path(__file__).resolve().parents[3]
-    / "操作系统实验数据清洗"
     / "操作系统实验数据记录-已清洗"
 )
 

@@ -44,11 +44,22 @@ def _project_root() -> Path:
     return Path(__file__).resolve().parents[3]
 
 
+def _display_path(path: Path | str | None) -> str | None:
+    """Keep persisted and printed paths portable across deployment hosts."""
+    if path is None:
+        return None
+    candidate = Path(path)
+    try:
+        return candidate.resolve(strict=False).relative_to(_project_root().resolve()).as_posix()
+    except ValueError:
+        return str(candidate)
+
+
 def _defaults() -> dict[str, Path]:
     system_root = _workspace_root()
     project_root = _project_root()
     return {
-        "data_root": project_root / "操作系统实验数据清洗" / "操作系统实验数据记录-已清洗",
+        "data_root": project_root / "操作系统实验数据记录-已清洗",
         "policy": system_root / "lab0课程规则边界.md",
         "output_dir": system_root / "诚信审核报告草稿",
         "teacher_output_dir": system_root / "教师复核报告草稿",
@@ -430,10 +441,10 @@ def _write_audit_artifacts(
             )
         ),
         "render_fingerprint": render_fingerprint or assessment.get("render_fingerprint"),
-        "assessment_path": str(assessment_path),
-        "report_path": str(report_path),
-        "teacher_report_path": str(teacher_report_path),
-        "trace_path": run_metadata.get("trace_path"),
+        "assessment_path": _display_path(assessment_path),
+        "report_path": _display_path(report_path),
+        "teacher_report_path": _display_path(teacher_report_path),
+        "trace_path": _display_path(run_metadata.get("trace_path")),
         "turns": run_metadata.get("turns"),
         "tool_calls": run_metadata.get("tool_calls"),
         "completed_at": datetime.now(timezone.utc).isoformat(),
@@ -493,7 +504,7 @@ def _load_trace_assessment(
         tools=tools,
         model=_fingerprint_model(_provider_fingerprint()),
     )
-    return recomputed, {"turns": turns, "tool_calls": tool_calls, "trace_path": str(trace_path)}
+    return recomputed, {"turns": turns, "tool_calls": tool_calls, "trace_path": _display_path(trace_path)}
 
 
 def _write_reports(
@@ -631,10 +642,10 @@ def _cached_task_row(
         "integrity_disposition": recomputed.get("integrity_disposition"),
         "run_fingerprint": recomputed.get("run_fingerprint"),
         "input_fingerprint": expected_fingerprint,
-        "report": str(report_path),
-        "teacher_review_report": str(teacher_report_path),
-        "assessment": str(assessment_path),
-        "audit_manifest": str(new_manifest_path),
+        "report": _display_path(report_path),
+        "teacher_review_report": _display_path(teacher_report_path),
+        "assessment": _display_path(assessment_path),
+        "audit_manifest": _display_path(new_manifest_path),
         "trace": manifest.get("trace_path"),
     }
 
@@ -753,11 +764,11 @@ def _run_audit_task(
         "input_fingerprint": task_fingerprint,
         "turns": result.turns,
         "tool_calls": result.tool_calls,
-        "report": str(report_path),
-        "teacher_review_report": str(teacher_report_path),
-        "assessment": str(assessment_path),
-        "audit_manifest": str(manifest_path),
-        "trace": result.trace_path,
+        "report": _display_path(report_path),
+        "teacher_review_report": _display_path(teacher_report_path),
+        "assessment": _display_path(assessment_path),
+        "audit_manifest": _display_path(manifest_path),
+        "trace": _display_path(result.trace_path),
     }
 
 
@@ -824,10 +835,10 @@ def _run_missing_task(
         "integrity_disposition": assessment.get("integrity_disposition"),
         "run_fingerprint": assessment.get("run_fingerprint"),
         "input_fingerprint": task_fingerprint,
-        "report": str(report_path),
-        "teacher_review_report": str(teacher_report_path),
-        "assessment": str(assessment_path),
-        "audit_manifest": str(manifest_path),
+        "report": _display_path(report_path),
+        "teacher_review_report": _display_path(teacher_report_path),
+        "assessment": _display_path(assessment_path),
+        "audit_manifest": _display_path(manifest_path),
         "trace": None,
     }
 
@@ -1036,7 +1047,7 @@ def _run_batch(args: argparse.Namespace) -> tuple[dict[str, Any], int]:
                         "status": "failed",
                         "message": safe_error,
                         "input_fingerprint": task_fingerprint,
-                        "audit_manifest": str(failure_path) if failure_path else None,
+                        "audit_manifest": _display_path(failure_path),
                     }
                 )
 
@@ -1050,8 +1061,8 @@ def _run_batch(args: argparse.Namespace) -> tuple[dict[str, Any], int]:
         "batch_id": batch_id,
         "started_at": started_at,
         "completed_at": completed_at,
-        "data_root": str(args.data_root),
-        "policy": str(args.policy),
+        "data_root": _display_path(args.data_root),
+        "policy": _display_path(args.policy),
         "students": [student.directory_name for student in students],
         "labs": list(labs),
         "options": {
@@ -1069,7 +1080,7 @@ def _run_batch(args: argparse.Namespace) -> tuple[dict[str, Any], int]:
         _atomic_write_json(summary_path, summary)
     response = {
         "batch": summary,
-        "summary": str(summary_path) if summary_path is not None else None,
+        "summary": _display_path(summary_path),
     }
     return response, 1 if counts.get("failed", 0) else 0
 
@@ -1132,13 +1143,13 @@ def main(argv: list[str] | None = None) -> int:
             )
             _json_print(
                 {
-                    "report": str(report_path),
-                    "teacher_review_report": str(teacher_report_path),
-                    "assessment": str(assessment_path),
-                    "audit_manifest": str(manifest_path),
+                    "report": _display_path(report_path),
+                    "teacher_review_report": _display_path(teacher_report_path),
+                    "assessment": _display_path(assessment_path),
+                    "audit_manifest": _display_path(manifest_path),
                     "overall_disposition": assessment["overall_disposition"],
                     "overall_label": assessment.get("overall_label"),
-                    "trace": str(args.trace),
+                    "trace": _display_path(args.trace),
                 }
             )
             return 0

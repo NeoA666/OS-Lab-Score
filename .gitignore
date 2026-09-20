@@ -4,6 +4,19 @@
 # Python bytecode and test caches
 __pycache__/
 *.py[cod]
+.env
+*.local
+
+# Local-only references, cached dependencies, and developer tests.
+/公共依赖/
+/xv6-ai-labs-km-无答案/
+/学生操作系统实验过程清洗工具/*/tests/
+/诚信判别系统/integrity_audit/tests/
+/学生操作系统实验过程清洗工具/历史验证记录/
+/诚信判别系统/原始数据/
+/诚信判别系统/诚信审核报告草稿/
+/诚信判别系统/教师复核报告草稿/
+/诚信判别系统/诚信审核运行日志/
 *$py.class
 .pytest_cache/
 .mypy_cache/

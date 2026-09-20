@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(xxd)",
-      "Bash(python3 -c ' *)",
-      "Bash(grep -v \"占位 return\\\\|占位——\\\\|占位必须\\\\|占位 \\\\`return\\\\|是占位\\\\|占位 $\")"
-    ]
-  }
-}
