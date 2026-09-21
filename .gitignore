@@ -37,3 +37,21 @@ Thumbs.db
 
 # Local Firecrawl research cache
 .firecrawl/
+
+# Tool-generated incremental state and transient files. Final reports remain trackable.
+/操作系统实验数据记录/**/.xv6-sync-source.json
+/操作系统实验数据记录-已清洗/**/.replay_term_qa.json
+/操作系统实验数据记录-已清洗/**/实验过程时间线/.timeline_manifest.json
+/操作系统实验数据记录-已清洗/**/代码差异报告/.lab_diff_reports.json
+/操作系统实验数据记录-已清洗/**/AI人工贡献识别/.contribution_manifest.json
+/操作系统实验数据记录-已清洗/AI人工贡献识别运行日志/
+/.xv6-sync-*/
+/.xv6-old-*/
+/.xv6-commit-*/
+**/.replay-*.tmp
+**/.timeline-*.tmp
+**/.readable-timeline-*.tmp
+**/.lab-diff-*.tmp
+**/.contribution-*.tmp
+**/.audit-*.tmp
+**/.audit-report-*.tmp

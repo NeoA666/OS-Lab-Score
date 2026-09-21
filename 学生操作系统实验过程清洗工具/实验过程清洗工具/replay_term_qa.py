@@ -21,6 +21,8 @@ import argparse
 import tempfile
 import hashlib
 import math
+import io
+from contextlib import redirect_stderr, redirect_stdout
 from bisect import bisect_right
 from pathlib import Path
 from datetime import datetime
@@ -31,6 +33,14 @@ from collections import Counter
 TOOL_DIR = Path(__file__).resolve().parent
 CLEANING_DIR = TOOL_DIR.parent
 REPOSITORY_ROOT = CLEANING_DIR.parent
+sys.path.insert(0, str(CLEANING_DIR))
+from output_layout import (  # noqa: E402
+    PROCESS_TOOL,
+    ensure_layout,
+    pair_matches,
+    unlink_pair,
+    write_text_pair,
+)
 PYLIB = str(REPOSITORY_ROOT / "公共依赖" / "pylib")
 if os.path.isdir(PYLIB):
     sys.path.insert(0, PYLIB)
@@ -826,11 +836,11 @@ TIMELINE_DIAGNOSTICS_END = "<!-- replay_term_qa:timeline-diagnostics:end -->"
 
 # README 的版本说明与验证记录；历史验证和每次动态汇总分开。
 README_UPDATE_NOTES = [
-    "## 本次功能更新：按 Lab 分类",
+    "## 本次功能更新：按人和按 Lab 双分类输出",
     "",
-    "- 支持 lab0–lab8，并在每名学生目录下建立 `终端对话记录/`、`完整终端转写记录/`、`终端命令统计/`、`claude对话/` 四个子目录。",
-    "- 四类文件分别使用 `terminal_qa_report_labN.md`、`full_terminal_transcript_labN.md`、`command_statistics_labN.md`、`claude_qa_clean_labN.md`；`labN` 为实际识别到的实验目录。",
-    "- 不在 lab0–lab8 下、目录无法识别或录像读取失败的记录，归入对应的四份 `_other.md` 文件。只为实际出现的分类生成文件，不预建没有数据的 lab。",
+    "- 同一份结果同时写入 `按人分类/学生/lab/实验过程清洗工具/` 和 `按Lab分类/lab/学生/实验过程清洗工具/`；两侧文件内容一致。",
+    "- 每个实际出现的 lab 叶子包含终端对话、完整转写、命令统计、Claude 对话以及 JSON/Markdown 时间线；无法确认的记录归入 `其他/`。",
+    "- 汇总报告和本次运行日志分别保存在根目录的 `汇总报告/` 与 `运行日志/`。",
     "- 分类依据是 Shell 提示符中的工作目录，支持 lab 的子目录。正文、命令参数或 Claude 回复中提到其他 lab，不改变分类。",
     "- 同一录像切换 lab 时按新提示符分段；`cd` 命令归入执行它时所在的目录，后续提示符显示目录变化后才切换分类，失败的 `cd` 不切换。",
     "- Claude 问答按启动所在目录归类；返回同一 lab 后，同一录像的问答合并为一个 Session，Turn 连续编号。完整转写保留片段编号和原始字节区间，每个录像片段输出一次连续文本。",
@@ -887,22 +897,8 @@ def student_header(title, info, count):
 
 
 def atomic_write(path, text):
-    """在目标目录写临时文件后原子替换；中断不会留下半份 Markdown。"""
-    path = Path(path)
-    if has_link_component(path):
-        raise ValueError(f"拒绝覆盖符号链接：{path}")
-    path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = None
-    try:
-        with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", newline="\n",
-                                         dir=path.parent, prefix=".replay-", suffix=".tmp",
-                                         delete=False) as stream:
-            temporary = Path(stream.name)
-            stream.write(text)
-        os.replace(temporary, path)
-    finally:
-        if temporary and temporary.exists():
-            temporary.unlink()
+    """Atomically replace a file and its classification-view counterpart."""
+    write_text_pair(Path(path), text)
 
 
 def _stream_sha256(path):
@@ -1012,13 +1008,16 @@ def _processor_signature(stage, paths):
 
 
 def report_processor_signature():
-    return _processor_signature("reports", (Path(__file__).resolve(),))
+    return _processor_signature(
+        "reports", (Path(__file__).resolve(), CLEANING_DIR / "output_layout.py")
+    )
 
 
 def timeline_processor_signature():
     return _processor_signature(
         "timeline",
-        (Path(__file__).resolve(), TOOL_DIR / "timeline_alignment.py", TOOL_DIR / "timeline_reports.py"),
+        (Path(__file__).resolve(), TOOL_DIR / "timeline_alignment.py",
+         TOOL_DIR / "timeline_reports.py", CLEANING_DIR / "output_layout.py"),
     )
 
 
@@ -1136,11 +1135,15 @@ def lab_from_cwd(cwd):
 
 
 def lab_report_paths(lab):
-    """四种报告放在四个中文子目录中，以 lab 或 other 为文件后缀。"""
+    """Place the four reports in the lab/tool leaf of both output views."""
     if lab not in LAB_KEYS:
         raise ValueError(f"未知实验分类：{lab}")
-    return tuple(Path(folder) / f"{Path(name).stem}_{lab}.md"
-                 for folder, name in zip(REPORT_FOLDERS, REPORT_NAMES))
+    directory = "其他" if lab == "other" else lab
+    return tuple(
+        Path(directory) / PROCESS_TOOL / name
+        for name in ("终端对话记录.md", "完整终端转写记录.md",
+                     "终端命令统计.md", "Claude对话记录.md")
+    )
 
 
 def fixed_report_artifact_paths():
@@ -1316,7 +1319,8 @@ def _report_artifact_hashes_are_valid(output, reports, hashes):
         if not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest):
             return False
         try:
-            if _stream_sha256(Path(output) / relative) != digest:
+            target = Path(output) / relative
+            if _stream_sha256(target) != digest or not pair_matches(target):
                 return False
         except OSError:
             return False
@@ -1427,12 +1431,11 @@ def remove_student_reports(info):
         targets.append(target)
 
     for target in targets:
-        if target.exists():
-            target.unlink()
+        unlink_pair(target)
     atomic_write(owner_path, json.dumps({
         "tool": "replay_term_qa",
         "source": info.get("source_reference", info["source"]),
-        "layout": "by-lab-v1",
+        "layout": "dual-view-v2",
         "status": "cleared",
         "reports": [],
     }, ensure_ascii=False, indent=2) + "\n")
@@ -1488,8 +1491,8 @@ def finish_student_reports(info, paths, *, stage_status, incremental=None, summa
                 target = directory / relative
                 resolved = target.resolve()
                 if directory in resolved.parents and not has_link_component(target) and target.is_file():
-                    target.unlink()
-    manifest = {"tool": "replay_term_qa", "source": info.get("source_reference", info["source"]), "layout": "by-lab-v1",
+                    unlink_pair(target)
+    manifest = {"tool": "replay_term_qa", "source": info.get("source_reference", info["source"]), "layout": "dual-view-v2",
                 "status": stage_status, "reports": sorted(wanted)}
     if (
         stage_status == "complete"
@@ -1840,9 +1843,10 @@ def _timeline_result_diagnostics(result):
     for relative in result.get("artifacts") or []:
         path = Path(relative)
         if (
-            len(path.parts) != 2
-            or path.parts[0] != TIMELINE_DIRECTORY
-            or not re.fullmatch(r"timeline_(?:lab[0-8]|other)\.json", path.name)
+            len(path.parts) != 3
+            or path.parts[0] not in {*LAB_KEYS[:-1], "其他"}
+            or path.parts[1] != PROCESS_TOOL
+            or path.name != "实验过程时间线.json"
         ):
             continue
         target = Path(output) / path
@@ -1907,14 +1911,13 @@ def write_readme(output_dir, input_dir, results, skipped, timeline_results=(), m
           "│   └── transcripts/", "└── 2406080118-yanghanqing-20260911-0926/", "    └── term/", "```", "",
           "## 输出结构和文件含义", "",
           "默认输出为输入目录同级的 `输入目录名称-已清洗/`。单学生模式也在输出根目录下建立学生子目录。", "",
-          "```text", "操作系统实验数据记录-已清洗/", "├── README.md", "└── 刘梓宸/",
-          "    ├── 终端对话记录/", "    │   ├── terminal_qa_report_lab0.md", "    │   └── terminal_qa_report_other.md",
-          "    ├── 完整终端转写记录/", "    │   ├── full_terminal_transcript_lab0.md", "    │   └── full_terminal_transcript_other.md",
-          "    ├── 终端命令统计/", "    │   ├── command_statistics_lab0.md", "    │   └── command_statistics_other.md",
-          "    └── claude对话/", "        ├── claude_qa_clean_lab0.md", "        ├── claude_qa_clean_lab1.md",
-          "        └── claude_qa_clean_other.md", "```", "",
+          "```text", "操作系统实验数据记录-已清洗/", "├── 按人分类/刘梓宸/lab0/实验过程清洗工具/",
+          "│   ├── 终端对话记录.md", "│   ├── 完整终端转写记录.md", "│   ├── 终端命令统计.md",
+          "│   ├── Claude对话记录.md", "│   ├── 实验过程时间线.json", "│   └── 实验过程时间线.md",
+          "├── 按Lab分类/lab0/刘梓宸/实验过程清洗工具/", "├── 汇总报告/实验过程清洗汇总.md",
+          "├── 运行日志/实验过程清洗工具.log", "└── README.md", "```", "",
           "仅为实际出现的 lab0–lab8 分类生成报告；非实验目录、无法识别目录及失败录像归入 `other`（其他）。",
-          "每个分类均生成四份报告，即使某类中没有 Shell 命令或有效 Claude 对话。没有 `*.out.gz` 录像的 term 目录会记录为失败且不生成空报告。",
+          "每个分类均生成四份报告及两份时间线文件，即使某类中没有 Shell 命令或有效 Claude 对话。没有 `*.out.gz` 录像的 term 目录会记录为失败且不生成空报告。",
           "## Lab 分类原则", "",
           "只根据 Shell 提示符的工作目录匹配完整路径段，例如 `~/lab0`、`/home/user/lab1/kernel`。"
           "`lab10`、`lab0-copy` 不属于 lab0–lab8；命令参数或对话正文提到 lab 不用于分类。",
@@ -1926,11 +1929,12 @@ def write_readme(output_dir, input_dir, results, skipped, timeline_results=(), m
           "每个分类内，同一录像的有效 Claude 问答合并为一个 Session，Turn 连续编号。"
           "学生/根目录的录像数和 Claude 会话数按原录像去重，不能直接相加各 lab 会话数；命令数和轮次可相加。", "",
           "| 文件 | 内容 |", "| --- | --- |",
-          "| terminal_qa_report_labN.md / terminal_qa_report_other.md | Shell 完整命令、执行目录、输出、录像编号、开始及相对时间、命令频次；每条输出最多 400 行 |",
-          "| full_terminal_transcript_labN.md / full_terminal_transcript_other.md | 所有录像重放后的连续文本、滚屏和清屏历史、保留下来的 TUI 界面及重放错误 |",
-          "| command_statistics_labN.md / command_statistics_other.md | 仅 Shell 命令，按次数降序、命令文本升序排列 |",
-          "| claude_qa_clean_labN.md / claude_qa_clean_other.md | 有效 Claude Session、编号 Turn 及用户问题与最终回答，含会话和全局统计 |", "",
-          "`terminal_qa_report_labN.md` 按命令组织输出，可能截断长输出；`full_terminal_transcript_labN.md` 按录像和分类片段组织，"
+          "| 终端对话记录.md | Shell 完整命令、执行目录、输出、录像编号、开始及相对时间、命令频次；每条输出最多 400 行 |",
+          "| 完整终端转写记录.md | 所有录像重放后的连续文本、滚屏和清屏历史、保留下来的 TUI 界面及重放错误 |",
+          "| 终端命令统计.md | 仅 Shell 命令，按次数降序、命令文本升序排列 |",
+          "| Claude对话记录.md | 有效 Claude Session、编号 Turn 及用户问题与最终回答，含会话和全局统计 |",
+          "| 实验过程时间线.json / 实验过程时间线.md | 按时间排序的结构化事件及阅读版时间线 |", "",
+          "`终端对话记录.md` 按命令组织输出，可能截断长输出；`完整终端转写记录.md` 按录像和分类片段组织，"
           "完整重放后一次性输出文本，不执行 QA 清洗，也不添加 Frame 标题或逐行变化编号。",
           "每份学生 Markdown 的标题后均提供学号、姓名、时间、来源和录像数量。", "",
           "## Claude QA 与 Shell 统计原则", "",
@@ -2032,10 +2036,10 @@ def write_readme(output_dir, input_dir, results, skipped, timeline_results=(), m
     text = "\n".join(md) + "\n"
     if preserved_timeline_block:
         text = text.rstrip("\n") + "\n\n" + preserved_timeline_block.rstrip("\n") + "\n"
-    atomic_write(output_dir / "README.md", text)
+    atomic_write(output_dir / "汇总报告" / "实验过程清洗汇总.md", text)
 
 
-def main(argv=None):
+def _main(argv=None, log_state=None):
     """批处理入口；原报告和独立时间线均按学生隔离失败。"""
     parser = argparse.ArgumentParser(description="批量重放学生 Linux script 录像，生成原有报告和实验过程时间线")
     parser.add_argument("input_dir", nargs="?", default=str(REPOSITORY_ROOT / "操作系统实验数据记录"), help="输入根目录或单学生目录")
@@ -2074,10 +2078,13 @@ def main(argv=None):
         parser.error(f"未找到匹配 --student 的学生：{args.student}")
     try:
         output_dir.mkdir(parents=True, exist_ok=True)
-        readme = output_dir / "README.md"
+        readme = output_dir / "汇总报告" / "实验过程清洗汇总.md"
         if readme.exists() and not args.overwrite and not readme.read_text(encoding="utf-8").startswith(README_TITLE):
             parser.error(f"输出目录已有其他 README.md，请选择其他 --output 或显式使用 --overwrite：{readme}")
-        allocate_outputs(students, output_dir, args.overwrite)
+        ensure_layout(output_dir)
+        if log_state is not None:
+            log_state["path"] = output_dir / "运行日志" / "实验过程清洗工具.log"
+        allocate_outputs(students, output_dir / "按人分类", args.overwrite)
     except (OSError, ValueError) as exc:
         parser.error(str(exc))
     preserved_timeline_block = existing_timeline_readme_block(readme) if args.no_timeline else None
@@ -2195,7 +2202,7 @@ def main(argv=None):
         and not (input_dir / "term").is_dir()
     )
     missing_sources = (
-        _missing_source_outputs(output_dir, [info["output"] for info in students])
+        _missing_source_outputs(output_dir / "按人分类", [info["output"] for info in students])
         if default_full_batch else []
     )
     if run_reports:
@@ -2205,17 +2212,17 @@ def main(argv=None):
                 preserved_timeline_block=preserved_timeline_block,
             )
             if run_timeline:
-                update_readme_timeline_block(output_dir / "README.md", timeline_results)
-                update_timeline_diagnostics_block(output_dir / "README.md", timeline_results)
+                update_readme_timeline_block(readme, timeline_results)
+                update_timeline_diagnostics_block(readme, timeline_results)
         except (OSError, ValueError) as exc:
-            print(f"[失败] {output_dir / 'README.md'}：{exc}", file=sys.stderr)
+            print(f"[失败] {readme}：{exc}", file=sys.stderr)
             return 1
     elif run_timeline:
         try:
-            update_readme_timeline_block(output_dir / "README.md", timeline_results)
-            update_timeline_diagnostics_block(output_dir / "README.md", timeline_results)
+            update_readme_timeline_block(readme, timeline_results)
+            update_timeline_diagnostics_block(readme, timeline_results)
         except (OSError, ValueError) as exc:
-            print(f"[失败] {output_dir / 'README.md'}：{exc}", file=sys.stderr)
+            print(f"[失败] {readme}：{exc}", file=sys.stderr)
             return 1
     if run_reports:
         print(f"报告汇总：{len(results)} 个学生，{sum(r.get('recordings', 0) for r in results)} 个录像，"
@@ -2227,6 +2234,30 @@ def main(argv=None):
               f"{sum(r.get('statistics', {}).get('events', 0) for r in timeline_results)} 个事件。", flush=True)
     report_failed = any(r["status"] in ("失败", "部分失败") for r in results)
     return int(report_failed or timeline_failed)
+
+
+class _RunTee:
+    def __init__(self, stream, capture):
+        self.stream = stream
+        self.capture = capture
+
+    def write(self, text):
+        self.capture.write(text)
+        return self.stream.write(text)
+
+    def flush(self):
+        self.stream.flush()
+
+
+def main(argv=None):
+    """Run the batch while preserving its console output in the root run log."""
+    capture, state = io.StringIO(), {}
+    try:
+        with redirect_stdout(_RunTee(sys.stdout, capture)), redirect_stderr(_RunTee(sys.stderr, capture)):
+            return _main(argv, state)
+    finally:
+        if "path" in state:
+            atomic_write(state["path"], capture.getvalue())
 
 
 if __name__ == "__main__":

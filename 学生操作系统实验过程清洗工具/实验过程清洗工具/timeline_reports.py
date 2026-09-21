@@ -7,13 +7,16 @@ import json
 import os
 import re
 import stat
+import sys
 import tempfile
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import quote
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from output_layout import PROCESS_TOOL, pair_matches, unlink_pair, write_text_pair
 
-TIMELINE_DIRECTORY = "实验过程时间线"
+TIMELINE_DIRECTORY = ".实验过程清洗工具"
 TIMELINE_MANIFEST = ".timeline_manifest.json"
 TIMELINE_TOOL = "replay_term_qa.timeline"
 TIMELINE_SCHEMA_VERSION = 1
@@ -22,7 +25,7 @@ LAB_KEYS = tuple(f"lab{i}" for i in range(9)) + ("other",)
 README_BLOCK_START = "<!-- replay_term_qa:timeline:start -->"
 README_BLOCK_END = "<!-- replay_term_qa:timeline:end -->"
 _ARTIFACT_RE = re.compile(
-    rf"^{re.escape(TIMELINE_DIRECTORY)}/timeline_(?:lab[0-8]|other)\.(?:json|md)$"
+    rf"^(?:lab[0-8]|其他)/{re.escape(PROCESS_TOOL)}/实验过程时间线\.(?:json|md)$"
 )
 
 
@@ -55,22 +58,13 @@ def has_link_component(path):
 
 
 def _atomic_write(path, text):
-    path = Path(path)
-    if has_link_component(path):
-        raise ValueError(f"拒绝覆盖符号链接：{path}")
-    path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = None
-    try:
-        with tempfile.NamedTemporaryFile(
-            mode="w", encoding="utf-8", newline="\n", dir=path.parent,
-            prefix=".timeline-", suffix=".tmp", delete=False,
-        ) as stream:
-            temporary = Path(stream.name)
-            stream.write(text)
-        os.replace(temporary, path)
-    finally:
-        if temporary and temporary.exists():
-            temporary.unlink()
+    write_text_pair(Path(path), text)
+
+
+def timeline_paths(lab):
+    directory = "其他" if lab == "other" else lab
+    folder = Path(directory) / PROCESS_TOOL
+    return folder / "实验过程时间线.json", folder / "实验过程时间线.md"
 
 
 def _stream_sha256(path):
@@ -113,32 +107,28 @@ def _recoverable_invalid_manifest_artifacts(output, source):
     artifacts = []
     json_labs = set()
     markdown_labs = set()
-    for candidate in sorted(timeline_dir.iterdir(), key=lambda path: path.name):
-        match = re.fullmatch(r"timeline_(lab[0-8]|other)\.(json|md)", candidate.name)
-        if not match:
+    # A hidden manifest without the paired, classified artifacts cannot prove ownership.
+    for lab in LAB_KEYS:
+        json_relative, md_relative = timeline_paths(lab)
+        json_file = output / json_relative
+        md_file = output / md_relative
+        if not json_file.exists() and not md_file.exists():
             continue
-        if is_link_like(candidate) or not candidate.is_file():
+        if (is_link_like(json_file) or is_link_like(md_file)
+                or not json_file.is_file() or not md_file.is_file()):
             return None
-        lab, extension = match.groups()
-        if extension == "json":
-            try:
-                document = json.loads(candidate.read_text(encoding="utf-8"))
-            except (OSError, TypeError, ValueError):
-                return None
-            student = document.get("student") if isinstance(document, dict) else None
-            if (
-                not isinstance(student, dict)
-                or document.get("lab") != lab
-                or student.get("source") != str(source)
-            ):
-                return None
-            json_labs.add(lab)
-        else:
-            markdown_labs.add(lab)
-        artifacts.append((Path(TIMELINE_DIRECTORY) / candidate.name).as_posix())
-    if not json_labs or not markdown_labs.issubset(json_labs):
-        return None
-    return artifacts
+        try:
+            document = json.loads(json_file.read_text(encoding="utf-8"))
+        except (OSError, TypeError, ValueError):
+            return None
+        student = document.get("student") if isinstance(document, dict) else None
+        if (not isinstance(student, dict) or document.get("lab") != lab
+                or student.get("source") != str(source)):
+            return None
+        json_labs.add(lab)
+        markdown_labs.add(lab)
+        artifacts.extend((json_relative.as_posix(), md_relative.as_posix()))
+    return artifacts if json_labs and markdown_labs == json_labs else None
 
 
 def timeline_owned_by(student_output, source, info=None):
@@ -179,10 +169,10 @@ def _timeline_artifacts_are_complete(output, artifacts):
     grouped = {}
     for relative in artifacts:
         path = Path(relative)
-        match = re.fullmatch(r"timeline_(lab[0-8]|other)\.(json|md)", path.name)
-        if not match or path.parent.as_posix() != TIMELINE_DIRECTORY:
+        match = re.fullmatch(r"实验过程时间线\.(json|md)", path.name)
+        if not match or len(path.parts) != 3 or path.parts[0] not in {*LAB_KEYS[:-1], "其他"} or path.parts[1] != PROCESS_TOOL:
             return False
-        grouped.setdefault(match.group(1), set()).add(match.group(2))
+        grouped.setdefault(path.parts[0], set()).add(match.group(1))
     return bool(grouped) and all(kinds == {"json", "md"} for kinds in grouped.values())
 
 
@@ -194,7 +184,8 @@ def _timeline_artifact_hashes_are_valid(output, artifacts, hashes):
         if not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest):
             return False
         try:
-            if _stream_sha256(Path(output) / relative) != digest:
+            target = Path(output) / relative
+            if _stream_sha256(target) != digest or not pair_matches(target):
                 return False
         except OSError:
             return False
@@ -311,7 +302,7 @@ def _remove_registered_artifacts(output, artifacts, keep=()):
         ):
             continue
         target = output / Path(relative)
-        target.unlink()
+        unlink_pair(target)
         removed.append(relative)
     return removed
 
@@ -637,8 +628,7 @@ def write_student_timeline(info, result, incremental=None):
             "events": events,
             "errors": errors,
         }
-        json_relative = Path(TIMELINE_DIRECTORY) / f"timeline_{lab}.json"
-        md_relative = Path(TIMELINE_DIRECTORY) / f"timeline_{lab}.md"
+        json_relative, md_relative = timeline_paths(lab)
         _atomic_write(output / json_relative, json.dumps(document, ensure_ascii=False, indent=2) + "\n")
         _atomic_write(output / md_relative, _render_markdown(info, lab, events, stats, errors))
         wanted.extend((json_relative.as_posix(), md_relative.as_posix()))
