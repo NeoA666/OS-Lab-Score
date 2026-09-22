@@ -1,0 +1,690 @@
+{
+  "analyzer_signature": "ad5a9cea6da0c2ab26da01ac7f984ecd7d2791bc12e670019894b4a4344f9045",
+  "cache_owner": "generate_lab_diff_reports",
+  "comparison_rules_version": "source-diff-analyzer-v2",
+  "entries": [],
+  "git_args": [
+    "diff",
+    "--no-index",
+    "--no-ext-diff",
+    "--unified=3",
+    "--src-prefix=基准/",
+    "--dst-prefix=学生/",
+    "--ignore-space-change",
+    "--ignore-space-at-eol",
+    "--ignore-blank-lines"
+  ],
+  "git_version": "git version 2.45.2.windows.1",
+  "key": "ff28c1cba973401b22ac92f33fc7b6ede408ecd86afafc8e61ddc3e24a875b37",
+  "lab": "lab6",
+  "message": "未找到学生该实验的 labs/labN 目录",
+  "mirror_sha256": "",
+  "mirror_state": "unpublished",
+  "missing_lab": true,
+  "reference_files": {
+    "Makefile": {
+      "path": "Makefile",
+      "sha256": "b2910941125b69397a58741eb0b449c2ec1d2b758df9d782d8e59a5cf5b28f81",
+      "size": 6052,
+      "type": "text"
+    },
+    "kernel/bio.c": {
+      "path": "kernel/bio.c",
+      "sha256": "7cd5788487c0b7a3e61f2575e0ed2151d8a6009a9f70a7569e423e76daf2f469",
+      "size": 3681,
+      "type": "text"
+    },
+    "kernel/console.c": {
+      "path": "kernel/console.c",
+      "sha256": "4e7391fd8b03208ac228219aff6f3eb82c8207bb9d4817047930e87ead37fd2f",
+      "size": 4100,
+      "type": "text"
+    },
+    "kernel/disk.c": {
+      "path": "kernel/disk.c",
+      "sha256": "5381967a0fe8023c29fed464b7e888c8c828114a2f4f3f9bef66ba69ff8b1761",
+      "size": 790,
+      "type": "text"
+    },
+    "kernel/dmac.c": {
+      "path": "kernel/dmac.c",
+      "sha256": "37a8ca03069c744387bd34cb5098033ac9f365e6b5e2a95a05152669e5de041b",
+      "size": 11016,
+      "type": "text"
+    },
+    "kernel/entry_k210.S": {
+      "path": "kernel/entry_k210.S",
+      "sha256": "e6dfda1687e65e780f2f386209ba4bea8a756f124723448a13dfedb64929b6fc",
+      "size": 507,
+      "type": "text"
+    },
+    "kernel/entry_qemu.S": {
+      "path": "kernel/entry_qemu.S",
+      "sha256": "c09b1f1f8f5d58c74ec50d0578a807735fc8108c6d4a3686aee987c340ac8f47",
+      "size": 314,
+      "type": "text"
+    },
+    "kernel/exec.c": {
+      "path": "kernel/exec.c",
+      "sha256": "e29f89b576c3dae1b4f6ec4d3edb3554364578cacc6453d3695cef283ac607e9",
+      "size": 4760,
+      "type": "text"
+    },
+    "kernel/fat32.c": {
+      "path": "kernel/fat32.c",
+      "sha256": "9246d3bdf94d60b46a6dcc5721ebcc575f239992e3580d44ce75bc40eb414b64",
+      "size": 31380,
+      "type": "text"
+    },
+    "kernel/file.c": {
+      "path": "kernel/file.c",
+      "sha256": "cb18d194ddaafc6bacd3c83a8f2ee5ce7270cde84cdf46a798bbd22d6dab57cd",
+      "size": 4435,
+      "type": "text"
+    },
+    "kernel/fpioa.c": {
+      "path": "kernel/fpioa.c",
+      "sha256": "c391bac09624b8ee5488a19f36a773d9df30318ff46e91bbff9df82369aee31e",
+      "size": 113826,
+      "type": "text"
+    },
+    "kernel/gpiohs.c": {
+      "path": "kernel/gpiohs.c",
+      "sha256": "e8e44e6631aa84f10efc51b770864a546e18063a2a6676c0ff124d964364c723",
+      "size": 6018,
+      "type": "text"
+    },
+    "kernel/include/buf.h": {
+      "path": "kernel/include/buf.h",
+      "sha256": "d72ab45e5776eeae68f45d2f34bbf449df5efc8a71bf8adc9d80063cb80b4b71",
+      "size": 463,
+      "type": "text"
+    },
+    "kernel/include/console.h": {
+      "path": "kernel/include/console.h",
+      "sha256": "8bb85386d8dbdc0f01df519535bdd65ae20f2402b540d197536b86deac1fc7f7",
+      "size": 128,
+      "type": "text"
+    },
+    "kernel/include/defs.h": {
+      "path": "kernel/include/defs.h",
+      "sha256": "53c0a025404de7c00fb04a271165223a6be7437be882e77b00fb94e68d74f472",
+      "size": 8350,
+      "type": "text"
+    },
+    "kernel/include/disk.h": {
+      "path": "kernel/include/disk.h",
+      "sha256": "990472a11346fba30f0922dfc169c5fd2858554ad0f2f35924546c25ef774fde",
+      "size": 179,
+      "type": "text"
+    },
+    "kernel/include/dmac.h": {
+      "path": "kernel/include/dmac.h",
+      "sha256": "d5607b44f1311d175774118e99f98adfad4ccce250be67280db2520fc4ef9507",
+      "size": 46836,
+      "type": "text"
+    },
+    "kernel/include/elf.h": {
+      "path": "kernel/include/elf.h",
+      "sha256": "510caa5145220558f1305ad907693f8435eb3c99a3337dd911d3289efa9d8376",
+      "size": 863,
+      "type": "text"
+    },
+    "kernel/include/fat32.h": {
+      "path": "kernel/include/fat32.h",
+      "sha256": "d2ea195cb62c204c988bcf1814f077638e146924e15c0c921051920d0477f1de",
+      "size": 2430,
+      "type": "text"
+    },
+    "kernel/include/fcntl.h": {
+      "path": "kernel/include/fcntl.h",
+      "sha256": "5c7e64028798ae92dab3feb3f697cd295702d6a37d12d4379d2c88c083ab1ba8",
+      "size": 150,
+      "type": "text"
+    },
+    "kernel/include/file.h": {
+      "path": "kernel/include/file.h",
+      "sha256": "28651fbaf7660fc609a4a108101bd80660dac2016ffa41c79e2fde69e5770a16",
+      "size": 1015,
+      "type": "text"
+    },
+    "kernel/include/fpioa.h": {
+      "path": "kernel/include/fpioa.h",
+      "sha256": "cc49021571dd1068dadd0b229869ed86a526b14a947ae4bd9b6c4110c5ea4d54",
+      "size": 52965,
+      "type": "text"
+    },
+    "kernel/include/gpiohs.h": {
+      "path": "kernel/include/gpiohs.h",
+      "sha256": "e355f6e88bec55b626d78ddb06e66347af3e93462ea90901c935989332eec622",
+      "size": 7850,
+      "type": "text"
+    },
+    "kernel/include/intr.h": {
+      "path": "kernel/include/intr.h",
+      "sha256": "7b5cc3bf69a3bcada04155df80abe3f79aeb69e1118072cb73e8be9f5c4ef0c8",
+      "size": 116,
+      "type": "text"
+    },
+    "kernel/include/kalloc.h": {
+      "path": "kernel/include/kalloc.h",
+      "sha256": "cc80186047a8fd7fb927aa269d8687dde5bb93e559dc6c7019adaf8e2b883378",
+      "size": 204,
+      "type": "text"
+    },
+    "kernel/include/memlayout.h": {
+      "path": "kernel/include/memlayout.h",
+      "sha256": "60260f459669bb5fc183033f3189dc7b61bcaa0a71e02b024e2caf73d6aa9a7e",
+      "size": 4505,
+      "type": "text"
+    },
+    "kernel/include/param.h": {
+      "path": "kernel/include/param.h",
+      "sha256": "cb065762d7a97b1cf0e1cc4f184e6c7e77fb0224b554b9c951702fa7b11bcff0",
+      "size": 880,
+      "type": "text"
+    },
+    "kernel/include/pipe.h": {
+      "path": "kernel/include/pipe.h",
+      "sha256": "eb5308cd07b1b2b9ceae870326d79ee9cf2b404e734b5c9907ae79088e82f52c",
+      "size": 587,
+      "type": "text"
+    },
+    "kernel/include/plic.h": {
+      "path": "kernel/include/plic.h",
+      "sha256": "6dad26e39650ac74f57958ea1ee9d06d4402ad6b0d5fd9c633a6ff775bb3ae87",
+      "size": 5945,
+      "type": "text"
+    },
+    "kernel/include/printf.h": {
+      "path": "kernel/include/printf.h",
+      "sha256": "33738f67abeb9cc11aa4873939f49d5d6e686a396634b8a5f79d5b10843fd0c2",
+      "size": 202,
+      "type": "text"
+    },
+    "kernel/include/proc.h": {
+      "path": "kernel/include/proc.h",
+      "sha256": "c75e7cfd61fd4082ccc7b523e743a6898b308e7b1721b92d656022b15bda7323",
+      "size": 3241,
+      "type": "text"
+    },
+    "kernel/include/riscv.h": {
+      "path": "kernel/include/riscv.h",
+      "sha256": "b019ba9aed208888b1f4df0c656735c39d7da737929f52a80d8e2758fdd6127a",
+      "size": 7414,
+      "type": "text"
+    },
+    "kernel/include/sbi.h": {
+      "path": "kernel/include/sbi.h",
+      "sha256": "e8684f6232ce9f62245944b9ed3129daba7ec7752bd3461552c813e15b1520a8",
+      "size": 2749,
+      "type": "text"
+    },
+    "kernel/include/sdcard.h": {
+      "path": "kernel/include/sdcard.h",
+      "sha256": "eddd1172ff78f3efd6344787c29a80e32bdda70b8de0f3164dde02569e49fd4e",
+      "size": 214,
+      "type": "text"
+    },
+    "kernel/include/sleeplock.h": {
+      "path": "kernel/include/sleeplock.h",
+      "sha256": "8c2510a6dc26c2ce254f8c613292833b60d1ac3d8b1e7aa66f11e7fe3db68ea6",
+      "size": 606,
+      "type": "text"
+    },
+    "kernel/include/spi.h": {
+      "path": "kernel/include/spi.h",
+      "sha256": "de656014755ae8f13166cc50491c60969fc501007cab1321284fe942761d9ae8",
+      "size": 18482,
+      "type": "text"
+    },
+    "kernel/include/spinlock.h": {
+      "path": "kernel/include/spinlock.h",
+      "sha256": "eac15f870f28e4f0a79845a2be16d37e51f876868c216307aa218560e0846d34",
+      "size": 642,
+      "type": "text"
+    },
+    "kernel/include/stat.h": {
+      "path": "kernel/include/stat.h",
+      "sha256": "602f647b3184ff03195e1948163f606ce0cc2ad12901c0c72e1751125c0751f1",
+      "size": 581,
+      "type": "text"
+    },
+    "kernel/include/string.h": {
+      "path": "kernel/include/string.h",
+      "sha256": "82e89b2b905c5faa4f731833506d1ac02cd73914366516f432f5289241e96f8e",
+      "size": 666,
+      "type": "text"
+    },
+    "kernel/include/syscall.h": {
+      "path": "kernel/include/syscall.h",
+      "sha256": "8131a5cdc3d3373de5615296cd713c6e2bf3ee25254b70f320b40fae80200262",
+      "size": 307,
+      "type": "text"
+    },
+    "kernel/include/sysctl.h": {
+      "path": "kernel/include/sysctl.h",
+      "sha256": "a69c9981673c397fb2d91d87bd23f9d0be56b4b27c42c0c4b0abda0d5d1b01d6",
+      "size": 29320,
+      "type": "text"
+    },
+    "kernel/include/sysinfo.h": {
+      "path": "kernel/include/sysinfo.h",
+      "sha256": "67c690a7b614c67c15b7a5ca062c8f11d7502dbee9ea956847e1fa64f979a6de",
+      "size": 196,
+      "type": "text"
+    },
+    "kernel/include/sysnum.h": {
+      "path": "kernel/include/sysnum.h",
+      "sha256": "5366e35382c7ae38057a293b574d9834a4ab676d7f281b06e081f1aff469348e",
+      "size": 1073,
+      "type": "text"
+    },
+    "kernel/include/timer.h": {
+      "path": "kernel/include/timer.h",
+      "sha256": "6d7e4a41f65cafa21169ebf987e6f314ad48c2db5e10125bfef5e2ac644b8990",
+      "size": 217,
+      "type": "text"
+    },
+    "kernel/include/trap.h": {
+      "path": "kernel/include/trap.h",
+      "sha256": "7677f81c4bd9c846f8cff30ae5652b13c4af694b1687c87875533f2705d8e242",
+      "size": 2027,
+      "type": "text"
+    },
+    "kernel/include/types.h": {
+      "path": "kernel/include/types.h",
+      "sha256": "b36fc20f27cbbbc7178b734159f56dbd65e5d3dade005d22a166d0d74b2ce838",
+      "size": 1261,
+      "type": "text"
+    },
+    "kernel/include/utils.h": {
+      "path": "kernel/include/utils.h",
+      "sha256": "d2cbf7a73e2ca33bc4ea0bd77c3ebae50a352d40a2eb52a704932511406d9bb0",
+      "size": 11961,
+      "type": "text"
+    },
+    "kernel/include/virtio.h": {
+      "path": "kernel/include/virtio.h",
+      "sha256": "f8dc62853326af7a400502c43e15b7e5cc69ead374cce18cd0bfdd73bde79821",
+      "size": 2885,
+      "type": "text"
+    },
+    "kernel/include/vm.h": {
+      "path": "kernel/include/vm.h",
+      "sha256": "97d48901933895579a1b63cfeb98611a4256bd6aa4cdef0bf88a565c8d3f22fc",
+      "size": 1659,
+      "type": "text"
+    },
+    "kernel/intr.c": {
+      "path": "kernel/intr.c",
+      "sha256": "b984ac8e769ab3830d14a267544cdb4f67b86e43ded9f1b2d55a220b5d6cbdd1",
+      "size": 970,
+      "type": "text"
+    },
+    "kernel/kalloc.c": {
+      "path": "kernel/kalloc.c",
+      "sha256": "300307fe1144ad49bef94e40725760e679c11546df5d56901bf5383d8ed369c4",
+      "size": 2116,
+      "type": "text"
+    },
+    "kernel/kernelvec.S": {
+      "path": "kernel/kernelvec.S",
+      "sha256": "e566178a850c78f16ed55d1eb4b0774aae5dcbef62e151a1b886c2a2c4fbff67",
+      "size": 2039,
+      "type": "text"
+    },
+    "kernel/logo.c": {
+      "path": "kernel/logo.c",
+      "sha256": "3b4fececb1dcd75e3de3f7a6e331a7980552eed9ddd2b5d01d22a4929da1b48b",
+      "size": 1874,
+      "type": "text"
+    },
+    "kernel/main.c": {
+      "path": "kernel/main.c",
+      "sha256": "14f9e3be4a338355e178108f27ae35f8bd73395024cf0374e5741157432446dc",
+      "size": 2214,
+      "type": "text"
+    },
+    "kernel/pipe.c": {
+      "path": "kernel/pipe.c",
+      "sha256": "d2d02d55f455098d93bad442bea6bcfaf198d326af7ade3e517cbf1145dafa11",
+      "size": 2634,
+      "type": "text"
+    },
+    "kernel/plic.c": {
+      "path": "kernel/plic.c",
+      "sha256": "e206d6a063b5e333f880c5be2fefe50a92f41033f844b2e1bce5bb7e1d415ee7",
+      "size": 1546,
+      "type": "text"
+    },
+    "kernel/printf.c": {
+      "path": "kernel/printf.c",
+      "sha256": "94fdd37845213a59549c4ba4e881855612d6ccbd003f02dfc23c1531d8b4fb31",
+      "size": 4444,
+      "type": "text"
+    },
+    "kernel/proc.c": {
+      "path": "kernel/proc.c",
+      "sha256": "9b0e29a664c57b83bf2735a9a2dde85a3327447532be56f8e6bd4d4db894662e",
+      "size": 19746,
+      "type": "text"
+    },
+    "kernel/sdcard.c": {
+      "path": "kernel/sdcard.c",
+      "sha256": "03aa934b1ced71fc4a02d968fcc510a3b26b143f116458f3088913f2435ec5fb",
+      "size": 10656,
+      "type": "text"
+    },
+    "kernel/sleeplock.c": {
+      "path": "kernel/sleeplock.c",
+      "sha256": "67c8cf75a9148aa3d3deda11c8386f71185856f24e79119a086e04e69bbbc219",
+      "size": 885,
+      "type": "text"
+    },
+    "kernel/spi.c": {
+      "path": "kernel/spi.c",
+      "sha256": "2454cf98f4d501d2a86f4df4183b5d8f15b9bcf12a5b3e22f2940fcd1bd2deef",
+      "size": 18006,
+      "type": "text"
+    },
+    "kernel/spinlock.c": {
+      "path": "kernel/spinlock.c",
+      "sha256": "61be1a0c24b22f6ef79fc2161c222270e104cfc4209f707be33065fcae4c065f",
+      "size": 2243,
+      "type": "text"
+    },
+    "kernel/string.c": {
+      "path": "kernel/string.c",
+      "sha256": "5accb1e8dea93158cc50f1ee54b35c26df0ad7555abc493556e219b6e12e975f",
+      "size": 2207,
+      "type": "text"
+    },
+    "kernel/swtch.S": {
+      "path": "kernel/swtch.S",
+      "sha256": "a84898f5207a8126e207b90826c7e1091ec1db956358cf37098213fa991341db",
+      "size": 836,
+      "type": "text"
+    },
+    "kernel/syscall.c": {
+      "path": "kernel/syscall.c",
+      "sha256": "f0683e21a80df6f774ac8761dad73db557eb78891ed494d3e9b05d65a25b5782",
+      "size": 5883,
+      "type": "text"
+    },
+    "kernel/sysctl.c": {
+      "path": "kernel/sysctl.c",
+      "sha256": "882a6047ec67e5d5cefc21e8384bdd308208541397e6c10c9db799d34e11e0a3",
+      "size": 9640,
+      "type": "text"
+    },
+    "kernel/sysfile.c": {
+      "path": "kernel/sysfile.c",
+      "sha256": "20af818622a22616e38375467c94b0c7f0aca4929880fda2ab3f586cfeda08a6",
+      "size": 10034,
+      "type": "text"
+    },
+    "kernel/sysproc.c": {
+      "path": "kernel/sysproc.c",
+      "sha256": "80615ab8d718b37673ff8e61e66a53add7c550903b3489545bbae6062ae63886",
+      "size": 8932,
+      "type": "text"
+    },
+    "kernel/timer.c": {
+      "path": "kernel/timer.c",
+      "sha256": "187dcd6128435d5dc743b9d2c28bdeef22dce27c219012fccd3fa69a761a1fe8",
+      "size": 815,
+      "type": "text"
+    },
+    "kernel/trampoline.S": {
+      "path": "kernel/trampoline.S",
+      "sha256": "c7670a3d0d3346a258bd03c6fb24d904eb3673376803ee518779165eb0e461d0",
+      "size": 3819,
+      "type": "text"
+    },
+    "kernel/trap.c": {
+      "path": "kernel/trap.c",
+      "sha256": "07ffb500ef413c8641168cf47000d98b97d70e6254f93270eef14169590b7dda",
+      "size": 7394,
+      "type": "text"
+    },
+    "kernel/uart.c": {
+      "path": "kernel/uart.c",
+      "sha256": "e9a653e85574ca5f049cfa44835229a98a05c4163746812d8e7fed300b5d4f6d",
+      "size": 5027,
+      "type": "text"
+    },
+    "kernel/utils.c": {
+      "path": "kernel/utils.c",
+      "sha256": "c3249bfc46993214f77c00b0af272f2000ecb3286a27eac80ec05817f000ba36",
+      "size": 701,
+      "type": "text"
+    },
+    "kernel/virtio_disk.c": {
+      "path": "kernel/virtio_disk.c",
+      "sha256": "37c60c9a9cfbbe0574fbaa1d0e71b06030803b63127794e95839189ace40eaa0",
+      "size": 7450,
+      "type": "text"
+    },
+    "kernel/vm.c": {
+      "path": "kernel/vm.c",
+      "sha256": "d5d83796209f4a45d7309b51d87a5a2f09747fc4b90a85ae9798f81e000f6f72",
+      "size": 15872,
+      "type": "text"
+    },
+    "linker/k210.ld": {
+      "path": "linker/k210.ld",
+      "sha256": "1868555b96e32d4f63d3926f266e7395c13e3b7e293db828d079541bc1520628",
+      "size": 1003,
+      "type": "text"
+    },
+    "linker/qemu.ld": {
+      "path": "linker/qemu.ld",
+      "sha256": "73502e64c75f0e7fe3c3acf65868e930ce7e171cc1bc6080ee1301d4712d8b10",
+      "size": 1003,
+      "type": "text"
+    },
+    "xv6-user/cat.c": {
+      "path": "xv6-user/cat.c",
+      "sha256": "746f6dd6eae5d08cbb9d65849c1998a6afc0778434a2d35093d74aef726bb21c",
+      "size": 679,
+      "type": "text"
+    },
+    "xv6-user/echo.c": {
+      "path": "xv6-user/echo.c",
+      "sha256": "6a29239a78b8799b18b8898314aa4e2411760689e67ef665a9f5408f9a1779fb",
+      "size": 335,
+      "type": "text"
+    },
+    "xv6-user/find.c": {
+      "path": "xv6-user/find.c",
+      "sha256": "6f40548916ab60a9aefa8e5ca22679a8a1a9980230e721692cbdebcf8b17cdfd",
+      "size": 1321,
+      "type": "text"
+    },
+    "xv6-user/forktest.c": {
+      "path": "xv6-user/forktest.c",
+      "sha256": "cdc8ae546ea5969bf944b185e62b3072908978249164800a2599e26f66b69c70",
+      "size": 828,
+      "type": "text"
+    },
+    "xv6-user/grep.c": {
+      "path": "xv6-user/grep.c",
+      "sha256": "0010a2197c7e88be90b2dfcafac0e1a054e9d4cdda0a07249a1f542b580cbcfa",
+      "size": 2070,
+      "type": "text"
+    },
+    "xv6-user/grind.c": {
+      "path": "xv6-user/grind.c",
+      "sha256": "ef871d974da5793fba18d311cd2872f64fec4619f8a1a1d449d935d1507fbb7d",
+      "size": 8005,
+      "type": "text"
+    },
+    "xv6-user/halt.c": {
+      "path": "xv6-user/halt.c",
+      "sha256": "138b596eacad17e7e625b2fd8de5bec12d527dcd3fc81c9e6350a37389854134",
+      "size": 88,
+      "type": "text"
+    },
+    "xv6-user/init.c": {
+      "path": "xv6-user/init.c",
+      "sha256": "f888c34ac44ae504ec518fd5abeeff153d2754758ca35ecddc76ab748123ab50",
+      "size": 1149,
+      "type": "text"
+    },
+    "xv6-user/initcode.S": {
+      "path": "xv6-user/initcode.S",
+      "sha256": "87fbadf0e609ea585d1e88a00dd412e533b8dcda1efc5f2f797edac84dd60a3e",
+      "size": 448,
+      "type": "text"
+    },
+    "xv6-user/kill.c": {
+      "path": "xv6-user/kill.c",
+      "sha256": "7c1275e82c8c3007e48c4a83ea645af83ebf1fd6c68fd5abac11062043d26825",
+      "size": 291,
+      "type": "text"
+    },
+    "xv6-user/ln.c": {
+      "path": "xv6-user/ln.c",
+      "sha256": "d19c844c10196b03af03196098b3a796b9f98ad6b597d3983e1b6cdc462d02b7",
+      "size": 322,
+      "type": "text"
+    },
+    "xv6-user/ls.c": {
+      "path": "xv6-user/ls.c",
+      "sha256": "e7a0696aabd50abe1f083ca7df73a290e3220bb133b6ac43fc316136ea3bdc16",
+      "size": 1146,
+      "type": "text"
+    },
+    "xv6-user/mkdir.c": {
+      "path": "xv6-user/mkdir.c",
+      "sha256": "fa1671998b7f14c6a9ee257a62bfab03245ba5e53ba5a7024bb9087dc232e9cb",
+      "size": 393,
+      "type": "text"
+    },
+    "xv6-user/mv.c": {
+      "path": "xv6-user/mv.c",
+      "sha256": "4559e90f5236dbda95f7d385e48b4f2feda15e3e3af025193f05a8764d83bce1",
+      "size": 1519,
+      "type": "text"
+    },
+    "xv6-user/printf.c": {
+      "path": "xv6-user/printf.c",
+      "sha256": "c0206139cb31b4695b1d9db7ffb08c0c19aec7f4f3b67dd1547ea03b0978ed85",
+      "size": 2133,
+      "type": "text"
+    },
+    "xv6-user/rm.c": {
+      "path": "xv6-user/rm.c",
+      "sha256": "460d81a3c6defa6079a13dfbf5fffd3e7c10bf842fcdfd112cac9e74ad2d62e5",
+      "size": 409,
+      "type": "text"
+    },
+    "xv6-user/sh.c": {
+      "path": "xv6-user/sh.c",
+      "sha256": "eeef2cabeb11bbc7f1a7039ce219c0f63cf566d7439c5dae8134ca229ad6619d",
+      "size": 11874,
+      "type": "text"
+    },
+    "xv6-user/sleep.c": {
+      "path": "xv6-user/sleep.c",
+      "sha256": "f69d899636f491e0f70bd635c5d7beb5c05beda8dcbde526045b4aee523e0437",
+      "size": 427,
+      "type": "text"
+    },
+    "xv6-user/strace.c": {
+      "path": "xv6-user/strace.c",
+      "sha256": "07c22e052d58d0f7661dc35375c43dccdc590fe4b988a16291135ce87b208f17",
+      "size": 619,
+      "type": "text"
+    },
+    "xv6-user/stressfs.c": {
+      "path": "xv6-user/stressfs.c",
+      "sha256": "37bef1f385b8e93a3fc9f76a57ed8f88b57132b157b3ed21379c1fe3ce2b3d63",
+      "size": 1139,
+      "type": "text"
+    },
+    "xv6-user/test.c": {
+      "path": "xv6-user/test.c",
+      "sha256": "d6cd3ab816f456a5e1c87f6660130d88c344ae5b21f0fda64e63f592ccbe2bbf",
+      "size": 396,
+      "type": "text"
+    },
+    "xv6-user/ulib.c": {
+      "path": "xv6-user/ulib.c",
+      "sha256": "698efdbd92c39b969ad6dc40d4c0e868e10c3b1709901227aec75a4eca259d70",
+      "size": 2113,
+      "type": "text"
+    },
+    "xv6-user/umalloc.c": {
+      "path": "xv6-user/umalloc.c",
+      "sha256": "b6ba6fe6f90c41c2abbcbc235f81553b2b27a09b0e38141c99167a8ac06e012e",
+      "size": 1796,
+      "type": "text"
+    },
+    "xv6-user/user.h": {
+      "path": "xv6-user/user.h",
+      "sha256": "bc39e447785a0399aea4196286d3ff39ae76f0ac30230ee29e516c7d87c9a329",
+      "size": 1578,
+      "type": "text"
+    },
+    "xv6-user/usertests.c": {
+      "path": "xv6-user/usertests.c",
+      "sha256": "36a1bf582c40643c6f12d86e8051f0f681398854ecc2305ff895a0ea559f05ca",
+      "size": 59180,
+      "type": "text"
+    },
+    "xv6-user/usys.pl": {
+      "path": "xv6-user/usys.pl",
+      "sha256": "05ee6ee3aa22fc90cd36c7b72ff608a92c7389d592bf36974e6fda25e10d91c4",
+      "size": 895,
+      "type": "text"
+    },
+    "xv6-user/vmtest.c": {
+      "path": "xv6-user/vmtest.c",
+      "sha256": "d7b06c4a42f99807cc090745ae2305a980d93662beb2f11eee13f3a14f2b8b52",
+      "size": 770,
+      "type": "text"
+    },
+    "xv6-user/wc.c": {
+      "path": "xv6-user/wc.c",
+      "sha256": "7b157e1518cdfe3ff7ba26a7a02d4f0eb3b4694ef28ac2fdd17364e9cb88f820",
+      "size": 950,
+      "type": "text"
+    },
+    "xv6-user/xargs.c": {
+      "path": "xv6-user/xargs.c",
+      "sha256": "78f6f767d35873b55e8781f9a1b4d89fcfbf4d68e452796bedfd5e166499019d",
+      "size": 1545,
+      "type": "text"
+    },
+    "xv6-user/xargstest.sh": {
+      "path": "xv6-user/xargstest.sh",
+      "sha256": "5ad95fc8b6cfff939f9215961e6d2f0fe6245299904bd1e1466615bea87dd634",
+      "size": 99,
+      "type": "text"
+    },
+    "xv6-user/zombie.c": {
+      "path": "xv6-user/zombie.c",
+      "sha256": "44af31e1303d2d53a0e7daada3009988928a26ee29700dad74990f705b89b297",
+      "size": 268,
+      "type": "text"
+    }
+  },
+  "reference_fingerprint": "efd24a53efeb075caeed773cb1ed0914ee6ebec221739337add6a85f27d68a8a",
+  "render_signature": "b5e72de9d29e60e65bbdf95b970f27d7639b6bc1f2c0d124313113d9bbdd7b8b",
+  "report_sha256": "",
+  "scanned_files": 0,
+  "schema_version": 1,
+  "source_fingerprint": "e3cb36d5305ff49e9928225ac5c101432861f41523e9b0ec7afd9446d254202d",
+  "status": "跳过",
+  "strict_whitespace": false,
+  "student": {
+    "archive_sha256": "0181ea07b7ef4aeceb0441e1e829d40e1e9cb983bc03a5380c82d2b504106146",
+    "name": "岳海瑞",
+    "source": "操作系统实验数据记录/2406080122-岳海瑞-20260915-1318",
+    "student_id": "2406080122"
+  },
+  "student_files": {},
+  "unchanged_files": 0
+}

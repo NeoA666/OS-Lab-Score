@@ -1,0 +1,11 @@
+{
+  "tool": "generate_lab_diff_reports",
+  "schema_version": 1,
+  "student_id": "2406080106",
+  "name": "高龙徽",
+  "archive_sha256": "e97fc4272b949d70cb958a5c0cecb4f09d576eb499d2aed9fcd7b6ef2d984e2a",
+  "source": "操作系统实验数据记录/2406080106-高龙徽-20260914-2230",
+  "artifacts": [
+    "代码差异报告.md"
+  ]
+}

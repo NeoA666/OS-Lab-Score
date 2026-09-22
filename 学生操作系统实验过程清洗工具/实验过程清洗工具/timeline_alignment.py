@@ -89,38 +89,59 @@ def read_recording(out_path, tim_path):
             "issues": issues}
 
 
-def load_session_logs(source):
+def load_collection_log(source):
+    """Read every valid collection-log record and keep session starts for clocks.
+
+    ``events.jsonl`` is collection metadata, never a terminal screen capture.
+    The returned records preserve their source line so callers can expose them
+    as E2 evidence without confusing them with replay-derived E1 events.
+    """
     path = Path(source) / "logs" / "events.jsonl"
-    sessions, issues = {}, []
+    records, sessions, issues = [], {}, []
     if app.has_link_component(path):
-        return sessions, ["session_log_linked"]
+        return records, sessions, ["session_log_linked"]
     if not path.is_file():
-        return sessions, ["session_log_missing"]
+        return records, sessions, ["session_log_missing"]
     previous = None
     try:
         handle = path.open("r", encoding="utf-8", errors="replace")
     except OSError as exc:
-        return sessions, ["session_log_unreadable: " + str(exc)]
+        return records, sessions, ["session_log_unreadable: " + str(exc)]
     with handle:
-        for line_no, line in enumerate(handle, 1):
-            if line.startswith("\0"):
-                issues.append(f"日志第 {line_no} 行有 NUL 前缀，保留尾部 JSON")
-                line = line.lstrip("\0")
+        for line_no, raw_line in enumerate(handle, 1):
+            nul_prefix = len(raw_line) - len(raw_line.lstrip("\0"))
+            line = raw_line[nul_prefix:]
+            if nul_prefix:
+                issues.append(f"日志第 {line_no} 行有 NUL 前缀，已恢复尾部 JSON")
             try:
-                event = json.loads(line)
+                event = json.loads(
+                    line,
+                    parse_constant=lambda value: (_ for _ in ()).throw(
+                        ValueError(f"非标准 JSON 常量：{value}")
+                    ),
+                )
                 if not isinstance(event, dict):
                     raise ValueError("日志项不是对象")
             except (ValueError, TypeError):
-                issues.append(f"日志第 {line_no} 行不可解析")
+                suffix = "（NUL 前缀恢复后仍不可解析）" if nul_prefix else ""
+                issues.append(f"日志第 {line_no} 行不可解析{suffix}")
                 continue
+            event = dict(event, source_file="logs/events.jsonl", source_line=line_no,
+                         nul_prefix_recovered=bool(nul_prefix))
+            records.append(event)
             timestamp = parse_datetime(event.get("ts"))
             if timestamp and previous and timestamp < previous:
                 issues.append(f"日志第 {line_no} 行时间倒退；未据此校正录像时钟")
             if timestamp:
                 previous = timestamp
             if event.get("type") == "session_start" and event.get("rec"):
-                event = dict(event, source_file="logs/events.jsonl", source_line=line_no)
                 sessions.setdefault(str(event["rec"]), []).append(event)
+    return records, sessions, issues
+
+
+def load_session_logs(source):
+    """Compatibility wrapper for callers that only need clock support."""
+    _, sessions, issues = load_collection_log(source)
     return sessions, issues
 
 
@@ -188,6 +209,181 @@ def iso_at(clock, elapsed):
         return (clock["start"] + timedelta(seconds=elapsed)).isoformat()
     except (OverflowError, ValueError):
         return None
+
+
+def _source_log_time(event):
+    """Resolve an E2 record's own timestamp without deriving terminal time."""
+    issues = []
+    timestamp = parse_datetime(event.get("ts"))
+    epoch = event.get("epoch")
+    epoch_time = None
+    if isinstance(epoch, (int, float)) and not isinstance(epoch, bool) and math.isfinite(epoch):
+        try:
+            epoch_time = datetime.fromtimestamp(epoch, timezone.utc)
+        except (OverflowError, OSError, ValueError):
+            issues.append("collection_log_epoch_unusable")
+    elif epoch is not None:
+        issues.append("collection_log_epoch_unusable")
+    if timestamp is not None and epoch_time is not None:
+        try:
+            if abs((timestamp - epoch_time).total_seconds()) > 1:
+                issues.append("collection_log_ts_epoch_conflict")
+        except OverflowError:
+            issues.append("collection_log_ts_epoch_conflict")
+    if timestamp is not None:
+        source = "ts"
+    elif epoch_time is not None:
+        timestamp, source = epoch_time, "epoch"
+    else:
+        source = "unavailable"
+        issues.append("collection_log_time_unavailable")
+    semantics = {
+        "ts": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+        "epoch": "采集日志 epoch 字段换算的时间；不是终端屏幕文本的可观察显示时间。",
+        "unavailable": "采集日志未提供可解析时间；不是终端屏幕证据。",
+    }[source]
+    return timestamp, {
+        "ts": event.get("ts"), "epoch": epoch,
+        "resolved_at": timestamp.isoformat() if timestamp else None,
+        "resolution": source, "semantics": semantics,
+    }, issues
+
+
+def _terminal_values(context):
+    terminal = context.get("terminal") or {}
+    ttys = set()
+    pids = set()
+    for value in (terminal.get("header_tty"), terminal.get("tty")):
+        if value not in (None, ""):
+            ttys.add(str(value))
+    for value in terminal.get("session_start_tty", ()):  # exact rec clock records
+        if value not in (None, ""):
+            ttys.add(str(value))
+    for value in terminal.get("shell_pid", ()):
+        if value not in (None, ""):
+            pids.add(str(value))
+    return ttys, pids
+
+
+def _recording_time_range(context):
+    """Return an independently checkable absolute start/end pair, if available."""
+    clock = context.get("clock") or {}
+    start = clock.get("start")
+    if not clock.get("usable") or not isinstance(start, datetime) or start.tzinfo is None:
+        return None
+    duration = context.get("duration_seconds")
+    try:
+        duration = float(duration)
+    except (TypeError, ValueError):
+        return None
+    if not math.isfinite(duration) or duration < 0:
+        return None
+    try:
+        return start, start + timedelta(seconds=duration)
+    except (OverflowError, ValueError):
+        return None
+
+
+def _correlate_log_record(event, contexts, timestamp):
+    """Associate only an exact rec or one TTY/PID plus a timed recording span."""
+    requested = event.get("rec")
+    exact = [context for context in contexts
+             if requested not in (None, "") and str(context.get("recording_id")) == str(requested)]
+    if len(exact) == 1:
+        return exact[0], "exact_rec", "日志 rec 与录像 ID 完全一致"
+
+    if timestamp is None:
+        return None, "unlinked", "日志缺少可解析时间，无法执行 TTY/PID 时段关联"
+    tty = event.get("tty")
+    pid = event.get("shell_pid")
+    has_tty = tty not in (None, "")
+    has_pid = pid not in (None, "")
+    if not has_tty and not has_pid:
+        return None, "unlinked", "日志缺少 rec 和 TTY/PID，无法关联录像"
+    candidates = []
+    for context in contexts:
+        bounds = _recording_time_range(context)
+        if bounds is None or not (bounds[0] <= timestamp <= bounds[1]):
+            continue
+        ttys, pids = _terminal_values(context)
+        if has_tty and str(tty) not in ttys:
+            continue
+        if has_pid and str(pid) not in pids:
+            continue
+        candidates.append(context)
+    if len(candidates) == 1:
+        return candidates[0], "correlated", "唯一 TTY/PID 与有效录像时段匹配"
+    if candidates:
+        return None, "unlinked", "TTY/PID 与有效录像时段匹配到多个录像"
+    return None, "unlinked", "未找到唯一 TTY/PID 与有效录像时段匹配"
+
+
+def _log_payload(event):
+    """Return the original JSON object, excluding parser-only annotations."""
+    return {
+        key: value for key, value in event.items()
+        if key not in {"source_file", "source_line", "nul_prefix_recovered"}
+    }
+
+
+def build_collection_log_events(info, records, contexts, prefix=None):
+    """Build visible E2 collection-log evidence without fabricating screen observations."""
+    if prefix is None:
+        prefix = hashlib.sha256(str(Path(info.get("source", "")).resolve()).encode("utf-8")).hexdigest()[:12]
+    events = []
+    for record in records:
+        if not isinstance(record, dict) or record.get("type") == "hb":
+            continue
+        line_no = record.get("source_line")
+        try:
+            line_no = int(line_no)
+        except (TypeError, ValueError):
+            line_no = 0
+        timestamp, source_time, time_issues = _source_log_time(record)
+        context, confidence, basis = _correlate_log_record(record, contexts, timestamp)
+        cwd = record.get("cwd") if isinstance(record.get("cwd"), str) else None
+        payload = _log_payload(record)
+        raw_type = record.get("type")
+        log_type = str(raw_type) if raw_type not in (None, "") else "unknown"
+        association = {
+            "confidence": confidence,
+            "recording_id": context.get("recording_id") if context else None,
+            "requested_recording_id": str(record["rec"]) if record.get("rec") not in (None, "") else None,
+            "basis": basis,
+        }
+        issues = list(time_issues)
+        if confidence == "unlinked":
+            issues.append("collection_log_recording_unlinked")
+        if record.get("nul_prefix_recovered"):
+            issues.append("collection_log_nul_prefix_recovered")
+        events.append({
+            "event_id": f"{prefix}:log:{line_no:09d}",
+            "student": {"student_id": info.get("student_id"), "name": info.get("name")},
+            "lab": app.lab_from_cwd(cwd) if cwd else "other",
+            "cwd": cwd,
+            "recording_id": context.get("recording_id") if context else None,
+            "terminal": None,
+            "type": "collection_log_evidence",
+            "evidence_level": "E2",
+            "log_event_type": log_type,
+            "content": json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":")),
+            "observed_at": timestamp.isoformat() if timestamp else None,
+            "logged_at": timestamp.isoformat() if timestamp else None,
+            "elapsed_seconds": None,
+            "observation_semantics": source_time["semantics"],
+            "related_event_id": None,
+            "association": association,
+            "source": {
+                "log": record.get("source_file", "logs/events.jsonl"),
+                "line": line_no or None,
+                "nul_prefix_recovered": bool(record.get("nul_prefix_recovered")),
+                "time": source_time,
+                "event": payload,
+            },
+            "uncertainty": list(dict.fromkeys(issues)),
+            "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。",
+        })
+    return events
 
 
 def iter_region_frames(recording, region, frames):
@@ -338,8 +534,9 @@ def build_student_timeline(info):
     term = source / "term"
     if not term.is_dir() or app.is_link_like(term):
         return {"events": [], "recordings": 0, "errors": ["缺少 term/ 录像目录"], "recording_details": [], "processing_failed": True}
-    sessions, log_issues = load_session_logs(source)
+    log_records, sessions, log_issues = load_collection_log(source)
     events, errors, details = [], list(log_issues), []
+    contexts = []
     observed_labs = set()
     files = app.term_recordings(term)
     prefix = hashlib.sha256(str(source.resolve()).encode("utf-8")).hexdigest()[:12]
@@ -362,6 +559,12 @@ def build_student_timeline(info):
                 if region.get("lab") in app.LAB_KEYS
             )
             clock = choose_clock(recording, sessions.get(rec_id, []))
+            contexts.append({
+                "recording_id": rec_id,
+                "clock": clock,
+                "terminal": clock["terminal"],
+                "duration_seconds": recording["entries"][-1]["elapsed"] if recording["entries"] else None,
+            })
             detail.update(format=recording["format"], header_bytes=recording["header_bytes"],
                           body_bytes=len(recording["body"]), timing_bytes=recording["timed_bytes"],
                           administrative_tail=recording["administrative_tail"],
@@ -436,9 +639,285 @@ def build_student_timeline(info):
         except Exception as exc:
             detail.update(status="error", error=f"{type(exc).__name__}: {exc}", events=len(events) - before)
             errors.append(rec_id + ": " + detail["error"])
+    events.extend(build_collection_log_events(info, log_records, contexts, prefix))
     events.sort(key=lambda e: (e["observed_at"] is None,
                               parse_datetime(e["observed_at"]).timestamp() if e["observed_at"] else 0,
-                              e["recording_id"], e["elapsed_seconds"] if e["elapsed_seconds"] is not None else float("inf"),
+                              str(e.get("recording_id") or ""),
+                              e["elapsed_seconds"] if e["elapsed_seconds"] is not None else float("inf"),
                               e["event_id"]))
     return {"events": events, "recordings": len(files), "errors": errors,
             "recording_details": details, "labs": sorted(observed_labs)}
+
+
+def _cached_header_start(header):
+    if not isinstance(header, dict):
+        return None
+    for value in (header.get("start"), header.get("start_text"), header.get("started_at")):
+        parsed = parse_datetime(value)
+        if parsed is not None:
+            return parsed
+        match = re.search(r"\d{4}-\d\d-\d\d[ T]\d\d:\d\d:\d\d(?:\.\d+)?(?:Z|[+-]\d\d:\d\d)", str(value or ""))
+        if match:
+            parsed = parse_datetime(match.group(0))
+            if parsed is not None:
+                return parsed
+    return None
+
+
+def _cached_timing_index(value):
+    entries = []
+    if not isinstance(value, (list, tuple)):
+        return entries
+    for raw in value:
+        if not isinstance(raw, dict):
+            return []
+        try:
+            line = int(raw.get("line"))
+            begin = int(raw.get("begin"))
+            end = int(raw.get("end"))
+            elapsed = float(raw.get("elapsed"))
+        except (TypeError, ValueError):
+            return []
+        if line < 1 or begin < 0 or end < begin or not math.isfinite(elapsed) or elapsed < 0:
+            return []
+        entries.append({"line": line, "begin": begin, "end": end, "elapsed": elapsed})
+    if any(later["begin"] < earlier["end"] or later["elapsed"] < earlier["elapsed"]
+           for earlier, later in zip(entries, entries[1:])):
+        return []
+    return entries
+
+
+def _cache_observation(value, timing_entries, timing_valid):
+    """Normalize cache evidence while refusing times from an invalid timing index."""
+    raw = value if isinstance(value, dict) else {}
+    observation = dict(raw)
+    elapsed = raw.get("elapsed_seconds", raw.get("elapsed"))
+    try:
+        elapsed = float(elapsed)
+        if not math.isfinite(elapsed) or elapsed < 0:
+            elapsed = None
+    except (TypeError, ValueError):
+        elapsed = None
+    if not timing_valid:
+        elapsed = None
+    if elapsed is not None and observation.get("timing_line") is None:
+        entry = next((item for item in timing_entries if item["elapsed"] >= elapsed), None)
+        if entry:
+            observation["timing_line"] = entry["line"]
+            observation.setdefault("body_byte_range", [entry["begin"], entry["end"]])
+    observation["elapsed_seconds"] = elapsed
+    uncertainty = list(observation.get("uncertainty") or [])
+    if elapsed is None:
+        uncertainty.append("frame_not_covered_by_valid_timing")
+    observation["uncertainty"] = list(dict.fromkeys(map(str, uncertainty)))
+    return observation
+
+
+def _cached_terminal_event(info, rec_id, source_relative, tim_relative, clock, issues,
+                           identity, kind, content, cwd, observation, related=None):
+    elapsed = observation.get("elapsed_seconds") if isinstance(observation, dict) else None
+    uncertainty = list(clock.get("uncertainty") or []) + list(issues or [])
+    uncertainty.extend(observation.get("uncertainty", []) if isinstance(observation, dict)
+                      else ["message_observation_unlocated"])
+    absolute = iso_at(clock, elapsed)
+    if elapsed is not None and absolute is None:
+        uncertainty.append("absolute_observation_unavailable")
+    semantics = {
+        "shell_command_observed": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+        "claude_user_observed": "最终保留问题文本首次完整显示；不是回车提交时间",
+        "claude_reply_observed": "关联回复正文首次显示；不是后台开始生成或完成时间",
+    }.get(kind, "终端画面观察时间")
+    return {
+        "event_id": identity,
+        "student": {"student_id": info.get("student_id"), "name": info.get("name")},
+        "lab": app.lab_from_cwd(cwd) if isinstance(cwd, str) else "other",
+        "cwd": cwd,
+        "recording_id": rec_id,
+        "terminal": clock.get("terminal") or {},
+        "type": kind,
+        "evidence_level": "E1",
+        "content": content,
+        "observed_at": absolute,
+        "elapsed_seconds": elapsed,
+        "observation_semantics": semantics,
+        "related_event_id": related,
+        "source": {
+            "out": source_relative,
+            "tim": tim_relative,
+            "time_source": clock.get("source"),
+            "observation": {
+                key: observation[key] for key in ("frame", "elapsed_seconds", "timing_line",
+                                                    "body_byte_range", "decompressed_byte_range",
+                                                    "changed_rows")
+                if isinstance(observation, dict) and key in observation
+            },
+            "session_start": [
+                {"file": item.get("source_file"), "line": item.get("source_line"),
+                 "ts": item.get("ts"), "epoch": item.get("epoch")}
+                for item in clock.get("session_start_evidence", [])
+            ],
+        },
+        "absolute_time_resolution_seconds": 1,
+        "uncertainty": list(dict.fromkeys(map(str, uncertainty))),
+        "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+    }
+
+
+def _cached_pair_observations(pair, timing_entries, timing_valid):
+    evidence = pair.get("evidence") if isinstance(pair.get("evidence"), dict) else {}
+    if isinstance(pair.get("evidence"), (list, tuple)):
+        frames = list(pair["evidence"])
+        evidence = {
+            "user": frames[0] if frames else None,
+            "reply": frames[1] if len(frames) > 1 else (frames[0] if frames else None),
+            "final": frames[-1] if frames else None,
+        }
+    user = evidence.get("user", evidence.get("question", pair.get("user_evidence")))
+    reply = evidence.get("reply", evidence.get("first_reply", pair.get("reply_evidence")))
+    final = evidence.get("final", evidence.get("final_text", pair.get("final_evidence")))
+    return (
+        _cache_observation(user, timing_entries, timing_valid),
+        _cache_observation(reply, timing_entries, timing_valid),
+        _cache_observation(final, timing_entries, timing_valid) if final is not None else None,
+    )
+
+
+def build_student_timeline_from_recordings(info, recordings):
+    """Build E1/E2 timelines from recording-cache results without replaying gzip input.
+
+    The public input is the recording result schema produced by ``replay_engine``:
+    ``header``, ``timing_index``, ``lab_regions``, ``commands``, and optional
+    ``claude_pairs``.  Invalid cache records become per-recording diagnostics;
+    collection-log E2 entries are still emitted from the current source log.
+    """
+    source = Path(info["source"])
+    log_records, sessions, log_issues = load_collection_log(source)
+    if isinstance(recordings, dict):
+        recordings = list(recordings.values())
+    recordings = list(recordings or [])
+    normalized = [dict(item) for item in recordings if isinstance(item, dict)]
+    normalized.sort(key=lambda item: (str(item.get("source_relative") or ""),
+                                      str(item.get("recording_id") or "")))
+    prefix = hashlib.sha256(str(source.resolve()).encode("utf-8")).hexdigest()[:12]
+    events, errors, details, contexts, observed_labs = [], list(log_issues), [], [], set()
+    for item in normalized:
+        canonical_id = str(item.get("recording_id") or "")
+        rec_id = str(item.get("recording_name") or Path(canonical_id).name or
+                     Path(str(item.get("out_relative") or item.get("source_relative") or "unknown")).name)
+        if rec_id.endswith(".out.gz"):
+            rec_id = rec_id[:-len(".out.gz")]
+        source_relative = str(
+            item.get("out_relative") or item.get("source_relative") or
+            (Path("term") / (rec_id + ".out.gz")).as_posix()
+        ).replace("\\", "/")
+        tim_relative = str(item.get("tim_relative") or "").replace("\\", "/")
+        if not tim_relative and source_relative.endswith(".out.gz"):
+            tim_relative = source_relative[:-len(".out.gz")] + ".tim.gz"
+        status = str(item.get("status") or "ok")
+        header = item.get("header") if isinstance(item.get("header"), dict) else {}
+        timing_valid = bool(item.get("timing_valid"))
+        timing_entries = _cached_timing_index(item.get("timing_index")) if timing_valid else []
+        issues = [str(issue) for issue in (item.get("issues") or [])]
+        if timing_valid and not timing_entries:
+            timing_valid = False
+            issues.append("cached_timing_index_invalid")
+        cache_recording = {
+            "header_start": _cached_header_start(header),
+            "header_tty": header.get("tty", header.get("header_tty")),
+        }
+        clock = choose_clock(cache_recording, sessions.get(rec_id, []))
+        regions = item.get("lab_regions") if isinstance(item.get("lab_regions"), (list, tuple)) else []
+        for region in regions:
+            if isinstance(region, dict) and region.get("lab") in app.LAB_KEYS:
+                observed_labs.add(region["lab"])
+        detail = {
+            "recording_id": rec_id,
+            "out": source_relative,
+            "status": "error" if status == "error" else "ok",
+            "issues": issues + list(clock.get("uncertainty") or []),
+            "time_source": clock.get("source"),
+            "global_clock_usable": bool(clock.get("usable")),
+            "terminal": clock.get("terminal"),
+        }
+        details.append(detail)
+        if status == "error":
+            detail["error"] = str(item.get("error") or "录像缓存分析失败")
+            errors.append(rec_id + ": " + detail["error"])
+            continue
+        contexts.append({
+            "recording_id": rec_id,
+            "clock": clock,
+            "terminal": clock["terminal"],
+            "duration_seconds": timing_entries[-1]["elapsed"] if timing_entries else None,
+        })
+        before = len(events)
+        for seq, command in enumerate(item.get("commands") or [], 1):
+            if not isinstance(command, dict):
+                continue
+            cwd = command.get("cwd") if isinstance(command.get("cwd"), str) else None
+            observation = _cache_observation(command.get("evidence", command), timing_entries, timing_valid)
+            event = _cached_terminal_event(
+                info, rec_id, source_relative, tim_relative, clock, issues,
+                f"{prefix}:{rec_id}:shell:{seq}", "shell_command_observed",
+                str(command.get("command") or ""), cwd, observation,
+            )
+            anchors = command.get("anchors") if isinstance(command.get("anchors"), dict) else {}
+            if anchors:
+                event["source"]["shell_ranges"] = dict(anchors)
+            event["output"] = command.get("output")
+            events.append(event)
+        for pair_no, pair in enumerate(item.get("claude_pairs") or [], 1):
+            if not isinstance(pair, dict):
+                continue
+            user_observation, reply_observation, final_observation = _cached_pair_observations(
+                pair, timing_entries, timing_valid
+            )
+            lab = pair.get("lab") if pair.get("lab") in app.LAB_KEYS else "other"
+            cwd = pair.get("cwd") if isinstance(pair.get("cwd"), str) else None
+            base = f"{prefix}:{rec_id}:qa:{pair_no}"
+            user = _cached_terminal_event(
+                info, rec_id, source_relative, tim_relative, clock, issues,
+                base + ":user", "claude_user_observed", str(pair.get("user") or ""), cwd, user_observation,
+            )
+            reply = _cached_terminal_event(
+                info, rec_id, source_relative, tim_relative, clock, issues,
+                base + ":reply", "claude_reply_observed", str(pair.get("claude") or ""), cwd,
+                reply_observation, user["event_id"],
+            )
+            user["lab"] = reply["lab"] = lab
+            user["qa_pair_id"] = reply["qa_pair_id"] = base
+            evidence = pair.get("evidence") if isinstance(pair.get("evidence"), dict) else {}
+            question_issues = evidence.get("question_uncertainty")
+            if isinstance(question_issues, (list, tuple)):
+                user["uncertainty"] = list(dict.fromkeys(
+                    list(user["uncertainty"]) + [str(issue) for issue in question_issues]
+                ))
+            for event in (user, reply):
+                event["source"].update({
+                    "region_number": pair.get("region_number"),
+                    "region_body_byte_range": pair.get("region_body_byte_range"),
+                    "message_record_ids": pair.get("record_ids"),
+                })
+            if final_observation is not None:
+                reply["final_text_first_elapsed_seconds"] = final_observation["elapsed_seconds"]
+                reply["final_text_first_observed_at"] = iso_at(clock, final_observation["elapsed_seconds"])
+                reply["source"]["final_text_observation"] = final_observation
+                reply["final_text_observation_semantics"] = "最终保留正文首次完整匹配的观察时间；不是后台完成事件"
+            events.extend((user, reply))
+        detail["events"] = len(events) - before
+    events.extend(build_collection_log_events(info, log_records, contexts, prefix))
+    events.sort(key=lambda event: (
+        event.get("observed_at") is None,
+        parse_datetime(event.get("logged_at") or event.get("observed_at")).timestamp()
+        if event.get("logged_at") or event.get("observed_at") else 0,
+        str(event.get("recording_id") or ""),
+        event.get("elapsed_seconds") if event.get("elapsed_seconds") is not None else float("inf"),
+        str(event.get("event_id") or ""),
+    ))
+    return {
+        "events": events,
+        "recordings": len(normalized),
+        "errors": errors,
+        "recording_details": details,
+        "labs": sorted(observed_labs),
+    }

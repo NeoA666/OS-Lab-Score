@@ -19,8 +19,8 @@ from output_layout import PROCESS_TOOL, pair_matches, unlink_pair, write_text_pa
 TIMELINE_DIRECTORY = ".实验过程清洗工具"
 TIMELINE_MANIFEST = ".timeline_manifest.json"
 TIMELINE_TOOL = "replay_term_qa.timeline"
-TIMELINE_SCHEMA_VERSION = 1
-TIMELINE_CACHE_FORMAT_VERSION = 1
+TIMELINE_SCHEMA_VERSION = 2
+TIMELINE_CACHE_FORMAT_VERSION = 2
 LAB_KEYS = tuple(f"lab{i}" for i in range(9)) + ("other",)
 README_BLOCK_START = "<!-- replay_term_qa:timeline:start -->"
 README_BLOCK_END = "<!-- replay_term_qa:timeline:end -->"
@@ -195,9 +195,12 @@ def _timeline_artifact_hashes_are_valid(output, artifacts, hashes):
 _TIMELINE_STAT_KEYS = (
     "recordings",
     "events",
+    "terminal_screen_events",
+    "collection_log_events",
     "absolute_time_events",
     "relative_time_only_events",
     "missing_time_events",
+    "collection_log_time_events",
     "uncertain_events",
     "recording_failures",
     "processing_failures",
@@ -337,6 +340,13 @@ def _event_lab(event):
     return lab if lab in LAB_KEYS else "other"
 
 
+def _is_collection_log_event(event):
+    return bool(
+        isinstance(event, dict)
+        and (event.get("evidence_level") == "E2" or event.get("type") == "collection_log_evidence")
+    )
+
+
 def _iso_sort_value(value):
     if not value:
         return None
@@ -350,7 +360,8 @@ def _iso_sort_value(value):
 
 
 def _event_sort_key(event):
-    absolute = _iso_sort_value(event.get("observed_at"))
+    absolute = _iso_sort_value(event.get("logged_at") if _is_collection_log_event(event)
+                               else event.get("observed_at"))
     elapsed = event.get("elapsed_seconds")
     try:
         elapsed_value = float(elapsed)
@@ -366,12 +377,18 @@ def _event_sort_key(event):
 
 
 def _stats(events, errors):
-    absolute = sum(_iso_sort_value(event.get("observed_at")) is not None for event in events)
+    terminal_events = [event for event in events if not _is_collection_log_event(event)]
+    collection_events = [event for event in events if _is_collection_log_event(event)]
+    absolute = sum(_iso_sort_value(event.get("observed_at")) is not None for event in terminal_events)
     relative = sum(
         _iso_sort_value(event.get("observed_at")) is None and event.get("elapsed_seconds") is not None
-        for event in events
+        for event in terminal_events
     )
-    missing = len(events) - absolute - relative
+    missing = len(terminal_events) - absolute - relative
+    collection_time = sum(
+        _iso_sort_value(event.get("logged_at") or event.get("observed_at")) is not None
+        for event in collection_events
+    )
     uncertain = sum(bool(event.get("uncertainty")) for event in events)
     by_type = {}
     for event in events:
@@ -379,9 +396,12 @@ def _stats(events, errors):
         by_type[kind] = by_type.get(kind, 0) + 1
     return {
         "events": len(events),
+        "terminal_screen_events": len(terminal_events),
+        "collection_log_events": len(collection_events),
         "absolute_time_events": absolute,
         "relative_time_only_events": relative,
         "missing_time_events": missing,
+        "collection_log_time_events": collection_time,
         "uncertain_events": uncertain,
         "errors": len(errors),
         "by_type": dict(sorted(by_type.items())),
@@ -434,6 +454,7 @@ def _event_type_label(kind):
         "shell_command_observed": "Shell 命令",
         "claude_user_observed": "用户问题",
         "claude_reply_observed": "Claude 回复",
+        "collection_log_evidence": "采集日志佐证（E2）",
     }.get(kind, str(kind or "未知事件"))
 
 
@@ -450,6 +471,101 @@ def _beijing_time(value):
         return "未知（原始时间无法解析）"
 
 
+def _elapsed_text(value):
+    try:
+        return f"+{float(value):.6f} 秒"
+    except (TypeError, ValueError):
+        return "未知"
+
+
+def _render_collection_log_event(md, event, sequence):
+    source = event.get("source") if isinstance(event.get("source"), dict) else {}
+    association = event.get("association") if isinstance(event.get("association"), dict) else {}
+    source_time = source.get("time") if isinstance(source.get("time"), dict) else {}
+    confidence = association.get("confidence") or "unlinked"
+    log_path = source.get("log") or "logs/events.jsonl"
+    line = source.get("line")
+    md.extend([
+        f"<a id=\"{_event_anchor(event.get('event_id'))}\"></a>",
+        f"### {sequence}. {_event_type_label(event.get('type'))}", "",
+        f"- 事件编号：{_markdown_text(event.get('event_id', '未知'))}",
+        f"- 采集日志类型：{_markdown_text(event.get('log_event_type') or 'unknown')}",
+        f"- 采集日志时间：{_beijing_time(event.get('logged_at') or event.get('observed_at'))}",
+        f"- 源行号：{_markdown_text(log_path)} 第 {_markdown_text(line if line is not None else '未知')} 行",
+        f"- 关联置信度：{_markdown_text(confidence)}",
+        f"- 关联录像：{_markdown_text(association.get('recording_id') or '无')}",
+        f"- 时间语义：{_markdown_text(event.get('observation_semantics') or source_time.get('semantics') or '采集日志时间')}",
+        "- 终端屏幕证据：无；本条仅为 E2 采集日志佐证。",
+    ])
+    if association.get("basis"):
+        md.append(f"- 关联依据：{_markdown_text(association['basis'])}")
+    if association.get("requested_recording_id"):
+        md.append(f"- 日志 rec：{_markdown_text(association['requested_recording_id'])}")
+    if event.get("cwd"):
+        md.append(f"- 日志工作目录：{_markdown_text(event['cwd'])}")
+    uncertainty = event.get("uncertainty") or []
+    if uncertainty:
+        md.append(f"- 不确定性：{_markdown_text('；'.join(map(str, uncertainty)))}")
+    md.extend(["", "#### 原始日志记录", ""])
+    _append_fenced(md, event.get("content", ""))
+    md.append("")
+
+
+def _render_terminal_event(md, info, event, sequence):
+    observed = _beijing_time(event.get("observed_at"))
+    md.extend([
+        f"<a id=\"{_event_anchor(event.get('event_id'))}\"></a>",
+        f"### {sequence}. {_event_type_label(event.get('type'))}（E1 终端屏幕证据）", "",
+        f"- 事件编号：{_markdown_text(event.get('event_id', '未知'))}",
+        f"- 显示时间：{observed}",
+        f"- 录像相对时间：{_markdown_text(_elapsed_text(event.get('elapsed_seconds')))}",
+        f"- 录像：{_markdown_text(event.get('recording_id', '未知'))}",
+        f"- 终端：{_markdown_text(_terminal_label(event.get('terminal')))}",
+        f"- 工作目录：{_markdown_text(event.get('cwd') or '未知')}",
+        f"- 时间语义：{_markdown_text(event.get('observation_semantics') or '终端画面观察时间')}",
+    ])
+    if event.get("related_event_id"):
+        md.append(f"- 关联事件：[{_markdown_text(event['related_event_id'])}]"
+                  f"(#{_event_anchor(event['related_event_id'])})")
+    uncertainty = event.get("uncertainty") or []
+    if uncertainty:
+        md.append(f"- 不确定性：{_markdown_text('；'.join(map(str, uncertainty)))}")
+    source = event.get("source") or {}
+    if source:
+        md.append(f"- 原始文件：{_source_link(source.get('out'), '录像', info)} / "
+                  f"{_source_link(source.get('tim'), '计时', info)}")
+        observation = source.get("observation") or {}
+        locators = []
+        if observation.get("timing_line") is not None:
+            locators.append(f"timing 第 {observation['timing_line']} 行")
+        if observation.get("frame") is not None:
+            locators.append(f"画面 {observation['frame']}")
+        byte_range = observation.get("decompressed_byte_range") or observation.get("body_byte_range")
+        if byte_range:
+            locators.append(f"解压字节 [{byte_range[0]}, {byte_range[1]})")
+        if locators:
+            md.append(f"- 观察定位：{_markdown_text('；'.join(locators))}")
+        shell_ranges = source.get("shell_decompressed_ranges") or {}
+        if shell_ranges.get("output_start") is not None and shell_ranges.get("region_end") is not None:
+            md.append(f"- Shell 输出字节：[{shell_ranges['output_start']}, {shell_ranges['region_end']})")
+    if event.get("final_text_first_observed_at"):
+        md.append(f"- 最终正文完整显示时间：{_beijing_time(event['final_text_first_observed_at'])}")
+    if event.get("final_text_observation_semantics"):
+        md.append(f"- 最终正文时间语义：{_markdown_text(event['final_text_observation_semantics'])}")
+    md.extend(["", "#### 正文", ""])
+    _append_fenced(md, event.get("content", ""))
+    output_lines = event.get("output_lines", event.get("output"))
+    if output_lines is not None:
+        output_text = "\n".join(map(str, output_lines)) if isinstance(output_lines, list) else str(output_lines)
+        md.extend(["", "#### 关联 Shell 输出", ""])
+        _append_fenced(md, output_text)
+        if event.get("output_truncated"):
+            md.extend(["", "说明：输出已按原报告上限截断，可依据原始定位回查完整录像。"])
+    if event.get("output_note"):
+        md.extend(["", f"输出说明：{_markdown_text(event['output_note'])}"])
+    md.append("")
+
+
 def _render_markdown(info, lab, events, stats, errors):
     label = lab if lab != "other" else "其他（非 lab0–lab8 或目录未知）"
     md = [
@@ -458,23 +574,27 @@ def _render_markdown(info, lab, events, stats, errors):
         f"- 姓名：{_markdown_text(info.get('name', '未知'))}",
         f"- 实验分类：{label}",
         f"- 事件总数：{stats['events']}",
-        f"- 有绝对显示时间：{stats['absolute_time_events']}",
-        f"- 仅有录像相对时间：{stats['relative_time_only_events']}",
-        f"- 时间缺失：{stats['missing_time_events']}",
+        f"- E1 终端屏幕事件：{stats['terminal_screen_events']}",
+        f"- E2 采集日志佐证：{stats['collection_log_events']}",
+        f"- 有绝对终端显示时间（E1）：{stats['absolute_time_events']}",
+        f"- 仅有录像相对时间（E1）：{stats['relative_time_only_events']}",
+        f"- 终端时间缺失（E1）：{stats['missing_time_events']}",
+        f"- 带可解析采集日志时间（E2）：{stats['collection_log_time_events']}",
         f"- 带不确定性说明：{stats['uncertain_events']}",
         "",
-        "时间表示终端画面中相应文本的可观察显示时间，不等同于按键提交、命令开始执行、模型开始生成或回复完成时间。",
-        "同一 lab 内跨终端按带时区的绝对时间合并并稳定排列；相同或接近的显示时间不证明严格先后或因果关系。",
+        "E1 是从终端录像重放得出的屏幕文本观察；其时间不等同于按键提交、命令开始执行、模型开始生成或回复完成时间。",
+        "E2 是采集日志佐证，独立保留日志行号、日志时间与关联置信度；它不是终端屏幕证据，不能替代 E1。",
         "录像起始时钟只有秒级精度；显示到毫秒仅为保留 timing 相对偏移，不代表绝对时间具有毫秒精度。",
-        "仅展示现有识别规则保留的事件；未提取到事件不代表没有发生操作或对话。每份 JSON 保留该学生全部录像的检查记录。",
         "回复最终正文完整可见时间只是额外观察点，可能晚于下一轮问题，不能解释为模型完成时间。", "",
     ]
-    aligned = [event for event in events if _iso_sort_value(event.get("observed_at")) is not None]
-    unaligned = [event for event in events if _iso_sort_value(event.get("observed_at")) is None]
+    terminal_events = [event for event in events if not _is_collection_log_event(event)]
+    aligned = [event for event in terminal_events if _iso_sort_value(event.get("observed_at")) is not None]
+    unaligned = [event for event in terminal_events if _iso_sort_value(event.get("observed_at")) is None]
+    collection_events = [event for event in events if _is_collection_log_event(event)]
     sequence = 0
     for section, section_events, empty_text in (
-        ("已对齐事件", aligned, "无。"),
-        ("未对齐事件", unaligned, "无；所有事件均有可解析且带时区的绝对显示时间。"),
+        ("E1 终端屏幕证据：已对齐", aligned, "无。"),
+        ("E1 终端屏幕证据：未对齐", unaligned, "无；所有 E1 事件均有可解析且带时区的绝对显示时间。"),
     ):
         md.extend([f"## {section}", ""])
         if not section_events:
@@ -482,60 +602,14 @@ def _render_markdown(info, lab, events, stats, errors):
             continue
         for event in section_events:
             sequence += 1
-            observed = _beijing_time(event.get("observed_at"))
-            elapsed = event.get("elapsed_seconds")
-            elapsed_text = "未知" if elapsed is None else f"+{elapsed:.6f} 秒"
-            md.extend([
-                f"<a id=\"{_event_anchor(event.get('event_id'))}\"></a>",
-                f"### {sequence}. {_event_type_label(event.get('type'))}", "",
-                f"- 事件编号：{_markdown_text(event.get('event_id', '未知'))}",
-                f"- 显示时间：{observed}",
-                f"- 录像相对时间：{_markdown_text(elapsed_text)}",
-                f"- 录像：{_markdown_text(event.get('recording_id', '未知'))}",
-                f"- 终端：{_markdown_text(_terminal_label(event.get('terminal')))}",
-                f"- 工作目录：{_markdown_text(event.get('cwd') or '未知')}",
-                f"- 时间语义：{_markdown_text(event.get('observation_semantics') or '终端画面观察时间')}",
-            ])
-            if event.get("related_event_id"):
-                md.append(f"- 关联事件：[{_markdown_text(event['related_event_id'])}]"
-                          f"(#{_event_anchor(event['related_event_id'])})")
-            uncertainty = event.get("uncertainty") or []
-            if uncertainty:
-                md.append(f"- 不确定性：{_markdown_text('；'.join(map(str, uncertainty)))}")
-            source = event.get("source") or {}
-            if source:
-                md.append(f"- 原始文件：{_source_link(source.get('out'), '录像', info)} / "
-                          f"{_source_link(source.get('tim'), '计时', info)}")
-                observation = source.get("observation") or {}
-                locators = []
-                if observation.get("timing_line") is not None:
-                    locators.append(f"timing 第 {observation['timing_line']} 行")
-                if observation.get("frame") is not None:
-                    locators.append(f"画面 {observation['frame']}")
-                byte_range = observation.get("decompressed_byte_range") or observation.get("body_byte_range")
-                if byte_range:
-                    locators.append(f"解压字节 [{byte_range[0]}, {byte_range[1]})")
-                if locators:
-                    md.append(f"- 观察定位：{_markdown_text('；'.join(locators))}")
-                shell_ranges = source.get("shell_decompressed_ranges") or {}
-                if shell_ranges.get("output_start") is not None and shell_ranges.get("region_end") is not None:
-                    md.append(f"- Shell 输出字节：[{shell_ranges['output_start']}, {shell_ranges['region_end']})")
-            if event.get("final_text_first_observed_at"):
-                md.append(f"- 最终正文完整显示时间：{_beijing_time(event['final_text_first_observed_at'])}")
-            if event.get("final_text_observation_semantics"):
-                md.append(f"- 最终正文时间语义：{_markdown_text(event['final_text_observation_semantics'])}")
-            md.extend(["", "#### 正文", ""])
-            _append_fenced(md, event.get("content", ""))
-            output_lines = event.get("output_lines", event.get("output"))
-            if output_lines is not None:
-                output_text = "\n".join(map(str, output_lines)) if isinstance(output_lines, list) else str(output_lines)
-                md.extend(["", "#### 关联 Shell 输出", ""])
-                _append_fenced(md, output_text)
-                if event.get("output_truncated"):
-                    md.extend(["", "说明：输出已按原报告上限截断，可依据原始定位回查完整录像。"])
-            if event.get("output_note"):
-                md.extend(["", f"输出说明：{_markdown_text(event['output_note'])}"])
-            md.append("")
+            _render_terminal_event(md, info, event, sequence)
+    md.extend(["## E2 采集日志佐证", ""])
+    if not collection_events:
+        md.extend(["无。", ""])
+    else:
+        for event in collection_events:
+            sequence += 1
+            _render_collection_log_event(md, event, sequence)
     md.extend(["## 异常", ""])
     if errors:
         md.extend(f"- {_markdown_text(error)}" for error in errors)
@@ -681,8 +755,10 @@ def update_readme_timeline_block(readme_path, timeline_results):
         end += len(README_BLOCK_END)
     totals = {
         key: sum((item.get("statistics") or {}).get(key, 0) for item in timeline_results)
-        for key in ("recordings", "events", "absolute_time_events", "relative_time_only_events", "missing_time_events",
-                    "uncertain_events", "recording_failures", "processing_failures", "errors")
+        for key in ("recordings", "events", "terminal_screen_events", "collection_log_events",
+                    "absolute_time_events", "relative_time_only_events", "missing_time_events",
+                    "collection_log_time_events", "uncertain_events", "recording_failures",
+                    "processing_failures", "errors")
     }
     by_type = {}
     for item in timeline_results:
@@ -717,10 +793,10 @@ def update_readme_timeline_block(readme_path, timeline_results):
     block = [
         README_BLOCK_START,
         "## 实验过程时间线", "",
-        "每名学生的 `实验过程时间线/` 按 lab 提供对应的 JSON 规范数据和 Markdown 阅读版。Shell 命令、Claude 用户问题与 Claude 回复分别作为事件，并保留录像、终端、工作目录、相对时间、原始定位和不确定性说明。", "",
-        "时间线中的时间是文本在终端画面中的可观察显示时间，不代表精确提交、执行开始、模型生成开始或回复完成时间。同一 lab 内跨终端排序使用带时区的绝对时间；相同或接近的时间不证明严格先后。", "",
+        "每名学生的时间线位于 `按人分类/<学生>/<lab>/实验过程清洗工具/`，并镜像到 `按Lab分类/<lab>/<学生>/实验过程清洗工具/`；每个 Lab 提供 JSON 规范数据和 Markdown 阅读版。E1 为 Shell 命令、Claude 用户问题与 Claude 回复等终端屏幕证据；E2 为采集日志佐证，二者分别保留来源与时间语义。", "",
+        "E1 的时间是文本在终端画面中的可观察显示时间，不代表精确提交、执行开始、模型生成开始或回复完成时间。E2 的时间来自采集日志本身，附日志行号和 exact_rec、correlated 或 unlinked 关联置信度，绝不作为终端屏幕证据。", "",
         "录像起始时钟只有秒级精度；显示到毫秒仅用于保留 timing 相对偏移，不代表绝对时间具有毫秒精度。Claude 回复最终正文完整可见时间可能晚于下一轮问题，它不是回复完成时间。", "",
-        "JSON 中 `observed_at` 为带时区的显示时间，`elapsed_seconds` 为原录像累计偏移；`source.observation` 保留原 timing 行号、变化画面编号和解压字节区间（零基、左闭右开）。画面编号不等于 timing 行号，观察帧的位置也不代表正文全部字符都来自这一帧。`final_text_first_observed_at` 仅记录最终回复正文首次完整可见时间。无法确定的值保留为 null，原因见 `uncertainty`。", "",
+        "E1 JSON 中 `observed_at` 为带时区的显示时间，`elapsed_seconds` 为原录像累计偏移；`source.observation` 保留原 timing 行号、变化画面编号和解压字节区间（零基、左闭右开）。E2 使用 `logged_at`、`source.log`、`source.line` 和 `association`，不填充终端相对时间。无法确定的值保留为 null，原因见 `uncertainty`。", "",
         "`recording_details` 保留所有录像的读取、时钟和提取检查记录；`errors` 包含异常与不确定性提示，不等同于处理失败。没有提取到事件不代表没有发生操作或对话。内部未保留的 Claude 记录可能只是重绘残留，不能作为额外未完成对话计数。", "",
         "默认运行同时生成原有四类报告和时间线；`--timeline-only` 只刷新时间线并仅替换本说明块，保留 README 中原有报告统计与其他内容；`--no-timeline` 只生成原有报告。两项不能同时使用。输入、处理器代码和登记产物未变化时会增量跳过；`--force` 可强制重建所选时间线。", "",
         "本工作区仅更新时间线的命令（在脚本所在目录执行）：", "",
@@ -733,12 +809,15 @@ def update_readme_timeline_block(readme_path, timeline_results):
         f"- 时间线阶段失败或部分失败：{stage_counts['部分失败'] + stage_counts['失败']}",
         f"- 终端录像数：{totals['recordings']}",
         f"- 事件数：{totals['events']}",
+        f"- E1 终端屏幕事件：{totals['terminal_screen_events']}",
+        f"- E2 采集日志佐证：{totals['collection_log_events']}",
         f"- Shell 命令事件：{by_type.get('shell_command_observed', 0)}",
         f"- Claude 用户问题事件：{by_type.get('claude_user_observed', 0)}",
         f"- Claude 回复事件：{by_type.get('claude_reply_observed', 0)}",
-        f"- 有绝对显示时间：{totals['absolute_time_events']}",
-        f"- 仅有录像相对时间：{totals['relative_time_only_events']}",
-        f"- 时间缺失：{totals['missing_time_events']}",
+        f"- 有绝对终端显示时间（E1）：{totals['absolute_time_events']}",
+        f"- 仅有录像相对时间（E1）：{totals['relative_time_only_events']}",
+        f"- 终端时间缺失（E1）：{totals['missing_time_events']}",
+        f"- 带可解析采集日志时间（E2）：{totals['collection_log_time_events']}",
         f"- 带不确定性说明：{totals['uncertain_events']}",
         f"- 录像处理失败：{totals['recording_failures']}",
         f"- 处理失败总数：{totals['processing_failures']}",

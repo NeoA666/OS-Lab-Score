@@ -1,0 +1,2145 @@
+{
+  "schema_version": 2,
+  "student": {
+    "student_id": "2406080106",
+    "name": "高龙徽",
+    "source": "操作系统实验数据记录/2406080106-高龙徽-20260914-2230"
+  },
+  "lab": "lab0",
+  "status": "complete",
+  "summary": {
+    "events": 28,
+    "terminal_screen_events": 16,
+    "collection_log_events": 12,
+    "absolute_time_events": 16,
+    "relative_time_only_events": 0,
+    "missing_time_events": 0,
+    "collection_log_time_events": 12,
+    "uncertain_events": 12,
+    "errors": 0,
+    "by_type": {
+      "collection_log_evidence": 12,
+      "shell_command_observed": 16
+    },
+    "recording_failures": 0,
+    "processing_failures": 0
+  },
+  "statistics": {
+    "events": 28,
+    "terminal_screen_events": 16,
+    "collection_log_events": 12,
+    "absolute_time_events": 16,
+    "relative_time_only_events": 0,
+    "missing_time_events": 0,
+    "collection_log_time_events": 12,
+    "uncertain_events": 12,
+    "errors": 0,
+    "by_type": {
+      "collection_log_evidence": 12,
+      "shell_command_observed": 16
+    },
+    "recording_failures": 0,
+    "processing_failures": 0
+  },
+  "student_recordings": 5,
+  "recording_details": [
+    {
+      "recording_id": "20260913T181228-4642",
+      "out": "term/20260913T181228-4642.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/2"
+        ],
+        "shell_pid": []
+      },
+      "events": 0
+    },
+    {
+      "recording_id": "20260913T181236-4803",
+      "out": "term/20260913T181236-4803.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/2"
+        ],
+        "shell_pid": []
+      },
+      "events": 304
+    },
+    {
+      "recording_id": "20260913T181559-5367",
+      "out": "term/20260913T181559-5367.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/3"
+        ],
+        "shell_pid": []
+      },
+      "events": 0
+    },
+    {
+      "recording_id": "20260913T181946-5853",
+      "out": "term/20260913T181946-5853.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/3"
+        ],
+        "shell_pid": []
+      },
+      "events": 2
+    },
+    {
+      "recording_id": "20260914T211407-88540",
+      "out": "term/20260914T211407-88540.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": []
+      },
+      "events": 17
+    }
+  ],
+  "events": [
+    {
+      "event_id": "37db3e0f0a3d:log:000001074",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "/home/dragon/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"cd ~/xv6-ai-labs-km-无答案/lab0\",\"cwd\":\"/home/dragon/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789391672,\"h\":\"68f94d8ad98335221d6e64d57b6b2a5b6744507ddcdeb351ae00814b0a589fb7\",\"name\":\"高龙徽\",\"prev\":\"5da76c9170a4dae292a24a19068b2d36c40d29de99bb0be5f67035b68bc88c8e\",\"rc\":0,\"run\":\"20260913T181118-63407\",\"sid\":\"2406080106\",\"ts\":\"2026-09-14T21:14:32+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-14T21:14:32+08:00",
+      "logged_at": "2026-09-14T21:14:32+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 1074,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-14T21:14:32+08:00",
+          "epoch": 1789391672,
+          "resolved_at": "2026-09-14T21:14:32+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-14T21:14:32+08:00",
+          "epoch": 1789391672,
+          "run": "20260913T181118-63407",
+          "type": "cmd",
+          "sid": "2406080106",
+          "name": "高龙徽",
+          "cwd": "/home/dragon/xv6-ai-labs-km-无答案/lab0",
+          "rc": 0,
+          "cmd": "cd ~/xv6-ai-labs-km-无答案/lab0",
+          "prev": "5da76c9170a4dae292a24a19068b2d36c40d29de99bb0be5f67035b68bc88c8e",
+          "h": "68f94d8ad98335221d6e64d57b6b2a5b6744507ddcdeb351ae00814b0a589fb7"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "37db3e0f0a3d:log:000001076",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "/home/dragon/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make build\",\"cwd\":\"/home/dragon/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789391704,\"h\":\"04c8b0227002adfc40759146d1dcc2571c383dceefdfb4f5c61abd6c69597f51\",\"name\":\"高龙徽\",\"prev\":\"f76481e0d0afb1c827ddf7bf276bf78abfaa95db3eb483f2f45a823d7b93834c\",\"rc\":127,\"run\":\"20260913T181118-63407\",\"sid\":\"2406080106\",\"ts\":\"2026-09-14T21:15:04+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-14T21:15:04+08:00",
+      "logged_at": "2026-09-14T21:15:04+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 1076,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-14T21:15:04+08:00",
+          "epoch": 1789391704,
+          "resolved_at": "2026-09-14T21:15:04+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-14T21:15:04+08:00",
+          "epoch": 1789391704,
+          "run": "20260913T181118-63407",
+          "type": "cmd",
+          "sid": "2406080106",
+          "name": "高龙徽",
+          "cwd": "/home/dragon/xv6-ai-labs-km-无答案/lab0",
+          "rc": 127,
+          "cmd": "make build",
+          "prev": "f76481e0d0afb1c827ddf7bf276bf78abfaa95db3eb483f2f45a823d7b93834c",
+          "h": "04c8b0227002adfc40759146d1dcc2571c383dceefdfb4f5c61abd6c69597f51"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "37db3e0f0a3d:log:000001077",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "/home/dragon/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"sudo apt install make\",\"cwd\":\"/home/dragon/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789391725,\"h\":\"600686707cd87fa055f33a7e678aa83611a4cf77f100a72e648b08faa6fa7465\",\"name\":\"高龙徽\",\"prev\":\"04c8b0227002adfc40759146d1dcc2571c383dceefdfb4f5c61abd6c69597f51\",\"rc\":0,\"run\":\"20260913T181118-63407\",\"sid\":\"2406080106\",\"ts\":\"2026-09-14T21:15:25+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-14T21:15:25+08:00",
+      "logged_at": "2026-09-14T21:15:25+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 1077,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-14T21:15:25+08:00",
+          "epoch": 1789391725,
+          "resolved_at": "2026-09-14T21:15:25+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-14T21:15:25+08:00",
+          "epoch": 1789391725,
+          "run": "20260913T181118-63407",
+          "type": "cmd",
+          "sid": "2406080106",
+          "name": "高龙徽",
+          "cwd": "/home/dragon/xv6-ai-labs-km-无答案/lab0",
+          "rc": 0,
+          "cmd": "sudo apt install make",
+          "prev": "04c8b0227002adfc40759146d1dcc2571c383dceefdfb4f5c61abd6c69597f51",
+          "h": "600686707cd87fa055f33a7e678aa83611a4cf77f100a72e648b08faa6fa7465"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "37db3e0f0a3d:log:000001079",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "/home/dragon/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make build\",\"cwd\":\"/home/dragon/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789391753,\"h\":\"5f228cf5fdc3af2ac96e0f9d330f6596cf221e660b784131d2062823af156c7d\",\"name\":\"高龙徽\",\"prev\":\"ac3c4102743842f0164fccfa4bde08e05ee04d17e0f84d720e050e84e14dfac0\",\"rc\":0,\"run\":\"20260913T181118-63407\",\"sid\":\"2406080106\",\"ts\":\"2026-09-14T21:15:53+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-14T21:15:53+08:00",
+      "logged_at": "2026-09-14T21:15:53+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 1079,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-14T21:15:53+08:00",
+          "epoch": 1789391753,
+          "resolved_at": "2026-09-14T21:15:53+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-14T21:15:53+08:00",
+          "epoch": 1789391753,
+          "run": "20260913T181118-63407",
+          "type": "cmd",
+          "sid": "2406080106",
+          "name": "高龙徽",
+          "cwd": "/home/dragon/xv6-ai-labs-km-无答案/lab0",
+          "rc": 0,
+          "cmd": "make build",
+          "prev": "ac3c4102743842f0164fccfa4bde08e05ee04d17e0f84d720e050e84e14dfac0",
+          "h": "5f228cf5fdc3af2ac96e0f9d330f6596cf221e660b784131d2062823af156c7d"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "37db3e0f0a3d:log:000001080",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "/home/dragon/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"ls target/\",\"cwd\":\"/home/dragon/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789391770,\"h\":\"55be3d749438547239d89dd611c0132d33c25656d986fcc98c295a86784ec202\",\"name\":\"高龙徽\",\"prev\":\"5f228cf5fdc3af2ac96e0f9d330f6596cf221e660b784131d2062823af156c7d\",\"rc\":0,\"run\":\"20260913T181118-63407\",\"sid\":\"2406080106\",\"ts\":\"2026-09-14T21:16:10+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-14T21:16:10+08:00",
+      "logged_at": "2026-09-14T21:16:10+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 1080,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-14T21:16:10+08:00",
+          "epoch": 1789391770,
+          "resolved_at": "2026-09-14T21:16:10+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-14T21:16:10+08:00",
+          "epoch": 1789391770,
+          "run": "20260913T181118-63407",
+          "type": "cmd",
+          "sid": "2406080106",
+          "name": "高龙徽",
+          "cwd": "/home/dragon/xv6-ai-labs-km-无答案/lab0",
+          "rc": 0,
+          "cmd": "ls target/",
+          "prev": "5f228cf5fdc3af2ac96e0f9d330f6596cf221e660b784131d2062823af156c7d",
+          "h": "55be3d749438547239d89dd611c0132d33c25656d986fcc98c295a86784ec202"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "37db3e0f0a3d:log:000001084",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "/home/dragon/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"sudo make fs\",\"cwd\":\"/home/dragon/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789391934,\"h\":\"195083efe35db6c31a3b5a642470c507bc9af0660d4cee2207202b79fb92594c\",\"name\":\"高龙徽\",\"prev\":\"8e5027203901a260861b2529cf35fd6fe78e00a9903d12ec021510b8f097f5e2\",\"rc\":0,\"run\":\"20260913T181118-63407\",\"sid\":\"2406080106\",\"ts\":\"2026-09-14T21:18:54+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-14T21:18:54+08:00",
+      "logged_at": "2026-09-14T21:18:54+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 1084,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-14T21:18:54+08:00",
+          "epoch": 1789391934,
+          "resolved_at": "2026-09-14T21:18:54+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-14T21:18:54+08:00",
+          "epoch": 1789391934,
+          "run": "20260913T181118-63407",
+          "type": "cmd",
+          "sid": "2406080106",
+          "name": "高龙徽",
+          "cwd": "/home/dragon/xv6-ai-labs-km-无答案/lab0",
+          "rc": 0,
+          "cmd": "sudo make fs",
+          "prev": "8e5027203901a260861b2529cf35fd6fe78e00a9903d12ec021510b8f097f5e2",
+          "h": "195083efe35db6c31a3b5a642470c507bc9af0660d4cee2207202b79fb92594c"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "37db3e0f0a3d:20260914T211407-88540:shell:2",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "~/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": "20260914T211407-88540",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "make bbbbbbb",
+      "observed_at": "2026-09-14T21:21:00.516822+08:00",
+      "elapsed_seconds": 413.516822,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260914T211407-88540.out.gz",
+        "tim": "term/20260914T211407-88540.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 413.516822,
+          "timing_line": 16,
+          "body_byte_range": [
+            430,
+            433
+          ],
+          "decompressed_byte_range": [
+            430,
+            433
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 1072,
+            "ts": "2026-09-14T21:14:07+08:00",
+            "epoch": 1789391647
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 419,
+          "echo_end": 432,
+          "output_begin": 432,
+          "output_end": 4158,
+          "prompt_begin": 239
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "                                                                          uild",
+        "找不到命令 “make”，但可以通过以下软件包安装它：",
+        "sudo apt install make        # version 4.3-4.1build1, or",
+        "sudo apt install make-guile  # version 4.3-4.1build1"
+      ]
+    },
+    {
+      "event_id": "37db3e0f0a3d:log:000001096",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "/home/dragon/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"ls -lh fs.img\",\"cwd\":\"/home/dragon/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789392594,\"h\":\"50eeaa80c701d7fb8028027801f5fba518e75e6c7b5500a7183ea1b6a1a7c507\",\"name\":\"高龙徽\",\"prev\":\"49ed579997a09dbe6617048254ba5ce868a06c0af2f3187e16173972dc095c7d\",\"rc\":0,\"run\":\"20260913T181118-63407\",\"sid\":\"2406080106\",\"ts\":\"2026-09-14T21:29:54+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-14T21:29:54+08:00",
+      "logged_at": "2026-09-14T21:29:54+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 1096,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-14T21:29:54+08:00",
+          "epoch": 1789392594,
+          "resolved_at": "2026-09-14T21:29:54+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-14T21:29:54+08:00",
+          "epoch": 1789392594,
+          "run": "20260913T181118-63407",
+          "type": "cmd",
+          "sid": "2406080106",
+          "name": "高龙徽",
+          "cwd": "/home/dragon/xv6-ai-labs-km-无答案/lab0",
+          "rc": 0,
+          "cmd": "ls -lh fs.img",
+          "prev": "49ed579997a09dbe6617048254ba5ce868a06c0af2f3187e16173972dc095c7d",
+          "h": "50eeaa80c701d7fb8028027801f5fba518e75e6c7b5500a7183ea1b6a1a7c507"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "37db3e0f0a3d:log:000001097",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "/home/dragon/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make run\",\"cwd\":\"/home/dragon/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789392607,\"h\":\"68cb9301931de4296ea69a46129dbcd5c21760d13f883db6b91e5d393d00770f\",\"name\":\"高龙徽\",\"prev\":\"50eeaa80c701d7fb8028027801f5fba518e75e6c7b5500a7183ea1b6a1a7c507\",\"rc\":2,\"run\":\"20260913T181118-63407\",\"sid\":\"2406080106\",\"ts\":\"2026-09-14T21:30:07+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-14T21:30:07+08:00",
+      "logged_at": "2026-09-14T21:30:07+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 1097,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-14T21:30:07+08:00",
+          "epoch": 1789392607,
+          "resolved_at": "2026-09-14T21:30:07+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-14T21:30:07+08:00",
+          "epoch": 1789392607,
+          "run": "20260913T181118-63407",
+          "type": "cmd",
+          "sid": "2406080106",
+          "name": "高龙徽",
+          "cwd": "/home/dragon/xv6-ai-labs-km-无答案/lab0",
+          "rc": 2,
+          "cmd": "make run",
+          "prev": "50eeaa80c701d7fb8028027801f5fba518e75e6c7b5500a7183ea1b6a1a7c507",
+          "h": "68cb9301931de4296ea69a46129dbcd5c21760d13f883db6b91e5d393d00770f"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "37db3e0f0a3d:log:000001100",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "/home/dragon/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"ls -l fs.img\",\"cwd\":\"/home/dragon/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789392716,\"h\":\"6db93ddaf9cdfdd3dc27b324c71cc378e1292ed350c5818b261a47fc9c806cfe\",\"name\":\"高龙徽\",\"prev\":\"cb872c6ea2a1f738c0f87d45013ffc79fb550740cb3466bd6b51a33b855b4afe\",\"rc\":0,\"run\":\"20260913T181118-63407\",\"sid\":\"2406080106\",\"ts\":\"2026-09-14T21:31:56+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-14T21:31:56+08:00",
+      "logged_at": "2026-09-14T21:31:56+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 1100,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-14T21:31:56+08:00",
+          "epoch": 1789392716,
+          "resolved_at": "2026-09-14T21:31:56+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-14T21:31:56+08:00",
+          "epoch": 1789392716,
+          "run": "20260913T181118-63407",
+          "type": "cmd",
+          "sid": "2406080106",
+          "name": "高龙徽",
+          "cwd": "/home/dragon/xv6-ai-labs-km-无答案/lab0",
+          "rc": 0,
+          "cmd": "ls -l fs.img",
+          "prev": "cb872c6ea2a1f738c0f87d45013ffc79fb550740cb3466bd6b51a33b855b4afe",
+          "h": "6db93ddaf9cdfdd3dc27b324c71cc378e1292ed350c5818b261a47fc9c806cfe"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "37db3e0f0a3d:log:000001106",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "/home/dragon/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"sudo chown dragon:dragon fs.img\",\"cwd\":\"/home/dragon/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789393053,\"h\":\"837c918637ddb4d8e95158b3b7c2e5f6daa86c15e15869267714805c671b159f\",\"name\":\"高龙徽\",\"prev\":\"4e4660e786461aafec8ba7857e544ac11c50a25e6f3fabe08e57c19a4f83d4f0\",\"rc\":0,\"run\":\"20260913T181118-63407\",\"sid\":\"2406080106\",\"ts\":\"2026-09-14T21:37:33+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-14T21:37:33+08:00",
+      "logged_at": "2026-09-14T21:37:33+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 1106,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-14T21:37:33+08:00",
+          "epoch": 1789393053,
+          "resolved_at": "2026-09-14T21:37:33+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-14T21:37:33+08:00",
+          "epoch": 1789393053,
+          "run": "20260913T181118-63407",
+          "type": "cmd",
+          "sid": "2406080106",
+          "name": "高龙徽",
+          "cwd": "/home/dragon/xv6-ai-labs-km-无答案/lab0",
+          "rc": 0,
+          "cmd": "sudo chown dragon:dragon fs.img",
+          "prev": "4e4660e786461aafec8ba7857e544ac11c50a25e6f3fabe08e57c19a4f83d4f0",
+          "h": "837c918637ddb4d8e95158b3b7c2e5f6daa86c15e15869267714805c671b159f"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "37db3e0f0a3d:log:000001108",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "/home/dragon/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"ls -l fs.img\",\"cwd\":\"/home/dragon/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789393066,\"h\":\"8270bba74901f1be9d1b45cf3f2c1f07637522b11ee5e35673e155885075b79e\",\"name\":\"高龙徽\",\"prev\":\"87754890919d44d054ea5c42e1d2bf716cdfa1950ef20d61fa88b61a4779d939\",\"rc\":0,\"run\":\"20260913T181118-63407\",\"sid\":\"2406080106\",\"ts\":\"2026-09-14T21:37:46+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-14T21:37:46+08:00",
+      "logged_at": "2026-09-14T21:37:46+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 1108,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-14T21:37:46+08:00",
+          "epoch": 1789393066,
+          "resolved_at": "2026-09-14T21:37:46+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-14T21:37:46+08:00",
+          "epoch": 1789393066,
+          "run": "20260913T181118-63407",
+          "type": "cmd",
+          "sid": "2406080106",
+          "name": "高龙徽",
+          "cwd": "/home/dragon/xv6-ai-labs-km-无答案/lab0",
+          "rc": 0,
+          "cmd": "ls -l fs.img",
+          "prev": "87754890919d44d054ea5c42e1d2bf716cdfa1950ef20d61fa88b61a4779d939",
+          "h": "8270bba74901f1be9d1b45cf3f2c1f07637522b11ee5e35673e155885075b79e"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "37db3e0f0a3d:log:000001157",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "/home/dragon/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make run\",\"cwd\":\"/home/dragon/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789395947,\"h\":\"bfe8d242f94dc071d7dc05ed353da0e7aa139f9c126c6ef4b89e279f29bfd151\",\"name\":\"高龙徽\",\"prev\":\"e82d9f8e00d61bc3c54d9d6567d1f8572d7a76fb30e6391e3f1c059060d0d18e\",\"rc\":0,\"run\":\"20260913T181118-63407\",\"sid\":\"2406080106\",\"ts\":\"2026-09-14T22:25:47+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-14T22:25:47+08:00",
+      "logged_at": "2026-09-14T22:25:47+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 1157,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-14T22:25:47+08:00",
+          "epoch": 1789395947,
+          "resolved_at": "2026-09-14T22:25:47+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-14T22:25:47+08:00",
+          "epoch": 1789395947,
+          "run": "20260913T181118-63407",
+          "type": "cmd",
+          "sid": "2406080106",
+          "name": "高龙徽",
+          "cwd": "/home/dragon/xv6-ai-labs-km-无答案/lab0",
+          "rc": 0,
+          "cmd": "make run",
+          "prev": "e82d9f8e00d61bc3c54d9d6567d1f8572d7a76fb30e6391e3f1c059060d0d18e",
+          "h": "bfe8d242f94dc071d7dc05ed353da0e7aa139f9c126c6ef4b89e279f29bfd151"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "37db3e0f0a3d:20260914T211407-88540:shell:3",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "~/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": "20260914T211407-88540",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "sudo apt install make",
+      "observed_at": "2026-09-15T04:52:05.037974+08:00",
+      "elapsed_seconds": 27478.037973999984,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260914T211407-88540.out.gz",
+        "tim": "term/20260914T211407-88540.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 27478.037973999984,
+          "timing_line": 659,
+          "body_byte_range": [
+            4596,
+            4793
+          ],
+          "decompressed_byte_range": [
+            4596,
+            4793
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 1072,
+            "ts": "2026-09-14T21:14:07+08:00",
+            "epoch": 1789391647
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 4548,
+          "echo_end": 4599,
+          "output_begin": 4599,
+          "output_end": 4600,
+          "prompt_begin": 4368
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": []
+    },
+    {
+      "event_id": "37db3e0f0a3d:20260914T211407-88540:shell:4",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "~/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": "20260914T211407-88540",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "sudo apt install make",
+      "observed_at": "2026-09-15T04:52:05.037974+08:00",
+      "elapsed_seconds": 27478.037973999984,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260914T211407-88540.out.gz",
+        "tim": "term/20260914T211407-88540.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 27478.037973999984,
+          "timing_line": 659,
+          "body_byte_range": [
+            4596,
+            4793
+          ],
+          "decompressed_byte_range": [
+            4596,
+            4793
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 1072,
+            "ts": "2026-09-14T21:14:07+08:00",
+            "epoch": 1789391647
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 4772,
+          "echo_end": 4793,
+          "output_begin": 4793,
+          "output_end": 7846,
+          "prompt_begin": 4600
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "[sudo] dragon 的密码：",
+        "正在读取软件包列表... 完成",
+        "正在分析软件包的依赖关系树... 完成",
+        "正在读取状态信息... 完成",
+        "下列软件包是自动安装的并且现在不需要了：",
+        "  libfwupd2",
+        "使用'sudo apt autoremove'来卸载它(它们)。",
+        "建议安装：",
+        "  make-doc",
+        "下列【新】软件包将被安装：",
+        "  make",
+        "升级了 0 个软件包，新安装了 1 个软件包，要卸载 0 个软件包，有 15 个软件包未被升级。",
+        "需要下载 180 kB 的归档。",
+        "解压缩后会消耗 414 kB 的额外空间。",
+        "获取:1 http://cn.archive.ubuntu.com/ubuntu noble/main amd64 make amd64 4.3-4.1build2 [180 kB]",
+        "已下载 180 kB，耗时 1秒 (252 kB/s)",
+        "正在选中未选择的软件包 make。",
+        "(正在读取数据库 ... 系统当前共安装有 178001 个文件和目录。)",
+        "准备解压 .../make_4.3-4.1build2_amd64.deb  ...",
+        "正在解压 make (4.3-4.1build2) ...",
+        "正在设置 make (4.3-4.1build2) ...",
+        "正在处理用于 man-db (2.12.0-4build2) 的触发器 ...",
+        "dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$"
+      ]
+    },
+    {
+      "event_id": "37db3e0f0a3d:20260914T211407-88540:shell:5",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "~/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": "20260914T211407-88540",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "dragon@dragon",
+      "observed_at": "2026-09-15T07:26:40.067578+08:00",
+      "elapsed_seconds": 36753.067577999995,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260914T211407-88540.out.gz",
+        "tim": "term/20260914T211407-88540.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 36753.067577999995,
+          "timing_line": 768,
+          "body_byte_range": [
+            8295,
+            8299
+          ],
+          "decompressed_byte_range": [
+            8295,
+            8299
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 1072,
+            "ts": "2026-09-14T21:14:07+08:00",
+            "epoch": 1789391647
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 8018,
+          "echo_end": 8299,
+          "output_begin": 8299,
+          "output_end": 29469,
+          "prompt_begin": 7846
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "                                                                    make build",
+        "riscv64-unknown-elf-gcc    -c -o kernel/entry_qemu.o kernel/entry_qemu.S",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/printf.o kernel/printf.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/kalloc.o kernel/kalloc.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/intr.o kernel/intr.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/spinlock.o kernel/spinlock.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/string.o kernel/string.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/main.o kernel/main.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/vm.o kernel/vm.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/proc.o kernel/proc.c",
+        "riscv64-unknown-elf-gcc    -c -o kernel/swtch.o kernel/swtch.S",
+        "riscv64-unknown-elf-gcc    -c -o kernel/trampoline.o kernel/trampoline.S",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/trap.o kernel/trap.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/syscall.o kernel/syscall.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/sysproc.o kernel/sysproc.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/bio.o kernel/bio.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/sleeplock.o kernel/sleeplock.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/file.o kernel/file.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/pipe.o kernel/pipe.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/exec.o kernel/exec.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/sysfile.o kernel/sysfile.c",
+        "riscv64-unknown-elf-gcc    -c -o kernel/kernelvec.o kernel/kernelvec.S",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/timer.o kernel/timer.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/disk.o kernel/disk.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/fat32.o kernel/fat32.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/plic.o kernel/plic.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/console.o kernel/console.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o kernel/virtio_disk.o kernel/virtio_disk.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU -march=rv64g -nostdinc -I. -Ikernel -c xv6-user/initcode.S -o xv6-user/initcode.o",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e start -Ttext 0 -o xv6-user/initcode.out xv6-user/initcode.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/initcode.out has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objcopy -S -O binary xv6-user/initcode.out xv6-user/initcode",
+        "riscv64-unknown-elf-objdump -S xv6-user/initcode.o > xv6-user/initcode.asm",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/ulib.o xv6-user/ulib.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU -c -o xv6-user/usys.o xv6-user/usys.S",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/printf.o xv6-user/printf.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/umalloc.o xv6-user/umalloc.c",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/init.o xv6-user/init.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_init xv6-user/init.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_init has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_init > xv6-user/init.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_init | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/init.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/sh.o xv6-user/sh.c",
+        "xv6-user/sh.c: In function 'runcmd':",
+        "xv6-user/sh.c:157:1: warning: infinite recursion detected [-Winfinite-recursion]",
+        "  157 | runcmd(struct cmd *cmd)",
+        "      | ^~~~~~",
+        "xv6-user/sh.c:205:5: note: recursive call",
+        "  205 |     runcmd(rcmd->cmd);",
+        "      |     ^~~~~~~~~~~~~~~~~",
+        "xv6-user/sh.c:225:7: note: recursive call",
+        "  225 |       runcmd(pcmd->left);",
+        "      |       ^~~~~~~~~~~~~~~~~~",
+        "xv6-user/sh.c:232:7: note: recursive call",
+        "  232 |       runcmd(pcmd->right);",
+        "      |       ^~~~~~~~~~~~~~~~~~~",
+        "xv6-user/sh.c:211:7: note: recursive call",
+        "  211 |       runcmd(lcmd->left);",
+        "      |       ^~~~~~~~~~~~~~~~~~",
+        "xv6-user/sh.c:213:5: note: recursive call",
+        "  213 |     runcmd(lcmd->right);",
+        "      |     ^~~~~~~~~~~~~~~~~~~",
+        "xv6-user/sh.c:243:7: note: recursive call",
+        "  243 |       runcmd(bcmd->cmd);",
+        "      |       ^~~~~~~~~~~~~~~~~",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_sh xv6-user/sh.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_sh has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_sh > xv6-user/sh.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_sh | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/sh.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/cat.o xv6-user/cat.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_cat xv6-user/cat.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_cat has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_cat > xv6-user/cat.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_cat | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/cat.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/echo.o xv6-user/echo.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_echo xv6-user/echo.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_echo has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_echo > xv6-user/echo.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_echo | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/echo.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/grep.o xv6-user/grep.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_grep xv6-user/grep.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_grep has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_grep > xv6-user/grep.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_grep | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/grep.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/ls.o xv6-user/ls.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_ls xv6-user/ls.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_ls has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_ls > xv6-user/ls.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_ls | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/ls.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/kill.o xv6-user/kill.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_kill xv6-user/kill.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_kill has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_kill > xv6-user/kill.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_kill | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/kill.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/mkdir.o xv6-user/mkdir.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_mkdir xv6-user/mkdir.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_mkdir has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_mkdir > xv6-user/mkdir.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_mkdir | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/mkdir.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/xargs.o xv6-user/xargs.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_xargs xv6-user/xargs.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_xargs has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_xargs > xv6-user/xargs.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_xargs | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/xargs.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/sleep.o xv6-user/sleep.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_sleep xv6-user/sleep.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_sleep has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_sleep > xv6-user/sleep.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_sleep | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/sleep.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/find.o xv6-user/find.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_find xv6-user/find.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_find has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_find > xv6-user/find.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_find | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/find.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/rm.o xv6-user/rm.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_rm xv6-user/rm.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_rm has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_rm > xv6-user/rm.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_rm | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/rm.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/wc.o xv6-user/wc.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_wc xv6-user/wc.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_wc has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_wc > xv6-user/wc.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_wc | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/wc.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/test.o xv6-user/test.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_test xv6-user/test.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_test has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_test > xv6-user/test.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_test | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/test.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/usertests.o xv6-user/usertests.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_usertests xv6-user/usertests.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_usertests has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_usertests > xv6-user/usertests.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_usertests | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/usertests.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/strace.o xv6-user/strace.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_strace xv6-user/strace.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_strace has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_strace > xv6-user/strace.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_strace | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/strace.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. -fno-stack-protector -D QEMU   -c -o xv6-user/mv.o xv6-user/mv.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_mv xv6-user/mv.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_mv has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_mv > xv6-user/mv.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_mv | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/mv.sym"
+      ]
+    },
+    {
+      "event_id": "37db3e0f0a3d:20260914T211407-88540:shell:6",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "~/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": "20260914T211407-88540",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "ls target/",
+      "observed_at": "2026-09-15T11:59:34.454189+08:00",
+      "elapsed_seconds": 53127.45418899993,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260914T211407-88540.out.gz",
+        "tim": "term/20260914T211407-88540.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 53127.45418899993,
+          "timing_line": 925,
+          "body_byte_range": [
+            29668,
+            29690
+          ],
+          "decompressed_byte_range": [
+            29668,
+            29690
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 1072,
+            "ts": "2026-09-14T21:14:07+08:00",
+            "epoch": 1789391647
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 29649,
+          "echo_end": 29688,
+          "output_begin": 29688,
+          "output_end": 29747,
+          "prompt_begin": 29469
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "kernel  kernel.asm  kernel.sym"
+      ]
+    },
+    {
+      "event_id": "37db3e0f0a3d:20260914T211407-88540:shell:7",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "~/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": "20260914T211407-88540",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "sudo make fs",
+      "observed_at": "2026-09-15T12:28:30.147269+08:00",
+      "elapsed_seconds": 54863.14726899994,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260914T211407-88540.out.gz",
+        "tim": "term/20260914T211407-88540.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 54863.14726899994,
+          "timing_line": 936,
+          "body_byte_range": [
+            30491,
+            30514
+          ],
+          "decompressed_byte_range": [
+            30491,
+            30514
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 1072,
+            "ts": "2026-09-14T21:14:07+08:00",
+            "epoch": 1789391647
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 30491,
+          "echo_end": 30513,
+          "output_begin": 30513,
+          "output_end": 30920,
+          "prompt_begin": 30319
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "                                                                    sudo make fs",
+        "making fs image...",
+        "输入了 512+0 块记录",
+        "输出了 512+0 块记录",
+        "268435456 字节 (268 MB, 256 MiB) 已复制，0.470309 s，571 MB/s",
+        "mkfs.fat 4.2 (2021-01-31)"
+      ]
+    },
+    {
+      "event_id": "37db3e0f0a3d:20260914T211407-88540:shell:8",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "~/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": "20260914T211407-88540",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "ls -lh fs.img",
+      "observed_at": "2026-09-15T13:38:12.836526+08:00",
+      "elapsed_seconds": 59045.836525999934,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260914T211407-88540.out.gz",
+        "tim": "term/20260914T211407-88540.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 59045.836525999934,
+          "timing_line": 946,
+          "body_byte_range": [
+            31131,
+            31331
+          ],
+          "decompressed_byte_range": [
+            31131,
+            31331
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 1072,
+            "ts": "2026-09-14T21:14:07+08:00",
+            "epoch": 1789391647
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 31100,
+          "echo_end": 31134,
+          "output_begin": 31134,
+          "output_end": 31135,
+          "prompt_begin": 30920
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": []
+    },
+    {
+      "event_id": "37db3e0f0a3d:20260914T211407-88540:shell:9",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "~/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": "20260914T211407-88540",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "ls -lh fs.img",
+      "observed_at": "2026-09-15T13:38:12.836526+08:00",
+      "elapsed_seconds": 59045.836525999934,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260914T211407-88540.out.gz",
+        "tim": "term/20260914T211407-88540.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 59045.836525999934,
+          "timing_line": 946,
+          "body_byte_range": [
+            31131,
+            31331
+          ],
+          "decompressed_byte_range": [
+            31131,
+            31331
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 1072,
+            "ts": "2026-09-14T21:14:07+08:00",
+            "epoch": 1789391647
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 31307,
+          "echo_end": 31320,
+          "output_begin": 31320,
+          "output_end": 31382,
+          "prompt_begin": 31135
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "-rw-r--r-- 1 root root 256M  9月 14 21:18 fs.img"
+      ]
+    },
+    {
+      "event_id": "37db3e0f0a3d:20260914T211407-88540:shell:10",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "~/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": "20260914T211407-88540",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "make run",
+      "observed_at": "2026-09-15T14:41:44.305189+08:00",
+      "elapsed_seconds": 62857.30518899993,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260914T211407-88540.out.gz",
+        "tim": "term/20260914T211407-88540.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 62857.30518899993,
+          "timing_line": 950,
+          "body_byte_range": [
+            31579,
+            31595
+          ],
+          "decompressed_byte_range": [
+            31579,
+            31595
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 1072,
+            "ts": "2026-09-14T21:14:07+08:00",
+            "epoch": 1789391647
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 31562,
+          "echo_end": 31595,
+          "output_begin": 31595,
+          "output_end": 31770,
+          "prompt_begin": 31382
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "qemu-system-riscv64: -device virtio-blk-device,drive=x0,bus=virtio-mmio-bus.0: Could not open 'fs.img': Permission denied",
+        "make: *** [Makefile:152：run] 错误 1"
+      ]
+    },
+    {
+      "event_id": "37db3e0f0a3d:20260914T211407-88540:shell:11",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "~/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": "20260914T211407-88540",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "dragon@dragon-VMware-Virtual-Platform:~/xv6-ai-labs-km-无答案/lab0$ make run",
+      "observed_at": "2026-09-15T20:40:26.467796+08:00",
+      "elapsed_seconds": 84379.46779599994,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260914T211407-88540.out.gz",
+        "tim": "term/20260914T211407-88540.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 84379.46779599994,
+          "timing_line": 971,
+          "body_byte_range": [
+            32020,
+            32130
+          ],
+          "decompressed_byte_range": [
+            32020,
+            32130
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 1072,
+            "ts": "2026-09-14T21:14:07+08:00",
+            "epoch": 1789391647
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 31950,
+          "echo_end": 32127,
+          "output_begin": 32127,
+          "output_end": 32130,
+          "prompt_begin": 31770
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": []
+    },
+    {
+      "event_id": "37db3e0f0a3d:20260914T211407-88540:shell:12",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "~/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": "20260914T211407-88540",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "make run",
+      "observed_at": "2026-09-15T20:58:01.943313+08:00",
+      "elapsed_seconds": 85434.94331299994,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260914T211407-88540.out.gz",
+        "tim": "term/20260914T211407-88540.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 85434.94331299994,
+          "timing_line": 972,
+          "body_byte_range": [
+            32130,
+            32421
+          ],
+          "decompressed_byte_range": [
+            32130,
+            32421
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 1072,
+            "ts": "2026-09-14T21:14:07+08:00",
+            "epoch": 1789391647
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 32411,
+          "echo_end": 32419,
+          "output_begin": 32419,
+          "output_end": 33722,
+          "prompt_begin": 32130
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "                                                                    ls -l fs.img",
+        "-rw-r--r-- 1 root root 268435456  9月 14 21:18 fs.img"
+      ]
+    },
+    {
+      "event_id": "37db3e0f0a3d:20260914T211407-88540:shell:13",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "~/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": "20260914T211407-88540",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "sudo chown dragon:dragon fs.img",
+      "observed_at": "2026-09-16T23:01:44.471024+08:00",
+      "elapsed_seconds": 179257.47102399994,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260914T211407-88540.out.gz",
+        "tim": "term/20260914T211407-88540.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 179257.47102399994,
+          "timing_line": 1060,
+          "body_byte_range": [
+            33960,
+            34169
+          ],
+          "decompressed_byte_range": [
+            33960,
+            34169
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 1072,
+            "ts": "2026-09-14T21:14:07+08:00",
+            "epoch": 1789391647
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 33902,
+          "echo_end": 33963,
+          "output_begin": 33963,
+          "output_end": 33964,
+          "prompt_begin": 33722
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": []
+    },
+    {
+      "event_id": "37db3e0f0a3d:20260914T211407-88540:shell:14",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "~/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": "20260914T211407-88540",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "sudo chown dragon:dragon fs.img",
+      "observed_at": "2026-09-16T23:01:44.471024+08:00",
+      "elapsed_seconds": 179257.47102399994,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260914T211407-88540.out.gz",
+        "tim": "term/20260914T211407-88540.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 179257.47102399994,
+          "timing_line": 1060,
+          "body_byte_range": [
+            33960,
+            34169
+          ],
+          "decompressed_byte_range": [
+            33960,
+            34169
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 1072,
+            "ts": "2026-09-14T21:14:07+08:00",
+            "epoch": 1789391647
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 34136,
+          "echo_end": 34167,
+          "output_begin": 34167,
+          "output_end": 34207,
+          "prompt_begin": 33964
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "[sudo] dragon 的密码："
+      ]
+    },
+    {
+      "event_id": "37db3e0f0a3d:20260914T211407-88540:shell:15",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "~/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": "20260914T211407-88540",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "ls -l fs.img",
+      "observed_at": "2026-09-17T00:58:47.601625+08:00",
+      "elapsed_seconds": 186280.60162499992,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260914T211407-88540.out.gz",
+        "tim": "term/20260914T211407-88540.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 186280.60162499992,
+          "timing_line": 1065,
+          "body_byte_range": [
+            34387,
+            34410
+          ],
+          "decompressed_byte_range": [
+            34387,
+            34410
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 1072,
+            "ts": "2026-09-14T21:14:07+08:00",
+            "epoch": 1789391647
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 34387,
+          "echo_end": 34409,
+          "output_begin": 34409,
+          "output_end": 34705,
+          "prompt_begin": 34207
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "                                                                    ls -l fs.img",
+        "-rw-r--r-- 1 dragon dragon 268435456  9月 14 21:18 fs.img"
+      ]
+    },
+    {
+      "event_id": "37db3e0f0a3d:20260914T211407-88540:shell:16",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "~/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": "20260914T211407-88540",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "make runmake run",
+      "observed_at": "2026-09-17T03:45:07.450216+08:00",
+      "elapsed_seconds": 196260.45021599994,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260914T211407-88540.out.gz",
+        "tim": "term/20260914T211407-88540.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 196260.45021599994,
+          "timing_line": 1072,
+          "body_byte_range": [
+            34953,
+            35164
+          ],
+          "decompressed_byte_range": [
+            34953,
+            35164
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 1072,
+            "ts": "2026-09-14T21:14:07+08:00",
+            "epoch": 1789391647
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 34885,
+          "echo_end": 34956,
+          "output_begin": 34956,
+          "output_end": 34957,
+          "prompt_begin": 34705
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": []
+    },
+    {
+      "event_id": "37db3e0f0a3d:20260914T211407-88540:shell:17",
+      "student": {
+        "student_id": "2406080106",
+        "name": "高龙徽"
+      },
+      "lab": "lab0",
+      "cwd": "~/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": "20260914T211407-88540",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "make",
+      "observed_at": "2026-09-17T04:33:05.566209+08:00",
+      "elapsed_seconds": 199138.56620899992,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260914T211407-88540.out.gz",
+        "tim": "term/20260914T211407-88540.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 199138.56620899992,
+          "timing_line": 1074,
+          "body_byte_range": [
+            35168,
+            35172
+          ],
+          "decompressed_byte_range": [
+            35168,
+            35172
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 1072,
+            "ts": "2026-09-14T21:14:07+08:00",
+            "epoch": 1789391647
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 35129,
+          "echo_end": 35172,
+          "output_begin": 35172,
+          "output_end": 45186,
+          "prompt_begin": 34957
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "OpenSBI v1.3",
+        "   ____                    _____ ____ _____",
+        "  / __ \\                  / ____|  _ \\_   _|",
+        " | |  | |_ __   ___ _ __ | (___ | |_) || |",
+        " | |  | | '_ \\ / _ \\ '_ \\ \\___ \\|  _ < | |",
+        " | |__| | |_) |  __/ | | |____) | |_) || |_",
+        "  \\____/| .__/ \\___|_| |_|_____/|___/_____|",
+        "        | |",
+        "        |_|",
+        "",
+        "Platform Name             : riscv-virtio,qemu",
+        "Platform Features         : medeleg",
+        "Platform HART Count       : 2",
+        "Platform IPI Device       : aclint-mswi",
+        "Platform Timer Device     : aclint-mtimer @ 10000000Hz",
+        "Platform Console Device   : uart8250",
+        "Platform HSM Device       : ---",
+        "Platform PMU Device       : ---",
+        "Platform Reboot Device    : sifive_test",
+        "Platform Shutdown Device  : sifive_test",
+        "Platform Suspend Device   : ---",
+        "Platform CPPC Device      : ---",
+        "Firmware Base             : 0x80000000",
+        "Firmware Size             : 332 KB",
+        "Firmware RW Offset        : 0x40000",
+        "Firmware RW Size          : 76 KB",
+        "Firmware Heap Offset      : 0x4a000",
+        "Firmware Heap Size        : 36 KB (total), 2 KB (reserved), 9 KB (used), 24 KB (free)",
+        "Firmware Scratch Size     : 4096 B (total), 760 B (used), 3336 B (free)",
+        "Runtime SBI Version       : 1.0",
+        "",
+        "Domain0 Name              : root",
+        "Domain0 Boot HART         : 0",
+        "Domain0 HARTs             : 0*,1*",
+        "Domain0 Region00          : 0x0000000002000000-0x000000000200ffff M: (I,R,W) S/U: ()",
+        "Domain0 Region01          : 0x0000000080040000-0x000000008005ffff M: (R,W) S/U: ()",
+        "Domain0 Region02          : 0x0000000080000000-0x000000008003ffff M: (R,X) S/U: ()",
+        "Domain0 Region03          : 0x0000000000000000-0xffffffffffffffff M: (R,W,X) S/U: (R,W,X)",
+        "Domain0 Next Address      : 0x0000000080200000",
+        "Domain0 Next Arg1         : 0x0000000087e00000",
+        "Domain0 Next Mode         : S-mode",
+        "Domain0 SysReset          : yes",
+        "Domain0 SysSuspend        : yes",
+        "",
+        "Boot HART ID              : 0",
+        "Boot HART Domain          : root",
+        "Boot HART Priv Version    : v1.12",
+        "Boot HART Base ISA        : rv64imafdch",
+        "Boot HART ISA Extensions  : time,sstc",
+        "Boot HART PMP Count       : 16",
+        "Boot HART PMP Granularity : 4",
+        "Boot HART PMP Address Bits: 54",
+        "Boot HART MHPM Count      : 16",
+        "Boot HART MIDELEG         : 0x0000000000001666",
+        "Boot HART MEDELEG         : 0x0000000000f0b509",
+        "  (`-.            (`-.                            .-')       ('-.    _   .-')",
+        " ( OO ).        _(OO  )_                        .(  OO)    _(  OO)  ( '.( OO )_",
+        "(_/.  \\_)-. ,--(_/   ,. \\  ,--.                (_)---\\_)  (,------.  ,--.   ,--.) ,--. ,--.",
+        " \\  `.'  /  \\   \\   /(__/ /  .'       .-')     '  .-.  '   |  .---'  |   `.'   |  |  | |  |",
+        "  \\     /\\   \\   \\ /   / .  / -.    _(  OO)   ,|  | |  |   |  |      |         |  |  | | .-')",
+        "   \\   \\ |    \\   '   /, | .-.  '  (,------. (_|  | |  |  (|  '--.   |  |'.'|  |  |  |_|( OO )",
+        "  .'    \\_)    \\     /__)' \\  |  |  '------'   |  | |  |   |  .--'   |  |   |  |  |  | | `-' /",
+        " /  .'.  \\      \\   /    \\  `'  /              '  '-'  '-. |  `---.  |  |   |  | ('  '-'(_.-'",
+        "'--'   '--'      `-'      `----'                `-----'--' `------'  `--'   `--'   `-----'",
+        "hart 0 init done",
+        "init: starting sh",
+        "-> / $ ls",
+        "exec ls failed",
+        "-> / $ echo hi",
+        "hi",
+        "-> / $ cat README",
+        "xv6 is a re-implementation of Dennis Ritchie's and Ken Thompson's Unix",
+        "Version 6 (v6).  xv6 loosely follows the structure and style of v6,",
+        "but is implemented for a modern RISC-V multiprocessor using ANSI C.",
+        "",
+        "ACKNOWLEDGMENTS",
+        "",
+        "xv6 is inspired by John Lions's Commentary on UNIX 6th Edition (Peer",
+        "to Peer Communications; ISBN: 1-57398-013-7; 1st edition (June 14,",
+        "2000)). See also https://pdos.csail.mit.edu/6.828/, which",
+        "provides pointers to on-line resources for v6.",
+        "",
+        "The following people have made contributions: Russ Cox (context switching,",
+        "locking), Cliff Frey (MP), Xiao Yu (MP), Nickolai Zeldovich, and Austin",
+        "Clements.",
+        "",
+        "We are also grateful for the bug reports and patches contributed by",
+        "Silas Boyd-Wickizer, Anton Burtsev, Dan Cross, Cody Cutler, Mike CAT,",
+        "Tej Chajed, Asami Doi, eyalz800, , Nelson Elhage, Saar Ettinger, Alice",
+        "Ferrazzi, Nathaniel Filardo, Peter Froehlich, Yakir Goaron,Shivam",
+        "Handa, Bryan Henry, jaichenhengjie, Jim Huang, Alexander Kapshuk,",
+        "Anders Kaseorg, kehao95, Wolfgang Keller, Jonathan Kimmitt, Eddie",
+        "Kohler, Austin Liew, Imbar Marinescu, Yandong Mao, Matan Shabtay,",
+        "Hitoshi Mitake, Carmi Merimovich, Mark Morrissey, mtasm, Joel Nider,",
+        "Greg Price, Ayan Shafqat, Eldar Sehayek, Yongming Shen, Fumiya",
+        "Shigemitsu, Takahiro, Cam Tenny, tyfkda, Rafael Ubal, Warren Toomey,",
+        "Stephen Tu, Pablo Ventura, Xi Wang, Keiichi Watanabe, Nicolas",
+        "Wolovick, wxdao, Grant Wu, Jindong Zhang, Icenowy Zheng, and Zou Chang",
+        "Wei.",
+        "",
+        "The code in the files that constitute xv6 is",
+        "Copyright 2006-2020 Frans Kaashoek, Robert Morris, and Russ Cox.",
+        "",
+        "ERROR REPORTS",
+        "",
+        "Please send errors and suggestions to Frans Kaashoek and Robert Morris",
+        "(kaashoek,rtm@mit.edu). The main purpose of xv6 is as a teaching",
+        "operating system for MIT's 6.S081, so we are more interested in",
+        "simplifications and clarifications than new features.",
+        "",
+        "BUILDING AND RUNNING XV6",
+        "",
+        "You will need a RISC-V \"newlib\" tool chain from",
+        "https://github.com/riscv/riscv-gnu-toolchain, and qemu compiled for",
+        "riscv64-softmmu. Once they are installed, and in your shell",
+        "search path, you can run \"make qemu\".",
+        "-> / $",
+        "exec",
+        "-> / $ ls",
+        "bin                              DIR    0",
+        "README                           FILE   2059",
+        "cat                              FILE   22160",
+        "echo                             FILE   21088",
+        "find                             FILE   23288",
+        "grep                             FILE   24680",
+        "init                             FILE   21760",
+        "kill                             FILE   20984",
+        "ls                               FILE   23304",
+        "mkdir                            FILE   21072",
+        "mv                               FILE   22872",
+        "rm                               FILE   21072",
+        "sh                               FILE   43696",
+        "sleep                            FILE   21056",
+        "strace                           FILE   21424",
+        "test                             FILE   20920",
+        "usertests                        FILE   117496",
+        "wc                               FILE   22936",
+        "xargs                            FILE   22752",
+        "-> / $",
+        "exec",
+        "-> / $ ls /bin",
+        ".                                DIR    0",
+        "..                               DIR    0",
+        "cat                              FILE   22160",
+        "echo                             FILE   21088",
+        "find                             FILE   23288",
+        "grep                             FILE   24680",
+        "init                             FILE   21760",
+        "kill                             FILE   20984",
+        "ls                               FILE   23304",
+        "mkdir                            FILE   21072",
+        "mv                               FILE   22872",
+        "rm                               FILE   21072",
+        "sh                               FILE   43696",
+        "sleep                            FILE   21056",
+        "strace                           FILE   21424",
+        "test                             FILE   20920",
+        "usertests                        FILE   117496",
+        "wc                               FILE   22936",
+        "xargs                            FILE   22752",
+        "-> / $ cat README",
+        "xv6 is a re-implementation of Dennis Ritchie's and Ken Thompson's Unix",
+        "Version 6 (v6).  xv6 loosely follows the structure and style of v6,",
+        "but is implemented for a modern RISC-V multiprocessor using ANSI C.",
+        "ACKNOWLEDGMENTS",
+        "xv6 is inspired by John Lions's Commentary on UNIX 6th Edition (Peer",
+        "to Peer Communications; ISBN: 1-57398-013-7; 1st edition (June 14,",
+        "2000)). See also https://pdos.csail.mit.edu/6.828/, which",
+        "provides pointers to on-line resources for v6.",
+        "The following people have made contributions: Russ Cox (context switching,",
+        "locking), Cliff Frey (MP), Xiao Yu (MP), Nickolai Zeldovich, and Austin",
+        "Clements.",
+        "We are also grateful for the bug reports and patches contributed by",
+        "Silas Boyd-Wickizer, Anton Burtsev, Dan Cross, Cody Cutler, Mike CAT,",
+        "Tej Chajed, Asami Doi, eyalz800, , Nelson Elhage, Saar Ettinger, Alice",
+        "Ferrazzi, Nathaniel Filardo, Peter Froehlich, Yakir Goaron,Shivam",
+        "Handa, Bryan Henry, jaichenhengjie, Jim Huang, Alexander Kapshuk,",
+        "Anders Kaseorg, kehao95, Wolfgang Keller, Jonathan Kimmitt, Eddie",
+        "Kohler, Austin Liew, Imbar Marinescu, Yandong Mao, Matan Shabtay,",
+        "Hitoshi Mitake, Carmi Merimovich, Mark Morrissey, mtasm, Joel Nider,",
+        "Greg Price, Ayan Shafqat, Eldar Sehayek, Yongming Shen, Fumiya",
+        "Shigemitsu, Takahiro, Cam Tenny, tyfkda, Rafael Ubal, Warren Toomey,",
+        "Stephen Tu, Pablo Ventura, Xi Wang, Keiichi Watanabe, Nicolas",
+        "Wolovick, wxdao, Grant Wu, Jindong Zhang, Icenowy Zheng, and Zou Chang",
+        "Wei.",
+        "The code in the files that constitute xv6 is",
+        "Copyright 2006-2020 Frans Kaashoek, Robert Morris, and Russ Cox.",
+        "ERROR REPORTS",
+        "Please send errors and suggestions to Frans Kaashoek and Robert Morris",
+        "(kaashoek,rtm@mit.edu). The main purpose of xv6 is as a teaching",
+        "operating system for MIT's 6.S081, so we are more interested in",
+        "simplifications and clarifications than new features.",
+        "BUILDING AND RUNNING XV6",
+        "You will need a RISC-V \"newlib\" tool chain from",
+        "https://github.com/riscv/riscv-gnu-toolchain, and qemu compiled for",
+        "riscv64-softmmu. Once they are installed, and in your shell",
+        "search path, you can run \"make qemu\".",
+        "-> / $ QEMU: Terminated"
+      ]
+    }
+  ],
+  "errors": []
+}

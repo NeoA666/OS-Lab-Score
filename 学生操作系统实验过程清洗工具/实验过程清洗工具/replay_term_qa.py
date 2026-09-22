@@ -36,6 +36,8 @@ REPOSITORY_ROOT = CLEANING_DIR.parent
 sys.path.insert(0, str(CLEANING_DIR))
 from output_layout import (  # noqa: E402
     PROCESS_TOOL,
+    PERSON_VIEW,
+    README_TITLE as OUTPUT_LAYOUT_README_TITLE,
     ensure_layout,
     pair_matches,
     unlink_pair,
@@ -62,6 +64,15 @@ from timeline_reports import (                  # noqa: E402
     write_student_timeline,
     has_link_component,
     is_link_like,
+)
+from replay_parallel import (                   # noqa: E402
+    cleanup_cache,
+    default_worker_count,
+    input_file_snapshot,
+    input_file_state,
+    load_cache_entry,
+    normalize_workers,
+    run_recording_tasks,
 )
 
 
@@ -292,7 +303,12 @@ def timing_entries_cover_body(entries, body):
     )
 
 
-def read_term(out_path):
+def read_term_data(out_path):
+    """Read one compressed script recording once, retaining its header offset.
+
+    The offset is part of the evidence contract used by the recording cache.
+    ``read_term`` remains as the legacy five-value API below.
+    """
     with gzip.open(out_path, "rb") as f:
         raw = f.read()
     first, newline, remainder = raw.partition(b"\n")
@@ -304,7 +320,12 @@ def read_term(out_path):
     start = re.search(r"(?:Script started on|脚本启动于|脚本开始于)\s+(.+?)(?: \[|$)", header)
     cols = _header_dimension(header, "COLUMNS", 198)
     rows = _header_dimension(header, "LINES", 59)
-    return header, (start.group(1) if start else ""), cols, rows, body
+    return header, (start.group(1) if start else ""), cols, rows, body, (len(first) + 1 if has_header else 0)
+
+
+def read_term(out_path):
+    """Legacy five-value recording reader."""
+    return read_term_data(out_path)[:5]
 
 
 def infer_replay_columns(body, header_cols):
@@ -412,9 +433,8 @@ def iter_screen_diff_frames(out_path, tim_path, archive_clears=False):
             yield frame_no, elapsed, current, changed_rows, start, cols, rows
 
 
-def build_time_map(tim_path, body):
-    """根据 .tim 建立「累计字节数 -> 累计秒」的映射，返回按字节升序的两个数组。"""
-    entries = read_timing_entries(tim_path, body)
+def time_map_from_entries(entries):
+    """Build a byte-to-elapsed map from already validated timing entries."""
     if not entries:
         return None
     cum_b, cum_t = [], []
@@ -425,6 +445,14 @@ def build_time_map(tim_path, body):
         cum_b.append(int(b))
         cum_t.append(t)
     return cum_b, cum_t
+
+
+def build_time_map(tim_path, body):
+    """根据 .tim 建立「累计字节数 -> 累计秒」的映射，返回按字节升序的两个数组。"""
+    entries = read_timing_entries(tim_path, body)
+    if not entries:
+        return None
+    return time_map_from_entries(entries)
 
 
 def time_at(time_map, offset):
@@ -438,7 +466,11 @@ def time_at(time_map, offset):
     return cum_t[i]
 
 
-def extract_session(out_path, tim_path, *, source_data=None, evidence=None):
+_DEFAULT_TIME_MAP = object()
+
+
+def extract_session(out_path, tim_path, *, source_data=None, evidence=None,
+                    time_map=_DEFAULT_TIME_MAP):
     rec_id = os.path.basename(out_path)[:-len(".out.gz")]
     header, start, cols, rows, body = source_data if source_data is not None else read_term(out_path)
     raw_body = body
@@ -456,7 +488,8 @@ def extract_session(out_path, tim_path, *, source_data=None, evidence=None):
     if marker_ranges:
         body = re.sub(rb"\x1b\[20[01]~", b"", raw_body)
 
-    time_map = build_time_map(tim_path, raw_body)
+    if time_map is _DEFAULT_TIME_MAP:
+        time_map = build_time_map(tim_path, raw_body)
 
     def raw_offset(offset):
         index = bisect_right(clean_marker_starts, offset)
@@ -795,21 +828,32 @@ def extract_claude_session(out_path, tim_path, *, frame_source=None, evidence=No
     return rec_id, deduplicated
 
 
-def replay_full_terminal(out_path, tim_path):
-    """每对录像完整重放后导出连续文本，保留滚屏及清屏历史，不导出逐帧变化。"""
-    _, start, header_cols, rows, body = read_term(out_path)
+def replay_full_terminal_data(header, start, header_cols, rows, body, rec_id):
+    """Render a complete transcript from one in-memory byte stream.
+
+    Terminal state depends on byte order, not on the pauses recorded in a
+    ``.tim`` file. Feeding the complete stream therefore has the same final
+    transcript semantics as the historical frame loop without constructing a
+    snapshot for every timing record.
+    """
     cols = infer_replay_columns(body, header_cols)
-    final_lines = ()
-    for _, _, screen_lines, _, _, _, _ in iter_screen_diff_frames(
-        out_path, tim_path, archive_clears=True
-    ):
-        final_lines = screen_lines
-    lines = list(final_lines)
+    screen = TranscriptScreen(cols, rows)
+    ByteStream(screen).feed(body)
+    lines = list(screen.transcript_lines())
     # 仅去除固定屏幕高度造成的末尾填充空行，不使用 Claude QA 清洗规则。
     while lines and not lines[-1]:
         lines.pop()
-    return {"rec": Path(out_path).name[:-len(".out.gz")], "start": start,
+    return {"rec": rec_id, "start": start,
             "columns": cols, "rows": rows, "lines": lines}
+
+
+def replay_full_terminal(out_path, tim_path):
+    """每对录像完整重放后导出连续文本，保留滚屏及清屏历史，不导出逐帧变化。"""
+    header, start, header_cols, rows, body = read_term(out_path)
+    return replay_full_terminal_data(
+        header, start, header_cols, rows, body,
+        Path(out_path).name[:-len(".out.gz")],
+    )
 
 
 def append_fenced_text(md, lines):
@@ -831,6 +875,7 @@ REPORT_NAMES = ("terminal_qa_report.md", "full_terminal_transcript.md",
                 "command_statistics.md", "claude_qa_clean.md")
 OWNER_FILE = ".replay_term_qa.json"
 README_TITLE = "# 终端实验数据批处理说明"
+README_LINK_ROOT = "__replay_term_qa_root__"
 TIMELINE_DIAGNOSTICS_START = "<!-- replay_term_qa:timeline-diagnostics:start -->"
 TIMELINE_DIAGNOSTICS_END = "<!-- replay_term_qa:timeline-diagnostics:end -->"
 
@@ -843,7 +888,7 @@ README_UPDATE_NOTES = [
     "- 汇总报告和本次运行日志分别保存在根目录的 `汇总报告/` 与 `运行日志/`。",
     "- 分类依据是 Shell 提示符中的工作目录，支持 lab 的子目录。正文、命令参数或 Claude 回复中提到其他 lab，不改变分类。",
     "- 同一录像切换 lab 时按新提示符分段；`cd` 命令归入执行它时所在的目录，后续提示符显示目录变化后才切换分类，失败的 `cd` 不切换。",
-    "- Claude 问答按启动所在目录归类；返回同一 lab 后，同一录像的问答合并为一个 Session，Turn 连续编号。完整转写保留片段编号和原始字节区间，每个录像片段输出一次连续文本。",
+    "- Claude 问答按启动所在目录归类；返回同一 lab 后，同一录像的问答合并为一个 Session，Turn 连续编号。完整转写对每条录像只生成一次；跨 lab 时在有关分类中复用同一转写，并标注各自的原始字节区间。",
     "- 保留原有 Shell 提取、Claude Screen/diff 提取及 pyte 重放核心。各分类的命令数和轮次可以相加；跨分类录像及 Claude 会话在学生总计中按原录像去重。",
     "- 全部分类报告写入成功后，按同来源归属清单移除过时的程序报告；保留其他文件，不修改原始实验数据。",
     "",
@@ -910,7 +955,7 @@ def _stream_sha256(path):
     return digest.hexdigest()
 
 
-def _snapshot_file(path, relative):
+def _snapshot_file(path, relative, known_hashes=None):
     """Describe one input file for an incremental fingerprint.
 
     Missing timing or event-log files are valid input states. Symlinks and
@@ -927,15 +972,30 @@ def _snapshot_file(path, relative):
     if not path.is_file():
         record["state"] = "not_regular"
         return record, False
+    cached_hash = None
+    if known_hashes:
+        try:
+            known = known_hashes.get(str(path.resolve()))
+        except OSError:
+            known = None
+        if isinstance(known, dict):
+            # Reuse the scan hash only when the file is still the exact
+            # filesystem object observed by the recording task.  A later
+            # replacement must participate in the report/timeline snapshot.
+            if known.get("stable") and known.get("state") == input_file_state(path):
+                cached_hash = known.get("sha256")
+        elif isinstance(known, str):
+            # Compatibility for callers that built the old digest-only index.
+            cached_hash = known
     try:
-        record.update({"state": "file", "sha256": _stream_sha256(path)})
+        record.update({"state": "file", "sha256": cached_hash or _stream_sha256(path)})
     except OSError:
         record["state"] = "unreadable"
         return record, False
     return record, True
 
 
-def snapshot_student_inputs(source, include_timeline_log=False):
+def snapshot_student_inputs(source, include_timeline_log=False, known_hashes=None):
     """Build the deterministic, stage-specific input snapshot for one student.
 
     The report stage observes only term/*.out.gz plus each matching .tim.gz.
@@ -956,16 +1016,20 @@ def snapshot_student_inputs(source, include_timeline_log=False):
     else:
         recordings = sorted(term.glob("*.out.gz"), key=lambda item: item.name)
         for out in recordings:
-            out_entry, out_cacheable = _snapshot_file(out, out.relative_to(source).as_posix())
+            out_entry, out_cacheable = _snapshot_file(
+                out, out.relative_to(source).as_posix(), known_hashes,
+            )
             entries.append(out_entry)
             cacheable = cacheable and out_cacheable
             tim = out.with_name(out.name[:-len(".out.gz")] + ".tim.gz")
-            tim_entry, tim_cacheable = _snapshot_file(tim, tim.relative_to(source).as_posix())
+            tim_entry, tim_cacheable = _snapshot_file(
+                tim, tim.relative_to(source).as_posix(), known_hashes,
+            )
             entries.append(tim_entry)
             cacheable = cacheable and tim_cacheable
     if include_timeline_log:
         event_entry, event_cacheable = _snapshot_file(
-            source / "logs" / "events.jsonl", "logs/events.jsonl"
+            source / "logs" / "events.jsonl", "logs/events.jsonl", known_hashes,
         )
         entries.append(event_entry)
         cacheable = cacheable and event_cacheable
@@ -1009,7 +1073,10 @@ def _processor_signature(stage, paths):
 
 def report_processor_signature():
     return _processor_signature(
-        "reports", (Path(__file__).resolve(), CLEANING_DIR / "output_layout.py")
+        "reports", (
+            Path(__file__).resolve(), TOOL_DIR / "replay_engine.py",
+            CLEANING_DIR / "output_layout.py",
+        )
     )
 
 
@@ -1017,7 +1084,8 @@ def timeline_processor_signature():
     return _processor_signature(
         "timeline",
         (Path(__file__).resolve(), TOOL_DIR / "timeline_alignment.py",
-         TOOL_DIR / "timeline_reports.py", CLEANING_DIR / "output_layout.py"),
+         TOOL_DIR / "timeline_reports.py", TOOL_DIR / "replay_engine.py",
+         CLEANING_DIR / "output_layout.py"),
     )
 
 
@@ -1547,17 +1615,29 @@ def write_student_reports(info, files, commands, full_sessions, claude_sessions,
     if errors:
         report.extend(["## 三、处理异常", ""] + [f"- {markdown_text(e)}" for e in errors] + [""])
 
+    shared_full_recordings = any(s.get("full_recording") for s in full_sessions)
+    full_description = (
+        "每对 .out.gz + .tim.gz 只做一次 pyte 完整转写，保留滚屏及清屏历史，不执行 Claude 清洗。"
+        if shared_full_recordings else
+        "每对 .out.gz + .tim.gz 经 pyte 完整重放后输出连续文本，保留滚屏及清屏历史，不执行 Claude 清洗。"
+    )
+    cross_lab_description = (
+        "跨 lab 的录像在相关分类中复用同一整条转写，并标注本分类对应的原始字节区间；不会按 lab 再次重放。"
+        if shared_full_recordings else
+        "跨 lab 的录像仍按原有分类分段，每个片段输出一次完整重放结果，不展开逐帧变化或逐字符中间状态。"
+    )
     full = header("Full Terminal Transcript") + [f"- 终端录像总数：{len(files)}",
         f"- 成功重放数量：{len({s['rec'] for s in full_sessions if 'error' not in s} - {s['rec'] for s in full_sessions if 'error' in s})}",
         f"- 重放失败数量：{len({s['rec'] for s in full_sessions if 'error' in s})}", "",
-        "每对 .out.gz + .tim.gz 经 pyte 完整重放后输出连续文本，保留滚屏及清屏历史，不执行 Claude 清洗。",
-        "跨 lab 的录像仍按原有分类分段，每个片段输出一次完整重放结果，不展开逐帧变化或逐字符中间状态。", ""]
+        full_description, cross_lab_description, ""]
     for s in full_sessions:
         suffix = f" · 片段 {s['region']}" if 'region' in s else ""
         full.extend([f"## Session {s['rec']}{suffix}", ""])
         if 'begin' in s:
             full.extend([f"- 原录像字节区间：[ {s['begin']}, {s['end']} )",
                          f"- 分类依据目录：{markdown_text(s['cwd'])}", ""])
+        if s.get("full_recording"):
+            full.extend(["- 转写范围：整条录像；本分类仅以以上字节区间关联。", ""])
         if "error" in s:
             full.extend([f"- 失败文件：{markdown_text(s['file'])}",
                          f"- 错误原因：{markdown_text(s['error'])}", ""])
@@ -1729,6 +1809,338 @@ def process_student(info, incremental=None, overwrite=False):
         summary=_report_summary(result),
     )
     return result
+
+
+def recording_tasks_for_students(students, input_dir, cache_root, replay_mode):
+    """Build JSON/pickle-safe recording tasks without decompressing inputs.
+
+    ``source_relative`` remains the auditable input-root-relative recording ID.
+    ``cache_identity`` deliberately excludes a submission-directory timestamp:
+    a later full submission from the same student can reuse an unchanged
+    recording after its gzip-pair hashes have been validated.
+    """
+    input_dir = Path(input_dir).resolve()
+    cache_root = str(Path(cache_root))
+    tasks = []
+    for info in students:
+        source = Path(info["source"])
+        term = source / "term"
+        student_identity = str(info.get("student_id") or "").strip()
+        if not student_identity or student_identity == "未知":
+            student_identity = "name:" + str(
+                info.get("name") or info.get("source_name") or source.name
+            ).strip()
+        for out in term_recordings(term):
+            rec = out.name[:-len(".out.gz")]
+            tim = out.with_name(rec + ".tim.gz")
+            timing_state = "file"
+            timing_issue = None
+            if has_link_component(tim):
+                timing_state = "unsafe_link"
+                timing_issue = "timing_unsafe_link"
+                task_tim_path = ""
+            elif not tim.exists():
+                timing_state = "missing"
+                task_tim_path = str(tim)
+            elif not tim.is_file():
+                timing_state = "not_regular"
+                timing_issue = "timing_not_regular"
+                task_tim_path = ""
+            else:
+                task_tim_path = str(tim)
+            out_snapshot = input_file_snapshot(out)
+            tim_snapshot = input_file_snapshot(task_tim_path)
+            out_is_regular = out_snapshot["state"].get("state") == "file"
+            # Reconcile the directory scan with the actual file snapshot. A
+            # timing path can change between those two operations; never pass
+            # a newly linked or non-regular path to the analyzer.
+            if timing_issue is None:
+                tim_input_state = tim_snapshot["state"].get("state")
+                if tim_input_state == "file":
+                    timing_state = "file"
+                elif tim_input_state == "missing":
+                    timing_state = "missing"
+                elif tim_input_state == "unsafe_link":
+                    timing_state = "unsafe_link"
+                    timing_issue = "timing_unsafe_link"
+                    task_tim_path = ""
+                    tim_snapshot = input_file_snapshot(task_tim_path)
+                elif tim_input_state == "not_regular":
+                    timing_state = "not_regular"
+                    timing_issue = "timing_not_regular"
+                    task_tim_path = ""
+                    tim_snapshot = input_file_snapshot(task_tim_path)
+                else:
+                    timing_state = str(tim_input_state or "unreadable")
+                    timing_issue = "timing_unreadable"
+                    task_tim_path = ""
+                    tim_snapshot = input_file_snapshot(task_tim_path)
+            try:
+                out_size = out.stat().st_size
+            except OSError:
+                out_size = 0
+            try:
+                tim_size = tim.stat().st_size if timing_state == "file" else 0
+            except OSError:
+                tim_size = 0
+            try:
+                source_relative = out.resolve().relative_to(input_dir).as_posix().removesuffix(".out.gz")
+            except ValueError:
+                source_relative = (Path(info.get("source_reference", source.name)) / "term" / rec).as_posix()
+            try:
+                out_relative = out.relative_to(source).as_posix()
+            except ValueError:
+                out_relative = (Path("term") / out.name).as_posix()
+            tasks.append({
+                "recording_id": source_relative,
+                "recording_name": rec,
+                "source_relative": source_relative,
+                "out_relative": out_relative,
+                "tim_relative": (Path("term") / tim.name).as_posix(),
+                "out_path": str(out),
+                "tim_path": task_tim_path,
+                "cache_root": cache_root,
+                "replay_mode": replay_mode,
+                "cache_identity": f"student:{student_identity}/recording:{rec}",
+                "timing_state": timing_state,
+                "timing_issue": timing_issue,
+                "source_root_relative": input_dir.name,
+                "student_key": f"{info.get('student_id', '')}:{info.get('source_name', source.name)}",
+                "student_source": str(source.resolve()),
+                "file_size": out_size,
+                "timing_cost": tim_size,
+                "input_hashes": {
+                    "out": out_snapshot["sha256"],
+                    "tim": tim_snapshot["sha256"],
+                },
+                "input_states": {
+                    "out": out_snapshot["state"],
+                    "tim": tim_snapshot["state"],
+                },
+                "input_stable": bool(
+                    out_is_regular and out_snapshot["stable"] and tim_snapshot["stable"]
+                ),
+            })
+    return tasks
+
+
+def recording_input_hash_index(tasks):
+    """Index task hashes so both stage snapshots reuse the source scan."""
+    index = {}
+    for task in tasks:
+        hashes = task.get("input_hashes") if isinstance(task, dict) else None
+        if not isinstance(hashes, dict):
+            continue
+        for kind, path_key in (("out", "out_path"), ("tim", "tim_path")):
+            digest = hashes.get(kind)
+            path = task.get(path_key)
+            if not digest or not path:
+                continue
+            try:
+                states = task.get("input_states")
+                state = states.get(kind) if isinstance(states, dict) else None
+                index[str(Path(path).resolve())] = {
+                    "sha256": str(digest),
+                    "state": state,
+                    "stable": bool(task.get("input_stable", False)),
+                }
+            except OSError:
+                continue
+    return index
+
+
+def _normalized_recording_spec(value):
+    value = str(value or "").strip().replace("\\", "/")
+    if value.endswith(".out.gz"):
+        value = value[:-len(".out.gz")]
+    return value.lstrip("./")
+
+
+def select_exact_recordings(tasks, requested):
+    """Resolve explicit IDs; a bare stem must be unique in the selected scope."""
+    selected = set()
+    canonical = {str(task["recording_id"]): task for task in tasks}
+    for raw in requested or ():
+        spec = _normalized_recording_spec(raw)
+        if not spec:
+            raise ValueError("--exact-recording 不能为空")
+        direct = canonical.get(spec)
+        if direct is not None:
+            selected.add(direct["recording_id"])
+            continue
+        matches = [
+            task for task in tasks
+            if str(task.get("recording_name") or "") == spec
+        ]
+        if not matches:
+            raise ValueError(f"未找到 --exact-recording：{raw}")
+        if len(matches) > 1:
+            choices = ", ".join(sorted(str(task["recording_id"]) for task in matches))
+            raise ValueError(
+                f"--exact-recording {raw} 不唯一，请使用输入根相对录像 ID：{choices}"
+            )
+        selected.add(matches[0]["recording_id"])
+    return selected
+
+
+def process_student_recordings(info, recordings, incremental=None, overwrite=False):
+    """Write report artifacts from already analyzed recording cache entries."""
+    term = Path(info["source"]) / "term"
+    if not term.is_dir() or is_link_like(term):
+        return {"status": "失败", "info": info, "errors": [f"{term}：缺少 term/ 或为符号链接"]}
+    if not recordings:
+        return {
+            "status": "失败", "info": info,
+            "errors": [f"{term}：未发现可处理的 *.out.gz 录像，不生成空报告"],
+            "recordings": 0, "commands": 0, "claude_sessions": 0,
+            "turns": 0, "replay_failed": 0, "labs": {},
+        }
+    buckets, errors, failed_recordings = {}, [], set()
+    claude_recordings = set()
+    stage_failed = False
+
+    def bucket(lab):
+        return buckets.setdefault(lab, new_lab_bucket())
+
+    for recording in recordings:
+        rec = str(recording.get("recording_name") or recording.get("recording_id") or "未知录像")
+        relative = recording.get("out_relative") or f"term/{rec}.out.gz"
+        file_path = Path(info["source"]) / Path(str(relative))
+        if recording.get("status") == "error":
+            message = f"{rec} [录像分析] {recording.get('error', '未知错误')}"
+            errors.append(message)
+            failed_recordings.add(rec)
+            stage_failed = True
+            group = bucket("other")
+            group["files"].add(file_path)
+            group["errors"].append(message)
+            group["full"].append({"rec": rec, "file": str(file_path), "error": message})
+            continue
+
+        regions = list(recording.get("lab_regions") or []) or [
+            {"lab": "other", "begin": 0, "end": int(recording.get("body_bytes") or 0), "cwd": "未知"}
+        ]
+        for issue in recording.get("issues") or []:
+            message = f"{rec}: {issue}"
+            errors.append(message)
+            for region in regions:
+                group = bucket(region.get("lab", "other"))
+                if message not in group["errors"]:
+                    group["errors"].append(message)
+        for region_number, region in enumerate(regions, 1):
+            lab = region.get("lab") if region.get("lab") in LAB_KEYS else "other"
+            group = bucket(lab)
+            group["files"].add(file_path)
+            transcript = recording.get("transcript")
+            if isinstance(transcript, dict):
+                session = dict(transcript)
+                session.update({
+                    "rec": rec,
+                    "region": region_number,
+                    "begin": region.get("begin", 0),
+                    "end": region.get("end", recording.get("body_bytes", 0)),
+                    "cwd": region.get("cwd", "未知"),
+                    "full_recording": True,
+                })
+                group["full"].append(session)
+        command_error = recording.get("command_error")
+        if command_error:
+            message = f"{rec} [Shell 提取] {command_error}"
+            errors.append(message)
+            stage_failed = True
+            for region in regions:
+                bucket(region.get("lab") if region.get("lab") in LAB_KEYS else "other")["errors"].append(message)
+        else:
+            for command in recording.get("commands") or []:
+                if not isinstance(command, dict):
+                    continue
+                command = dict(command)
+                command["rec"] = rec
+                group = bucket(lab_from_cwd(command.get("cwd", "")))
+                group["files"].add(file_path)
+                group["commands"].append(command)
+            for group in buckets.values():
+                if file_path in group["files"]:
+                    group["shell_success"].add(rec)
+        for pair in recording.get("claude_pairs") or []:
+            if not isinstance(pair, dict) or not pair.get("user") or not pair.get("claude"):
+                continue
+            lab = pair.get("lab") if pair.get("lab") in LAB_KEYS else "other"
+            session = bucket(lab)["claude"].setdefault(
+                rec, {"rec": rec, "start": (recording.get("header") or {}).get("start_text", ""), "pairs": []}
+            )
+            session["pairs"].append({"user": pair["user"], "claude": pair["claude"]})
+            claude_recordings.add(rec)
+        if recording.get("status") == "partial":
+            stage_failed = True
+            failed_recordings.add(rec)
+    if not buckets:
+        bucket("other")
+    paths = [path for lab in LAB_KEYS if lab in buckets for path in lab_report_paths(lab)]
+    validate_student_report_targets(info, paths, overwrite=overwrite)
+    per_lab = {}
+    for lab in LAB_KEYS:
+        if lab not in buckets:
+            continue
+        group = buckets[lab]
+        per_lab[lab] = write_student_reports(
+            info, group["files"], group["commands"], group["full"],
+            list(group["claude"].values()), group["errors"],
+            len(group["shell_success"]), lab,
+        )
+    result = {
+        "status": "部分失败" if stage_failed else "成功",
+        "info": info,
+        "errors": errors,
+        "recordings": len(recordings),
+        "commands": sum(item["commands"] for item in per_lab.values()),
+        "claude_sessions": len(claude_recordings),
+        "turns": sum(item["turns"] for item in per_lab.values()),
+        "replay_failed": len(failed_recordings),
+        "labs": per_lab,
+    }
+    finish_student_reports(
+        info, paths,
+        stage_status="partial" if stage_failed else "complete",
+        incremental=incremental,
+        summary=_report_summary(result),
+    )
+    return result
+
+
+def hydrate_recording_results(tasks, statuses, cache_root, analyzer_signature):
+    """Load successful worker results in stable task order for report writers.
+
+    Workers return only compact status records.  This parent-side hydration
+    keeps large terminal-derived objects out of process pipes and overlays the
+    current submission paths on a cache entry reused from an earlier upload.
+    """
+    by_student = {}
+    if len(tasks) != len(statuses):
+        raise ValueError("录像任务状态数量与任务数量不一致")
+    for task, status in zip(tasks, statuses):
+        task = dict(task)
+        status = dict(status or {})
+        entry = None
+        if status.get("status") != "error":
+            entry = load_cache_entry(cache_root, task, analyzer_signature)
+        if entry is None:
+            entry = {
+                "status": "error",
+                "error": status.get("error") or "录像分析完成后未找到有效缓存结果",
+            }
+        else:
+            entry = dict(entry)
+        # The same gzip pair may have come from an earlier full submission.
+        # Formal reports must nevertheless point at the input selected now.
+        for key in ("recording_id", "recording_name", "source_relative",
+                    "out_relative", "tim_relative"):
+            if key in task:
+                entry[key] = task[key]
+        entry["cache_hit"] = bool(status.get("cache_hit"))
+        entry["cache_status"] = status.get("status")
+        by_student.setdefault(str(task.get("student_source") or ""), []).append(entry)
+    return by_student
 
 
 def _report_stage_label(result):
@@ -1915,9 +2327,10 @@ def write_readme(output_dir, input_dir, results, skipped, timeline_results=(), m
           "│   ├── 终端对话记录.md", "│   ├── 完整终端转写记录.md", "│   ├── 终端命令统计.md",
           "│   ├── Claude对话记录.md", "│   ├── 实验过程时间线.json", "│   └── 实验过程时间线.md",
           "├── 按Lab分类/lab0/刘梓宸/实验过程清洗工具/", "├── 汇总报告/实验过程清洗汇总.md",
-          "├── 运行日志/实验过程清洗工具.log", "└── README.md", "```", "",
+          "├── 运行日志/实验过程清洗工具.log", "├── .replay-cache/", "└── README.md", "```", "",
           "仅为实际出现的 lab0–lab8 分类生成报告；非实验目录、无法识别目录及失败录像归入 `other`（其他）。",
           "每个分类均生成四份报告及两份时间线文件，即使某类中没有 Shell 命令或有效 Claude 对话。没有 `*.out.gz` 录像的 term 目录会记录为失败且不生成空报告。",
+          "`.replay-cache/` 是录像级派生缓存，不属于正式报告。缓存以稳定的学生身份和录像名定位，并以 `.out.gz`、`.tim.gz` 哈希和分析器签名复核；同一学生的后续全量提交即使目录名变化，未变录像也可直接复用。", "",
           "## Lab 分类原则", "",
           "只根据 Shell 提示符的工作目录匹配完整路径段，例如 `~/lab0`、`/home/user/lab1/kernel`。"
           "`lab10`、`lab0-copy` 不属于 lab0–lab8；命令参数或对话正文提到 lab 不用于分类。",
@@ -1925,7 +2338,7 @@ def write_readme(output_dir, input_dir, results, skipped, timeline_results=(), m
           "`cd ../lab1` 命令属于执行它时所在的目录，之后的新提示符及命令归入 lab1；失败的 cd 不改变分类。",
           "Claude 对话沿用启动时所在的 Shell 工作目录；Claude 内部文本中的其他路径不会改变归属。"
           "首个提示符之前的启动内容归入首个提示符目录；完全没有可识别提示符时归入 other。",
-          "跨 lab 录像的完整转写按片段保留，标明原始字节区间。每对录像数据完整重放后输出连续文本；跨 lab 时各片段独立重放并分别输出，不展开 Frame 或逐字符变化。",
+          "跨 lab 录像的完整转写会标明各分类的原始字节区间。每对录像数据只完整转写一次；跨 lab 时在有关分类中复用同一连续文本，不展开 Frame 或逐字符变化。",
           "每个分类内，同一录像的有效 Claude 问答合并为一个 Session，Turn 连续编号。"
           "学生/根目录的录像数和 Claude 会话数按原录像去重，不能直接相加各 lab 会话数；命令数和轮次可相加。", "",
           "| 文件 | 内容 |", "| --- | --- |",
@@ -1952,6 +2365,7 @@ def write_readme(output_dir, input_dir, results, skipped, timeline_results=(), m
           "无归属的既有目录默认另选名称；`--overwrite` 可允许覆盖此类目录中的分类报告，仍禁止覆盖已标记为其他来源的结果。"
           "分类报告全部写入成功后，仅清理同来源归属清单中已过时的旧版报告。原始数据和其他文件不变。每个文件单独原子替换，整个学生目录不是跨文件事务。",
           "默认运行会为每位学生分别检查报告和时间线输入指纹；输入、处理器代码、登记产物及其哈希都未变化时显示“增量跳过”，并从清单恢复本次总览统计。`--force` 可忽略该判断并重建当前选中的阶段。",
+          "录像缓存按能力复用：hybrid 缓存可升级为 exact，exact 结果可供后续 hybrid 使用；修改一对录像文件时只重放该录像。`events.jsonl` 变化只重建日志佐证和时间线汇总。当前粒度是整条录像，不在同一持续增长的 `.out.gz` 内建立帧级检查点。",
           "无效学生目录会跳过；缺少、为空或为符号链接/junction 的 term 目录属于该学生的失败，不生成空报告或时间线，且不会中断其余处理。"
           "缺少、不可读、含非法值或未覆盖完整录像的 timing 文件会降级一次性重放，不记录相对时间。重放失败记录在完整转写中，全部异常还列于本页。"
           "Shell 提取失败的录像单独计数，不计入“无 Shell 命令”会话。", "",
@@ -1962,11 +2376,16 @@ def write_readme(output_dir, input_dir, results, skipped, timeline_results=(), m
           'python3 replay_term_qa.py "../操作系统实验数据记录" --student 2306010113',
           'python3 replay_term_qa.py "../操作系统实验数据记录" --student "刘梓宸" --overwrite',
           'python3 replay_term_qa.py "../操作系统实验数据记录" --student 2306010113 --force',
+          'python3 replay_term_qa.py "../操作系统实验数据记录" --replay-mode exact --workers 12',
+          'python3 replay_term_qa.py "../操作系统实验数据记录" --exact-recording 2306010113-刘梓宸-20260911-2046/term/20260911T120000-1234',
           'python3 replay_term_qa.py "../操作系统实验数据记录/2306010113-刘梓宸-20260911-2046"',
           "python3 replay_term_qa.py --help", "```", "",
           "| 参数 | 说明 |", "| --- | --- |", "| input_dir | 可选；默认本脚本上级目录的操作系统实验数据记录 |",
           "| --output / -o | 输出根目录，禁止与输入目录重叠 |", "| --student | 精确匹配学号或姓名；无匹配时参数错误 |",
           "| --overwrite | 允许覆盖无归属目录中已有的分类报告 |", "| --force | 忽略当前所选学生和阶段的增量命中，强制完整重建 |",
+          "| --replay-mode | `hybrid`（默认）只逐帧复核候选/异常录像；`exact` 对选中范围全部逐帧复核 |",
+          "| --workers | 录像分析进程数；默认 `min(12, 可用 CPU 核数)` |",
+          "| --exact-recording | hybrid 批次中指定一条录像逐帧复核；可重复，使用输入根相对 ID 或唯一文件名 |",
           "| --timeline-only | 只刷新时间线，并替换根 README 的时间线说明块 |", "| --no-timeline | 只重建四类报告，保留既有时间线产物和说明块 |", "",
           "存在学生/录像失败时退出码为 1；参数或根目录错误为 2；其余为 0。", "",
           "## 已知限制", "",
@@ -1974,6 +2393,7 @@ def write_readme(output_dir, input_dir, results, skipped, timeline_results=(), m
           "- 提示符识别支持标准彩色或行首普通 `user@host:cwd$`/`#` 形式；自定义 PS1、PowerShell 或没有目录信息的提示符可能无法识别。",
           "- TUI 格式发生较大版本变化时可能需要更新过滤规则；终端录像无法提供可靠的结构化消息边界。",
           "- 完整转写保留最终屏幕、滚屏及清屏历史；被原地重绘覆盖且未进入历史的瞬时字符（如 spinner 和流式中间状态）不单独导出。",
+          "- 缓存断点位于录像边界。若采集器持续追加同一个 `.out.gz`/`.tim.gz`，该对文件的内容哈希会变化并整条重放；拆分为独立录像后，之前的录像可完全跳过。",
           "- 时间优先保留 script 头部的原始时区；学生目录采集时间本身不包含时区。", "",
           "## 本次运行汇总", "", f"- 输入目录：{markdown_text(input_dir)}",
           f"- 报告阶段学生数：{len(results)}",
@@ -1999,7 +2419,7 @@ def write_readme(output_dir, input_dir, results, skipped, timeline_results=(), m
         timeline = row.get("timeline")
         links = []
         for lab in (report or {}).get("labs", {}):
-            relative = Path(info["output"].name) / lab_report_paths(lab)[0]
+            relative = Path(README_LINK_ROOT) / PERSON_VIEW / info["output"].name / lab_report_paths(lab)[0]
             links.append(f"[{lab if lab != 'other' else '其他'}]({quote(relative.as_posix())})")
         output = " / ".join(links) or "—"
         report_stage = missing["report_stage"] if missing else (
@@ -2036,7 +2456,13 @@ def write_readme(output_dir, input_dir, results, skipped, timeline_results=(), m
     text = "\n".join(md) + "\n"
     if preserved_timeline_block:
         text = text.rstrip("\n") + "\n\n" + preserved_timeline_block.rstrip("\n") + "\n"
-    atomic_write(output_dir / "汇总报告" / "实验过程清洗汇总.md", text)
+    # The root README is the navigational entry point of the paired layout.
+    # Keep the historical report-directory copy for existing links and
+    # operators who consume the per-run summary from that location.
+    root_text = text.replace(README_LINK_ROOT + "/", "")
+    summary_text = text.replace(README_LINK_ROOT + "/", "../")
+    atomic_write(output_dir / "README.md", root_text)
+    atomic_write(output_dir / "汇总报告" / "实验过程清洗汇总.md", summary_text)
 
 
 def _main(argv=None, log_state=None):
@@ -2047,12 +2473,22 @@ def _main(argv=None, log_state=None):
     parser.add_argument("--overwrite", action="store_true", help="允许覆盖无归属输出目录中的固定程序产物，不删除其他文件")
     parser.add_argument("--student", help="只处理精确匹配的学号或姓名；无匹配时参数错误")
     parser.add_argument("--force", action="store_true", help="忽略增量命中，强制重建当前选中的阶段")
+    parser.add_argument("--replay-mode", choices=("hybrid", "exact"), default="hybrid",
+                        help="录像重放策略：hybrid 仅对候选/异常录像逐帧，exact 对选中范围全部逐帧")
+    parser.add_argument("--workers", type=int, default=default_worker_count(),
+                        help=f"录像分析进程数，默认 min(12, 可用 CPU 核数) = {default_worker_count()}")
+    parser.add_argument("--exact-recording", action="append", default=[], metavar="录像ID",
+                        help="在 hybrid 批次中对指定录像逐帧复核；可重复，使用输入根相对 ID 或唯一文件名")
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--timeline-only", action="store_true",
                       help="只生成实验过程时间线并更新根 README 的时间线说明块，不重建原有四类报告")
     mode.add_argument("--no-timeline", action="store_true",
                       help="只生成原有四类报告，不生成实验过程时间线")
     args = parser.parse_args(argv)
+    try:
+        workers = normalize_workers(args.workers)
+    except ValueError as exc:
+        parser.error(str(exc))
     run_reports = not args.timeline_only
     run_timeline = not args.no_timeline
     report_signature = report_processor_signature() if run_reports else None
@@ -2078,8 +2514,10 @@ def _main(argv=None, log_state=None):
         parser.error(f"未找到匹配 --student 的学生：{args.student}")
     try:
         output_dir.mkdir(parents=True, exist_ok=True)
-        readme = output_dir / "汇总报告" / "实验过程清洗汇总.md"
-        if readme.exists() and not args.overwrite and not readme.read_text(encoding="utf-8").startswith(README_TITLE):
+        readme = output_dir / "README.md"
+        if (readme.exists() and not args.overwrite
+                and not readme.read_text(encoding="utf-8").startswith(
+                    (README_TITLE, OUTPUT_LAYOUT_README_TITLE))):
             parser.error(f"输出目录已有其他 README.md，请选择其他 --output 或显式使用 --overwrite：{readme}")
         ensure_layout(output_dir)
         if log_state is not None:
@@ -2088,34 +2526,157 @@ def _main(argv=None, log_state=None):
     except (OSError, ValueError) as exc:
         parser.error(str(exc))
     preserved_timeline_block = existing_timeline_readme_block(readme) if args.no_timeline else None
+
+    # Cache analysis is deliberately independent of the student-level output
+    # manifests.  A full resubmission can therefore rebuild its reports from
+    # recording cache entries without replaying unchanged terminal streams.
+    from replay_engine import analyzer_signature
+
+    recording_signature = analyzer_signature()
+    cache_root = output_dir / ".replay-cache"
+    if has_link_component(cache_root):
+        parser.error(f"录像缓存目录不得为符号链接或 junction：{cache_root}")
+    # Do not hash every student's gzip pair for a filtered run.  A full scan
+    # is the only operation allowed to clean cache entries outside its scope.
+    task_students = students if not args.student else selected
+    all_tasks = recording_tasks_for_students(
+        task_students, input_dir, cache_root, args.replay_mode,
+    )
+    known_input_hashes = recording_input_hash_index(all_tasks)
+    selected_tasks = list(all_tasks)
+    try:
+        exact_recordings = select_exact_recordings(selected_tasks, args.exact_recording)
+    except ValueError as exc:
+        parser.error(str(exc))
+    for task in selected_tasks:
+        task["need_exact"] = task["recording_id"] in exact_recordings
+
+    # A hash captured while a recording was changing is not an audit-safe
+    # input snapshot.  Force that student's stages through the recording
+    # scheduler so it records a structured diagnostic instead of silently
+    # reusing an older student-level report manifest.
+    unstable_sources = {
+        task["student_source"] for task in selected_tasks
+        if not task.get("input_stable", True)
+    }
+
+    # A filtered request is not a complete source scan, so it must not evict
+    # cache entries belonging to students outside the selected scope.
+    if not args.student:
+        removed_cache_entries = cleanup_cache(
+            cache_root, all_tasks, analyzer_signature=recording_signature,
+        )
+        if removed_cache_entries:
+            print(f"[缓存] 清理 {len(removed_cache_entries)} 个过期录像条目", flush=True)
+
+    tasks_by_source = {}
+    for task in selected_tasks:
+        tasks_by_source.setdefault(task["student_source"], []).append(task)
+    exact_sources = {
+        task["student_source"] for task in selected_tasks
+        if args.replay_mode == "exact" or task.get("need_exact")
+    }
+    report_plans = {}
+    timeline_plans = {}
+    sources_needing_recordings = set()
+    for info in selected:
+        source_key = str(Path(info["source"]).resolve())
+        has_recordings = bool(tasks_by_source.get(source_key))
+        if run_reports:
+            snapshot = snapshot_student_inputs(
+                info["source"], known_hashes=known_input_hashes,
+            )
+            incremental = {
+                "fingerprint": snapshot["fingerprint"],
+                "processor_signature": report_signature,
+            }
+            cached = None
+            if (not args.force and source_key not in exact_sources
+                    and source_key not in unstable_sources and has_recordings):
+                cached = report_cache_hit(info, snapshot, report_signature)
+            report_plans[source_key] = {
+                "cached": cached, "incremental": incremental,
+                "has_recordings": has_recordings,
+            }
+            if has_recordings and cached is None:
+                sources_needing_recordings.add(source_key)
+        if run_timeline:
+            snapshot = snapshot_student_inputs(
+                info["source"], include_timeline_log=True,
+                known_hashes=known_input_hashes,
+            )
+            incremental = {
+                "fingerprint": snapshot["fingerprint"],
+                "processor_signature": timeline_signature,
+            }
+            cached = None
+            if (not args.force and source_key not in exact_sources
+                    and source_key not in unstable_sources and has_recordings):
+                cached = timeline_cache_hit(info, snapshot, timeline_signature)
+            timeline_plans[source_key] = {
+                "cached": cached, "incremental": incremental,
+                "has_recordings": has_recordings,
+            }
+            if has_recordings and cached is None:
+                sources_needing_recordings.add(source_key)
+
+    analysis_tasks = [
+        task for task in selected_tasks
+        if task["student_source"] in sources_needing_recordings
+        or task.get("need_exact")
+        or args.replay_mode == "exact"
+    ]
+    recordings_by_student = {}
+    if analysis_tasks:
+        print(f"[录像缓存] {len(analysis_tasks)} 条任务，{workers} 个进程，模式 {args.replay_mode}", flush=True)
+        statuses = run_recording_tasks(
+            analysis_tasks,
+            workers=workers,
+            analyzer="replay_engine:analyze_recording",
+            analyzer_signature=recording_signature,
+            cache_root=cache_root,
+            force=args.force,
+        )
+        recordings_by_student = hydrate_recording_results(
+            analysis_tasks, statuses, cache_root, recording_signature,
+        )
+        completed = sum(status.get("status") == "completed" for status in statuses)
+        cache_hits = sum(bool(status.get("cache_hit")) for status in statuses)
+        failed = sum(status.get("status") == "error" for status in statuses)
+        print(f"[录像缓存] 新分析 {completed} 条，复用 {cache_hits} 条，失败 {failed} 条", flush=True)
+
     results = []
     timeline_results = []
     timeline_failed = False
     for i, info in enumerate(selected, 1):
         print(f"[学生 {i}/{len(selected)}] {info['name']}（{info['student_id']}）", flush=True)
-        has_recordings = bool(term_recordings(Path(info["source"]) / "term"))
+        source_key = str(Path(info["source"]).resolve())
+        report_plan = report_plans.get(source_key, {})
+        timeline_plan = timeline_plans.get(source_key, {})
+        has_recordings = bool(tasks_by_source.get(source_key))
         if run_reports:
-            report_snapshot = snapshot_student_inputs(info["source"])
-            report_incremental = {
-                "fingerprint": report_snapshot["fingerprint"],
-                "processor_signature": report_signature,
-            }
-            result = None if args.force or not has_recordings else report_cache_hit(
-                info, report_snapshot, report_signature
-            )
+            result = report_plan.get("cached")
             if result is not None:
                 print("  [报告] 增量跳过（输入及产物未变）", flush=True)
             else:
-                info["_report_incremental"] = report_incremental
                 try:
                     if has_recordings:
                         mark_report_rebuild(info)
-                    result = process_student(info, overwrite=True) if args.overwrite else process_student(info)
+                        result = process_student_recordings(
+                            info, recordings_by_student.get(source_key, []),
+                            incremental=report_plan.get("incremental"),
+                            overwrite=args.overwrite,
+                        )
+                    else:
+                        result = {
+                            "status": "失败", "info": info,
+                            "errors": [f"{Path(info['source']) / 'term'}：未发现可处理的 *.out.gz 录像，不生成空报告"],
+                            "recordings": 0, "commands": 0, "claude_sessions": 0,
+                            "turns": 0, "replay_failed": 0, "labs": {},
+                        }
                 except Exception as exc:
                     result = {"status": "失败", "info": info,
                               "errors": [f"{info.get('source_reference', info['source'])}：{type(exc).__name__}: {exc}"]}
-                finally:
-                    info.pop("_report_incremental", None)
                 if not has_recordings:
                     try:
                         remove_student_reports(info)
@@ -2149,23 +2710,18 @@ def _main(argv=None, log_state=None):
                 }, "errors": timeline_errors}
                 print(f"  [时间线失败] {message}", file=sys.stderr, flush=True)
             else:
-                timeline_snapshot = snapshot_student_inputs(info["source"], include_timeline_log=True)
-                timeline_incremental = {
-                    "fingerprint": timeline_snapshot["fingerprint"],
-                    "processor_signature": timeline_signature,
-                }
-                timeline_result = None if args.force else timeline_cache_hit(
-                    info, timeline_snapshot, timeline_signature
-                )
+                timeline_result = timeline_plan.get("cached")
                 if timeline_result is not None:
                     print("  [时间线] 增量跳过（输入及产物未变）", flush=True)
                 else:
                     try:
                         mark_timeline_rebuild(info, allow_invalid_manifest_recovery=args.force)
-                        from timeline_alignment import build_student_timeline
-                        aligned = build_student_timeline(info)
+                        from timeline_alignment import build_student_timeline_from_recordings
+                        aligned = build_student_timeline_from_recordings(
+                            info, recordings_by_student.get(source_key, []),
+                        )
                         timeline_result = write_student_timeline(
-                            info, aligned, incremental=timeline_incremental
+                            info, aligned, incremental=timeline_plan.get("incremental")
                         )
                         timeline_result["info"] = info
                     except Exception as exc:

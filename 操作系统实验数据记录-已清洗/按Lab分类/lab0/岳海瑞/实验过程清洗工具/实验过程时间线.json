@@ -1,0 +1,841 @@
+{
+  "schema_version": 2,
+  "student": {
+    "student_id": "2406080122",
+    "name": "岳海瑞",
+    "source": "操作系统实验数据记录/2406080122-岳海瑞-20260915-1318"
+  },
+  "lab": "lab0",
+  "status": "complete",
+  "summary": {
+    "events": 11,
+    "terminal_screen_events": 8,
+    "collection_log_events": 3,
+    "absolute_time_events": 8,
+    "relative_time_only_events": 0,
+    "missing_time_events": 0,
+    "collection_log_time_events": 3,
+    "uncertain_events": 3,
+    "errors": 0,
+    "by_type": {
+      "collection_log_evidence": 3,
+      "shell_command_observed": 8
+    },
+    "recording_failures": 0,
+    "processing_failures": 0
+  },
+  "statistics": {
+    "events": 11,
+    "terminal_screen_events": 8,
+    "collection_log_events": 3,
+    "absolute_time_events": 8,
+    "relative_time_only_events": 0,
+    "missing_time_events": 0,
+    "collection_log_time_events": 3,
+    "uncertain_events": 3,
+    "errors": 0,
+    "by_type": {
+      "collection_log_evidence": 3,
+      "shell_command_observed": 8
+    },
+    "recording_failures": 0,
+    "processing_failures": 0
+  },
+  "student_recordings": 3,
+  "recording_details": [
+    {
+      "recording_id": "20260915T131453-9575",
+      "out": "term/20260915T131453-9575.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/4"
+        ],
+        "shell_pid": []
+      },
+      "events": 0
+    },
+    {
+      "recording_id": "20260915T131542-10235",
+      "out": "term/20260915T131542-10235.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/4"
+        ],
+        "shell_pid": []
+      },
+      "events": 2
+    },
+    {
+      "recording_id": "20260915T131645-11001",
+      "out": "term/20260915T131645-11001.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/4"
+        ],
+        "shell_pid": []
+      },
+      "events": 8
+    }
+  ],
+  "events": [
+    {
+      "event_id": "94a5b925cfa9:log:000000003",
+      "student": {
+        "student_id": "2406080122",
+        "name": "岳海瑞"
+      },
+      "lab": "lab0",
+      "cwd": "/home/yyy/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"bash 登记实验.sh\",\"cwd\":\"/home/yyy/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789449294,\"h\":\"3a99548fe9f959f2098e89f0500464385b41004cfdf79882fe88405f806eeb5e\",\"name\":\"岳海瑞\",\"prev\":\"bab48f1d69fb4f0240ba903ea50728ce8d320b243dca262e8d8e503e31446f54\",\"rc\":0,\"run\":\"20260915T131403-3510\",\"sid\":\"2406080122\",\"ts\":\"2026-09-15T13:14:54+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-15T13:14:54+08:00",
+      "logged_at": "2026-09-15T13:14:54+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 3,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-15T13:14:54+08:00",
+          "epoch": 1789449294,
+          "resolved_at": "2026-09-15T13:14:54+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-15T13:14:54+08:00",
+          "epoch": 1789449294,
+          "run": "20260915T131403-3510",
+          "type": "cmd",
+          "sid": "2406080122",
+          "name": "岳海瑞",
+          "cwd": "/home/yyy/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+          "rc": 0,
+          "cmd": "bash 登记实验.sh",
+          "prev": "bab48f1d69fb4f0240ba903ea50728ce8d320b243dca262e8d8e503e31446f54",
+          "h": "3a99548fe9f959f2098e89f0500464385b41004cfdf79882fe88405f806eeb5e"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "94a5b925cfa9:log:000000011",
+      "student": {
+        "student_id": "2406080122",
+        "name": "岳海瑞"
+      },
+      "lab": "lab0",
+      "cwd": "/home/yyy/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make run\",\"cwd\":\"/home/yyy/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789449406,\"h\":\"c4670e0c4228737d4b2e5d2660d113ed79821110d4b67222936cce36a766be64\",\"name\":\"岳海瑞\",\"prev\":\"d811a258b94e448960c0c55a229ba8c80e4df54901f73e843e6618e5853b3df1\",\"rc\":0,\"run\":\"20260915T131403-3510\",\"sid\":\"2406080122\",\"ts\":\"2026-09-15T13:16:46+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-15T13:16:46+08:00",
+      "logged_at": "2026-09-15T13:16:46+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 11,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-15T13:16:46+08:00",
+          "epoch": 1789449406,
+          "resolved_at": "2026-09-15T13:16:46+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-15T13:16:46+08:00",
+          "epoch": 1789449406,
+          "run": "20260915T131403-3510",
+          "type": "cmd",
+          "sid": "2406080122",
+          "name": "岳海瑞",
+          "cwd": "/home/yyy/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+          "rc": 0,
+          "cmd": "make run",
+          "prev": "d811a258b94e448960c0c55a229ba8c80e4df54901f73e843e6618e5853b3df1",
+          "h": "c4670e0c4228737d4b2e5d2660d113ed79821110d4b67222936cce36a766be64"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "94a5b925cfa9:20260915T131645-11001:shell:1",
+      "student": {
+        "student_id": "2406080122",
+        "name": "岳海瑞"
+      },
+      "lab": "lab0",
+      "cwd": "~/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": "20260915T131645-11001",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/4"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "m",
+      "observed_at": "2026-09-15T13:16:47.901177+08:00",
+      "elapsed_seconds": 2.9011769999999997,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260915T131645-11001.out.gz",
+        "tim": "term/20260915T131645-11001.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 2.9011769999999997,
+          "timing_line": 2,
+          "body_byte_range": [
+            429,
+            644
+          ],
+          "decompressed_byte_range": [
+            429,
+            644
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 10,
+            "ts": "2026-09-15T13:16:45+08:00",
+            "epoch": 1789449405
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 429,
+          "echo_end": 430,
+          "output_begin": 430,
+          "output_end": 431,
+          "prompt_begin": 219
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": []
+    },
+    {
+      "event_id": "94a5b925cfa9:log:000000012",
+      "student": {
+        "student_id": "2406080122",
+        "name": "岳海瑞"
+      },
+      "lab": "lab0",
+      "cwd": "/home/yyy/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make build\",\"cwd\":\"/home/yyy/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789449410,\"h\":\"3d2602396fcb9b42d2850ecf2ff9480335359a9e0121daf7145e54c42167191d\",\"name\":\"岳海瑞\",\"prev\":\"c4670e0c4228737d4b2e5d2660d113ed79821110d4b67222936cce36a766be64\",\"rc\":0,\"run\":\"20260915T131403-3510\",\"sid\":\"2406080122\",\"ts\":\"2026-09-15T13:16:50+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-15T13:16:50+08:00",
+      "logged_at": "2026-09-15T13:16:50+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 12,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-15T13:16:50+08:00",
+          "epoch": 1789449410,
+          "resolved_at": "2026-09-15T13:16:50+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-15T13:16:50+08:00",
+          "epoch": 1789449410,
+          "run": "20260915T131403-3510",
+          "type": "cmd",
+          "sid": "2406080122",
+          "name": "岳海瑞",
+          "cwd": "/home/yyy/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+          "rc": 0,
+          "cmd": "make build",
+          "prev": "c4670e0c4228737d4b2e5d2660d113ed79821110d4b67222936cce36a766be64",
+          "h": "3d2602396fcb9b42d2850ecf2ff9480335359a9e0121daf7145e54c42167191d"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "94a5b925cfa9:20260915T131645-11001:shell:2",
+      "student": {
+        "student_id": "2406080122",
+        "name": "岳海瑞"
+      },
+      "lab": "lab0",
+      "cwd": "~/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": "20260915T131645-11001",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/4"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "a",
+      "observed_at": "2026-09-15T13:16:50.180037+08:00",
+      "elapsed_seconds": 5.180037,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260915T131645-11001.out.gz",
+        "tim": "term/20260915T131645-11001.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 5.180037,
+          "timing_line": 3,
+          "body_byte_range": [
+            644,
+            862
+          ],
+          "decompressed_byte_range": [
+            644,
+            862
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 10,
+            "ts": "2026-09-15T13:16:45+08:00",
+            "epoch": 1789449405
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 641,
+          "echo_end": 645,
+          "output_begin": 645,
+          "output_end": 646,
+          "prompt_begin": 431
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": []
+    },
+    {
+      "event_id": "94a5b925cfa9:20260915T131645-11001:shell:3",
+      "student": {
+        "student_id": "2406080122",
+        "name": "岳海瑞"
+      },
+      "lab": "lab0",
+      "cwd": "~/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": "20260915T131645-11001",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/4"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "k",
+      "observed_at": "2026-09-15T13:16:52.653738+08:00",
+      "elapsed_seconds": 7.653738,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260915T131645-11001.out.gz",
+        "tim": "term/20260915T131645-11001.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 7.653738,
+          "timing_line": 4,
+          "body_byte_range": [
+            862,
+            1083
+          ],
+          "decompressed_byte_range": [
+            862,
+            1083
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 10,
+            "ts": "2026-09-15T13:16:45+08:00",
+            "epoch": 1789449405
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 856,
+          "echo_end": 863,
+          "output_begin": 863,
+          "output_end": 864,
+          "prompt_begin": 646
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": []
+    },
+    {
+      "event_id": "94a5b925cfa9:20260915T131645-11001:shell:4",
+      "student": {
+        "student_id": "2406080122",
+        "name": "岳海瑞"
+      },
+      "lab": "lab0",
+      "cwd": "~/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": "20260915T131645-11001",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/4"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "e build",
+      "observed_at": "2026-09-15T13:17:19.596277+08:00",
+      "elapsed_seconds": 34.596277,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260915T131645-11001.out.gz",
+        "tim": "term/20260915T131645-11001.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 34.596277,
+          "timing_line": 11,
+          "body_byte_range": [
+            1089,
+            1090
+          ],
+          "decompressed_byte_range": [
+            1089,
+            1090
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 10,
+            "ts": "2026-09-15T13:16:45+08:00",
+            "epoch": 1789449405
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 1074,
+          "echo_end": 1090,
+          "output_begin": 1090,
+          "output_end": 1180,
+          "prompt_begin": 864
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "make: 对“build”无需做任何事。"
+      ]
+    },
+    {
+      "event_id": "94a5b925cfa9:20260915T131645-11001:shell:5",
+      "student": {
+        "student_id": "2406080122",
+        "name": "岳海瑞"
+      },
+      "lab": "lab0",
+      "cwd": "~/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": "20260915T131645-11001",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/4"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "m",
+      "observed_at": "2026-09-15T13:17:49.055738+08:00",
+      "elapsed_seconds": 64.055738,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260915T131645-11001.out.gz",
+        "tim": "term/20260915T131645-11001.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 64.055738,
+          "timing_line": 16,
+          "body_byte_range": [
+            1609,
+            1824
+          ],
+          "decompressed_byte_range": [
+            1609,
+            1824
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 10,
+            "ts": "2026-09-15T13:16:45+08:00",
+            "epoch": 1789449405
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 1609,
+          "echo_end": 1610,
+          "output_begin": 1610,
+          "output_end": 1611,
+          "prompt_begin": 1399
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": []
+    },
+    {
+      "event_id": "94a5b925cfa9:20260915T131645-11001:shell:6",
+      "student": {
+        "student_id": "2406080122",
+        "name": "岳海瑞"
+      },
+      "lab": "lab0",
+      "cwd": "~/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": "20260915T131645-11001",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/4"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "a",
+      "observed_at": "2026-09-15T13:17:57.794853+08:00",
+      "elapsed_seconds": 72.794853,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260915T131645-11001.out.gz",
+        "tim": "term/20260915T131645-11001.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 72.794853,
+          "timing_line": 17,
+          "body_byte_range": [
+            1824,
+            2042
+          ],
+          "decompressed_byte_range": [
+            1824,
+            2042
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 10,
+            "ts": "2026-09-15T13:16:45+08:00",
+            "epoch": 1789449405
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 1821,
+          "echo_end": 1825,
+          "output_begin": 1825,
+          "output_end": 1826,
+          "prompt_begin": 1611
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": []
+    },
+    {
+      "event_id": "94a5b925cfa9:20260915T131645-11001:shell:7",
+      "student": {
+        "student_id": "2406080122",
+        "name": "岳海瑞"
+      },
+      "lab": "lab0",
+      "cwd": "~/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": "20260915T131645-11001",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/4"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "k",
+      "observed_at": "2026-09-15T13:18:06.709021+08:00",
+      "elapsed_seconds": 81.709021,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260915T131645-11001.out.gz",
+        "tim": "term/20260915T131645-11001.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 81.709021,
+          "timing_line": 18,
+          "body_byte_range": [
+            2042,
+            2263
+          ],
+          "decompressed_byte_range": [
+            2042,
+            2263
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 10,
+            "ts": "2026-09-15T13:16:45+08:00",
+            "epoch": 1789449405
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 2036,
+          "echo_end": 2043,
+          "output_begin": 2043,
+          "output_end": 2044,
+          "prompt_begin": 1826
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": []
+    },
+    {
+      "event_id": "94a5b925cfa9:20260915T131645-11001:shell:8",
+      "student": {
+        "student_id": "2406080122",
+        "name": "岳海瑞"
+      },
+      "lab": "lab0",
+      "cwd": "~/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": "20260915T131645-11001",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/4"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "e run",
+      "observed_at": "2026-09-15T13:18:55.002252+08:00",
+      "elapsed_seconds": 130.002252,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260915T131645-11001.out.gz",
+        "tim": "term/20260915T131645-11001.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 130.002252,
+          "timing_line": 23,
+          "body_byte_range": [
+            2267,
+            2268
+          ],
+          "decompressed_byte_range": [
+            2267,
+            2268
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 10,
+            "ts": "2026-09-15T13:16:45+08:00",
+            "epoch": 1789449405
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 2254,
+          "echo_end": 2268,
+          "output_begin": 2268,
+          "output_end": 7070,
+          "prompt_begin": 2044
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "OpenSBI v1.8",
+        "   ____                    _____ ____ _____",
+        "  / __ \\                  / ____|  _ \\_   _|",
+        " | |  | |_ __   ___ _ __ | (___ | |_) || |",
+        " | |  | | '_ \\ / _ \\ '_ \\ \\___ \\|  _ < | |",
+        " | |__| | |_) |  __/ | | |____) | |_) || |_",
+        "  \\____/| .__/ \\___|_| |_|_____/|____/_____|",
+        "        | |",
+        "        |_|",
+        "",
+        "Platform Name               : riscv-virtio,qemu",
+        "Platform Features           : medeleg",
+        "Platform HART Count         : 2",
+        "Platform HART Protection    : pmp",
+        "Platform IPI Device         : aclint-mswi",
+        "Platform Timer Device       : aclint-mtimer @ 10000000Hz",
+        "Platform Console Device     : uart8250",
+        "Platform HSM Device         : ---",
+        "Platform PMU Device         : ---",
+        "Platform Reboot Device      : syscon-reboot",
+        "Platform Shutdown Device    : syscon-poweroff",
+        "Platform Suspend Device     : ---",
+        "Platform CPPC Device        : ---",
+        "Firmware Base               : 0x80000000",
+        "Firmware Size               : 333 KB",
+        "Firmware RW Offset          : 0x40000",
+        "Firmware RW Size            : 77 KB",
+        "Firmware Heap Offset        : 0x49000",
+        "Firmware Heap Size          : 41 KB (total), 0 KB (reserved), 12 KB (used), 27 KB (free)",
+        "Firmware Scratch Size       : 4096 B (total), 1464 B (used), 2632 B (free)",
+        "Runtime SBI Version         : 3.0",
+        "Standard SBI Extensions     : ipi,pmu,srst,sse,hsm,rfnc,fwft,time,base,legacy,dbcn,dbtr",
+        "Experimental SBI Extensions : none",
+        "",
+        "Domain0 Name                : root",
+        "Domain0 Boot HART           : 0",
+        "Domain0 HARTs               : 0*,1*",
+        "Domain0 Region00            : 0x0000000080040000-0x000000008005ffff M: (F,R,W) S/U: ()",
+        "Domain0 Region01            : 0x0000000080000000-0x000000008003ffff M: (F,R,X) S/U: ()",
+        "Domain0 Region02            : 0x0000000000100000-0x0000000000100fff M: (I,R,W) S/U: (R,W)",
+        "Domain0 Region03            : 0x0000000010000000-0x0000000010000fff M: (I,R,W) S/U: (R,W)",
+        "Domain0 Region04            : 0x0000000002000000-0x000000000200ffff M: (I,R,W) S/U: ()",
+        "Domain0 Region05            : 0x000000000c400000-0x000000000c5fffff M: (I,R,W) S/U: (R,W)",
+        "Domain0 Region06            : 0x000000000c000000-0x000000000c3fffff M: (I,R,W) S/U: (R,W)",
+        "Domain0 Region07            : 0x0000000000000000-0xffffffffffffffff M: () S/U: (R,W,X)",
+        "Domain0 Next Address        : 0x0000000080200000",
+        "Domain0 Next Arg1           : 0x0000000087e00000",
+        "Domain0 Next Mode           : S-mode",
+        "Domain0 SysReset            : yes",
+        "Domain0 SysSuspend          : yes",
+        "Boot HART ID                : 0",
+        "Boot HART Domain            : root",
+        "Boot HART Priv Version      : v1.12",
+        "Boot HART Base ISA          : rv64imafdch",
+        "Boot HART ISA Extensions    : sstc,zicntr,zihpm,zicboz,zicbom,sdtrig,svadu",
+        "Boot HART PMP Count         : 16",
+        "Boot HART PMP Granularity   : 2 bits",
+        "Boot HART PMP Address Bits  : 54",
+        "Boot HART MHPM Info         : 16 (0x0007fff8)",
+        "Boot HART Debug Triggers    : 2 triggers",
+        "Boot HART MIDELEG           : 0x0000000000001666",
+        "Boot HART MEDELEG           : 0x0000000000f4b509",
+        "  (`-.            (`-.                            .-')       ('-.    _   .-')",
+        " ( OO ).        _(OO  )_                        .(  OO)    _(  OO)  ( '.( OO )_",
+        "(_/.  \\_)-. ,--(_/   ,. \\  ,--.                (_)---\\_)  (,------.  ,--.   ,--.) ,--. ,--.",
+        " \\  `.'  /  \\   \\   /(__/ /  .'       .-')     '  .-.  '   |  .---'  |   `.'   |  |  | |  |",
+        "  \\     /\\   \\   \\ /   / .  / -.    _(  OO)   ,|  | |  |   |  |      |         |  |  | | .-')",
+        "   \\   \\ |    \\   '   /, | .-.  '  (,------. (_|  | |  |  (|  '--.   |  |'.'|  |  |  |_|( OO )",
+        "  .'    \\_)    \\     /__)' \\  |  |  '------'   |  | |  |   |  .--'   |  |   |  |  |  | | `-' /",
+        " /  .'.  \\      \\   /    \\  `'  /              '  '-'  '-. |  `---.  |  |   |  | ('  '-'(_.-'",
+        "'--'   '--'      `-'      `----'                `-----'--' `------'  `--'   `--'   `-----'",
+        "hart 0 init done",
+        "init: starting sh",
+        "-> / $ ls",
+        "bin                              DIR    0",
+        "README                           FILE   2059",
+        "cat                              FILE   22392",
+        "echo                             FILE   21304",
+        "find                             FILE   23520",
+        "grep                             FILE   24920",
+        "init                             FILE   21960",
+        "kill                             FILE   21184",
+        "ls                               FILE   23528",
+        "mkdir                            FILE   21296",
+        "mv                               FILE   23096",
+        "rm                               FILE   21280",
+        "sh                               FILE   44000",
+        "sleep                            FILE   21272",
+        "strace                           FILE   21632",
+        "test                             FILE   21144",
+        "usertests                        FILE   118440",
+        "wc                               FILE   23112",
+        "xargs                            FILE   23008",
+        "-> / $",
+        "-> / $"
+      ]
+    }
+  ],
+  "errors": []
+}

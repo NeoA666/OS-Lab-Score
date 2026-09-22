@@ -88,16 +88,51 @@ def paired_paths(path: Path) -> tuple[Path, ...]:
 
 def write_bytes_pair(path: Path, content: bytes) -> None:
     staged: list[tuple[Path, Path]] = []
+    replaced: list[Path] = []
+    previous: dict[Path, bytes | None] = {}
     try:
         for target in paired_paths(path):
             _validate_target(target)
             target.parent.mkdir(parents=True, exist_ok=True)
+            if target.exists():
+                if not target.is_file():
+                    raise ValueError(f"目标不是普通文件：{target}")
+                previous[target] = target.read_bytes()
+            else:
+                previous[target] = None
             with tempfile.NamedTemporaryFile(dir=target.parent, prefix=".layout-", suffix=".tmp", delete=False) as stream:
                 temporary = Path(stream.name)
                 stream.write(content)
             staged.append((temporary, target))
         for temporary, target in staged:
             os.replace(temporary, target)
+            replaced.append(target)
+    except Exception:
+        # Restore every target already replaced in this publication.  The
+        # rollback uses same-directory temporary files, so a failed mirror
+        # update cannot leave the two classification views divergent.
+        for target in reversed(replaced):
+            old = previous.get(target)
+            rollback: Path | None = None
+            try:
+                if old is None:
+                    target.unlink(missing_ok=True)
+                else:
+                    with tempfile.NamedTemporaryFile(
+                        dir=target.parent, prefix=".layout-rollback-", suffix=".tmp", delete=False
+                    ) as stream:
+                        rollback = Path(stream.name)
+                        stream.write(old)
+                    os.replace(rollback, target)
+                    rollback = None
+            except Exception:
+                # Preserve the original publication error; callers still get
+                # a non-zero result and can surface the target path.
+                pass
+            finally:
+                if rollback is not None:
+                    rollback.unlink(missing_ok=True)
+        raise
     finally:
         for temporary, _ in staged:
             temporary.unlink(missing_ok=True)
@@ -108,9 +143,41 @@ def write_text_pair(path: Path, text: str) -> None:
 
 
 def unlink_pair(path: Path) -> None:
-    for target in paired_paths(path):
-        _validate_target(target)
-        target.unlink(missing_ok=True)
+    targets = paired_paths(path)
+    previous: dict[Path, bytes | None] = {}
+    removed: list[Path] = []
+    try:
+        for target in targets:
+            _validate_target(target)
+            if target.exists():
+                if not target.is_file():
+                    raise ValueError(f"目标不是普通文件：{target}")
+                previous[target] = target.read_bytes()
+            else:
+                previous[target] = None
+        for target in targets:
+            if target.exists():
+                target.unlink()
+                removed.append(target)
+    except Exception:
+        for target in reversed(removed):
+            old = previous.get(target)
+            rollback: Path | None = None
+            try:
+                if old is not None:
+                    with tempfile.NamedTemporaryFile(
+                        dir=target.parent, prefix=".layout-unlink-rollback-", suffix=".tmp", delete=False
+                    ) as stream:
+                        rollback = Path(stream.name)
+                        stream.write(old)
+                    os.replace(rollback, target)
+                    rollback = None
+            except Exception:
+                pass
+            finally:
+                if rollback is not None:
+                    rollback.unlink(missing_ok=True)
+        raise
 
 
 def pair_matches(path: Path) -> bool:

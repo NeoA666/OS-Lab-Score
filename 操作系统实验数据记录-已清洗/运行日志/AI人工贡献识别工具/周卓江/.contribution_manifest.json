@@ -1,0 +1,19 @@
+{
+  "labs": {
+    "lab0": {
+      "analysis_status": "insufficient_data",
+      "assessment_fingerprint": "sha256:5dbd301d71e187dce72ff3a9d6632807428764969e1eadd638c93d5b0fb65a29",
+      "assessment_schema_version": "ai-human-contribution-assessment/v3",
+      "assessment_sha256": "1487b7acd66380f5b870fd6edad03ddcf1ccaef5dc8db5ced32bf1451a7131f8",
+      "full_report_sha256": "f93cce1c79ac459f9e794707c1821df5eb25037887ce1153ae83afda268d3af5",
+      "render_fingerprint": "sha256:6e5ba1bce5ae201a1a0fbf0f322ac8108bdec1ed34f9ec878448219415eaf60c",
+      "teacher_report_sha256": "b010d0156086de9e48ef8caf46a40422ef0db999d0ccdd48743a314446114efc",
+      "updated_at": "2026-09-21T02:19:04.316521+00:00"
+    }
+  },
+  "report_template_version": "6",
+  "schema_version": "ai-human-contribution-manifest/v3",
+  "tool": "ai-human-contribution-recognition",
+  "tool_version": "3.2.0",
+  "updated_at": "2026-09-21T02:19:04.316521+00:00"
+}

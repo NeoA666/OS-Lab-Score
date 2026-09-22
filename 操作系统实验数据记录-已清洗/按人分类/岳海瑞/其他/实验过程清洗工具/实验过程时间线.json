@@ -1,0 +1,549 @@
+{
+  "schema_version": 2,
+  "student": {
+    "student_id": "2406080122",
+    "name": "岳海瑞",
+    "source": "操作系统实验数据记录/2406080122-岳海瑞-20260915-1318"
+  },
+  "lab": "other",
+  "status": "complete",
+  "summary": {
+    "events": 8,
+    "terminal_screen_events": 2,
+    "collection_log_events": 6,
+    "absolute_time_events": 2,
+    "relative_time_only_events": 0,
+    "missing_time_events": 0,
+    "collection_log_time_events": 6,
+    "uncertain_events": 3,
+    "errors": 0,
+    "by_type": {
+      "collection_log_evidence": 6,
+      "shell_command_observed": 2
+    },
+    "recording_failures": 0,
+    "processing_failures": 0
+  },
+  "statistics": {
+    "events": 8,
+    "terminal_screen_events": 2,
+    "collection_log_events": 6,
+    "absolute_time_events": 2,
+    "relative_time_only_events": 0,
+    "missing_time_events": 0,
+    "collection_log_time_events": 6,
+    "uncertain_events": 3,
+    "errors": 0,
+    "by_type": {
+      "collection_log_evidence": 6,
+      "shell_command_observed": 2
+    },
+    "recording_failures": 0,
+    "processing_failures": 0
+  },
+  "student_recordings": 3,
+  "recording_details": [
+    {
+      "recording_id": "20260915T131453-9575",
+      "out": "term/20260915T131453-9575.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/4"
+        ],
+        "shell_pid": []
+      },
+      "events": 0
+    },
+    {
+      "recording_id": "20260915T131542-10235",
+      "out": "term/20260915T131542-10235.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/4"
+        ],
+        "shell_pid": []
+      },
+      "events": 2
+    },
+    {
+      "recording_id": "20260915T131645-11001",
+      "out": "term/20260915T131645-11001.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/4"
+        ],
+        "shell_pid": []
+      },
+      "events": 8
+    }
+  ],
+  "events": [
+    {
+      "event_id": "94a5b925cfa9:log:000000002",
+      "student": {
+        "student_id": "2406080122",
+        "name": "岳海瑞"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260915T131453-9575",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1789449293,\"h\":\"bab48f1d69fb4f0240ba903ea50728ce8d320b243dca262e8d8e503e31446f54\",\"name\":\"岳海瑞\",\"prev\":\"4aed8e369dd665ebd38bcb0140d01de33c5abfdeb37b58218bc31039fb3b389e\",\"proxy_pid\":\"9575\",\"rec\":\"20260915T131453-9575\",\"run\":\"20260915T131403-3510\",\"sid\":\"2406080122\",\"term\":\"xterm-256color\",\"ts\":\"2026-09-15T13:14:53+08:00\",\"tty\":\"/dev/pts/4\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-15T13:14:53+08:00",
+      "logged_at": "2026-09-15T13:14:53+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260915T131453-9575",
+        "requested_recording_id": "20260915T131453-9575",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 2,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-15T13:14:53+08:00",
+          "epoch": 1789449293,
+          "resolved_at": "2026-09-15T13:14:53+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-15T13:14:53+08:00",
+          "epoch": 1789449293,
+          "run": "20260915T131403-3510",
+          "type": "session_start",
+          "sid": "2406080122",
+          "name": "岳海瑞",
+          "tty": "/dev/pts/4",
+          "term": "xterm-256color",
+          "rec": "20260915T131453-9575",
+          "proxy_pid": "9575",
+          "prev": "4aed8e369dd665ebd38bcb0140d01de33c5abfdeb37b58218bc31039fb3b389e",
+          "h": "bab48f1d69fb4f0240ba903ea50728ce8d320b243dca262e8d8e503e31446f54"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "94a5b925cfa9:log:000000005",
+      "student": {
+        "student_id": "2406080122",
+        "name": "岳海瑞"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260915T131542-10235",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1789449342,\"h\":\"156a5da984b4865041cef00d28083b1ef3c220b74ed4ce8a1c9bdc2076fe9633\",\"name\":\"岳海瑞\",\"prev\":\"5c8eed105a668c352062abbc3d140205295b4b1b68f2ad263fe6ce350ccc9371\",\"proxy_pid\":\"10235\",\"rec\":\"20260915T131542-10235\",\"run\":\"20260915T131403-3510\",\"sid\":\"2406080122\",\"term\":\"xterm-256color\",\"ts\":\"2026-09-15T13:15:42+08:00\",\"tty\":\"/dev/pts/4\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-15T13:15:42+08:00",
+      "logged_at": "2026-09-15T13:15:42+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260915T131542-10235",
+        "requested_recording_id": "20260915T131542-10235",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 5,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-15T13:15:42+08:00",
+          "epoch": 1789449342,
+          "resolved_at": "2026-09-15T13:15:42+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-15T13:15:42+08:00",
+          "epoch": 1789449342,
+          "run": "20260915T131403-3510",
+          "type": "session_start",
+          "sid": "2406080122",
+          "name": "岳海瑞",
+          "tty": "/dev/pts/4",
+          "term": "xterm-256color",
+          "rec": "20260915T131542-10235",
+          "proxy_pid": "10235",
+          "prev": "5c8eed105a668c352062abbc3d140205295b4b1b68f2ad263fe6ce350ccc9371",
+          "h": "156a5da984b4865041cef00d28083b1ef3c220b74ed4ce8a1c9bdc2076fe9633"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "94a5b925cfa9:log:000000006",
+      "student": {
+        "student_id": "2406080122",
+        "name": "岳海瑞"
+      },
+      "lab": "other",
+      "cwd": "/home/yyy",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"bash 登记实验.sh\",\"cwd\":\"/home/yyy\",\"epoch\":1789449343,\"h\":\"b324b30b85f0fef75d10061fcb50d825a065daf091a57ede3b392953191d6e56\",\"name\":\"岳海瑞\",\"prev\":\"156a5da984b4865041cef00d28083b1ef3c220b74ed4ce8a1c9bdc2076fe9633\",\"rc\":0,\"run\":\"20260915T131403-3510\",\"sid\":\"2406080122\",\"ts\":\"2026-09-15T13:15:43+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-15T13:15:43+08:00",
+      "logged_at": "2026-09-15T13:15:43+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 6,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-15T13:15:43+08:00",
+          "epoch": 1789449343,
+          "resolved_at": "2026-09-15T13:15:43+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-15T13:15:43+08:00",
+          "epoch": 1789449343,
+          "run": "20260915T131403-3510",
+          "type": "cmd",
+          "sid": "2406080122",
+          "name": "岳海瑞",
+          "cwd": "/home/yyy",
+          "rc": 0,
+          "cmd": "bash 登记实验.sh",
+          "prev": "156a5da984b4865041cef00d28083b1ef3c220b74ed4ce8a1c9bdc2076fe9633",
+          "h": "b324b30b85f0fef75d10061fcb50d825a065daf091a57ede3b392953191d6e56"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "94a5b925cfa9:log:000000007",
+      "student": {
+        "student_id": "2406080122",
+        "name": "岳海瑞"
+      },
+      "lab": "other",
+      "cwd": "/home/yyy",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make build\",\"cwd\":\"/home/yyy\",\"epoch\":1789449351,\"h\":\"e21944d14441497bdcda247200e2a46c71c7ea1b776670e9d22a0473e033f932\",\"name\":\"岳海瑞\",\"prev\":\"b324b30b85f0fef75d10061fcb50d825a065daf091a57ede3b392953191d6e56\",\"rc\":2,\"run\":\"20260915T131403-3510\",\"sid\":\"2406080122\",\"ts\":\"2026-09-15T13:15:51+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-15T13:15:51+08:00",
+      "logged_at": "2026-09-15T13:15:51+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 7,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-15T13:15:51+08:00",
+          "epoch": 1789449351,
+          "resolved_at": "2026-09-15T13:15:51+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-15T13:15:51+08:00",
+          "epoch": 1789449351,
+          "run": "20260915T131403-3510",
+          "type": "cmd",
+          "sid": "2406080122",
+          "name": "岳海瑞",
+          "cwd": "/home/yyy",
+          "rc": 2,
+          "cmd": "make build",
+          "prev": "b324b30b85f0fef75d10061fcb50d825a065daf091a57ede3b392953191d6e56",
+          "h": "e21944d14441497bdcda247200e2a46c71c7ea1b776670e9d22a0473e033f932"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "94a5b925cfa9:log:000000009",
+      "student": {
+        "student_id": "2406080122",
+        "name": "岳海瑞"
+      },
+      "lab": "other",
+      "cwd": "/home/yyy",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make run\",\"cwd\":\"/home/yyy\",\"epoch\":1789449380,\"h\":\"c486d85ebd897c407896582e397abce7601e5d3b9586b48ac710e624d902e405\",\"name\":\"岳海瑞\",\"prev\":\"02199b1fd7b90446f8a7bfe3a9a88a7610cd626b2cfe84f8ba3d2219dacf8561\",\"rc\":2,\"run\":\"20260915T131403-3510\",\"sid\":\"2406080122\",\"ts\":\"2026-09-15T13:16:20+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-15T13:16:20+08:00",
+      "logged_at": "2026-09-15T13:16:20+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 9,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-15T13:16:20+08:00",
+          "epoch": 1789449380,
+          "resolved_at": "2026-09-15T13:16:20+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-15T13:16:20+08:00",
+          "epoch": 1789449380,
+          "run": "20260915T131403-3510",
+          "type": "cmd",
+          "sid": "2406080122",
+          "name": "岳海瑞",
+          "cwd": "/home/yyy",
+          "rc": 2,
+          "cmd": "make run",
+          "prev": "02199b1fd7b90446f8a7bfe3a9a88a7610cd626b2cfe84f8ba3d2219dacf8561",
+          "h": "c486d85ebd897c407896582e397abce7601e5d3b9586b48ac710e624d902e405"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "94a5b925cfa9:log:000000010",
+      "student": {
+        "student_id": "2406080122",
+        "name": "岳海瑞"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260915T131645-11001",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1789449405,\"h\":\"d811a258b94e448960c0c55a229ba8c80e4df54901f73e843e6618e5853b3df1\",\"name\":\"岳海瑞\",\"prev\":\"c486d85ebd897c407896582e397abce7601e5d3b9586b48ac710e624d902e405\",\"proxy_pid\":\"11001\",\"rec\":\"20260915T131645-11001\",\"run\":\"20260915T131403-3510\",\"sid\":\"2406080122\",\"term\":\"xterm-256color\",\"ts\":\"2026-09-15T13:16:45+08:00\",\"tty\":\"/dev/pts/4\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-15T13:16:45+08:00",
+      "logged_at": "2026-09-15T13:16:45+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260915T131645-11001",
+        "requested_recording_id": "20260915T131645-11001",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 10,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-15T13:16:45+08:00",
+          "epoch": 1789449405,
+          "resolved_at": "2026-09-15T13:16:45+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-15T13:16:45+08:00",
+          "epoch": 1789449405,
+          "run": "20260915T131403-3510",
+          "type": "session_start",
+          "sid": "2406080122",
+          "name": "岳海瑞",
+          "tty": "/dev/pts/4",
+          "term": "xterm-256color",
+          "rec": "20260915T131645-11001",
+          "proxy_pid": "11001",
+          "prev": "c486d85ebd897c407896582e397abce7601e5d3b9586b48ac710e624d902e405",
+          "h": "d811a258b94e448960c0c55a229ba8c80e4df54901f73e843e6618e5853b3df1"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "94a5b925cfa9:20260915T131542-10235:shell:1",
+      "student": {
+        "student_id": "2406080122",
+        "name": "岳海瑞"
+      },
+      "lab": "other",
+      "cwd": "~",
+      "recording_id": "20260915T131542-10235",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/4"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "make build",
+      "observed_at": "2026-09-15T13:16:48.396670+08:00",
+      "elapsed_seconds": 66.39667,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260915T131542-10235.out.gz",
+        "tim": "term/20260915T131542-10235.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 66.39667,
+          "timing_line": 11,
+          "body_byte_range": [
+            117,
+            118
+          ],
+          "decompressed_byte_range": [
+            117,
+            118
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 5,
+            "ts": "2026-09-15T13:15:42+08:00",
+            "epoch": 1789449342
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 108,
+          "echo_end": 118,
+          "output_begin": 118,
+          "output_end": 228,
+          "prompt_begin": 0
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "make: *** 没有规则可制作目标“build”。 停止。"
+      ]
+    },
+    {
+      "event_id": "94a5b925cfa9:20260915T131542-10235:shell:2",
+      "student": {
+        "student_id": "2406080122",
+        "name": "岳海瑞"
+      },
+      "lab": "other",
+      "cwd": "~",
+      "recording_id": "20260915T131542-10235",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/4"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "make run",
+      "observed_at": "2026-09-15T13:22:14.942734+08:00",
+      "elapsed_seconds": 392.9427339999999,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260915T131542-10235.out.gz",
+        "tim": "term/20260915T131542-10235.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 392.9427339999999,
+          "timing_line": 23,
+          "body_byte_range": [
+            343,
+            344
+          ],
+          "decompressed_byte_range": [
+            343,
+            344
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 5,
+            "ts": "2026-09-15T13:15:42+08:00",
+            "epoch": 1789449342
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 336,
+          "echo_end": 344,
+          "output_begin": 344,
+          "output_end": 452,
+          "prompt_begin": 228
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "make: *** 没有规则可制作目标“run”。 停止。"
+      ]
+    }
+  ],
+  "errors": []
+}

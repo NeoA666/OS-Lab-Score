@@ -1,0 +1,235 @@
+{
+  "schema_version": 2,
+  "student": {
+    "student_id": "2406080201",
+    "name": "丁允韬",
+    "source": "操作系统实验数据记录/2406080201-丁允韬-20260916-1159"
+  },
+  "lab": "other",
+  "status": "complete",
+  "summary": {
+    "events": 3,
+    "terminal_screen_events": 1,
+    "collection_log_events": 2,
+    "absolute_time_events": 1,
+    "relative_time_only_events": 0,
+    "missing_time_events": 0,
+    "collection_log_time_events": 2,
+    "uncertain_events": 1,
+    "errors": 0,
+    "by_type": {
+      "collection_log_evidence": 2,
+      "shell_command_observed": 1
+    },
+    "recording_failures": 0,
+    "processing_failures": 0
+  },
+  "statistics": {
+    "events": 3,
+    "terminal_screen_events": 1,
+    "collection_log_events": 2,
+    "absolute_time_events": 1,
+    "relative_time_only_events": 0,
+    "missing_time_events": 0,
+    "collection_log_time_events": 2,
+    "uncertain_events": 1,
+    "errors": 0,
+    "by_type": {
+      "collection_log_evidence": 2,
+      "shell_command_observed": 1
+    },
+    "recording_failures": 0,
+    "processing_failures": 0
+  },
+  "student_recordings": 1,
+  "recording_details": [
+    {
+      "recording_id": "20260916T115729-7333",
+      "out": "term/20260916T115729-7333.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": []
+      },
+      "events": 6
+    }
+  ],
+  "events": [
+    {
+      "event_id": "c03eaf3b7ae6:log:000000003",
+      "student": {
+        "student_id": "2406080201",
+        "name": "丁允韬"
+      },
+      "lab": "other",
+      "cwd": "/home/xmdaw",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"claude\",\"cwd\":\"/home/xmdaw\",\"epoch\":1789531049,\"h\":\"6334b1ccb459792f52d27f9c1e4e1cd5b7dad5aa3b875aee2552311326a9e6f6\",\"name\":\"丁允韬\",\"prev\":\"50560c24999ae2084d5b35698fbc2e45705eb8c07205ec5862335164adb42794\",\"rc\":0,\"run\":\"20260916T115728-63520\",\"sid\":\"2406080201\",\"ts\":\"2026-09-16T11:57:29+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-16T11:57:29+08:00",
+      "logged_at": "2026-09-16T11:57:29+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 3,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-16T11:57:29+08:00",
+          "epoch": 1789531049,
+          "resolved_at": "2026-09-16T11:57:29+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-16T11:57:29+08:00",
+          "epoch": 1789531049,
+          "run": "20260916T115728-63520",
+          "type": "cmd",
+          "sid": "2406080201",
+          "name": "丁允韬",
+          "cwd": "/home/xmdaw",
+          "rc": 0,
+          "cmd": "claude",
+          "prev": "50560c24999ae2084d5b35698fbc2e45705eb8c07205ec5862335164adb42794",
+          "h": "6334b1ccb459792f52d27f9c1e4e1cd5b7dad5aa3b875aee2552311326a9e6f6"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "c03eaf3b7ae6:log:000000002",
+      "student": {
+        "student_id": "2406080201",
+        "name": "丁允韬"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260916T115729-7333",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1789531049,\"h\":\"50560c24999ae2084d5b35698fbc2e45705eb8c07205ec5862335164adb42794\",\"name\":\"丁允韬\",\"prev\":\"742380387b8efbbbaab6cdb1522bc1758b062268a0e8874150b0a50394b68089\",\"proxy_pid\":\"7333\",\"rec\":\"20260916T115729-7333\",\"run\":\"20260916T115728-63520\",\"sid\":\"2406080201\",\"term\":\"xterm-256color\",\"ts\":\"2026-09-16T11:57:29+08:00\",\"tty\":\"/dev/pts/1\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-16T11:57:29+08:00",
+      "logged_at": "2026-09-16T11:57:29+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260916T115729-7333",
+        "requested_recording_id": "20260916T115729-7333",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 2,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-16T11:57:29+08:00",
+          "epoch": 1789531049,
+          "resolved_at": "2026-09-16T11:57:29+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-16T11:57:29+08:00",
+          "epoch": 1789531049,
+          "run": "20260916T115728-63520",
+          "type": "session_start",
+          "sid": "2406080201",
+          "name": "丁允韬",
+          "tty": "/dev/pts/1",
+          "term": "xterm-256color",
+          "rec": "20260916T115729-7333",
+          "proxy_pid": "7333",
+          "prev": "742380387b8efbbbaab6cdb1522bc1758b062268a0e8874150b0a50394b68089",
+          "h": "50560c24999ae2084d5b35698fbc2e45705eb8c07205ec5862335164adb42794"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "c03eaf3b7ae6:20260916T115729-7333:shell:1",
+      "student": {
+        "student_id": "2406080201",
+        "name": "丁允韬"
+      },
+      "lab": "other",
+      "cwd": "~",
+      "recording_id": "20260916T115729-7333",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "cd /home/xmdaw/xv6-ai-labs-km/lab1",
+      "observed_at": "2026-09-16T11:58:01.368641+08:00",
+      "elapsed_seconds": 32.368641,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260916T115729-7333.out.gz",
+        "tim": "term/20260916T115729-7333.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 32.368641,
+          "timing_line": 5,
+          "body_byte_range": [
+            159,
+            223
+          ],
+          "decompressed_byte_range": [
+            159,
+            223
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 2,
+            "ts": "2026-09-16T11:57:29+08:00",
+            "epoch": 1789531049
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 116,
+          "echo_end": 221,
+          "output_begin": 221,
+          "output_end": 242,
+          "prompt_begin": 0
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": []
+    }
+  ],
+  "errors": []
+}

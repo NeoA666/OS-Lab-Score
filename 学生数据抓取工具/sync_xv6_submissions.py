@@ -212,27 +212,71 @@ def local_student_dirs(student_id: str) -> list[Path]:
         return []
     matches: list[Path] = []
     for child in OUTPUT_ROOT.iterdir():
-        if not child.name.startswith(f"{student_id}-"):
+        match = LOCAL_DIR_RE.fullmatch(child.name)
+        if not match or match.group("student_id") != student_id:
             continue
         if child.is_symlink():
             raise SyncError(f"拒绝处理学生目录符号链接：{child}")
         if child.is_dir():
             matches.append(child)
-    return matches
+    return sorted(matches, key=lambda directory: directory.name)
 
 
 def target_dir_for(submission: Submission) -> Path:
     return OUTPUT_ROOT / f"{submission.student_id}-{submission.name}-{submission.submission_stamp}"
 
 
-def is_current(local_dirs: list[Path], submission: Submission) -> bool:
-    for directory in local_dirs:
-        marker = source_marker(directory)
-        if marker and marker.get("archive_sha256") == submission.sha256:
-            return True
-    # 兼容旧目录：目录名时间一致时视为已是同一提交；首次遇到并列归档会被重新同步，
-    # 因为旧目录没有 source marker，无法确认它对应哪一个归档。
-    return False
+def valid_reusable_marker(directory: Path, submission: Submission) -> dict[str, Any] | None:
+    marker = source_marker(directory)
+    if not marker:
+        return None
+    if marker.get("version") != 1 or marker.get("student_id") != submission.student_id:
+        return None
+    archive_sha256 = marker.get("archive_sha256")
+    if (
+        not isinstance(archive_sha256, str)
+        or not re.fullmatch(r"[0-9a-fA-F]{64}", archive_sha256)
+        or archive_sha256.lower() != submission.sha256
+    ):
+        return None
+    return marker
+
+
+def exact_marker_match(marker: dict[str, Any], submission: Submission) -> bool:
+    return all(
+        marker.get(key) == expected
+        for key, expected in {
+            "version": 1,
+            "student_id": submission.student_id,
+            "name": submission.name,
+            "archive_name": submission.filename,
+            "remote_path": submission.remote_path,
+            "submission_time": submission.index_time,
+            "archive_size": submission.size,
+            "archive_sha256": submission.sha256,
+        }.items()
+    )
+
+
+def reusable_candidate(
+    local_dirs: list[Path], submission: Submission, target: Path
+) -> tuple[Path | None, bool]:
+    candidates = [
+        directory
+        for directory in local_dirs
+        if valid_reusable_marker(directory, submission) is not None
+    ]
+    if not candidates:
+        return None, False
+    # Prefer the current target when it is reusable; otherwise use a stable name order.
+    candidates.sort(key=lambda directory: (directory != target, directory.name))
+    candidate = candidates[0]
+    precise = (
+        len(local_dirs) == 1
+        and candidate == target
+        and exact_marker_match(valid_reusable_marker(candidate, submission) or {}, submission)
+    )
+    return candidate, precise
 
 
 def safe_member_path(raw_name: str) -> PurePosixPath | None:
@@ -328,42 +372,125 @@ def write_source_marker(destination: Path, submission: Submission) -> None:
         "synced_at": datetime.now(timezone.utc).isoformat(),
     }
     marker_path = destination / SOURCE_MARKER
-    marker_path.write_text(
-        json.dumps(marker, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-    )
-
-
-def commit_student(staging: Path, target: Path, old_dirs: list[Path]) -> None:
-    backup: Path | None = None
-    committed_path: Path | None = None
+    temporary = destination / f".{SOURCE_MARKER}.{uuid.uuid4().hex}.tmp"
     try:
-        backup = Path(tempfile.mkdtemp(prefix=".xv6-old-", dir=OUTPUT_ROOT.parent))
-        for old_dir in old_dirs:
-            backup_path = backup / old_dir.name
-            old_dir.rename(backup_path)
-        committed_path = target.parent / f".xv6-commit-{uuid.uuid4().hex}"
-        staging.rename(committed_path)
-        committed_path.rename(target)
+        temporary.write_text(
+            json.dumps(marker, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+        )
+        os.replace(temporary, marker_path)
+    finally:
+        if temporary.exists():
+            temporary.unlink()
+
+
+def _restore_marker(path: Path, original: bytes | None) -> None:
+    marker = path / SOURCE_MARKER
+    if original is None:
+        try:
+            marker.unlink()
+        except FileNotFoundError:
+            pass
+        return
+    temporary = path / f".{SOURCE_MARKER}.{uuid.uuid4().hex}.rollback"
+    try:
+        temporary.write_bytes(original)
+        os.replace(temporary, marker)
+    finally:
+        if temporary.exists():
+            temporary.unlink()
+
+
+def publish_latest_student(
+    candidate_directory: Path,
+    target_directory: Path,
+    local_student_dirs: list[Path],
+    submission: Submission,
+) -> None:
+    """Publish a downloaded or reusable directory as the student's only version."""
+    backup = Path(tempfile.mkdtemp(prefix=".xv6-old-", dir=OUTPUT_ROOT.parent))
+    candidate_was_local = candidate_directory in local_student_dirs
+    candidate_backup = backup / candidate_directory.name
+    candidate_work = candidate_directory
+    committed: Path | None = None
+    target_published = False
+    original_marker: bytes | None = None
+    moved: list[tuple[Path, Path]] = []
+
+    try:
+        if candidate_was_local:
+            marker_path = candidate_directory / SOURCE_MARKER
+            try:
+                original_marker = marker_path.read_bytes()
+            except FileNotFoundError:
+                original_marker = None
+
+        for old_dir in local_student_dirs:
+            backed_up = backup / old_dir.name
+            old_dir.rename(backed_up)
+            moved.append((old_dir, backed_up))
+            if old_dir == candidate_directory:
+                candidate_work = backed_up
+
+        write_source_marker(candidate_work, submission)
+        committed = target_directory.parent / f".xv6-commit-{uuid.uuid4().hex}"
+        candidate_work.rename(committed)
+        committed.rename(target_directory)
+        target_published = True
         shutil.rmtree(backup)
-    except Exception:
-        if committed_path is not None and committed_path.exists():
-            shutil.rmtree(committed_path, ignore_errors=True)
-        if backup is not None and backup.exists():
-            for backup_path in sorted(backup.iterdir(), key=lambda item: len(item.parts), reverse=True):
-                original = OUTPUT_ROOT / backup_path.name
-                if not original.exists():
-                    backup_path.rename(original)
-            shutil.rmtree(backup, ignore_errors=True)
-        if staging.exists():
-            shutil.rmtree(staging, ignore_errors=True)
+    except Exception as exc:
+        # A recursive backup cleanup is not atomic.  Treat every cleanup failure as
+        # a failed publication and restore every still-recoverable original path.
+        rollback_errors: list[Exception] = []
+        try:
+            if target_published and target_directory.exists():
+                if candidate_was_local:
+                    target_directory.rename(candidate_backup)
+                else:
+                    shutil.rmtree(target_directory)
+            elif committed is not None and committed.exists():
+                if candidate_was_local:
+                    committed.rename(candidate_backup)
+                else:
+                    shutil.rmtree(committed)
+        except Exception as rollback_exc:
+            rollback_errors.append(rollback_exc)
+
+        if candidate_was_local and candidate_backup.exists():
+            try:
+                _restore_marker(candidate_backup, original_marker)
+            except Exception as rollback_exc:
+                rollback_errors.append(rollback_exc)
+
+        for original, backed_up in reversed(moved):
+            if not backed_up.exists() or original.exists():
+                continue
+            try:
+                backed_up.rename(original)
+            except Exception as rollback_exc:
+                rollback_errors.append(rollback_exc)
+
+        if backup.exists():
+            try:
+                shutil.rmtree(backup)
+            except Exception as rollback_exc:
+                rollback_errors.append(rollback_exc)
+
+        if rollback_errors:
+            details = "; ".join(str(error) for error in rollback_errors)
+            raise SyncError(f"发布失败且回滚不完整：{details}") from exc
         raise
 
 
 def sync_one(sftp: Any, submission: Submission) -> str:
     OUTPUT_ROOT.mkdir(parents=True, exist_ok=True)
     old_dirs = local_student_dirs(submission.student_id)
-    if is_current(old_dirs, submission):
+    target = target_dir_for(submission)
+    candidate, precise = reusable_candidate(old_dirs, submission, target)
+    if precise:
         return "SKIPPED"
+    if candidate is not None:
+        publish_latest_student(candidate, target, old_dirs, submission)
+        return "RECONCILED"
 
     status = "UPDATED" if old_dirs else "ADDED"
     temp_root = Path(tempfile.mkdtemp(prefix=".xv6-sync-", dir=OUTPUT_ROOT.parent))
@@ -383,11 +510,24 @@ def sync_one(sftp: Any, submission: Submission) -> str:
             )
 
         safe_extract(archive_path, staging)
-        write_source_marker(staging, submission)
-        commit_student(staging, target_dir_for(submission), old_dirs)
+        publish_latest_student(staging, target, old_dirs, submission)
         return status
     finally:
         shutil.rmtree(temp_root, ignore_errors=True)
+
+
+def warn_about_missing_remote_students(latest: dict[str, Submission]) -> None:
+    if not OUTPUT_ROOT.exists():
+        return
+    local_ids: set[str] = set()
+    for child in OUTPUT_ROOT.iterdir():
+        if not child.is_dir() or child.is_symlink():
+            continue
+        match = LOCAL_DIR_RE.fullmatch(child.name)
+        if match:
+            local_ids.add(match.group("student_id"))
+    for student_id in sorted(local_ids - latest.keys()):
+        print(f"警告：保留本地学生目录：远端最新索引未包含学号 {student_id}", file=sys.stderr)
 
 
 def connect() -> tuple[Any, Any, str]:
@@ -446,16 +586,18 @@ def main() -> int:
                 reason = str(exc)
                 print(f"FAILED: {submission.student_id}-{submission.name}：{reason}", file=sys.stderr)
                 results.append(("FAILED", submission.student_id, reason))
+        warn_about_missing_remote_students(latest)
     finally:
         sftp.close()
         client.close()
 
     counts = {status: sum(1 for item in results if item[0] == status)
-              for status in ("ADDED", "UPDATED", "SKIPPED", "FAILED")}
+              for status in ("ADDED", "UPDATED", "RECONCILED", "SKIPPED", "FAILED")}
     print(
         "汇总："
         f"新增 {counts['ADDED']}，"
         f"更新 {counts['UPDATED']}，"
+        f"整理 {counts['RECONCILED']}，"
         f"跳过 {counts['SKIPPED']}，"
         f"失败 {counts['FAILED']}"
     )

@@ -1,0 +1,422 @@
+{
+  "schema_version": 2,
+  "student": {
+    "student_id": "2406080114",
+    "name": "王世佳",
+    "source": "操作系统实验数据记录/2406080114-王世佳-20260917-1752"
+  },
+  "lab": "other",
+  "status": "complete",
+  "summary": {
+    "events": 6,
+    "terminal_screen_events": 2,
+    "collection_log_events": 4,
+    "absolute_time_events": 2,
+    "relative_time_only_events": 0,
+    "missing_time_events": 0,
+    "collection_log_time_events": 4,
+    "uncertain_events": 2,
+    "errors": 0,
+    "by_type": {
+      "collection_log_evidence": 4,
+      "shell_command_observed": 2
+    },
+    "recording_failures": 0,
+    "processing_failures": 0
+  },
+  "statistics": {
+    "events": 6,
+    "terminal_screen_events": 2,
+    "collection_log_events": 4,
+    "absolute_time_events": 2,
+    "relative_time_only_events": 0,
+    "missing_time_events": 0,
+    "collection_log_time_events": 4,
+    "uncertain_events": 2,
+    "errors": 0,
+    "by_type": {
+      "collection_log_evidence": 4,
+      "shell_command_observed": 2
+    },
+    "recording_failures": 0,
+    "processing_failures": 0
+  },
+  "student_recordings": 2,
+  "recording_details": [
+    {
+      "recording_id": "20260917T163003-5987",
+      "out": "term/20260917T163003-5987.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": []
+      },
+      "events": 122
+    },
+    {
+      "recording_id": "20260917T174837-14906",
+      "out": "term/20260917T174837-14906.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/3"
+        ],
+        "shell_pid": []
+      },
+      "events": 7
+    }
+  ],
+  "events": [
+    {
+      "event_id": "33e4f16e527e:log:000000002",
+      "student": {
+        "student_id": "2406080114",
+        "name": "王世佳"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260917T163003-5987",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1789633803,\"h\":\"b5775bb991c9723188ea370d5d7c90c708cad9df0774e8907aec875fccdc04ae\",\"name\":\"王世佳\",\"prev\":\"cae640454ba6310748f80b002afdc62b418c74aaff57f7663c45a573405c8e43\",\"proxy_pid\":\"5987\",\"rec\":\"20260917T163003-5987\",\"run\":\"20260917T162948-9298\",\"sid\":\"2406080114\",\"term\":\"xterm-256color\",\"ts\":\"2026-09-17T16:30:03+08:00\",\"tty\":\"/dev/pts/1\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-17T16:30:03+08:00",
+      "logged_at": "2026-09-17T16:30:03+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260917T163003-5987",
+        "requested_recording_id": "20260917T163003-5987",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 2,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-17T16:30:03+08:00",
+          "epoch": 1789633803,
+          "resolved_at": "2026-09-17T16:30:03+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-17T16:30:03+08:00",
+          "epoch": 1789633803,
+          "run": "20260917T162948-9298",
+          "type": "session_start",
+          "sid": "2406080114",
+          "name": "王世佳",
+          "tty": "/dev/pts/1",
+          "term": "xterm-256color",
+          "rec": "20260917T163003-5987",
+          "proxy_pid": "5987",
+          "prev": "cae640454ba6310748f80b002afdc62b418c74aaff57f7663c45a573405c8e43",
+          "h": "b5775bb991c9723188ea370d5d7c90c708cad9df0774e8907aec875fccdc04ae"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "33e4f16e527e:log:000000090",
+      "student": {
+        "student_id": "2406080114",
+        "name": "王世佳"
+      },
+      "lab": "other",
+      "cwd": "/home/wsj",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"cd /home/wsj/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1 \",\"cwd\":\"/home/wsj\",\"epoch\":1789638517,\"h\":\"315e892c937e468deedc8f23660c0536758baa5cfc3d715f373d689610cc5630\",\"name\":\"王世佳\",\"prev\":\"9420eb92466b36c874bc573c3e85727aa87e9438414eff1387c538988d984540\",\"rc\":0,\"run\":\"20260917T162948-9298\",\"sid\":\"2406080114\",\"ts\":\"2026-09-17T17:48:37+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-17T17:48:37+08:00",
+      "logged_at": "2026-09-17T17:48:37+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 90,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-17T17:48:37+08:00",
+          "epoch": 1789638517,
+          "resolved_at": "2026-09-17T17:48:37+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-17T17:48:37+08:00",
+          "epoch": 1789638517,
+          "run": "20260917T162948-9298",
+          "type": "cmd",
+          "sid": "2406080114",
+          "name": "王世佳",
+          "cwd": "/home/wsj",
+          "rc": 0,
+          "cmd": "cd /home/wsj/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1 ",
+          "prev": "9420eb92466b36c874bc573c3e85727aa87e9438414eff1387c538988d984540",
+          "h": "315e892c937e468deedc8f23660c0536758baa5cfc3d715f373d689610cc5630"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "33e4f16e527e:log:000000089",
+      "student": {
+        "student_id": "2406080114",
+        "name": "王世佳"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260917T174837-14906",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1789638517,\"h\":\"9420eb92466b36c874bc573c3e85727aa87e9438414eff1387c538988d984540\",\"name\":\"王世佳\",\"prev\":\"4758979d8ba4a7aac6050a5072309bfe493fbdad34fc6758d41c2cc45cad02af\",\"proxy_pid\":\"14906\",\"rec\":\"20260917T174837-14906\",\"run\":\"20260917T162948-9298\",\"sid\":\"2406080114\",\"term\":\"xterm-256color\",\"ts\":\"2026-09-17T17:48:37+08:00\",\"tty\":\"/dev/pts/3\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-17T17:48:37+08:00",
+      "logged_at": "2026-09-17T17:48:37+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260917T174837-14906",
+        "requested_recording_id": "20260917T174837-14906",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 89,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-17T17:48:37+08:00",
+          "epoch": 1789638517,
+          "resolved_at": "2026-09-17T17:48:37+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-17T17:48:37+08:00",
+          "epoch": 1789638517,
+          "run": "20260917T162948-9298",
+          "type": "session_start",
+          "sid": "2406080114",
+          "name": "王世佳",
+          "tty": "/dev/pts/3",
+          "term": "xterm-256color",
+          "rec": "20260917T174837-14906",
+          "proxy_pid": "14906",
+          "prev": "4758979d8ba4a7aac6050a5072309bfe493fbdad34fc6758d41c2cc45cad02af",
+          "h": "9420eb92466b36c874bc573c3e85727aa87e9438414eff1387c538988d984540"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "33e4f16e527e:log:000000091",
+      "student": {
+        "student_id": "2406080114",
+        "name": "王世佳"
+      },
+      "lab": "other",
+      "cwd": "/home/wsj",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"cd\",\"cwd\":\"/home/wsj\",\"epoch\":1789638521,\"h\":\"7aa6b432e0b9c5bb0a0f8bf1be9d4864940edde226860aac32c8b48536d5ffa2\",\"name\":\"王世佳\",\"prev\":\"315e892c937e468deedc8f23660c0536758baa5cfc3d715f373d689610cc5630\",\"rc\":0,\"run\":\"20260917T162948-9298\",\"sid\":\"2406080114\",\"ts\":\"2026-09-17T17:48:41+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-17T17:48:41+08:00",
+      "logged_at": "2026-09-17T17:48:41+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 91,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-17T17:48:41+08:00",
+          "epoch": 1789638521,
+          "resolved_at": "2026-09-17T17:48:41+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-17T17:48:41+08:00",
+          "epoch": 1789638521,
+          "run": "20260917T162948-9298",
+          "type": "cmd",
+          "sid": "2406080114",
+          "name": "王世佳",
+          "cwd": "/home/wsj",
+          "rc": 0,
+          "cmd": "cd",
+          "prev": "315e892c937e468deedc8f23660c0536758baa5cfc3d715f373d689610cc5630",
+          "h": "7aa6b432e0b9c5bb0a0f8bf1be9d4864940edde226860aac32c8b48536d5ffa2"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "33e4f16e527e:20260917T174837-14906:shell:1",
+      "student": {
+        "student_id": "2406080114",
+        "name": "王世佳"
+      },
+      "lab": "other",
+      "cwd": "~",
+      "recording_id": "20260917T174837-14906",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/3"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "cd",
+      "observed_at": "2026-09-17T17:48:43.585893+08:00",
+      "elapsed_seconds": 6.585893,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260917T174837-14906.out.gz",
+        "tim": "term/20260917T174837-14906.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 6.585893,
+          "timing_line": 3,
+          "body_byte_range": [
+            109,
+            110
+          ],
+          "decompressed_byte_range": [
+            109,
+            110
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 89,
+            "ts": "2026-09-17T17:48:37+08:00",
+            "epoch": 1789638517
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 108,
+          "echo_end": 110,
+          "output_begin": 110,
+          "output_end": 131,
+          "prompt_begin": 0
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": []
+    },
+    {
+      "event_id": "33e4f16e527e:20260917T174837-14906:shell:2",
+      "student": {
+        "student_id": "2406080114",
+        "name": "王世佳"
+      },
+      "lab": "other",
+      "cwd": "~",
+      "recording_id": "20260917T174837-14906",
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/3"
+        ],
+        "shell_pid": []
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "cd '/home/wsj/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1'",
+      "observed_at": "2026-09-17T17:49:52.194725+08:00",
+      "elapsed_seconds": 75.194725,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260917T174837-14906.out.gz",
+        "tim": "term/20260917T174837-14906.tim.gz",
+        "time_source": "session_start_rec_match_plus_timing",
+        "observation": {
+          "elapsed_seconds": 75.194725,
+          "timing_line": 11,
+          "body_byte_range": [
+            351,
+            352
+          ],
+          "decompressed_byte_range": [
+            351,
+            352
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 89,
+            "ts": "2026-09-17T17:48:37+08:00",
+            "epoch": 1789638517
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 265,
+          "echo_end": 352,
+          "output_begin": 352,
+          "output_end": 827,
+          "prompt_begin": 131
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "                                      /home/wsj/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1"
+      ]
+    }
+  ],
+  "errors": []
+}

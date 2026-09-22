@@ -1,0 +1,685 @@
+{
+  "schema_version": 2,
+  "student": {
+    "student_id": "2406080115",
+    "name": "王宇航",
+    "source": "操作系统实验数据记录/2406080115-王宇航-20260919-2322"
+  },
+  "lab": "lab0",
+  "status": "complete",
+  "summary": {
+    "events": 11,
+    "terminal_screen_events": 0,
+    "collection_log_events": 11,
+    "absolute_time_events": 0,
+    "relative_time_only_events": 0,
+    "missing_time_events": 0,
+    "collection_log_time_events": 11,
+    "uncertain_events": 11,
+    "errors": 0,
+    "by_type": {
+      "collection_log_evidence": 11
+    },
+    "recording_failures": 0,
+    "processing_failures": 0
+  },
+  "statistics": {
+    "events": 11,
+    "terminal_screen_events": 0,
+    "collection_log_events": 11,
+    "absolute_time_events": 0,
+    "relative_time_only_events": 0,
+    "missing_time_events": 0,
+    "collection_log_time_events": 11,
+    "uncertain_events": 11,
+    "errors": 0,
+    "by_type": {
+      "collection_log_evidence": 11
+    },
+    "recording_failures": 0,
+    "processing_failures": 0
+  },
+  "student_recordings": 2,
+  "recording_details": [
+    {
+      "recording_id": "20260919T221342-5472",
+      "out": "term/20260919T221342-5472.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": []
+      },
+      "events": 0
+    },
+    {
+      "recording_id": "20260919T221827-6149",
+      "out": "term/20260919T221827-6149.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/3"
+        ],
+        "shell_pid": []
+      },
+      "events": 14
+    }
+  ],
+  "events": [
+    {
+      "event_id": "a6d7ae5f9203:log:000000003",
+      "student": {
+        "student_id": "2406080115",
+        "name": "王宇航"
+      },
+      "lab": "lab0",
+      "cwd": "/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"claude\",\"cwd\":\"/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789827223,\"h\":\"0248c5ac61b52778d42804f40cd4fdcd562b5ead0fb8eb45867b0aacc12cafc9\",\"name\":\"王宇航\",\"prev\":\"15e8df5399e846d178ccc251c538d11c593d6ba252fc15e116256b0fd1902fcc\",\"rc\":0,\"run\":\"20260919T221336-47132\",\"sid\":\"2406080115\",\"ts\":\"2026-09-19T22:13:43+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-19T22:13:43+08:00",
+      "logged_at": "2026-09-19T22:13:43+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 3,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-19T22:13:43+08:00",
+          "epoch": 1789827223,
+          "resolved_at": "2026-09-19T22:13:43+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-19T22:13:43+08:00",
+          "epoch": 1789827223,
+          "run": "20260919T221336-47132",
+          "type": "cmd",
+          "sid": "2406080115",
+          "name": "王宇航",
+          "cwd": "/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+          "rc": 0,
+          "cmd": "claude",
+          "prev": "15e8df5399e846d178ccc251c538d11c593d6ba252fc15e116256b0fd1902fcc",
+          "h": "0248c5ac61b52778d42804f40cd4fdcd562b5ead0fb8eb45867b0aacc12cafc9"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "a6d7ae5f9203:log:000000009",
+      "student": {
+        "student_id": "2406080115",
+        "name": "王宇航"
+      },
+      "lab": "lab0",
+      "cwd": "/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"claude\",\"cwd\":\"/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789827509,\"h\":\"ff98bdad4e96bc5c02592ff36f7d6c043347416b1638dde1dff6361da7eaf998\",\"name\":\"王宇航\",\"prev\":\"cf58d28a9158b193d8cdf231e8e77c442d91b385a938cdea41ac11c66b597f1b\",\"rc\":0,\"run\":\"20260919T221336-47132\",\"sid\":\"2406080115\",\"ts\":\"2026-09-19T22:18:29+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-19T22:18:29+08:00",
+      "logged_at": "2026-09-19T22:18:29+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 9,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-19T22:18:29+08:00",
+          "epoch": 1789827509,
+          "resolved_at": "2026-09-19T22:18:29+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-19T22:18:29+08:00",
+          "epoch": 1789827509,
+          "run": "20260919T221336-47132",
+          "type": "cmd",
+          "sid": "2406080115",
+          "name": "王宇航",
+          "cwd": "/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+          "rc": 0,
+          "cmd": "claude",
+          "prev": "cf58d28a9158b193d8cdf231e8e77c442d91b385a938cdea41ac11c66b597f1b",
+          "h": "ff98bdad4e96bc5c02592ff36f7d6c043347416b1638dde1dff6361da7eaf998"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "a6d7ae5f9203:log:000000015",
+      "student": {
+        "student_id": "2406080115",
+        "name": "王宇航"
+      },
+      "lab": "lab0",
+      "cwd": "/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"riscv64-unknown-elf-gcc --version\",\"cwd\":\"/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789827804,\"h\":\"6442799f975afd135e2a0484e3876ce351c1370422d1785701c65e3a80d4c7b8\",\"name\":\"王宇航\",\"prev\":\"a1e4fb1d8a2da5d30e243cb672b0b120ff9727c9147dd5f455d57f48c6c49575\",\"rc\":0,\"run\":\"20260919T221336-47132\",\"sid\":\"2406080115\",\"ts\":\"2026-09-19T22:23:24+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-19T22:23:24+08:00",
+      "logged_at": "2026-09-19T22:23:24+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 15,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-19T22:23:24+08:00",
+          "epoch": 1789827804,
+          "resolved_at": "2026-09-19T22:23:24+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-19T22:23:24+08:00",
+          "epoch": 1789827804,
+          "run": "20260919T221336-47132",
+          "type": "cmd",
+          "sid": "2406080115",
+          "name": "王宇航",
+          "cwd": "/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+          "rc": 0,
+          "cmd": "riscv64-unknown-elf-gcc --version",
+          "prev": "a1e4fb1d8a2da5d30e243cb672b0b120ff9727c9147dd5f455d57f48c6c49575",
+          "h": "6442799f975afd135e2a0484e3876ce351c1370422d1785701c65e3a80d4c7b8"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "a6d7ae5f9203:log:000000017",
+      "student": {
+        "student_id": "2406080115",
+        "name": "王宇航"
+      },
+      "lab": "lab0",
+      "cwd": "/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"qemu-system-riscv64 --version\",\"cwd\":\"/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789827827,\"h\":\"d80674b4ba0973a98ba13272a0d9084bd0ffc8df6b5f0461e53859cc06104eea\",\"name\":\"王宇航\",\"prev\":\"f8fd0c00b429d13191b5a04f1be3092aa512cf10273de63de6bc461277168c52\",\"rc\":0,\"run\":\"20260919T221336-47132\",\"sid\":\"2406080115\",\"ts\":\"2026-09-19T22:23:47+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-19T22:23:47+08:00",
+      "logged_at": "2026-09-19T22:23:47+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 17,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-19T22:23:47+08:00",
+          "epoch": 1789827827,
+          "resolved_at": "2026-09-19T22:23:47+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-19T22:23:47+08:00",
+          "epoch": 1789827827,
+          "run": "20260919T221336-47132",
+          "type": "cmd",
+          "sid": "2406080115",
+          "name": "王宇航",
+          "cwd": "/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+          "rc": 0,
+          "cmd": "qemu-system-riscv64 --version",
+          "prev": "f8fd0c00b429d13191b5a04f1be3092aa512cf10273de63de6bc461277168c52",
+          "h": "d80674b4ba0973a98ba13272a0d9084bd0ffc8df6b5f0461e53859cc06104eea"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "a6d7ae5f9203:log:000000019",
+      "student": {
+        "student_id": "2406080115",
+        "name": "王宇航"
+      },
+      "lab": "lab0",
+      "cwd": "/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make build\",\"cwd\":\"/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789827896,\"h\":\"2d10ab07baee6fd8a566c0f5070ffe5e2026f2c3ca8bd187efab3244587cf2d9\",\"name\":\"王宇航\",\"prev\":\"e5d51f4ccbc77b3da846e5d961f3092fa57d06759051f3c4e784ae159d87a45b\",\"rc\":0,\"run\":\"20260919T221336-47132\",\"sid\":\"2406080115\",\"ts\":\"2026-09-19T22:24:56+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-19T22:24:56+08:00",
+      "logged_at": "2026-09-19T22:24:56+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 19,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-19T22:24:56+08:00",
+          "epoch": 1789827896,
+          "resolved_at": "2026-09-19T22:24:56+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-19T22:24:56+08:00",
+          "epoch": 1789827896,
+          "run": "20260919T221336-47132",
+          "type": "cmd",
+          "sid": "2406080115",
+          "name": "王宇航",
+          "cwd": "/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+          "rc": 0,
+          "cmd": "make build",
+          "prev": "e5d51f4ccbc77b3da846e5d961f3092fa57d06759051f3c4e784ae159d87a45b",
+          "h": "2d10ab07baee6fd8a566c0f5070ffe5e2026f2c3ca8bd187efab3244587cf2d9"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "a6d7ae5f9203:log:000000024",
+      "student": {
+        "student_id": "2406080115",
+        "name": "王宇航"
+      },
+      "lab": "lab0",
+      "cwd": "/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"mkfs.vfat --help\",\"cwd\":\"/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789828164,\"h\":\"3fb51337829b535502ff1f5950fad189b3b5c38a1414c9ec2e53eddc449a88a0\",\"name\":\"王宇航\",\"prev\":\"57344c6712b90b8cd1b2b36600b12a8f4f8e553b93c51636f9b9cc2d529965f7\",\"rc\":0,\"run\":\"20260919T221336-47132\",\"sid\":\"2406080115\",\"ts\":\"2026-09-19T22:29:24+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-19T22:29:24+08:00",
+      "logged_at": "2026-09-19T22:29:24+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 24,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-19T22:29:24+08:00",
+          "epoch": 1789828164,
+          "resolved_at": "2026-09-19T22:29:24+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-19T22:29:24+08:00",
+          "epoch": 1789828164,
+          "run": "20260919T221336-47132",
+          "type": "cmd",
+          "sid": "2406080115",
+          "name": "王宇航",
+          "cwd": "/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+          "rc": 0,
+          "cmd": "mkfs.vfat --help",
+          "prev": "57344c6712b90b8cd1b2b36600b12a8f4f8e553b93c51636f9b9cc2d529965f7",
+          "h": "3fb51337829b535502ff1f5950fad189b3b5c38a1414c9ec2e53eddc449a88a0"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "a6d7ae5f9203:log:000000026",
+      "student": {
+        "student_id": "2406080115",
+        "name": "王宇航"
+      },
+      "lab": "lab0",
+      "cwd": "/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make fs\",\"cwd\":\"/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789828216,\"h\":\"c516900320095bd06a707a5aecc91ed37e5f6386e7538d01e44a633be40a9afb\",\"name\":\"王宇航\",\"prev\":\"fdb180f3a47c72a74d308d437bf576f1562620b60f232f09fc2dca6117f27c12\",\"rc\":0,\"run\":\"20260919T221336-47132\",\"sid\":\"2406080115\",\"ts\":\"2026-09-19T22:30:16+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-19T22:30:16+08:00",
+      "logged_at": "2026-09-19T22:30:16+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 26,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-19T22:30:16+08:00",
+          "epoch": 1789828216,
+          "resolved_at": "2026-09-19T22:30:16+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-19T22:30:16+08:00",
+          "epoch": 1789828216,
+          "run": "20260919T221336-47132",
+          "type": "cmd",
+          "sid": "2406080115",
+          "name": "王宇航",
+          "cwd": "/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+          "rc": 0,
+          "cmd": "make fs",
+          "prev": "fdb180f3a47c72a74d308d437bf576f1562620b60f232f09fc2dca6117f27c12",
+          "h": "c516900320095bd06a707a5aecc91ed37e5f6386e7538d01e44a633be40a9afb"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "a6d7ae5f9203:log:000000028",
+      "student": {
+        "student_id": "2406080115",
+        "name": "王宇航"
+      },
+      "lab": "lab0",
+      "cwd": "/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"ls -lh fs.img\",\"cwd\":\"/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789828295,\"h\":\"f4d5065ffe12bfab42bc989eee8568a6320fe0c4150405251717ca4d07cce69a\",\"name\":\"王宇航\",\"prev\":\"d6611f47414aa705c21a25f3bd95bc021ad936f08fd445baf39bc12cd61000d2\",\"rc\":0,\"run\":\"20260919T221336-47132\",\"sid\":\"2406080115\",\"ts\":\"2026-09-19T22:31:35+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-19T22:31:35+08:00",
+      "logged_at": "2026-09-19T22:31:35+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 28,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-19T22:31:35+08:00",
+          "epoch": 1789828295,
+          "resolved_at": "2026-09-19T22:31:35+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-19T22:31:35+08:00",
+          "epoch": 1789828295,
+          "run": "20260919T221336-47132",
+          "type": "cmd",
+          "sid": "2406080115",
+          "name": "王宇航",
+          "cwd": "/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+          "rc": 0,
+          "cmd": "ls -lh fs.img",
+          "prev": "d6611f47414aa705c21a25f3bd95bc021ad936f08fd445baf39bc12cd61000d2",
+          "h": "f4d5065ffe12bfab42bc989eee8568a6320fe0c4150405251717ca4d07cce69a"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "a6d7ae5f9203:log:000000050",
+      "student": {
+        "student_id": "2406080115",
+        "name": "王宇航"
+      },
+      "lab": "lab0",
+      "cwd": "/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make run\",\"cwd\":\"/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789829542,\"h\":\"68ffe0c05f6dc143f24e72838fa86fbb7d437afb670e23a167dcac7090864c7f\",\"name\":\"王宇航\",\"prev\":\"f0008ad45135c19d67928aafb6396a2c64b91d5b5c3b2f871476112cef228785\",\"rc\":0,\"run\":\"20260919T221336-47132\",\"sid\":\"2406080115\",\"ts\":\"2026-09-19T22:52:22+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-19T22:52:22+08:00",
+      "logged_at": "2026-09-19T22:52:22+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 50,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-19T22:52:22+08:00",
+          "epoch": 1789829542,
+          "resolved_at": "2026-09-19T22:52:22+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-19T22:52:22+08:00",
+          "epoch": 1789829542,
+          "run": "20260919T221336-47132",
+          "type": "cmd",
+          "sid": "2406080115",
+          "name": "王宇航",
+          "cwd": "/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+          "rc": 0,
+          "cmd": "make run",
+          "prev": "f0008ad45135c19d67928aafb6396a2c64b91d5b5c3b2f871476112cef228785",
+          "h": "68ffe0c05f6dc143f24e72838fa86fbb7d437afb670e23a167dcac7090864c7f"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "a6d7ae5f9203:log:000000080",
+      "student": {
+        "student_id": "2406080115",
+        "name": "王宇航"
+      },
+      "lab": "lab0",
+      "cwd": "/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"claude\",\"cwd\":\"/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789831293,\"h\":\"844fe9b7c547b5b25be7a84903735955e4dc2ad24a5e472baeead3ccdf6e71bb\",\"name\":\"王宇航\",\"prev\":\"c638abe67e78773ddb9f5d29790222b55dff99044790f7082ca5e104f4186dc0\",\"rc\":0,\"run\":\"20260919T221336-47132\",\"sid\":\"2406080115\",\"ts\":\"2026-09-19T23:21:33+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-19T23:21:33+08:00",
+      "logged_at": "2026-09-19T23:21:33+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 80,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-19T23:21:33+08:00",
+          "epoch": 1789831293,
+          "resolved_at": "2026-09-19T23:21:33+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-19T23:21:33+08:00",
+          "epoch": 1789831293,
+          "run": "20260919T221336-47132",
+          "type": "cmd",
+          "sid": "2406080115",
+          "name": "王宇航",
+          "cwd": "/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+          "rc": 0,
+          "cmd": "claude",
+          "prev": "c638abe67e78773ddb9f5d29790222b55dff99044790f7082ca5e104f4186dc0",
+          "h": "844fe9b7c547b5b25be7a84903735955e4dc2ad24a5e472baeead3ccdf6e71bb"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "a6d7ae5f9203:log:000000081",
+      "student": {
+        "student_id": "2406080115",
+        "name": "王宇航"
+      },
+      "lab": "lab0",
+      "cwd": "/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make run\",\"cwd\":\"/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0\",\"epoch\":1789831307,\"h\":\"37dd3addd407105838adf29d95691cf9b1030eb5de73a68f9ed1e3b97e0da081\",\"name\":\"王宇航\",\"prev\":\"844fe9b7c547b5b25be7a84903735955e4dc2ad24a5e472baeead3ccdf6e71bb\",\"rc\":0,\"run\":\"20260919T221336-47132\",\"sid\":\"2406080115\",\"ts\":\"2026-09-19T23:21:47+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-19T23:21:47+08:00",
+      "logged_at": "2026-09-19T23:21:47+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 81,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-19T23:21:47+08:00",
+          "epoch": 1789831307,
+          "resolved_at": "2026-09-19T23:21:47+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-19T23:21:47+08:00",
+          "epoch": 1789831307,
+          "run": "20260919T221336-47132",
+          "type": "cmd",
+          "sid": "2406080115",
+          "name": "王宇航",
+          "cwd": "/home/fengyhx/桌面/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab0",
+          "rc": 0,
+          "cmd": "make run",
+          "prev": "844fe9b7c547b5b25be7a84903735955e4dc2ad24a5e472baeead3ccdf6e71bb",
+          "h": "37dd3addd407105838adf29d95691cf9b1030eb5de73a68f9ed1e3b97e0da081"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    }
+  ],
+  "errors": []
+}

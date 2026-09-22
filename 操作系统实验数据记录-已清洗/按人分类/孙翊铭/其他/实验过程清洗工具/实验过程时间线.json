@@ -1,0 +1,3403 @@
+{
+  "schema_version": 2,
+  "student": {
+    "student_id": "2406080206",
+    "name": "孙翊铭",
+    "source": "操作系统实验数据记录/2406080206-孙翊铭-20260915-1428"
+  },
+  "lab": "other",
+  "status": "complete",
+  "summary": {
+    "events": 55,
+    "terminal_screen_events": 3,
+    "collection_log_events": 52,
+    "absolute_time_events": 3,
+    "relative_time_only_events": 0,
+    "missing_time_events": 0,
+    "collection_log_time_events": 52,
+    "uncertain_events": 17,
+    "errors": 1,
+    "by_type": {
+      "collection_log_evidence": 52,
+      "shell_command_observed": 3
+    },
+    "recording_failures": 0,
+    "processing_failures": 0
+  },
+  "statistics": {
+    "events": 55,
+    "terminal_screen_events": 3,
+    "collection_log_events": 52,
+    "absolute_time_events": 3,
+    "relative_time_only_events": 0,
+    "missing_time_events": 0,
+    "collection_log_time_events": 52,
+    "uncertain_events": 17,
+    "errors": 1,
+    "by_type": {
+      "collection_log_evidence": 52,
+      "shell_command_observed": 3
+    },
+    "recording_failures": 0,
+    "processing_failures": 0
+  },
+  "student_recordings": 25,
+  "recording_details": [
+    {
+      "recording_id": "20260903T173049-4240",
+      "out": "term/20260903T173049-4240.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "4252"
+        ]
+      },
+      "events": 0
+    },
+    {
+      "recording_id": "20260903T173143-4453",
+      "out": "term/20260903T173143-4453.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/2",
+        "session_start_tty": [
+          "/dev/pts/3"
+        ],
+        "shell_pid": [
+          "4462"
+        ]
+      },
+      "events": 3
+    },
+    {
+      "recording_id": "20260903T173318-4937",
+      "out": "term/20260903T173318-4937.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "4945"
+        ]
+      },
+      "events": 5
+    },
+    {
+      "recording_id": "20260903T173517-6160",
+      "out": "term/20260903T173517-6160.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "6168"
+        ]
+      },
+      "events": 13
+    },
+    {
+      "recording_id": "20260903T174239-8600",
+      "out": "term/20260903T174239-8600.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/4",
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": [
+          "8609"
+        ]
+      },
+      "events": 1
+    },
+    {
+      "recording_id": "20260903T174725-9416",
+      "out": "term/20260903T174725-9416.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/6",
+        "session_start_tty": [
+          "/dev/pts/7"
+        ],
+        "shell_pid": [
+          "9425"
+        ]
+      },
+      "events": 0
+    },
+    {
+      "recording_id": "20260903T174725-9473",
+      "out": "term/20260903T174725-9473.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/8",
+        "session_start_tty": [
+          "/dev/pts/9"
+        ],
+        "shell_pid": [
+          "9481"
+        ]
+      },
+      "events": 2
+    },
+    {
+      "recording_id": "20260903T175141-11248",
+      "out": "term/20260903T175141-11248.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/6",
+        "session_start_tty": [
+          "/dev/pts/7"
+        ],
+        "shell_pid": [
+          "11257"
+        ]
+      },
+      "events": 7
+    },
+    {
+      "recording_id": "20260903T175414-12209",
+      "out": "term/20260903T175414-12209.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/10",
+        "session_start_tty": [
+          "/dev/pts/11"
+        ],
+        "shell_pid": [
+          "12218"
+        ]
+      },
+      "events": 6
+    },
+    {
+      "recording_id": "20260903T175628-13424",
+      "out": "term/20260903T175628-13424.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/12",
+        "session_start_tty": [
+          "/dev/pts/13"
+        ],
+        "shell_pid": [
+          "13433"
+        ]
+      },
+      "events": 1
+    },
+    {
+      "recording_id": "20260903T175756-13613",
+      "out": "term/20260903T175756-13613.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/14",
+        "session_start_tty": [
+          "/dev/pts/15"
+        ],
+        "shell_pid": [
+          "13622"
+        ]
+      },
+      "events": 5
+    },
+    {
+      "recording_id": "20260904T010738-2629",
+      "out": "term/20260904T010738-2629.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "2637"
+        ]
+      },
+      "events": 1
+    },
+    {
+      "recording_id": "20260909T114458-4743",
+      "out": "term/20260909T114458-4743.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/0"
+        ],
+        "shell_pid": [
+          "4793"
+        ]
+      },
+      "events": 0
+    },
+    {
+      "recording_id": "20260909T114500-4888",
+      "out": "term/20260909T114500-4888.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "4900"
+        ]
+      },
+      "events": 0
+    },
+    {
+      "recording_id": "20260909T114547-5099",
+      "out": "term/20260909T114547-5099.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/0"
+        ],
+        "shell_pid": [
+          "5113"
+        ]
+      },
+      "events": 0
+    },
+    {
+      "recording_id": "20260909T114548-5202",
+      "out": "term/20260909T114548-5202.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "5214"
+        ]
+      },
+      "events": 0
+    },
+    {
+      "recording_id": "20260909T114621-5365",
+      "out": "term/20260909T114621-5365.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "5373"
+        ]
+      },
+      "events": 1
+    },
+    {
+      "recording_id": "20260909T115507-6070",
+      "out": "term/20260909T115507-6070.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/2",
+        "session_start_tty": [
+          "/dev/pts/3"
+        ],
+        "shell_pid": [
+          "6078"
+        ]
+      },
+      "events": 1
+    },
+    {
+      "recording_id": "20260909T120009-6511",
+      "out": "term/20260909T120009-6511.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/4",
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": [
+          "6519"
+        ]
+      },
+      "events": 3
+    },
+    {
+      "recording_id": "20260915T135522-3074",
+      "out": "term/20260915T135522-3074.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "3082"
+        ]
+      },
+      "events": 1
+    },
+    {
+      "recording_id": "20260915T135713-3326",
+      "out": "term/20260915T135713-3326.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/2",
+        "session_start_tty": [
+          "/dev/pts/3"
+        ],
+        "shell_pid": [
+          "3334"
+        ]
+      },
+      "events": 28
+    },
+    {
+      "recording_id": "20260915T141118-4809",
+      "out": "term/20260915T141118-4809.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/4",
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": [
+          "4818"
+        ]
+      },
+      "events": 2
+    },
+    {
+      "recording_id": "20260915T141245-5048",
+      "out": "term/20260915T141245-5048.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/4",
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": [
+          "5057"
+        ]
+      },
+      "events": 2
+    },
+    {
+      "recording_id": "20260915T141359-5262",
+      "out": "term/20260915T141359-5262.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/4",
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": [
+          "5271"
+        ]
+      },
+      "events": 1
+    },
+    {
+      "recording_id": "20260915T141517-5492",
+      "out": "term/20260915T141517-5492.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/4",
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": [
+          "5501"
+        ]
+      },
+      "events": 2
+    }
+  ],
+  "events": [
+    {
+      "event_id": "b9778f07e528:log:000000001",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "anchor",
+      "content": "{\"epoch\":1788408355,\"h\":\"86ce33c3d71edf62bf9a601825cb4ca98453e0f9fbac081f46b8cacf9c174dad\",\"note\":\"daily\",\"prev\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"ts\":\"2026-09-03T12:05:55+08:00\",\"type\":\"anchor\"}",
+      "observed_at": "2026-09-03T12:05:55+08:00",
+      "logged_at": "2026-09-03T12:05:55+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 1,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-03T12:05:55+08:00",
+          "epoch": 1788408355,
+          "resolved_at": "2026-09-03T12:05:55+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-03T12:05:55+08:00",
+          "epoch": 1788408355,
+          "type": "anchor",
+          "note": "daily",
+          "prev": "0000000000000000000000000000000000000000000000000000000000000000",
+          "h": "86ce33c3d71edf62bf9a601825cb4ca98453e0f9fbac081f46b8cacf9c174dad"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000037",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260903T173049-4240",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1788427849,\"h\":\"e0e6a6cd24ec770ea178e34f0a309cec1f90dec2fba3d5996616d14633af042a\",\"name\":\"zhaoxia\",\"prev\":\"8b0c5d7176eeca8ba12e79342d117f634513cd1fed75d9fc86b3c2274d75f549\",\"rec\":\"20260903T173049-4240\",\"shell_pid\":4252,\"sid\":\"20101200\",\"term\":\"gnome-terminal-\",\"ts\":\"2026-09-03T17:30:49+08:00\",\"tty\":\"/dev/pts/1\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-03T17:30:49+08:00",
+      "logged_at": "2026-09-03T17:30:49+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260903T173049-4240",
+        "requested_recording_id": "20260903T173049-4240",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 37,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-03T17:30:49+08:00",
+          "epoch": 1788427849,
+          "resolved_at": "2026-09-03T17:30:49+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-03T17:30:49+08:00",
+          "epoch": 1788427849,
+          "type": "session_start",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "tty": "/dev/pts/1",
+          "term": "gnome-terminal-",
+          "shell_pid": 4252,
+          "rec": "20260903T173049-4240",
+          "prev": "8b0c5d7176eeca8ba12e79342d117f634513cd1fed75d9fc86b3c2274d75f549",
+          "h": "e0e6a6cd24ec770ea178e34f0a309cec1f90dec2fba3d5996616d14633af042a"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000039",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260903T173143-4453",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1788427904,\"h\":\"b7ad14fa295ab2d1f0bc52635adf9c994744a9c3de924dd323bef89f8bc7c8d0\",\"name\":\"zhaoxia\",\"prev\":\"97f9e4436153687a9aa2046a3ca736d695863267132c8de18ab3a3fd6316b56f\",\"rec\":\"20260903T173143-4453\",\"shell_pid\":4462,\"sid\":\"20101200\",\"term\":\"gnome-terminal-\",\"ts\":\"2026-09-03T17:31:44+08:00\",\"tty\":\"/dev/pts/3\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-03T17:31:44+08:00",
+      "logged_at": "2026-09-03T17:31:44+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260903T173143-4453",
+        "requested_recording_id": "20260903T173143-4453",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 39,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-03T17:31:44+08:00",
+          "epoch": 1788427904,
+          "resolved_at": "2026-09-03T17:31:44+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-03T17:31:44+08:00",
+          "epoch": 1788427904,
+          "type": "session_start",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "tty": "/dev/pts/3",
+          "term": "gnome-terminal-",
+          "shell_pid": 4462,
+          "rec": "20260903T173143-4453",
+          "prev": "97f9e4436153687a9aa2046a3ca736d695863267132c8de18ab3a3fd6316b56f",
+          "h": "b7ad14fa295ab2d1f0bc52635adf9c994744a9c3de924dd323bef89f8bc7c8d0"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000043",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260903T173049-4240",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_end",
+      "content": "{\"epoch\":1788427988,\"h\":\"f0a7f861ad11130bf01dc5eed67ce5b4089878ac2b1f20e1c4acb3b4529203c2\",\"name\":\"zhaoxia\",\"prev\":\"9a0152aa68c1736f1989ebc1504023dbc017f0890511d0fd894fcb71cec9cbe5\",\"rec\":\"20260903T173049-4240\",\"sid\":\"20101200\",\"ts\":\"2026-09-03T17:33:08+08:00\",\"type\":\"session_end\"}",
+      "observed_at": "2026-09-03T17:33:08+08:00",
+      "logged_at": "2026-09-03T17:33:08+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260903T173049-4240",
+        "requested_recording_id": "20260903T173049-4240",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 43,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-03T17:33:08+08:00",
+          "epoch": 1788427988,
+          "resolved_at": "2026-09-03T17:33:08+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-03T17:33:08+08:00",
+          "epoch": 1788427988,
+          "type": "session_end",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "rec": "20260903T173049-4240",
+          "prev": "9a0152aa68c1736f1989ebc1504023dbc017f0890511d0fd894fcb71cec9cbe5",
+          "h": "f0a7f861ad11130bf01dc5eed67ce5b4089878ac2b1f20e1c4acb3b4529203c2"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000045",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260903T173318-4937",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1788427998,\"h\":\"41f509dd0e353e8d92402db00f702916fc145d06249aed9a482b9d8135bb271f\",\"name\":\"zhaoxia\",\"prev\":\"c810359c212ce5a7abdc3d9f5e9cd4a796b3f86b8e98ef963f8c4fad9ae5522d\",\"rec\":\"20260903T173318-4937\",\"shell_pid\":4945,\"sid\":\"20101200\",\"term\":\"gnome-terminal-\",\"ts\":\"2026-09-03T17:33:18+08:00\",\"tty\":\"/dev/pts/1\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-03T17:33:18+08:00",
+      "logged_at": "2026-09-03T17:33:18+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260903T173318-4937",
+        "requested_recording_id": "20260903T173318-4937",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 45,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-03T17:33:18+08:00",
+          "epoch": 1788427998,
+          "resolved_at": "2026-09-03T17:33:18+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-03T17:33:18+08:00",
+          "epoch": 1788427998,
+          "type": "session_start",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "tty": "/dev/pts/1",
+          "term": "gnome-terminal-",
+          "shell_pid": 4945,
+          "rec": "20260903T173318-4937",
+          "prev": "c810359c212ce5a7abdc3d9f5e9cd4a796b3f86b8e98ef963f8c4fad9ae5522d",
+          "h": "41f509dd0e353e8d92402db00f702916fc145d06249aed9a482b9d8135bb271f"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000052",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260903T173318-4937",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_end",
+      "content": "{\"epoch\":1788428096,\"h\":\"b0a263103c2fa6c8e42d15c840614434cabef0bcc0be86cb10cc4373b6e41578\",\"name\":\"zhaoxia\",\"prev\":\"0c1ed722ec170db80453e11e0c5ce7b0367567fd3608a5b69e8816322596d09d\",\"rec\":\"20260903T173318-4937\",\"sid\":\"20101200\",\"ts\":\"2026-09-03T17:34:56+08:00\",\"type\":\"session_end\"}",
+      "observed_at": "2026-09-03T17:34:56+08:00",
+      "logged_at": "2026-09-03T17:34:56+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260903T173318-4937",
+        "requested_recording_id": "20260903T173318-4937",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 52,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-03T17:34:56+08:00",
+          "epoch": 1788428096,
+          "resolved_at": "2026-09-03T17:34:56+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-03T17:34:56+08:00",
+          "epoch": 1788428096,
+          "type": "session_end",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "rec": "20260903T173318-4937",
+          "prev": "0c1ed722ec170db80453e11e0c5ce7b0367567fd3608a5b69e8816322596d09d",
+          "h": "b0a263103c2fa6c8e42d15c840614434cabef0bcc0be86cb10cc4373b6e41578"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000054",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260903T173517-6160",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1788428117,\"h\":\"811cdb6ade4ecafdc673db6f59628c93467c2c528e8dbef3df5b7d9143f74f96\",\"name\":\"zhaoxia\",\"prev\":\"e20c857a6cbe818f57bc4477367d44208fd4730a7b47edea919e4ff121bdba80\",\"rec\":\"20260903T173517-6160\",\"shell_pid\":6168,\"sid\":\"20101200\",\"term\":\"gnome-terminal-\",\"ts\":\"2026-09-03T17:35:17+08:00\",\"tty\":\"/dev/pts/1\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-03T17:35:17+08:00",
+      "logged_at": "2026-09-03T17:35:17+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260903T173517-6160",
+        "requested_recording_id": "20260903T173517-6160",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 54,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-03T17:35:17+08:00",
+          "epoch": 1788428117,
+          "resolved_at": "2026-09-03T17:35:17+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-03T17:35:17+08:00",
+          "epoch": 1788428117,
+          "type": "session_start",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "tty": "/dev/pts/1",
+          "term": "gnome-terminal-",
+          "shell_pid": 6168,
+          "rec": "20260903T173517-6160",
+          "prev": "e20c857a6cbe818f57bc4477367d44208fd4730a7b47edea919e4ff121bdba80",
+          "h": "811cdb6ade4ecafdc673db6f59628c93467c2c528e8dbef3df5b7d9143f74f96"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000065",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "anchor",
+      "content": "{\"epoch\":1788428295,\"h\":\"6a898ba47945aaa539bbdba8a9e16ec3b9143c19b81ba7c6e1b8233b7093010c\",\"name\":\"zhaoxia\",\"note\":\"daily\",\"prev\":\"4046a2ed23bf7dcb47effca1b92b64851643d6e3bae47fe4f9c0373b563c73df\",\"sid\":\"20101200\",\"ts\":\"2026-09-03T17:38:15+08:00\",\"type\":\"anchor\"}",
+      "observed_at": "2026-09-03T17:38:15+08:00",
+      "logged_at": "2026-09-03T17:38:15+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 65,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-03T17:38:15+08:00",
+          "epoch": 1788428295,
+          "resolved_at": "2026-09-03T17:38:15+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-03T17:38:15+08:00",
+          "epoch": 1788428295,
+          "type": "anchor",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "note": "daily",
+          "prev": "4046a2ed23bf7dcb47effca1b92b64851643d6e3bae47fe4f9c0373b563c73df",
+          "h": "6a898ba47945aaa539bbdba8a9e16ec3b9143c19b81ba7c6e1b8233b7093010c"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000074",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260903T174239-8600",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1788428559,\"h\":\"41ef4e52a8052ce4f45e3650a6fa42f65817d0eafdc0d53e647f4ae80ac2cd5a\",\"name\":\"zhaoxia\",\"prev\":\"5251a905de84c676a33a6c477d80343db40adbc8ee88ffdeeee42a3828ed717a\",\"rec\":\"20260903T174239-8600\",\"shell_pid\":8609,\"sid\":\"20101200\",\"term\":\"gnome-terminal-\",\"ts\":\"2026-09-03T17:42:39+08:00\",\"tty\":\"/dev/pts/5\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-03T17:42:39+08:00",
+      "logged_at": "2026-09-03T17:42:39+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260903T174239-8600",
+        "requested_recording_id": "20260903T174239-8600",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 74,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-03T17:42:39+08:00",
+          "epoch": 1788428559,
+          "resolved_at": "2026-09-03T17:42:39+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-03T17:42:39+08:00",
+          "epoch": 1788428559,
+          "type": "session_start",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "tty": "/dev/pts/5",
+          "term": "gnome-terminal-",
+          "shell_pid": 8609,
+          "rec": "20260903T174239-8600",
+          "prev": "5251a905de84c676a33a6c477d80343db40adbc8ee88ffdeeee42a3828ed717a",
+          "h": "41ef4e52a8052ce4f45e3650a6fa42f65817d0eafdc0d53e647f4ae80ac2cd5a"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000084",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260903T174725-9416",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1788428845,\"h\":\"60307303cc07a7caaa7771a66cfbc761b5a5e5a07fd69b8a12d4fcbe6610bdd8\",\"name\":\"zhaoxia\",\"prev\":\"a0b70ef0fc6899bda16a996a7367fddf88f9c629f666f11acf2bd5d540f79920\",\"rec\":\"20260903T174725-9416\",\"shell_pid\":9425,\"sid\":\"20101200\",\"term\":\"gnome-terminal-\",\"ts\":\"2026-09-03T17:47:25+08:00\",\"tty\":\"/dev/pts/7\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-03T17:47:25+08:00",
+      "logged_at": "2026-09-03T17:47:25+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260903T174725-9416",
+        "requested_recording_id": "20260903T174725-9416",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 84,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-03T17:47:25+08:00",
+          "epoch": 1788428845,
+          "resolved_at": "2026-09-03T17:47:25+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-03T17:47:25+08:00",
+          "epoch": 1788428845,
+          "type": "session_start",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "tty": "/dev/pts/7",
+          "term": "gnome-terminal-",
+          "shell_pid": 9425,
+          "rec": "20260903T174725-9416",
+          "prev": "a0b70ef0fc6899bda16a996a7367fddf88f9c629f666f11acf2bd5d540f79920",
+          "h": "60307303cc07a7caaa7771a66cfbc761b5a5e5a07fd69b8a12d4fcbe6610bdd8"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000085",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260903T174725-9473",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1788428845,\"h\":\"804f063be25bc800eade1ddc08b5fcef5b6607237ecd60f7bc5cf1183644521e\",\"name\":\"zhaoxia\",\"prev\":\"60307303cc07a7caaa7771a66cfbc761b5a5e5a07fd69b8a12d4fcbe6610bdd8\",\"rec\":\"20260903T174725-9473\",\"shell_pid\":9481,\"sid\":\"20101200\",\"term\":\"gnome-terminal-\",\"ts\":\"2026-09-03T17:47:25+08:00\",\"tty\":\"/dev/pts/9\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-03T17:47:25+08:00",
+      "logged_at": "2026-09-03T17:47:25+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260903T174725-9473",
+        "requested_recording_id": "20260903T174725-9473",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 85,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-03T17:47:25+08:00",
+          "epoch": 1788428845,
+          "resolved_at": "2026-09-03T17:47:25+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-03T17:47:25+08:00",
+          "epoch": 1788428845,
+          "type": "session_start",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "tty": "/dev/pts/9",
+          "term": "gnome-terminal-",
+          "shell_pid": 9481,
+          "rec": "20260903T174725-9473",
+          "prev": "60307303cc07a7caaa7771a66cfbc761b5a5e5a07fd69b8a12d4fcbe6610bdd8",
+          "h": "804f063be25bc800eade1ddc08b5fcef5b6607237ecd60f7bc5cf1183644521e"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000089",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260903T174725-9416",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_end",
+      "content": "{\"epoch\":1788429070,\"h\":\"b2447f5f659c2ab00e643e57eca1626d9031e3e7346659f5ed912a8ed86c6ffe\",\"name\":\"zhaoxia\",\"prev\":\"141f240f1a4b51669614e90bd39528d26eaaa71546aea496385b1ba8447af734\",\"rec\":\"20260903T174725-9416\",\"sid\":\"20101200\",\"ts\":\"2026-09-03T17:51:10+08:00\",\"type\":\"session_end\"}",
+      "observed_at": "2026-09-03T17:51:10+08:00",
+      "logged_at": "2026-09-03T17:51:10+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260903T174725-9416",
+        "requested_recording_id": "20260903T174725-9416",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 89,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-03T17:51:10+08:00",
+          "epoch": 1788429070,
+          "resolved_at": "2026-09-03T17:51:10+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-03T17:51:10+08:00",
+          "epoch": 1788429070,
+          "type": "session_end",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "rec": "20260903T174725-9416",
+          "prev": "141f240f1a4b51669614e90bd39528d26eaaa71546aea496385b1ba8447af734",
+          "h": "b2447f5f659c2ab00e643e57eca1626d9031e3e7346659f5ed912a8ed86c6ffe"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000092",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260903T175141-11248",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1788429101,\"h\":\"78d1454601c2e94199a10cb41fd262e2e6e2945f0e5366d3c8b016463ed96f05\",\"name\":\"zhaoxia\",\"prev\":\"aaf61c9d58adbb10ba5da931c6d83c21dbcf3cf2c04760b925c7a7d8cda2fa7b\",\"rec\":\"20260903T175141-11248\",\"shell_pid\":11257,\"sid\":\"20101200\",\"term\":\"gnome-terminal-\",\"ts\":\"2026-09-03T17:51:41+08:00\",\"tty\":\"/dev/pts/7\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-03T17:51:41+08:00",
+      "logged_at": "2026-09-03T17:51:41+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260903T175141-11248",
+        "requested_recording_id": "20260903T175141-11248",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 92,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-03T17:51:41+08:00",
+          "epoch": 1788429101,
+          "resolved_at": "2026-09-03T17:51:41+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-03T17:51:41+08:00",
+          "epoch": 1788429101,
+          "type": "session_start",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "tty": "/dev/pts/7",
+          "term": "gnome-terminal-",
+          "shell_pid": 11257,
+          "rec": "20260903T175141-11248",
+          "prev": "aaf61c9d58adbb10ba5da931c6d83c21dbcf3cf2c04760b925c7a7d8cda2fa7b",
+          "h": "78d1454601c2e94199a10cb41fd262e2e6e2945f0e5366d3c8b016463ed96f05"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000102",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260903T175414-12209",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1788429254,\"h\":\"04bab996d0f96837dc24d20370707f8007d5ba1e663ffdf3408d19168f48afaf\",\"name\":\"zhaoxia\",\"prev\":\"5613f82ec208fa9d513f35a77523310927719be7d3b4bc07a2f9af45b8165692\",\"rec\":\"20260903T175414-12209\",\"shell_pid\":12218,\"sid\":\"20101200\",\"term\":\"gnome-terminal-\",\"ts\":\"2026-09-03T17:54:14+08:00\",\"tty\":\"/dev/pts/11\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-03T17:54:14+08:00",
+      "logged_at": "2026-09-03T17:54:14+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260903T175414-12209",
+        "requested_recording_id": "20260903T175414-12209",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 102,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-03T17:54:14+08:00",
+          "epoch": 1788429254,
+          "resolved_at": "2026-09-03T17:54:14+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-03T17:54:14+08:00",
+          "epoch": 1788429254,
+          "type": "session_start",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "tty": "/dev/pts/11",
+          "term": "gnome-terminal-",
+          "shell_pid": 12218,
+          "rec": "20260903T175414-12209",
+          "prev": "5613f82ec208fa9d513f35a77523310927719be7d3b4bc07a2f9af45b8165692",
+          "h": "04bab996d0f96837dc24d20370707f8007d5ba1e663ffdf3408d19168f48afaf"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000111",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260903T175628-13424",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1788429388,\"h\":\"24d8937b724a99ef6670a0077e42e44df78bcb4204f107af09b05de3bf5caa57\",\"name\":\"zhaoxia\",\"prev\":\"d2658bb6f30b2fdcdea4972e24fce25d063f1e9ce570cfb3a424fdda162d62ef\",\"rec\":\"20260903T175628-13424\",\"shell_pid\":13433,\"sid\":\"20101200\",\"term\":\"gnome-terminal-\",\"ts\":\"2026-09-03T17:56:28+08:00\",\"tty\":\"/dev/pts/13\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-03T17:56:28+08:00",
+      "logged_at": "2026-09-03T17:56:28+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260903T175628-13424",
+        "requested_recording_id": "20260903T175628-13424",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 111,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-03T17:56:28+08:00",
+          "epoch": 1788429388,
+          "resolved_at": "2026-09-03T17:56:28+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-03T17:56:28+08:00",
+          "epoch": 1788429388,
+          "type": "session_start",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "tty": "/dev/pts/13",
+          "term": "gnome-terminal-",
+          "shell_pid": 13433,
+          "rec": "20260903T175628-13424",
+          "prev": "d2658bb6f30b2fdcdea4972e24fce25d063f1e9ce570cfb3a424fdda162d62ef",
+          "h": "24d8937b724a99ef6670a0077e42e44df78bcb4204f107af09b05de3bf5caa57"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000114",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260903T175756-13613",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1788429476,\"h\":\"2a10a8b4d555d224fda75221dd312402e124533ef50c23d17c0ed6debf4b6ed9\",\"name\":\"zhaoxia\",\"prev\":\"3fe078d6d5f341025af169e069ae2d57d481fb8fa25e40b1c43c7817ad0a63fb\",\"rec\":\"20260903T175756-13613\",\"shell_pid\":13622,\"sid\":\"20101200\",\"term\":\"gnome-terminal-\",\"ts\":\"2026-09-03T17:57:56+08:00\",\"tty\":\"/dev/pts/15\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-03T17:57:56+08:00",
+      "logged_at": "2026-09-03T17:57:56+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260903T175756-13613",
+        "requested_recording_id": "20260903T175756-13613",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 114,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-03T17:57:56+08:00",
+          "epoch": 1788429476,
+          "resolved_at": "2026-09-03T17:57:56+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-03T17:57:56+08:00",
+          "epoch": 1788429476,
+          "type": "session_start",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "tty": "/dev/pts/15",
+          "term": "gnome-terminal-",
+          "shell_pid": 13622,
+          "rec": "20260903T175756-13613",
+          "prev": "3fe078d6d5f341025af169e069ae2d57d481fb8fa25e40b1c43c7817ad0a63fb",
+          "h": "2a10a8b4d555d224fda75221dd312402e124533ef50c23d17c0ed6debf4b6ed9"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000121",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260903T175756-13613",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_end",
+      "content": "{\"epoch\":1788429532,\"h\":\"a86209fbd4021e07efe6f6ad53db113140bf94b0aa343fa17cc2ef5490a9addc\",\"name\":\"zhaoxia\",\"prev\":\"5eaaa75a35b1b246c295f6f378b8debf20964e31fb7d88ba14ba782907988419\",\"rec\":\"20260903T175756-13613\",\"sid\":\"20101200\",\"ts\":\"2026-09-03T17:58:52+08:00\",\"type\":\"session_end\"}",
+      "observed_at": "2026-09-03T17:58:52+08:00",
+      "logged_at": "2026-09-03T17:58:52+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260903T175756-13613",
+        "requested_recording_id": "20260903T175756-13613",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 121,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-03T17:58:52+08:00",
+          "epoch": 1788429532,
+          "resolved_at": "2026-09-03T17:58:52+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-03T17:58:52+08:00",
+          "epoch": 1788429532,
+          "type": "session_end",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "rec": "20260903T175756-13613",
+          "prev": "5eaaa75a35b1b246c295f6f378b8debf20964e31fb7d88ba14ba782907988419",
+          "h": "a86209fbd4021e07efe6f6ad53db113140bf94b0aa343fa17cc2ef5490a9addc"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000123",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260903T174239-8600",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_end",
+      "content": "{\"epoch\":1788429538,\"h\":\"fa7f51c9dda08731aca68acb3c3811ccbc56ad87393c2b3cb05bf1549f2a297d\",\"name\":\"zhaoxia\",\"prev\":\"565a047e114eb6ae968cf51df565b3fc17e4762cafbc5e5575680152eacbbead\",\"rec\":\"20260903T174239-8600\",\"sid\":\"20101200\",\"ts\":\"2026-09-03T17:58:58+08:00\",\"type\":\"session_end\"}",
+      "observed_at": "2026-09-03T17:58:58+08:00",
+      "logged_at": "2026-09-03T17:58:58+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260903T174239-8600",
+        "requested_recording_id": "20260903T174239-8600",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 123,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-03T17:58:58+08:00",
+          "epoch": 1788429538,
+          "resolved_at": "2026-09-03T17:58:58+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-03T17:58:58+08:00",
+          "epoch": 1788429538,
+          "type": "session_end",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "rec": "20260903T174239-8600",
+          "prev": "565a047e114eb6ae968cf51df565b3fc17e4762cafbc5e5575680152eacbbead",
+          "h": "fa7f51c9dda08731aca68acb3c3811ccbc56ad87393c2b3cb05bf1549f2a297d"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000122",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260903T175628-13424",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_end",
+      "content": "{\"epoch\":1788429538,\"h\":\"565a047e114eb6ae968cf51df565b3fc17e4762cafbc5e5575680152eacbbead\",\"name\":\"zhaoxia\",\"prev\":\"a86209fbd4021e07efe6f6ad53db113140bf94b0aa343fa17cc2ef5490a9addc\",\"rec\":\"20260903T175628-13424\",\"sid\":\"20101200\",\"ts\":\"2026-09-03T17:58:58+08:00\",\"type\":\"session_end\"}",
+      "observed_at": "2026-09-03T17:58:58+08:00",
+      "logged_at": "2026-09-03T17:58:58+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260903T175628-13424",
+        "requested_recording_id": "20260903T175628-13424",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 122,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-03T17:58:58+08:00",
+          "epoch": 1788429538,
+          "resolved_at": "2026-09-03T17:58:58+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-03T17:58:58+08:00",
+          "epoch": 1788429538,
+          "type": "session_end",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "rec": "20260903T175628-13424",
+          "prev": "a86209fbd4021e07efe6f6ad53db113140bf94b0aa343fa17cc2ef5490a9addc",
+          "h": "565a047e114eb6ae968cf51df565b3fc17e4762cafbc5e5575680152eacbbead"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000124",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "submit",
+      "content": "{\"epoch\":1788429545,\"h\":\"c8b2f38aac06a8981f7695a024ddb3e5a783046eff3cf106fbd48cda80a6dfea\",\"name\":\"zhaoxia\",\"pkg\":\"20101200-zhaoxia-实验提交-20260903-1759.tar.gz\",\"prev\":\"fa7f51c9dda08731aca68acb3c3811ccbc56ad87393c2b3cb05bf1549f2a297d\",\"sha256\":\"eeca1a558c5db627e7177e686dbcef05931f2c61286e17d81958824100951c68\",\"sid\":\"20101200\",\"size\":1567291,\"ts\":\"2026-09-03T17:59:05+08:00\",\"type\":\"submit\"}",
+      "observed_at": "2026-09-03T17:59:05+08:00",
+      "logged_at": "2026-09-03T17:59:05+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 124,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-03T17:59:05+08:00",
+          "epoch": 1788429545,
+          "resolved_at": "2026-09-03T17:59:05+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-03T17:59:05+08:00",
+          "epoch": 1788429545,
+          "type": "submit",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "pkg": "20101200-zhaoxia-实验提交-20260903-1759.tar.gz",
+          "size": 1567291,
+          "sha256": "eeca1a558c5db627e7177e686dbcef05931f2c61286e17d81958824100951c68",
+          "prev": "fa7f51c9dda08731aca68acb3c3811ccbc56ad87393c2b3cb05bf1549f2a297d",
+          "h": "c8b2f38aac06a8981f7695a024ddb3e5a783046eff3cf106fbd48cda80a6dfea"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000125",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "upload",
+      "content": "{\"epoch\":1788429547,\"h\":\"5cf424b5aacf58e7f3973d980f46af68f189c244033ad4f48f40efd7eccf87a6\",\"name\":\"zhaoxia\",\"ok\":\"true\",\"prev\":\"c8b2f38aac06a8981f7695a024ddb3e5a783046eff3cf106fbd48cda80a6dfea\",\"sha\":\"eeca1a558c5db627e7177e686dbcef05931f2c61286e17d81958824100951c68\",\"sid\":\"20101200\",\"ts\":\"2026-09-03T17:59:07+08:00\",\"type\":\"upload\"}",
+      "observed_at": "2026-09-03T17:59:07+08:00",
+      "logged_at": "2026-09-03T17:59:07+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 125,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-03T17:59:07+08:00",
+          "epoch": 1788429547,
+          "resolved_at": "2026-09-03T17:59:07+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-03T17:59:07+08:00",
+          "epoch": 1788429547,
+          "type": "upload",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "ok": "true",
+          "sha": "eeca1a558c5db627e7177e686dbcef05931f2c61286e17d81958824100951c68",
+          "prev": "c8b2f38aac06a8981f7695a024ddb3e5a783046eff3cf106fbd48cda80a6dfea",
+          "h": "5cf424b5aacf58e7f3973d980f46af68f189c244033ad4f48f40efd7eccf87a6"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000128",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "id_change",
+      "content": "{\"epoch\":1788429667,\"from\":\"()\",\"h\":\"5c2f2366c9c1729a82b01463f6ef3e9082a5263d6f339d2338fa27dcc73ebdca\",\"name\":\"zhaoxia\",\"prev\":\"c1febb9e0abbe9750740a6cb35aa3e640325e208bbfeecfb185b905096db11b0\",\"sid\":\"20101200\",\"ts\":\"2026-09-03T18:01:07+08:00\",\"type\":\"id_change\"}",
+      "observed_at": "2026-09-03T18:01:07+08:00",
+      "logged_at": "2026-09-03T18:01:07+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 128,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-03T18:01:07+08:00",
+          "epoch": 1788429667,
+          "resolved_at": "2026-09-03T18:01:07+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-03T18:01:07+08:00",
+          "epoch": 1788429667,
+          "type": "id_change",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "from": "()",
+          "prev": "c1febb9e0abbe9750740a6cb35aa3e640325e208bbfeecfb185b905096db11b0",
+          "h": "5c2f2366c9c1729a82b01463f6ef3e9082a5263d6f339d2338fa27dcc73ebdca"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000006",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "anchor",
+      "content": "{\"epoch\":1788455155,\"h\":\"2ee46d4307cab12eb4145cad4427f84f8f9fa5f82a3ff2d77def60f7d1a74e7b\",\"note\":\"daily\",\"prev\":\"d96d5b7f7e6a6b7a459bd878d9d89d161cf1659fe96fe99d2f8c832468096f67\",\"ts\":\"2026-09-04T01:05:55+08:00\",\"type\":\"anchor\"}",
+      "observed_at": "2026-09-04T01:05:55+08:00",
+      "logged_at": "2026-09-04T01:05:55+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 6,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-04T01:05:55+08:00",
+          "epoch": 1788455155,
+          "resolved_at": "2026-09-04T01:05:55+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-04T01:05:55+08:00",
+          "epoch": 1788455155,
+          "type": "anchor",
+          "note": "daily",
+          "prev": "d96d5b7f7e6a6b7a459bd878d9d89d161cf1659fe96fe99d2f8c832468096f67",
+          "h": "2ee46d4307cab12eb4145cad4427f84f8f9fa5f82a3ff2d77def60f7d1a74e7b"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000009",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "id_first_bind",
+      "content": "{\"epoch\":1788455238,\"h\":\"df2173bdc137a55bc78a15d43208a199a188bd3c268f2e91fc94b7996f85b7cb\",\"name\":\"zhaoxia\",\"prev\":\"0e8f3910431a12acf7bdb080728b9ad24a6c0ab8da2c3062aa7d0fe17763a08c\",\"sid\":\"20101200\",\"ts\":\"2026-09-04T01:07:18+08:00\",\"type\":\"id_first_bind\"}",
+      "observed_at": "2026-09-04T01:07:18+08:00",
+      "logged_at": "2026-09-04T01:07:18+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 9,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-04T01:07:18+08:00",
+          "epoch": 1788455238,
+          "resolved_at": "2026-09-04T01:07:18+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-04T01:07:18+08:00",
+          "epoch": 1788455238,
+          "type": "id_first_bind",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "prev": "0e8f3910431a12acf7bdb080728b9ad24a6c0ab8da2c3062aa7d0fe17763a08c",
+          "h": "df2173bdc137a55bc78a15d43208a199a188bd3c268f2e91fc94b7996f85b7cb"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000010",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260904T010738-2629",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1788455258,\"h\":\"56a57c983287b85ab93c1946878f3d247fd43824d3aef3adc61c650b4e06d5ad\",\"name\":\"zhaoxia\",\"prev\":\"df2173bdc137a55bc78a15d43208a199a188bd3c268f2e91fc94b7996f85b7cb\",\"rec\":\"20260904T010738-2629\",\"shell_pid\":2637,\"sid\":\"20101200\",\"term\":\"gnome-terminal-\",\"ts\":\"2026-09-04T01:07:38+08:00\",\"tty\":\"/dev/pts/1\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-04T01:07:38+08:00",
+      "logged_at": "2026-09-04T01:07:38+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260904T010738-2629",
+        "requested_recording_id": "20260904T010738-2629",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 10,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-04T01:07:38+08:00",
+          "epoch": 1788455258,
+          "resolved_at": "2026-09-04T01:07:38+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-04T01:07:38+08:00",
+          "epoch": 1788455258,
+          "type": "session_start",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "tty": "/dev/pts/1",
+          "term": "gnome-terminal-",
+          "shell_pid": 2637,
+          "rec": "20260904T010738-2629",
+          "prev": "df2173bdc137a55bc78a15d43208a199a188bd3c268f2e91fc94b7996f85b7cb",
+          "h": "56a57c983287b85ab93c1946878f3d247fd43824d3aef3adc61c650b4e06d5ad"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000015",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260904T010738-2629",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_end",
+      "content": "{\"epoch\":1788455410,\"h\":\"372366fa7234065a8016c7c6de903544ceb405cb80110ce591aacbdcadb92146\",\"name\":\"zhaoxia\",\"prev\":\"5c323e3ee7a85fb1e46eb8152b5b7d9d4b8f9953224e46b0a9ce1a91d57330d1\",\"rec\":\"20260904T010738-2629\",\"sid\":\"20101200\",\"ts\":\"2026-09-04T01:10:10+08:00\",\"type\":\"session_end\"}",
+      "observed_at": "2026-09-04T01:10:10+08:00",
+      "logged_at": "2026-09-04T01:10:10+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260904T010738-2629",
+        "requested_recording_id": "20260904T010738-2629",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 15,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-04T01:10:10+08:00",
+          "epoch": 1788455410,
+          "resolved_at": "2026-09-04T01:10:10+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-04T01:10:10+08:00",
+          "epoch": 1788455410,
+          "type": "session_end",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "rec": "20260904T010738-2629",
+          "prev": "5c323e3ee7a85fb1e46eb8152b5b7d9d4b8f9953224e46b0a9ce1a91d57330d1",
+          "h": "372366fa7234065a8016c7c6de903544ceb405cb80110ce591aacbdcadb92146"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000021",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "boot_confirm",
+      "content": "{\"auto\":\"false\",\"epoch\":1788455733,\"h\":\"1210241c1a9128c4d5fd6f550bba14cb72fbac5f97b305022f2a417f2fcf2b07\",\"name\":\"zhaoxia\",\"prev\":\"90008b4c483710152c3d30c5641d11a8256af104cce0b9697d751ec2fb3dce8e\",\"sid\":\"20101200\",\"ts\":\"2026-09-04T01:15:33+08:00\",\"type\":\"boot_confirm\"}",
+      "observed_at": "2026-09-04T01:15:33+08:00",
+      "logged_at": "2026-09-04T01:15:33+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 21,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-04T01:15:33+08:00",
+          "epoch": 1788455733,
+          "resolved_at": "2026-09-04T01:15:33+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-04T01:15:33+08:00",
+          "epoch": 1788455733,
+          "type": "boot_confirm",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "auto": "false",
+          "prev": "90008b4c483710152c3d30c5641d11a8256af104cce0b9697d751ec2fb3dce8e",
+          "h": "1210241c1a9128c4d5fd6f550bba14cb72fbac5f97b305022f2a417f2fcf2b07"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000035",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "boot_confirm",
+      "content": "{\"auto\":\"false\",\"epoch\":1788456587,\"h\":\"1e0bd82672760ed75cd18055b943494f9f6be983b2e6e8cad3c47822a3cce923\",\"name\":\"zhaoxia\",\"prev\":\"004b66d12fef5f3240b2889c5c4605e34f3b23d41bb1913afc25d4c2fac2fff3\",\"sid\":\"20101200\",\"ts\":\"2026-09-04T01:29:47+08:00\",\"type\":\"boot_confirm\"}",
+      "observed_at": "2026-09-04T01:29:47+08:00",
+      "logged_at": "2026-09-04T01:29:47+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 35,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-04T01:29:47+08:00",
+          "epoch": 1788456587,
+          "resolved_at": "2026-09-04T01:29:47+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-04T01:29:47+08:00",
+          "epoch": 1788456587,
+          "type": "boot_confirm",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "auto": "false",
+          "prev": "004b66d12fef5f3240b2889c5c4605e34f3b23d41bb1913afc25d4c2fac2fff3",
+          "h": "1e0bd82672760ed75cd18055b943494f9f6be983b2e6e8cad3c47822a3cce923"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000129",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "anchor",
+      "content": "{\"epoch\":1788924658,\"h\":\"4b86379b7968f225fa5c304b2e902e3074ad8cd270aab3c3e8aa37f29fce3080\",\"name\":\"zhaoxia\",\"note\":\"daily\",\"prev\":\"5c2f2366c9c1729a82b01463f6ef3e9082a5263d6f339d2338fa27dcc73ebdca\",\"sid\":\"20101200\",\"ts\":\"2026-09-09T11:30:58+08:00\",\"type\":\"anchor\"}",
+      "observed_at": "2026-09-09T11:30:58+08:00",
+      "logged_at": "2026-09-09T11:30:58+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 129,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-09T11:30:58+08:00",
+          "epoch": 1788924658,
+          "resolved_at": "2026-09-09T11:30:58+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-09T11:30:58+08:00",
+          "epoch": 1788924658,
+          "type": "anchor",
+          "sid": "20101200",
+          "name": "zhaoxia",
+          "note": "daily",
+          "prev": "5c2f2366c9c1729a82b01463f6ef3e9082a5263d6f339d2338fa27dcc73ebdca",
+          "h": "4b86379b7968f225fa5c304b2e902e3074ad8cd270aab3c3e8aa37f29fce3080"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000132",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "id_change",
+      "content": "{\"epoch\":1788924755,\"from\":\"孙翊铭(2406080206)\",\"h\":\"92681c9a9f28f49d84b8cc9ff7408af707195073b043a327dc8d2411ebfe4f88\",\"name\":\"孙翊铭\",\"prev\":\"9b12c86e57359184e7fb8d1d7d7310d61528cc00921f0eb7129cc9d6ee1bd153\",\"sid\":\"2406080206\",\"ts\":\"2026-09-09T11:32:35+08:00\",\"type\":\"id_change\"}",
+      "observed_at": "2026-09-09T11:32:35+08:00",
+      "logged_at": "2026-09-09T11:32:35+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 132,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-09T11:32:35+08:00",
+          "epoch": 1788924755,
+          "resolved_at": "2026-09-09T11:32:35+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-09T11:32:35+08:00",
+          "epoch": 1788924755,
+          "type": "id_change",
+          "sid": "2406080206",
+          "name": "孙翊铭",
+          "from": "孙翊铭(2406080206)",
+          "prev": "9b12c86e57359184e7fb8d1d7d7310d61528cc00921f0eb7129cc9d6ee1bd153",
+          "h": "92681c9a9f28f49d84b8cc9ff7408af707195073b043a327dc8d2411ebfe4f88"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000146",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260909T114458-4743",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1788925498,\"h\":\"20f2c780599f70a0bd69b50d013fb0a507a8b6b8b4a69e9ef4e63352683acd05\",\"name\":\"孙翊铭\",\"prev\":\"20e192da13fb0372aaecda9c807b5a5f806c5a05820a2be38c66c9eb6a85ce61\",\"rec\":\"20260909T114458-4743\",\"shell_pid\":4793,\"sid\":\"2406080206\",\"term\":\"code\",\"ts\":\"2026-09-09T11:44:58+08:00\",\"tty\":\"/dev/pts/0\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-09T11:44:58+08:00",
+      "logged_at": "2026-09-09T11:44:58+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260909T114458-4743",
+        "requested_recording_id": "20260909T114458-4743",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 146,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-09T11:44:58+08:00",
+          "epoch": 1788925498,
+          "resolved_at": "2026-09-09T11:44:58+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-09T11:44:58+08:00",
+          "epoch": 1788925498,
+          "type": "session_start",
+          "sid": "2406080206",
+          "name": "孙翊铭",
+          "tty": "/dev/pts/0",
+          "term": "code",
+          "shell_pid": 4793,
+          "rec": "20260909T114458-4743",
+          "prev": "20e192da13fb0372aaecda9c807b5a5f806c5a05820a2be38c66c9eb6a85ce61",
+          "h": "20f2c780599f70a0bd69b50d013fb0a507a8b6b8b4a69e9ef4e63352683acd05"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000147",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260909T114500-4888",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1788925500,\"h\":\"8f37bfda9e19267d1eca5dea68016b5cd668664c5919468d742c209aa6bad4f7\",\"name\":\"孙翊铭\",\"prev\":\"20f2c780599f70a0bd69b50d013fb0a507a8b6b8b4a69e9ef4e63352683acd05\",\"rec\":\"20260909T114500-4888\",\"shell_pid\":4900,\"sid\":\"2406080206\",\"term\":\"code\",\"ts\":\"2026-09-09T11:45:00+08:00\",\"tty\":\"/dev/pts/1\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-09T11:45:00+08:00",
+      "logged_at": "2026-09-09T11:45:00+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260909T114500-4888",
+        "requested_recording_id": "20260909T114500-4888",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 147,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-09T11:45:00+08:00",
+          "epoch": 1788925500,
+          "resolved_at": "2026-09-09T11:45:00+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-09T11:45:00+08:00",
+          "epoch": 1788925500,
+          "type": "session_start",
+          "sid": "2406080206",
+          "name": "孙翊铭",
+          "tty": "/dev/pts/1",
+          "term": "code",
+          "shell_pid": 4900,
+          "rec": "20260909T114500-4888",
+          "prev": "20f2c780599f70a0bd69b50d013fb0a507a8b6b8b4a69e9ef4e63352683acd05",
+          "h": "8f37bfda9e19267d1eca5dea68016b5cd668664c5919468d742c209aa6bad4f7"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000148",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260909T114547-5099",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1788925547,\"h\":\"a3a46764e1b069691f00302ae353246e002c702271d69eae7cd15a3f5f68d43a\",\"name\":\"孙翊铭\",\"prev\":\"8f37bfda9e19267d1eca5dea68016b5cd668664c5919468d742c209aa6bad4f7\",\"rec\":\"20260909T114547-5099\",\"shell_pid\":5113,\"sid\":\"2406080206\",\"term\":\"code\",\"ts\":\"2026-09-09T11:45:47+08:00\",\"tty\":\"/dev/pts/0\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-09T11:45:47+08:00",
+      "logged_at": "2026-09-09T11:45:47+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260909T114547-5099",
+        "requested_recording_id": "20260909T114547-5099",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 148,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-09T11:45:47+08:00",
+          "epoch": 1788925547,
+          "resolved_at": "2026-09-09T11:45:47+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-09T11:45:47+08:00",
+          "epoch": 1788925547,
+          "type": "session_start",
+          "sid": "2406080206",
+          "name": "孙翊铭",
+          "tty": "/dev/pts/0",
+          "term": "code",
+          "shell_pid": 5113,
+          "rec": "20260909T114547-5099",
+          "prev": "8f37bfda9e19267d1eca5dea68016b5cd668664c5919468d742c209aa6bad4f7",
+          "h": "a3a46764e1b069691f00302ae353246e002c702271d69eae7cd15a3f5f68d43a"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000149",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260909T114548-5202",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1788925548,\"h\":\"9b81dfdcd859ffb05c9217f089f2e532794da92d69e859a994eea50bc9299ea1\",\"name\":\"孙翊铭\",\"prev\":\"a3a46764e1b069691f00302ae353246e002c702271d69eae7cd15a3f5f68d43a\",\"rec\":\"20260909T114548-5202\",\"shell_pid\":5214,\"sid\":\"2406080206\",\"term\":\"code\",\"ts\":\"2026-09-09T11:45:48+08:00\",\"tty\":\"/dev/pts/1\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-09T11:45:48+08:00",
+      "logged_at": "2026-09-09T11:45:48+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260909T114548-5202",
+        "requested_recording_id": "20260909T114548-5202",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 149,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-09T11:45:48+08:00",
+          "epoch": 1788925548,
+          "resolved_at": "2026-09-09T11:45:48+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-09T11:45:48+08:00",
+          "epoch": 1788925548,
+          "type": "session_start",
+          "sid": "2406080206",
+          "name": "孙翊铭",
+          "tty": "/dev/pts/1",
+          "term": "code",
+          "shell_pid": 5214,
+          "rec": "20260909T114548-5202",
+          "prev": "a3a46764e1b069691f00302ae353246e002c702271d69eae7cd15a3f5f68d43a",
+          "h": "9b81dfdcd859ffb05c9217f089f2e532794da92d69e859a994eea50bc9299ea1"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000151",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260909T114621-5365",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1788925581,\"h\":\"2658a6be85b2f9246191af6234f34433e7bedaad44af703dae7d19545fb6f383\",\"name\":\"孙翊铭\",\"prev\":\"15d8c9dea56b861aaee87b0ace7fe67271c88a39a02db8cc06caa645d562ef2a\",\"rec\":\"20260909T114621-5365\",\"shell_pid\":5373,\"sid\":\"2406080206\",\"term\":\"gnome-terminal-\",\"ts\":\"2026-09-09T11:46:21+08:00\",\"tty\":\"/dev/pts/1\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-09T11:46:21+08:00",
+      "logged_at": "2026-09-09T11:46:21+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260909T114621-5365",
+        "requested_recording_id": "20260909T114621-5365",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 151,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-09T11:46:21+08:00",
+          "epoch": 1788925581,
+          "resolved_at": "2026-09-09T11:46:21+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-09T11:46:21+08:00",
+          "epoch": 1788925581,
+          "type": "session_start",
+          "sid": "2406080206",
+          "name": "孙翊铭",
+          "tty": "/dev/pts/1",
+          "term": "gnome-terminal-",
+          "shell_pid": 5373,
+          "rec": "20260909T114621-5365",
+          "prev": "15d8c9dea56b861aaee87b0ace7fe67271c88a39a02db8cc06caa645d562ef2a",
+          "h": "2658a6be85b2f9246191af6234f34433e7bedaad44af703dae7d19545fb6f383"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000161",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260909T115507-6070",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1788926107,\"h\":\"728ffae38be944dea19c9c94d00b38e2e3be8e5db47543b7041cd37f52a6b4b0\",\"name\":\"孙翊铭\",\"prev\":\"e7a640a319bd5b77ac706f66527c5c0bb01f3cfa1299cb4f0be47bf12d1ed1c3\",\"rec\":\"20260909T115507-6070\",\"shell_pid\":6078,\"sid\":\"2406080206\",\"term\":\"gnome-terminal-\",\"ts\":\"2026-09-09T11:55:07+08:00\",\"tty\":\"/dev/pts/3\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-09T11:55:07+08:00",
+      "logged_at": "2026-09-09T11:55:07+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260909T115507-6070",
+        "requested_recording_id": "20260909T115507-6070",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 161,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-09T11:55:07+08:00",
+          "epoch": 1788926107,
+          "resolved_at": "2026-09-09T11:55:07+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-09T11:55:07+08:00",
+          "epoch": 1788926107,
+          "type": "session_start",
+          "sid": "2406080206",
+          "name": "孙翊铭",
+          "tty": "/dev/pts/3",
+          "term": "gnome-terminal-",
+          "shell_pid": 6078,
+          "rec": "20260909T115507-6070",
+          "prev": "e7a640a319bd5b77ac706f66527c5c0bb01f3cfa1299cb4f0be47bf12d1ed1c3",
+          "h": "728ffae38be944dea19c9c94d00b38e2e3be8e5db47543b7041cd37f52a6b4b0"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000167",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260909T120009-6511",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1788926409,\"h\":\"1c2d79e334137e19425bf583dee520f651035b8a828d0c3f17042ecd323135aa\",\"name\":\"孙翊铭\",\"prev\":\"6b3b2cc07fba4791eac903963e400bf61d2d1a1c9c306b6fb58d9c34e46976fa\",\"rec\":\"20260909T120009-6511\",\"shell_pid\":6519,\"sid\":\"2406080206\",\"term\":\"gnome-terminal-\",\"ts\":\"2026-09-09T12:00:09+08:00\",\"tty\":\"/dev/pts/5\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-09T12:00:09+08:00",
+      "logged_at": "2026-09-09T12:00:09+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260909T120009-6511",
+        "requested_recording_id": "20260909T120009-6511",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 167,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-09T12:00:09+08:00",
+          "epoch": 1788926409,
+          "resolved_at": "2026-09-09T12:00:09+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-09T12:00:09+08:00",
+          "epoch": 1788926409,
+          "type": "session_start",
+          "sid": "2406080206",
+          "name": "孙翊铭",
+          "tty": "/dev/pts/5",
+          "term": "gnome-terminal-",
+          "shell_pid": 6519,
+          "rec": "20260909T120009-6511",
+          "prev": "6b3b2cc07fba4791eac903963e400bf61d2d1a1c9c306b6fb58d9c34e46976fa",
+          "h": "1c2d79e334137e19425bf583dee520f651035b8a828d0c3f17042ecd323135aa"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000170",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "boot_confirm",
+      "content": "{\"auto\":\"false\",\"epoch\":1788939263,\"h\":\"377512f8693ced965b58428f7f151344e2f4ba917713db003be1ee58b38c968d\",\"name\":\"孙翊铭\",\"prev\":\"4fcc1661e9d51c4ef6acd602f06d0cc5183cc8470dbb19e50bf85e4eae447773\",\"sid\":\"2406080206\",\"ts\":\"2026-09-09T15:34:23+08:00\",\"type\":\"boot_confirm\"}",
+      "observed_at": "2026-09-09T15:34:23+08:00",
+      "logged_at": "2026-09-09T15:34:23+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 170,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-09T15:34:23+08:00",
+          "epoch": 1788939263,
+          "resolved_at": "2026-09-09T15:34:23+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-09T15:34:23+08:00",
+          "epoch": 1788939263,
+          "type": "boot_confirm",
+          "sid": "2406080206",
+          "name": "孙翊铭",
+          "auto": "false",
+          "prev": "4fcc1661e9d51c4ef6acd602f06d0cc5183cc8470dbb19e50bf85e4eae447773",
+          "h": "377512f8693ced965b58428f7f151344e2f4ba917713db003be1ee58b38c968d"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000177",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "anchor",
+      "content": "{\"epoch\":1789450070,\"h\":\"86029d251a2b3295c615823d06ff04e155701b90df71faa8b22b2b4216a33638\",\"name\":\"孙翊铭\",\"note\":\"daily\",\"prev\":\"801881936913cb28e47203207c31f75589de22c04479a035df2fd26a5ca45966\",\"sid\":\"2406080206\",\"ts\":\"2026-09-15T13:27:50+08:00\",\"type\":\"anchor\"}",
+      "observed_at": "2026-09-15T13:27:50+08:00",
+      "logged_at": "2026-09-15T13:27:50+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 177,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-15T13:27:50+08:00",
+          "epoch": 1789450070,
+          "resolved_at": "2026-09-15T13:27:50+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-15T13:27:50+08:00",
+          "epoch": 1789450070,
+          "type": "anchor",
+          "sid": "2406080206",
+          "name": "孙翊铭",
+          "note": "daily",
+          "prev": "801881936913cb28e47203207c31f75589de22c04479a035df2fd26a5ca45966",
+          "h": "86029d251a2b3295c615823d06ff04e155701b90df71faa8b22b2b4216a33638"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000179",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "boot_confirm",
+      "content": "{\"auto\":\"false\",\"epoch\":1789450081,\"h\":\"dd6eea49123630e5acd3d9220ce567bafa36511bd2887e55c35c3f881f0c30c6\",\"name\":\"孙翊铭\",\"prev\":\"6098cd81c3e1fc7084e04e0be6dd2dc2d290a43278ab904e0bf6f87a9393b74b\",\"sid\":\"2406080206\",\"ts\":\"2026-09-15T13:28:01+08:00\",\"type\":\"boot_confirm\"}",
+      "observed_at": "2026-09-15T13:28:01+08:00",
+      "logged_at": "2026-09-15T13:28:01+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 179,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-15T13:28:01+08:00",
+          "epoch": 1789450081,
+          "resolved_at": "2026-09-15T13:28:01+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-15T13:28:01+08:00",
+          "epoch": 1789450081,
+          "type": "boot_confirm",
+          "sid": "2406080206",
+          "name": "孙翊铭",
+          "auto": "false",
+          "prev": "6098cd81c3e1fc7084e04e0be6dd2dc2d290a43278ab904e0bf6f87a9393b74b",
+          "h": "dd6eea49123630e5acd3d9220ce567bafa36511bd2887e55c35c3f881f0c30c6"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000204",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "boot_confirm",
+      "content": "{\"auto\":\"false\",\"epoch\":1789451493,\"h\":\"3e84b35d8057b1627f3bed259de944b252aab9727c4ec5829736bcbe1acdca3a\",\"name\":\"孙翊铭\",\"prev\":\"e3357e775383c58026964ad2d59a899cc0e84cd760cb90156e49a4fd83839203\",\"sid\":\"2406080206\",\"ts\":\"2026-09-15T13:51:33+08:00\",\"type\":\"boot_confirm\"}",
+      "observed_at": "2026-09-15T13:51:33+08:00",
+      "logged_at": "2026-09-15T13:51:33+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 204,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-15T13:51:33+08:00",
+          "epoch": 1789451493,
+          "resolved_at": "2026-09-15T13:51:33+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-15T13:51:33+08:00",
+          "epoch": 1789451493,
+          "type": "boot_confirm",
+          "sid": "2406080206",
+          "name": "孙翊铭",
+          "auto": "false",
+          "prev": "e3357e775383c58026964ad2d59a899cc0e84cd760cb90156e49a4fd83839203",
+          "h": "3e84b35d8057b1627f3bed259de944b252aab9727c4ec5829736bcbe1acdca3a"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000208",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260915T135522-3074",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1789451722,\"h\":\"d71503d73d3e59739ee175a41299a3003f8b50d1bf152966b85766bbebb2d102\",\"name\":\"孙翊铭\",\"prev\":\"01f4036475aa02c0de5b4f14ed1dacf2ac49a284121c8ae5114cf9caa6e3fe2f\",\"rec\":\"20260915T135522-3074\",\"shell_pid\":3082,\"sid\":\"2406080206\",\"term\":\"gnome-terminal-\",\"ts\":\"2026-09-15T13:55:22+08:00\",\"tty\":\"/dev/pts/1\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-15T13:55:22+08:00",
+      "logged_at": "2026-09-15T13:55:22+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260915T135522-3074",
+        "requested_recording_id": "20260915T135522-3074",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 208,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-15T13:55:22+08:00",
+          "epoch": 1789451722,
+          "resolved_at": "2026-09-15T13:55:22+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-15T13:55:22+08:00",
+          "epoch": 1789451722,
+          "type": "session_start",
+          "sid": "2406080206",
+          "name": "孙翊铭",
+          "tty": "/dev/pts/1",
+          "term": "gnome-terminal-",
+          "shell_pid": 3082,
+          "rec": "20260915T135522-3074",
+          "prev": "01f4036475aa02c0de5b4f14ed1dacf2ac49a284121c8ae5114cf9caa6e3fe2f",
+          "h": "d71503d73d3e59739ee175a41299a3003f8b50d1bf152966b85766bbebb2d102"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000211",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260915T135713-3326",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1789451833,\"h\":\"31f49f33467953096d404ea1585ee03d09a6db93a8eba4143033fcded8732b94\",\"name\":\"孙翊铭\",\"prev\":\"3e7f27a3135c0117b632e406eea4cf31f16f7b830d4d3b0d88c5da418c129b87\",\"rec\":\"20260915T135713-3326\",\"shell_pid\":3334,\"sid\":\"2406080206\",\"term\":\"gnome-terminal-\",\"ts\":\"2026-09-15T13:57:13+08:00\",\"tty\":\"/dev/pts/3\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-15T13:57:13+08:00",
+      "logged_at": "2026-09-15T13:57:13+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260915T135713-3326",
+        "requested_recording_id": "20260915T135713-3326",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 211,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-15T13:57:13+08:00",
+          "epoch": 1789451833,
+          "resolved_at": "2026-09-15T13:57:13+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-15T13:57:13+08:00",
+          "epoch": 1789451833,
+          "type": "session_start",
+          "sid": "2406080206",
+          "name": "孙翊铭",
+          "tty": "/dev/pts/3",
+          "term": "gnome-terminal-",
+          "shell_pid": 3334,
+          "rec": "20260915T135713-3326",
+          "prev": "3e7f27a3135c0117b632e406eea4cf31f16f7b830d4d3b0d88c5da418c129b87",
+          "h": "31f49f33467953096d404ea1585ee03d09a6db93a8eba4143033fcded8732b94"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000238",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260915T141118-4809",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1789452678,\"h\":\"6a7f688e2e096e6ce285d11cd86260eed3306d1be73740a53f7f5662c2468506\",\"name\":\"孙翊铭\",\"prev\":\"e018170c62a597a2fe2de8d5742ccc9429de17ec52c40e16b4c1e14509a8793f\",\"rec\":\"20260915T141118-4809\",\"shell_pid\":4818,\"sid\":\"2406080206\",\"term\":\"gnome-terminal-\",\"ts\":\"2026-09-15T14:11:18+08:00\",\"tty\":\"/dev/pts/5\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-15T14:11:18+08:00",
+      "logged_at": "2026-09-15T14:11:18+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260915T141118-4809",
+        "requested_recording_id": "20260915T141118-4809",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 238,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-15T14:11:18+08:00",
+          "epoch": 1789452678,
+          "resolved_at": "2026-09-15T14:11:18+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-15T14:11:18+08:00",
+          "epoch": 1789452678,
+          "type": "session_start",
+          "sid": "2406080206",
+          "name": "孙翊铭",
+          "tty": "/dev/pts/5",
+          "term": "gnome-terminal-",
+          "shell_pid": 4818,
+          "rec": "20260915T141118-4809",
+          "prev": "e018170c62a597a2fe2de8d5742ccc9429de17ec52c40e16b4c1e14509a8793f",
+          "h": "6a7f688e2e096e6ce285d11cd86260eed3306d1be73740a53f7f5662c2468506"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000242",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260915T141118-4809",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_end",
+      "content": "{\"epoch\":1789452762,\"h\":\"4d80ef0318ee1e8ef9d2b23da781e54c2626a46ccf6a486d1fcc27d35fa22928\",\"name\":\"孙翊铭\",\"prev\":\"104a6d2bce4f9482dbbb90e3026e1b0803e1f3aa335c1659427c380859280437\",\"rec\":\"20260915T141118-4809\",\"sid\":\"2406080206\",\"ts\":\"2026-09-15T14:12:42+08:00\",\"type\":\"session_end\"}",
+      "observed_at": "2026-09-15T14:12:42+08:00",
+      "logged_at": "2026-09-15T14:12:42+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260915T141118-4809",
+        "requested_recording_id": "20260915T141118-4809",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 242,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-15T14:12:42+08:00",
+          "epoch": 1789452762,
+          "resolved_at": "2026-09-15T14:12:42+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-15T14:12:42+08:00",
+          "epoch": 1789452762,
+          "type": "session_end",
+          "sid": "2406080206",
+          "name": "孙翊铭",
+          "rec": "20260915T141118-4809",
+          "prev": "104a6d2bce4f9482dbbb90e3026e1b0803e1f3aa335c1659427c380859280437",
+          "h": "4d80ef0318ee1e8ef9d2b23da781e54c2626a46ccf6a486d1fcc27d35fa22928"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000243",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260915T141245-5048",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1789452765,\"h\":\"720e02bda273f7cd9de92c07d34e965ada5638cba01f309d6d3e3c074f292e0b\",\"name\":\"孙翊铭\",\"prev\":\"4d80ef0318ee1e8ef9d2b23da781e54c2626a46ccf6a486d1fcc27d35fa22928\",\"rec\":\"20260915T141245-5048\",\"shell_pid\":5057,\"sid\":\"2406080206\",\"term\":\"gnome-terminal-\",\"ts\":\"2026-09-15T14:12:45+08:00\",\"tty\":\"/dev/pts/5\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-15T14:12:45+08:00",
+      "logged_at": "2026-09-15T14:12:45+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260915T141245-5048",
+        "requested_recording_id": "20260915T141245-5048",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 243,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-15T14:12:45+08:00",
+          "epoch": 1789452765,
+          "resolved_at": "2026-09-15T14:12:45+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-15T14:12:45+08:00",
+          "epoch": 1789452765,
+          "type": "session_start",
+          "sid": "2406080206",
+          "name": "孙翊铭",
+          "tty": "/dev/pts/5",
+          "term": "gnome-terminal-",
+          "shell_pid": 5057,
+          "rec": "20260915T141245-5048",
+          "prev": "4d80ef0318ee1e8ef9d2b23da781e54c2626a46ccf6a486d1fcc27d35fa22928",
+          "h": "720e02bda273f7cd9de92c07d34e965ada5638cba01f309d6d3e3c074f292e0b"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000244",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"ls ~/xv6-ai-labs\",\"cwd\":\"/home/ailab-os/桌面/xv6-ai-labs-km\",\"epoch\":1789452779,\"h\":\"fd0e8a9b20f8918e334eeb0e8284dd24e32655ff62d5000cbf254ab800220585\",\"name\":\"孙翊铭\",\"prev\":\"720e02bda273f7cd9de92c07d34e965ada5638cba01f309d6d3e3c074f292e0b\",\"rc\":2,\"sid\":\"2406080206\",\"ts\":\"2026-09-15T14:12:59+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-15T14:12:59+08:00",
+      "logged_at": "2026-09-15T14:12:59+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 244,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-15T14:12:59+08:00",
+          "epoch": 1789452779,
+          "resolved_at": "2026-09-15T14:12:59+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-15T14:12:59+08:00",
+          "epoch": 1789452779,
+          "type": "cmd",
+          "sid": "2406080206",
+          "name": "孙翊铭",
+          "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km",
+          "rc": 2,
+          "cmd": "ls ~/xv6-ai-labs",
+          "prev": "720e02bda273f7cd9de92c07d34e965ada5638cba01f309d6d3e3c074f292e0b",
+          "h": "fd0e8a9b20f8918e334eeb0e8284dd24e32655ff62d5000cbf254ab800220585"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:20260915T141245-5048:shell:1",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": "~/桌面/xv6-ai-labs-km",
+      "recording_id": "20260915T141245-5048",
+      "terminal": {
+        "header_tty": "/dev/pts/4",
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": [
+          "5057"
+        ]
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "ls ~/xv6-ai-labs",
+      "observed_at": "2026-09-15T14:12:59.038161+08:00",
+      "elapsed_seconds": 14.038161,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260915T141245-5048.out.gz",
+        "tim": "term/20260915T141245-5048.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "observation": {
+          "elapsed_seconds": 14.038161,
+          "timing_line": 3,
+          "body_byte_range": [
+            206,
+            401
+          ],
+          "decompressed_byte_range": [
+            330,
+            525
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 243,
+            "ts": "2026-09-15T14:12:45+08:00",
+            "epoch": 1789452765
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 172,
+          "echo_end": 209,
+          "output_begin": 209,
+          "output_end": 210,
+          "prompt_begin": 0
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": []
+    },
+    {
+      "event_id": "b9778f07e528:20260915T141245-5048:shell:2",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": "~/桌面/xv6-ai-labs-km",
+      "recording_id": "20260915T141245-5048",
+      "terminal": {
+        "header_tty": "/dev/pts/4",
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": [
+          "5057"
+        ]
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "ls ~/xv6-ai-labs",
+      "observed_at": "2026-09-15T14:12:59.038161+08:00",
+      "elapsed_seconds": 14.038161,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260915T141245-5048.out.gz",
+        "tim": "term/20260915T141245-5048.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "observation": {
+          "elapsed_seconds": 14.038161,
+          "timing_line": 3,
+          "body_byte_range": [
+            206,
+            401
+          ],
+          "decompressed_byte_range": [
+            330,
+            525
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 243,
+            "ts": "2026-09-15T14:12:45+08:00",
+            "epoch": 1789452765
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 374,
+          "echo_end": 390,
+          "output_begin": 390,
+          "output_end": 477,
+          "prompt_begin": 210
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "ls: 无法访问 '/home/ailab-os/xv6-ai-labs': 没有那个文件或目录"
+      ]
+    },
+    {
+      "event_id": "b9778f07e528:log:000000245",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260915T141245-5048",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_end",
+      "content": "{\"epoch\":1789452786,\"h\":\"485dd0f64a3e97ecdce7cd80c4358a8e46fa20f0ddf7d0664374e458ef5761a2\",\"name\":\"孙翊铭\",\"prev\":\"fd0e8a9b20f8918e334eeb0e8284dd24e32655ff62d5000cbf254ab800220585\",\"rec\":\"20260915T141245-5048\",\"sid\":\"2406080206\",\"ts\":\"2026-09-15T14:13:06+08:00\",\"type\":\"session_end\"}",
+      "observed_at": "2026-09-15T14:13:06+08:00",
+      "logged_at": "2026-09-15T14:13:06+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260915T141245-5048",
+        "requested_recording_id": "20260915T141245-5048",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 245,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-15T14:13:06+08:00",
+          "epoch": 1789452786,
+          "resolved_at": "2026-09-15T14:13:06+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-15T14:13:06+08:00",
+          "epoch": 1789452786,
+          "type": "session_end",
+          "sid": "2406080206",
+          "name": "孙翊铭",
+          "rec": "20260915T141245-5048",
+          "prev": "fd0e8a9b20f8918e334eeb0e8284dd24e32655ff62d5000cbf254ab800220585",
+          "h": "485dd0f64a3e97ecdce7cd80c4358a8e46fa20f0ddf7d0664374e458ef5761a2"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000247",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260915T141359-5262",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1789452839,\"h\":\"8f798cb1eb3abab57b48d7fe4ac650651c77a19cd5bcabd0a2dcde2598575b6f\",\"name\":\"孙翊铭\",\"prev\":\"f30f67cad761826ad96ac274e5a886433f92d047e4485683ecb01583d3a38097\",\"rec\":\"20260915T141359-5262\",\"shell_pid\":5271,\"sid\":\"2406080206\",\"term\":\"gnome-terminal-\",\"ts\":\"2026-09-15T14:13:59+08:00\",\"tty\":\"/dev/pts/5\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-15T14:13:59+08:00",
+      "logged_at": "2026-09-15T14:13:59+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260915T141359-5262",
+        "requested_recording_id": "20260915T141359-5262",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 247,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-15T14:13:59+08:00",
+          "epoch": 1789452839,
+          "resolved_at": "2026-09-15T14:13:59+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-15T14:13:59+08:00",
+          "epoch": 1789452839,
+          "type": "session_start",
+          "sid": "2406080206",
+          "name": "孙翊铭",
+          "tty": "/dev/pts/5",
+          "term": "gnome-terminal-",
+          "shell_pid": 5271,
+          "rec": "20260915T141359-5262",
+          "prev": "f30f67cad761826ad96ac274e5a886433f92d047e4485683ecb01583d3a38097",
+          "h": "8f798cb1eb3abab57b48d7fe4ac650651c77a19cd5bcabd0a2dcde2598575b6f"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000248",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": "/home/ailab-os/桌面",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"ls ~/桌面/xv6-ai-labs-km\",\"cwd\":\"/home/ailab-os/桌面\",\"epoch\":1789452842,\"h\":\"6d4d42c6b491152cf50d0e887a40a5ab8a685d4e5dc66ebefc117bcc19d2ef9b\",\"name\":\"孙翊铭\",\"prev\":\"8f798cb1eb3abab57b48d7fe4ac650651c77a19cd5bcabd0a2dcde2598575b6f\",\"rc\":0,\"sid\":\"2406080206\",\"ts\":\"2026-09-15T14:14:02+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-15T14:14:02+08:00",
+      "logged_at": "2026-09-15T14:14:02+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 248,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-15T14:14:02+08:00",
+          "epoch": 1789452842,
+          "resolved_at": "2026-09-15T14:14:02+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-15T14:14:02+08:00",
+          "epoch": 1789452842,
+          "type": "cmd",
+          "sid": "2406080206",
+          "name": "孙翊铭",
+          "cwd": "/home/ailab-os/桌面",
+          "rc": 0,
+          "cmd": "ls ~/桌面/xv6-ai-labs-km",
+          "prev": "8f798cb1eb3abab57b48d7fe4ac650651c77a19cd5bcabd0a2dcde2598575b6f",
+          "h": "6d4d42c6b491152cf50d0e887a40a5ab8a685d4e5dc66ebefc117bcc19d2ef9b"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:20260915T141359-5262:shell:1",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": "~/桌面",
+      "recording_id": "20260915T141359-5262",
+      "terminal": {
+        "header_tty": "/dev/pts/4",
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": [
+          "5271"
+        ]
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "ls ~/桌面/xv6-ai-labs-km",
+      "observed_at": "2026-09-15T14:14:02.185278+08:00",
+      "elapsed_seconds": 3.185278,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260915T141359-5262.out.gz",
+        "tim": "term/20260915T141359-5262.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "observation": {
+          "elapsed_seconds": 3.185278,
+          "timing_line": 3,
+          "body_byte_range": [
+            177,
+            238
+          ],
+          "decompressed_byte_range": [
+            301,
+            362
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 247,
+            "ts": "2026-09-15T14:13:59+08:00",
+            "epoch": 1789452839
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 142,
+          "echo_end": 227,
+          "output_begin": 227,
+          "output_end": 416,
+          "prompt_begin": 0
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "lab0  lab1  lab2  lab3  lab4  lab5  lab6  lab7  lab8  level.conf"
+      ]
+    },
+    {
+      "event_id": "b9778f07e528:log:000000250",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260915T141359-5262",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_end",
+      "content": "{\"epoch\":1789452914,\"h\":\"9bbdccf910d0fc700f557a2df6784ac71d3f1c8dd4a952f8d46510cdb8d185bd\",\"name\":\"孙翊铭\",\"prev\":\"1e0a9c54afa866cbe4b861f3d10ac193bde885613469e988a9ea027453522f29\",\"rec\":\"20260915T141359-5262\",\"sid\":\"2406080206\",\"ts\":\"2026-09-15T14:15:14+08:00\",\"type\":\"session_end\"}",
+      "observed_at": "2026-09-15T14:15:14+08:00",
+      "logged_at": "2026-09-15T14:15:14+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260915T141359-5262",
+        "requested_recording_id": "20260915T141359-5262",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 250,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-15T14:15:14+08:00",
+          "epoch": 1789452914,
+          "resolved_at": "2026-09-15T14:15:14+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-15T14:15:14+08:00",
+          "epoch": 1789452914,
+          "type": "session_end",
+          "sid": "2406080206",
+          "name": "孙翊铭",
+          "rec": "20260915T141359-5262",
+          "prev": "1e0a9c54afa866cbe4b861f3d10ac193bde885613469e988a9ea027453522f29",
+          "h": "9bbdccf910d0fc700f557a2df6784ac71d3f1c8dd4a952f8d46510cdb8d185bd"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b9778f07e528:log:000000251",
+      "student": {
+        "student_id": "2406080206",
+        "name": "孙翊铭"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260915T141517-5492",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1789452917,\"h\":\"8182c0bb2e54ba7e00b3f9fbf950e0fbe6159c1614124728ecd31bb7acbef16e\",\"name\":\"孙翊铭\",\"prev\":\"9bbdccf910d0fc700f557a2df6784ac71d3f1c8dd4a952f8d46510cdb8d185bd\",\"rec\":\"20260915T141517-5492\",\"shell_pid\":5501,\"sid\":\"2406080206\",\"term\":\"gnome-terminal-\",\"ts\":\"2026-09-15T14:15:17+08:00\",\"tty\":\"/dev/pts/5\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-15T14:15:17+08:00",
+      "logged_at": "2026-09-15T14:15:17+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260915T141517-5492",
+        "requested_recording_id": "20260915T141517-5492",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 251,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-15T14:15:17+08:00",
+          "epoch": 1789452917,
+          "resolved_at": "2026-09-15T14:15:17+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-15T14:15:17+08:00",
+          "epoch": 1789452917,
+          "type": "session_start",
+          "sid": "2406080206",
+          "name": "孙翊铭",
+          "tty": "/dev/pts/5",
+          "term": "gnome-terminal-",
+          "shell_pid": 5501,
+          "rec": "20260915T141517-5492",
+          "prev": "9bbdccf910d0fc700f557a2df6784ac71d3f1c8dd4a952f8d46510cdb8d185bd",
+          "h": "8182c0bb2e54ba7e00b3f9fbf950e0fbe6159c1614124728ecd31bb7acbef16e"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    }
+  ],
+  "errors": [
+    "日志第 36 行时间倒退；未据此校正录像时钟"
+  ]
+}

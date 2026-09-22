@@ -1,0 +1,47 @@
+{
+  "tool": "replay_term_qa.timeline",
+  "source": "操作系统实验数据记录/2406080123-张雅慧-20260916-2109",
+  "schema_version": 2,
+  "status": "complete",
+  "artifacts": [
+    "lab0/实验过程清洗工具/实验过程时间线.json",
+    "lab0/实验过程清洗工具/实验过程时间线.md",
+    "lab1/实验过程清洗工具/实验过程时间线.json",
+    "lab1/实验过程清洗工具/实验过程时间线.md",
+    "其他/实验过程清洗工具/实验过程时间线.json",
+    "其他/实验过程清洗工具/实验过程时间线.md"
+  ],
+  "cache_format_version": 2,
+  "input_fingerprint": "e1c418287964321b8d93556b30f32b2833ea98afa213b8751a2285e8a0a85ae9",
+  "processor_signature": "e477a55168c87f736c4e41e94c4ed6a1e4bc8ff32fe57356ff54083bce19566d",
+  "summary": {
+    "statistics": {
+      "events": 796,
+      "terminal_screen_events": 462,
+      "collection_log_events": 334,
+      "absolute_time_events": 455,
+      "relative_time_only_events": 0,
+      "missing_time_events": 7,
+      "collection_log_time_events": 334,
+      "uncertain_events": 333,
+      "errors": 3,
+      "by_type": {
+        "claude_reply_observed": 157,
+        "claude_user_observed": 157,
+        "collection_log_evidence": 334,
+        "shell_command_observed": 148
+      },
+      "recordings": 113,
+      "recording_failures": 0,
+      "processing_failures": 0
+    }
+  },
+  "artifact_sha256": {
+    "lab0/实验过程清洗工具/实验过程时间线.json": "ea422284365426992c6a25ee92923dfd1b19d2861dd1a5cf1418dba90357ebc5",
+    "lab0/实验过程清洗工具/实验过程时间线.md": "3aaee350032cdb8578326255ef6311d95dc04f1d642aef48d3b07c095ede4a87",
+    "lab1/实验过程清洗工具/实验过程时间线.json": "226662699fa1407ec986b9e0f8d07b912afcb29e3f6bb4fe38e8cf1cd9cb6e69",
+    "lab1/实验过程清洗工具/实验过程时间线.md": "a0cf0d5fd7b365bf26d8f93c503fae6dc52e9655ae783779c920e139598d8862",
+    "其他/实验过程清洗工具/实验过程时间线.json": "cd3067628139f57fea3d7a09e7a25fce04e14071bf77a8a605b6cd93ef97cd8e",
+    "其他/实验过程清洗工具/实验过程时间线.md": "2683ebed19602394b262422ccedc2e94b485b06dc0cd90cc3e8a8793901cd40f"
+  }
+}

@@ -11,6 +11,9 @@ __pycache__/
 /公共依赖/
 /xv6-ai-labs-km-无答案/
 /学生操作系统实验过程清洗工具/*/tests/
+!/学生操作系统实验过程清洗工具/代码差异报告工具/tests/
+!/学生操作系统实验过程清洗工具/代码差异报告工具/tests/**
+/学生操作系统实验过程清洗工具/代码差异报告工具/tests/**/__pycache__/
 /诚信判别系统/integrity_audit/tests/
 /学生操作系统实验过程清洗工具/历史验证记录/
 /诚信判别系统/原始数据/
@@ -49,6 +52,7 @@ Thumbs.db
 /.xv6-old-*/
 /.xv6-commit-*/
 **/.replay-*.tmp
+**/.replay-cache/
 **/.timeline-*.tmp
 **/.readable-timeline-*.tmp
 **/.lab-diff-*.tmp

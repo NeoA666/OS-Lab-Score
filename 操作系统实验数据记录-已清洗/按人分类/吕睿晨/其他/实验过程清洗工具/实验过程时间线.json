@@ -1,0 +1,118 @@
+{
+  "schema_version": 2,
+  "student": {
+    "student_id": "2406080204",
+    "name": "吕睿晨",
+    "source": "操作系统实验数据记录/2406080204-吕睿晨-20260920-1012"
+  },
+  "lab": "other",
+  "status": "complete",
+  "summary": {
+    "events": 1,
+    "terminal_screen_events": 0,
+    "collection_log_events": 1,
+    "absolute_time_events": 0,
+    "relative_time_only_events": 0,
+    "missing_time_events": 0,
+    "collection_log_time_events": 1,
+    "uncertain_events": 0,
+    "errors": 0,
+    "by_type": {
+      "collection_log_evidence": 1
+    },
+    "recording_failures": 0,
+    "processing_failures": 0
+  },
+  "statistics": {
+    "events": 1,
+    "terminal_screen_events": 0,
+    "collection_log_events": 1,
+    "absolute_time_events": 0,
+    "relative_time_only_events": 0,
+    "missing_time_events": 0,
+    "collection_log_time_events": 1,
+    "uncertain_events": 0,
+    "errors": 0,
+    "by_type": {
+      "collection_log_evidence": 1
+    },
+    "recording_failures": 0,
+    "processing_failures": 0
+  },
+  "student_recordings": 1,
+  "recording_details": [
+    {
+      "recording_id": "20260920T101149-4718",
+      "out": "term/20260920T101149-4718.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": []
+      },
+      "events": 3
+    }
+  ],
+  "events": [
+    {
+      "event_id": "cde8f4325c96:log:000000002",
+      "student": {
+        "student_id": "2406080204",
+        "name": "吕睿晨"
+      },
+      "lab": "other",
+      "cwd": null,
+      "recording_id": "20260920T101149-4718",
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "session_start",
+      "content": "{\"epoch\":1789870309,\"h\":\"0fc24669354cc9e311e2336a3cc5bbfc4867e9be8940304b9947a22c68256e04\",\"name\":\"吕睿晨\",\"prev\":\"5b8881bd97a51a6eb98f774f4703d72c01104d6ec6ed877bee97b198130f0fe0\",\"proxy_pid\":\"4718\",\"rec\":\"20260920T101149-4718\",\"run\":\"20260920T101148-40637\",\"sid\":\"2406080204\",\"term\":\"xterm-256color\",\"ts\":\"2026-09-20T10:11:49+08:00\",\"tty\":\"/dev/pts/1\",\"type\":\"session_start\"}",
+      "observed_at": "2026-09-20T10:11:49+08:00",
+      "logged_at": "2026-09-20T10:11:49+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "exact_rec",
+        "recording_id": "20260920T101149-4718",
+        "requested_recording_id": "20260920T101149-4718",
+        "basis": "日志 rec 与录像 ID 完全一致"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 2,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-20T10:11:49+08:00",
+          "epoch": 1789870309,
+          "resolved_at": "2026-09-20T10:11:49+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-20T10:11:49+08:00",
+          "epoch": 1789870309,
+          "run": "20260920T101148-40637",
+          "type": "session_start",
+          "sid": "2406080204",
+          "name": "吕睿晨",
+          "tty": "/dev/pts/1",
+          "term": "xterm-256color",
+          "rec": "20260920T101149-4718",
+          "proxy_pid": "4718",
+          "prev": "5b8881bd97a51a6eb98f774f4703d72c01104d6ec6ed877bee97b198130f0fe0",
+          "h": "0fc24669354cc9e311e2336a3cc5bbfc4867e9be8940304b9947a22c68256e04"
+        }
+      },
+      "uncertainty": [],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    }
+  ],
+  "errors": []
+}

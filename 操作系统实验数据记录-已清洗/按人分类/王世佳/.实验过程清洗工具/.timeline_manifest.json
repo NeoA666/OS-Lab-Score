@@ -1,0 +1,43 @@
+{
+  "tool": "replay_term_qa.timeline",
+  "source": "操作系统实验数据记录/2406080114-王世佳-20260917-1752",
+  "schema_version": 2,
+  "status": "complete",
+  "artifacts": [
+    "lab1/实验过程清洗工具/实验过程时间线.json",
+    "lab1/实验过程清洗工具/实验过程时间线.md",
+    "其他/实验过程清洗工具/实验过程时间线.json",
+    "其他/实验过程清洗工具/实验过程时间线.md"
+  ],
+  "cache_format_version": 2,
+  "input_fingerprint": "25e8028159ead632e8e982a69acf5a4123cb1339fa4f29058e84498325daec99",
+  "processor_signature": "e477a55168c87f736c4e41e94c4ed6a1e4bc8ff32fe57356ff54083bce19566d",
+  "summary": {
+    "statistics": {
+      "events": 145,
+      "terminal_screen_events": 129,
+      "collection_log_events": 16,
+      "absolute_time_events": 129,
+      "relative_time_only_events": 0,
+      "missing_time_events": 0,
+      "collection_log_time_events": 16,
+      "uncertain_events": 14,
+      "errors": 0,
+      "by_type": {
+        "claude_reply_observed": 43,
+        "claude_user_observed": 43,
+        "collection_log_evidence": 16,
+        "shell_command_observed": 43
+      },
+      "recordings": 2,
+      "recording_failures": 0,
+      "processing_failures": 0
+    }
+  },
+  "artifact_sha256": {
+    "lab1/实验过程清洗工具/实验过程时间线.json": "17961fd5dad474608260f9e56ce17659cf4cb5b3b875d590dece62584d2777cc",
+    "lab1/实验过程清洗工具/实验过程时间线.md": "c826b63639d4c00b9689fb2b0f939e69a27910115feae57d8cabaf6cff115bdc",
+    "其他/实验过程清洗工具/实验过程时间线.json": "ead5cd105799dc18f75544f9b0492f394988a8c4804f460b4404085d06672cdb",
+    "其他/实验过程清洗工具/实验过程时间线.md": "a506fad7e016943ee868548766923b02d25f2057531973c809d0f66f14768a30"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "tool": "generate_lab_diff_reports",
+  "schema_version": 1,
+  "student_id": "2406080124",
+  "name": "周珈冰",
+  "archive_sha256": "1123582f6d8f0d6faec4140d8064f27706fc994aa7420c0aa6da72cc0b3a1beb",
+  "source": "操作系统实验数据记录/2406080124-周珈冰-20260920-1456",
+  "artifacts": [
+    "代码差异报告.md"
+  ]
+}

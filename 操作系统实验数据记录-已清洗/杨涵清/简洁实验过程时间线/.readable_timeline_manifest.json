@@ -1,9 +1,0 @@
-{
-  "tool": "generate_readable_timeline",
-  "source": "D:\\OS-Lab-Score\\操作系统实验数据清洗\\操作系统实验数据记录-已清洗\\杨涵清\\实验过程时间线",
-  "artifacts": [
-    "timeline_lab0.md",
-    "timeline_lab1.md",
-    "timeline_other.md"
-  ]
-}

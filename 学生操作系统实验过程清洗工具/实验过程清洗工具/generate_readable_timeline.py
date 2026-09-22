@@ -5,17 +5,22 @@ from __future__ import annotations
 import argparse
 from datetime import datetime, timedelta, timezone
 import json
-import os
 from pathlib import Path
 import re
-import tempfile
+import sys
 
 from timeline_reports import (
+    LAB_KEYS,
+    TIMELINE_DIRECTORY,
     TIMELINE_MANIFEST,
     TIMELINE_TOOL,
     has_link_component,
     is_link_like,
+    timeline_paths,
 )
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from output_layout import PERSON_VIEW, PROCESS_TOOL, unlink_pair, write_text_pair
 
 
 SOURCE_DIRECTORY = "实验过程时间线"
@@ -24,26 +29,15 @@ OUTPUT_MANIFEST = ".readable_timeline_manifest.json"
 TOOL_NAME = "generate_readable_timeline"
 JSON_NAME = re.compile(r"^timeline_(lab[0-8]|other)\.json$")
 MARKDOWN_NAME = re.compile(r"^timeline_(lab[0-8]|other)\.md$")
+CURRENT_OUTPUT_NAME = "简洁实验过程时间线.md"
+CURRENT_ARTIFACT = re.compile(
+    rf"^(?:lab[0-8]|其他)/{re.escape(PROCESS_TOOL)}/{re.escape(CURRENT_OUTPUT_NAME)}$"
+)
 DEFAULT_CLEANED_ROOT = Path(__file__).resolve().parents[2] / "操作系统实验数据记录-已清洗"
 
 
 def _atomic_write(path, text):
-    path = Path(path)
-    if has_link_component(path):
-        raise ValueError(f"拒绝覆盖符号链接：{path}")
-    path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = None
-    try:
-        with tempfile.NamedTemporaryFile(
-            mode="w", encoding="utf-8", newline="\n", dir=path.parent,
-            prefix=".readable-timeline-", suffix=".tmp", delete=False,
-        ) as stream:
-            temporary = Path(stream.name)
-            stream.write(text)
-        os.replace(temporary, path)
-    finally:
-        if temporary and temporary.exists():
-            temporary.unlink()
+    write_text_pair(Path(path), text)
 
 
 def _event_type_label(kind):
@@ -51,11 +45,21 @@ def _event_type_label(kind):
         "shell_command_observed": "Shell 命令",
         "claude_user_observed": "用户问题",
         "claude_reply_observed": "Claude 回复",
+        "collection_log_evidence": "采集日志佐证（E2）",
     }.get(str(kind or ""), "未知")
 
 
+def _is_collection_log_event(event):
+    return bool(
+        isinstance(event, dict)
+        and (event.get("evidence_level") == "E2" or event.get("type") == "collection_log_evidence")
+    )
+
+
 def _event_time(event):
-    value = event.get("observed_at")
+    value = event.get("logged_at") if _is_collection_log_event(event) else event.get("observed_at")
+    if value is None:
+        value = event.get("observed_at")
     try:
         parsed = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
         if parsed.tzinfo is not None:
@@ -68,6 +72,22 @@ def _event_time(event):
         return f"录像内 +{float(elapsed):.6f} 秒"
     except (TypeError, ValueError):
         return "未知"
+
+
+def _collection_log_lines(event):
+    source = event.get("source") if isinstance(event.get("source"), dict) else {}
+    association = event.get("association") if isinstance(event.get("association"), dict) else {}
+    source_time = source.get("time") if isinstance(source.get("time"), dict) else {}
+    line = source.get("line")
+    return [
+        f"- 证据类型：{_event_type_label(event.get('type'))}",
+        f"- 采集日志类型：{event.get('log_event_type') or 'unknown'}",
+        f"- 源行号：{source.get('log') or 'logs/events.jsonl'} 第 {line if line is not None else '未知'} 行",
+        f"- 关联置信度：{association.get('confidence') or 'unlinked'}",
+        f"- 关联录像：{association.get('recording_id') or '无'}",
+        f"- 时间语义：{event.get('observation_semantics') or source_time.get('semantics') or '采集日志时间'}",
+        "- 终端屏幕证据：无；本条仅为 E2 采集日志佐证。",
+    ]
 
 
 def _append_fenced(lines, text):
@@ -106,14 +126,16 @@ def render(document):
     for event in events:
         if not isinstance(event, dict):
             continue
+        collection_log = _is_collection_log_event(event)
         lines.extend([
-            f"### 录像时间：{_event_time(event)}",
-            "",
-            f"- 录像类型：{_event_type_label(event.get('type'))}",
-            "",
-            "- 内容：",
+            f"### {'采集日志时间' if collection_log else '录像时间'}：{_event_time(event)}",
             "",
         ])
+        if collection_log:
+            lines.extend(_collection_log_lines(event))
+        else:
+            lines.append(f"- 录像类型：{_event_type_label(event.get('type'))}")
+        lines.extend(["", "- 内容：", ""])
         _append_fenced(lines, _content(event))
         lines.append("")
     return "\n".join(lines)
@@ -129,29 +151,95 @@ def _read_manifest(path):
     return value if isinstance(value, dict) else None
 
 
-def _owned_artifact(target, name):
-    if not isinstance(name, str) or not MARKDOWN_NAME.fullmatch(name):
-        return None
-    candidate = Path(target) / name
+def _safe_child(root, relative):
+    candidate = Path(root) / Path(relative)
     if has_link_component(candidate):
         return None
     try:
-        if Path(target).resolve() not in candidate.resolve().parents:
+        if Path(root).resolve() not in candidate.resolve().parents:
             return None
     except OSError:
         return None
     return candidate
 
 
-def _source_timeline_files(source):
-    """Return current JSON artifacts, preferring the producer's manifest contract."""
+def _current_source_id(manifest):
+    source = manifest.get("source") if isinstance(manifest, dict) else None
+    if not isinstance(source, str) or not source:
+        return None
+    return f"{TIMELINE_DIRECTORY}/{TIMELINE_MANIFEST}:{source}"
+
+
+def _current_output_relative(lab):
+    json_relative, _ = timeline_paths(lab)
+    return json_relative.parent / CURRENT_OUTPUT_NAME
+
+
+def _current_source_timeline_files(student_directory):
+    """Read the current dual-view producer manifest without trusting paths in it."""
+    student = Path(student_directory)
+    manifest_path = student / TIMELINE_DIRECTORY / TIMELINE_MANIFEST
+    if not manifest_path.exists():
+        return None, None, None
+    if has_link_component(manifest_path):
+        return [], None, f"时间线归属清单是符号链接：{manifest_path}"
+    manifest = _read_manifest(manifest_path)
+    source_id = _current_source_id(manifest)
+    if not (
+        isinstance(manifest, dict)
+        and manifest.get("tool") == TIMELINE_TOOL
+        and source_id is not None
+        and isinstance(manifest.get("artifacts"), list)
+    ):
+        return [], None, f"时间线归属清单无效：{manifest_path}"
+    artifacts = manifest["artifacts"]
+    if not all(isinstance(item, str) for item in artifacts):
+        return [], source_id, f"时间线归属清单含无效或重复产物：{manifest_path}"
+    if len(set(artifacts)) != len(artifacts):
+        return [], source_id, f"时间线归属清单含无效或重复产物：{manifest_path}"
+    if manifest.get("status") == "cleared" and artifacts == []:
+        return [], source_id, None
+    if manifest.get("status") not in {"complete", "partial"}:
+        return [], source_id, f"时间线归属清单尚未完成：{manifest_path}"
+
+    expected = {}
+    for lab in LAB_KEYS:
+        json_relative, markdown_relative = timeline_paths(lab)
+        expected[json_relative.as_posix()] = (lab, "json", json_relative)
+        expected[markdown_relative.as_posix()] = (lab, "markdown", markdown_relative)
+    registered = set(artifacts)
+    if not registered or not registered <= set(expected):
+        return [], source_id, f"时间线归属清单含未知或越界产物：{manifest_path}"
+
+    source_files = []
+    for lab in LAB_KEYS:
+        json_relative, markdown_relative = timeline_paths(lab)
+        expected_pair = {json_relative.as_posix(), markdown_relative.as_posix()}
+        present = expected_pair & registered
+        if present and present != expected_pair:
+            return [], source_id, f"时间线归属清单缺少 {lab} 的 JSON/Markdown 成对产物：{manifest_path}"
+        if not present:
+            continue
+        source_file = _safe_child(student, json_relative)
+        if source_file is None or not source_file.is_file():
+            return [], source_id, f"时间线归属清单登记的 JSON 不可用：{student / json_relative}"
+        source_markdown = _safe_child(student, markdown_relative)
+        if source_markdown is None or not source_markdown.is_file():
+            return [], source_id, f"时间线归属清单登记的 Markdown 不可用：{student / markdown_relative}"
+        source_files.append((source_file, _current_output_relative(lab)))
+    return source_files, source_id, None
+
+
+def _legacy_source_timeline_files(source):
+    """Return legacy flat artifacts while retaining its historical manifest rules."""
     source = Path(source)
     producer_manifest = source / TIMELINE_MANIFEST
     if not producer_manifest.exists():
-        return ([
+        source_files = [
             path for path in sorted(source.glob("timeline_*.json"))
             if JSON_NAME.fullmatch(path.name) and not is_link_like(path)
-        ], None)
+        ]
+        return [(path, path.with_suffix(".md").name) for path in source_files], None
     manifest = _read_manifest(producer_manifest)
     if (
         isinstance(manifest, dict)
@@ -168,10 +256,8 @@ def _source_timeline_files(source):
     ):
         return [], f"时间线归属清单无效或尚未完成：{producer_manifest}"
     artifacts = manifest["artifacts"]
-    if not all(isinstance(relative, str) for relative in artifacts):
-        return [], f"时间线归属清单含无效产物：{producer_manifest}"
-    if len(set(artifacts)) != len(artifacts):
-        return [], f"时间线归属清单含重复产物：{producer_manifest}"
+    if not all(isinstance(relative, str) for relative in artifacts) or len(set(artifacts)) != len(artifacts):
+        return [], f"时间线归属清单含无效或重复产物：{producer_manifest}"
     json_labs = set()
     markdown_labs = set()
     for relative in artifacts:
@@ -193,84 +279,151 @@ def _source_timeline_files(source):
         source_file = source / f"timeline_{lab}.json"
         if has_link_component(source_file) or not source_file.is_file():
             return [], f"时间线归属清单登记的 JSON 不可用：{source_file}"
-        source_files.append(source_file)
+        source_files.append((source_file, source_file.with_suffix(".md").name))
     return source_files, None
 
 
-def _clear_owned_output(target, manifest_path, existing, source_id):
-    if not (
-        isinstance(existing, dict)
-        and existing.get("tool") == TOOL_NAME
-        and existing.get("source") == source_id
-    ):
+def _discover_source(student_directory):
+    """Resolve current dual-view input first, then a legacy flat directory."""
+    current_files, current_id, current_error = _current_source_timeline_files(student_directory)
+    if current_files is not None:
+        return current_files, current_id, "current", current_error
+    source = Path(student_directory) / SOURCE_DIRECTORY
+    if source.exists() and is_link_like(source):
+        return [], SOURCE_DIRECTORY, "legacy", f"时间线目录是符号链接：{source}"
+    legacy_files, legacy_error = _legacy_source_timeline_files(source)
+    return legacy_files, SOURCE_DIRECTORY, "legacy", legacy_error
+
+
+def _readable_manifest_path(student_directory, layout):
+    student = Path(student_directory)
+    if layout == "current":
+        return student / TIMELINE_DIRECTORY / OUTPUT_MANIFEST
+    return student / OUTPUT_DIRECTORY / OUTPUT_MANIFEST
+
+
+def _manifest_layout(manifest):
+    if not isinstance(manifest, dict):
+        return None
+    layout = manifest.get("layout")
+    if layout in {"current", "legacy"}:
+        return layout
+    if manifest.get("source") == SOURCE_DIRECTORY:
+        return "legacy"
+    return None
+
+
+def _manifest_matches(manifest, source_id, layout):
+    return bool(
+        isinstance(manifest, dict)
+        and manifest.get("tool") == TOOL_NAME
+        and manifest.get("source") == source_id
+        and _manifest_layout(manifest) == layout
+    )
+
+
+def _owned_artifact(student_directory, name, layout):
+    if not isinstance(name, str):
+        return None
+    student = Path(student_directory)
+    if layout == "current":
+        if not CURRENT_ARTIFACT.fullmatch(name):
+            return None
+        return _safe_child(student, name)
+    if layout == "legacy" and MARKDOWN_NAME.fullmatch(name):
+        return _safe_child(student / OUTPUT_DIRECTORY, name)
+    return None
+
+
+def _clear_owned_output(student_directory, manifest_path, existing, source_id, layout):
+    if not _manifest_matches(existing, source_id, layout):
         return
     for name in existing.get("artifacts", []):
-        artifact = _owned_artifact(target, name)
+        artifact = _owned_artifact(student_directory, name, layout)
         if artifact is not None and artifact.is_file():
-            artifact.unlink()
+            unlink_pair(artifact)
     _atomic_write(manifest_path, json.dumps({
         "tool": TOOL_NAME,
         "source": source_id,
+        "layout": layout,
         "artifacts": [],
     }, ensure_ascii=False, indent=2) + "\n")
 
 
-def write_student(student_directory):
-    student_directory = Path(student_directory)
-    if has_link_component(student_directory):
-        raise ValueError(f"拒绝使用符号链接学生目录：{student_directory}")
-    source = student_directory / SOURCE_DIRECTORY
-    target = student_directory / OUTPUT_DIRECTORY
-    if has_link_component(target):
-        raise ValueError(f"拒绝使用符号链接输出目录：{target}")
-    if student_directory.resolve() not in target.resolve().parents:
-        raise ValueError(f"输出目录越出学生目录：{target}")
+def _target_file(student_directory, relative, layout):
+    student = Path(student_directory)
+    if layout == "current":
+        return _safe_child(student, relative)
+    return _safe_child(student / OUTPUT_DIRECTORY, relative)
 
-    manifest_path = target / OUTPUT_MANIFEST
+
+def write_student(student_directory):
+    student = Path(student_directory)
+    if has_link_component(student):
+        raise ValueError(f"拒绝使用符号链接学生目录：{student}")
+    student = student.resolve()
+    source_files, source_id, layout, source_error = _discover_source(student)
+    if source_id is None:
+        return []
+    manifest_path = _readable_manifest_path(student, layout)
+    if has_link_component(manifest_path):
+        raise ValueError(f"拒绝覆盖符号链接简洁时间线清单：{manifest_path}")
     existing = _read_manifest(manifest_path)
-    source_id = SOURCE_DIRECTORY
-    source_files, source_error = _source_timeline_files(source)
     if source_error:
-        _clear_owned_output(target, manifest_path, existing, source_id)
+        _clear_owned_output(student, manifest_path, existing, source_id, layout)
         raise ValueError(source_error)
     if not source_files:
-        _clear_owned_output(target, manifest_path, existing, source_id)
+        _clear_owned_output(student, manifest_path, existing, source_id, layout)
         return []
-
-    if manifest_path.exists() and (
-        not existing
-        or existing.get("tool") != TOOL_NAME
-        or existing.get("source") != source_id
-    ):
-        raise ValueError(f"简洁时间线目录已有其他来源：{target}")
+    if manifest_path.exists() and not _manifest_matches(existing, source_id, layout):
+        raise ValueError(f"简洁时间线目录已有其他来源：{manifest_path.parent}")
 
     rendered = []
-    for source_file in source_files:
+    for source_file, target_relative in source_files:
         try:
             document = json.loads(source_file.read_text(encoding="utf-8"))
         except (OSError, TypeError, ValueError) as exc:
             raise ValueError(f"无法读取 {source_file}: {exc}") from exc
         if not isinstance(document, dict):
             raise ValueError(f"时间线 JSON 不是对象：{source_file}")
-        target_file = target / source_file.with_suffix(".md").name
-        rendered.append((target_file, render(document)))
+        target_file = _target_file(student, target_relative, layout)
+        if target_file is None:
+            raise ValueError(f"简洁时间线目标越出学生目录：{target_relative}")
+        rendered.append((target_file, Path(target_relative).as_posix(), render(document)))
 
-    for target_file, text in rendered:
+    for target_file, _, text in rendered:
         _atomic_write(target_file, text)
-    wanted = {path.name for path, _ in rendered}
+    wanted = {relative for _, relative, _ in rendered}
     if existing:
         for name in existing.get("artifacts", []):
             if name in wanted:
                 continue
-            artifact = _owned_artifact(target, name)
+            artifact = _owned_artifact(student, name, layout)
             if artifact is not None and artifact.is_file():
-                artifact.unlink()
+                unlink_pair(artifact)
     _atomic_write(manifest_path, json.dumps({
         "tool": TOOL_NAME,
         "source": source_id,
+        "layout": layout,
         "artifacts": sorted(wanted),
     }, ensure_ascii=False, indent=2) + "\n")
-    return [path for path, _ in rendered]
+    return [path for path, _, _ in rendered]
+
+
+def _student_candidates(root):
+    """Prefer the canonical person view while still accepting legacy roots."""
+    root = Path(root)
+    person_root = root if root.name == PERSON_VIEW else root / PERSON_VIEW
+    if person_root.is_dir():
+        if has_link_component(person_root):
+            raise ValueError(f"按人分类目录不得为符号链接或 junction：{person_root}")
+        return sorted(
+            path for path in person_root.iterdir()
+            if path.is_dir() and not is_link_like(path)
+        )
+    if (root / TIMELINE_DIRECTORY).exists() or (root / SOURCE_DIRECTORY).exists():
+        return [root]
+    return sorted(path for path in root.iterdir() if path.is_dir() and not is_link_like(path))
 
 
 def main(argv=None):
@@ -296,7 +449,10 @@ def main(argv=None):
     processed = 0
     files = 0
     failures = []
-    candidates = sorted(path for path in root.iterdir() if path.is_dir() and not is_link_like(path))
+    try:
+        candidates = _student_candidates(root)
+    except ValueError as exc:
+        parser.error(str(exc))
     if args.students:
         requested = set(args.students)
         candidates = [path for path in candidates if path.name in requested]
@@ -304,8 +460,6 @@ def main(argv=None):
         if missing:
             parser.error("未找到学生输出目录：" + "、".join(missing))
     for student in candidates:
-        if is_link_like(student / SOURCE_DIRECTORY) or not (student / SOURCE_DIRECTORY).is_dir():
-            continue
         try:
             output = write_student(student)
             if output:

@@ -1,0 +1,43 @@
+{
+  "tool": "replay_term_qa.timeline",
+  "source": "操作系统实验数据记录/2306010113-刘梓宸-20260917-1855",
+  "schema_version": 2,
+  "status": "complete",
+  "artifacts": [
+    "lab1/实验过程清洗工具/实验过程时间线.json",
+    "lab1/实验过程清洗工具/实验过程时间线.md",
+    "其他/实验过程清洗工具/实验过程时间线.json",
+    "其他/实验过程清洗工具/实验过程时间线.md"
+  ],
+  "cache_format_version": 2,
+  "input_fingerprint": "5359fb4ad7ba73da95a3e02f3d48d563ae2f2cea7064a5523760fb56f6bafb66",
+  "processor_signature": "e477a55168c87f736c4e41e94c4ed6a1e4bc8ff32fe57356ff54083bce19566d",
+  "summary": {
+    "statistics": {
+      "events": 91,
+      "terminal_screen_events": 70,
+      "collection_log_events": 21,
+      "absolute_time_events": 70,
+      "relative_time_only_events": 0,
+      "missing_time_events": 0,
+      "collection_log_time_events": 21,
+      "uncertain_events": 16,
+      "errors": 0,
+      "by_type": {
+        "claude_reply_observed": 28,
+        "claude_user_observed": 28,
+        "collection_log_evidence": 21,
+        "shell_command_observed": 14
+      },
+      "recordings": 4,
+      "recording_failures": 0,
+      "processing_failures": 0
+    }
+  },
+  "artifact_sha256": {
+    "lab1/实验过程清洗工具/实验过程时间线.json": "166b2f66681cb07ca252589250adb38f2e3e250b33b402eb2242818dc127fd6d",
+    "lab1/实验过程清洗工具/实验过程时间线.md": "00810f0998d7aa05d981dbc180a7f38a9263b89c0ea4f3f5b55f2127dc1dde49",
+    "其他/实验过程清洗工具/实验过程时间线.json": "c0d027adf4021de7f6f5aac80288db9c303288a42d95214beb42db6ade3c018b",
+    "其他/实验过程清洗工具/实验过程时间线.md": "9569e8ddde19b2ae7b057c6cb4f67b2949002341c45d5e4b257b8fea3058fadd"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "tool": "generate_lab_diff_reports",
+  "schema_version": 1,
+  "student_id": "2406080201",
+  "name": "丁允韬",
+  "archive_sha256": "8c6c05de0c3d31dbbd4cae701a3639349015bd605c4f09cd4781ab1060806912",
+  "source": "操作系统实验数据记录/2406080201-丁允韬-20260916-1159",
+  "artifacts": [
+    "代码差异报告.md"
+  ]
+}

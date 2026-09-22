@@ -1,0 +1,11 @@
+{
+  "tool": "generate_lab_diff_reports",
+  "schema_version": 1,
+  "student_id": "2406080205",
+  "name": "周卓江",
+  "archive_sha256": "3acafcb133676ed7170bd0f7915f85dd03d05384d793c318ba26bac0f7bf61fe",
+  "source": "操作系统实验数据记录/2406080205-周卓江-20260910-2322",
+  "artifacts": [
+    "代码差异报告.md"
+  ]
+}

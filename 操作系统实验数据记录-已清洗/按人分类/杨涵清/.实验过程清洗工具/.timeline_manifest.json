@@ -1,0 +1,47 @@
+{
+  "tool": "replay_term_qa.timeline",
+  "source": "操作系统实验数据记录/2406080118-杨涵清-20260917-1729",
+  "schema_version": 2,
+  "status": "complete",
+  "artifacts": [
+    "lab0/实验过程清洗工具/实验过程时间线.json",
+    "lab0/实验过程清洗工具/实验过程时间线.md",
+    "lab1/实验过程清洗工具/实验过程时间线.json",
+    "lab1/实验过程清洗工具/实验过程时间线.md",
+    "其他/实验过程清洗工具/实验过程时间线.json",
+    "其他/实验过程清洗工具/实验过程时间线.md"
+  ],
+  "cache_format_version": 2,
+  "input_fingerprint": "6d8434fa27411282cda63925eca5b02c880afb0ed78a608fa410950da7b31953",
+  "processor_signature": "e477a55168c87f736c4e41e94c4ed6a1e4bc8ff32fe57356ff54083bce19566d",
+  "summary": {
+    "statistics": {
+      "events": 442,
+      "terminal_screen_events": 229,
+      "collection_log_events": 213,
+      "absolute_time_events": 229,
+      "relative_time_only_events": 0,
+      "missing_time_events": 0,
+      "collection_log_time_events": 213,
+      "uncertain_events": 240,
+      "errors": 6,
+      "by_type": {
+        "claude_reply_observed": 54,
+        "claude_user_observed": 54,
+        "collection_log_evidence": 213,
+        "shell_command_observed": 121
+      },
+      "recordings": 46,
+      "recording_failures": 0,
+      "processing_failures": 0
+    }
+  },
+  "artifact_sha256": {
+    "lab0/实验过程清洗工具/实验过程时间线.json": "eab4aa1b6bc5f3e4a1e8dcd540e4f7aeb91deb1e7d8c57de1edbc80c0cb30e0b",
+    "lab0/实验过程清洗工具/实验过程时间线.md": "29bfab413c5487ea941bd63dd524ca6254a8517bf83c153965f60b2183948254",
+    "lab1/实验过程清洗工具/实验过程时间线.json": "94b3c5156f49a01a5deef16ceecc129c842e97309a97abd247f3bdee564295b9",
+    "lab1/实验过程清洗工具/实验过程时间线.md": "5809ae7822e8c7c0eaee816911576cdab391ff8b810ebd1615ccc8ca44a150c1",
+    "其他/实验过程清洗工具/实验过程时间线.json": "fd4c3fefe83e0be09e9b1adc2517127b72f773b34eb155f0657ae56cbfc73b76",
+    "其他/实验过程清洗工具/实验过程时间线.md": "cb8276e93f68d220816877154f4eab466fff28d1c3929c2f97bc7c19f1fe91aa"
+  }
+}

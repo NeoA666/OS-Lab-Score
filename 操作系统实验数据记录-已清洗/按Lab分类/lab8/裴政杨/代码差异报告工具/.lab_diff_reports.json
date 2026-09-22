@@ -1,0 +1,11 @@
+{
+  "tool": "generate_lab_diff_reports",
+  "schema_version": 1,
+  "student_id": "2406080113",
+  "name": "裴政杨",
+  "archive_sha256": "ad3bdf9098f3de02985fb1997fd3785e73110856ddbf678d468e5b2d6066e646",
+  "source": "操作系统实验数据记录/2406080113-裴政杨-20260916-1040",
+  "artifacts": [
+    "代码差异报告.md"
+  ]
+}

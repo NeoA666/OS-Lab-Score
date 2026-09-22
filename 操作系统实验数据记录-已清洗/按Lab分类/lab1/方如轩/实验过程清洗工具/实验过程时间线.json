@@ -1,0 +1,756 @@
+{
+  "schema_version": 2,
+  "student": {
+    "student_id": "2406080104",
+    "name": "方如轩",
+    "source": "操作系统实验数据记录/2406080104-方如轩-20260919-1856"
+  },
+  "lab": "lab1",
+  "status": "complete",
+  "summary": {
+    "events": 12,
+    "terminal_screen_events": 0,
+    "collection_log_events": 12,
+    "absolute_time_events": 0,
+    "relative_time_only_events": 0,
+    "missing_time_events": 0,
+    "collection_log_time_events": 12,
+    "uncertain_events": 12,
+    "errors": 0,
+    "by_type": {
+      "collection_log_evidence": 12
+    },
+    "recording_failures": 0,
+    "processing_failures": 0
+  },
+  "statistics": {
+    "events": 12,
+    "terminal_screen_events": 0,
+    "collection_log_events": 12,
+    "absolute_time_events": 0,
+    "relative_time_only_events": 0,
+    "missing_time_events": 0,
+    "collection_log_time_events": 12,
+    "uncertain_events": 12,
+    "errors": 0,
+    "by_type": {
+      "collection_log_evidence": 12
+    },
+    "recording_failures": 0,
+    "processing_failures": 0
+  },
+  "student_recordings": 3,
+  "recording_details": [
+    {
+      "recording_id": "20260919T144701-4528",
+      "out": "term/20260919T144701-4528.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": []
+      },
+      "events": 0
+    },
+    {
+      "recording_id": "20260919T144816-5154",
+      "out": "term/20260919T144816-5154.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": []
+      },
+      "events": 526
+    },
+    {
+      "recording_id": "20260919T145101-6112",
+      "out": "term/20260919T145101-6112.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "session_start_rec_match_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/3"
+        ],
+        "shell_pid": []
+      },
+      "events": 0
+    }
+  ],
+  "events": [
+    {
+      "event_id": "b8cb83bc586f:log:000000006",
+      "student": {
+        "student_id": "2406080104",
+        "name": "方如轩"
+      },
+      "lab": "lab1",
+      "cwd": "/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make run\",\"cwd\":\"/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1\",\"epoch\":1789800497,\"h\":\"bc9e05fbf16233c4716904863141902bbb5e56d648d903da2f434d59eb6148bc\",\"name\":\"方如轩\",\"prev\":\"98bb697d82ed8f1f27172c1923e67c65b78d0682587bd6457e743510d065abd8\",\"rc\":0,\"run\":\"20260919T144658-23000\",\"sid\":\"2406080104\",\"ts\":\"2026-09-19T14:48:17+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-19T14:48:17+08:00",
+      "logged_at": "2026-09-19T14:48:17+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 6,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-19T14:48:17+08:00",
+          "epoch": 1789800497,
+          "resolved_at": "2026-09-19T14:48:17+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-19T14:48:17+08:00",
+          "epoch": 1789800497,
+          "run": "20260919T144658-23000",
+          "type": "cmd",
+          "sid": "2406080104",
+          "name": "方如轩",
+          "cwd": "/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1",
+          "rc": 0,
+          "cmd": "make run",
+          "prev": "98bb697d82ed8f1f27172c1923e67c65b78d0682587bd6457e743510d065abd8",
+          "h": "bc9e05fbf16233c4716904863141902bbb5e56d648d903da2f434d59eb6148bc"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b8cb83bc586f:log:000000011",
+      "student": {
+        "student_id": "2406080104",
+        "name": "方如轩"
+      },
+      "lab": "lab1",
+      "cwd": "/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make run\",\"cwd\":\"/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1\",\"epoch\":1789800663,\"h\":\"b3dc5a64249cc4a62b8610caba5f3e0bbc2afd8f6c92bd4422c9e24deeeac4c6\",\"name\":\"方如轩\",\"prev\":\"dcd4cf6d47f4487df514205ed57abe276d22e2c22d1918cc644fe8261ed05de0\",\"rc\":0,\"run\":\"20260919T144658-23000\",\"sid\":\"2406080104\",\"ts\":\"2026-09-19T14:51:03+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-19T14:51:03+08:00",
+      "logged_at": "2026-09-19T14:51:03+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 11,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-19T14:51:03+08:00",
+          "epoch": 1789800663,
+          "resolved_at": "2026-09-19T14:51:03+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-19T14:51:03+08:00",
+          "epoch": 1789800663,
+          "run": "20260919T144658-23000",
+          "type": "cmd",
+          "sid": "2406080104",
+          "name": "方如轩",
+          "cwd": "/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1",
+          "rc": 0,
+          "cmd": "make run",
+          "prev": "dcd4cf6d47f4487df514205ed57abe276d22e2c22d1918cc644fe8261ed05de0",
+          "h": "b3dc5a64249cc4a62b8610caba5f3e0bbc2afd8f6c92bd4422c9e24deeeac4c6"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b8cb83bc586f:log:000000126",
+      "student": {
+        "student_id": "2406080104",
+        "name": "方如轩"
+      },
+      "lab": "lab1",
+      "cwd": "/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make run\",\"cwd\":\"/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1\",\"epoch\":1789807556,\"h\":\"7f0821a7d24fb1c75c24b301bd5a5562b6a7cf899802661e6d92c9f37cf15d9e\",\"name\":\"方如轩\",\"prev\":\"aeb161bda897453d6db71c9adddb74662ef311ab091b046ab55002fda9f27c96\",\"rc\":0,\"run\":\"20260919T144658-23000\",\"sid\":\"2406080104\",\"ts\":\"2026-09-19T16:45:56+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-19T16:45:56+08:00",
+      "logged_at": "2026-09-19T16:45:56+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 126,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-19T16:45:56+08:00",
+          "epoch": 1789807556,
+          "resolved_at": "2026-09-19T16:45:56+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-19T16:45:56+08:00",
+          "epoch": 1789807556,
+          "run": "20260919T144658-23000",
+          "type": "cmd",
+          "sid": "2406080104",
+          "name": "方如轩",
+          "cwd": "/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1",
+          "rc": 0,
+          "cmd": "make run",
+          "prev": "aeb161bda897453d6db71c9adddb74662ef311ab091b046ab55002fda9f27c96",
+          "h": "7f0821a7d24fb1c75c24b301bd5a5562b6a7cf899802661e6d92c9f37cf15d9e"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b8cb83bc586f:log:000000128",
+      "student": {
+        "student_id": "2406080104",
+        "name": "方如轩"
+      },
+      "lab": "lab1",
+      "cwd": "/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make run\",\"cwd\":\"/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1\",\"epoch\":1789807650,\"h\":\"13d922951f3b273192ad73c497e94a776f62f353d615c4fd8105a183ddf79805\",\"name\":\"方如轩\",\"prev\":\"43d4491daafa624ee68de20c7ddedb44b823bef912308994f756e5b209982187\",\"rc\":0,\"run\":\"20260919T144658-23000\",\"sid\":\"2406080104\",\"ts\":\"2026-09-19T16:47:30+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-19T16:47:30+08:00",
+      "logged_at": "2026-09-19T16:47:30+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 128,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-19T16:47:30+08:00",
+          "epoch": 1789807650,
+          "resolved_at": "2026-09-19T16:47:30+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-19T16:47:30+08:00",
+          "epoch": 1789807650,
+          "run": "20260919T144658-23000",
+          "type": "cmd",
+          "sid": "2406080104",
+          "name": "方如轩",
+          "cwd": "/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1",
+          "rc": 0,
+          "cmd": "make run",
+          "prev": "43d4491daafa624ee68de20c7ddedb44b823bef912308994f756e5b209982187",
+          "h": "13d922951f3b273192ad73c497e94a776f62f353d615c4fd8105a183ddf79805"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b8cb83bc586f:log:000000130",
+      "student": {
+        "student_id": "2406080104",
+        "name": "方如轩"
+      },
+      "lab": "lab1",
+      "cwd": "/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make fs\",\"cwd\":\"/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1\",\"epoch\":1789807661,\"h\":\"2de4a2c3344ae6f4cde0f85026cbcce34fc35c26f0fc1a70090a9238a8a25776\",\"name\":\"方如轩\",\"prev\":\"bed8c5ad94047e155baf1c8c65dc5d527eadb1b28e039b499a7ee6678326ec77\",\"rc\":0,\"run\":\"20260919T144658-23000\",\"sid\":\"2406080104\",\"ts\":\"2026-09-19T16:47:41+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-19T16:47:41+08:00",
+      "logged_at": "2026-09-19T16:47:41+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 130,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-19T16:47:41+08:00",
+          "epoch": 1789807661,
+          "resolved_at": "2026-09-19T16:47:41+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-19T16:47:41+08:00",
+          "epoch": 1789807661,
+          "run": "20260919T144658-23000",
+          "type": "cmd",
+          "sid": "2406080104",
+          "name": "方如轩",
+          "cwd": "/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1",
+          "rc": 0,
+          "cmd": "make fs",
+          "prev": "bed8c5ad94047e155baf1c8c65dc5d527eadb1b28e039b499a7ee6678326ec77",
+          "h": "2de4a2c3344ae6f4cde0f85026cbcce34fc35c26f0fc1a70090a9238a8a25776"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b8cb83bc586f:log:000000133",
+      "student": {
+        "student_id": "2406080104",
+        "name": "方如轩"
+      },
+      "lab": "lab1",
+      "cwd": "/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make run\",\"cwd\":\"/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1\",\"epoch\":1789807832,\"h\":\"adc1d822c0331b2dd1fd66ddefa761d0281387d561f13ee4e44b0952380852ca\",\"name\":\"方如轩\",\"prev\":\"2119f8aae53087ccef1737355820c485de4601a361a6a3cbde9ee57e2bf1f99a\",\"rc\":0,\"run\":\"20260919T144658-23000\",\"sid\":\"2406080104\",\"ts\":\"2026-09-19T16:50:32+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-19T16:50:32+08:00",
+      "logged_at": "2026-09-19T16:50:32+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 133,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-19T16:50:32+08:00",
+          "epoch": 1789807832,
+          "resolved_at": "2026-09-19T16:50:32+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-19T16:50:32+08:00",
+          "epoch": 1789807832,
+          "run": "20260919T144658-23000",
+          "type": "cmd",
+          "sid": "2406080104",
+          "name": "方如轩",
+          "cwd": "/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1",
+          "rc": 0,
+          "cmd": "make run",
+          "prev": "2119f8aae53087ccef1737355820c485de4601a361a6a3cbde9ee57e2bf1f99a",
+          "h": "adc1d822c0331b2dd1fd66ddefa761d0281387d561f13ee4e44b0952380852ca"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b8cb83bc586f:log:000000135",
+      "student": {
+        "student_id": "2406080104",
+        "name": "方如轩"
+      },
+      "lab": "lab1",
+      "cwd": "/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make build\",\"cwd\":\"/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1\",\"epoch\":1789807837,\"h\":\"64b6fc3c29e61ea9be426242859666fc242175353a18f85fa57910c6b3a0b0db\",\"name\":\"方如轩\",\"prev\":\"71c3fd0b809c3a79ce21b8ce3823f87af42a12d9ddfea2675f6c9c4bd27680fe\",\"rc\":0,\"run\":\"20260919T144658-23000\",\"sid\":\"2406080104\",\"ts\":\"2026-09-19T16:50:37+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-19T16:50:37+08:00",
+      "logged_at": "2026-09-19T16:50:37+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 135,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-19T16:50:37+08:00",
+          "epoch": 1789807837,
+          "resolved_at": "2026-09-19T16:50:37+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-19T16:50:37+08:00",
+          "epoch": 1789807837,
+          "run": "20260919T144658-23000",
+          "type": "cmd",
+          "sid": "2406080104",
+          "name": "方如轩",
+          "cwd": "/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1",
+          "rc": 0,
+          "cmd": "make build",
+          "prev": "71c3fd0b809c3a79ce21b8ce3823f87af42a12d9ddfea2675f6c9c4bd27680fe",
+          "h": "64b6fc3c29e61ea9be426242859666fc242175353a18f85fa57910c6b3a0b0db"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b8cb83bc586f:log:000000136",
+      "student": {
+        "student_id": "2406080104",
+        "name": "方如轩"
+      },
+      "lab": "lab1",
+      "cwd": "/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make fs\",\"cwd\":\"/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1\",\"epoch\":1789807841,\"h\":\"b40fa6895798fccb786066a76e0c9304c7273d84bb9725fe36a825b3510b0df5\",\"name\":\"方如轩\",\"prev\":\"64b6fc3c29e61ea9be426242859666fc242175353a18f85fa57910c6b3a0b0db\",\"rc\":0,\"run\":\"20260919T144658-23000\",\"sid\":\"2406080104\",\"ts\":\"2026-09-19T16:50:41+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-19T16:50:41+08:00",
+      "logged_at": "2026-09-19T16:50:41+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 136,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-19T16:50:41+08:00",
+          "epoch": 1789807841,
+          "resolved_at": "2026-09-19T16:50:41+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-19T16:50:41+08:00",
+          "epoch": 1789807841,
+          "run": "20260919T144658-23000",
+          "type": "cmd",
+          "sid": "2406080104",
+          "name": "方如轩",
+          "cwd": "/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1",
+          "rc": 0,
+          "cmd": "make fs",
+          "prev": "64b6fc3c29e61ea9be426242859666fc242175353a18f85fa57910c6b3a0b0db",
+          "h": "b40fa6895798fccb786066a76e0c9304c7273d84bb9725fe36a825b3510b0df5"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b8cb83bc586f:log:000000246",
+      "student": {
+        "student_id": "2406080104",
+        "name": "方如轩"
+      },
+      "lab": "lab1",
+      "cwd": "/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make run\",\"cwd\":\"/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1\",\"epoch\":1789814425,\"h\":\"642ccd1ad8aaa3d4fc0a375bce963b798c0c1c229493d27952e62293c27b41b1\",\"name\":\"方如轩\",\"prev\":\"a7baa919104d2b437e2327a85298c2a8ebc50bb5349c4b32e17777628b01b98b\",\"rc\":0,\"run\":\"20260919T144658-23000\",\"sid\":\"2406080104\",\"ts\":\"2026-09-19T18:40:25+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-19T18:40:25+08:00",
+      "logged_at": "2026-09-19T18:40:25+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 246,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-19T18:40:25+08:00",
+          "epoch": 1789814425,
+          "resolved_at": "2026-09-19T18:40:25+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-19T18:40:25+08:00",
+          "epoch": 1789814425,
+          "run": "20260919T144658-23000",
+          "type": "cmd",
+          "sid": "2406080104",
+          "name": "方如轩",
+          "cwd": "/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1",
+          "rc": 0,
+          "cmd": "make run",
+          "prev": "a7baa919104d2b437e2327a85298c2a8ebc50bb5349c4b32e17777628b01b98b",
+          "h": "642ccd1ad8aaa3d4fc0a375bce963b798c0c1c229493d27952e62293c27b41b1"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b8cb83bc586f:log:000000247",
+      "student": {
+        "student_id": "2406080104",
+        "name": "方如轩"
+      },
+      "lab": "lab1",
+      "cwd": "/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make build\",\"cwd\":\"/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1\",\"epoch\":1789814434,\"h\":\"c11d76dcce83d73c34cb9255482da2ab1abdaf3bf936c5660441ee06fd0660ca\",\"name\":\"方如轩\",\"prev\":\"642ccd1ad8aaa3d4fc0a375bce963b798c0c1c229493d27952e62293c27b41b1\",\"rc\":0,\"run\":\"20260919T144658-23000\",\"sid\":\"2406080104\",\"ts\":\"2026-09-19T18:40:34+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-19T18:40:34+08:00",
+      "logged_at": "2026-09-19T18:40:34+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 247,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-19T18:40:34+08:00",
+          "epoch": 1789814434,
+          "resolved_at": "2026-09-19T18:40:34+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-19T18:40:34+08:00",
+          "epoch": 1789814434,
+          "run": "20260919T144658-23000",
+          "type": "cmd",
+          "sid": "2406080104",
+          "name": "方如轩",
+          "cwd": "/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1",
+          "rc": 0,
+          "cmd": "make build",
+          "prev": "642ccd1ad8aaa3d4fc0a375bce963b798c0c1c229493d27952e62293c27b41b1",
+          "h": "c11d76dcce83d73c34cb9255482da2ab1abdaf3bf936c5660441ee06fd0660ca"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b8cb83bc586f:log:000000248",
+      "student": {
+        "student_id": "2406080104",
+        "name": "方如轩"
+      },
+      "lab": "lab1",
+      "cwd": "/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make fs\",\"cwd\":\"/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1\",\"epoch\":1789814446,\"h\":\"71668cd40f6da0a561bc7e9ceac4dc29fcf606801e758761e0eff65e1ba8d461\",\"name\":\"方如轩\",\"prev\":\"c11d76dcce83d73c34cb9255482da2ab1abdaf3bf936c5660441ee06fd0660ca\",\"rc\":0,\"run\":\"20260919T144658-23000\",\"sid\":\"2406080104\",\"ts\":\"2026-09-19T18:40:46+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-19T18:40:46+08:00",
+      "logged_at": "2026-09-19T18:40:46+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 248,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-19T18:40:46+08:00",
+          "epoch": 1789814446,
+          "resolved_at": "2026-09-19T18:40:46+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-19T18:40:46+08:00",
+          "epoch": 1789814446,
+          "run": "20260919T144658-23000",
+          "type": "cmd",
+          "sid": "2406080104",
+          "name": "方如轩",
+          "cwd": "/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1",
+          "rc": 0,
+          "cmd": "make fs",
+          "prev": "c11d76dcce83d73c34cb9255482da2ab1abdaf3bf936c5660441ee06fd0660ca",
+          "h": "71668cd40f6da0a561bc7e9ceac4dc29fcf606801e758761e0eff65e1ba8d461"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "b8cb83bc586f:log:000000264",
+      "student": {
+        "student_id": "2406080104",
+        "name": "方如轩"
+      },
+      "lab": "lab1",
+      "cwd": "/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make run\",\"cwd\":\"/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1\",\"epoch\":1789815344,\"h\":\"13adc62c7b6bdfcd6ae0899b7812ee0e7ee25f9b40c2c4e55caed1be572fadcf\",\"name\":\"方如轩\",\"prev\":\"205354fb4b1976e618f50917e182182bc566f372363c03c5ef957558749a51f9\",\"rc\":0,\"run\":\"20260919T144658-23000\",\"sid\":\"2406080104\",\"ts\":\"2026-09-19T18:55:44+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-19T18:55:44+08:00",
+      "logged_at": "2026-09-19T18:55:44+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 264,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-19T18:55:44+08:00",
+          "epoch": 1789815344,
+          "resolved_at": "2026-09-19T18:55:44+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-19T18:55:44+08:00",
+          "epoch": 1789815344,
+          "run": "20260919T144658-23000",
+          "type": "cmd",
+          "sid": "2406080104",
+          "name": "方如轩",
+          "cwd": "/home/mahirolover/文档/xv6-ai-labs-km-无答案/xv6-ai-labs-km-无答案/lab1",
+          "rc": 0,
+          "cmd": "make run",
+          "prev": "205354fb4b1976e618f50917e182182bc566f372363c03c5ef957558749a51f9",
+          "h": "13adc62c7b6bdfcd6ae0899b7812ee0e7ee25f9b40c2c4e55caed1be572fadcf"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    }
+  ],
+  "errors": []
+}

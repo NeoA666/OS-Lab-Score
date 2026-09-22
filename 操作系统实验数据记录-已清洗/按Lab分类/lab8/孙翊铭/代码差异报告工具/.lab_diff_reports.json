@@ -1,0 +1,11 @@
+{
+  "tool": "generate_lab_diff_reports",
+  "schema_version": 1,
+  "student_id": "2406080206",
+  "name": "孙翊铭",
+  "archive_sha256": "abcb2ccc1ad7e86e2bf60e0564d3903f041cd2343f0071d91c31197b5114425e",
+  "source": "操作系统实验数据记录/2406080206-孙翊铭-20260915-1428",
+  "artifacts": [
+    "代码差异报告.md"
+  ]
+}

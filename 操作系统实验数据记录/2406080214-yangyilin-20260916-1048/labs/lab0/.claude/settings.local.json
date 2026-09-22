@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(mount)",
-      "Bash(make build *)",
-      "Bash(pkill *)"
-    ]
-  }
-}

@@ -1,0 +1,11 @@
+{
+  "tool": "generate_lab_diff_reports",
+  "schema_version": 1,
+  "student_id": "2406080213",
+  "name": "李冰瀚",
+  "archive_sha256": "b14a52ac95c3bce85b17825d5ff5a6528a792c3279fbd40d3aec335a0792d58a",
+  "source": "操作系统实验数据记录/2406080213-李冰瀚-20260916-1805",
+  "artifacts": [
+    "代码差异报告.md"
+  ]
+}

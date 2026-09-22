@@ -1,0 +1,2693 @@
+{
+  "schema_version": 2,
+  "student": {
+    "student_id": "2406080213",
+    "name": "李冰瀚",
+    "source": "操作系统实验数据记录/2406080213-李冰瀚-20260916-1805"
+  },
+  "lab": "lab0",
+  "status": "complete",
+  "summary": {
+    "events": 31,
+    "terminal_screen_events": 17,
+    "collection_log_events": 14,
+    "absolute_time_events": 17,
+    "relative_time_only_events": 0,
+    "missing_time_events": 0,
+    "collection_log_time_events": 14,
+    "uncertain_events": 14,
+    "errors": 3,
+    "by_type": {
+      "collection_log_evidence": 14,
+      "shell_command_observed": 17
+    },
+    "recording_failures": 0,
+    "processing_failures": 0
+  },
+  "statistics": {
+    "events": 31,
+    "terminal_screen_events": 17,
+    "collection_log_events": 14,
+    "absolute_time_events": 17,
+    "relative_time_only_events": 0,
+    "missing_time_events": 0,
+    "collection_log_time_events": 14,
+    "uncertain_events": 14,
+    "errors": 3,
+    "by_type": {
+      "collection_log_evidence": 14,
+      "shell_command_observed": 17
+    },
+    "recording_failures": 0,
+    "processing_failures": 0
+  },
+  "student_recordings": 21,
+  "recording_details": [
+    {
+      "recording_id": "20260916T120048-13053",
+      "out": "term/20260916T120048-13053.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "13067"
+        ]
+      },
+      "events": 0
+    },
+    {
+      "recording_id": "20260916T120310-2704",
+      "out": "term/20260916T120310-2704.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "2716"
+        ]
+      },
+      "events": 4
+    },
+    {
+      "recording_id": "20260916T160303-2943",
+      "out": "term/20260916T160303-2943.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "2955"
+        ]
+      },
+      "events": 0
+    },
+    {
+      "recording_id": "20260916T160410-3252",
+      "out": "term/20260916T160410-3252.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "3261"
+        ]
+      },
+      "events": 18
+    },
+    {
+      "recording_id": "20260916T162241-6939",
+      "out": "term/20260916T162241-6939.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/2"
+        ],
+        "shell_pid": [
+          "6955"
+        ]
+      },
+      "events": 0
+    },
+    {
+      "recording_id": "20260916T162243-7044",
+      "out": "term/20260916T162243-7044.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/3"
+        ],
+        "shell_pid": [
+          "7056"
+        ]
+      },
+      "events": 0
+    },
+    {
+      "recording_id": "20260916T162922-8011",
+      "out": "term/20260916T162922-8011.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "8019"
+        ]
+      },
+      "events": 5
+    },
+    {
+      "recording_id": "20260916T162959-8335",
+      "out": "term/20260916T162959-8335.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "8346"
+        ]
+      },
+      "events": 2
+    },
+    {
+      "recording_id": "20260916T164056-10270",
+      "out": "term/20260916T164056-10270.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "10282"
+        ]
+      },
+      "events": 14
+    },
+    {
+      "recording_id": "20260916T164901-11124",
+      "out": "term/20260916T164901-11124.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/4",
+        "session_start_tty": [
+          "/dev/pts/5"
+        ],
+        "shell_pid": [
+          "11133"
+        ]
+      },
+      "events": 2
+    },
+    {
+      "recording_id": "20260916T170356-12168",
+      "out": "term/20260916T170356-12168.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/6",
+        "session_start_tty": [
+          "/dev/pts/7"
+        ],
+        "shell_pid": [
+          "12177"
+        ]
+      },
+      "events": 1
+    },
+    {
+      "recording_id": "20260916T170523-12355",
+      "out": "term/20260916T170523-12355.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/8",
+        "session_start_tty": [
+          "/dev/pts/9"
+        ],
+        "shell_pid": [
+          "12364"
+        ]
+      },
+      "events": 0
+    },
+    {
+      "recording_id": "20260916T170603-12421",
+      "out": "term/20260916T170603-12421.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/10",
+        "session_start_tty": [
+          "/dev/pts/11"
+        ],
+        "shell_pid": [
+          "12430"
+        ]
+      },
+      "events": 2
+    },
+    {
+      "recording_id": "20260916T171146-13064",
+      "out": "term/20260916T171146-13064.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/10",
+        "session_start_tty": [
+          "/dev/pts/11"
+        ],
+        "shell_pid": [
+          "13073"
+        ]
+      },
+      "events": 47
+    },
+    {
+      "recording_id": "20260916T173604-15838",
+      "out": "term/20260916T173604-15838.out.gz",
+      "status": "ok",
+      "issues": [
+        "header_session_start_difference_seconds=1.0"
+      ],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/12"
+        ],
+        "shell_pid": [
+          "15859"
+        ]
+      },
+      "events": 0
+    },
+    {
+      "recording_id": "20260916T173607-15949",
+      "out": "term/20260916T173607-15949.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/13"
+        ],
+        "shell_pid": [
+          "15961"
+        ]
+      },
+      "events": 0
+    },
+    {
+      "recording_id": "20260916T175107-17257",
+      "out": "term/20260916T175107-17257.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/14"
+        ],
+        "shell_pid": [
+          "17272"
+        ]
+      },
+      "events": 0
+    },
+    {
+      "recording_id": "20260916T175109-17362",
+      "out": "term/20260916T175109-17362.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": null,
+        "session_start_tty": [
+          "/dev/pts/15"
+        ],
+        "shell_pid": [
+          "17374"
+        ]
+      },
+      "events": 0
+    },
+    {
+      "recording_id": "20260916T181313-3068",
+      "out": "term/20260916T181313-3068.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "3082"
+        ]
+      },
+      "events": 0
+    },
+    {
+      "recording_id": "20260916T181553-3339",
+      "out": "term/20260916T181553-3339.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "3348"
+        ]
+      },
+      "events": 0
+    },
+    {
+      "recording_id": "20260916T181845-3035",
+      "out": "term/20260916T181845-3035.out.gz",
+      "status": "ok",
+      "issues": [],
+      "time_source": "script_header_plus_timing",
+      "global_clock_usable": true,
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "3047"
+        ]
+      },
+      "events": 0
+    }
+  ],
+  "events": [
+    {
+      "event_id": "e6c951e03765:log:000000262",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"cd ~/桌面/xv6-ai-labs-km/lab0\",\"cwd\":\"/home/ailab-os/桌面/xv6-ai-labs-km/lab0\",\"epoch\":1789545914,\"h\":\"a09f2c6e76b2708f6a13db3b87a51e311e89f0722ce6fd834ae5bf33d004857d\",\"name\":\"libinghan\",\"prev\":\"bb5f3f300cd6db7af9eec30e9ecc3b8b21815fd28dfe07779d01be6a8c96176d\",\"rc\":0,\"sid\":\"2406080213\",\"ts\":\"2026-09-16T16:05:14+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-16T16:05:14+08:00",
+      "logged_at": "2026-09-16T16:05:14+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 262,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-16T16:05:14+08:00",
+          "epoch": 1789545914,
+          "resolved_at": "2026-09-16T16:05:14+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-16T16:05:14+08:00",
+          "epoch": 1789545914,
+          "type": "cmd",
+          "sid": "2406080213",
+          "name": "libinghan",
+          "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+          "rc": 0,
+          "cmd": "cd ~/桌面/xv6-ai-labs-km/lab0",
+          "prev": "bb5f3f300cd6db7af9eec30e9ecc3b8b21815fd28dfe07779d01be6a8c96176d",
+          "h": "a09f2c6e76b2708f6a13db3b87a51e311e89f0722ce6fd834ae5bf33d004857d"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "e6c951e03765:20260916T160410-3252:shell:2",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "~/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": "20260916T160410-3252",
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "3261"
+        ]
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "riscv64-unknown-el",
+      "observed_at": "2026-09-16T16:06:00.549354+08:00",
+      "elapsed_seconds": 110.54935400000001,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260916T160410-3252.out.gz",
+        "tim": "term/20260916T160410-3252.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "observation": {
+          "elapsed_seconds": 110.54935400000001,
+          "timing_line": 55,
+          "body_byte_range": [
+            634,
+            637
+          ],
+          "decompressed_byte_range": [
+            758,
+            761
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 260,
+            "ts": "2026-09-16T16:04:10+08:00",
+            "epoch": 1789545850
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 617,
+          "echo_end": 636,
+          "output_begin": 636,
+          "output_end": 933,
+          "prompt_begin": 435
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "f-gcc --version",
+        "riscv64-unknown-elf-gcc (13.2.0-11ubuntu1+12) 13.2.0",
+        "Copyright (C) 2023 Free Software Foundation, Inc.",
+        "This is free software; see the source for copying conditions.  There is NO",
+        "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+      ]
+    },
+    {
+      "event_id": "e6c951e03765:log:000000264",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"riscv64-unknown-elf-gcc --version\",\"cwd\":\"/home/ailab-os/桌面/xv6-ai-labs-km/lab0\",\"epoch\":1789545999,\"h\":\"ecda1eb65ef57759da2262d817cb5ad72147e9df7c9214109c16d9fa3ba55394\",\"name\":\"libinghan\",\"prev\":\"fd7f2ef90661de73adf488cbdef3e836e727f05467ee08d6c505b2e290d1eb9b\",\"rc\":0,\"sid\":\"2406080213\",\"ts\":\"2026-09-16T16:06:39+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-16T16:06:39+08:00",
+      "logged_at": "2026-09-16T16:06:39+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 264,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-16T16:06:39+08:00",
+          "epoch": 1789545999,
+          "resolved_at": "2026-09-16T16:06:39+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-16T16:06:39+08:00",
+          "epoch": 1789545999,
+          "type": "cmd",
+          "sid": "2406080213",
+          "name": "libinghan",
+          "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+          "rc": 0,
+          "cmd": "riscv64-unknown-elf-gcc --version",
+          "prev": "fd7f2ef90661de73adf488cbdef3e836e727f05467ee08d6c505b2e290d1eb9b",
+          "h": "ecda1eb65ef57759da2262d817cb5ad72147e9df7c9214109c16d9fa3ba55394"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "e6c951e03765:20260916T160410-3252:shell:3",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "~/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": "20260916T160410-3252",
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "3261"
+        ]
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "qemu-system-riscv6",
+      "observed_at": "2026-09-16T16:07:05.626530+08:00",
+      "elapsed_seconds": 175.62652999999997,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260916T160410-3252.out.gz",
+        "tim": "term/20260916T160410-3252.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "observation": {
+          "elapsed_seconds": 175.62652999999997,
+          "timing_line": 95,
+          "body_byte_range": [
+            1132,
+            1135
+          ],
+          "decompressed_byte_range": [
+            1256,
+            1259
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 260,
+            "ts": "2026-09-16T16:04:10+08:00",
+            "epoch": 1789545850
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 1115,
+          "echo_end": 1134,
+          "output_begin": 1134,
+          "output_end": 1291,
+          "prompt_begin": 933
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "4 --version",
+        "QEMU emulator version 8.2.2 (Debian 1:8.2.2+ds-0ubuntu1.17)",
+        "Copyright (c) 2003-2023 Fabrice Bellard and the QEMU Project developers"
+      ]
+    },
+    {
+      "event_id": "e6c951e03765:log:000000266",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"qemu-system-riscv64 --version\",\"cwd\":\"/home/ailab-os/桌面/xv6-ai-labs-km/lab0\",\"epoch\":1789546033,\"h\":\"b4919690c05cb00cbca0fc1bf2d164402ba49c67388497b02bc7ed4dae68910c\",\"name\":\"libinghan\",\"prev\":\"742a94d05a5e7cb8e2588e218cd4d3d18bb7d377fdd1bc06a878af12bfa70121\",\"rc\":0,\"sid\":\"2406080213\",\"ts\":\"2026-09-16T16:07:13+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-16T16:07:13+08:00",
+      "logged_at": "2026-09-16T16:07:13+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 266,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-16T16:07:13+08:00",
+          "epoch": 1789546033,
+          "resolved_at": "2026-09-16T16:07:13+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-16T16:07:13+08:00",
+          "epoch": 1789546033,
+          "type": "cmd",
+          "sid": "2406080213",
+          "name": "libinghan",
+          "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+          "rc": 0,
+          "cmd": "qemu-system-riscv64 --version",
+          "prev": "742a94d05a5e7cb8e2588e218cd4d3d18bb7d377fdd1bc06a878af12bfa70121",
+          "h": "b4919690c05cb00cbca0fc1bf2d164402ba49c67388497b02bc7ed4dae68910c"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "e6c951e03765:20260916T160410-3252:shell:4",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "~/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": "20260916T160410-3252",
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "3261"
+        ]
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "mkfs.vfat --help",
+      "observed_at": "2026-09-16T16:07:34.104066+08:00",
+      "elapsed_seconds": 204.10406599999985,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260916T160410-3252.out.gz",
+        "tim": "term/20260916T160410-3252.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "observation": {
+          "elapsed_seconds": 204.10406599999985,
+          "timing_line": 125,
+          "body_byte_range": [
+            1488,
+            1489
+          ],
+          "decompressed_byte_range": [
+            1612,
+            1613
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 260,
+            "ts": "2026-09-16T16:04:10+08:00",
+            "epoch": 1789545850
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 1473,
+          "echo_end": 1489,
+          "output_begin": 1489,
+          "output_end": 3616,
+          "prompt_begin": 1291
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "mkfs.fat 4.2 (2021-01-31)",
+        "Usage: mkfs.vfat [OPTIONS] TARGET [BLOCKS]",
+        "Create FAT filesystem in TARGET, which can be a block device or file. Use only",
+        "up to BLOCKS 1024 byte blocks if specified. With the -C option, file TARGET will be",
+        "created with a size of 1024 bytes times BLOCKS, which must be specified.",
+        "",
+        "Options:",
+        "  -a              Disable alignment of data structures",
+        "  -A              Toggle Atari variant of the filesystem",
+        "  -b SECTOR       Select SECTOR as location of the FAT32 backup boot sector",
+        "  -c              Check device for bad blocks before creating the filesystem",
+        "  -C              Create file TARGET then create filesystem in it",
+        "  -D NUMBER       Write BIOS drive number NUMBER to boot sector",
+        "  -f COUNT        Create COUNT file allocation tables",
+        "  -F SIZE         Select FAT size SIZE (12, 16 or 32)",
+        "  -g GEOM         Select disk geometry: heads/sectors_per_track",
+        "  -h NUMBER       Write hidden sectors NUMBER to boot sector",
+        "  -i VOLID        Set volume ID to VOLID (a 32 bit hexadecimal number)",
+        "  -I              Ignore and disable safety checks",
+        "  -l FILENAME     Read bad blocks list from FILENAME",
+        "  -m FILENAME     Replace default error message in boot block with contents of FILENAME",
+        "  -M TYPE         Set media type in boot sector to TYPE",
+        "  --mbr[=y|n|a]   Fill (fake) MBR table with one partition which spans whole disk",
+        "  -n LABEL        Set volume name to LABEL (up to 11 characters long)",
+        "  --codepage=N    use DOS codepage N to encode label (default: 850)",
+        "  -r COUNT        Make room for at least COUNT entries in the root directory",
+        "  -R COUNT        Set minimal number of reserved sectors to COUNT",
+        "  -s COUNT        Set number of sectors per cluster to COUNT",
+        "  -S SIZE         Select a sector size of SIZE (a power of two, at least 512)",
+        "  -v              Verbose execution",
+        "  --variant=TYPE  Select variant TYPE of filesystem (standard or Atari)",
+        "  --invariant     Use constants for randomly generated or time based values",
+        "  --offset=SECTOR Write the filesystem at a specific sector into the device file.",
+        "  --help          Show this help message and exit"
+      ]
+    },
+    {
+      "event_id": "e6c951e03765:log:000000267",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"mkfs.vfat --help\",\"cwd\":\"/home/ailab-os/桌面/xv6-ai-labs-km/lab0\",\"epoch\":1789546055,\"h\":\"fb5a1eba17fd428f726082059efc0f5a94af0caa7f820b6f09634e44f187caaa\",\"name\":\"libinghan\",\"prev\":\"b4919690c05cb00cbca0fc1bf2d164402ba49c67388497b02bc7ed4dae68910c\",\"rc\":0,\"sid\":\"2406080213\",\"ts\":\"2026-09-16T16:07:35+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-16T16:07:35+08:00",
+      "logged_at": "2026-09-16T16:07:35+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 267,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-16T16:07:35+08:00",
+          "epoch": 1789546055,
+          "resolved_at": "2026-09-16T16:07:35+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-16T16:07:35+08:00",
+          "epoch": 1789546055,
+          "type": "cmd",
+          "sid": "2406080213",
+          "name": "libinghan",
+          "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+          "rc": 0,
+          "cmd": "mkfs.vfat --help",
+          "prev": "b4919690c05cb00cbca0fc1bf2d164402ba49c67388497b02bc7ed4dae68910c",
+          "h": "fb5a1eba17fd428f726082059efc0f5a94af0caa7f820b6f09634e44f187caaa"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "e6c951e03765:20260916T160410-3252:shell:5",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "~/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": "20260916T160410-3252",
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "3261"
+        ]
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "make build",
+      "observed_at": "2026-09-16T16:08:04.230717+08:00",
+      "elapsed_seconds": 234.23071699999986,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260916T160410-3252.out.gz",
+        "tim": "term/20260916T160410-3252.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "observation": {
+          "elapsed_seconds": 234.23071699999986,
+          "timing_line": 139,
+          "body_byte_range": [
+            3807,
+            3808
+          ],
+          "decompressed_byte_range": [
+            3931,
+            3932
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 260,
+            "ts": "2026-09-16T16:04:10+08:00",
+            "epoch": 1789545850
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 3798,
+          "echo_end": 3808,
+          "output_begin": 3808,
+          "output_end": 3819,
+          "prompt_begin": 3616
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": []
+    },
+    {
+      "event_id": "e6c951e03765:log:000000268",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make build\",\"cwd\":\"/home/ailab-os/桌面/xv6-ai-labs-km/lab0\",\"epoch\":1789546087,\"h\":\"c950787f582c27da0cdc60a1a00c7246d51a4a29665be43e96bb363fbe496671\",\"name\":\"libinghan\",\"prev\":\"fb5a1eba17fd428f726082059efc0f5a94af0caa7f820b6f09634e44f187caaa\",\"rc\":0,\"sid\":\"2406080213\",\"ts\":\"2026-09-16T16:08:07+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-16T16:08:07+08:00",
+      "logged_at": "2026-09-16T16:08:07+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 268,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-16T16:08:07+08:00",
+          "epoch": 1789546087,
+          "resolved_at": "2026-09-16T16:08:07+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-16T16:08:07+08:00",
+          "epoch": 1789546087,
+          "type": "cmd",
+          "sid": "2406080213",
+          "name": "libinghan",
+          "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+          "rc": 0,
+          "cmd": "make build",
+          "prev": "fb5a1eba17fd428f726082059efc0f5a94af0caa7f820b6f09634e44f187caaa",
+          "h": "c950787f582c27da0cdc60a1a00c7246d51a4a29665be43e96bb363fbe496671"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "e6c951e03765:20260916T160410-3252:shell:6",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "~/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": "20260916T160410-3252",
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "3261"
+        ]
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "sudo make fs",
+      "observed_at": "2026-09-16T16:08:15.599516+08:00",
+      "elapsed_seconds": 245.59951599999985,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260916T160410-3252.out.gz",
+        "tim": "term/20260916T160410-3252.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "observation": {
+          "elapsed_seconds": 245.59951599999985,
+          "timing_line": 153,
+          "body_byte_range": [
+            4012,
+            4013
+          ],
+          "decompressed_byte_range": [
+            4136,
+            4137
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 260,
+            "ts": "2026-09-16T16:04:10+08:00",
+            "epoch": 1789545850
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 4001,
+          "echo_end": 4013,
+          "output_begin": 4013,
+          "output_end": 4225,
+          "prompt_begin": 3819
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "[sudo] ailab-os 的密码：",
+        "making fs image...",
+        "输入了 512+0 块记录",
+        "输出了 512+0 块记录",
+        "268435456 字节 (268 MB, 256 MiB) 已复制，0.80631 s，333 MB/s",
+        "mkfs.fat 4.2 (2021-01-31)"
+      ]
+    },
+    {
+      "event_id": "e6c951e03765:log:000000270",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"sudo make fs\",\"cwd\":\"/home/ailab-os/桌面/xv6-ai-labs-km/lab0\",\"epoch\":1789546105,\"h\":\"16745e0491e37feaf69c45f89c547500051e90fc600874a2b8286a22e39cca2d\",\"name\":\"libinghan\",\"prev\":\"82240781e1a47ea8931315231b87f3af704d6fdda2dfe19a340d4a04d7c8cf5f\",\"rc\":0,\"sid\":\"2406080213\",\"ts\":\"2026-09-16T16:08:25+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-16T16:08:25+08:00",
+      "logged_at": "2026-09-16T16:08:25+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 270,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-16T16:08:25+08:00",
+          "epoch": 1789546105,
+          "resolved_at": "2026-09-16T16:08:25+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-16T16:08:25+08:00",
+          "epoch": 1789546105,
+          "type": "cmd",
+          "sid": "2406080213",
+          "name": "libinghan",
+          "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+          "rc": 0,
+          "cmd": "sudo make fs",
+          "prev": "82240781e1a47ea8931315231b87f3af704d6fdda2dfe19a340d4a04d7c8cf5f",
+          "h": "16745e0491e37feaf69c45f89c547500051e90fc600874a2b8286a22e39cca2d"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "e6c951e03765:log:000000271",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make run\",\"cwd\":\"/home/ailab-os/桌面/xv6-ai-labs-km/lab0\",\"epoch\":1789546114,\"h\":\"1b77567cd463a48a6bda03a26bb5e6de01fe5689baf6d5fb1d8a18f16a0dcfed\",\"name\":\"libinghan\",\"prev\":\"16745e0491e37feaf69c45f89c547500051e90fc600874a2b8286a22e39cca2d\",\"rc\":2,\"sid\":\"2406080213\",\"ts\":\"2026-09-16T16:08:34+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-16T16:08:34+08:00",
+      "logged_at": "2026-09-16T16:08:34+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 271,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-16T16:08:34+08:00",
+          "epoch": 1789546114,
+          "resolved_at": "2026-09-16T16:08:34+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-16T16:08:34+08:00",
+          "epoch": 1789546114,
+          "type": "cmd",
+          "sid": "2406080213",
+          "name": "libinghan",
+          "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+          "rc": 2,
+          "cmd": "make run",
+          "prev": "16745e0491e37feaf69c45f89c547500051e90fc600874a2b8286a22e39cca2d",
+          "h": "1b77567cd463a48a6bda03a26bb5e6de01fe5689baf6d5fb1d8a18f16a0dcfed"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "e6c951e03765:20260916T160410-3252:shell:7",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "~/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": "20260916T160410-3252",
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "3261"
+        ]
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "make run",
+      "observed_at": "2026-09-16T16:08:34.015327+08:00",
+      "elapsed_seconds": 264.01532699999984,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260916T160410-3252.out.gz",
+        "tim": "term/20260916T160410-3252.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "observation": {
+          "elapsed_seconds": 264.01532699999984,
+          "timing_line": 167,
+          "body_byte_range": [
+            4414,
+            4415
+          ],
+          "decompressed_byte_range": [
+            4538,
+            4539
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 260,
+            "ts": "2026-09-16T16:04:10+08:00",
+            "epoch": 1789545850
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 4407,
+          "echo_end": 4415,
+          "output_begin": 4415,
+          "output_end": 4590,
+          "prompt_begin": 4225
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "qemu-system-riscv64: -device virtio-blk-device,drive=x0,bus=virtio-mmio-bus.0: Could not open 'fs.img': Permission denied",
+        "make: *** [Makefile:152：run] 错误 1"
+      ]
+    },
+    {
+      "event_id": "e6c951e03765:20260916T160410-3252:shell:8",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "~/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": "20260916T160410-3252",
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "3261"
+        ]
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "ls -lh targ",
+      "observed_at": "2026-09-16T16:11:33.909763+08:00",
+      "elapsed_seconds": 443.9097629999999,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260916T160410-3252.out.gz",
+        "tim": "term/20260916T160410-3252.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "observation": {
+          "elapsed_seconds": 443.9097629999999,
+          "timing_line": 177,
+          "body_byte_range": [
+            5165,
+            5169
+          ],
+          "decompressed_byte_range": [
+            5289,
+            5293
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 260,
+            "ts": "2026-09-16T16:04:10+08:00",
+            "epoch": 1789545850
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 5130,
+          "echo_end": 5169,
+          "output_begin": 5169,
+          "output_end": 6052,
+          "prompt_begin": 4956
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "                                                               ls -lh target/",
+        "总计 904K",
+        "-rwxrwxr-x 1 ailab-os ailab-os 245K  9月 16 16:08 kernel",
+        "-rw-rw-r-- 1 ailab-os ailab-os 645K  9月 16 16:08 kernel.asm",
+        "-rw-rw-r-- 1 ailab-os ailab-os 7.6K  9月 16 16:08 kernel.sym"
+      ]
+    },
+    {
+      "event_id": "e6c951e03765:log:000000275",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"ls -lh target/\",\"cwd\":\"/home/ailab-os/桌面/xv6-ai-labs-km/lab0\",\"epoch\":1789546309,\"h\":\"abc60621a86298dbad34f0e54c3b3da7b6da2e29e85c2985fc01d6cf1fd55b00\",\"name\":\"libinghan\",\"prev\":\"51519c52ef5ee083ef0a588a569849a9949799649035f1c34b4eeb4172215bdc\",\"rc\":0,\"sid\":\"2406080213\",\"ts\":\"2026-09-16T16:11:49+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-16T16:11:49+08:00",
+      "logged_at": "2026-09-16T16:11:49+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 275,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-16T16:11:49+08:00",
+          "epoch": 1789546309,
+          "resolved_at": "2026-09-16T16:11:49+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-16T16:11:49+08:00",
+          "epoch": 1789546309,
+          "type": "cmd",
+          "sid": "2406080213",
+          "name": "libinghan",
+          "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+          "rc": 0,
+          "cmd": "ls -lh target/",
+          "prev": "51519c52ef5ee083ef0a588a569849a9949799649035f1c34b4eeb4172215bdc",
+          "h": "abc60621a86298dbad34f0e54c3b3da7b6da2e29e85c2985fc01d6cf1fd55b00"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "e6c951e03765:20260916T160410-3252:shell:9",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "~/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": "20260916T160410-3252",
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "3261"
+        ]
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "cd ~/桌面/xv6-ai-labs-km/lab0",
+      "observed_at": "2026-09-16T16:13:14.985253+08:00",
+      "elapsed_seconds": 544.985253,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260916T160410-3252.out.gz",
+        "tim": "term/20260916T160410-3252.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "observation": {
+          "elapsed_seconds": 544.985253,
+          "timing_line": 212,
+          "body_byte_range": [
+            6234,
+            6295
+          ],
+          "decompressed_byte_range": [
+            6358,
+            6419
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 260,
+            "ts": "2026-09-16T16:04:10+08:00",
+            "epoch": 1789545850
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 6234,
+          "echo_end": 6293,
+          "output_begin": 6293,
+          "output_end": 6369,
+          "prompt_begin": 6052
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "sudo chown $USER:$USER fs.img",
+        "ls -lh fs.img"
+      ]
+    },
+    {
+      "event_id": "e6c951e03765:log:000000278",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"ls -lh fs.img\",\"cwd\":\"/home/ailab-os/桌面/xv6-ai-labs-km/lab0\",\"epoch\":1789546396,\"h\":\"30c8a41b2be148efbe15193941d9df1b44d73332d0426816697efb8eac00f74d\",\"name\":\"libinghan\",\"prev\":\"2c68141ebfa7489a388fea3b4ca7ac6b125c7e0aed62bdb5c45989423b616aa2\",\"rc\":0,\"sid\":\"2406080213\",\"ts\":\"2026-09-16T16:13:16+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-16T16:13:16+08:00",
+      "logged_at": "2026-09-16T16:13:16+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 278,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-16T16:13:16+08:00",
+          "epoch": 1789546396,
+          "resolved_at": "2026-09-16T16:13:16+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-16T16:13:16+08:00",
+          "epoch": 1789546396,
+          "type": "cmd",
+          "sid": "2406080213",
+          "name": "libinghan",
+          "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+          "rc": 0,
+          "cmd": "ls -lh fs.img",
+          "prev": "2c68141ebfa7489a388fea3b4ca7ac6b125c7e0aed62bdb5c45989423b616aa2",
+          "h": "30c8a41b2be148efbe15193941d9df1b44d73332d0426816697efb8eac00f74d"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "e6c951e03765:20260916T160410-3252:shell:10",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "~/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": "20260916T160410-3252",
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "3261"
+        ]
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "cd ~/桌面/xv6-ai-labs-km/lab0",
+      "observed_at": "2026-09-16T16:13:16.698824+08:00",
+      "elapsed_seconds": 546.698824,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260916T160410-3252.out.gz",
+        "tim": "term/20260916T160410-3252.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "observation": {
+          "elapsed_seconds": 546.698824,
+          "timing_line": 214,
+          "body_byte_range": [
+            6359,
+            6576
+          ],
+          "decompressed_byte_range": [
+            6483,
+            6700
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 260,
+            "ts": "2026-09-16T16:04:10+08:00",
+            "epoch": 1789545850
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 6543,
+          "echo_end": 6574,
+          "output_begin": 6574,
+          "output_end": 6692,
+          "prompt_begin": 6369
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "sudo chown $USER:$USER fs.img",
+        "ls -lh fs.img",
+        "-rw-r--r-- 1 ailab-os ailab-os 256M  9月 16 16:08 fs.img"
+      ]
+    },
+    {
+      "event_id": "e6c951e03765:20260916T160410-3252:shell:11",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "~/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": "20260916T160410-3252",
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "3261"
+        ]
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "make run",
+      "observed_at": "2026-09-16T16:13:32.899429+08:00",
+      "elapsed_seconds": 562.8994289999999,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260916T160410-3252.out.gz",
+        "tim": "term/20260916T160410-3252.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "observation": {
+          "elapsed_seconds": 562.8994289999999,
+          "timing_line": 226,
+          "body_byte_range": [
+            6881,
+            6882
+          ],
+          "decompressed_byte_range": [
+            7005,
+            7006
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 260,
+            "ts": "2026-09-16T16:04:10+08:00",
+            "epoch": 1789545850
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 6874,
+          "echo_end": 6882,
+          "output_begin": 6882,
+          "output_end": 10204,
+          "prompt_begin": 6692
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "OpenSBI v1.3",
+        "   ____                    _____ ____ _____",
+        "  / __ \\                  / ____|  _ \\_   _|",
+        " | |  | |_ __   ___ _ __ | (___ | |_) || |",
+        " | |  | | '_ \\ / _ \\ '_ \\ \\___ \\|  _ < | |",
+        " | |__| | |_) |  __/ | | |____) | |_) || |_",
+        "  \\____/| .__/ \\___|_| |_|_____/|___/_____|",
+        "        | |",
+        "        |_|",
+        "",
+        "Platform Name             : riscv-virtio,qemu",
+        "Platform Features         : medeleg",
+        "Platform HART Count       : 2",
+        "Platform IPI Device       : aclint-mswi",
+        "Platform Timer Device     : aclint-mtimer @ 10000000Hz",
+        "Platform Console Device   : uart8250",
+        "Platform HSM Device       : ---",
+        "Platform PMU Device       : ---",
+        "Platform Reboot Device    : sifive_test",
+        "Platform Shutdown Device  : sifive_test",
+        "Platform Suspend Device   : ---",
+        "Platform CPPC Device      : ---",
+        "Firmware Base             : 0x80000000",
+        "Firmware Size             : 332 KB",
+        "Firmware RW Offset        : 0x40000",
+        "Firmware RW Size          : 76 KB",
+        "Firmware Heap Offset      : 0x4a000",
+        "Firmware Heap Size        : 36 KB (total), 2 KB (reserved), 9 KB (used), 24 KB (free)",
+        "Firmware Scratch Size     : 4096 B (total), 760 B (used), 3336 B (free)",
+        "Runtime SBI Version       : 1.0",
+        "",
+        "Domain0 Name              : root",
+        "Domain0 Boot HART         : 1",
+        "Domain0 HARTs             : 0*,1*",
+        "Domain0 Region00          : 0x0000000002000000-0x000000000200ffff M: (I,R,W) S/U: ()",
+        "Domain0 Region01          : 0x0000000080040000-0x000000008005ffff M: (R,W) S/U:",
+        "()",
+        "Domain0 Region02          : 0x0000000080000000-0x000000008003ffff M: (R,X) S/U:",
+        "()",
+        "Domain0 Region03          : 0x0000000000000000-0xffffffffffffffff M: (R,W,X) S/U: (R,W,X)",
+        "Domain0 Next Address      : 0x0000000080200000",
+        "Domain0 Next Arg1         : 0x0000000087e00000",
+        "Domain0 Next Mode         : S-mode",
+        "Domain0 SysReset          : yes",
+        "Domain0 SysSuspend        : yes",
+        "",
+        "Boot HART ID              : 1",
+        "Boot HART Domain          : root",
+        "Boot HART Priv Version    : v1.12",
+        "Boot HART Base ISA        : rv64imafdch",
+        "Boot HART ISA Extensions  : time,sstc",
+        "Boot HART PMP Count       : 16",
+        "Boot HART PMP Granularity : 4",
+        "Boot HART PMP Address Bits: 54",
+        "Boot HART MHPM Count      : 16",
+        "Boot HART MIDELEG         : 0x0000000000001666",
+        "Boot HART MEDELEG         : 0x0000000000f0b509",
+        "  (`-.            (`-.                            .-')       ('-.    _   .-')",
+        " ( OO ).        _(OO  )_                        .(  OO)    _(  OO)  ( '.( OO )_",
+        "(_/.  \\_)-. ,--(_/   ,. \\  ,--.                (_)---\\_)  (,------.  ,--.   ,--.) ,--. ,--.",
+        " \\  `.'  /  \\   \\   /(__/ /  .'       .-')     '  .-.  '   |  .---'  |   `.'   |  |  | |  |",
+        "  \\     /\\   \\   \\ /   / .  / -.    _(  OO)   ,|  | |  |   |  |      |         |  |  | | .-')",
+        "   \\   \\ |    \\   '   /, | .-.  '  (,------. (_|  | |  |  (|  '--.   |  |'.'|  |  |  |_|( OO )",
+        "  .'    \\_)    \\     /__)' \\  |  |  '------'   |  | |  |   |  .--'   |  |   |  |  |  | | `-' /",
+        " /  .'.  \\      \\   /    \\  `'  /              '  '-'  '-. |  `---.  |  |   |  | ('  '-'(_.-'",
+        "'--'   '--'      `-'      `----'                `-----'--' `------'  `--'   `--'   `-----'",
+        "hart 1 init done",
+        "init: starting sh",
+        "-> / $ -> / $ ls",
+        "-> / $ cat READMEopen / failed",
+        "-> / $",
+        "open / failed",
+        "-> / $ -> / $ ls",
+        "open / failed",
+        "-> / $",
+        "exec",
+        "-> / $QEMU: Terminated"
+      ]
+    },
+    {
+      "event_id": "e6c951e03765:log:000000285",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make run\",\"cwd\":\"/home/ailab-os/桌面/xv6-ai-labs-km/lab0\",\"epoch\":1789546762,\"h\":\"c6b5791fdf0b2df139b2d57b7a710c71b2b6d9c80e3bbd49cd8b6effc6432246\",\"name\":\"libinghan\",\"prev\":\"ddc360b99de96596a63feb78609c5c53c29bee58fe5706619962bcf3d0038406\",\"rc\":0,\"sid\":\"2406080213\",\"ts\":\"2026-09-16T16:19:22+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-16T16:19:22+08:00",
+      "logged_at": "2026-09-16T16:19:22+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 285,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-16T16:19:22+08:00",
+          "epoch": 1789546762,
+          "resolved_at": "2026-09-16T16:19:22+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-16T16:19:22+08:00",
+          "epoch": 1789546762,
+          "type": "cmd",
+          "sid": "2406080213",
+          "name": "libinghan",
+          "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+          "rc": 0,
+          "cmd": "make run",
+          "prev": "ddc360b99de96596a63feb78609c5c53c29bee58fe5706619962bcf3d0038406",
+          "h": "c6b5791fdf0b2df139b2d57b7a710c71b2b6d9c80e3bbd49cd8b6effc6432246"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "e6c951e03765:20260916T160410-3252:shell:12",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "~/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": "20260916T160410-3252",
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "3261"
+        ]
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "cd ~/桌 面/xv6-ai-labs-km/lab0",
+      "observed_at": "2026-09-16T16:19:39.449089+08:00",
+      "elapsed_seconds": 929.4490889999978,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260916T160410-3252.out.gz",
+        "tim": "term/20260916T160410-3252.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "observation": {
+          "elapsed_seconds": 929.4490889999978,
+          "timing_line": 1634,
+          "body_byte_range": [
+            10386,
+            10474
+          ],
+          "decompressed_byte_range": [
+            10510,
+            10598
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 260,
+            "ts": "2026-09-16T16:04:10+08:00",
+            "epoch": 1789545850
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 10386,
+          "echo_end": 10449,
+          "output_begin": 10449,
+          "output_end": 10481,
+          "prompt_begin": 10204
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "ls -lh fs.img"
+      ]
+    },
+    {
+      "event_id": "e6c951e03765:log:000000286",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"ls -lh fs.img\",\"cwd\":\"/home/ailab-os/桌面/xv6-ai-labs-km/lab0\",\"epoch\":1789546780,\"h\":\"ea4c738980b305dc977b6527463b14066609cbeae7522d5aedc7b019f06e4ecf\",\"name\":\"libinghan\",\"prev\":\"c6b5791fdf0b2df139b2d57b7a710c71b2b6d9c80e3bbd49cd8b6effc6432246\",\"rc\":0,\"sid\":\"2406080213\",\"ts\":\"2026-09-16T16:19:40+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-16T16:19:40+08:00",
+      "logged_at": "2026-09-16T16:19:40+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 286,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-16T16:19:40+08:00",
+          "epoch": 1789546780,
+          "resolved_at": "2026-09-16T16:19:40+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-16T16:19:40+08:00",
+          "epoch": 1789546780,
+          "type": "cmd",
+          "sid": "2406080213",
+          "name": "libinghan",
+          "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+          "rc": 0,
+          "cmd": "ls -lh fs.img",
+          "prev": "c6b5791fdf0b2df139b2d57b7a710c71b2b6d9c80e3bbd49cd8b6effc6432246",
+          "h": "ea4c738980b305dc977b6527463b14066609cbeae7522d5aedc7b019f06e4ecf"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "e6c951e03765:20260916T160410-3252:shell:13",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "~/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": "20260916T160410-3252",
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "3261"
+        ]
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "cd ~/桌 面/xv6-ai-labs-km/lab0",
+      "observed_at": "2026-09-16T16:19:40.710960+08:00",
+      "elapsed_seconds": 930.7109599999978,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260916T160410-3252.out.gz",
+        "tim": "term/20260916T160410-3252.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "observation": {
+          "elapsed_seconds": 930.7109599999978,
+          "timing_line": 1635,
+          "body_byte_range": [
+            10474,
+            10717
+          ],
+          "decompressed_byte_range": [
+            10598,
+            10841
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 260,
+            "ts": "2026-09-16T16:04:10+08:00",
+            "epoch": 1789545850
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 10655,
+          "echo_end": 10690,
+          "output_begin": 10690,
+          "output_end": 10776,
+          "prompt_begin": 10481
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "ls -lh fs.img",
+        "-rw-r--r-- 1 ailab-os ailab-os 256M  9月 16 16:08 fs.img"
+      ]
+    },
+    {
+      "event_id": "e6c951e03765:20260916T160410-3252:shell:14",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "~/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": "20260916T160410-3252",
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "3261"
+        ]
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "ls -lh fs.img",
+      "observed_at": "2026-09-16T16:20:15.572507+08:00",
+      "elapsed_seconds": 965.5725069999978,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260916T160410-3252.out.gz",
+        "tim": "term/20260916T160410-3252.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "observation": {
+          "elapsed_seconds": 965.5725069999978,
+          "timing_line": 1638,
+          "body_byte_range": [
+            10958,
+            11002
+          ],
+          "decompressed_byte_range": [
+            11082,
+            11126
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 260,
+            "ts": "2026-09-16T16:04:10+08:00",
+            "epoch": 1789545850
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 10958,
+          "echo_end": 10999,
+          "output_begin": 10999,
+          "output_end": 11307,
+          "prompt_begin": 10776
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "                                                                      ls -lh fs.img",
+        "-rw-r--r-- 1 ailab-os ailab-os 256M  9月 16 16:08 fs.img"
+      ]
+    },
+    {
+      "event_id": "e6c951e03765:log:000000288",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"ls -lh fs.img\",\"cwd\":\"/home/ailab-os/桌面/xv6-ai-labs-km/lab0\",\"epoch\":1789546819,\"h\":\"94ac922cc83d686f5d82cae4e65ef97fb6d6f3694440a461f7efdf1f6b3365b1\",\"name\":\"libinghan\",\"prev\":\"0fad39c41f45226c8486e3504aa62832078f6cb5ca48c5f33748a7dc0699bc5e\",\"rc\":0,\"sid\":\"2406080213\",\"ts\":\"2026-09-16T16:20:19+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-16T16:20:19+08:00",
+      "logged_at": "2026-09-16T16:20:19+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 288,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-16T16:20:19+08:00",
+          "epoch": 1789546819,
+          "resolved_at": "2026-09-16T16:20:19+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-16T16:20:19+08:00",
+          "epoch": 1789546819,
+          "type": "cmd",
+          "sid": "2406080213",
+          "name": "libinghan",
+          "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+          "rc": 0,
+          "cmd": "ls -lh fs.img",
+          "prev": "0fad39c41f45226c8486e3504aa62832078f6cb5ca48c5f33748a7dc0699bc5e",
+          "h": "94ac922cc83d686f5d82cae4e65ef97fb6d6f3694440a461f7efdf1f6b3365b1"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "e6c951e03765:20260916T160410-3252:shell:15",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "~/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": "20260916T160410-3252",
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "3261"
+        ]
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "cd ~/桌 面/xv6-ai-labs-km/lab0",
+      "observed_at": "2026-09-16T16:20:44.095659+08:00",
+      "elapsed_seconds": 994.0956589999977,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260916T160410-3252.out.gz",
+        "tim": "term/20260916T160410-3252.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "observation": {
+          "elapsed_seconds": 994.0956589999977,
+          "timing_line": 1643,
+          "body_byte_range": [
+            11489,
+            11737
+          ],
+          "decompressed_byte_range": [
+            11613,
+            11861
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 260,
+            "ts": "2026-09-16T16:04:10+08:00",
+            "epoch": 1789545850
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 11489,
+          "echo_end": 11552,
+          "output_begin": 11552,
+          "output_end": 11756,
+          "prompt_begin": 11307
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "sudo mkdir -p /mnt/fstest",
+        "sudo mount -o loop fs.img /mnt/fstest",
+        "ls -la /mnt/fstest",
+        "ls -la /mnt/fstest/bin",
+        "sudo umount /mnt/fstest"
+      ]
+    },
+    {
+      "event_id": "e6c951e03765:log:000000289",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"sudo umount /mnt/fstest\",\"cwd\":\"/home/ailab-os/桌面/xv6-ai-labs-km/lab0\",\"epoch\":1789546845,\"h\":\"9a317ec502801797db2c33f9b18a608cb481d5fb4d9b6f48c2691acc588e982c\",\"name\":\"libinghan\",\"prev\":\"94ac922cc83d686f5d82cae4e65ef97fb6d6f3694440a461f7efdf1f6b3365b1\",\"rc\":0,\"sid\":\"2406080213\",\"ts\":\"2026-09-16T16:20:45+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-16T16:20:45+08:00",
+      "logged_at": "2026-09-16T16:20:45+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 289,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-16T16:20:45+08:00",
+          "epoch": 1789546845,
+          "resolved_at": "2026-09-16T16:20:45+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-16T16:20:45+08:00",
+          "epoch": 1789546845,
+          "type": "cmd",
+          "sid": "2406080213",
+          "name": "libinghan",
+          "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+          "rc": 0,
+          "cmd": "sudo umount /mnt/fstest",
+          "prev": "94ac922cc83d686f5d82cae4e65ef97fb6d6f3694440a461f7efdf1f6b3365b1",
+          "h": "9a317ec502801797db2c33f9b18a608cb481d5fb4d9b6f48c2691acc588e982c"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    },
+    {
+      "event_id": "e6c951e03765:20260916T160410-3252:shell:16",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "~/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": "20260916T160410-3252",
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "3261"
+        ]
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "cd ~/桌 面/xv6-ai-labs-km/lab0",
+      "observed_at": "2026-09-16T16:20:45.137925+08:00",
+      "elapsed_seconds": 995.1379249999977,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260916T160410-3252.out.gz",
+        "tim": "term/20260916T160410-3252.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "observation": {
+          "elapsed_seconds": 995.1379249999977,
+          "timing_line": 1644,
+          "body_byte_range": [
+            11737,
+            12116
+          ],
+          "decompressed_byte_range": [
+            11861,
+            12240
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 260,
+            "ts": "2026-09-16T16:04:10+08:00",
+            "epoch": 1789545850
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 11930,
+          "echo_end": 11965,
+          "output_begin": 11965,
+          "output_end": 14657,
+          "prompt_begin": 11756
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "sudo mkdir -p /mnt/fstest",
+        "sudo mount -o loop fs.img /mnt/fstest",
+        "ls -la /mnt/fstest",
+        "ls -la /mnt/fstest/bin",
+        "sudo umount /mnt/fstest",
+        "总计 495",
+        "drwxr-xr-x 3 root root   1536  1月  1  1970 .",
+        "drwxr-xr-x 3 root root   4096  9月 16 16:20 ..",
+        "drwxr-xr-x 2 root root   1536  9月 16 16:08 bin",
+        "-rwxr-xr-x 1 root root  22152  9月 16 16:08 cat",
+        "-rwxr-xr-x 1 root root  21088  9月 16 16:08 echo",
+        "-rwxr-xr-x 1 root root  23288  9月 16 16:08 find",
+        "-rwxr-xr-x 1 root root  24680  9月 16 16:08 grep",
+        "-rwxr-xr-x 1 root root  21760  9月 16 16:08 init",
+        "-rwxr-xr-x 1 root root  20976  9月 16 16:08 kill",
+        "-rwxr-xr-x 1 root root  23304  9月 16 16:08 ls",
+        "-rwxr-xr-x 1 root root  21072  9月 16 16:08 mkdir",
+        "-rwxr-xr-x 1 root root  22872  9月 16 16:08 mv",
+        "-rwxr-xr-x 1 root root   2059  9月 16 16:08 README",
+        "-rwxr-xr-x 1 root root  21064  9月 16 16:08 rm",
+        "-rwxr-xr-x 1 root root  43696  9月 16 16:08 sh",
+        "-rwxr-xr-x 1 root root  21048  9月 16 16:08 sleep",
+        "-rwxr-xr-x 1 root root  21424  9月 16 16:08 strace",
+        "-rwxr-xr-x 1 root root  20920  9月 16 16:08 test",
+        "-rwxr-xr-x 1 root root 117496  9月 16 16:08 usertests",
+        "-rwxr-xr-x 1 root root  22936  9月 16 16:08 wc",
+        "-rwxr-xr-x 1 root root  22752  9月 16 16:08 xargs",
+        "总计 489",
+        "drwxr-xr-x 2 root root   1536  9月 16 16:08 .",
+        "drwxr-xr-x 3 root root   1536  1月  1  1970 ..",
+        "-rwxr-xr-x 1 root root  22152  9月 16 16:08 cat",
+        "-rwxr-xr-x 1 root root  21088  9月 16 16:08 echo",
+        "-rwxr-xr-x 1 root root  23288  9月 16 16:08 find",
+        "-rwxr-xr-x 1 root root  24680  9月 16 16:08 grep",
+        "-rwxr-xr-x 1 root root  21760  9月 16 16:08 init",
+        "-rwxr-xr-x 1 root root  20976  9月 16 16:08 kill",
+        "-rwxr-xr-x 1 root root  23304  9月 16 16:08 ls",
+        "-rwxr-xr-x 1 root root  21072  9月 16 16:08 mkdir",
+        "-rwxr-xr-x 1 root root  22872  9月 16 16:08 mv",
+        "-rwxr-xr-x 1 root root  21064  9月 16 16:08 rm",
+        "-rwxr-xr-x 1 root root  43696  9月 16 16:08 sh",
+        "-rwxr-xr-x 1 root root  21048  9月 16 16:08 sleep",
+        "-rwxr-xr-x 1 root root  21424  9月 16 16:08 strace",
+        "-rwxr-xr-x 1 root root  20920  9月 16 16:08 test",
+        "-rwxr-xr-x 1 root root 117496  9月 16 16:08 usertests",
+        "-rwxr-xr-x 1 root root  22936  9月 16 16:08 wc",
+        "-rwxr-xr-x 1 root root  22752  9月 16 16:08 xargs"
+      ]
+    },
+    {
+      "event_id": "e6c951e03765:20260916T160410-3252:shell:17",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "~/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": "20260916T160410-3252",
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "3261"
+        ]
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "cd ~/桌 面/xv6-ai-labs-km/lab0",
+      "observed_at": "2026-09-16T16:22:11.727392+08:00",
+      "elapsed_seconds": 1081.7273919999977,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260916T160410-3252.out.gz",
+        "tim": "term/20260916T160410-3252.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "observation": {
+          "elapsed_seconds": 1081.7273919999977,
+          "timing_line": 1648,
+          "body_byte_range": [
+            14839,
+            15049
+          ],
+          "decompressed_byte_range": [
+            14963,
+            15173
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 260,
+            "ts": "2026-09-16T16:04:10+08:00",
+            "epoch": 1789545850
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 14839,
+          "echo_end": 14902,
+          "output_begin": 14902,
+          "output_end": 15071,
+          "prompt_begin": 14657
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "make clean",
+        "make build 2>&1 | tail -30",
+        "sudo make fs",
+        "sudo chown $USER:$USER fs.img",
+        "make run"
+      ]
+    },
+    {
+      "event_id": "e6c951e03765:20260916T160410-3252:shell:18",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "~/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": "20260916T160410-3252",
+      "terminal": {
+        "header_tty": "/dev/pts/0",
+        "session_start_tty": [
+          "/dev/pts/1"
+        ],
+        "shell_pid": [
+          "3261"
+        ]
+      },
+      "type": "shell_command_observed",
+      "evidence_level": "E1",
+      "content": "cd ~/桌 面/xv6-ai-labs-km/lab0",
+      "observed_at": "2026-09-16T16:22:12.629432+08:00",
+      "elapsed_seconds": 1082.6294319999977,
+      "observation_semantics": "命令回显末端所在输出块的观察时间；不是提交或执行时间",
+      "related_event_id": null,
+      "source": {
+        "out": "term/20260916T160410-3252.out.gz",
+        "tim": "term/20260916T160410-3252.tim.gz",
+        "time_source": "script_header_plus_timing",
+        "observation": {
+          "elapsed_seconds": 1082.6294319999977,
+          "timing_line": 1649,
+          "body_byte_range": [
+            15049,
+            15393
+          ],
+          "decompressed_byte_range": [
+            15173,
+            15517
+          ]
+        },
+        "session_start": [
+          {
+            "file": "logs/events.jsonl",
+            "line": 260,
+            "ts": "2026-09-16T16:04:10+08:00",
+            "epoch": 1789545850
+          }
+        ],
+        "shell_ranges": {
+          "echo_begin": 15245,
+          "echo_end": 15280,
+          "output_begin": 15280,
+          "output_end": 27614,
+          "prompt_begin": 15071
+        }
+      },
+      "absolute_time_resolution_seconds": 1,
+      "uncertainty": [],
+      "ordering_note": "按可用观察时间稳定展示；近同时与跨终端事件不保证严格先后",
+      "output": [
+        "make clean",
+        "make build 2>&1 | tail -30",
+        "sudo make fs",
+        "sudo chown $USER:$USER fs.img",
+        "make run",
+        "rm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \\",
+        "*/*.o */*.d */*.asm */*.sym \\",
+        "target/* \\",
+        "xv6-user/initcode xv6-user/initcode.out \\",
+        "kernel/kernel \\",
+        ".gdbinit \\",
+        "xv6-user/usys.S \\",
+        "xv6-user/_init xv6-user/_sh xv6-user/_cat xv6-user/_echo xv6-user/_grep xv6-user/_ls xv6-user/_kill xv6-user/_mkdir xv6-user/_xargs xv6-user/_sleep xv6-user/_fi",
+        "nd xv6-user/_rm xv6-user/_wc xv6-user/_test xv6-user/_usertests xv6-user/_strace xv6-user/_mv",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/rm.o xv6-user/rm.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_rm xv6-user/rm.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umallo",
+        "c.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_rm has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_rm > xv6-user/rm.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_rm | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/rm.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/wc.o xv6-user/wc.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_wc xv6-user/wc.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umallo",
+        "c.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_wc has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_wc > xv6-user/wc.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_wc | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/wc.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/test.o xv6-user/test.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_test xv6-user/test.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/um",
+        "alloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_test has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_test > xv6-user/test.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_test | sed '1,/SYMBOL TABLE/d; s/ .* /",
+        "/; /^$/d' > xv6-user/test.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/usertests.o xv6-user/usertests.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_usertests xv6-user/usertests.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o x",
+        "v6-user/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_usertests has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_usertests > xv6-user/usertests.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_usertests | sed '1,/SYMBOL TABLE/d; s/",
+        ".* / /; /^$/d' > xv6-user/usertests.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/strace.o",
+        "xv6-user/strace.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_strace xv6-user/strace.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-use",
+        "r/umalloc.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_strace has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_strace > xv6-user/strace.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_strace | sed '1,/SYMBOL TABLE/d; s/ .*",
+        "/ /; /^$/d' > xv6-user/strace.sym",
+        "riscv64-unknown-elf-gcc -Wall -Werror -Wno-error=infinite-recursion -O -fno-omit-frame-pointer -ggdb -g -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib",
+        " -mno-relax -I. -fno-stack-protector -DDEBUG  -D QEMU   -c -o xv6-user/mv.o xv6-user/mv.c",
+        "riscv64-unknown-elf-ld -z max-page-size=4096 -N -e main -Ttext 0 -o xv6-user/_mv xv6-user/mv.o xv6-user/ulib.o xv6-user/usys.o xv6-user/printf.o xv6-user/umallo",
+        "c.o",
+        "riscv64-unknown-elf-ld: warning: xv6-user/_mv has a LOAD segment with RWX permissions",
+        "riscv64-unknown-elf-objdump -S xv6-user/_mv > xv6-user/mv.asm",
+        "riscv64-unknown-elf-objdump -t xv6-user/_mv | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > xv6-user/mv.sym",
+        "",
+        "OpenSBI v1.3",
+        "   ____                    _____ ____ _____",
+        "  / __ \\                  / ____|  _ \\_   _|",
+        " | |  | |_ __   ___ _ __ | (___ | |_) || |",
+        " | |  | | '_ \\ / _ \\ '_ \\ \\___ \\|  _ < | |",
+        " | |__| | |_) |  __/ | | |____) | |_) || |_",
+        "  \\____/| .__/ \\___|_| |_|_____/|___/_____|",
+        "        | |",
+        "        |_|",
+        "",
+        "Platform Name             : riscv-virtio,qemu",
+        "Platform Features         : medeleg",
+        "Platform HART Count       : 2",
+        "Platform IPI Device       : aclint-mswi",
+        "Platform Timer Device     : aclint-mtimer @ 10000000Hz",
+        "Platform Console Device   : uart8250",
+        "Platform HSM Device       : ---",
+        "Platform PMU Device       : ---",
+        "Platform Reboot Device    : sifive_test",
+        "Platform Shutdown Device  : sifive_test",
+        "Platform Suspend Device   : ---",
+        "Platform CPPC Device      : ---",
+        "Firmware Base             : 0x80000000",
+        "Firmware Size             : 332 KB",
+        "Firmware RW Offset        : 0x40000",
+        "Firmware RW Size          : 76 KB",
+        "Firmware Heap Offset      : 0x4a000",
+        "Firmware Heap Size        : 36 KB (total), 2 KB (reserved), 9 KB (used), 24 KB (free)",
+        "Firmware Scratch Size     : 4096 B (total), 760 B (used), 3336 B (free)",
+        "Runtime SBI Version       : 1.0",
+        "",
+        "Domain0 Name              : root",
+        "Domain0 Boot HART         : 0",
+        "Domain0 HARTs             : 0*,1*",
+        "Domain0 Region00          : 0x0000000002000000-0x000000000200ffff M: (I,R,W) S/U: ()",
+        "Domain0 Region01          : 0x0000000080040000-0x000000008005ffff M: (R,W) S/U:",
+        "()",
+        "Domain0 Region02          : 0x0000000080000000-0x000000008003ffff M: (R,X) S/U:",
+        "()",
+        "Domain0 Region03          : 0x0000000000000000-0xffffffffffffffff M: (R,W,X) S/U: (R,W,X)",
+        "Domain0 Next Address      : 0x0000000080200000",
+        "Domain0 Next Arg1         : 0x0000000087e00000",
+        "Domain0 Next Mode         : S-mode",
+        "Domain0 SysReset          : yes",
+        "Domain0 SysSuspend        : yes",
+        "",
+        "Boot HART ID              : 0",
+        "Boot HART Domain          : root",
+        "Boot HART Priv Version    : v1.12",
+        "Boot HART Base ISA        : rv64imafdch",
+        "Boot HART ISA Extensions  : time,sstc",
+        "Boot HART PMP Count       : 16",
+        "Boot HART PMP Granularity : 4",
+        "Boot HART PMP Address Bits: 54",
+        "Boot HART MHPM Count      : 16",
+        "Boot HART MIDELEG         : 0x0000000000001666",
+        "Boot HART MEDELEG         : 0x0000000000f0b509",
+        "  (`-.            (`-.                            .-')       ('-.    _   .-')",
+        " ( OO ).        _(OO  )_                        .(  OO)    _(  OO)  ( '.( OO )_",
+        "(_/.  \\_)-. ,--(_/   ,. \\  ,--.                (_)---\\_)  (,------.  ,--.   ,--.) ,--. ,--.",
+        " \\  `.'  /  \\   \\   /(__/ /  .'       .-')     '  .-.  '   |  .---'  |   `.'   |  |  | |  |",
+        "  \\     /\\   \\   \\ /   / .  / -.    _(  OO)   ,|  | |  |   |  |      |         |  |  | | .-')",
+        "   \\   \\ |    \\   '   /, | .-.  '  (,------. (_|  | |  |  (|  '--.   |  |'.'|  |  |  |_|( OO )",
+        "  .'    \\_)    \\     /__)' \\  |  |  '------'   |  | |  |   |  .--'   |  |   |  |  |  | | `-' /",
+        " /  .'.  \\      \\   /    \\  `'  /              '  '-'  '-. |  `---.  |  |   |  | ('  '-'(_.-'",
+        "'--'   '--'      `-'      `----'                `-----'--' `------'  `--'   `--'   `-----'",
+        "hart 0 enter main()...",
+        "kernel_end: 0x0000000080226000, phystop: 0x0000000080600000",
+        "kinit",
+        "kvminit",
+        "kvminithart",
+        "timerinit",
+        "trapinithart",
+        "procinit",
+        "plicinit",
+        "plicinithart",
+        "virtio_disk_init",
+        "binit",
+        "fileinit",
+        "userinit",
+        "hart 0 init done",
+        "[fat32_init] enter!",
+        "[FAT32 init]byts_per_sec: 512",
+        "[FAT32 init]root_clus: 2",
+        "[FAT32 init]sec_per_clus: 1",
+        "[FAT32 init]fat_cnt: 2",
+        "[FAT32 init]fat_sz: 4033",
+        "[FAT32 init]first_data_sec: 8098",
+        "init: starting sh",
+        "-> / $ ls",
+        "bin                              DIR    0",
+        "README                           FILE   2059",
+        "cat                              FILE   22152",
+        "echo                             FILE   21088",
+        "find                             FILE   23288",
+        "grep                             FILE   24680",
+        "init                             FILE   21760",
+        "kill                             FILE   20976",
+        "ls                               FILE   23304",
+        "mkdir                            FILE   21072",
+        "mv                               FILE   22872",
+        "rm                               FILE   21064",
+        "sh                               FILE   43696",
+        "sleep                            FILE   21048",
+        "strace                           FILE   21424",
+        "test                             FILE   20920",
+        "usertests                        FILE   117496",
+        "wc                               FILE   22936",
+        "xargs                            FILE   22752",
+        "-> / $ ls /bin",
+        ".                                DIR    0",
+        "..                               DIR    0",
+        "cat                              FILE   22152",
+        "echo                             FILE   21088",
+        "find                             FILE   23288",
+        "grep                             FILE   24680",
+        "init                             FILE   21760",
+        "kill                             FILE   20976",
+        "ls                               FILE   23304",
+        "mkdir                            FILE   21072",
+        "mv                               FILE   22872",
+        "rm                               FILE   21064",
+        "sh                               FILE   43696",
+        "sleep                            FILE   21048",
+        "strace                           FILE   21424",
+        "test                             FILE   20920",
+        "usertests                        FILE   117496",
+        "wc                               FILE   22936",
+        "xargs                            FILE   22752",
+        "-> / $ cat README",
+        "xv6 is a re-implementation of Dennis Ritchie's and Ken Thompson's Unix",
+        "Version 6 (v6).  xv6 loosely follows the structure and style of v6,",
+        "but is implemented for a modern RISC-V multiprocessor using ANSI C.",
+        "",
+        "ACKNOWLEDGMENTS",
+        "",
+        "xv6 is inspired by John Lions's Commentary on UNIX 6th Edition (Peer",
+        "to Peer Communications; ISBN: 1-57398-013-7; 1st edition (June 14,",
+        "2000)). See also https://pdos.csail.mit.edu/6.828/, which",
+        "provides pointers to on-line resources for v6.",
+        "",
+        "The following people have made contributions: Russ Cox (context switching,",
+        "locking), Cliff Frey (MP), Xiao Yu (MP), Nickolai Zeldovich, and Austin",
+        "Clements.",
+        "",
+        "We are also grateful for the bug reports and patches contributed by",
+        "Silas Boyd-Wickizer, Anton Burtsev, Dan Cross, Cody Cutler, Mike CAT,",
+        "Tej Chajed, Asami Doi, eyalz800, , Nelson Elhage, Saar Ettinger, Alice",
+        "Ferrazzi, Nathaniel Filardo, Peter Froehlich, Yakir Goaron,Shivam",
+        "Handa, Bryan Henry, jaichenhengjie, Jim Huang, Alexander Kapshuk,",
+        "Anders Kaseorg, kehao95, Wolfgang Keller, Jonathan Kimmitt, Eddie",
+        "Kohler, Austin Liew, Imbar Marinescu, Yandong Mao, Matan Shabtay,",
+        "Hitoshi Mitake, Carmi Merimovich, Mark Morrissey, mtasm, Joel Nider,",
+        "Greg Price, Ayan Shafqat, Eldar Sehayek, Yongming Shen, Fumiya",
+        "Shigemitsu, Takahiro, Cam Tenny, tyfkda, Rafael Ubal, Warren Toomey,",
+        "Stephen Tu, Pablo Ventura, Xi Wang, Keiichi Watanabe, Nicolas",
+        "Wolovick, wxdao, Grant Wu, Jindong Zhang, Icenowy Zheng, and Zou Chang",
+        "Wei.",
+        "The code in the files that constitute xv6 is",
+        "Copyright 2006-2020 Frans Kaashoek, Robert Morris, and Russ Cox.",
+        "ERROR REPORTS",
+        "Please send errors and suggestions to Frans Kaashoek and Robert Morris",
+        "(kaashoek,rtm@mit.edu). The main purpose of xv6 is as a teaching",
+        "operating system for MIT's 6.S081, so we are more interested in",
+        "simplifications and clarifications than new features.",
+        "BUILDING AND RUNNING XV6",
+        "You will need a RISC-V \"newlib\" tool chain from",
+        "https://github.com/riscv/riscv-gnu-toolchain, and qemu compiled for",
+        "riscv64-softmmu. Once they are installed, and in your shell",
+        "search path, you can run \"make qemu\".",
+        "-> / $QEMU 8.2.2 monitor - type 'help' for more information",
+        "(qemu)",
+        "(qemu) QEMU: Terminated"
+      ]
+    },
+    {
+      "event_id": "e6c951e03765:log:000000298",
+      "student": {
+        "student_id": "2406080213",
+        "name": "李冰瀚"
+      },
+      "lab": "lab0",
+      "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+      "recording_id": null,
+      "terminal": null,
+      "type": "collection_log_evidence",
+      "evidence_level": "E2",
+      "log_event_type": "cmd",
+      "content": "{\"cmd\":\"make run\",\"cwd\":\"/home/ailab-os/桌面/xv6-ai-labs-km/lab0\",\"epoch\":1789547198,\"h\":\"3ca00e308f00b0c8055cb5a3007b2aef008c4c300cb32d649d3e7863cab570dd\",\"name\":\"libinghan\",\"prev\":\"7b9da1091fead75995fbbf2c04cf3d9c663bcddc2358f1f09b7eed6a29fcac2f\",\"rc\":0,\"sid\":\"2406080213\",\"ts\":\"2026-09-16T16:26:38+08:00\",\"type\":\"cmd\"}",
+      "observed_at": "2026-09-16T16:26:38+08:00",
+      "logged_at": "2026-09-16T16:26:38+08:00",
+      "elapsed_seconds": null,
+      "observation_semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。",
+      "related_event_id": null,
+      "association": {
+        "confidence": "unlinked",
+        "recording_id": null,
+        "requested_recording_id": null,
+        "basis": "日志缺少 rec 和 TTY/PID，无法关联录像"
+      },
+      "source": {
+        "log": "logs/events.jsonl",
+        "line": 298,
+        "nul_prefix_recovered": false,
+        "time": {
+          "ts": "2026-09-16T16:26:38+08:00",
+          "epoch": 1789547198,
+          "resolved_at": "2026-09-16T16:26:38+08:00",
+          "resolution": "ts",
+          "semantics": "采集日志 ts 字段记录的时间；不是终端屏幕文本的可观察显示时间。"
+        },
+        "event": {
+          "ts": "2026-09-16T16:26:38+08:00",
+          "epoch": 1789547198,
+          "type": "cmd",
+          "sid": "2406080213",
+          "name": "libinghan",
+          "cwd": "/home/ailab-os/桌面/xv6-ai-labs-km/lab0",
+          "rc": 0,
+          "cmd": "make run",
+          "prev": "7b9da1091fead75995fbbf2c04cf3d9c663bcddc2358f1f09b7eed6a29fcac2f",
+          "h": "3ca00e308f00b0c8055cb5a3007b2aef008c4c300cb32d649d3e7863cab570dd"
+        }
+      },
+      "uncertainty": [
+        "collection_log_recording_unlinked"
+      ],
+      "ordering_note": "按采集日志时间与源行号稳定展示；该顺序不是终端屏幕显示顺序。"
+    }
+  ],
+  "errors": [
+    "日志第 57 行时间倒退；未据此校正录像时钟",
+    "日志第 65 行有 NUL 前缀，已恢复尾部 JSON",
+    "日志第 154 行有 NUL 前缀，已恢复尾部 JSON"
+  ]
+}
